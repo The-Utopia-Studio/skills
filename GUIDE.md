@@ -2,7 +2,7 @@
 
 A shared set of AI skills for Utopia Capital fellows, funds team, and staff. Installs in 30 seconds. No code needed.
 
-> **Repo:** https://github.com/karanmjpinto/skills
+> **Repo:** https://github.com/The-Utopia-Studio/skills
 > **Maintainer:** Karan Pinto ([@kmjp](https://x.com/kmjp)) · karanmjpinto@gmail.com
 
 ---
@@ -10,7 +10,7 @@ A shared set of AI skills for Utopia Capital fellows, funds team, and staff. Ins
 ## TL;DR (30-second version)
 
 1. **Install [Claude Code](https://claude.com/claude-code)** on your laptop (one-time).
-2. Inside Claude Code, run: `/plugin marketplace add karanmjpinto/skills`
+2. Inside Claude Code, run: `/plugin marketplace add The-Utopia-Studio/skills`
 3. Install the pack for whatever you're working on:
    - Fellow in Module 2 (Discovery)? → `/plugin install utopia-studio-cobuild-discovery@skills`
    - Funds team doing tech DD? → `/plugin install utopia-funds-dd@skills`
@@ -66,7 +66,7 @@ After installing, open a terminal and run `claude` in any folder (doesn't have t
 Inside Claude Code, type:
 
 ```
-/plugin marketplace add karanmjpinto/skills
+/plugin marketplace add The-Utopia-Studio/skills
 ```
 
 You'll see a confirmation that the marketplace is registered. You only need to do this once per laptop.
@@ -258,7 +258,7 @@ Print this page or pin it in Slack.
 
 ```
 # Register (do once)
-/plugin marketplace add karanmjpinto/skills
+/plugin marketplace add The-Utopia-Studio/skills
 
 # Install a fellow module pack
 /plugin install utopia-studio-cobuild-<module>@skills

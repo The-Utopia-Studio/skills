@@ -11,7 +11,7 @@ This repo is a Claude Code plugin marketplace. Team members register it once, th
 **1. Register the marketplace (one-time):**
 
 ```
-/plugin marketplace add karanmjpinto/skills
+/plugin marketplace add The-Utopia-Studio/skills
 ```
 
 **2. Install a pack:**
@@ -50,20 +50,20 @@ See [Available Packs](#available-packs) below for what each pack includes.
 **One-line install (with [skillshare](https://github.com/runkids/skillshare)):**
 
 ```bash
-skillshare install https://github.com/karanmjpinto/skills
+skillshare install https://github.com/The-Utopia-Studio/skills
 ```
 
 **With npx skills:**
 
 ```bash
-npx skills add karanmjpinto/skills
+npx skills add The-Utopia-Studio/skills
 ```
 
 **Manual setup:**
 
 ```bash
 # Clone the repo
-git clone https://github.com/karanmjpinto/skills.git
+git clone https://github.com/The-Utopia-Studio/skills.git
 
 # Copy skills to your AI tool's skill directory
 cp -r skills/*/* ~/.claude/skills/     # Claude Code
@@ -409,7 +409,7 @@ If you use [skillshare](https://github.com/runkids/skillshare) to manage skills 
 
 ```bash
 # Install all skills from this repo
-skillshare install https://github.com/karanmjpinto/skills
+skillshare install https://github.com/The-Utopia-Studio/skills
 
 # Or set this repo as your source
 skillshare config set source /path/to/this/repo/skills

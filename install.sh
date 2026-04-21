@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/karanmjpinto/skills.git"
+REPO_URL="https://github.com/The-Utopia-Studio/skills.git"
 INSTALL_DIR="${SKILLS_DIR:-$HOME/.agents/skills}"
 
 echo "Installing skills to $INSTALL_DIR..."

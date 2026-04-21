@@ -2,6 +2,6 @@
   "name": "utopia-funds-markets",
   "description": "Utopia Funds — Capital Markets. Public markets and trading skills for fellows transitioning into sell-side roles: bonds, FX, options, swaps, macro rates, equity research. Not for VC workflows.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["funds","markets","trading","bonds","fx","options","rates"]
 }

@@ -2,6 +2,6 @@
   "name": "utopia-studio-cobuild-ops",
   "description": "M9 Operations & Finance — ongoing ops once the business is running. Metrics, unit economics, retention, churn, onboarding CRO, pricing, roadmap, and customer ops for founders scaling retained revenue.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["ops","finance","metrics","retention","churn","m9"]
 }

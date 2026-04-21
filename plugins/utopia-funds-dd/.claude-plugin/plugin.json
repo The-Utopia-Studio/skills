@@ -2,6 +2,6 @@
   "name": "utopia-funds-dd",
   "description": "Utopia Funds — Technical Due Diligence. Internal skills for evaluating startups before investment: tech stack audits, security review, cost analysis, DB/infra review, and TDD report generation.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["funds","dd","investment","technical-dd","internal"]
 }

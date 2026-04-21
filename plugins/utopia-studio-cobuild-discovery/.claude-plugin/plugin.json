@@ -2,6 +2,6 @@
   "name": "utopia-studio-cobuild-discovery",
   "description": "M2 Discovery & Problem Validation — customer interviews, JTBD, opportunity solution trees, problem framing, assumption mapping, and first-iteration canvases.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["discovery","problem-validation","jtbd","interviews","m2"]
 }

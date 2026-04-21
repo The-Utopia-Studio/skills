@@ -2,6 +2,6 @@
   "name": "utopia-studio-cobuild-concept",
   "description": "M3 Concept & Solution Design — turn validated problems into solutions. PRDs, user stories, recommendation canvases, prototyping, early design critiques, and architecture sketches.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["concept","solution-design","prd","prototyping","m3"]
 }

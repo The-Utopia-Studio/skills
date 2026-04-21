@@ -2,6 +2,6 @@
   "name": "utopia-studio-cobuild-legal",
   "description": "M4 Legal & Entity Setup — NDAs, privacy policies, resume/hiring docs, press release templates. GAP: MENA/GCC jurisdiction-aware cap table and entity setup — build as proprietary Studio skill.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["legal","entity","nda","privacy","m4"]
 }

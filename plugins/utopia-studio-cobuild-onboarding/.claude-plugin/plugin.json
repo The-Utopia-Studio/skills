@@ -2,6 +2,6 @@
   "name": "utopia-studio-cobuild-onboarding",
   "description": "M1 Fellow Onboarding — orientation, market sizing, stakeholder mapping, frameworks for getting started. Install this first when a new fellow joins.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["onboarding","fellow","m1","orientation"]
 }

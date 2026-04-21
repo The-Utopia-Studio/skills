@@ -2,6 +2,6 @@
   "name": "utopia-funds-research",
   "description": "Utopia Funds — Research & Knowledge Management. Internal skills for the investment team's research workflow: Obsidian vault management, markdown notes, canvases, web extraction, and papers.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["funds","research","obsidian","knowledge","internal"]
 }

@@ -2,11 +2,11 @@
   "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Each pack's skills are COPIED from /skills/** into /plugins/<pack>/skills/. Packs follow two naming conventions: 'utopia-studio-cobuild-<module>' for Studio fellows (mapped to the 9 cobuild modules M1-M9), and 'utopia-funds-<purpose>' for Utopia Capital's internal fund team.",
   "marketplace": {
     "name": "skills",
-    "description": "Karan Pinto's skill marketplace for Utopia Capital. Two tracks: Studio Cobuild packs (for fellows, mapped to M1-M9 modules) and Funds packs (for internal investment and DD work).",
+    "description": "The Utopia Studio's skill marketplace. Two tracks: Studio Cobuild packs (for fellows, mapped to M1-M9 modules) and Funds packs (for internal investment and DD work). Maintained by Karan Pinto.",
     "owner": {
-      "name": "Karan Pinto",
+      "name": "The Utopia Studio",
       "email": "karanmjpinto@gmail.com",
-      "url": "https://github.com/karanmjpinto"
+      "url": "https://github.com/The-Utopia-Studio"
     }
   },
   "packs": [

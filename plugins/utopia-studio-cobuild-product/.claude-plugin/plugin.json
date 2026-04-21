@@ -2,6 +2,6 @@
   "name": "utopia-studio-cobuild-product",
   "description": "M6 Product & Technology — build the actual product. Design polish (Impeccable suite), deployment (Railway, Vercel), production readiness, ML integration, and architecture diagrams. For deep specialization see the Railway, Vercel, or ML-specific skills in the /skills folder.",
   "version": "1.0.0",
-  "author": { "name": "Karan Pinto" },
+  "author": { "name": "The Utopia Studio" },
   "keywords": ["product","technology","design","deploy","m6"]
 }

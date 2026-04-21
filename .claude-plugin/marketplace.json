@@ -1,11 +1,11 @@
 {
   "name": "skills",
   "owner": {
-    "name": "Karan Pinto",
+    "name": "The Utopia Studio",
     "email": "karanmjpinto@gmail.com",
-    "url": "https://github.com/karanmjpinto"
+    "url": "https://github.com/The-Utopia-Studio"
   },
-  "description": "Karan Pinto's skill marketplace for Utopia Capital. Two tracks: Studio Cobuild packs (for fellows, mapped to M1-M9 modules) and Funds packs (for internal investment and DD work).",
+  "description": "The Utopia Studio's skill marketplace. Two tracks: Studio Cobuild packs (for fellows, mapped to M1-M9 modules) and Funds packs (for internal investment and DD work). Maintained by Karan Pinto.",
   "plugins": [
     {
       "name": "utopia-studio-cobuild-onboarding",
