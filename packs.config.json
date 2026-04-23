@@ -159,7 +159,9 @@
         "devops-advisor",
         "transformers-js",
         "architecture-diagram",
-        "diagram-design"
+        "diagram-design",
+        "tdd-red-green-refactor",
+        "typed-service-contracts"
       ]
     },
     {
