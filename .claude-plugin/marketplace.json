@@ -84,6 +84,18 @@
       "source": "./plugins/utopia-funds-research",
       "description": "Utopia Funds — Research & Knowledge Management. Internal skills for the investment team's research workflow: Obsidian vault management, markdown notes, canvases, web extraction, and papers.",
       "version": "1.0.0"
+    },
+    {
+      "name": "utopia-azraq-engagement",
+      "source": "./plugins/utopia-azraq-engagement",
+      "description": "Azraq engagement pack — physics-informed risk intelligence for data-centre infrastructure. Bundles IP defensibility (patents, moat analysis, VRIO), Notion workspace skills, risk matrix design crits, engine code audits, contract review, and quant/risk pricing skills. Use when working on Azraq's engine, risk matrix, IP register, or related deliverables.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "utopia-quant-pricing",
+      "source": "./plugins/utopia-quant-pricing",
+      "description": "Quantitative pricing & physical risk modeling — Bayesian reasoning, expected value, forecasting, adverse selection, auction theory, and causal inference. For pricing physical/emerging risks (data centre infrastructure, climate, parametric insurance) or any work where you need to price uncertainty under information asymmetry.",
+      "version": "1.0.0"
     }
   ]
 }

@@ -35,6 +35,10 @@ Two tracks: **Studio Cobuild packs** for fellows (mapped to M1–M9 modules) and
 /plugin install utopia-funds-finance@skills     # Financial modeling & IB toolkit
 /plugin install utopia-funds-markets@skills     # Capital markets & trading
 /plugin install utopia-funds-research@skills    # Obsidian, markdown, web research
+
+# Engagement-specific packs — for active portfolio engagements
+/plugin install utopia-azraq-engagement@skills  # Azraq engagement: IP, patents, moat, risk modeling, Notion
+/plugin install utopia-quant-pricing@skills     # Bayesian pricing, forecasting, physical risk modeling
 ```
 
 **3. Update packs as they change:**
@@ -115,6 +119,15 @@ Not for fellows — these are for the investment team doing DD, modeling, and re
 | **utopia-funds-markets** | 10 | Capital Markets — bonds, FX, options, macro rates, equity research (for fellows going sell-side) |
 | **utopia-funds-research** | 6 | Research & Knowledge Management — Obsidian, markdown, web extraction, papers |
 
+### Engagement-specific & specialty packs
+
+Built for active portfolio engagements or specialty workflows. Install on top of the cobuild/funds packs as needed.
+
+| Pack | # | What it covers |
+|------|---|----------------|
+| **utopia-azraq-engagement** | 47 | **Azraq engagement** — IP defensibility (patents, prior art, moat analysis, VRIO), Notion workspace (knowledge capture, meeting intel, research docs), engine code audits (Trail of Bits security skills), risk matrix design crits, contract review, and Bayesian/quant pricing skills. Anyone working on Azraq's engine, risk matrix, or IP register installs this. |
+| **utopia-quant-pricing** | 21 | **Quantitative pricing & physical risk modeling** — Bayesian reasoning, expected value, forecasting, adverse selection, auction theory, causal inference. For any work where you're pricing uncertainty under information asymmetry (data centre risk, climate, parametric insurance, emerging risks). |
+
 ### Skill sources
 
 Skills across the cobuild packs come from the best public repos for each layer:
@@ -125,6 +138,8 @@ Skills across the cobuild packs come from the best public repos for each layer:
 - **GTM (M7):** [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills), [chadboyda/agent-gtm-skills](https://github.com/chadboyda/agent-gtm-skills), [gtmagents/gtm-agents](https://github.com/gtmagents/gtm-agents)
 - **Fundraising (M8) & Funds Finance:** [anthropics/financial-services-plugins](https://github.com/anthropics/financial-services-plugins), plus proprietary Utopia `pitch-deck` and `technical-dd`
 - **Ops (M9):** [phuryn/pm-skills](https://github.com/phuryn/pm-skills), [lyndonkl/claude](https://github.com/lyndonkl/claude), [Digidai/product-manager-skills](https://github.com/Digidai/product-manager-skills), [gtmagents/gtm-agents](https://github.com/gtmagents/gtm-agents)
+- **Azraq engagement:** [tommy-ca/notion-skills](https://github.com/tommy-ca/notion-skills), [RobThePCGuy/Claude-Patent-Creator](https://github.com/RobThePCGuy/Claude-Patent-Creator), [aniganti/pm-superpowers](https://github.com/aniganti/pm-superpowers), [evolsb/claude-legal-skill](https://github.com/evolsb/claude-legal-skill), [trailofbits/skills](https://github.com/trailofbits/skills)
+- **Quant pricing:** [lyndonkl/claude](https://github.com/lyndonkl/claude) (Bayesian, forecasting, auction-theory skills curated into a dedicated pack)
 
 ### Honest gap map
 

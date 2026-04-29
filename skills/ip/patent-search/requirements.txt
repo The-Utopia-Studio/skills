@@ -1,0 +1,20 @@
+# Patent Search Skill Requirements
+#
+# This skill uses only Python standard library modules.
+# No additional dependencies are required.
+#
+# Standard library modules used:
+# - json: JSON parsing and serialization
+# - os: Environment variable access
+# - sys: System utilities
+# - time: Rate limiting and timing
+# - urllib: HTTP requests to PatentsView API
+# - typing: Type hints
+
+# If you want to extend the script with additional features,
+# consider these optional packages:
+
+# pandas>=1.5.0          # For data analysis and CSV export
+# matplotlib>=3.6.0      # For visualization of patent trends
+# requests>=2.28.0       # Alternative HTTP library (simpler API)
+# python-dotenv>=0.21.0  # For .env file support

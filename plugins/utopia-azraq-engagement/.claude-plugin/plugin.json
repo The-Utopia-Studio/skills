@@ -1,0 +1,7 @@
+{
+  "name": "utopia-azraq-engagement",
+  "description": "Azraq engagement pack — physics-informed risk intelligence for data-centre infrastructure. Bundles IP defensibility (patents, moat analysis, VRIO), Notion workspace skills, risk matrix design crits, engine code audits, contract review, and quant/risk pricing skills. Use when working on Azraq's engine, risk matrix, IP register, or related deliverables.",
+  "version": "1.0.0",
+  "author": { "name": "The Utopia Studio" },
+  "keywords": ["azraq","ip","patent","moat","risk-intelligence","engine","engagement"]
+}

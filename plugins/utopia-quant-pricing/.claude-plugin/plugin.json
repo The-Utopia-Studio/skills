@@ -1,0 +1,7 @@
+{
+  "name": "utopia-quant-pricing",
+  "description": "Quantitative pricing & physical risk modeling — Bayesian reasoning, expected value, forecasting, adverse selection, auction theory, and causal inference. For pricing physical/emerging risks (data centre infrastructure, climate, parametric insurance) or any work where you need to price uncertainty under information asymmetry.",
+  "version": "1.0.0",
+  "author": { "name": "The Utopia Studio" },
+  "keywords": ["quant","pricing","risk","bayesian","monte-carlo","forecasting","actuarial"]
+}
