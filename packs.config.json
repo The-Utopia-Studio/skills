@@ -27,7 +27,8 @@
         "swot-analysis",
         "stakeholder-map",
         "role-switch",
-        "prioritization-frameworks"
+        "prioritization-frameworks",
+        "proof"
       ]
     },
     {
@@ -319,16 +320,17 @@
     },
     {
       "name": "utopia-funds-research",
-      "description": "Utopia Funds — Research & Knowledge Management. Internal skills for the investment team's research workflow: Obsidian vault management, markdown notes, canvases, web extraction, and papers.",
+      "description": "Utopia Funds — Research & Knowledge Management. Internal skills for the investment team's research workflow: Obsidian vault management, markdown notes, canvases, web extraction, papers, and Proof collaborative docs.",
       "version": "1.0.0",
-      "keywords": ["funds", "research", "obsidian", "knowledge", "internal"],
+      "keywords": ["funds", "research", "obsidian", "knowledge", "internal", "proof"],
       "skills": [
         "obsidian-cli",
         "obsidian-markdown",
         "obsidian-bases",
         "json-canvas",
         "defuddle",
-        "huggingface-papers"
+        "huggingface-papers",
+        "proof"
       ]
     },
     {
@@ -383,7 +385,8 @@
         "reference-class-forecasting",
         "auction-winners-curse-haircut",
         "causal-inference-root-cause",
-        "verification"
+        "verification",
+        "proof"
       ]
     },
     {

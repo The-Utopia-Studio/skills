@@ -82,7 +82,7 @@
     {
       "name": "utopia-funds-research",
       "source": "./plugins/utopia-funds-research",
-      "description": "Utopia Funds — Research & Knowledge Management. Internal skills for the investment team's research workflow: Obsidian vault management, markdown notes, canvases, web extraction, and papers.",
+      "description": "Utopia Funds — Research & Knowledge Management. Internal skills for the investment team's research workflow: Obsidian vault management, markdown notes, canvases, web extraction, papers, and Proof collaborative docs.",
       "version": "1.0.0"
     },
     {
