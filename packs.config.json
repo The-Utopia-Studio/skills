@@ -84,7 +84,8 @@
         "critique",
         "architecture-diagram",
         "diagram-design",
-        "ui-ux-pro-max"
+        "ui-ux-pro-max",
+        "ckm-ui-styling"
       ]
     },
     {
@@ -121,7 +122,11 @@
         "brand-narrative-playbook",
         "business-narrative-builder",
         "positioning-workshop",
-        "sketch-prompt"
+        "sketch-prompt",
+        "ckm-brand",
+        "ckm-design",
+        "ckm-design-system",
+        "ckm-banner-design"
       ]
     },
     {
@@ -224,7 +229,8 @@
         "competitive-analysis",
         "datapack-builder",
         "business-narrative-builder",
-        "tear-sheet"
+        "tear-sheet",
+        "ckm-slides"
       ]
     },
     {
