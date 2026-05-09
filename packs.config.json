@@ -55,7 +55,8 @@
         "brainstorm-experiments-new",
         "summarize-interview",
         "job-stories",
-        "user-story-mapping-workshop"
+        "user-story-mapping-workshop",
+        "last30days"
       ]
     },
     {
@@ -205,7 +206,8 @@
         "social-selling",
         "social-content",
         "paid-ads",
-        "referral-program"
+        "referral-program",
+        "last30days"
       ]
     },
     {
@@ -279,7 +281,8 @@
         "security-auditor",
         "devops-advisor",
         "cost-optimizer",
-        "integration-linker"
+        "integration-linker",
+        "last30days"
       ]
     },
     {
@@ -336,7 +339,8 @@
         "json-canvas",
         "defuddle",
         "huggingface-papers",
-        "proof"
+        "proof",
+        "last30days"
       ]
     },
     {
