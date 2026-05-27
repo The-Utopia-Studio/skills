@@ -96,6 +96,12 @@
       "source": "./plugins/utopia-quant-pricing",
       "description": "Quantitative pricing & physical risk modeling — Bayesian reasoning, expected value, forecasting, adverse selection, auction theory, and causal inference. For pricing physical/emerging risks (data centre infrastructure, climate, parametric insurance) or any work where you need to price uncertainty under information asymmetry.",
       "version": "1.0.0"
+    },
+    {
+      "name": "utopia-internal-agents",
+      "source": "./plugins/utopia-internal-agents",
+      "description": "Utopia's named internal AI agents — Ada (DD analyst), Khalil (pitch deck builder), Salim (Studio fellow coach), plus agent-persona-builder for designing new agents. Each agent has a distinct personality, durable cross-session memory, and clear operating rules. Use 'as Ada' / 'as Khalil' / 'as Salim' to invoke a specific persona, or trigger them via their natural language patterns (run DD, build a deck, I'm stuck). Methodology adapted from Jack & Jill's agent-builder framework.",
+      "version": "1.0.0"
     }
   ]
 }

@@ -39,6 +39,9 @@ Two tracks: **Studio Cobuild packs** for fellows (mapped to M1–M9 modules) and
 # Engagement-specific packs — for active portfolio engagements
 /plugin install utopia-azraq-engagement@skills  # Azraq engagement: IP, patents, moat, risk modeling, Notion
 /plugin install utopia-quant-pricing@skills     # Bayesian pricing, forecasting, physical risk modeling
+
+# Internal agents — named personas with distinct voices and persistent memory
+/plugin install utopia-internal-agents@skills   # Ada (DD), Khalil (decks), Salim (fellow coach) + agent-persona-builder
 ```
 
 **3. Update packs as they change:**
@@ -127,6 +130,7 @@ Built for active portfolio engagements or specialty workflows. Install on top of
 |------|---|----------------|
 | **utopia-azraq-engagement** | 47 | **Azraq engagement** — IP defensibility (patents, prior art, moat analysis, VRIO), Notion workspace (knowledge capture, meeting intel, research docs), engine code audits (Trail of Bits security skills), risk matrix design crits, contract review, and Bayesian/quant pricing skills. Anyone working on Azraq's engine, risk matrix, or IP register installs this. |
 | **utopia-quant-pricing** | 21 | **Quantitative pricing & physical risk modeling** — Bayesian reasoning, expected value, forecasting, adverse selection, auction theory, causal inference. For any work where you're pricing uncertainty under information asymmetry (data centre risk, climate, parametric insurance, emerging risks). |
+| **utopia-internal-agents** | 4 | **Named Utopia AI agents with distinct personalities and persistent memory** — `Ada` (DD analyst, "what does the code actually do?"), `Khalil` (pitch deck builder, "what's the one thing they should remember?"), `Salim` (Studio fellow coach, Socratic, never gives the answer). Plus `agent-persona-builder` for designing new agents. See [agents/README.md](./agents/README.md). |
 
 ### Skill sources
 
