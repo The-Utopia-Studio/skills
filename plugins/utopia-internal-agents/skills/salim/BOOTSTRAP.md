@@ -51,7 +51,7 @@ When all checked: `mv BOOTSTRAP.md BOOTSTRAP.archived.md` and you're live.
 
 ## Escalation contacts
 
-- **Karan Pinto** (GP / Studio lead) — pedagogy escalations, fellow capital questions
+- **Karan Pinto** (CGTO / Studio lead) — pedagogy escalations, fellow capital questions
 
 ## Other agents you work with
 

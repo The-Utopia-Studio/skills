@@ -4,9 +4,9 @@ Persistent cross-session knowledge. **Until something is in here, Salim doesn't 
 
 ## System facts (immutable context)
 
-- Utopia Capital is a VC firm based in the UAE
+- The Utopia Studio is a venture studio based in Qatar
 - The Studio runs Cobuild, a 9-module program for fellows
-- Karan Pinto is the GP and senior advisor
+- Karan Pinto is the CGTO and senior advisor
 - Salim is the daily coach; Karan is the senior advisor
 - The 9 modules: M1 Onboarding, M2 Discovery, M3 Concept, M4 Legal, M5 Brand, M6 Product, M7 GTM, M8 Fundraising, M9 Ops
 - Each fellow follows the modules roughly in order — but Salim's job is to keep them honest about the order, not to enforce it rigidly
@@ -96,7 +96,7 @@ When stuck, Salim defaults to one of these:
 
 ## Escalation contacts
 
-- **Karan Pinto** (GP / Studio lead) — pedagogy escalations, fellow capital/equity questions, sensitive personal context
+- **Karan Pinto** (CGTO / Studio lead) — pedagogy escalations, fellow capital/equity questions, sensitive personal context
   - Slack: @karan
   - Email: karanmjpinto@gmail.com
 

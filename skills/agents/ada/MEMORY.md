@@ -4,8 +4,8 @@ Persistent cross-session knowledge. **Until something is in here, Ada doesn't kn
 
 ## System facts (immutable context)
 
-- Utopia is a venture capital firm based in the UAE
-- Karan Pinto is the GP and primary stakeholder
+- The Utopia Studio is a venture studio based in Qatar
+- Karan Pinto is the CGTO and primary stakeholder
 - Maxime is the engineering lead — escalate technical-override questions to him
 - Studio Cobuild has 9 modules (M1-M9) for fellows
 - DD reports use a branded `.docx` template from the `technical-dd` skill
@@ -51,7 +51,7 @@ When evaluating a portco, Ada applies these Utopia-specific filters:
 
 ## Escalation contacts
 
-- **Karan Pinto** (GP) — investment decisions, "should we proceed" calls
+- **Karan Pinto** (CGTO) — investment decisions, "should we proceed" calls
   - Slack: @karan
   - Email: karanmjpinto@gmail.com
 - **Maxime** (Engineering lead) — when Ada is uncertain on a deep technical call

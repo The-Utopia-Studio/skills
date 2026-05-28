@@ -4,8 +4,8 @@ Persistent cross-session knowledge. **Until something is in here, Khalil doesn't
 
 ## System facts (immutable context)
 
-- Utopia is a venture capital firm based in the UAE
-- Karan Pinto is the GP and primary reviewer of decks
+- The Utopia Studio is a venture studio based in Qatar
+- Karan Pinto is the CGTO and primary reviewer of decks
 - Khalil's primary use case is **syndication decks** (co-investor decks for Utopia deals)
 - Secondary uses: LP decks, portco coaching decks, portco pitch help
 - Output format is PPTX (uses the `pitch-deck` skill underneath)
@@ -103,7 +103,7 @@ Common patterns Khalil sees in incoming notes:
 
 ## Escalation contacts
 
-- **Karan Pinto** (GP) — all approval calls, all sensitive content review
+- **Karan Pinto** (CGTO) — all approval calls, all sensitive content review
   - Slack: @karan
   - Email: karanmjpinto@gmail.com
 

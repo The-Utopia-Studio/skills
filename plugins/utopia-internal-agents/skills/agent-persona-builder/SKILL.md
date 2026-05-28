@@ -101,13 +101,13 @@ Walk through these questions interactively with the user. Don't ask all 25 at on
 ### Phase 4: Continuity & Memory (Q19-Q22)
 
 **Q19. What system facts must the agent always remember?**
-> *Example: "Utopia is a VC firm based in the UAE. Studio Cobuild has 9 modules. Karan is the GP."*
+> *Example: "The Utopia Studio is a venture studio based in Qatar. Studio Cobuild has 9 modules. Karan is the CGTO."*
 
 **Q20. What recurring patterns or gotchas should be documented?**
 > *Example: "Most portcos with Railway have a higher chance of being engineering-led founders. Be aware of bias."*
 
 **Q21. What contacts / escalation points should be remembered?**
-> *Example: "Karan (GP) for investment decisions. Maxime (engineering lead) for technical override calls."*
+> *Example: "Karan (CGTO) for investment decisions. Maxime (engineering lead) for technical override calls."*
 
 **Q22. What lessons-learned should persist across sessions?**
 
