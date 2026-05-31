@@ -171,7 +171,8 @@
         "diagram-design",
         "tdd-red-green-refactor",
         "typed-service-contracts",
-        "greploop"
+        "greploop",
+        "code-structure"
       ]
     },
     {
