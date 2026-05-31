@@ -170,7 +170,8 @@
         "architecture-diagram",
         "diagram-design",
         "tdd-red-green-refactor",
-        "typed-service-contracts"
+        "typed-service-contracts",
+        "greploop"
       ]
     },
     {
