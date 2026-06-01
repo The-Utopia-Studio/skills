@@ -185,6 +185,7 @@ Requires `jq` (`brew install jq`).
 Want to propose a new skill, or understand the curation process? See:
 
 - **[`CONTRIBUTING.md`](./CONTRIBUTING.md)** — sandbox → pack graduation flow, curation principles, how to write good skills
+- **[`DESIGN_GUIDE.md`](./DESIGN_GUIDE.md)** — full index of all 42 design skills (foundations, Impeccable, Taste, Efecto, brand). Workflows, sources, open questions for design-team review.
 - **[`SKILL_TAXONOMY.md`](./SKILL_TAXONOMY.md)** — all 82 skills mapped to the 9-category taxonomy from Anthropic's Skills guide. Shows gaps (verification, data retrieval, runbooks) and overlaps.
 - **[`skills/sandbox/`](./skills/sandbox/)** — staging area for experimental skills before they graduate
 - **[`hooks/README.md`](./hooks/README.md)** — optional skill-usage logging hook, so you can see which skills are actually used
