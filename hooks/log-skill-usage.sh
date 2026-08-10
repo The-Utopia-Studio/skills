@@ -23,7 +23,11 @@
 #   }
 #
 # Logs append to ~/.claude/skill-usage.log as JSONL.
-# You can aggregate across your team by syncing this log to a shared location.
+#
+# To also send events to a shared team endpoint, set SKILL_USAGE_ENDPOINT to
+# its base URL (see hooks/usage-server/). The local file always gets written
+# first regardless — the network POST is best-effort and never blocks or
+# fails the skill invocation.
 
 set -eu
 
@@ -48,9 +52,19 @@ else
   SESSION="unknown"
 fi
 
+EVENT_JSON="$(printf '{"ts":"%s","user":"%s","host":"%s","session":"%s","skill":"%s"}' \
+  "$TIMESTAMP" "$USER" "$HOST" "$SESSION" "$SKILL")"
+
 # Append a JSONL entry
-printf '{"ts":"%s","user":"%s","host":"%s","session":"%s","skill":"%s"}\n' \
-  "$TIMESTAMP" "$USER" "$HOST" "$SESSION" "$SKILL" >> "$LOG_FILE"
+printf '%s\n' "$EVENT_JSON" >> "$LOG_FILE"
+
+# Best-effort POST to the shared endpoint. Short timeout, errors swallowed —
+# never block or fail the skill invocation on a flaky/unreachable network.
+if [ -n "${SKILL_USAGE_ENDPOINT:-}" ] && command -v curl >/dev/null 2>&1; then
+  curl -fsS -m 2 -X POST "$SKILL_USAGE_ENDPOINT/events" \
+    -H "Content-Type: application/json" \
+    -d "$EVENT_JSON" >/dev/null 2>&1 || true
+fi
 
 # Always pass through (don't block the skill)
 exit 0
