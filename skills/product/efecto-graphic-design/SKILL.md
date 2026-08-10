@@ -4,8 +4,8 @@ description: Design graphic assets with Efecto — presentations, pitch decks, e
 metadata:
   mcp-server: efecto
   author: pablostanley
-  version: "1.0.0"
-  argument-hint: <design-description>
+  version: 1.0.0
+argument-hint: <design-description>
 ---
 
 # Efecto — Graphic Design Guide
