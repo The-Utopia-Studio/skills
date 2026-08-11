@@ -413,8 +413,12 @@ Then reinstall whichever pack you want refreshed.
 **Q: I don't write code. Will this be useful for me?**
 Yes. Most skills are about strategy, discovery, fundraising, design, and ops — not just engineering. Use the AI like ChatGPT in a chat window.
 
-**Q: I use Claude.ai web chat, not Claude Code. Can I still use this?**
-Partially. Claude.ai web doesn't support the `/plugin` command. To use the marketplace properly, install Claude Code (it's free). Or DM Karan and he'll send you `.skill` files you can upload directly to Claude.ai under Settings → Capabilities → Skills.
+**Q: I use Claude.ai (web or desktop app), not Claude Code. Can I still use this?**
+Partially. Neither the Claude.ai web chat nor the desktop app supports the `/plugin` command or running `npx` — they're chat surfaces, not command-execution environments. To use the marketplace properly, install Claude Code (it's free).
+
+For the 6 flagship skills (`cold-email`, `outreach-execution`, `account-tier-scoring`, `pitch-deck`, `technical-dd`, `impeccable`), download the `.skill` file straight from [the docs site](https://the-utopia-studio.github.io/skills/#flagships) and upload it yourself under Settings → Capabilities → Skills — no need to wait on anyone.
+
+For anything outside those 6, DM Karan and he'll send you a `.skill` file for the specific skill you need. We're staying manual for the full 302-skill corpus for now (self-serve zips for all of them would mean ~34MB of binary build artifacts committed to git, growing with every skill edit, for a use case that doesn't yet have the volume to justify it) — ask if that changes and it's worth revisiting.
 
 **Q: Can I use this with Cursor or Codex?**
 Yes. They support the same skill format. Run `npx skills add The-Utopia-Studio/skills` and follow the prompts.

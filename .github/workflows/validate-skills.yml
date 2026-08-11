@@ -8,7 +8,10 @@ on:
       - "build-packs.sh"
       - "scripts/validate-skills.mjs"
       - "scripts/build-skills-index.mjs"
+      - "scripts/build-flagship-zips.mjs"
       - "docs/skills-index.json"
+      - "docs/downloads/**"
+      - "docs/index.html"
 
 jobs:
   validate:

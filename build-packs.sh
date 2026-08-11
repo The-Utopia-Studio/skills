@@ -120,6 +120,10 @@ jq --argjson packs "$(
 echo "  Regenerating docs/skills-index.json..."
 node "$REPO_ROOT/scripts/build-skills-index.mjs"
 
+# --- 6. Regenerate flagship .skill downloads (docs/downloads/) ---
+echo "  Regenerating docs/downloads/*.skill..."
+node "$REPO_ROOT/scripts/build-flagship-zips.mjs"
+
 echo ""
 echo "✓ Marketplace built successfully."
 echo ""
@@ -127,6 +131,7 @@ echo "  Generated:"
 echo "    .claude-plugin/marketplace.json"
 echo "    plugins/           ($pack_count packs)"
 echo "    docs/skills-index.json"
+echo "    docs/downloads/*.skill (flagship skills)"
 echo ""
 echo "  Next steps:"
 echo "    1. git add -A && git commit -m 'Rebuild marketplace'"

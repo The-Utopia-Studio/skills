@@ -442,6 +442,14 @@ img {
   white-space: nowrap;
 }
 
+.skill__download {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: var(--foreground-subtle);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 @media (max-width: 800px) {
   .skill__cmd {
     white-space: normal;

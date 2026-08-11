@@ -82,7 +82,7 @@ function checkBuildDrift() {
     execFileSync("./build-packs.sh", { cwd: REPO_ROOT, stdio: "pipe" });
     const diff = execFileSync(
       "git",
-      ["status", "--porcelain", "--", "plugins", ".claude-plugin", "docs/skills-index.json"],
+      ["status", "--porcelain", "--", "plugins", ".claude-plugin", "docs/skills-index.json", "docs/downloads"],
       { cwd: REPO_ROOT }
     ).toString();
     if (diff.trim()) {
