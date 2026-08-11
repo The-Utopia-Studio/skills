@@ -104,11 +104,19 @@ git clone https://github.com/The-Utopia-Studio/skills.git
 cp -r skills/skills/*/* ~/.cursor/skills/
 ```
 
-Or with npx:
+Or with npx (installs all 302 skills — there's no per-module shorthand like Claude Code's `/plugin install utopia-gtm@skills`, since `npx skills add` only selects by individual skill name):
 
 ```bash
 npx skills add The-Utopia-Studio/skills
 ```
+
+**Want just a few skills instead of all 302?** Use `--skill`, repeated once per skill (comma-separated names silently match nothing — `--skill a,b` fails with "No matching skills found"):
+
+```bash
+npx skills add The-Utopia-Studio/skills --skill cold-email --skill pitch-deck
+```
+
+Browse [the docs site](https://the-utopia-studio.github.io/skills/#browse) to find exact skill names first.
 
 ---
 
