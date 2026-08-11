@@ -36,7 +36,11 @@ for (const name of names) {
   const dir = skillDirFor(name);
   if (!dir) throw new Error(`Flagship skill "${name}" not found under skills/<module>/`);
   const zipPath = join(OUT_DIR, `${name}.skill`);
-  execFileSync("zip", ["-rq", zipPath, ".", "-x", ".*"], { cwd: dir });
+  // -X strips Unix extra fields (atime/ctime/uid/gid) -- without it, merely
+  // *reading* a source file to zip it changes its atime, producing a
+  // different-but-logically-identical zip on every rebuild (discovered via
+  // a real CI-drift false positive, see TUS-2602/TUS-2605 follow-up).
+  execFileSync("zip", ["-rqX", zipPath, ".", "-x", ".*"], { cwd: dir });
   console.log(`  zipped: docs/downloads/${name}.skill`);
 }
 console.log(`\n${names.length} flagship .skill file(s) generated.`);
