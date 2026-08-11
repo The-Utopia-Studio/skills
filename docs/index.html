@@ -6,7 +6,7 @@
     <title>Utopia Skills — AI skill marketplace for GTM, Product & Investments</title>
     <meta
       name="description"
-      content="301 production agent skills across four modules. The best GTM skill pack for AI agents — plus Product, Investments, and Founder Productivity. Install in Claude Code or Cursor."
+      content="302 production agent skills across four modules. The best GTM skill pack for AI agents — plus Product, Investments, and Founder Productivity. Install in Claude Code or Cursor."
     />
     <meta property="og:title" content="Utopia Skills" />
     <meta
@@ -26,6 +26,7 @@
         </a>
         <ul class="nav-links">
           <li><a href="#modules">Modules</a></li>
+          <li><a href="#browse">Browse all skills</a></li>
           <li><a href="#flagships">Flagships</a></li>
           <li><a href="#install">Install</a></li>
           <li><a href="#contribute">Contribute</a></li>
@@ -46,7 +47,7 @@
             for AI agents
           </h1>
           <p class="lede">
-            The Utopia Studio marketplace — 301 production skills across GTM,
+            The Utopia Studio marketplace — 302 production skills across GTM,
             Product, Investments, and Founder Productivity. Built for founders,
             fellows, and funds teams who need playbooks, not tip lists.
           </p>
@@ -100,7 +101,7 @@
           </div>
           <div class="module-grid">
             <article class="module">
-              <p class="module__count">83 skills · v2.1.0</p>
+              <p class="module__count">84 skills · v2.2.0</p>
               <h3 class="module__name">GTM</h3>
               <p class="module__desc">
                 Positioning, outbound, signals, paid, RevOps, retention, agent
@@ -145,7 +146,10 @@
             <h2 class="section__title">Flagship single-skill installs</h2>
             <p class="lede">
               Virality lives in one-skill installs people actually use — not
-              “install everything.”
+              “install everything.” On Claude.ai (web or desktop), where
+              <code>npx</code> and <code>/plugin</code> aren't available,
+              grab the <code>.skill</code> file below and upload it under
+              Settings → Capabilities → Skills.
             </p>
           </div>
           <div class="skill-list">
@@ -155,6 +159,9 @@
               <p class="skill__cmd">
                 npx skills add The-Utopia-Studio/skills --skill cold-email
               </p>
+              <a class="skill__download" href="./downloads/cold-email.skill" download
+                >.skill for Claude.ai</a
+              >
             </div>
             <div class="skill">
               <h3 class="skill__name">outreach-execution</h3>
@@ -164,6 +171,12 @@
               <p class="skill__cmd">
                 npx skills add The-Utopia-Studio/skills --skill outreach-execution
               </p>
+              <a
+                class="skill__download"
+                href="./downloads/outreach-execution.skill"
+                download
+                >.skill for Claude.ai</a
+              >
             </div>
             <div class="skill">
               <h3 class="skill__name">account-tier-scoring</h3>
@@ -174,6 +187,12 @@
                 npx skills add The-Utopia-Studio/skills --skill
                 account-tier-scoring
               </p>
+              <a
+                class="skill__download"
+                href="./downloads/account-tier-scoring.skill"
+                download
+                >.skill for Claude.ai</a
+              >
             </div>
             <div class="skill">
               <h3 class="skill__name">pitch-deck</h3>
@@ -181,6 +200,9 @@
               <p class="skill__cmd">
                 npx skills add The-Utopia-Studio/skills --skill pitch-deck
               </p>
+              <a class="skill__download" href="./downloads/pitch-deck.skill" download
+                >.skill for Claude.ai</a
+              >
             </div>
             <div class="skill">
               <h3 class="skill__name">technical-dd</h3>
@@ -188,6 +210,9 @@
               <p class="skill__cmd">
                 npx skills add The-Utopia-Studio/skills --skill technical-dd
               </p>
+              <a class="skill__download" href="./downloads/technical-dd.skill" download
+                >.skill for Claude.ai</a
+              >
             </div>
             <div class="skill">
               <h3 class="skill__name">impeccable</h3>
@@ -195,7 +220,44 @@
               <p class="skill__cmd">
                 npx skills add The-Utopia-Studio/skills --skill impeccable
               </p>
+              <a class="skill__download" href="./downloads/impeccable.skill" download
+                >.skill for Claude.ai</a
+              >
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="browse">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="eyebrow">All 302 skills</p>
+            <h2 class="section__title">Find the skill you need</h2>
+            <p class="lede">
+              Search by name, keyword, or description. Filter by module. Data
+              comes straight from
+              <a href="./skills-index.json">skills-index.json</a> — it can't
+              drift from what's actually shipped.
+            </p>
+          </div>
+          <div class="browser">
+            <div class="browser__controls">
+              <input
+                type="search"
+                id="browser-search"
+                class="browser__search"
+                placeholder="Search skills… (e.g. “pitch deck”, “cold email”, “dcf”)"
+                aria-label="Search skills"
+              />
+              <div class="browser__filters" id="browser-filters" role="group" aria-label="Filter by module">
+                <button type="button" class="btn btn--ghost is-active" data-module="all">All</button>
+              </div>
+            </div>
+            <p class="browser__count" id="browser-count" aria-live="polite">Loading…</p>
+            <ul class="browser__list" id="browser-list"></ul>
+            <p class="browser__empty" id="browser-empty" hidden>
+              No skills match that search.
+            </p>
           </div>
         </div>
       </section>
@@ -291,6 +353,89 @@ Do not invent vendor lock-in. Use GTM/product verbs. Encode judgment, not a bare
     </footer>
 
     <script>
+      (async function initBrowser() {
+        const searchInput = document.getElementById("browser-search");
+        const filtersEl = document.getElementById("browser-filters");
+        const listEl = document.getElementById("browser-list");
+        const countEl = document.getElementById("browser-count");
+        const emptyEl = document.getElementById("browser-empty");
+        const MODULE_LABELS = {
+          gtm: "GTM",
+          product: "Product",
+          investments: "Investments",
+          "founder-productivity": "Founder Productivity",
+        };
+
+        let skills = [];
+        let activeModule = "all";
+
+        try {
+          const res = await fetch("./skills-index.json");
+          const data = await res.json();
+          skills = data.skills;
+        } catch {
+          countEl.textContent = "Couldn't load the skills index.";
+          return;
+        }
+
+        const modules = [...new Set(skills.map((s) => s.module))].sort();
+        for (const mod of modules) {
+          const b = document.createElement("button");
+          b.type = "button";
+          b.className = "btn btn--ghost";
+          b.dataset.module = mod;
+          b.textContent = MODULE_LABELS[mod] || mod;
+          filtersEl.appendChild(b);
+        }
+
+        function render() {
+          const query = searchInput.value.trim().toLowerCase();
+          const filtered = skills.filter((s) => {
+            if (activeModule !== "all" && s.module !== activeModule) return false;
+            if (!query) return true;
+            return s.name.toLowerCase().includes(query) || s.description.toLowerCase().includes(query);
+          });
+
+          listEl.innerHTML = "";
+          for (const s of filtered) {
+            const li = document.createElement("li");
+            li.className = "browser__item";
+            const name = document.createElement("p");
+            name.className = "browser__name";
+            name.textContent = s.name;
+            const mod = document.createElement("span");
+            mod.className = "browser__module";
+            mod.textContent = MODULE_LABELS[s.module] || s.module;
+            name.appendChild(mod);
+            const desc = document.createElement("p");
+            desc.className = "browser__desc";
+            desc.textContent = s.description;
+            const link = document.createElement("a");
+            link.className = "browser__link";
+            link.href = s.url;
+            link.textContent = "View source";
+            li.append(name, desc, link);
+            listEl.appendChild(li);
+          }
+
+          countEl.textContent = `${filtered.length} of ${skills.length} skills`;
+          emptyEl.hidden = filtered.length !== 0;
+        }
+
+        searchInput.addEventListener("input", render);
+        filtersEl.addEventListener("click", (e) => {
+          const b = e.target.closest("button[data-module]");
+          if (!b) return;
+          activeModule = b.dataset.module;
+          for (const btn of filtersEl.querySelectorAll("button")) {
+            btn.classList.toggle("is-active", btn === b);
+          }
+          render();
+        });
+
+        render();
+      })();
+
       const btn = document.getElementById("copy-prompt");
       const status = document.getElementById("copy-status");
       const prompt = document.getElementById("contribute-prompt");

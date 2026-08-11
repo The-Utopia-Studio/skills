@@ -1,5 +1,5 @@
 ---
-name: environment
+name: railway-environment
 description: This skill should be used when the user asks "what's the config", "show me the configuration", "what variables are set", "environment config", "service config", "railway config", or wants to add/set/delete variables, change build/deploy settings, scale replicas, connect repos, or delete services.
 allowed-tools: Bash(railway:*)
 ---

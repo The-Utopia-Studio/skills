@@ -1,6 +1,6 @@
 ---
 name: product-manager-skills
-description: PM skill for Claude Code, Codex, Cursor, and Windsurf. Diagnoses SaaS metrics, critiques PRDs, plans roadmaps, runs discovery, coaches PM career transitions, pressure-tests AI product decisions, and designs PLG growth strategies. Seven knowledge domains, 12 templates, 40+ frameworks, and an opinionated interaction style that labels assumptions and names tradeoffs.
+description: Use when the user wants PM help in Claude Code, Codex, Cursor, or Windsurf — diagnosing SaaS metrics, critiquing PRDs, planning roadmaps, running discovery, coaching PM career transitions, pressure-testing AI product decisions, or designing PLG growth strategies. Seven knowledge domains, 12 templates, 40+ frameworks, and an opinionated interaction style that labels assumptions and names tradeoffs.
 type: workflow
 ---
 

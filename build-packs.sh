@@ -10,7 +10,7 @@
 # To add a new pack: edit packs.config.json, then run ./build-packs.sh.
 # To add a skill to an existing pack: add it to that pack's "skills" array in packs.config.json.
 #
-# Requirements: bash 4+, jq
+# Requirements: bash 3.2+ (stock macOS bash included), jq
 
 set -euo pipefail
 
@@ -33,13 +33,13 @@ fi
 echo "→ Building marketplace from packs.config.json"
 
 # --- 1. Resolve skill locations (flatten skills/<category>/<skill>/ lookup) ---
-declare -A SKILL_PATH_MAP
-while IFS= read -r -d '' skill_dir; do
-  skill_name="$(basename "$skill_dir")"
-  SKILL_PATH_MAP["$skill_name"]="$skill_dir"
-done < <(find "$SKILLS_DIR" -mindepth 2 -maxdepth 2 -type d -print0)
+# Avoids bash 4 associative arrays so this runs on stock macOS bash (3.2) too.
+skill_path_for() {
+  find "$SKILLS_DIR" -mindepth 2 -maxdepth 2 -type d -name "$1" -print -quit
+}
 
-echo "  Found ${#SKILL_PATH_MAP[@]} skills in $SKILLS_DIR"
+skill_total=$(find "$SKILLS_DIR" -mindepth 2 -maxdepth 2 -type d | wc -l | tr -d ' ')
+echo "  Found $skill_total skills in $SKILLS_DIR"
 
 # --- 2. Clean and recreate plugins/ ---
 rm -rf "$PLUGINS_DIR"
@@ -66,8 +66,9 @@ for i in $(seq 0 $((pack_count - 1))); do
   missing_skills=()
   while IFS= read -r skill; do
     [[ -z "$skill" ]] && continue
-    if [[ -n "${SKILL_PATH_MAP[$skill]:-}" ]]; then
-      cp -R "${SKILL_PATH_MAP[$skill]}" "$pack_dir/skills/$skill"
+    skill_path="$(skill_path_for "$skill")"
+    if [[ -n "$skill_path" ]]; then
+      cp -R "$skill_path" "$pack_dir/skills/$skill"
       skill_count=$((skill_count + 1))
     else
       missing_skills+=("$skill")
@@ -115,12 +116,22 @@ jq --argjson packs "$(
     plugins: $packs
   }' "$CONFIG" > "$MARKETPLACE_DIR/marketplace.json"
 
+# --- 5. Regenerate the machine-readable skills index (docs/skills-index.json) ---
+echo "  Regenerating docs/skills-index.json..."
+node "$REPO_ROOT/scripts/build-skills-index.mjs"
+
+# --- 6. Regenerate flagship .skill downloads (docs/downloads/) ---
+echo "  Regenerating docs/downloads/*.skill..."
+node "$REPO_ROOT/scripts/build-flagship-zips.mjs"
+
 echo ""
 echo "✓ Marketplace built successfully."
 echo ""
 echo "  Generated:"
 echo "    .claude-plugin/marketplace.json"
 echo "    plugins/           ($pack_count packs)"
+echo "    docs/skills-index.json"
+echo "    docs/downloads/*.skill (flagship skills)"
 echo ""
 echo "  Next steps:"
 echo "    1. git add -A && git commit -m 'Rebuild marketplace'"

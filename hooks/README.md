@@ -48,7 +48,23 @@ A PreToolUse hook that logs every skill invocation to a local JSONL file. Based 
 
 ### Aggregating across the team
 
-For a shared view, have each fellow set `SKILL_USAGE_LOG` to a path they rsync to a shared S3 bucket / Google Drive folder nightly. Or build a tiny Railway service that accepts POSTs from the hook.
+`hooks/usage-server/` is a small Node service (stdlib `http` + built-in `node:sqlite`, no dependencies) that accepts the hook's JSONL events over HTTP and stores them centrally.
+
+**Deploy it** (Railway, per `railway-deploy`):
+
+1. `cd hooks/usage-server && railway init && railway up`
+2. Attach a persistent volume (Railway sets `RAILWAY_VOLUME_MOUNT_PATH` automatically — the server stores its SQLite file there so data survives redeploys).
+3. Note the deployed service's public URL.
+
+**Point your hook at it** — add to `~/.claude/settings.json`'s hook env, or export before starting Claude:
+
+```bash
+export SKILL_USAGE_ENDPOINT="https://<your-railway-service>.up.railway.app"
+```
+
+The hook always writes the local file first, then best-effort POSTs to `$SKILL_USAGE_ENDPOINT/events` (2s timeout, errors swallowed). If the endpoint is unset, unreachable, or down, nothing changes — you still get the local JSONL file exactly as before, and the skill invocation is never blocked.
+
+Query the shared store directly: `GET $SKILL_USAGE_ENDPOINT/events?limit=100` returns the most recent events as JSON. `GET $SKILL_USAGE_ENDPOINT/health` for a liveness check.
 
 ### Quick analysis
 

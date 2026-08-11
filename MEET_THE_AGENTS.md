@@ -1,6 +1,6 @@
 # 🤖 Meet the Utopia Agents
 
-We now have three named AI agents at Utopia — each with their own personality, persistent memory, and clear job. Plus a framework to build new ones.
+We now have four named AI agents at Utopia — each with their own personality, persistent memory, and clear job. Plus a framework to build new ones.
 
 **Try them this week. They take 30 seconds to invoke and feel completely different from generic Claude.**
 
@@ -11,13 +11,14 @@ We now have three named AI agents at Utopia — each with their own personality,
 
 ## TL;DR (60 seconds)
 
-We've built three internal AI agents. Each is good at one specific Utopia job:
+We've built four internal AI agents. Each is good at one specific Utopia job:
 
 | Agent | Job | Try saying |
 |-------|-----|-----------|
 | **Ada** 🔍 | Technical due diligence | *"Ada, run DD on this repo"* |
 | **Khalil** 📊 | Pitch decks | *"Khalil, build a syndication deck from these notes"* |
 | **Salim** 🎓 | Studio fellow coaching | *"Salim, I'm stuck in M2"* |
+| **Sami** 📤 | Outbound/GTM | *"Sami, run outbound for this list"* |
 
 Plus an **`agent-persona-builder`** skill — use it to design new agents for your portco or for specific Utopia workflows.
 
@@ -130,6 +131,36 @@ He'll redirect you toward customer conversations, but Socratically — not by te
 
 ---
 
+### 📤 Sami — Outbound/GTM Lead
+
+> **Sami** means "listener" in Arabic.
+> **Voice:** Signal hunter, not a blaster. Refuses to draft against an unqualified list.
+> **Tagline:** *"What's the actual signal here?"*
+
+**Who uses Sami:** GTM/sales team, anyone running outbound campaigns.
+
+**What Sami does:**
+- Qualifies a target list (ICP fit, budget, intent) before drafting a single line of copy
+- Finds a specific, citable signal per account — never a generic segment description
+- Drafts 3-5 touch sequences with one hook and one CTA per touch
+- Routes production sending through sender-tier and approval rails, never sends directly
+- Reports reply rate, not open rate, as the success metric
+
+**What Sami won't do:**
+- Draft copy against a list with no usable signal (reports "not ready" instead)
+- Recommend buying or scraping a list without an ICP filter first
+- Let send volume substitute for a real hook
+- Send production email directly — that's `outreach-execution`'s job
+
+**Try this:**
+```
+"Sami, I have a list of 150 Series A SaaS companies — run outbound for the ones
+that raised in the last 90 days."
+```
+He'll qualify the list first, then find the funding-signal hook per account before drafting anything.
+
+---
+
 ### 🛠️ `agent-persona-builder` — Build Your Own Agent
 
 This is a skill that walks you through designing your own agent. 25 questions across 5 phases. Outputs the four canonical files: SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md (cross-session knowledge), BOOTSTRAP.md (first-boot setup).
@@ -225,6 +256,8 @@ You'll see they're partly empty — they fill up as we use the agents in real wo
 | LP update presentation | **Khalil** (LP mode) |
 | A fellow says "I'm stuck" | **Salim** |
 | A fellow wants you to write their PRD | **Salim** (he won't write it, but he'll coach) |
+| You have a target list and want to run an outbound campaign | **Sami** |
+| You're not sure which outbound skill to use (cold-outreach vs. ai-cold-outreach vs. outreach-execution) | **Sami** — he routes to the right one |
 | You have a recurring AI workflow that should be a named agent | **`agent-persona-builder`** |
 | You're building a portco and need its own internal agent | **`agent-persona-builder`** |
 
@@ -232,11 +265,11 @@ You'll see they're partly empty — they fill up as we use the agents in real wo
 
 ## FAQ
 
-**Q: Will Ada / Khalil / Salim actually behave differently than regular Claude?**
-Yes. Each has hard rules locked in their SOUL.md. Khalil literally won't use Inter font. Salim literally won't write your PRD. Try it — you'll feel the difference in the first response.
+**Q: Will Ada / Khalil / Salim / Sami actually behave differently than regular Claude?**
+Yes. Each has hard rules locked in their SOUL.md. Khalil literally won't use Inter font. Salim literally won't write your PRD. Sami literally won't draft outreach against an unqualified list. Try it — you'll feel the difference in the first response.
 
 **Q: Can I invoke an agent without saying their name?**
-Yes. They have natural-language triggers too. "Run DD on this" → Ada. "Build me a deck" → Khalil. "I'm stuck in M2" → Salim.
+Yes. They have natural-language triggers too. "Run DD on this" → Ada. "Build me a deck" → Khalil. "I'm stuck in M2" → Salim. "Run outbound for this list" → Sami.
 
 **Q: What if two agents could both handle a request?**
 Use the name to be specific. *"Khalil, build me a deck"* removes ambiguity.
@@ -247,25 +280,29 @@ Yes — fork the repo, edit the SOUL.md / AGENTS.md / MEMORY.md, and your local 
 **Q: How do I build a new agent?**
 Use the `agent-persona-builder` skill. *"Help me design an agent for [role]."* It walks you through 25 questions and outputs the four files.
 
-**Q: Does this work in Claude.ai web chat?**
-No — Claude.ai doesn't support the `/plugin` marketplace yet. Install Claude Code (free), Cursor, or ChatGPT Codex to use the agents. DM Karan if you need a workaround for Claude.ai.
+**Q: Does this work in Claude.ai (web or desktop app)?**
+No — neither surface supports the `/plugin` marketplace or running `npx`. Install Claude Code (free), Cursor, or ChatGPT Codex to use the agents. The agents aren't among the 6 flagship skills with self-serve `.skill` downloads (see [INSTALL.md](./INSTALL.md)) — DM Karan for a `.skill` file if you're Claude.ai-only.
 
 **Q: An agent gave me weird output. What do I do?**
 Tell me. The most likely cause is voice drift — fix is to update MEMORY.md with the gotcha, so it doesn't recur.
 
 ---
 
-## TL;DR — three commands and three prompts
+## TL;DR — four commands and four prompts
 
 ```
-# Install the agents
+# Install the agents (Ada + Khalil live in investments, Salim in
+# founder-productivity, Sami in gtm)
 /plugin marketplace add The-Utopia-Studio/skills
+/plugin install utopia-investments@skills
 /plugin install utopia-founder-productivity@skills
+/plugin install utopia-gtm@skills
 
 # Try them
 "Ada, run DD on [GitHub URL]"
 "Khalil, build a syndication deck from these notes: [paste]"
 "Salim, I'm in M[X] and stuck on [topic]"
+"Sami, run outbound for this list: [paste]"
 ```
 
 ---

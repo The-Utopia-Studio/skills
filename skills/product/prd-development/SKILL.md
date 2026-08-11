@@ -1,18 +1,17 @@
 ---
 name: prd-development
-description: Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a major initiative.
-intent: >-
-  Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
+description: Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a major initiative. For the comprehensive 8-section PRD template, use create-prd instead.
+intent: Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
 type: workflow
 theme: pm-artifacts
 best_for:
-  - "Writing a complete PRD from scratch"
-  - "Structuring product requirements for an engineering handoff"
-  - "Documenting a major new feature before development begins"
+  - Writing a complete PRD from scratch
+  - Structuring product requirements for an engineering handoff
+  - Documenting a major new feature before development begins
 scenarios:
-  - "I need a PRD for a new AI-powered recommendation feature in our e-commerce platform"
-  - "I've completed a discovery sprint and need to turn the findings into a PRD my engineers can act on"
-estimated_time: "60-120 min"
+  - I need a PRD for a new AI-powered recommendation feature in our e-commerce platform
+  - I've completed a discovery sprint and need to turn the findings into a PRD my engineers can act on
+estimated_time: 60-120 min
 ---
 
 

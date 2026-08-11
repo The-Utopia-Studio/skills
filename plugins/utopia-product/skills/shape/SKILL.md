@@ -1,9 +1,10 @@
 ---
 name: shape
-description: Plan the UX and UI for a feature before writing code. Runs a structured discovery interview, then produces a design brief that guides implementation. Use during the planning phase to establish design direction, constraints, and strategy before any code is written.
-version: 2.1.1
+description: Use when the user wants to plan the UX and UI for a feature before writing code. Runs a structured discovery interview, then produces a design brief that guides implementation — establishing design direction, constraints, and strategy during the planning phase, before any code is written.
 user-invocable: true
-argument-hint: "[feature to shape]"
+argument-hint: '[feature to shape]'
+metadata:
+  version: 2.1.1
 ---
 
 ## MANDATORY PREPARATION

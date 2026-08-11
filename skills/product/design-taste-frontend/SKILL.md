@@ -1,6 +1,6 @@
 ---
 name: design-taste-frontend
-description: Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering.
+description: Use when building or reviewing frontend UI and you want a Senior UI/UX Engineer persona that overrides default LLM design biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering. For the same anti-generic design philosophy scoped specifically to Google Stitch's DESIGN.md workflow, use stitch-design-taste instead.
 ---
 
 # High-Agency Frontend Skill

@@ -1,0 +1,69 @@
+{
+  "founder-productivity/full-output-enforcement": "Use when the user needs exhaustive, unabridged output and default LLM truncation would be a problem. Overrides default LLM truncation behavior, enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+
+  "founder-productivity/last30days": "Use when the user wants to know what people are actually saying about a topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web.",
+
+  "gtm/brand-narrative-playbook": "Use when the user needs a messaging and storytelling template that keeps positioning consistent across audiences and channels.",
+
+  "gtm/deal-velocity-engineer": "Use when the user wants to diagnose and fix deal velocity problems. Sales cycle diagnostics, stage exit criteria, pipeline deflation, zombie deal elimination, multi-threading, mutual action plans, AI-driven deal scoring, revenue intelligence integration (Gong/Chorus), and compression tactics with sourced benchmarks. Trigger on 'deal velocity,' 'sales cycle too long,' 'deals stalling,' 'pipeline velocity,' 'stage exit criteria,' 'zombie deals,' 'pipeline deflation,' 'deals stuck,' 'multi-threading,' 'mutual action plan,' 'deal inspection,' 'pipeline hygiene,' 'cycle time,' 'stage conversion,' 'deals die in negotiation,' 'we keep slipping deals,' 'reps can't close,' or 'pipeline is bloated but nothing closes.' Connects stage gates, deal scoring, inspection cadence, and pipeline deflation into the operating cadence. Includes modern AI/automation patterns (HubSpot Breeze, Salesforce Agentforce, predictive pipeline management). BOUNDARY: For forecast methodology see revops-forecasting. For pipeline visibility and dashboards see gtm-metrics / revops. For sales methodology (SPICED/MEDDPICC) see meddic-checklist / sales-enablement. For operating cadence see revops / gtm-metrics.",
+
+  "gtm/pql-framework": "Use when the user needs to define product-qualified lead (PQL) signals, scoring, and routing methodology.",
+
+  "gtm/retention-ltv-playbook": "Use when the user needs lifecycle frameworks for driving repeat purchase, loyalty, and subscription value.",
+
+  "gtm/sentiment-feedback-loop": "Use when the user needs a process for capturing qualitative customer feedback and injecting it into CS playbooks.",
+
+  "investments/audit-xls": "Use when the user wants to audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected range, a single sheet, or the entire model (including financial-model integrity checks like BS balance, cash tie-out, and logic sanity). Triggers on \"audit this sheet\", \"check my formulas\", \"find formula errors\", \"QA this spreadsheet\", \"sanity check this\", \"debug model\", \"model check\", \"model won't balance\", \"something's off in my model\", \"model review\".",
+
+  "investments/earnings-preview-single": "Use when the user wants a concise 4-5 page equity research earnings preview for a single company. Analyzes the most recent earnings transcript, competitor landscape, valuation, and recent news to produce a professional HTML report.",
+
+  "investments/epc-search": "Use when the user needs European or international patent law research — RAG search across EPC provisions, EPO Guidelines for Examination, and PCT rules.",
+
+  "investments/epo-patent-analyzer": "Use when the user needs automated analysis of patent applications for EPO compliance with Art. 84 EPC (claims clarity/support), Art. 83 EPC (sufficiency of disclosure), and Rules 42-49 EPC (formalities).",
+
+  "investments/fsi-strip-profile": "Use when the user needs professional investment banking strip profiles (company profiles) for pitch books, deal materials, and client presentations. Generates 1-4 information-dense slides with quadrant layouts, charts, and tables.\n",
+
+  "investments/hypothesis-library": "Use when the user needs a curated repository of experiment hypotheses, assumptions, and historical learnings.",
+
+  "investments/initiating-coverage": "Use when the user wants to create an institutional-quality equity research initiation report through a 5-task workflow. Tasks must be executed individually with verified prerequisites - (1) company research, (2) financial modeling, (3) valuation analysis, (4) chart generation, (5) final report assembly. Each task produces specific deliverables (markdown docs, Excel models, charts, or DOCX reports). Tasks 3-5 have dependencies on earlier tasks.",
+
+  "investments/pct-application": "Use when the user needs PCT international application preparation under PCT Rules 5-12 — unity of invention, formal requirements, national phase entry strategy, and deadline management.",
+
+  "investments/ppt-template-creator": "Use only when a user wants to create a reusable skill from their own PowerPoint template (creates self-contained PPT template SKILLS, not presentations). For creating actual presentations, use the pptx skill instead.",
+
+  "product/agent-dx-cli-scale": "Use when the user wants to score how well a CLI is designed for AI agents, based on the \"Rewrite Your CLI for AI Agents\" principles.",
+
+  "product/ckm-banner-design": "Use when the user wants to design banners for social media, ads, website heroes, creative assets, or print — with multiple art direction options and AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.",
+
+  "product/ckm-brand": "Use when the user needs brand voice, visual identity, messaging frameworks, asset management, or brand consistency work — for branded content, tone of voice, marketing assets, brand compliance, or style guides.",
+
+  "product/ckm-design": "Use when the user wants logo design (55 styles, Gemini AI), a corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), or social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.",
+
+  "product/ckm-slides": "Use when the user wants to create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+
+  "product/cohort-analysis": "Use when the user needs a standard method for slicing bookings, pipeline, and retention cohorts for diagnostics.",
+
+  "product/diagram-design": "Use when the user wants to create technical or product diagrams — architecture, flowchart, sequence, state machine, ER / data model, timeline, swimlane, quadrant, nested, tree, layer stack, venn, pyramid — as standalone HTML files with inline SVG. Ships with a neutral editorial skin and a first-run gate that prompts users to customize the style guide (colors, fonts) from their own website before generating. Includes annotation-callout primitive and optional sketchy variant.",
+
+  "product/emil-design-eng": "Use when the user wants UI polish, component design, animation decisions, or the invisible details that make software feel great. Encodes Emil Kowalski's design philosophy.",
+
+  "product/high-end-visual-design": "Use when the user wants their design to look like it came from a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive, and blocks the common defaults that make AI designs look cheap or generic.",
+
+  "product/huggingface-paper-publisher": "Use when the user wants to publish or manage research papers on Hugging Face Hub — creating paper pages, linking papers to models/datasets, claiming authorship, or generating professional markdown-based research articles.",
+
+  "product/industrial-brutalist-ui": "Use when the user wants raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics — rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+
+  "product/interface-craft": "Use when the user wants Interface Craft by Josh Puckett — a toolkit for building polished, animated interfaces in React. Includes Storyboard Animation (human-readable animation DSL with stage-driven sequencing), DialKit (live control panels for tuning animation values), and Design Critique (systematic UI review based on Josh Puckett's methodology). Triggers on: animate, animation, transition, storyboard, entrance, motion, spring, easing, timing, dialkit, sliders, controls, tune, tweak, critique, review, feedback, audit, improve, polish, refine, redesign.",
+
+  "product/minimalist-ui": "Use when the user wants clean editorial-style interfaces — warm monochrome palette, typographic contrast, flat bento grids, muted pastels, no gradients, no heavy shadows.",
+
+  "product/product-manager-skills": "Use when the user wants PM help in Claude Code, Codex, Cursor, or Windsurf — diagnosing SaaS metrics, critiquing PRDs, planning roadmaps, running discovery, coaching PM career transitions, pressure-testing AI product decisions, or designing PLG growth strategies. Seven knowledge domains, 12 templates, 40+ frameworks, and an opinionated interaction style that labels assumptions and names tradeoffs.",
+
+  "product/redesign-existing-projects": "Use when the user wants to upgrade an existing website or app to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+
+  "product/shape": "Use during the planning phase, before any code is written, when the user wants to plan the UX and UI for a feature. Runs a structured discovery interview, then produces a design brief that guides implementation — establishing design direction, constraints, and strategy.",
+
+  "product/transformers-js": "Use when the user wants to run state-of-the-art machine learning models directly in JavaScript/TypeScript with Transformers.js. Supports NLP (text classification, translation, summarization), computer vision (image classification, object detection), audio (speech recognition, audio classification), and multimodal tasks. Works in browsers and server-side runtimes (Node.js, Bun, Deno) with WebGPU/WASM using pre-trained models from Hugging Face Hub.",
+
+  "product/ui-ux-pro-max": "Use when the user wants UI/UX design intelligence for web and mobile — 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples."
+}

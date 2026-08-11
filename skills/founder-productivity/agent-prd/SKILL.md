@@ -1,6 +1,6 @@
 ---
 name: agent-prd
-description: Interview the user and produce an Agent PRD — the planning document that must exist before any agent code is written. Use when the user wants to build, scope, spec, or plan a new agent, generator, critic, pipeline stage, harness, or autonomous system; when they say "new agent", "agent PRD", "spec this agent", "plan this agent", "I want to build an agent that...", or ask what questions they should answer before starting. Also use when an existing agent is being rebuilt or a stage is being added to a pipeline. Do not use for writing agent implementation code — this skill produces a document only.
+description: Interview the user and produce an Agent PRD — the planning document that must exist before any agent code is written. Use when the user wants to build, scope, spec, or plan a new agent, generator, critic, pipeline stage, harness, or autonomous system; when they say "new agent", "agent PRD", "spec this agent", "plan this agent", "I want to build an agent that...", or ask what questions they should answer before starting. Also use when an existing agent is being rebuilt or a stage is being added to a pipeline. Do not use for writing agent implementation code — this skill produces a document only. For a general product PRD that isn't agent-specific, use create-prd instead.
 ---
 
 # Agent PRD

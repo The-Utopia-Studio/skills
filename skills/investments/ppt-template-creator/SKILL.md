@@ -1,6 +1,6 @@
 ---
 name: ppt-template-creator
-description: Creates self-contained PPT template SKILLS (not presentations) from user-provided PowerPoint templates. Use ONLY when a user wants to create a reusable skill from their template. For creating actual presentations, use the pptx skill instead.
+description: Use when the user wants to create a reusable skill from their own PowerPoint template — and only for that (creates self-contained PPT template SKILLS, not presentations). For creating actual presentations, use the pptx skill instead.
 ---
 
 # PPT Template Creator

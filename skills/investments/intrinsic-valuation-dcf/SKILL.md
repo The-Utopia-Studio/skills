@@ -1,6 +1,6 @@
 ---
 name: intrinsic-valuation-dcf
-description: Performs discounted cash flow valuation using the appropriate model variant (DDM, FCFE, or FCFF) with configurable growth stages. Produces year-by-year cash flow projections, terminal value, equity bridge (subtract debt, add cash, subtract option value), per-share intrinsic value, and sensitivity analysis. Use when valuing a company intrinsically, building a DCF model, estimating fair value, or when user mentions DCF, discounted cash flow, intrinsic value, terminal value, or free cash flow valuation.
+description: Performs discounted cash flow valuation using the appropriate model variant (DDM, FCFE, or FCFF) with configurable growth stages. Produces year-by-year cash flow projections, terminal value, equity bridge (subtract debt, add cash, subtract option value), per-share intrinsic value, and sensitivity analysis. Use when valuing a company intrinsically, building a DCF model, estimating fair value, or when user mentions DCF, discounted cash flow, intrinsic value, terminal value, or free cash flow valuation. For a SEC-filing-driven single-approach DCF model instead of multi-variant flexibility, use dcf-model instead.
 ---
 # Intrinsic Valuation (DCF)
 

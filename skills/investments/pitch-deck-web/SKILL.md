@@ -7,7 +7,7 @@ description: |
   Pulls brand tokens (colors, typography, voice) from a brandbook-builder-style repo, runs a
   guided brief (investor vs sales, copy approval, image/logo intake, reference mining), then
   scaffolds a Vite + React + TS + Tailwind + motion deck site mirroring the utopia-os-deck
-  section-scroll pattern.
+  section-scroll pattern. For a branded PPTX file instead of a web deck, use pitch-deck.
 ---
 
 # Pitch Deck — guided build

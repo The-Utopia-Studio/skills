@@ -1,6 +1,6 @@
 ---
 name: repo-scanner
-description: Scans a GitHub repository to understand its tech stack, hosting, monitoring, integrations, and current production readiness. Use when the user asks to "audit", "check", or "scan" their repo. Don't use for code review or bug detection.
+description: Scans a GitHub repository to understand its tech stack, hosting, monitoring, integrations, and current production readiness. Use when the user asks to "audit", "check", or "scan" their repo. Don't use for code review or bug detection. For fixing what the scan finds rather than diagnosing, use repo-structurer instead — this skill only reads and reports.
 ---
 
 # Repo Scanner

@@ -2,7 +2,7 @@
 
 **Time:** ~2 minutes · **Hardest part:** copying and pasting
 
-Four modules · **301 skills** · Claude Code plugin marketplace for The Utopia Studio.
+Four modules · **302 skills** · Claude Code plugin marketplace for The Utopia Studio.
 
 **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills)
 
@@ -109,6 +109,16 @@ Or with npx:
 ```bash
 npx skills add The-Utopia-Studio/skills
 ```
+
+---
+
+## Using Claude.ai instead (web or desktop app)?
+
+Neither the Claude.ai web chat nor the desktop app supports `/plugin` or running `npx` — they're chat surfaces, not command-execution environments. There's no full-marketplace install path for either.
+
+**For the 6 flagship skills** (`cold-email`, `outreach-execution`, `account-tier-scoring`, `pitch-deck`, `technical-dd`, `impeccable`): download the `.skill` file from [the docs site](https://the-utopia-studio.github.io/skills/#flagships) and upload it yourself under **Settings → Capabilities → Skills**.
+
+**For anything else in the 302-skill corpus:** ping **Karan** (@kmjp) — he'll zip and send you the specific `.skill` file you need. Self-serve downloads aren't built for the full corpus yet (see [FELLOWS.md](./FELLOWS.md#faq) for why); install Claude Code instead if you want the whole marketplace without asking anyone.
 
 ---
 

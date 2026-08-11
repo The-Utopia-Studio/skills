@@ -1,0 +1,13 @@
+{
+  "name": "utopia-skills-usage-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ingestion endpoint for hooks/log-skill-usage.sh. Deploy to Railway with a persistent volume mounted (sets RAILWAY_VOLUME_MOUNT_PATH automatically).",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

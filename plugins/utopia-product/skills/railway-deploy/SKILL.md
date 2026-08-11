@@ -1,5 +1,5 @@
 ---
-name: deploy
+name: railway-deploy
 description: This skill should be used when the user wants to push code to Railway, says "railway up", "deploy", "deploy to railway", "ship", or "push". For initial setup or creating services, use new skill. For Docker images, use environment skill.
 allowed-tools: Bash(railway:*)
 ---

@@ -1,8 +1,9 @@
 ---
 name: design-critique
-description: "냉철한 디자인 비평 스킬. 15년 경력 수석 디자이너 페르소나로 UX, 비즈니스 목표, 시각적 원칙을 기준으로 제출된 디자인(이미지, 코드, URL, 기획안)을 분석한다. 4개 평가 기준 + 날카로운 질문 2개 + 우선순위 액션 플랜 3개를 고정 포맷으로 출력. 브랜드 디자인 시스템이 존재하면 이탈 여부를 반드시 검증한다. 트리거: '비평해줘', '리뷰해줘', '뭐가 문제야', '피드백 줘', '크리틱해줘', '어떻게 생각해'."
-version: 2.0.0
-license: MIT
+description: Use when the user wants a blunt, senior-designer-level design critique in Korean — especially with trigger phrases like '비평해줘', '리뷰해줘', '뭐가 문제야', '피드백 줘', '크리틱해줘', '어떻게 생각해'. 냉철한 디자인 비평 스킬로, 15년 경력 수석 디자이너 페르소나가 UX, 비즈니스 목표, 시각적 원칙을 기준으로 제출된 디자인(이미지, 코드, URL, 기획안)을 분석하고 4개 평가 기준 + 날카로운 질문 2개 + 우선순위 액션 플랜 3개를 고정 포맷으로 출력한다. 브랜드 디자인 시스템이 존재하면 이탈 여부를 반드시 검증한다. For the English-language equivalent with quantitative scoring and persona-based testing, use critique instead — both do UX judgment, this one is the Korean-native voice.
+metadata:
+  version: 2.0.0
+  license: MIT
 ---
 
 # Design Critique

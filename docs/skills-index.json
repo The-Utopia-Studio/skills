@@ -1,0 +1,2423 @@
+{
+  "$schema": "./skills-index.schema.json",
+  "generatedBy": "scripts/build-skills-index.mjs",
+  "count": 302,
+  "skills": [
+    {
+      "name": "3-statement-model",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Complete, populate and fill out 3-statement financial model templates (Income Statement, Balance Sheet, Cash Flow Statement) . Use when asked to fill out model templates, complete existing model frameworks, populate financial models with data, complete a partially filled IS/BS/CF framework, or link integrated financial statements within an existing template structure. Triggers include requests to fill in, complete, or populate a 3-statement model template",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/3-statement-model/SKILL.md"
+    },
+    {
+      "name": "ab-test-analysis",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Analyze A/B test results with statistical significance, sample size validation, confidence intervals, and ship/extend/stop recommendations. Use when evaluating experiment results, checking if a test reached significance, interpreting split test data, or deciding whether to ship a variant.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ab-test-analysis/SKILL.md"
+    },
+    {
+      "name": "account-tier-scoring",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when you want a production-grade account scoring system instead of a vibes-based one: it tiers every account onto a Bronze/Silver/Gold/Diamond ladder, scoring pre-conversion accounts on intent signals + ACV potential and trials/customers on activation depth + expansion headroom. It encodes the judgment that makes scoring trustworthy — a hard self-serve gate with LinkedIn headcount verification, an enterprise persona gate, anonymous-signal and social-engagement caps, prior-relationship floors, and never-demote rules — with every threshold exposed as a tunable default. Each run produces a verified tier tag and ACV tag, a prepended signal-stack snapshot in account memory, a CRM lead-score sync, and correctly routed Gold/Diamond alerts with per-stakeholder engagement recommendations.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/account-tier-scoring/SKILL.md"
+    },
+    {
+      "name": "activation-map",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to link segments and insights to GTM plays, owners, and measurement plans.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/activation-map/SKILL.md"
+    },
+    {
+      "name": "ad-creative",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/ad-creative/SKILL.md"
+    },
+    {
+      "name": "ada",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Run technical due diligence as Ada — The Utopia Studio's DD analyst. Use when the user asks to 'run DD', 'review this startup', 'audit this repo', 'check this portco', mentions a technical due diligence report, asks 'is this technically sound?', or says 'run DD on [company]'. Ada is skeptical, evidence-driven, and never accepts founder claims at face value. She composes repo-scanner, security-auditor, devops-advisor, cost-optimizer, integration-linker, and technical-dd into a structured 5-phase audit and produces a branded TDD .docx report with P0-P3 risk severities. Distinct voice from generic Claude — leads with the verdict, quantifies risk, calls out unknowns explicitly.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/ada/SKILL.md"
+    },
+    {
+      "name": "adapt",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Adapt designs to work across different screen sizes, devices, contexts, or platforms. Implements breakpoints, fluid layouts, and touch targets. Use when the user mentions responsive design, mobile layouts, breakpoints, viewport adaptation, or cross-device compatibility.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/adapt/SKILL.md"
+    },
+    {
+      "name": "adverse-selection-prior",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Produces a Bayesian prior probability that an offered transaction is +EV for the recipient, given that the counterparty chose to propose it. Applies Akerlof market-for-lemons logic -- if they offered it, they believe it is +EV for them, so the prior that it is +EV for us is materially below 50%. Reusable across trade evaluation, waiver drops (another team dropping a player is also adverse selection), job-offer analysis, M&A, and any \"someone offered me this\" situation. Use when you receive an unsolicited trade/offer/proposal, analyzing incoming trade prior, evaluating why a counterparty proposed a deal, or when user mentions adverse selection, market for lemons, why did they offer this, incoming trade prior, they proposed it, Bayesian adjustment on received offer.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/adverse-selection-prior/SKILL.md"
+    },
+    {
+      "name": "agent-dx-cli-scale",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to score how well a CLI is designed for AI agents, based on the \"Rewrite Your CLI for AI Agents\" principles.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/agent-dx-cli-scale/SKILL.md"
+    },
+    {
+      "name": "agent-persona-builder",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Design persistent AI agent personas with distinct voices, durable memory, and clear operating rules. Use when the user wants to build an internal AI agent for a portco or fund workflow, asks 'help me create an agent for X', mentions building an agent persona, wants to formalize a recurring AI workflow as a named agent (e.g. 'Ada the DD analyst'), or asks how to design agents that don't sound generic. Based on Jack & Jill's agent-builder methodology — 25 questions across 5 phases, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md (cross-session knowledge), and BOOTSTRAP.md (first-boot orientation).",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/agent-persona-builder/SKILL.md"
+    },
+    {
+      "name": "agent-prd",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Interview the user and produce an Agent PRD — the planning document that must exist before any agent code is written. Use when the user wants to build, scope, spec, or plan a new agent, generator, critic, pipeline stage, harness, or autonomous system; when they say \"new agent\", \"agent PRD\", \"spec this agent\", \"plan this agent\", \"I want to build an agent that...\", or ask what questions they should answer before starting. Also use when an existing agent is being rebuilt or a stage is being added to a pipeline. Do not use for writing agent implementation code — this skill produces a document only. For a general product PRD that isn't agent-specific, use create-prd instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/agent-prd/SKILL.md"
+    },
+    {
+      "name": "ai-cold-outreach",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to build an AI-powered outreach system, write cold emails, improve deliverability, or scale personalized outreach. Also use when the user mentions 'cold email,' 'cold outreach,' 'outreach automation,' 'Instantly,' 'Smartlead,' 'Clay,' 'email sequences,' 'deliverability,' 'personalization at scale,' 'reply rate,' or 'outreach stack.' This skill covers the complete AI cold outreach system from signal detection through conversion. For production sending with sender-tier assignment and approval rails, use outreach-execution instead — this skill drafts the strategy and copy, that one executes it.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/ai-cold-outreach/SKILL.md"
+    },
+    {
+      "name": "ai-pricing",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "When the user wants to price an AI product, choose a charge metric, design pricing tiers, or optimize margins. Also use when the user mentions 'AI pricing,' 'usage-based pricing,' 'consumption pricing,' 'outcome pricing,' 'BYOK,' 'bring your own key,' 'per-seat pricing,' 'pricing tiers,' 'AI margins,' 'cost per token,' or 'pricing model.' This skill covers pricing strategy, packaging, and margin management for AI-native products.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ai-pricing/SKILL.md"
+    },
+    {
+      "name": "ai-sdr",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to deploy AI sales development reps, automate sales qualification, build signal-to-action routing, or design AI agent architecture for sales. Also use when the user mentions 'AI SDR,' 'AI sales agent,' 'automated qualification,' 'signal routing,' 'sales automation,' '11x,' 'Artisan,' 'AiSDR,' 'AI BDR,' or 'autonomous sales.' This skill covers AI SDR deployment, qualification automation, and agent architecture for sales development.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/ai-sdr/SKILL.md"
+    },
+    {
+      "name": "alignment-values-north-star",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Creates actionable alignment frameworks that give teams a shared North Star (direction), values (guardrails), and decision tenets (behavioral standards). Enables autonomous decision-making while maintaining organizational coherence. Use when starting new teams, scaling organizations, defining culture, establishing product vision, resolving misalignment, creating strategic clarity, or when user mentions North Star, team values, mission, principles, guardrails, decision framework, or cultural alignment.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/alignment-values-north-star/SKILL.md"
+    },
+    {
+      "name": "analytics-tracking",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \"set up tracking,\" \"GA4,\" \"Google Analytics,\" \"conversion tracking,\" \"event tracking,\" \"UTM parameters,\" \"tag manager,\" \"GTM,\" \"analytics implementation,\" \"tracking plan,\" \"how do I measure this,\" \"track conversions,\" \"attribution,\" \"Mixpanel,\" \"Segment,\" \"are my events firing,\" or \"analytics isn't working.\" Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/analytics-tracking/SKILL.md"
+    },
+    {
+      "name": "animate",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Review a feature and enhance it with purposeful animations, micro-interactions, and motion effects that improve usability and delight. Use when the user mentions adding animation, transitions, micro-interactions, motion design, hover effects, or making the UI feel more alive.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/animate/SKILL.md"
+    },
+    {
+      "name": "architecture-diagram",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create professional, dark-themed architecture diagrams as standalone HTML files with SVG graphics. Use when the user asks for system architecture diagrams, infrastructure diagrams, cloud architecture visualizations, security diagrams, network topology diagrams, or any technical diagram showing system components and their relationships.",
+      "version": "1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/architecture-diagram/SKILL.md"
+    },
+    {
+      "name": "auction-first-price-shading",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Computes the optimal shaded bid for a first-price sealed-bid auction given a true private value, an estimate of the number of competing bidders N, and a value-distribution assumption. Implements the `(N-1)/N` equilibrium shading rule for uniform private values, adjusts for log-normal or empirical value distributions, layers a risk-aversion adjustment, and caps output against the bidder's remaining budget. Domain-neutral auction theory reusable across fantasy sports (baseball FAAB, NBA/NHL waiver auctions), prediction-market limit sizing, sealed procurement bids, and any blind-bid context. Use when user mentions \"first-price auction bid\", \"sealed bid shading\", \"(N-1)/N\", \"FAAB bid amount\", \"auction shading\", \"optimal bid first-price\", \"bid for sealed-bid\", \"blind bid sizing\", or when downstream logic needs a principled shade factor rather than an ad-hoc heuristic.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/auction-first-price-shading/SKILL.md"
+    },
+    {
+      "name": "auction-winners-curse-haircut",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Applies a Bayesian haircut to a bid valuation for common-value auctions where winning is itself evidence the bidder over-estimated. Takes a raw valuation, a value-type classification (common_value / private_value / mixed), the number of informed bidders N, and a signal-dispersion estimate, and returns an adjusted valuation. Domain-neutral and reusable across fantasy FAAB, prediction markets, M&A bids, ad-auction budgets, and any generic bidding context. Use when user mentions \"winner's curse\", \"common value auction\", \"valuation haircut\", \"adverse valuation\", \"Bayesian bid adjustment\", or \"over-paying in auction\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/auction-winners-curse-haircut/SKILL.md"
+    },
+    {
+      "name": "audit",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Run technical quality checks across accessibility, performance, theming, responsive design, and anti-patterns. Generates a scored report with P0-P3 severity ratings and actionable plan. Use when the user wants an accessibility check, performance audit, or technical quality review. For a UX/visual-quality judgment call (hierarchy, emotional resonance, cognitive load) instead of a technical check, use critique instead.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/audit/SKILL.md"
+    },
+    {
+      "name": "audit-xls",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user wants to audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected range, a single sheet, or the entire model (including financial-model integrity checks like BS balance, cash tie-out, and logic sanity). Triggers on \"audit this sheet\", \"check my formulas\", \"find formula errors\", \"QA this spreadsheet\", \"sanity check this\", \"debug model\", \"model check\", \"model won't balance\", \"something's off in my model\", \"model review\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/audit-xls/SKILL.md"
+    },
+    {
+      "name": "bayesian-reasoning-calibration",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Applies Bayesian reasoning to systematically update probability estimates with new evidence, helping make better forecasts and avoid overconfidence. Use when making predictions or judgments under uncertainty, forecasting outcomes, evaluating probabilities, testing hypotheses, calibrating confidence, assessing risks with uncertain data, or when user mentions priors, likelihoods, Bayes theorem, probability updates, forecasting, calibration, or belief revision.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/bayesian-reasoning-calibration/SKILL.md"
+    },
+    {
+      "name": "beachhead-segment",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Identify the first beachhead market segment for a product launch. Evaluates segments against burning pain, willingness to pay, winnable market share, and referral potential. Use when choosing a first market, targeting an initial customer segment, or planning market entry strategy.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/beachhead-segment/SKILL.md"
+    },
+    {
+      "name": "bolder",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Amplify safe or boring designs to make them more visually interesting and stimulating. Increases impact while maintaining usability. Use when the user says the design looks bland, generic, too safe, lacks personality, or wants more visual impact and character.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/bolder/SKILL.md"
+    },
+    {
+      "name": "bond-futures-basis",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Analyze the bond futures basis by pricing futures, identifying the cheapest-to-deliver, and comparing with yield curves to assess delivery option value and basis trading opportunities. Use when analyzing bond futures, computing the basis, identifying CTD bonds, calculating implied repo rates, or evaluating basis trades.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/bond-futures-basis/SKILL.md"
+    },
+    {
+      "name": "bond-relative-value",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Perform relative value analysis on bonds by combining pricing, yield curve context, credit spreads, and scenario stress testing. Use when analyzing bond richness/cheapness, computing spread decomposition, comparing bonds, assessing bond value vs curves, or running rate shock scenarios.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/bond-relative-value/SKILL.md"
+    },
+    {
+      "name": "brainstorm-experiments-new",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Design lean startup experiments (pretotypes) for a new product. Creates XYZ hypotheses and suggests low-effort validation methods like landing pages, explainer videos, and pre-orders. Use when validating a new product idea, creating pretotypes, or testing market demand.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/brainstorm-experiments-new/SKILL.md"
+    },
+    {
+      "name": "brand-narrative-playbook",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when the user needs a messaging and storytelling template that keeps positioning consistent across audiences and channels.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/brand-narrative-playbook/SKILL.md"
+    },
+    {
+      "name": "business-model",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/business-model/SKILL.md"
+    },
+    {
+      "name": "business-narrative-builder",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Constructs a structured narrative linking a company's qualitative business story to quantitative valuation drivers (revenue growth, target margin, reinvestment efficiency, cost of capital, failure risk). Classifies the company within a 6-stage corporate life cycle and sizes the total addressable market. Use when starting a company analysis, building a valuation narrative, assessing competitive position, sizing TAM, or when user mentions business narrative, story to numbers, life cycle stage, or company analysis.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/business-narrative-builder/SKILL.md"
+    },
+    {
+      "name": "call-scorecards",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when sales call quality is inconsistent, coaching feedback is vague, reps and managers disagree on what a good call is, or the user asks to \\\"build a call scorecard\\\", \\\"score this call\\\", \\\"review my rep's calls\\\", or \\\"make coaching more consistent\\\". It builds behavior-based scorecards for each key conversation type (prospecting, discovery, demo, pricing, close) and uses them to score real calls, localize where reps get stuck, and run chunked practice. Also fires when the user pastes a call transcript and wants it graded.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/call-scorecards/SKILL.md"
+    },
+    {
+      "name": "capital-structure-optimizer",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Analyzes a company's debt-equity mix and determines the optimal capital structure that minimizes WACC. Computes WACC at each debt ratio from 0% to 90%, identifies the minimum, and recommends whether to add or reduce debt with specific debt type matching (maturity, currency, fixed vs floating). Use when analyzing capital structure, optimizing debt levels, evaluating leverage, or when user mentions optimal debt ratio, capital structure, leverage optimization, debt capacity, or recapitalization.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/capital-structure-optimizer/SKILL.md"
+    },
+    {
+      "name": "causal-inference-root-cause",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Systematically investigates causal relationships to identify true root causes rather than correlations or symptoms. Distinguishes genuine causation from spurious associations, tests competing explanations, and designs interventions addressing underlying drivers. Use when investigating why something happened, debugging systems, analyzing failures, evaluating policy impacts, or when user mentions root cause, causal chain, confounding, spurious correlation, or asks \"why did this really happen?\"",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/causal-inference-root-cause/SKILL.md"
+    },
+    {
+      "name": "churn-prevention",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see email-sequence. For in-app upgrade paywalls, see paywall-upgrade-cro.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/churn-prevention/SKILL.md"
+    },
+    {
+      "name": "ckm-banner-design",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to design banners for social media, ads, website heroes, creative assets, or print — with multiple art direction options and AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ckm-banner-design/SKILL.md"
+    },
+    {
+      "name": "ckm-brand",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user needs brand voice, visual identity, messaging frameworks, asset management, or brand consistency work — for branded content, tone of voice, marketing assets, brand compliance, or style guides.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ckm-brand/SKILL.md"
+    },
+    {
+      "name": "ckm-design",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants logo design (55 styles, Gemini AI), a corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), or social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.",
+      "version": "2.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ckm-design/SKILL.md"
+    },
+    {
+      "name": "ckm-design-system",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ckm-design-system/SKILL.md"
+    },
+    {
+      "name": "ckm-slides",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ckm-slides/SKILL.md"
+    },
+    {
+      "name": "ckm-ui-styling",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ckm-ui-styling/SKILL.md"
+    },
+    {
+      "name": "clarify",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Improve unclear UX copy, error messages, microcopy, labels, and instructions to make interfaces easier to understand. Use when the user mentions confusing text, unclear labels, bad error messages, hard-to-follow instructions, or wanting better UX writing.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/clarify/SKILL.md"
+    },
+    {
+      "name": "clean-data-xls",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Clean up messy spreadsheet data — trim whitespace, fix inconsistent casing, convert numbers-stored-as-text, standardize dates, remove duplicates, and flag mixed-type columns. Use when data is messy, inconsistent, or needs prep before analysis. Triggers on \"clean this data\", \"clean up this sheet\", \"normalize this data\", \"fix formatting\", \"dedupe\", \"standardize this column\", \"this data is messy\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/clean-data-xls/SKILL.md"
+    },
+    {
+      "name": "code-structure",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when multiple workflows duplicate the same operational logic, when deciding what belongs in actions vs shared services, or when refactoring repeated operational blocks across domain flows. Use when adding new features that share mechanics with existing ones.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/code-structure/SKILL.md"
+    },
+    {
+      "name": "cohort-analysis",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user needs a standard method for slicing bookings, pipeline, and retention cohorts for diagnostics.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/cohort-analysis/SKILL.md"
+    },
+    {
+      "name": "cold-email",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \"cold outreach,\" \"prospecting email,\" \"outbound email,\" \"email to leads,\" \"reach out to prospects,\" \"sales email,\" \"follow-up email sequence,\" \"nobody's replying to my emails,\" or \"how do I write a cold email.\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/cold-email/SKILL.md"
+    },
+    {
+      "name": "cold-email-personalization",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Writes personalized cold emails by researching prospects, crafting attention-grabbing openers, and scoring drafts against a quality rubric. Use when the user asks to write cold emails, outreach emails, sales prospecting messages, outbound email campaigns, or B2B email sequences.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/cold-email-personalization/SKILL.md"
+    },
+    {
+      "name": "cold-offer-architect",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when the thing being sold to strangers isn't landing, or before writing a single line of cold copy — to build a new cold-traffic offer, audit an existing one against a hard bar, or diagnose why one that reads fine gets no replies. Covers cold email, cold DM, cold ads, and cold mail: any audience with zero trust and no reason to believe you. Produces an architected offer plus a pass/fail score against eight binary criteria. Trigger phrasings: \"my offer isn't converting\", \"low reply rate\", \"nobody's booking\", \"fix my offer\", \"what should I offer\", \"score this offer\", \"is this offer any good\", \"we changed the copy and nothing happened\".",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/cold-offer-architect/SKILL.md"
+    },
+    {
+      "name": "cold-outreach",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Master cold email, LinkedIn, and first-touch prospect outreach. Use when crafting outbound sequences, social touches, or follow-ups that must earn fast responses. For AI-tooling-driven outreach (Instantly/Smartlead/Clay, deliverability, scale), use ai-cold-outreach instead — it's the more comprehensive skill for that angle. For production sending with sender-tier approval rails, use outreach-execution.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/cold-outreach/SKILL.md"
+    },
+    {
+      "name": "colorize",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Add strategic color to features that are too monochromatic or lack visual interest, making interfaces more engaging and expressive. Use when the user mentions the design looking gray, dull, lacking warmth, needing more color, or wanting a more vibrant or expressive palette.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/colorize/SKILL.md"
+    },
+    {
+      "name": "competitive-analysis",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Framework for building competitive landscape decks — market positioning, competitor deep-dives, comparative analysis, strategic synthesis. Use when the user asks for a competitive landscape, competitor analysis, peer comparison, market positioning assessment, strategic review, or investment memo deck. Also triggers on \"who are the competitors to X\", \"benchmark X against peers\", \"build a market map\", or any request to systematically evaluate competitive dynamics across an industry. Not to be confused with comps-analysis, which builds valuation multiples/comparable-company spreadsheets — use that instead for quantitative valuation comps, not competitive landscape decks.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/competitive-analysis/SKILL.md"
+    },
+    {
+      "name": "competitive-battlecard",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Create sales-ready competitive battlecards comparing your product against a specific competitor — positioning, feature comparison, objection handling, and win/loss patterns. Use when preparing sales teams, creating competitive materials, or responding to 'why not competitor X?'",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/competitive-battlecard/SKILL.md"
+    },
+    {
+      "name": "comps-analysis",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user needs comparable-company valuation analysis — building institutional-grade comps with operating metrics, valuation multiples, and statistical benchmarking in Excel/spreadsheet format. Use for public company valuation (M&A, investment analysis), benchmarking performance vs. industry peers, pricing IPOs or funding rounds, identifying valuation outliers (over/under-valued), or supporting investment committee presentations and sector overview reports. Not to be confused with competitive-analysis, which builds qualitative competitive-landscape decks (market positioning, competitor deep-dives) rather than valuation spreadsheets — use that instead for market/competitor analysis. Not ideal for private companies without comparable public peers, highly diversified conglomerates, distressed/bankrupt companies, pre-revenue startups, or companies with unique business models.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/comps-analysis/SKILL.md"
+    },
+    {
+      "name": "content-strategy",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/content-strategy/SKILL.md"
+    },
+    {
+      "name": "content-to-pipeline",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to turn content into revenue, build a content-led GTM motion, reverse engineer distribution, or repurpose content across platforms. Also use when the user mentions 'content marketing,' 'content-led growth,' 'content to pipeline,' 'distribution,' 'content repurposing,' 'content strategy,' 'thought leadership,' 'newsletter,' 'content flywheel,' 'organic growth.' This skill covers content-to-revenue systems from creation through pipeline attribution.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/content-to-pipeline/SKILL.md"
+    },
+    {
+      "name": "copy-editing",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. For writing new copy, see copywriting.",
+      "version": "1.3.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/copy-editing/SKILL.md"
+    },
+    {
+      "name": "copywriting",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"value proposition,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" or \"help me describe my product.\" Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. For popup copy, see popup-cro. For editing existing copy, see copy-editing.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/copywriting/SKILL.md"
+    },
+    {
+      "name": "cost-of-capital-estimator",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Computes cost of equity (CAPM), cost of debt (synthetic rating), and weighted average cost of capital (WACC) for any company in any currency. Handles emerging market risk premiums, bottom-up beta estimation, and multi-country operations. Use when estimating discount rates, computing WACC, determining hurdle rates, analyzing cost of equity or debt, or when user mentions cost of capital, WACC, beta, equity risk premium, country risk premium, or discount rate.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/cost-of-capital-estimator/SKILL.md"
+    },
+    {
+      "name": "cost-optimizer",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Identifies cloud cost issues, unused resources, and billing optimization opportunities. Use when the user asks about \"costs\", \"billing\", \"AWS invoice\", \"cloud spending\", \"reduce costs\", or \"optimize resources\". Don't use for monitoring setup, deployment, or security.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/cost-optimizer/SKILL.md"
+    },
+    {
+      "name": "create-prd",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD. For a lighter-weight PRD connecting problem→users→solution→success without the full 8-section template, use prd-development instead. For a one-page version, use one-pager-prd. For an AI-agent-specific PRD, use agent-prd.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/create-prd/SKILL.md"
+    },
+    {
+      "name": "critique",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Evaluate design from a UX perspective, assessing visual hierarchy, information architecture, emotional resonance, cognitive load, and overall quality with quantitative scoring, persona-based testing, automated anti-pattern detection, and actionable feedback. Use when the user asks to review, critique, evaluate, or give feedback on a design or component. For automated technical/accessibility/performance checks instead of UX judgment, use audit instead.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/critique/SKILL.md"
+    },
+    {
+      "name": "customer-research",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions \"customer research,\" \"ICP research,\" \"talk to customers,\" \"analyze transcripts,\" \"customer interviews,\" \"survey analysis,\" \"support ticket analysis,\" \"voice of customer,\" \"VOC,\" \"build personas,\" \"customer personas,\" \"jobs to be done,\" \"JTBD,\" \"what do customers say,\" \"what are customers struggling with,\" \"Reddit mining,\" \"G2 reviews,\" \"review mining,\" \"digital watering holes,\" \"community research,\" \"forum research,\" \"competitor reviews,\" \"customer sentiment,\" or \"find out why customers churn/convert/buy.\" Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/customer-research/SKILL.md"
+    },
+    {
+      "name": "datapack-builder",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Build professional financial services data packs from various sources including CIMs, offering memorandums, SEC filings, web search, or MCP servers. Extract, normalize, and standardize financial data into investment committee-ready Excel workbooks with consistent structure, proper formatting, and documented assumptions. Use for M&A due diligence, private equity analysis, investment committee materials, and standardizing financial reporting across portfolio companies. Do not use for simple financial calculations or working with already-completed data packs.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/datapack-builder/SKILL.md"
+    },
+    {
+      "name": "dcf-model",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations. For a more flexible tool supporting DDM/FCFE/FCFF variants with configurable growth stages, use intrinsic-valuation-dcf instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/dcf-model/SKILL.md"
+    },
+    {
+      "name": "deal-desk",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to manage pricing, packaging, and approval workflows for renewal negotiations.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/deal-desk/SKILL.md"
+    },
+    {
+      "name": "deal-review",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to run structured opportunity inspections that align pipeline data with buyer reality.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/deal-review/SKILL.md"
+    },
+    {
+      "name": "deal-velocity-engineer",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when the user wants to diagnose and fix deal velocity problems. Sales cycle diagnostics, stage exit criteria, pipeline deflation, zombie deal elimination, multi-threading, mutual action plans, AI-driven deal scoring, revenue intelligence integration (Gong/Chorus), and compression tactics with sourced benchmarks. Trigger on 'deal velocity,' 'sales cycle too long,' 'deals stalling,' 'pipeline velocity,' 'stage exit criteria,' 'zombie deals,' 'pipeline deflation,' 'deals stuck,' 'multi-threading,' 'mutual action plan,' 'deal inspection,' 'pipeline hygiene,' 'cycle time,' 'stage conversion,' 'deals die in negotiation,' 'we keep slipping deals,' 'reps can't close,' or 'pipeline is bloated but nothing closes.' Connects stage gates, deal scoring, inspection cadence, and pipeline deflation into the operating cadence. Includes modern AI/automation patterns (HubSpot Breeze, Salesforce Agentforce, predictive pipeline management). BOUNDARY: For forecast methodology see revops-forecasting. For pipeline visibility and dashboards see gtm-metrics / revops. For sales methodology (SPICED/MEDDPICC) see meddic-checklist / sales-enablement. For operating cadence see revops / gtm-metrics.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/deal-velocity-engineer/SKILL.md"
+    },
+    {
+      "name": "decision-matrix",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Compares multiple named alternatives against weighted criteria to produce transparent, defensible choices with explicit trade-off analysis. Covers criterion identification, weighting approaches (direct allocation, pairwise comparison, stakeholder averaging), scoring calibration, sensitivity analysis, and group decision facilitation. Use when choosing between vendors/tools/strategies, balancing competing priorities (cost vs quality vs speed), or when user mentions \"which option should we choose\", \"compare alternatives\", \"evaluate vendors\", or \"trade-offs\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/decision-matrix/SKILL.md"
+    },
+    {
+      "name": "deck-refresh",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Updates a presentation with new numbers — quarterly refreshes, earnings updates, comp rolls, rebased market data. Use whenever the user asks to \"update the deck with Q4 numbers\", \"refresh the comps\", \"roll this forward\", \"swap in the new earnings\", \"change all the $485M to $512M\", or any request to swap figures across an existing deck without rebuilding it. To build a new deck from scratch, use pitch-deck instead. To QC an existing deck instead of updating its numbers, use ib-check-deck.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/deck-refresh/SKILL.md"
+    },
+    {
+      "name": "defuddle",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Extract clean markdown content from web pages using Defuddle CLI, removing clutter and navigation to save tokens. Use instead of WebFetch when the user provides a URL to read or analyze, for online documentation, articles, blog posts, or any standard web page. Do NOT use for URLs ending in .md — those are already markdown, use WebFetch directly.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/defuddle/SKILL.md"
+    },
+    {
+      "name": "deliberation-debate-red-teaming",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Challenges plans, designs, and decisions from multiple adversarial perspectives to surface blind spots, hidden assumptions, and vulnerabilities before they cause real damage. Use when testing plans or decisions for blind spots, need adversarial review before launch, validating strategy against worst-case scenarios, building consensus through structured debate, identifying attack vectors or vulnerabilities, or when groupthink or confirmation bias may be hiding risks.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/deliberation-debate-red-teaming/SKILL.md"
+    },
+    {
+      "name": "delight",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Add moments of joy, personality, and unexpected touches that make interfaces memorable and enjoyable to use. Elevates functional to delightful. Use when the user asks to add polish, personality, animations, micro-interactions, delight, or make an interface feel fun or memorable.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/delight/SKILL.md"
+    },
+    {
+      "name": "deploy-to-vercel",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Deploy applications and websites to Vercel. Use when the user requests deployment actions like \"deploy my app\", \"deploy and give me the link\", \"push this live\", or \"create a preview deployment\".",
+      "version": "3.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/deploy-to-vercel/SKILL.md"
+    },
+    {
+      "name": "deployment-engineer",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Sets up CI/CD pipelines, Docker configurations, and dev/staging/production environments. Use when the user asks to \"set up deployment\", \"add CI/CD\", \"create Docker\", \"configure environments\", or \"automate deploys\". Don't use for monitoring, security, or code organization.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/deployment-engineer/SKILL.md"
+    },
+    {
+      "name": "design-critique",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants a blunt, senior-designer-level design critique in Korean — especially with trigger phrases like '비평해줘', '리뷰해줘', '뭐가 문제야', '피드백 줘', '크리틱해줘', '어떻게 생각해'. 냉철한 디자인 비평 스킬로, 15년 경력 수석 디자이너 페르소나가 UX, 비즈니스 목표, 시각적 원칙을 기준으로 제출된 디자인(이미지, 코드, URL, 기획안)을 분석하고 4개 평가 기준 + 날카로운 질문 2개 + 우선순위 액션 플랜 3개를 고정 포맷으로 출력한다. 브랜드 디자인 시스템이 존재하면 이탈 여부를 반드시 검증한다. For the English-language equivalent with quantitative scoring and persona-based testing, use critique instead — both do UX judgment, this one is the Korean-native voice.",
+      "version": "2.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/design-critique/SKILL.md"
+    },
+    {
+      "name": "design-of-experiments",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Generates structured experimental designs (factorial, response surface, Taguchi) to systematically discover how multiple factors affect outcomes while minimizing experimental runs. Use when optimizing multi-factor systems with limited experimental budget, screening many variables to find the vital few, discovering interactions between parameters, mapping response surfaces for peak performance, validating robustness to noise factors, or when users mention factorial designs, A/B/n testing, parameter tuning, or process optimization.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/design-of-experiments/SKILL.md"
+    },
+    {
+      "name": "design-taste-frontend",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when building or reviewing frontend UI and you want a Senior UI/UX Engineer persona that overrides default LLM design biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineering. For the same anti-generic design philosophy scoped specifically to Google Stitch's DESIGN.md workflow, use stitch-design-taste instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/design-taste-frontend/SKILL.md"
+    },
+    {
+      "name": "devops-advisor",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Audits infrastructure setup — database config, caching, performance, and scaling patterns. Provides concrete detection commands and improvement steps. Use when the user asks about \"infrastructure\", \"database setup\", \"caching\", \"scaling\", \"performance\", or \"architecture\". Don't use for CI/CD setup (use deployment-engineer), monitoring (use monitoring-setup), or security (use security-auditor).",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/devops-advisor/SKILL.md"
+    },
+    {
+      "name": "diagram-design",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to create technical or product diagrams — architecture, flowchart, sequence, state machine, ER / data model, timeline, swimlane, quadrant, nested, tree, layer stack, venn, pyramid — as standalone HTML files with inline SVG. Ships with a neutral editorial skin and a first-run gate that prompts users to customize the style guide (colors, fonts) from their own website before generating. Includes annotation-callout primitive and optional sketchy variant.",
+      "version": "1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/diagram-design/SKILL.md"
+    },
+    {
+      "name": "discovery-calls",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when planning, running, or summarizing discovery calls to uncover pain, timeline, and authority.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/discovery-calls/SKILL.md"
+    },
+    {
+      "name": "discovery-interview-prep",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Plan customer discovery interviews with the right goal, segment, constraints, and method. Use when preparing interviews for problem validation, churn research, or new product ideas.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/discovery-interview-prep/SKILL.md"
+    },
+    {
+      "name": "discovery-process",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Run a full discovery cycle from problem hypothesis to validated solution. Use when a team needs a structured path through framing, interviews, synthesis, and experiments.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/discovery-process/SKILL.md"
+    },
+    {
+      "name": "distill",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Strip designs to their essence by removing unnecessary complexity. Great design is simple, powerful, and clean. Use when the user asks to simplify, declutter, reduce noise, remove elements, or make a UI cleaner and more focused.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/distill/SKILL.md"
+    },
+    {
+      "name": "draft-nda",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/draft-nda/SKILL.md"
+    },
+    {
+      "name": "earned-autonomy",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when deciding how much a GTM agent may do without a human looking, when a workflow is ready to run on a schedule, when outreach should stop requiring per-item approval, and when something has gone wrong and autonomy needs pulling back. Produces a level per task with the evidence required to move up and the triggers that drop it automatically. Trigger phrasings: \"can I let the agent send\", \"when do I stop reviewing every draft\", \"how much should I automate\", \"the agent made a mistake, now what\", \"is this workflow ready to run unattended\".",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/earned-autonomy/SKILL.md"
+    },
+    {
+      "name": "earnings-analysis",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Create professional equity research earnings update reports (8-12 pages, 3,000-5,000 words) analyzing quarterly results for companies already under coverage. Fast-turnaround format focusing on beat/miss analysis, key metrics, updated estimates, and revised thesis. Includes 1-3 summary tables and 8-12 charts. Use when user requests \"earnings update\", \"quarterly update\", \"earnings analysis\", \"Q1/Q2/Q3/Q4 results\", or post-earnings report.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/earnings-analysis/SKILL.md"
+    },
+    {
+      "name": "earnings-preview-single",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user wants a concise 4-5 page equity research earnings preview for a single company. Analyzes the most recent earnings transcript, competitor landscape, valuation, and recent news to produce a professional HTML report.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/earnings-preview-single/SKILL.md"
+    },
+    {
+      "name": "efecto-graphic-design",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Design graphic assets with Efecto — presentations, pitch decks, event posters, email headers, blog images, open graph cards, business cards, resumes, menus, infographics, invitations, newsletters, and documents. Use when asked to \"design a poster\", \"create a pitch deck\", \"make a presentation\", \"design a business card\", or any graphic design task. Requires Efecto MCP server.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/efecto-graphic-design/SKILL.md"
+    },
+    {
+      "name": "efecto-social-media",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Design social media assets with Efecto — Instagram posts, carousels, stories, YouTube thumbnails, TikTok covers, Twitter/X images, LinkedIn slides, Pinterest pins, and Facebook graphics. Use when asked to \"design a post\", \"create a carousel\", \"make a thumbnail\", \"design social media\", or any social content task. Requires Efecto MCP server.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/efecto-social-media/SKILL.md"
+    },
+    {
+      "name": "efecto-web-design",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Design web pages and app UIs with Efecto — create sessions, build layouts with JSX and Tailwind CSS, manage artboards, and push real-time design changes via MCP tools. Use when asked to \"design a page\", \"build a landing page\", \"create a website\", \"design a dashboard\", \"make a UI\", or any visual design task. Requires Efecto MCP server.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/efecto-web-design/SKILL.md"
+    },
+    {
+      "name": "email-deliverability",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when emails hit spam, open rates drop, a domain or IP gets blocklisted, or a sender wants a deliverability audit before scaling volume. Triggers: \"why are we going to spam\", \"audit my email setup\", \"open rates dropped\", \"we got blocklisted\", \"warm up this domain\", \"check my deliverability\". Produces a severity-ranked audit or a root-cause diagnosis with a recovery plan and the thresholds to monitor.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/email-deliverability/SKILL.md"
+    },
+    {
+      "name": "email-sequence",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" \"lifecycle emails,\" \"trigger-based emails,\" \"email funnel,\" \"email workflow,\" \"what emails should I send,\" \"welcome series,\" or \"email cadence.\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/email-sequence/SKILL.md"
+    },
+    {
+      "name": "emil-design-eng",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants UI polish, component design, animation decisions, or the invisible details that make software feel great. Encodes Emil Kowalski's design philosophy.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/emil-design-eng/SKILL.md"
+    },
+    {
+      "name": "environmental-scanning-foresight",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Monitors external trends across PESTLE dimensions, detects weak signals of emerging change, develops scenario-based futures, and sets adaptive signposts for early warning. Use when scanning external trends for strategic planning, detecting early indicators of change, planning scenarios for multiple futures, setting signposts and indicators for early warning, or when user mentions environmental scanning, horizon scanning, trend analysis, scenario planning, strategic foresight, or futures thinking.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/environmental-scanning-foresight/SKILL.md"
+    },
+    {
+      "name": "epc-search",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user needs European or international patent law research — RAG search across EPC provisions, EPO Guidelines for Examination, and PCT rules.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/epc-search/SKILL.md"
+    },
+    {
+      "name": "epo-patent-analyzer",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user needs automated analysis of patent applications for EPO compliance with Art. 84 EPC (claims clarity/support), Art. 83 EPC (sufficiency of disclosure), and Rules 42-49 EPC (formalities).",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/epo-patent-analyzer/SKILL.md"
+    },
+    {
+      "name": "equity-research",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Generate comprehensive equity research snapshots combining analyst consensus estimates, company fundamentals, historical prices, and macroeconomic context. Use when researching stocks, comparing estimates to actuals, analyzing company financials, assessing equity valuations, or building investment cases.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/equity-research/SKILL.md"
+    },
+    {
+      "name": "escalation-framework",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to govern executive involvement, cross-functional response, and risk resolution for at-risk renewals.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/escalation-framework/SKILL.md"
+    },
+    {
+      "name": "estimation-fermi",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Decomposes complex unknowns into estimable components to produce rapid order-of-magnitude answers with bounded uncertainty. Use when making quick estimates (market sizing, resource planning, feasibility checks), bounding unknowns with upper/lower limits, sanity-checking strategic assumptions, or when user mentions Fermi estimation, back-of-envelope calculation, order of magnitude, ballpark estimate, or triangulation.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/estimation-fermi/SKILL.md"
+    },
+    {
+      "name": "evidence-driven-testing",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Records visual proof while testing UI behavior — screen recording with structured test/assertion annotations — then posts the video and a results summary to the PR and tracker issue. Use whenever a UI change needs verifiable evidence that it works, instead of prose claims.\n",
+      "version": "1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/evidence-driven-testing/SKILL.md"
+    },
+    {
+      "name": "executive-onboarding-playbook",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Plan a VP or CPO 30-60-90 day diagnostic onboarding path. Use when entering a new executive product role and avoiding premature change.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/executive-onboarding-playbook/SKILL.md"
+    },
+    {
+      "name": "expansion-playbook",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to package upsell, cross-sell, and advocacy motions tied to customer outcomes. expansion-plays is a near-duplicate of this skill and is being retired — use this one instead. For the broader churn/NRR/customer-success system rather than a single expansion motion, use expansion-retention.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/expansion-playbook/SKILL.md"
+    },
+    {
+      "name": "expansion-plays",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when planning adoption-to-expansion motions and cross-sell/upsell campaigns. This is a near-duplicate of expansion-playbook — use that skill instead; this one is being retired.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/expansion-plays/SKILL.md"
+    },
+    {
+      "name": "expansion-retention",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to reduce churn, build expansion revenue, automate customer success, or optimize net revenue retention. Also use when the user mentions 'churn,' 'retention,' 'expansion revenue,' 'upsell,' 'NRR,' 'net revenue retention,' 'customer success,' 'land and expand,' 'closed-lost,' or 'renewal.' This skill covers expansion and retention systems from usage triggers through automated customer success. For a single, narrower expansion/upsell play instead of the full churn+NRR+CS system, use expansion-playbook instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/expansion-retention/SKILL.md"
+    },
+    {
+      "name": "expected-value",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Calculates probability-weighted averages of all possible outcomes to enable rational decisions under uncertainty. Covers scenario identification, probability estimation, payoff quantification, and risk-adjusted interpretation. Use when comparing risky options (investments, product bets, strategic choices), prioritizing projects by expected return, assessing whether to take a gamble, or when user mentions expected value, EV calculation, risk-adjusted return, probability-weighted outcomes, or decision tree.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/expected-value/SKILL.md"
+    },
+    {
+      "name": "finance-metrics-quickref",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Look up SaaS finance metrics, formulas, and benchmarks fast. Use when you need a quick metric definition, formula, or benchmark during analysis.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/finance-metrics-quickref/SKILL.md"
+    },
+    {
+      "name": "financial-unit-economics",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Analyzes profitability per customer, product, or transaction to determine business model viability and scalability. Covers CAC, LTV, contribution margin, cohort analysis, and growth-readiness assessment. Use when evaluating business model viability, validating startup metrics (CAC, LTV, payback period), making pricing decisions, comparing business models, or when user mentions unit economics, CAC/LTV ratio, contribution margin, customer profitability, or break-even analysis.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/financial-unit-economics/SKILL.md"
+    },
+    {
+      "name": "find-skills",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/find-skills/SKILL.md"
+    },
+    {
+      "name": "fixed-income-portfolio",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Review fixed income portfolios by pricing multiple bonds, retrieving reference data, analyzing cashflows, and running scenario analysis. Use when reviewing bond portfolios, computing portfolio duration and DV01, analyzing cashflow waterfalls, stress testing rate scenarios, or assessing portfolio composition.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/fixed-income-portfolio/SKILL.md"
+    },
+    {
+      "name": "forecast-discipline",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use to drive consistent forecast methodology, grading, and inspection cadences.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/forecast-discipline/SKILL.md"
+    },
+    {
+      "name": "forecast-modeling",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when designing, tuning, or auditing revenue forecast models.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/forecast-modeling/SKILL.md"
+    },
+    {
+      "name": "forecast-premortem",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Stress-tests predictions by assuming failure and working backward to identify blind spots, tail risks, and overconfidence. Applies Gary Klein's premortem technique to probabilistic forecasting. Use when confidence is high (>80% or <20%), need to identify tail risks and unknown unknowns, want to widen overconfident intervals, or when user mentions premortem, backcasting, what could go wrong, stress test, or black swans.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/forecast-premortem/SKILL.md"
+    },
+    {
+      "name": "fsi-strip-profile",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user needs professional investment banking strip profiles (company profiles) for pitch books, deal materials, and client presentations. Generates 1-4 information-dense slides with quadrant layouts, charts, and tables.\n",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/fsi-strip-profile/SKILL.md"
+    },
+    {
+      "name": "full-output-enforcement",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Use when the user needs exhaustive, unabridged output and default LLM truncation would be a problem. Overrides default LLM truncation behavior, enforces complete code generation, bans placeholder patterns, and handles token-limit splits cleanly. Apply to any task requiring exhaustive, unabridged output.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/full-output-enforcement/SKILL.md"
+    },
+    {
+      "name": "funding-digest",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Generate a polished one-page PowerPoint slide summarizing key takeaways from recent funding rounds and notable capital markets activity across a user's watched sectors or companies. Use this skill when the user asks for a deal flow summary, weekly recap, funding digest, transaction roundup, or capital markets briefing. Triggers on: 'deal flow digest', 'weekly funding recap', 'deal roundup', 'transaction summary this week', 'what happened in [sector] this week', 'capital markets update', or any request to compile recent funding activity into a briefing slide. Produces a professional single-slide PPTX with key takeaways, valuation data, and Capital IQ deal links.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/funding-digest/SKILL.md"
+    },
+    {
+      "name": "fx-carry-trade",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Evaluate FX carry trade opportunities by combining spot rates, forward points, interest rate differentials, volatility surface analysis, and historical price trends. Use when analyzing carry trades, comparing FX forward curves, assessing carry-to-vol ratios, or evaluating currency pair opportunities.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/fx-carry-trade/SKILL.md"
+    },
+    {
+      "name": "grammar-check",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/grammar-check/SKILL.md"
+    },
+    {
+      "name": "greploop",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Iteratively improves a PR (GitHub) or MR (GitLab) until Greptile gives it a 5/5 confidence score with zero unresolved comments. Triggers Greptile review, fixes all actionable comments, pushes, re-triggers review, and repeats. Use when the user wants to fully optimize a PR/MR against Greptile's code review standards.\n",
+      "version": "1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/greploop/SKILL.md"
+    },
+    {
+      "name": "growth-loops",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Identify growth loops (flywheels) for sustainable traction. Evaluates 5 loop types: Viral, Usage, Collaboration, User-Generated, and Referral. Use when designing growth mechanisms, building product-led traction, or understanding how growth loops work.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/growth-loops/SKILL.md"
+    },
+    {
+      "name": "gtm-engineering",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to build GTM automation with code, design workflow architectures, use AI agents for GTM tasks, or implement the 'architecture over tools' principle. Also use when the user mentions 'GTM engineering,' 'GTM automation,' 'n8n,' 'Make,' 'Zapier,' 'workflow automation,' 'Clay API,' 'instruction stacks,' 'AI agents for GTM,' or 'revenue automation.' This skill covers technical GTM infrastructure from workflow design through agent orchestration.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/gtm-engineering/SKILL.md"
+    },
+    {
+      "name": "gtm-metrics",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to define GTM metrics, build a metrics dashboard, measure pipeline efficiency, or track AI product performance. Also use when the user mentions 'GTM metrics,' 'revenue latency,' 'pipeline metrics,' 'TTFV,' 'time-to-first-value,' 'data health,' 'attribution,' 'conversion rate,' 'CAC,' 'LTV,' 'NRR,' 'GTM dashboard,' 'magic number,' 'pipeline velocity,' or 'funnel metrics.' This skill covers GTM measurement from metric selection through dashboard design, including AI-specific cost metrics, attribution models, and weekly review cadences.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/gtm-metrics/SKILL.md"
+    },
+    {
+      "name": "gtm-motions",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Identify the best GTM motions and tools across 7 motion types: Inbound, Outbound, Paid Digital, Community, Partners, ABM, and PLG. Use when selecting marketing channels, choosing between inbound and outbound strategy, or planning cross-channel campaigns.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/gtm-motions/SKILL.md"
+    },
+    {
+      "name": "gtm-strategy",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline. Use when planning a product launch, creating a GTM plan from scratch, or defining a launch strategy for a new market.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/gtm-strategy/SKILL.md"
+    },
+    {
+      "name": "hallmark",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Anti-AI-slop design skill for greenfield pages, audits, redesigns, and design extraction from URLs or screenshots. Use when the user asks to build a new app or landing page, wants to redesign something, invokes Hallmark by name, or uses audit/redesign/study.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/hallmark/SKILL.md"
+    },
+    {
+      "name": "hf-cli",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Hugging Face Hub CLI (`hf`) for downloading, uploading, and managing models, datasets, spaces, buckets, repos, papers, jobs, and more on the Hugging Face Hub. Use when: handling authentication; managing local cache; managing Hugging Face Buckets; running or scheduling jobs on Hugging Face infrastructure; managing Hugging Face repos; discussions and pull requests; browsing models, datasets and spaces; reading, searching, or browsing academic papers; managing collections; querying datasets; configuring spaces; setting up webhooks; or deploying and managing HF Inference Endpoints. Make sure to use this skill whenever the user mentions 'hf', 'huggingface', 'Hugging Face', 'huggingface-cli', or 'hugging face cli', or wants to do anything related to the Hugging Face ecosystem and to AI and ML in general. Also use for cloud storage needs like training checkpoints, data pipelines, or agent traces. Use even if the user doesn't explicitly ask for a CLI command. Replaces the deprecated `huggingface-cli`.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/hf-cli/SKILL.md"
+    },
+    {
+      "name": "high-end-visual-design",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants their design to look like it came from a high-end agency. Defines the exact fonts, spacing, shadows, card structures, and animations that make a website feel expensive, and blocks the common defaults that make AI designs look cheap or generic.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/high-end-visual-design/SKILL.md"
+    },
+    {
+      "name": "huggingface-community-evals",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Run evaluations for Hugging Face Hub models using inspect-ai and lighteval on local hardware. Use for backend selection, local GPU evals, and choosing between vLLM / Transformers / accelerate. Not for HF Jobs orchestration, model-card PRs, .eval_results publication, or community-evals automation.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-community-evals/SKILL.md"
+    },
+    {
+      "name": "huggingface-datasets",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use this skill for Hugging Face Dataset Viewer API workflows that fetch subset/split metadata, paginate rows, search text, apply filters, download parquet URLs, and read size or statistics.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-datasets/SKILL.md"
+    },
+    {
+      "name": "huggingface-gradio",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Build Gradio web UIs and demos in Python. Use when creating or editing Gradio apps, components, event listeners, layouts, or chatbots.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-gradio/SKILL.md"
+    },
+    {
+      "name": "huggingface-llm-trainer",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Train or fine-tune language and vision models using TRL (Transformer Reinforcement Learning) or Unsloth with Hugging Face Jobs infrastructure. Covers SFT, DPO, GRPO and reward modeling training methods, plus GGUF conversion for local deployment. Includes guidance on the TRL Jobs package, UV scripts with PEP 723 format, dataset preparation and validation, hardware selection, cost estimation, Trackio monitoring, Hub authentication, model selection/leaderboards and model persistence. Use for tasks involving cloud GPU training, GGUF conversion, or when users mention training on Hugging Face Jobs without local GPU setup.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-llm-trainer/SKILL.md"
+    },
+    {
+      "name": "huggingface-paper-publisher",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to publish or manage research papers on Hugging Face Hub — creating paper pages, linking papers to models/datasets, claiming authorship, or generating professional markdown-based research articles.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-paper-publisher/SKILL.md"
+    },
+    {
+      "name": "huggingface-papers",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Look up and read Hugging Face paper pages in markdown, and use the papers API for structured metadata such as authors, linked models/datasets/spaces, Github repo and project page. Use when the user shares a Hugging Face paper page URL, an arXiv URL or ID, or asks to summarize, explain, or analyze an AI research paper.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-papers/SKILL.md"
+    },
+    {
+      "name": "huggingface-tool-builder",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the task will be repeated/automated. This Skill creates a reusable script to fetch, enrich or process data.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-tool-builder/SKILL.md"
+    },
+    {
+      "name": "huggingface-trackio",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Track and visualize ML training experiments with Trackio. Use when logging metrics during training (Python API), firing alerts for training diagnostics, or retrieving/analyzing logged metrics (CLI). Supports real-time dashboard visualization, alerts with webhooks, HF Space syncing, and JSON output for automation.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-trackio/SKILL.md"
+    },
+    {
+      "name": "huggingface-vision-trainer",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Trains and fine-tunes vision models for object detection (D-FINE, RT-DETR v2, DETR, YOLOS), image classification (timm models — MobileNetV3, MobileViT, ResNet, ViT/DINOv3 — plus any Transformers classifier), and SAM/SAM2 segmentation using Hugging Face Transformers on Hugging Face Jobs cloud GPUs. Covers COCO-format dataset preparation, Albumentations augmentation, mAP/mAR evaluation, accuracy metrics, SAM segmentation with bbox/point prompts, DiceCE loss, hardware selection, cost estimation, Trackio monitoring, and Hub persistence. Use when users mention training object detection, image classification, SAM, SAM2, segmentation, image matting, DETR, D-FINE, RT-DETR, ViT, timm, MobileNet, ResNet, bounding box models, or fine-tuning vision models on Hugging Face Jobs.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/huggingface-vision-trainer/SKILL.md"
+    },
+    {
+      "name": "hypothesis-library",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user needs a curated repository of experiment hypotheses, assumptions, and historical learnings.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/hypothesis-library/SKILL.md"
+    },
+    {
+      "name": "hypotheticals-counterfactuals",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Applies \"what if\" thinking to explore alternative scenarios, test assumptions, understand causal relationships, and prepare for uncertainty. Guides through counterfactual reasoning, scenario exploration, pre-mortem analysis, and stress testing decisions against alternative futures. Use when exploring alternative scenarios, testing assumptions through \"what if\" questions, understanding causal relationships, conducting pre-mortem analysis, stress testing decisions, or when user mentions counterfactuals, hypothetical scenarios, thought experiments, alternative futures, what-if analysis, or needs to challenge assumptions.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/hypotheticals-counterfactuals/SKILL.md"
+    },
+    {
+      "name": "ib-check-deck",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Investment banking presentation quality checker. Reviews a pitch deck or client-ready presentation for (1) number consistency across slides, (2) data-narrative alignment, (3) language polish against IB standards, (4) visual and formatting QC. Use whenever the user asks to review, check, QC, proof, or do a final pass on a deck, pitch, or client materials — including requests like \"check my numbers\", \"reconcile figures across slides\", \"is this client-ready\", or \"what am I missing before I send this out\". To build or populate a deck rather than review one, use pitch-deck or ib-pitch-deck instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/ib-check-deck/SKILL.md"
+    },
+    {
+      "name": "ib-pitch-deck",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Populates investment banking pitch deck templates with data from source files. Use when: user provides a PowerPoint template to fill in, user has source data (Excel/CSV) to populate into slides, user mentions populating or filling a pitch deck template, or user needs to transfer data into existing slide layouts. Not for creating presentations from scratch — use pitch-deck instead for that.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/ib-pitch-deck/SKILL.md"
+    },
+    {
+      "name": "ideal-customer-profile",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, and needs. Use when defining your ICP, analyzing PMF survey data, or understanding who your best customers are.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/ideal-customer-profile/SKILL.md"
+    },
+    {
+      "name": "identify-assumptions-existing",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Identify risky assumptions for a feature idea in an existing product across Value, Usability, Viability, and Feasibility. Uses multi-perspective devil's advocate thinking. Use when stress-testing a feature idea, doing risk assessment, or preparing for assumption mapping.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/identify-assumptions-existing/SKILL.md"
+    },
+    {
+      "name": "identify-assumptions-new",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/identify-assumptions-new/SKILL.md"
+    },
+    {
+      "name": "impeccable",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics. Use when the user asks to build web components, pages, artifacts, posters, or applications, or when any design skill requires project context. Call with 'craft' for shape-then-build, 'teach' for design context setup, or 'extract' to pull reusable components and tokens into the design system.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/impeccable/SKILL.md"
+    },
+    {
+      "name": "industrial-brutalist-ui",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics — rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/industrial-brutalist-ui/SKILL.md"
+    },
+    {
+      "name": "initiating-coverage",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user wants to create an institutional-quality equity research initiation report through a 5-task workflow. Tasks must be executed individually with verified prerequisites - (1) company research, (2) financial modeling, (3) valuation analysis, (4) chart generation, (5) final report assembly. Each task produces specific deliverables (markdown docs, Excel models, charts, or DOCX reports). Tasks 3-5 have dependencies on earlier tasks.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/initiating-coverage/SKILL.md"
+    },
+    {
+      "name": "ink",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Ink terminal renderer for json-render that turns JSON specs into interactive terminal UIs. Use when working with @json-render/ink, building terminal UIs from JSON, creating terminal component catalogs, or rendering AI-generated specs in the terminal.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ink/SKILL.md"
+    },
+    {
+      "name": "integration-linker",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Detects and connects development tools — Slack with GitHub, Linear with Git, error tracking with notifications. Provides step-by-step setup procedures for each integration. Use when the user asks to \"connect tools\", \"link Slack\", \"set up notifications\", \"integrate Linear\", or \"connect my tools\". Don't use for monitoring setup (use monitoring-setup), deployment (use deployment-engineer), or security (use security-auditor).",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/integration-linker/SKILL.md"
+    },
+    {
+      "name": "interface-craft",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants Interface Craft by Josh Puckett — a toolkit for building polished, animated interfaces in React. Includes Storyboard Animation (human-readable animation DSL with stage-driven sequencing), DialKit (live control panels for tuning animation values), and Design Critique (systematic UI review based on Josh Puckett's methodology). Triggers on: animate, animation, transition, storyboard, entrance, motion, spring, easing, timing, dialkit, sliders, controls, tune, tweak, critique, review, feedback, audit, improve, polish, refine, redesign.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/interface-craft/SKILL.md"
+    },
+    {
+      "name": "interview-script",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create a structured customer interview script with JTBD probing questions, warm-up, core exploration, and wrap-up sections. Follows The Mom Test principles — no leading questions, no pitching, focus on past behavior. Use when preparing for user interviews, creating interview guides, or planning discovery research.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/interview-script/SKILL.md"
+    },
+    {
+      "name": "intrinsic-valuation-dcf",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Performs discounted cash flow valuation using the appropriate model variant (DDM, FCFE, or FCFF) with configurable growth stages. Produces year-by-year cash flow projections, terminal value, equity bridge (subtract debt, add cash, subtract option value), per-share intrinsic value, and sensitivity analysis. Use when valuing a company intrinsically, building a DCF model, estimating fair value, or when user mentions DCF, discounted cash flow, intrinsic value, terminal value, or free cash flow valuation. For a SEC-filing-driven single-approach DCF model instead of multi-variant flexibility, use dcf-model instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/intrinsic-valuation-dcf/SKILL.md"
+    },
+    {
+      "name": "job-stories",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations. For the classic Card/Conversation/Confirmation or Cohn/Gherkin story formats instead of JTBD framing, use user-stories or user-story instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/job-stories/SKILL.md"
+    },
+    {
+      "name": "jobs-to-be-done",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Uncover customer jobs, pains, and gains in a structured JTBD format. Use when clarifying unmet needs, repositioning a product, or improving discovery and messaging.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/jobs-to-be-done/SKILL.md"
+    },
+    {
+      "name": "json-canvas",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/json-canvas/SKILL.md"
+    },
+    {
+      "name": "khalil",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Build investor-ready pitch decks as Khalil — The Utopia Studio's deck builder. Use when the user asks to 'build a deck', 'turn these notes into slides', 'pitch deck from these notes', 'investor presentation', 'syndication deck', 'co-investor deck', 'help [portco] with their deck', or shares founder meeting notes and wants a deck. Khalil is storytelling-first, audience-obsessed, and brand-disciplined. He always asks who's reading the deck before drafting. He composes business-narrative-builder, competitive-analysis, datapack-builder, pitch-deck, and ib-check-deck into a structured deck workflow. Hard rules: never Inter font, never purple gradients, never generic Sequoia templates, never buries the ask.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/khalil/SKILL.md"
+    },
+    {
+      "name": "kill-criteria-exit-ramps",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Establishes pre-defined, objective conditions for stopping projects and specific decision points for continue/pivot/kill evaluations. Guides through defining kill criteria, setting go/no-go gates, avoiding sunk cost fallacy, and executing disciplined stopping decisions. Use when defining stopping rules for projects, avoiding sunk cost fallacy, setting objective exit criteria, deciding whether to continue/pivot/kill initiatives, or when users mention kill criteria, exit ramps, stopping rules, go/no-go decisions, project termination, or sunk costs.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/kill-criteria-exit-ramps/SKILL.md"
+    },
+    {
+      "name": "kmjp-social",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Generate LinkedIn posts and X (Twitter) threads for Karan Pinto (@kmjp). Use this skill whenever Karan shares raw notes, ideas, vault entries, article links, observations, or rough thinking and wants it turned into social content. Trigger on any request like \"write a post about this\", \"turn this into a LinkedIn post\", \"make me a thread\", \"draft something for LinkedIn/X/Twitter\", \"social content for this\", or when Karan pastes notes and wants them published. Also trigger if the request is about creating content from context already in the conversation. Always produces BOTH a LinkedIn post AND an X thread unless explicitly told otherwise.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/kmjp-social/SKILL.md"
+    },
+    {
+      "name": "last30days",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Use when the user wants to know what people are actually saying about a topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web.",
+      "version": "3.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/last30days/SKILL.md"
+    },
+    {
+      "name": "launch-strategy",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/launch-strategy/SKILL.md"
+    },
+    {
+      "name": "layout",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Improve layout, spacing, and visual rhythm. Fixes monotonous grids, inconsistent spacing, and weak visual hierarchy. Use when the user mentions layout feeling off, spacing issues, visual hierarchy, crowded UI, alignment problems, or wanting better composition.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/layout/SKILL.md"
+    },
+    {
+      "name": "lbo-model",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "This skill should be used when completing LBO (Leveraged Buyout) model templates in Excel for private equity transactions, deal materials, or investment committee presentations. The skill fills in formulas, validates calculations, and ensures professional formatting standards that adapt to any template structure.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/lbo-model/SKILL.md"
+    },
+    {
+      "name": "lead-enrichment",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to build data enrichment workflows, score leads against ICP, set up Clay waterfalls, or improve contact data quality. Also use when the user mentions 'enrichment,' 'data enrichment,' 'Clay,' 'waterfall enrichment,' 'ICP scoring,' 'lead scoring,' 'intent data,' 'contact verification,' 'Apollo,' 'ZoomInfo,' or 'data quality.' This skill covers lead enrichment waterfalls, ICP scoring frameworks, and contact verification systems.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/lead-enrichment/SKILL.md"
+    },
+    {
+      "name": "lead-magnets",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/lead-magnets/SKILL.md"
+    },
+    {
+      "name": "lead-qualification",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when evaluating ICP fit, buying intent, and routing priority for new leads.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/lead-qualification/SKILL.md"
+    },
+    {
+      "name": "lean-canvas",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Generate a Lean Canvas with problem, solution, metrics, cost structure, UVP, unfair advantage, channels, segments, and revenue. Use when exploring a lean startup canvas, testing a business hypothesis, or modeling a new venture.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/lean-canvas/SKILL.md"
+    },
+    {
+      "name": "lean-ux-canvas",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Guide teams through Lean UX Canvas v2. Use when framing a business problem, surfacing assumptions, and defining what to learn next.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/lean-ux-canvas/SKILL.md"
+    },
+    {
+      "name": "macro-rates-monitor",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Build macroeconomic and rates dashboards combining macro indicators, yield curves, inflation breakevens, and swap rates. Use when monitoring macro conditions, analyzing yield curve shape, decomposing real vs nominal rates, assessing policy rate expectations, or evaluating financial conditions.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/macro-rates-monitor/SKILL.md"
+    },
+    {
+      "name": "market-segments",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Identify 3-5 potential customer segments with demographics, JTBD, and product fit analysis. Use when exploring market segments, identifying target audiences, evaluating new markets, or learning how to segment a market.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/market-segments/SKILL.md"
+    },
+    {
+      "name": "market-sizing",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/market-sizing/SKILL.md"
+    },
+    {
+      "name": "marketing-ideas",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.).",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/marketing-ideas/SKILL.md"
+    },
+    {
+      "name": "marketing-psychology",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/marketing-psychology/SKILL.md"
+    },
+    {
+      "name": "meddic-checklist",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to inspect qualification coverage across Metrics, Economic buyer, Decision criteria, Decision process, Implications, Champion.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/meddic-checklist/SKILL.md"
+    },
+    {
+      "name": "member-insights",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to analyze loyalty member behavior, segmentation, and experiment results.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/member-insights/SKILL.md"
+    },
+    {
+      "name": "metrics-dashboard",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/metrics-dashboard/SKILL.md"
+    },
+    {
+      "name": "minimalist-ui",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants clean editorial-style interfaces — warm monochrome palette, typographic contrast, flat bento grids, muted pastels, no gradients, no heavy shadows.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/minimalist-ui/SKILL.md"
+    },
+    {
+      "name": "monetization-strategy",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Brainstorm 3-5 monetization strategies with audience fit, risks, and validation experiments. Use when exploring revenue models, evaluating pricing strategies, or deciding how to monetize a product.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/monetization-strategy/SKILL.md"
+    },
+    {
+      "name": "monitoring-setup",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Configures error tracking (Sentry), product analytics (PostHog), health monitoring, and alerting. Provides verification commands and concrete output templates. Use when the user asks to \"set up monitoring\", \"add error tracking\", \"configure Sentry\", \"add analytics\", or \"set up alerts\". Don't use for deployment (use deployment-engineer), security (use security-auditor), or integration linking (use integration-linker).",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/monitoring-setup/SKILL.md"
+    },
+    {
+      "name": "multi-platform-launch",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to launch a product across multiple platforms, plan a Product Hunt launch, build a waitlist, or execute a multi-channel launch strategy. Also use when the user mentions 'product launch,' 'Product Hunt,' 'launch strategy,' 'waitlist,' 'beta launch,' 'BetaList,' 'Hacker News,' 'launch day,' 'AppSumo,' 'multi-channel launch.' This skill covers multi-platform launch execution from pre-launch through post-launch optimization.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/multi-platform-launch/SKILL.md"
+    },
+    {
+      "name": "north-star-metric",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Define a North Star Metric and 3-5 supporting input metrics that form a metrics constellation. Classify the business game (Attention, Transaction, Productivity) and validate against 7 criteria for an effective North Star. Use when choosing a North Star Metric, setting up a metrics framework, learning about the North Star Framework, or deciding what to measure.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/north-star-metric/SKILL.md"
+    },
+    {
+      "name": "obsidian-bases",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/obsidian-bases/SKILL.md"
+    },
+    {
+      "name": "obsidian-cli",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/obsidian-cli/SKILL.md"
+    },
+    {
+      "name": "obsidian-markdown",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/obsidian-markdown/SKILL.md"
+    },
+    {
+      "name": "onboarding-cro",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" \"new user experience,\" \"users aren't activating,\" \"nobody completes setup,\" \"low activation rate,\" \"users sign up but don't use the product,\" \"time to value,\" or \"first session experience.\" Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/onboarding-cro/SKILL.md"
+    },
+    {
+      "name": "one-pager-prd",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Creates concise, decision-ready product specifications (one-pagers and PRDs) that align stakeholders on problem, solution, users, success metrics, and constraints. Use when proposing new features/products, documenting product requirements, creating concise specs for stakeholder alignment, pitching initiatives, scoping projects before detailed design, capturing user stories and success metrics, or when user mentions one-pager, PRD, product spec, feature proposal, product requirements, or brief. For a full multi-section PRD instead of a one-pager, use create-prd instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/one-pager-prd/SKILL.md"
+    },
+    {
+      "name": "opportunity-solution-tree",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Build an Opportunity Solution Tree from outcomes to opportunities, solutions, and tests. Use when a stakeholder request needs problem framing before you decide what to build.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/opportunity-solution-tree/SKILL.md"
+    },
+    {
+      "name": "optimize",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Diagnoses and fixes UI performance across loading speed, rendering, animations, images, and bundle size. Use when the user mentions slow, laggy, janky, performance, bundle size, load time, or wants a faster, smoother experience.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/optimize/SKILL.md"
+    },
+    {
+      "name": "option-vol-analysis",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Analyze option volatility by combining vol surface data, option pricing with Greeks, and historical price data to assess implied vs realized volatility. Use when pricing options, analyzing volatility surfaces, computing Greeks, assessing vol premiums, or evaluating vol trading strategies.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/option-vol-analysis/SKILL.md"
+    },
+    {
+      "name": "outbound-plays",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to craft channel-specific outreach sequences that tie directly to detected intent signals.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/outbound-plays/SKILL.md"
+    },
+    {
+      "name": "outreach-execution",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when a signal, account list, or named contact needs outreach — it loads sender voice and past approved messages, picks the right path for the situation, and drafts a multi-step sequence anchored on a real hook. It encodes production sender-assignment and approval rails: tiered senders, automatic executive multi-threading on large accounts, and a hard rule that AI-drafted sequences to senior executives are never auto-sent. Every sequence is staged with a written rationale for human approval, and approved copy feeds back into the voice library. Includes references for email/LinkedIn/breakup frameworks and objection handling. For drafting the initial cold-email strategy and copy before execution, use ai-cold-outreach first — this skill picks up once a sequence needs sending.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/outreach-execution/SKILL.md"
+    },
+    {
+      "name": "overdrive",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Pushes interfaces past conventional limits with technically ambitious implementations — shaders, spring physics, scroll-driven reveals, 60fps animations. Use when the user wants to wow, impress, go all-out, or make something that feels extraordinary.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/overdrive/SKILL.md"
+    },
+    {
+      "name": "page-cro",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says \"CRO,\" \"conversion rate optimization,\" \"this page isn't converting,\" \"improve conversions,\" \"why isn't this page working,\" \"my landing page sucks,\" \"nobody's converting,\" \"low conversion rate,\" \"bounce rate is too high,\" \"people leave without signing up,\" or \"this page needs work.\" Use this even if the user just shares a URL and asks for feedback — they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/page-cro/SKILL.md"
+    },
+    {
+      "name": "paid-ads",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/paid-ads/SKILL.md"
+    },
+    {
+      "name": "partner-affiliate",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to build a partner program, launch an affiliate program, design integration partnerships, or create distribution partnerships. Also use when the user mentions 'partnerships,' 'affiliate program,' 'referral program,' 'partner ecosystem,' 'integration partner,' 'reseller,' 'co-marketing,' 'PartnerStack,' or 'revenue share.' This skill covers partner and affiliate program design from recruitment through performance optimization.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/partner-affiliate/SKILL.md"
+    },
+    {
+      "name": "pct-application",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user needs PCT international application preparation under PCT Rules 5-12 — unity of invention, formal requirements, national phase entry strategy, and deadline management.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/pct-application/SKILL.md"
+    },
+    {
+      "name": "pestel-analysis",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Analyze political, economic, social, technological, environmental, and legal forces. Use when external market shifts could materially affect a product, roadmap, or strategy.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/pestel-analysis/SKILL.md"
+    },
+    {
+      "name": "pitch-deck",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Generate investor-ready pitch decks as branded PPTX files from founder meeting notes, uploaded decks, DD reports, and strategy docs. Use this skill whenever the user mentions building a pitch deck, turning notes into slides, creating an investor deck, preparing for a co-investor presentation, or helping a portfolio company with their deck. Also trigger when the user uploads Granola meeting notes, founder call transcripts, or company materials and asks for a deck, slides, or presentation for investors. Covers co-investor syndication decks and founder coaching decks. Even if the user just says 'build a deck from these notes' or 'make this into a pitch deck' or 'help [company] with their deck', use this skill. For an interactive web-based deck instead of PPTX, use pitch-deck-web. To populate an existing IB template with data rather than build from scratch, use ib-pitch-deck. To QC an existing deck, use ib-check-deck. To update numbers on an existing deck, use deck-refresh.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/pitch-deck/SKILL.md"
+    },
+    {
+      "name": "pitch-deck-web",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Build a responsive, interactive pitch-deck website from a brand book + a PRD/example deck.\nUse when the user asks to \"build a pitch deck\", \"make an investor deck\", \"create a sales deck\",\ngenerate a deck site from a brand book, or scaffold a deck from a PRD or existing slides.\nPulls brand tokens (colors, typography, voice) from a brandbook-builder-style repo, runs a\nguided brief (investor vs sales, copy approval, image/logo intake, reference mining), then\nscaffolds a Vite + React + TS + Tailwind + motion deck site mirroring the utopia-os-deck\nsection-scroll pattern. For a branded PPTX file instead of a web deck, use pitch-deck.\n",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/pitch-deck-web/SKILL.md"
+    },
+    {
+      "name": "polish",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Performs a final quality pass fixing alignment, spacing, consistency, and micro-detail issues before shipping. Use when the user mentions polish, finishing touches, pre-launch review, something looks off, or wants to go from good to great. For UI-specific polish principles and knowledge (hover states, shadows, micro-interactions) rather than a final pre-ship QA pass, see ui-polish.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/polish/SKILL.md"
+    },
+    {
+      "name": "porters-five-forces",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/porters-five-forces/SKILL.md"
+    },
+    {
+      "name": "positioning",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when structuring positioning statements, message houses, and proof libraries for GTM teams.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/positioning/SKILL.md"
+    },
+    {
+      "name": "positioning-icp",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to define their ideal customer profile, position an AI product, build messaging architecture, or validate product-market fit. Also use when the user mentions 'ICP,' 'ideal customer profile,' 'positioning,' 'PMF,' 'product-market fit,' 'messaging,' 'buyer persona,' 'enrichment signals,' 'market positioning,' or 'competitive positioning.' This skill covers market positioning, ICP definition, messaging architecture, and PMF validation for AI-native products.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/positioning-icp/SKILL.md"
+    },
+    {
+      "name": "positioning-workshop",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Run a positioning workshop that surfaces target customer, unmet need, category, benefits, and differentiation. Use when your product messaging feels fuzzy, generic, or misaligned.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/positioning-workshop/SKILL.md"
+    },
+    {
+      "name": "ppt-template-creator",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Use when the user wants to create a reusable skill from their own PowerPoint template — and only for that (creates self-contained PPT template SKILLS, not presentations). For creating actual presentations, use the pptx skill instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/ppt-template-creator/SKILL.md"
+    },
+    {
+      "name": "pql-framework",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when the user needs to define product-qualified lead (PQL) signals, scoring, and routing methodology.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/pql-framework/SKILL.md"
+    },
+    {
+      "name": "prd-development",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a major initiative. For the comprehensive 8-section PRD template, use create-prd instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/prd-development/SKILL.md"
+    },
+    {
+      "name": "press-release",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Write an Amazon-style press release that defines customer value before building. Use when aligning stakeholders on a new product, feature, or strategic bet.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/press-release/SKILL.md"
+    },
+    {
+      "name": "pricing-strategy",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/pricing-strategy/SKILL.md"
+    },
+    {
+      "name": "prioritization",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Use when the user wants to actually score and rank their backlog or initiatives — framework-driven prioritization using RICE, ICE, or weighted scoring, grounded in strategic pillars with evidence-based scoring required. Use when the user says \"prioritize features\", \"rank these initiatives\", \"RICE score\", \"ICE score\", \"what should we build next\", or \"prioritize my backlog\". For comparing which prioritization framework to adopt rather than running one, use prioritization-frameworks instead.\n",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/prioritization/SKILL.md"
+    },
+    {
+      "name": "prioritization-frameworks",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Reference guide to 9 prioritization frameworks with formulas, when-to-use guidance, and templates — RICE, ICE, Kano, MoSCoW, Opportunity Score, and more. Use when selecting a prioritization method, comparing frameworks like RICE vs ICE, or learning how different prioritization approaches work. For actually scoring and ranking your own backlog rather than comparing frameworks, use prioritization instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/prioritization-frameworks/SKILL.md"
+    },
+    {
+      "name": "privacy-policy",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/privacy-policy/SKILL.md"
+    },
+    {
+      "name": "problem-framing-canvas",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Guide teams through MITRE's Problem Framing Canvas. Use when you need a clearer problem statement before jumping to solutions.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/problem-framing-canvas/SKILL.md"
+    },
+    {
+      "name": "problem-statement",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Write a user-centered problem statement with who is blocked, what they are trying to do, why it matters, and how it feels. Use when framing discovery, prioritization, or a PRD.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/problem-statement/SKILL.md"
+    },
+    {
+      "name": "product-manager-skills",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants PM help in Claude Code, Codex, Cursor, or Windsurf — diagnosing SaaS metrics, critiquing PRDs, planning roadmaps, running discovery, coaching PM career transitions, pressure-testing AI product decisions, or designing PLG growth strategies. Seven knowledge domains, 12 templates, 40+ frameworks, and an opinionated interaction style that labels assumptions and names tradeoffs.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/product-manager-skills/SKILL.md"
+    },
+    {
+      "name": "product-marketing-context",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/product-marketing-context/SKILL.md"
+    },
+    {
+      "name": "product-name",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Brainstorm 5 unique, memorable product names with rationale aligned to brand values and target audience. Use when naming a new product, rebranding, or exploring product name ideas.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/product-name/SKILL.md"
+    },
+    {
+      "name": "prompt-engineer",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Makes a repository AI-native by creating AGENTS.md, .cursorrules, and documentation that helps any AI agent understand the codebase. Follows the WHAT/WHY/HOW framework from best practices. Use when the user asks to \"make repo AI-ready\", \"add cursor rules\", \"create AGENTS.md\", \"set up for AI coding\", or \"make agents work better\". Don't use for deployment (use deployment-engineer), monitoring (use monitoring-setup), or code organization (use repo-structurer).",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/prompt-engineer/SKILL.md"
+    },
+    {
+      "name": "proof",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Web-first skill for working with Proof documents via proofeditor.ai. Use when a Proof URL is shared, when creating collaborative docs in Proof, or when an installed Proof preference says new docs should live there.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/proof/SKILL.md"
+    },
+    {
+      "name": "proto-persona",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create a proto-persona from current research, market signals, and team knowledge. Use when you need a working customer profile before deeper validation.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/proto-persona/SKILL.md"
+    },
+    {
+      "name": "prototyping-pretotyping",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Guides validation of ideas before full development using pretotyping (fake doors, concierge MVPs, Wizard of Oz) and prototyping at appropriate fidelity (paper, clickable, coded) to test assumptions about demand, pricing, and feasibility. Use when testing ideas cheaply before building, choosing prototype fidelity, running experiments to validate assumptions, or when user mentions prototype, MVP, fake door test, concierge, Wizard of Oz, landing page test, smoke test, or asks \"how can we validate this idea before building?\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/prototyping-pretotyping/SKILL.md"
+    },
+    {
+      "name": "quieter",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Tones down visually aggressive or overstimulating designs, reducing intensity while preserving quality. Use when the user mentions too bold, too loud, overwhelming, aggressive, garish, or wants a calmer, more refined aesthetic.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/quieter/SKILL.md"
+    },
+    {
+      "name": "railway-central-station",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user asks about Central Station threads, community discussions, support questions, feature requests, or wants to search Railway's community knowledge base. Use for queries like \"search central station\", \"find threads about\", \"what are people asking about\", \"recent support threads\", or \"central station topics\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-central-station/SKILL.md"
+    },
+    {
+      "name": "railway-database",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user wants to add a database (Postgres, Redis, MySQL, MongoDB), says \"add postgres\", \"add redis\", \"add database\", \"connect to database\", or \"wire up the database\". For other templates (Ghost, Strapi, n8n, etc.), use the templates skill.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-database/SKILL.md"
+    },
+    {
+      "name": "railway-deploy",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user wants to push code to Railway, says \"railway up\", \"deploy\", \"deploy to railway\", \"ship\", or \"push\". For initial setup or creating services, use new skill. For Docker images, use environment skill.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-deploy/SKILL.md"
+    },
+    {
+      "name": "railway-deployment",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user wants to manage Railway deployments, view logs, or debug issues. Covers deployment lifecycle (remove, stop, redeploy, restart), deployment visibility (list, status, history), and troubleshooting (logs, errors, failures, crashes, why deploy failed). NOT for deleting services - use environment skill with isDeleted for that.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-deployment/SKILL.md"
+    },
+    {
+      "name": "railway-domain",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user wants to add a domain, generate a railway domain, check current domains, get the URL for a service, or remove a domain.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-domain/SKILL.md"
+    },
+    {
+      "name": "railway-environment",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user asks \"what's the config\", \"show me the configuration\", \"what variables are set\", \"environment config\", \"service config\", \"railway config\", or wants to add/set/delete variables, change build/deploy settings, scale replicas, connect repos, or delete services.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-environment/SKILL.md"
+    },
+    {
+      "name": "railway-metrics",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user asks about resource usage, CPU, memory, network, disk, or service performance. Covers questions like \"how much memory is my service using\" or \"is my service slow\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-metrics/SKILL.md"
+    },
+    {
+      "name": "railway-new",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user says \"setup\", \"deploy to railway\", \"initialize\", \"create project\", \"create service\", or wants to deploy from GitHub. Handles initial setup AND adding services to existing projects. For databases, use the database skill instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-new/SKILL.md"
+    },
+    {
+      "name": "railway-projects",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user wants to list all projects, switch projects, rename a project, enable/disable PR deploys, make a project public/private, or modify project settings.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-projects/SKILL.md"
+    },
+    {
+      "name": "railway-railway-docs",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user asks about Railway features, how Railway works, or shares a docs.railway.com URL. Fetches up-to-date Railway docs to answer accurately.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-railway-docs/SKILL.md"
+    },
+    {
+      "name": "railway-service",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user asks about service status, wants to rename a service, change service icons, link services, or create services with Docker images. For creating services with local code, prefer the `new` skill. For GitHub repo sources, use `new` skill to create empty service then `environment` skill to configure source.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-service/SKILL.md"
+    },
+    {
+      "name": "railway-status",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user asks \"railway status\", \"is it running\", \"what's deployed\", \"deployment status\", or about uptime. NOT for variables (\"what variables\", \"env vars\", \"add variable\") or configuration queries - use environment skill for those.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-status/SKILL.md"
+    },
+    {
+      "name": "railway-templates",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "This skill should be used when the user wants to add a service from a template, find templates for a specific use case, or deploy tools like Ghost, Strapi, n8n, Minio, Uptime Kuma, etc. For databases (Postgres, Redis, MySQL, MongoDB), prefer the database skill.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/railway-templates/SKILL.md"
+    },
+    {
+      "name": "recommendation-canvas",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Evaluate an AI product idea across outcomes, hypotheses, risks, and positioning. Use when deciding whether an AI solution deserves investment or recommendation.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/recommendation-canvas/SKILL.md"
+    },
+    {
+      "name": "redesign-existing-projects",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to upgrade an existing website or app to premium quality. Audits current design, identifies generic AI patterns, and applies high-end design standards without breaking functionality. Works with any CSS framework or vanilla CSS.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/redesign-existing-projects/SKILL.md"
+    },
+    {
+      "name": "reference-class-forecasting",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Anchors predictions in historical reality by identifying a class of similar past events and using their statistical frequency as a baseline (outside view) before analyzing case-specific details. Use when starting a forecast, establishing base rates, testing \"this time is different\" claims, or when user mentions reference classes, outside view, base rates, or starting a new prediction.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/reference-class-forecasting/SKILL.md"
+    },
+    {
+      "name": "referral-program",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/referral-program/SKILL.md"
+    },
+    {
+      "name": "relative-valuation-multiples",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Values a company relative to comparable firms using price multiples (PE, PBV, EV/EBITDA, EV/Sales). Implements the four-step framework (define, describe, analyze, apply) with both simple peer comparison and sector regression approaches. Use when valuing a company relative to peers, analyzing multiples, selecting comparable companies, or when user mentions PE ratio, EV/EBITDA, relative valuation, comparable companies, trading multiples, or price-to-book.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/relative-valuation-multiples/SKILL.md"
+    },
+    {
+      "name": "renewal-playbooks",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to design and maintain structured renewal/save motions across segments and risk levels.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/renewal-playbooks/SKILL.md"
+    },
+    {
+      "name": "repo-scanner",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Scans a GitHub repository to understand its tech stack, hosting, monitoring, integrations, and current production readiness. Use when the user asks to \"audit\", \"check\", or \"scan\" their repo. Don't use for code review or bug detection. For fixing what the scan finds rather than diagnosing, use repo-structurer instead — this skill only reads and reports.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/repo-scanner/SKILL.md"
+    },
+    {
+      "name": "repo-structurer",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Cleans up and structures a repository for production. Adds README files to every directory, modularizes code, removes dead files, and makes the repo LLM-smart. Use when the user asks to \"clean up\", \"structure\", \"document\", or \"organize\" their repo. Don't use for code review or bug fixing. For a read-only diagnostic pass before restructuring, use repo-scanner instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/repo-structurer/SKILL.md"
+    },
+    {
+      "name": "research-claim-map",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Systematically evaluates claims by triangulating sources, rating evidence quality (primary/secondary/tertiary), assessing source credibility, and reaching confidence-rated conclusions to prevent confirmation bias and reliance on unreliable sources. Use when verifying claims before decisions, fact-checking statements, conducting due diligence, evaluating conflicting evidence, or when user mentions \"fact-check\", \"verify this\", \"is this true\", \"evaluate sources\", \"conflicting evidence\", or \"due diligence\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/research-claim-map/SKILL.md"
+    },
+    {
+      "name": "retention-dashboard",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to visualize churn, expansion, and health metrics across cohorts.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/retention-dashboard/SKILL.md"
+    },
+    {
+      "name": "retention-ltv-playbook",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when the user needs lifecycle frameworks for driving repeat purchase, loyalty, and subscription value.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/retention-ltv-playbook/SKILL.md"
+    },
+    {
+      "name": "review-resume",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Comprehensive PM resume review and tailoring against 10 best practices including XYZ+S formula, keyword optimization, job-specific tailoring, and structure. Use when reviewing a PM resume, preparing for job applications, or improving resume impact.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/review-resume/SKILL.md"
+    },
+    {
+      "name": "revops",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/revops/SKILL.md"
+    },
+    {
+      "name": "revops-forecasting",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Revenue forecasting methodology, forecast categories, pipeline analysis, and predictability for B2B revenue teams. Use when the user mentions forecasting, revenue forecast, sales forecast, forecast accuracy, forecast categories, commit, best case, upside, pipeline coverage, weighted pipeline, forecast cadence, capacity planning, quota modeling, forecast call, deal inspection, or forecast variance. Also trigger when someone says 'we can't predict our number,' 'our forecast is always wrong,' 'how much will we close this quarter,' 'we can't see our pipeline,' 'deals go stale,' or 'we need better dashboards.' Also trigger on pipeline visibility, pipeline reporting, sales dashboards, pipeline hygiene, stale deals, pipeline health, big deal alerts, or pipeline quality score. BOUNDARY: Covers forecast methodology, accuracy, and pipeline visibility/reporting. For CRM-specific dashboard implementation, see revops. For metrics and benchmarks, see gtm-metrics.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/revops-forecasting/SKILL.md"
+    },
+    {
+      "name": "roadmap-planning",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Plan a strategic roadmap across prioritization, epic definition, stakeholder alignment, and sequencing. Use when turning strategy into a release plan that teams can execute.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/roadmap-planning/SKILL.md"
+    },
+    {
+      "name": "role-switch",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Analyzes decisions from multiple stakeholder perspectives (engineering, product, legal, finance, users) to uncover blind spots, surface tensions, and synthesize alignment paths with explicit tradeoffs. Use when stakeholders have conflicting priorities, need to pressure-test proposals, build cross-functional empathy, or when user mentions \"what would X think\", \"stakeholder alignment\", \"see from their perspective\", \"blind spots\", or \"conflicting interests\".",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/role-switch/SKILL.md"
+    },
+    {
+      "name": "saas-economics-efficiency-metrics",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Evaluate SaaS unit economics and capital efficiency. Use when deciding whether the business can scale efficiently or needs correction.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/saas-economics-efficiency-metrics/SKILL.md"
+    },
+    {
+      "name": "saas-revenue-growth-metrics",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Calculate SaaS revenue, retention, and growth metrics. Use when diagnosing momentum, churn, expansion, or product-market-fit signals.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/saas-revenue-growth-metrics/SKILL.md"
+    },
+    {
+      "name": "sales-enablement",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/sales-enablement/SKILL.md"
+    },
+    {
+      "name": "sales-motion-design",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to choose between PLG and sales-led, design a sales motion, optimize time-to-first-value, or build a value-before-purchase experience. Also use when the user mentions 'PLG,' 'product-led growth,' 'sales-led,' 'sales motion,' 'free trial,' 'freemium,' 'self-serve,' 'demo-first,' 'time-to-first-value,' 'TTFV,' or 'agent-led sales.' This skill covers sales motion selection, value delivery design, and go-to-market motion architecture.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/sales-motion-design/SKILL.md"
+    },
+    {
+      "name": "salim",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Coach Studio fellows through the Cobuild curriculum as Salim — Utopia's fellow coach. Use when a fellow says 'I'm stuck', 'what should I do next?', 'review my [discovery/PRD/pitch]', 'I'm in M[X] and...', 'help me think through [problem]', 'can you check my [JTBD/canvas]?', or any pedagogy-style question. Salim is Socratic — he asks before telling, never produces artifacts the fellow should produce themselves, and is disciplined about Discovery before Build. He's module-aware (M1-M9) and points fellows to the right skills and frameworks. Outputs persistent cobuild logs to Proof.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/salim/SKILL.md"
+    },
+    {
+      "name": "sami",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Run outbound campaigns as Sami — The Utopia Studio's outbound/GTM lead. Use when the user asks to 'run outbound', 'build an SDR sequence', 'write a cold sequence', 'who should I target first', wants a target list qualified before drafting outreach, or says 'Sami, [outbound task]'. Sami is a signal hunter, not a blaster — he refuses to draft generic copy against an unqualified list. He composes lead-qualification, ai-cold-outreach, cold-email, outreach-execution, meddic-checklist, and social-selling into a qualify-draft-execute-qualify workflow, and reports reply rate over send volume. Distinct voice from generic Claude — insists on one hook and one CTA per touch, never sounds like a template.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/sami/SKILL.md"
+    },
+    {
+      "name": "scout-mindset-bias-check",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Detects and removes cognitive biases from reasoning using Julia Galef's Scout Mindset framework. Provides reversal tests, scope sensitivity checks, status quo bias tests, confidence interval audits, and full bias audits. Use when a prediction feels emotional, stuck at 50/50, or when validating forecasting process. Use when user mentions scout mindset, soldier mindset, bias check, reversal test, scope sensitivity, or cognitive distortions.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/scout-mindset-bias-check/SKILL.md"
+    },
+    {
+      "name": "security-auditor",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Audits repository security — hardcoded secrets, dependency vulnerabilities, environment variable management, and authentication patterns. Use when the user asks to \"check security\", \"find secrets\", \"audit dependencies\", or \"secure my repo\". Don't use for code review, deployment, or monitoring.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/security-auditor/SKILL.md"
+    },
+    {
+      "name": "sentiment-analysis",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to interpret qualitative feedback, trends, and risks across community channels.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/sentiment-analysis/SKILL.md"
+    },
+    {
+      "name": "sentiment-feedback-loop",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when the user needs a process for capturing qualitative customer feedback and injecting it into CS playbooks.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/sentiment-feedback-loop/SKILL.md"
+    },
+    {
+      "name": "shape",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to plan the UX and UI for a feature before writing code. Runs a structured discovery interview, then produces a design brief that guides implementation — establishing design direction, constraints, and strategy during the planning phase, before any code is written.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/shape/SKILL.md"
+    },
+    {
+      "name": "signal-anchored-message",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when writing outbound to a lead who surfaced from a signal — \"write the message for this trigger,\" \"personalize this off the signal, not the profile.\" Given a contact, their company, and the signal that surfaced them, it returns a short connection note and two follow-ups anchored to the trigger and stripped of AI tells.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/signal-anchored-message/SKILL.md"
+    },
+    {
+      "name": "signal-scoring",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to design composite intent scoring models with decay, weighting, and governance.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/signal-scoring/SKILL.md"
+    },
+    {
+      "name": "signup-flow-cro",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" \"people aren't signing up,\" \"signup abandonment,\" \"trial conversion rate,\" \"nobody completes registration,\" \"too many steps to sign up,\" or \"simplify our signup.\" Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.",
+      "version": "1.1.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/signup-flow-cro/SKILL.md"
+    },
+    {
+      "name": "sketch-prompt",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Converts any block of text into a conceptual sketch image. Takes raw text, extracts the central idea, generates an image prompt, and produces the final image using ComfyUI + Flux.1 Schnell locally. Use when the user pastes text, notes, or ideas and wants a visual concept. Trigger on \"sketch this\", \"turn this into a sketch\", \"visualize this\", \"make a sketch\", \"image for this\", \"sketch prompt\", or when the user drops text and wants it converted into a conceptual illustration.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/sketch-prompt/SKILL.md"
+    },
+    {
+      "name": "skillshare",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Manages and syncs AI CLI skills across 50+ tools from a single source.\nUse this skill whenever the user mentions \"skillshare\", runs skillshare commands,\nmanages skills (install, update, uninstall, sync, audit, check, diff, search),\nor troubleshoots skill configuration (orphaned symlinks, broken targets, sync\nissues). Covers both global (~/.config/skillshare/) and project (.skillshare/)\nmodes. Also use when: adding new AI tool targets (Claude, Cursor, Windsurf, etc.),\nsetting target include/exclude filters or copy vs symlink mode, using backup/restore\nor trash recovery, piping skillshare output to scripts (--json), setting up CI/CD\naudit pipelines, or building/sharing skill hubs (hub index, hub add).\n",
+      "version": "v0.17.8",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/skillshare/SKILL.md"
+    },
+    {
+      "name": "social-content",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy.",
+      "version": "1.2.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/social-content/SKILL.md"
+    },
+    {
+      "name": "social-selling",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use when engaging prospects through LinkedIn, communities, and social channels to spark warm conversations and meetings.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/social-selling/SKILL.md"
+    },
+    {
+      "name": "solo-founder-gtm",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "When the user is a solo founder building their GTM motion, wants to scale without hiring, or needs to design an AI agent team for go-to-market. Also use when the user mentions 'solo founder,' 'one-person startup,' 'solopreneur,' 'bootstrapped,' 'no team,' 'AI agents as team,' 'scaling without hiring,' 'founder-led sales,' 'lean GTM,' 'one-person company,' or 'no employees.' This skill covers the complete solo founder GTM playbook from stack selection through agent team design, revenue-stage transitions, time allocation, and when to finally hire.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/solo-founder-gtm/SKILL.md"
+    },
+    {
+      "name": "sql-queries",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Generate SQL queries from natural language descriptions. Supports BigQuery, PostgreSQL, MySQL, and other dialects. Reads database schemas from uploaded diagrams or documentation. Use when writing SQL, building data reports, exploring databases, or translating business questions into queries.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/sql-queries/SKILL.md"
+    },
+    {
+      "name": "stakeholder-map",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/stakeholder-map/SKILL.md"
+    },
+    {
+      "name": "stakeholder-ops",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to coordinate approvals, communications, and accountability across teams for feedback programs.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/stakeholder-ops/SKILL.md"
+    },
+    {
+      "name": "startup-canvas",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Generate a Startup Canvas combining Product Strategy (9 sections) and Business Model (costs + revenue) for a new product. An alternative to BMC and Lean Canvas that separates strategy from business model. Use when launching a new product or evaluating a startup concept.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/startup-canvas/SKILL.md"
+    },
+    {
+      "name": "stitch-design-taste",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when working in Google Stitch and you need a semantic design system that enforces premium, anti-generic UI standards — strict typography, calibrated color, asymmetric layouts, perpetual micro-motion, and hardware-accelerated performance, output as agent-friendly DESIGN.md files. For the same anti-generic design philosophy applied to general frontend code rather than Stitch's DESIGN.md workflow, use design-taste-frontend instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/stitch-design-taste/SKILL.md"
+    },
+    {
+      "name": "summarize-interview",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/summarize-interview/SKILL.md"
+    },
+    {
+      "name": "suppression-logic",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to define guardrails that pause signal-driven plays when accounts are risky, saturated, or in-flight elsewhere.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/suppression-logic/SKILL.md"
+    },
+    {
+      "name": "swap-curve-strategy",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Analyze the interest rate swap curve by pricing swaps at multiple tenors, overlaying government and inflation curves, and identifying curve trade opportunities. Use when analyzing swap curves, computing swap spreads, decomposing real rates, identifying steepener/flattener/butterfly trades, or comparing swap rates across currencies.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/swap-curve-strategy/SKILL.md"
+    },
+    {
+      "name": "swot-analysis",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/swot-analysis/SKILL.md"
+    },
+    {
+      "name": "tam-sam-som-calculator",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Calculate TAM, SAM, and SOM with explicit assumptions, methods, and caveats. Use when sizing a market for a product idea, business case, or executive review.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/tam-sam-som-calculator/SKILL.md"
+    },
+    {
+      "name": "tdd-red-green-refactor",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Enforces a disciplined Red-Green-Refactor (TDD) workflow in TypeScript/Node.js.  Use this whenever creating new features, fixing bugs, or migrating logic to ensure  high-quality, verifiable implementations.\n",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/tdd-red-green-refactor/SKILL.md"
+    },
+    {
+      "name": "tear-sheet",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Generate professional company tear sheets using S&P Capital IQ data via the Kensho LLM-ready API MCP server. Use this skill whenever the user asks for a tear sheet, company one-pager, company profile, fact sheet, company snapshot, or company overview document — especially when they mention a specific company name or ticker. Also trigger when users ask for equity research summaries, M&A company profiles, corporate development target profiles, sales/BD meeting prep documents, or any concise single-company financial summary. This skill supports four audience types: equity research, investment banking/M&A, corporate development, and sales/business development. If the user doesn't specify an audience, ask. Works for both public and private companies.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/tear-sheet/SKILL.md"
+    },
+    {
+      "name": "technical-dd",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Generate investment-grade Technical Due Diligence reports for The Studio (Utopia Capital). Use this skill whenever the user mentions technical due diligence, TDD, tech DD, technical assessment, technical evaluation of a company, or wants to assess whether a startup's technology works, is well-built, can scale, and what the technical risks are. Also trigger when the user uploads company materials (pitch decks, technical docs, corporate profiles) and asks for a due diligence analysis, technical review, or investment assessment focused on technology. This skill produces branded .docx reports suitable for sharing with co-investors or the company itself. Even if the user just says 'run DD on this company' or 'assess this startup' or 'review these materials', use this skill — it's the standard workflow for technical evaluation at The Studio.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/technical-dd/SKILL.md"
+    },
+    {
+      "name": "transformers-js",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants to run state-of-the-art machine learning models directly in JavaScript/TypeScript with Transformers.js. Supports NLP (text classification, translation, summarization), computer vision (image classification, object detection), audio (speech recognition, audio classification), and multimodal tasks. Works in browsers and server-side runtimes (Node.js, Bun, Deno) with WebGPU/WASM using pre-trained models from Hugging Face Hub.",
+      "version": "4.x",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/transformers-js/SKILL.md"
+    },
+    {
+      "name": "typed-service-contracts",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Architecture standard for building robust, type-safe TypeScript services using the \"Spec and Handler\" pattern. Use when building CLIs, libraries, or complex business logic.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/typed-service-contracts/SKILL.md"
+    },
+    {
+      "name": "typeset",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Improves typography by fixing font choices, hierarchy, sizing, weight, and readability so text feels intentional. Use when the user mentions fonts, type, readability, text hierarchy, sizing looks off, or wants more polished, intentional typography.",
+      "version": "2.1.1",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/typeset/SKILL.md"
+    },
+    {
+      "name": "ui-polish",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Design engineering principles for making interfaces feel polished. Use when building UI components, reviewing frontend code, implementing animations, hover states, shadows, borders, typography, micro-interactions, enter/exit animations, or any visual detail work. Triggers on UI polish, design details, \"make it feel better\", \"feels off\", stagger animations, border radius, optical alignment, font smoothing, tabular numbers, image outlines, box shadows. For a general pre-ship quality pass across alignment/spacing/consistency rather than UI-specific polish principles, use polish instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ui-polish/SKILL.md"
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Use when the user wants UI/UX design intelligence for web and mobile — 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/ui-ux-pro-max/SKILL.md"
+    },
+    {
+      "name": "user-stories",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create user stories following the 3 C's (Card, Conversation, Confirmation) and INVEST criteria with descriptions, design links, and acceptance criteria. Use when writing user stories, breaking down features into backlog items, or defining acceptance criteria. For the more detailed Mike Cohn + Gherkin format, use user-story instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/user-stories/SKILL.md"
+    },
+    {
+      "name": "user-story",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create user stories with Mike Cohn format and Gherkin acceptance criteria. Use when turning user needs into development-ready work with clear outcomes and testable conditions. For the 3 C's/INVEST framing instead, use user-stories — both write agile user stories, this one uses Mike Cohn's format with Gherkin acceptance criteria.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/user-story/SKILL.md"
+    },
+    {
+      "name": "user-story-mapping",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Create a user story map that lays out activities, steps, tasks, and release slices. Use when planning a workflow, backlog, or MVP around the user journey. For a facilitated workshop version with adaptive questions instead of doing it yourself, use user-story-mapping-workshop instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/user-story-mapping/SKILL.md"
+    },
+    {
+      "name": "user-story-mapping-workshop",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Run a user story mapping workshop with adaptive questions and a structured map output. Use when you need backbone activities, tasks, and release slices for a workflow. For the non-workshop, direct version of the same output, use user-story-mapping instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/user-story-mapping-workshop/SKILL.md"
+    },
+    {
+      "name": "user-story-splitting",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Break a large story or epic into smaller deliverable stories using proven split patterns. Use when backlog items are too big for estimation, sequencing, or independent release. For writing new stories from scratch rather than splitting an existing one, use user-story or user-stories instead.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/user-story-splitting/SKILL.md"
+    },
+    {
+      "name": "valuation-reconciler",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Synthesizes intrinsic (DCF) and relative (multiples) valuation outputs into a final value estimate and investment recommendation. Reconciles divergent valuations, reverse-engineers what the market is pricing in (implied growth, implied ROIC), computes margin of safety, and produces a buy/sell/hold recommendation with catalysts. Use when combining multiple valuation approaches, making investment recommendations, reconciling DCF with multiples, or when user mentions reconcile valuations, investment recommendation, margin of safety, implied growth rate, or what is the market pricing in.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/valuation-reconciler/SKILL.md"
+    },
+    {
+      "name": "value-prop-statements",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Generate value proposition statements for marketing, sales, and onboarding from existing value propositions. Use when writing marketing copy, creating sales messaging, or crafting onboarding messages.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/value-prop-statements/SKILL.md"
+    },
+    {
+      "name": "value-proposition",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/value-proposition/SKILL.md"
+    },
+    {
+      "name": "variance-strategy-selector",
+      "module": "investments",
+      "pack": "utopia-investments",
+      "description": "Given a current win probability and a downside asymmetry flag, recommends a variance-seeking, neutral, or variance-minimizing posture and emits a numeric multiplier (typically 0.8-1.3) for downstream consumers to apply to boom-bust scores, position sizes, or bet sizes. Favorites minimize variance; underdogs maximize it. Reusable across fantasy sports lineup construction, portfolio allocation, poker bankroll decisions, racing strategy, and any decision where the agent controls a variance knob. Use when user mentions variance strategy, underdog variance, variance seeking, variance minimizing, risk posture, boom bust, must-win variance, favorite strategy, or when a decision module needs a single scalar to bias toward or away from high-variance options.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/investments/variance-strategy-selector/SKILL.md"
+    },
+    {
+      "name": "vercel-cli-with-tokens",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Deploy and manage projects on Vercel using token-based authentication. Use when working with Vercel CLI using access tokens rather than interactive login — e.g. \"deploy to vercel\", \"set up vercel\", \"add environment variables to vercel\".",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/vercel-cli-with-tokens/SKILL.md"
+    },
+    {
+      "name": "vercel-composition-patterns",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/vercel-composition-patterns/SKILL.md"
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/vercel-react-best-practices/SKILL.md"
+    },
+    {
+      "name": "vercel-react-native-skills",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "React Native and Expo best practices for building performant mobile apps. Use when building React Native components, optimizing list performance, implementing animations, or working with native modules. Triggers on tasks involving React Native, Expo, mobile performance, or native platform APIs.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/vercel-react-native-skills/SKILL.md"
+    },
+    {
+      "name": "voice-of-customer",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use to design, run, and synthesize customer feedback programs tied to journey stages.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/voice-of-customer/SKILL.md"
+    },
+    {
+      "name": "warm-intro-intelligence",
+      "module": "gtm",
+      "pack": "utopia-gtm",
+      "description": "Use this skill when a rep wants warm intro paths into a target prospect — \\\"Find warm intro paths for [company]\\\", \\\"Who do we know at [company]?\\\", \\\"Can anyone intro me to [role] at [company]?\\\", \\\"Warm intro - [company]\\\". Surfaces the strongest available warm intro paths from your company's relationship network — employees, customers, partners, investors, advisors, call transcripts — with honest, evidence-based confidence labels. Decision support only: never contacts anyone, never writes to the CRM. The rep always decides.",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/gtm/warm-intro-intelligence/SKILL.md"
+    },
+    {
+      "name": "web-design-guidelines",
+      "module": "product",
+      "pack": "utopia-product",
+      "description": "Review UI code for Web Interface Guidelines compliance. Use when asked to \"review my UI\", \"check accessibility\", \"audit design\", \"review UX\", or \"check my site against best practices\".",
+      "version": "1.0.0",
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/product/web-design-guidelines/SKILL.md"
+    },
+    {
+      "name": "workshop-facilitation",
+      "module": "founder-productivity",
+      "pack": "utopia-founder-productivity",
+      "description": "Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking.",
+      "version": null,
+      "url": "https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/workshop-facilitation/SKILL.md"
+    }
+  ]
+}

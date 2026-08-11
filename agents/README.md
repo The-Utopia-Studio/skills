@@ -12,13 +12,14 @@ The cognitive ask is smaller:
 
 Personas also give Claude a clearer trigger pattern and a consistent voice across sessions. Without explicit personality enforcement, AI output drifts toward generic-Claude voice.
 
-## The three Utopia agents
+## The four Utopia agents
 
 | Agent | Role | When to call |
 |-------|------|-------------|
 | **[Ada](./ada/)** | Technical due diligence analyst | "Run DD on [company]", "Audit this repo", "Is this technically sound?" |
 | **[Khalil](./khalil/)** | Pitch deck builder | "Build a deck", "Turn these notes into slides", "Investor presentation" |
 | **[Salim](./salim/)** | Studio fellow coach | "I'm stuck", "What should I do next?", "Review my [discovery work]" |
+| **[Sami](./sami/)** | Outbound/GTM lead | "Run outbound for [list]", "Build my SDR sequence", "Who should I target first?" |
 
 ## How they work
 
@@ -40,9 +41,10 @@ Plus a **deployable copy** at `skills/agents/<name>/SKILL.md` that makes the age
 /plugin marketplace add The-Utopia-Studio/skills
 /plugin install utopia-founder-productivity@skills
 /plugin install utopia-investments@skills   # for Ada + Khalil
+/plugin install utopia-gtm@skills           # for Sami
 ```
 
-That installs all four: `agent-persona-builder`, `ada`, `khalil`, `salim`.
+That installs all five: `agent-persona-builder`, `ada`, `khalil`, `salim`, `sami`.
 
 ## Using an agent
 
@@ -51,6 +53,7 @@ Just say the trigger phrase. Claude will identify the right agent and load their
 - "Run DD on this GitHub repo: [URL]" → Ada activates
 - "Build me a syndication deck from these Granola notes" → Khalil activates
 - "I'm in M2 and I think I'm stuck on JTBD" → Salim activates
+- "Run outbound for this list of 200 accounts" → Sami activates
 
 You can also call them by name: *"Ada, run DD on this."*
 
@@ -78,6 +81,7 @@ Built so far:
 - ✅ **Ada** — DD analyst
 - ✅ **Khalil** — pitch deck builder
 - ✅ **Salim** — fellow coach
+- ✅ **Sami** — outbound/GTM lead
 
 Potential future agents (build only when needed):
 - **Maya** — Azraq engine reviewer (IP defensibility + risk modeling)
