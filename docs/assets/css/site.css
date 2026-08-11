@@ -192,6 +192,12 @@ img {
   color: var(--foreground);
 }
 
+.btn--ghost.is-active {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
 .btn-row {
   display: flex;
   flex-wrap: wrap;
@@ -494,6 +500,102 @@ img {
 .prompt-box textarea:focus {
   outline: var(--focus-ring-width) solid var(--focus-ring);
   outline-offset: var(--focus-ring-offset);
+}
+
+/* Skill browser */
+.browser {
+  display: grid;
+  gap: 20px;
+}
+
+.browser__controls {
+  display: grid;
+  gap: 16px;
+}
+
+.browser__search {
+  width: 100%;
+  min-height: var(--button-height);
+  padding: 0 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: var(--font-size-body);
+}
+
+.browser__search:focus {
+  outline: var(--focus-ring-width) solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.browser__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.browser__count {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--foreground-muted);
+}
+
+.browser__list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+  max-height: 640px;
+  overflow-y: auto;
+}
+
+.browser__item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.browser__name {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+}
+
+.browser__module {
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--utopia-red-60);
+}
+
+.browser__desc {
+  margin: 0 0 8px;
+  color: var(--foreground-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.browser__link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--foreground);
+}
+
+.browser__empty {
+  margin: 0;
+  padding: 24px 0;
+  color: var(--foreground-muted);
+  text-align: center;
 }
 
 /* Footer */
