@@ -96,6 +96,30 @@ A skill is ready to graduate when it meets all of these:
 3. Run `./build-packs.sh`
 4. Open a PR explaining: what problem it solves, who asked for it, gotchas found so far
 
+## Canonical `SKILL.md` frontmatter schema
+
+CI (`scripts/validate-skills.mjs`) enforces this shape on every PR touching `skills/**`.
+
+**Required:**
+
+- `name` — must exactly match the skill's folder name.
+- `description` — trigger-condition phrasing ("Use when...", "Use this...", "Use for..."), not a summary.
+
+**Optional, nested under `metadata` when present:**
+
+- `metadata.version`
+- `metadata.license`
+- `metadata.author`
+
+Don't add `version`, `license`, or `author` as top-level keys — fold them under `metadata`.
+
+**Optional, top-level** (Claude Code command-invocation fields, not descriptive metadata):
+
+- `user-invocable`
+- `argument-hint`
+
+Any other field a skill needs (`allowed-tools`, `model`, `type`, `intent`, etc.) is fine as top-level — this schema only standardizes the fields above; it doesn't restrict what else a `SKILL.md` can declare.
+
 ## Modules
 
 Skills live in one of four modules. When proposing, pick the best fit:

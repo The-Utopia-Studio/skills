@@ -4,8 +4,8 @@ description: Design social media assets with Efecto — Instagram posts, carouse
 metadata:
   mcp-server: efecto
   author: pablostanley
-  version: "1.0.0"
-  argument-hint: <design-description>
+  version: 1.0.0
+argument-hint: <design-description>
 ---
 
 # Efecto — Social Media Design Guide

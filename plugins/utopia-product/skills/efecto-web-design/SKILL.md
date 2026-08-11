@@ -4,8 +4,8 @@ description: Design web pages and app UIs with Efecto — create sessions, build
 metadata:
   mcp-server: efecto
   author: pablostanley
-  version: "1.0.0"
-  argument-hint: <design-description>
+  version: 1.0.0
+argument-hint: <design-description>
 ---
 
 # Efecto — Design Web Pages with AI

@@ -1,9 +1,10 @@
 ---
 name: overdrive
 description: Pushes interfaces past conventional limits with technically ambitious implementations — shaders, spring physics, scroll-driven reveals, 60fps animations. Use when the user wants to wow, impress, go all-out, or make something that feels extraordinary.
-version: 2.1.1
 user-invocable: true
-argument-hint: "[target]"
+argument-hint: '[target]'
+metadata:
+  version: 2.1.1
 ---
 
 Start your response with:
