@@ -58,7 +58,7 @@ function checkSkill({ module: moduleName, name, path }) {
   const description = typeof data.description === "string" ? data.description : "";
   if (!description.trim()) {
     errors.push(`${label}: missing or empty description`);
-  } else if (!/use when|use this|use for|use to|use whenever|use if/i.test(description)) {
+  } else if (!/use when|use this|use for|use to|use whenever|use if|used when/i.test(description)) {
     warnings.push(`${label}: description reads as a summary, not a trigger condition (no "Use when/this/to/if" phrasing)`);
   }
 }
