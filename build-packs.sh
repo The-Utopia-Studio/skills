@@ -116,12 +116,17 @@ jq --argjson packs "$(
     plugins: $packs
   }' "$CONFIG" > "$MARKETPLACE_DIR/marketplace.json"
 
+# --- 5. Regenerate the machine-readable skills index (docs/skills-index.json) ---
+echo "  Regenerating docs/skills-index.json..."
+node "$REPO_ROOT/scripts/build-skills-index.mjs"
+
 echo ""
 echo "✓ Marketplace built successfully."
 echo ""
 echo "  Generated:"
 echo "    .claude-plugin/marketplace.json"
 echo "    plugins/           ($pack_count packs)"
+echo "    docs/skills-index.json"
 echo ""
 echo "  Next steps:"
 echo "    1. git add -A && git commit -m 'Rebuild marketplace'"

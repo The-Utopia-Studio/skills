@@ -7,6 +7,8 @@ on:
       - "packs.config.json"
       - "build-packs.sh"
       - "scripts/validate-skills.mjs"
+      - "scripts/build-skills-index.mjs"
+      - "docs/skills-index.json"
 
 jobs:
   validate:

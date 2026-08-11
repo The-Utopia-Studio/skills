@@ -80,11 +80,13 @@ function checkPackIntegrity() {
 function checkBuildDrift() {
   try {
     execFileSync("./build-packs.sh", { cwd: REPO_ROOT, stdio: "pipe" });
-    const diff = execFileSync("git", ["status", "--porcelain", "--", "plugins", ".claude-plugin"], {
-      cwd: REPO_ROOT,
-    }).toString();
+    const diff = execFileSync(
+      "git",
+      ["status", "--porcelain", "--", "plugins", ".claude-plugin", "docs/skills-index.json"],
+      { cwd: REPO_ROOT }
+    ).toString();
     if (diff.trim()) {
-      errors.push(`build-packs.sh produced drift against committed plugins/ output:\n${diff}`);
+      errors.push(`build-packs.sh produced drift against committed build output:\n${diff}`);
     }
   } catch (e) {
     errors.push(`build-packs.sh failed to run: ${e.message}`);
