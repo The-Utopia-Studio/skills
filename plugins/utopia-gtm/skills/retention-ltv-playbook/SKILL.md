@@ -1,7 +1,6 @@
 ---
 name: retention-ltv-playbook
-description: Lifecycle frameworks for driving repeat purchase, loyalty, and subscription
-  value.
+description: Use when the user needs lifecycle frameworks for driving repeat purchase, loyalty, and subscription value.
 ---
 
 # Retention & LTV Playbook Skill

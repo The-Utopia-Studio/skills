@@ -1,7 +1,6 @@
 ---
 name: cohort-analysis
-description: Standard method for slicing bookings, pipeline, and retention cohorts
-  for diagnostics.
+description: Use when the user needs a standard method for slicing bookings, pipeline, and retention cohorts for diagnostics.
 ---
 
 # Cohort Analysis Framework Skill

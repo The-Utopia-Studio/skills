@@ -1,6 +1,6 @@
 ---
 name: repo-structurer
-description: Cleans up and structures a repository for production. Adds README files to every directory, modularizes code, removes dead files, and makes the repo LLM-smart. Use when the user asks to "clean up", "structure", "document", or "organize" their repo. Don't use for code review or bug fixing.
+description: Cleans up and structures a repository for production. Adds README files to every directory, modularizes code, removes dead files, and makes the repo LLM-smart. Use when the user asks to "clean up", "structure", "document", or "organize" their repo. Don't use for code review or bug fixing. For a read-only diagnostic pass before restructuring, use repo-scanner instead.
 ---
 
 # Repo Structurer

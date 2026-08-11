@@ -1,6 +1,6 @@
 ---
 name: create-prd
-description: "Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD."
+description: Create a Product Requirements Document using a comprehensive 8-section template covering problem, objectives, segments, value propositions, solution, and release planning. Use when writing a PRD, documenting product requirements, preparing a feature spec, or reviewing an existing PRD. For a lighter-weight PRD connecting problem→users→solution→success without the full 8-section template, use prd-development instead. For a one-page version, use one-pager-prd. For an AI-agent-specific PRD, use agent-prd.
 ---
 
 # Create a Product Requirements Document

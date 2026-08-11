@@ -1,7 +1,7 @@
 ---
 name: fsi-strip-profile
 description: |
-  Creates professional investment banking strip profiles (company profiles) for pitch books, deal materials, and client presentations. Generates 1-4 information-dense slides with quadrant layouts, charts, and tables.
+  Use when the user needs professional investment banking strip profiles (company profiles) for pitch books, deal materials, and client presentations. Generates 1-4 information-dense slides with quadrant layouts, charts, and tables.
 ---
 
 ## Workflow

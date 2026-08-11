@@ -1,7 +1,6 @@
 ---
 name: pql-framework
-description: Methodology for defining product-qualified lead (PQL) signals, scoring,
-  and routing.
+description: Use when the user needs to define product-qualified lead (PQL) signals, scoring, and routing methodology.
 ---
 
 # PQL Framework Skill

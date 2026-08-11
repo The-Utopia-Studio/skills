@@ -1,6 +1,6 @@
 ---
 name: sentiment-feedback-loop
-description: Process for capturing qualitative feedback and injecting it into CS playbooks.
+description: Use when the user needs a process for capturing qualitative customer feedback and injecting it into CS playbooks.
 ---
 
 # Sentiment Feedback Loop Skill

@@ -1,7 +1,6 @@
 ---
 name: expansion-plays
-description: Use when planning adoption-to-expansion motions and cross-sell/upsell
-  campaigns.
+description: Use when planning adoption-to-expansion motions and cross-sell/upsell campaigns. This is a near-duplicate of expansion-playbook — use that skill instead; this one is being retired.
 ---
 
 # Expansion Playbooks Skill

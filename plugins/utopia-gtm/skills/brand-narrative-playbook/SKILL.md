@@ -1,7 +1,6 @@
 ---
 name: brand-narrative-playbook
-description: Messaging and storytelling template that keeps positioning consistent
-  across audiences.
+description: Use when the user needs a messaging and storytelling template that keeps positioning consistent across audiences and channels.
 ---
 
 # Brand Narrative Playbook Skill

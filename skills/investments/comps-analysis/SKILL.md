@@ -1,22 +1,6 @@
 ---
 name: comps-analysis
-description: |
-  Build institutional-grade comparable company analyses with operating metrics, valuation multiples, and statistical benchmarking in Excel/spreadsheet format.
-
-  **Perfect for:**
-  - Public company valuation (M&A, investment analysis)
-  - Benchmarking performance vs. industry peers
-  - Pricing IPOs or funding rounds
-  - Identifying valuation outliers (over/under-valued)
-  - Supporting investment committee presentations
-  - Creating sector overview reports
-
-  **Not ideal for:**
-  - Private companies without comparable public peers
-  - Highly diversified conglomerates
-  - Distressed/bankrupt companies
-  - Pre-revenue startups
-  - Companies with unique business models
+description: Use when the user needs comparable-company valuation analysis — building institutional-grade comps with operating metrics, valuation multiples, and statistical benchmarking in Excel/spreadsheet format. Use for public company valuation (M&A, investment analysis), benchmarking performance vs. industry peers, pricing IPOs or funding rounds, identifying valuation outliers (over/under-valued), or supporting investment committee presentations and sector overview reports. Not to be confused with competitive-analysis, which builds qualitative competitive-landscape decks (market positioning, competitor deep-dives) rather than valuation spreadsheets — use that instead for market/competitor analysis. Not ideal for private companies without comparable public peers, highly diversified conglomerates, distressed/bankrupt companies, pre-revenue startups, or companies with unique business models.
 ---
 
 # Comparable Company Analysis

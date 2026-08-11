@@ -1,12 +1,8 @@
 ---
 name: prioritization
-description: >
-  Framework-driven feature and initiative prioritization using RICE, ICE, or
-  weighted scoring. Grounds prioritization in strategic pillars and demands
-  evidence-based scoring. Trigger phrases: "prioritize features",
-  "prioritization", "rank these initiatives", "RICE score", "ICE score",
-  "what should we build next", "prioritize my backlog"
-argument-hint: "[list-of-features-or-initiatives]"
+description: |
+  Use when the user wants to actually score and rank their backlog or initiatives — framework-driven prioritization using RICE, ICE, or weighted scoring, grounded in strategic pillars with evidence-based scoring required. Use when the user says "prioritize features", "rank these initiatives", "RICE score", "ICE score", "what should we build next", or "prioritize my backlog". For comparing which prioritization framework to adopt rather than running one, use prioritization-frameworks instead.
+argument-hint: '[list-of-features-or-initiatives]'
 ---
 
 # Feature & Initiative Prioritization

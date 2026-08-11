@@ -1,6 +1,6 @@
 ---
 name: one-pager-prd
-description: Creates concise, decision-ready product specifications (one-pagers and PRDs) that align stakeholders on problem, solution, users, success metrics, and constraints. Use when proposing new features/products, documenting product requirements, creating concise specs for stakeholder alignment, pitching initiatives, scoping projects before detailed design, capturing user stories and success metrics, or when user mentions one-pager, PRD, product spec, feature proposal, product requirements, or brief.
+description: Creates concise, decision-ready product specifications (one-pagers and PRDs) that align stakeholders on problem, solution, users, success metrics, and constraints. Use when proposing new features/products, documenting product requirements, creating concise specs for stakeholder alignment, pitching initiatives, scoping projects before detailed design, capturing user stories and success metrics, or when user mentions one-pager, PRD, product spec, feature proposal, product requirements, or brief. For a full multi-section PRD instead of a one-pager, use create-prd instead.
 ---
 
 # One-Pager PRD

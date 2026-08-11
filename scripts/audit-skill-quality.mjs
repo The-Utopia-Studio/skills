@@ -38,7 +38,7 @@ const CHECKS = [
   {
     key: "trigger-condition",
     reason: "description reads as summary, not trigger condition",
-    test: (_body, description) => /use when|use this|use for|use to|use whenever|use if/i.test(description || ""),
+    test: (_body, description) => /use when|use this|use for|use to|use whenever|use if|used when/i.test(description || ""),
   },
 ];
 

@@ -1,6 +1,6 @@
 ---
 name: cold-outreach
-description: Master cold email, LinkedIn, and first-touch prospect outreach. Use when crafting outbound sequences, social touches, or follow-ups that must earn fast responses.
+description: Master cold email, LinkedIn, and first-touch prospect outreach. Use when crafting outbound sequences, social touches, or follow-ups that must earn fast responses. For AI-tooling-driven outreach (Instantly/Smartlead/Clay, deliverability, scale), use ai-cold-outreach instead — it's the more comprehensive skill for that angle. For production sending with sender-tier approval rails, use outreach-execution.
 ---
 
 # Cold Outreach Mastery

@@ -1,7 +1,6 @@
 ---
 name: expansion-playbook
-description: Use to package upsell, cross-sell, and advocacy motions tied to customer
-  outcomes.
+description: Use to package upsell, cross-sell, and advocacy motions tied to customer outcomes. expansion-plays is a near-duplicate of this skill and is being retired — use this one instead. For the broader churn/NRR/customer-success system rather than a single expansion motion, use expansion-retention.
 ---
 
 # Expansion Playbook Library Skill

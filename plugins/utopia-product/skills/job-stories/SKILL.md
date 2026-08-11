@@ -1,6 +1,6 @@
 ---
 name: job-stories
-description: "Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations."
+description: Create job stories using the 'When [situation], I want to [motivation], so I can [outcome]' format with detailed acceptance criteria. Use when writing job stories, creating JTBD-style backlog items, or expressing user situations and motivations. For the classic Card/Conversation/Confirmation or Cohn/Gherkin story formats instead of JTBD framing, use user-stories or user-story instead.
 ---
 # Job Stories
 

@@ -1,7 +1,6 @@
 ---
 name: hypothesis-library
-description: Curated repository of experiment hypotheses, assumptions, and historical
-  learnings.
+description: Use when the user needs a curated repository of experiment hypotheses, assumptions, and historical learnings.
 ---
 
 # Hypothesis Library Skill

@@ -1,6 +1,6 @@
 ---
 name: epc-search
-description: RAG search across EPC provisions, EPO Guidelines for Examination, and PCT rules for European and international patent law research
+description: Use when the user needs European or international patent law research — RAG search across EPC provisions, EPO Guidelines for Examination, and PCT rules.
 tools: Bash, Read, Write
 model: sonnet
 ---
