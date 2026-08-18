@@ -1,0 +1,19 @@
+{
+  "skill": "workflow-design",
+  "pass_threshold": 21,
+  "max": 25,
+  "min_per_dimension": 4,
+  "dimensions": [
+    { "id": "method_fidelity",   "weight": 5, "desc": "Follows the Icarus method exactly; no steps skipped or softened." },
+    { "id": "artifact_complete", "weight": 5, "desc": "Produces the named artifact, fully filled, with the required numbers and citations." },
+    { "id": "proprietary_edge",  "weight": 5, "desc": "Could NOT have come from a generic prompt. Uses first-principles / evidence-ladder / eval logic." },
+    { "id": "challenge",         "weight": 5, "desc": "Pushes back on weak input; names gaps, kill criteria, and what would change the view." },
+    { "id": "evidence_standard", "weight": 5, "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]." }
+  ],
+  "auto_fail": [
+    "Fabricated a specific number, quote, or citation not in the input",
+    "Flattered a weak idea instead of challenging it",
+    "Fired outside its trigger scope / poached a sibling skill",
+    "Output is generic PM boilerplate"
+  ]
+}

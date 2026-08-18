@@ -117,6 +117,25 @@ When reviewing a proposal:
 - **Kill duplicates** — if a new skill overlaps with existing one, either merge or reject.
 - **Reject thin checklists** — no judgment, no numbers, no “what good looks like” → send back.
 
+## The Ingestion Rule — premium, not noise
+
+The studio takes the best of the open skill ecosystem, but it does not accumulate it. Every skill Claude can load costs context for every fellow on every session, so the shared set is kept small and premium on purpose.
+
+**The rule: every external ("market") skill is, by default, folded into an existing studio skill or rejected. It is never added as new surface, and never vendored wholesale.**
+
+When you find a good public skill, run the [`market-skill-ingestion`](./skills/meta/market-skill-ingestion/SKILL.md) skill. It qualifies the source, finds the incumbent studio skill it overlaps, distills only the load-bearing value, and returns one of four decisions:
+
+| Decision | When | Result |
+|---|---|---|
+| **FOLD** (default) | the value overlaps an existing skill's job | patch the value into that skill + a provenance line |
+| **SUPERSEDE** | a studio skill does the same job worse | the adapted skill sets `supersedes:` and beats it; retire the incumbent |
+| **REJECT** | duplicate, obvious, or low-signal source | one-line reason, stop |
+| **ADD-NEW** (rare) | clears the ingestion rubric AND fills a named [taxonomy](./SKILL_TAXONOMY.md) gap | sandbox → graduate as normal |
+
+Banned: `npx skills add <repo>` followed by `cp -r` of the folder into `skills/`. That is how `skills/product/product-manager-skills/` ended up carrying an entire external repo (README, CHANGELOG, `package.json`, `bin/`). Emit a diff or reject — there is no "temporary" wholesale copy.
+
+**Provenance convention.** A skill that supersedes another declares it in frontmatter: `supersedes: skills/<module>/<skill>` (or `none`). A skill that folded in external value carries a one-line `Adapted from <source-url>` in its body. This keeps provenance queryable instead of buried in prose.
+
 ## Writing Good Descriptions
 
 The `description` field in SKILL.md is the **only thing Claude sees when deciding whether to use the skill**. It's a trigger condition, not a summary.
