@@ -2,7 +2,7 @@
   "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Each pack's skills are COPIED from /skills/<module>/<skill>/ into /plugins/<pack>/skills/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity.",
   "marketplace": {
     "name": "skills",
-    "description": "The Utopia Studio's skill marketplace. Four modules \u2014 GTM, Product, Investments, and Founder Productivity \u2014 301 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+    "description": "The Utopia Studio's skill marketplace. Four modules \u2014 GTM, Product, Investments, and Founder Productivity \u2014 347 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
     "owner": {
       "name": "The Utopia Studio",
       "email": "karanmjpinto@gmail.com",
