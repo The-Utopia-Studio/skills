@@ -161,6 +161,7 @@
               <button class="pill active" data-mod="All" type="button">All</button>
               <button class="pill" data-mod="GTM" type="button">GTM</button>
               <button class="pill" data-mod="Product" type="button">Product</button>
+              <button class="pill" data-mod="Icarus" type="button">Icarus</button>
               <button class="pill" data-mod="Investments" type="button">Investments</button>
               <button class="pill" data-mod="Founder Productivity" type="button">Founder Productivity</button>
             </div>
@@ -192,6 +193,10 @@
       const countEl  = document.getElementById('dir-count');
       const output   = document.getElementById('dir-output');
 
+      // The 45 proprietary Product Module — Icarus skills. The "Icarus" pill
+      // filters to this set (they live inside the Product module).
+      const ICARUS = new Set(["concept-council","so-what-stress-test","fellow-path-router","product-as-decision","job-in-primitives","current-state-map","physics-floor-gap","problem-quality-scorecard","null-hypothesis-test","bottoms-up-quantification","user-buyer-decider-map","unserved-needs-finder","synthetic-users","tacit-knowledge-interview","evidence-ladder","continuous-discovery-engine","yoda-data-sourcing","explicit-vs-tacit-capture","dataset-builder","probe-matrix","paper-sketch-probe","wizard-of-oz-probe","concierge-probe","agent-concierge-probe","product-frame-stack","four-lenses-test","first-mocks","usability-test-protocol","invent-by-hand","wedge-five-questions","moat-design-canvas","data-rights-clause","eval-first-spec","compound-system-architecture","guardrail-design","pilot-six-term-sheet","value-based-pricing","v1-launch-bar","refine-flywheel","trace-to-interview","metrics-that-matter","agent-design","workflow-design","fellow-level-ladder","platform-vs-venture"]);
+
       let activeMod = 'All';
 
       function render() {
@@ -200,14 +205,17 @@
         let html = '';
 
         for (const mod of REGISTRY) {
-          if (activeMod !== 'All' && mod.label !== activeMod) continue;
-          const rows = mod.skills.filter(s =>
+          if (activeMod !== 'All' && activeMod !== 'Icarus' && mod.label !== activeMod) continue;
+          let source = mod.skills;
+          if (activeMod === 'Icarus') source = source.filter(s => ICARUS.has(s.name));
+          const rows = source.filter(s =>
             !q || s.name.includes(q) || s.desc.toLowerCase().includes(q)
           );
           if (!rows.length) continue;
           total += rows.length;
+          const modTitle = activeMod === 'Icarus' ? 'Product Module — Icarus' : mod.label;
           html += '<div class="dir-module">';
-          html += '<p class="dir-module__title">' + mod.label + ' &nbsp;(' + rows.length + ')</p>';
+          html += '<p class="dir-module__title">' + modTitle + ' &nbsp;(' + rows.length + ')</p>';
           for (const s of rows) {
             const cmd = 'npx skills add The-Utopia-Studio\/skills --skill ' + s.name;
             html += '<div class="skill-row">';
