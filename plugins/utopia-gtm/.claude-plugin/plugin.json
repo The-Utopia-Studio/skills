@@ -1,7 +1,7 @@
 {
   "name": "utopia-gtm",
   "description": "Go-to-Market — positioning, sales, outbound, signals, content, paid, RevOps, retention, and agent governance. Everything to launch and grow.",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": { "name": "The Utopia Studio" },
   "keywords": ["gtm","sales","marketing","growth","distribution"]
 }

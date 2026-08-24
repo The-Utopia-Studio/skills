@@ -13,7 +13,7 @@
     {
       "name": "utopia-gtm",
       "description": "Go-to-Market \u2014 positioning, sales, outbound, signals, content, paid, RevOps, retention, and agent governance. Everything to launch and grow.",
-      "version": "2.1.0",
+      "version": "2.1.1",
       "keywords": [
         "gtm",
         "sales",
@@ -65,6 +65,7 @@
         "lead-enrichment",
         "lead-magnets",
         "lead-qualification",
+        "manifesto",
         "marketing-ideas",
         "marketing-psychology",
         "meddic-checklist",
