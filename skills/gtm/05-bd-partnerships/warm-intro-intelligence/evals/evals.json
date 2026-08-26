@@ -1,0 +1,17 @@
+{
+  "skill_name": "warm-intro-intelligence",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Find warm intro paths into Notion for an AE meeting with their Head of Partnerships.",
+      "expected_output": "Should treat this as decision support only \u2014 never contact anyone or write to CRM. Should rank paths with evidence-based confidence. Should ask for or use network registries (team, investors, customers, partners) rather than inventing edges.",
+      "assertions": [
+        "Does not contact anyone or write to CRM",
+        "Ranks paths with confidence labels",
+        "Does not invent relationships without evidence",
+        "Produces an output card a rep can act on"
+      ],
+      "files": []
+    }
+  ]
+}

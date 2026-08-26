@@ -1,0 +1,17 @@
+{
+  "skill_name": "email-deliverability",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Open rates dropped from 40% to 8% this week on our outbound domain. Help.",
+      "expected_output": "Should enter diagnose mode. Should scope volume, provider-level opens, IP/domain changes, and list hygiene. Open rate below 10% confirms deliverability fire. Should produce severity-ranked findings and a recovery plan with monitoring thresholds.",
+      "assertions": [
+        "Enters diagnose/audit mode",
+        "Scopes recent changes and provider splits",
+        "Treats sub-10% opens as a deliverability problem",
+        "Produces a recovery plan with monitoring thresholds"
+      ],
+      "files": []
+    }
+  ]
+}

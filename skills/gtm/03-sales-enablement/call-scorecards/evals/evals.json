@@ -1,0 +1,17 @@
+{
+  "skill_name": "call-scorecards",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a discovery call scorecard for our AE team selling $40k ACV SaaS.",
+      "expected_output": "Should build observable behavior items (not vague 'good discovery'). Should group into call chunks. Should score 1\u20135. Should keep the first card to ~10\u201315 items. Should explain cadence for scoring real calls.",
+      "assertions": [
+        "Uses observable behaviors not vague qualities",
+        "Groups items into call chunks",
+        "Uses a numeric scoring scale",
+        "Keeps the initial card small enough to adopt"
+      ],
+      "files": []
+    }
+  ]
+}

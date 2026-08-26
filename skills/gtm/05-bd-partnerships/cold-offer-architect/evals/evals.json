@@ -1,0 +1,17 @@
+{
+  "skill_name": "cold-offer-architect",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our cold emails get opens but zero replies. Offer is a free 30-min demo of our analytics platform.",
+      "expected_output": "Should fix Market \u2192 offer \u2192 copy order. Should treat a free demo as a weak cold offer and run the eight-criterion gate. Should architect a deal strangers can say yes to without trust.",
+      "assertions": [
+        "Diagnoses offer before rewriting copy",
+        "Applies a hard pass/fail offer gate",
+        "Rejects or upgrades a bare demo ask for cold traffic",
+        "Produces an architected offer"
+      ],
+      "files": []
+    }
+  ]
+}

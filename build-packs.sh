@@ -9,6 +9,7 @@
 #
 # To add a new pack: edit packs.config.json, then run ./build-packs.sh.
 # To add a skill to an existing pack: add it to that pack's "skills" array in packs.config.json.
+# GTM skills live at skills/gtm/<submodule>/<skill>/ and must also be listed on utopia-gtm.submodules.
 #
 # Requirements: bash 4+, jq
 
@@ -32,12 +33,13 @@ fi
 
 echo "→ Building marketplace from packs.config.json"
 
-# --- 1. Resolve skill locations (flatten skills/<category>/<skill>/ lookup) ---
+# --- 1. Resolve skill locations (any skills/**/SKILL.md, including GTM sub-modules) ---
 declare -A SKILL_PATH_MAP
-while IFS= read -r -d '' skill_dir; do
+while IFS= read -r -d '' skill_file; do
+  skill_dir="$(dirname "$skill_file")"
   skill_name="$(basename "$skill_dir")"
   SKILL_PATH_MAP["$skill_name"]="$skill_dir"
-done < <(find "$SKILLS_DIR" -mindepth 2 -maxdepth 2 -type d -print0)
+done < <(find "$SKILLS_DIR" -mindepth 2 -name SKILL.md -print0)
 
 echo "  Found ${#SKILL_PATH_MAP[@]} skills in $SKILLS_DIR"
 
@@ -122,6 +124,13 @@ echo "  Generated:"
 echo "    .claude-plugin/marketplace.json"
 echo "    plugins/           ($pack_count packs)"
 echo ""
+
+if command -v node >/dev/null 2>&1; then
+  echo "→ Syncing public docs from packs.config.json"
+  node "$REPO_ROOT/scripts/sync-marketplace-docs.mjs"
+  echo ""
+fi
+
 echo "  Next steps:"
 echo "    1. git add -A && git commit -m 'Rebuild marketplace'"
 echo "    2. git push"

@@ -1,0 +1,17 @@
+{
+  "skill_name": "revops-forecasting",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Reps keep sandbagging. Forecast is always \u00b130%. How do we fix the system?",
+      "expected_output": "Should focus on process inspection over optimism. Should recommend multiple forecasting lenses, segmented conversion rates, commit/best-case discipline, and accuracy measurement. Should not pretend a single CRM probability field is enough.",
+      "assertions": [
+        "Treats forecast as process quality not wishful thinking",
+        "Recommends multiple methods or triangulation",
+        "Addresses commit categories or inspection cadence",
+        "Defines how to measure forecast accuracy"
+      ],
+      "files": []
+    }
+  ]
+}

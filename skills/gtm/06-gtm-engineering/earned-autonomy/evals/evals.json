@@ -1,0 +1,17 @@
+{
+  "skill_name": "earned-autonomy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our SDR agent has drafted 40 emails with a 5% edit rate. Can it start sending without approval?",
+      "expected_output": "Should grant autonomy per task, not per agent. Should map evidence to a level (e.g. still review sends even if drafting is trusted). Should state promotion evidence thresholds and auto-demotion triggers.",
+      "assertions": [
+        "Autonomy is per task not per agent",
+        "Uses evidence thresholds for promotion",
+        "Separates drafting autonomy from send autonomy",
+        "Mentions demotion triggers if quality slips"
+      ],
+      "files": []
+    }
+  ]
+}

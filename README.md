@@ -1,10 +1,11 @@
 # Utopia Skills
 
+[![CI](https://github.com/The-Utopia-Studio/skills/actions/workflows/ci.yml/badge.svg)](https://github.com/The-Utopia-Studio/skills/actions/workflows/ci.yml)
 [![skills.sh](https://skills.sh/b/The-Utopia-Studio/skills)](https://skills.sh/The-Utopia-Studio/skills)
 
 **The best GTM skill pack for AI agents** — plus Product, Investments, and Founder Productivity.
 
-301 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
+350 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
 
 > **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills) · **Install:** [INSTALL.md](./INSTALL.md) (~2 minutes)
 
@@ -69,10 +70,10 @@ npx skills add The-Utopia-Studio/skills
 
 | Module | Pack | Skills | Covers |
 |--------|------|--------|--------|
-| **GTM** | `utopia-gtm` `v2.1.0` | 83 | Positioning, sales, outbound, signals, content, paid, RevOps, retention |
-| **Product** | `utopia-product` `v2.0.0` | 128 | Discovery, PRDs, design, build, deploy, product metrics |
+| **GTM** | `utopia-gtm` `v2.2.0` | 86 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
+| **Product** | `utopia-product` `v2.0.0` | 173 | Discovery, PRDs, design, build, deploy, product metrics |
 | **Investments** | `utopia-investments` `v2.0.0` | 60 | DD, modeling, valuation, capital markets, fundraising decks |
-| **Founder Productivity** | `utopia-founder-productivity` `v2.0.0` | 30 | Onboarding, legal, Obsidian, agents, meta tools |
+| **Founder Productivity** | `utopia-founder-productivity` `v2.0.0` | 31 | Onboarding, legal, Obsidian, agents, meta tools |
 
 Exact lists: [`packs.config.json`](./packs.config.json).
 
@@ -107,7 +108,14 @@ Details: [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ```
 skills/
-├── gtm/                      # → utopia-gtm
+├── gtm/                      # → utopia-gtm (seven sub-modules)
+│   ├── 01-growth-strategy/
+│   ├── 02-marketing-comms/
+│   ├── 03-sales-enablement/
+│   ├── 04-customer-success/
+│   ├── 05-bd-partnerships/
+│   ├── 06-gtm-engineering/
+│   └── 07-ip-commercialisation/
 ├── product/                  # → utopia-product
 ├── investments/              # → utopia-investments
 ├── founder-productivity/     # → utopia-founder-productivity
@@ -120,7 +128,7 @@ packs.config.json
 
 ## Maintainers
 
-1. Skills live under `skills/<module>/<skill-name>/`
+1. Skills live under `skills/<module>/<skill-name>/` (GTM: `skills/gtm/<submodule>/<skill-name>/`)
 2. Add the name to [`packs.config.json`](./packs.config.json)
 3. Run `./build-packs.sh` (needs `jq`)
 4. Theme for the site: `npm run docs:theme` (syncs utopia-default into `docs/`)

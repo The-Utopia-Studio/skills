@@ -145,15 +145,16 @@ This is for whoever is running the marketplace in the background (currently Kara
 ### Adding a new skill
 
 1. Install the skill locally (e.g., `npx skills add some-repo/some-skill --yes`)
-2. Copy it into the right module folder in [`skills/`](./skills/) — e.g., `skills/gtm/my-new-skill/`
-3. Add the skill name to that module's pack in [`packs.config.json`](./packs.config.json)
-4. Run `./build-packs.sh` (requires `jq` — `brew install jq`)
-5. Commit and push
+2. Copy it into the right module folder in [`skills/`](./skills/) — e.g., `skills/gtm/05-bd-partnerships/my-new-skill/`
+3. Add the skill name to that module's pack in [`packs.config.json`](./packs.config.json) (alphabetized)
+4. Run `./build-packs.sh` (requires `jq` — `brew install jq`; also syncs public doc counts)
+5. Run `npm run validate` before you commit
+6. Commit and push
 
 Example:
 ```bash
 npx skills add someone/cool-skills --yes
-cp -r ~/.agents/skills/cool-skill skills/gtm/
+cp -r ~/.agents/skills/cool-skill skills/gtm/05-bd-partnerships/
 # Edit packs.config.json — add "cool-skill" to utopia-gtm
 ./build-packs.sh
 git add -A && git commit -m "Add cool-skill to GTM pack" && git push
@@ -163,7 +164,7 @@ git add -A && git commit -m "Add cool-skill to GTM pack" && git push
 
 | Module | Folder | Pack | Put here when… |
 |--------|--------|------|----------------|
-| GTM | `skills/gtm/` | `utopia-gtm` | Sales, marketing, growth, distribution |
+| GTM | `skills/gtm/<submodule>/` | `utopia-gtm` | Sales, marketing, growth, distribution (seven sub-modules) |
 | Product | `skills/product/` | `utopia-product` | Discovery, design, build, deploy, product metrics |
 | Investments | `skills/investments/` | `utopia-investments` | DD, finance, fundraising, markets, quant |
 | Founder Productivity | `skills/founder-productivity/` | `utopia-founder-productivity` | Doesn't fit the three above |

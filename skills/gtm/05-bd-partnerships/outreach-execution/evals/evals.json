@@ -1,0 +1,29 @@
+{
+  "skill_name": "outreach-execution",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft outreach to the CRO at a 400-person SaaS company that just raised Series B. We sell deal-intelligence software.",
+      "expected_output": "Should load sender/approval rails mindset. Should pick a real hook (funding) without inventing surveillance. Should stage a multi-step sequence with rationale. Should NEVER auto-approve AI-generated sequences to senior executives at large companies. Should apply multitread/threshold thinking for large accounts.",
+      "assertions": [
+        "Anchors on a real why-now hook",
+        "Stages sequence for human approval",
+        "Does not auto-send to senior execs at large companies",
+        "Includes written rationale for the sequence",
+        "Follow-ups add new angles rather than bumps"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can the agent just send these emails automatically? We're trying to move fast on a 50-account list of directors.",
+      "expected_output": "Should enforce approval rails. Directors may allow more automation than C-level at large companies, but AI drafts still need a human gate unless earned autonomy evidence exists. Should explain sender-tier and approval-owner concepts.",
+      "assertions": [
+        "Refuses ungated auto-send of AI drafts without evidence",
+        "Explains approval / sender-tier rails",
+        "Distinguishes risk by seniority and company size"
+      ],
+      "files": []
+    }
+  ]
+}

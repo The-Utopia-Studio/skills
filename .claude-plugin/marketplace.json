@@ -5,13 +5,13 @@
     "email": "karanmjpinto@gmail.com",
     "url": "https://github.com/The-Utopia-Studio"
   },
-  "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 347 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+  "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 350 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
   "plugins": [
     {
       "name": "utopia-gtm",
       "source": "./plugins/utopia-gtm",
-      "description": "Go-to-Market — positioning, sales, outbound, signals, content, paid, RevOps, retention, and agent governance. Everything to launch and grow.",
-      "version": "2.1.1"
+      "description": "Go-to-Market — seven sub-modules (Growth Strategy, Marketing & Comms, Sales Enablement, Customer Success, BD & Partnerships, GTM Engineering, IP Commercialisation). Positioning, outbound, signals, content, paid, RevOps, retention, and agent governance.",
+      "version": "2.2.0"
     },
     {
       "name": "utopia-product",

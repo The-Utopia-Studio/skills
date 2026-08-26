@@ -1,0 +1,17 @@
+{
+  "skill_name": "deal-velocity-engineer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our average sales cycle ballooned from 45 to 90 days. Pipeline looks full but nothing closes. Diagnose.",
+      "expected_output": "Should treat velocity as a system problem. Should inspect stage exit criteria, zombie deals, multi-threading, MAPs, and pipeline deflation \u2014 not just 'coach reps harder.' Should propose concrete operating changes.",
+      "assertions": [
+        "Frames velocity as a system problem",
+        "Inspects stage exit criteria or zombie deals",
+        "Addresses multi-threading or mutual action plans",
+        "Proposes concrete process fixes not pep talks"
+      ],
+      "files": []
+    }
+  ]
+}

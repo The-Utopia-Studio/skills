@@ -2,7 +2,7 @@
 
 **Time:** ~2 minutes · **Hardest part:** copying and pasting
 
-Four modules · **301 skills** · Claude Code plugin marketplace for The Utopia Studio.
+Four modules · **350 skills** · Claude Code plugin marketplace for The Utopia Studio.
 
 **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills)
 
@@ -100,8 +100,8 @@ Then open a terminal and run `claude`.
 # Clone once
 git clone https://github.com/The-Utopia-Studio/skills.git
 
-# Copy skills into Cursor
-cp -r skills/skills/*/* ~/.cursor/skills/
+# Copy skills into Cursor (all four modules)
+cp -r skills/{gtm,product,investments,founder-productivity}/* ~/.cursor/skills/
 ```
 
 Or with npx:

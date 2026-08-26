@@ -4,18 +4,28 @@ All skills in this repo map to **four modules**. Skills that blur modules confus
 
 | Module | Folder | Pack | Count | Put here when… |
 |--------|--------|------|------|----------------|
-| **GTM** | `skills/gtm/` | `utopia-gtm` | 83 | Sales, marketing, growth, retention, distribution |
-| **Product** | `skills/product/` | `utopia-product` | 128 | Discovery, PRDs, design, build, deploy, product metrics |
+| **GTM** | `skills/gtm/` | `utopia-gtm` | 86 | Sales, marketing, growth, retention, distribution |
+| **Product** | `skills/product/` | `utopia-product` | 173 | Discovery, PRDs, design, build, deploy, product metrics |
 | **Investments** | `skills/investments/` | `utopia-investments` | 60 | DD, modeling, valuation, fundraising, markets, quant |
-| **Founder Productivity** | `skills/founder-productivity/` | `utopia-founder-productivity` | 30 | Doesn't fit the three above |
+| **Founder Productivity** | `skills/founder-productivity/` | `utopia-founder-productivity` | 31 | Doesn't fit the three above |
 
-**Total: 301 skills** (plus `skills/sandbox/` for experiments).
+**Total: 350 skills** (plus `skills/sandbox/` for experiments).
 
 ## GTM
 
-Positioning, ICP, outbound, content, paid, partnerships, retention/expansion plays, CRO, brand narrative.
+Seven sub-modules inside `skills/gtm/<nn>-<id>/<skill>/`. Pack: `utopia-gtm`.
 
-Examples: `gtm-strategy`, `cold-email`, `positioning-icp`, `growth-loops`, `churn-prevention`, `copywriting`.
+| # | Sub-module | Folder | Put here when… |
+|---|------------|--------|----------------|
+| 01 | Growth Strategy | `01-growth-strategy/` | Positioning, ICP, flywheels, GTM plan, company MOC |
+| 02 | Marketing & Comms | `02-marketing-comms/` | Narrative, content, social, paid, CRO, launch comms |
+| 03 | Sales Enablement | `03-sales-enablement/` | Collateral, discovery, qualification, deal process |
+| 04 | Customer Success | `04-customer-success/` | Retention, expansion, renewals, sentiment |
+| 05 | BD & Partnerships | `05-bd-partnerships/` | Outbound, signals, account tiers, partners |
+| 06 | GTM Engineering | `06-gtm-engineering/` | RevOps, metrics, automation, agent autonomy |
+| 07 | IP Commercialisation | `07-ip-commercialisation/` | Patent / commercial pathways (operator-led today) |
+
+Examples: `growth-strategy`, `cold-email`, `sales-enablement`, `churn-prevention`, `account-tier-scoring`, `earned-autonomy`.
 
 ## Product
 

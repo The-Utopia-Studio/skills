@@ -1,0 +1,153 @@
+{
+  "_comment": "Canonical GTM sub-module map from the fellow Go-to-Market module reference. Every utopia-gtm skill belongs to exactly one sub-module. Source paths: skills/gtm/<id>/<skill>/ — ids are numbered so they never collide with skill folder names.",
+  "submodules": [
+    {
+      "id": "01-growth-strategy",
+      "order": 1,
+      "label": "Growth Strategy",
+      "tagline": "Where you are going, and why",
+      "description": "Value proposition, target segments, business model, flywheels, and the GTM plan.",
+      "skills": [
+        "beachhead-segment",
+        "brand-narrative-playbook",
+        "business-narrative-builder",
+        "company-moc",
+        "customer-research",
+        "growth-loops",
+        "growth-strategy",
+        "gtm-motions",
+        "gtm-strategy",
+        "ideal-customer-profile",
+        "manifesto",
+        "positioning",
+        "positioning-icp",
+        "positioning-workshop",
+        "product-marketing-context",
+        "sales-motion-design",
+        "solo-founder-gtm",
+        "value-prop-statements",
+        "value-proposition",
+        "voice-of-customer"
+      ]
+    },
+    {
+      "id": "02-marketing-comms",
+      "order": 2,
+      "label": "Marketing & Comms",
+      "tagline": "How you share your story with the world",
+      "description": "External narrative, content, social, paid, CRO, and launch communications.",
+      "skills": [
+        "ad-creative",
+        "content-strategy",
+        "content-to-pipeline",
+        "copy-editing",
+        "copywriting",
+        "efecto-social-media",
+        "kmjp-social",
+        "launch-strategy",
+        "lead-magnets",
+        "marketing-ideas",
+        "marketing-psychology",
+        "multi-platform-launch",
+        "onboarding-cro",
+        "page-cro",
+        "paid-ads",
+        "press-release",
+        "product-name",
+        "signup-flow-cro",
+        "social-content"
+      ]
+    },
+    {
+      "id": "03-sales-enablement",
+      "order": 3,
+      "label": "Sales Enablement",
+      "tagline": "What you equip yourself with to close",
+      "description": "Collateral, discovery, qualification, deal process, and conversion assets.",
+      "skills": [
+        "call-scorecards",
+        "competitive-battlecard",
+        "deal-desk",
+        "deal-review",
+        "deal-velocity-engineer",
+        "discovery-calls",
+        "lead-qualification",
+        "meddic-checklist",
+        "pql-framework",
+        "sales-enablement"
+      ]
+    },
+    {
+      "id": "04-customer-success",
+      "order": 4,
+      "label": "Customer Success",
+      "tagline": "How you keep and grow customers",
+      "description": "Retention, expansion, renewals, sentiment, and account health.",
+      "skills": [
+        "activation-map",
+        "churn-prevention",
+        "escalation-framework",
+        "expansion-playbook",
+        "expansion-plays",
+        "expansion-retention",
+        "member-insights",
+        "referral-program",
+        "renewal-playbooks",
+        "retention-dashboard",
+        "retention-ltv-playbook",
+        "sentiment-analysis",
+        "sentiment-feedback-loop"
+      ]
+    },
+    {
+      "id": "05-bd-partnerships",
+      "order": 5,
+      "label": "BD & Partnerships",
+      "tagline": "How you get deals",
+      "description": "Outbound, signals, account tiering, warm intros, partners, and ScaleOn leverage.",
+      "skills": [
+        "account-tier-scoring",
+        "ai-cold-outreach",
+        "ai-sdr",
+        "cold-email",
+        "cold-email-personalization",
+        "cold-offer-architect",
+        "cold-outreach",
+        "email-deliverability",
+        "email-sequence",
+        "lead-enrichment",
+        "outbound-plays",
+        "outreach-execution",
+        "partner-affiliate",
+        "signal-anchored-message",
+        "signal-scoring",
+        "social-selling",
+        "suppression-logic",
+        "warm-intro-intelligence"
+      ]
+    },
+    {
+      "id": "06-gtm-engineering",
+      "order": 6,
+      "label": "GTM Engineering",
+      "tagline": "Software leverage, in your hands",
+      "description": "RevOps, metrics, automation, agent autonomy, and pipeline systems.",
+      "skills": [
+        "earned-autonomy",
+        "gtm-engineering",
+        "gtm-metrics",
+        "revops",
+        "revops-forecasting",
+        "stakeholder-ops"
+      ]
+    },
+    {
+      "id": "07-ip-commercialisation",
+      "order": 7,
+      "label": "IP Commercialisation",
+      "tagline": "Defensibility from the start",
+      "description": "Patent strategy and commercial pathways. Operator-led today — skills land here once codified.",
+      "skills": []
+    }
+  ]
+}

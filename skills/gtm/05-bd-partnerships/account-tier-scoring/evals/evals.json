@@ -1,0 +1,28 @@
+{
+  "skill_name": "account-tier-scoring",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Score this account for outbound: 12-person agency, anonymous website traffic spike, one LinkedIn like from an intern, ACV potential unclear.",
+      "expected_output": "Should apply hard gates (self-serve / enterprise persona / signal caps). Anonymous + social engagement should be capped. Small agency may fail enterprise persona gate. Should produce a tier with rationale and never invent firmographics.",
+      "assertions": [
+        "Applies hard gates rather than vibes",
+        "Caps anonymous or weak social signals",
+        "Produces an explicit tier decision with rationale",
+        "Does not invent missing firmographics"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "This Gold account went quiet for 60 days \u2014 should we demote it to Silver?",
+      "expected_output": "Should apply never-demote / prior-relationship floor logic where encoded. Quiet \u2260 demote without a defined rule. Should explain what would justify a review vs automatic demotion.",
+      "assertions": [
+        "Respects never-demote or relationship-floor rules",
+        "Does not demote solely because of silence",
+        "Explains what evidence would change the tier"
+      ],
+      "files": []
+    }
+  ]
+}

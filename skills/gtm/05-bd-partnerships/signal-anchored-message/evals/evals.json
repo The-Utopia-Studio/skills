@@ -1,0 +1,17 @@
+{
+  "skill_name": "signal-anchored-message",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write LinkedIn + email outreach for Jane Chen, VP Eng at Acme, who just posted they are hiring 8 backend engineers.",
+      "expected_output": "Should anchor the opener on the hiring signal so it dies without the trigger. Should strip AI tells. Should not reveal scraping/surveillance. Should return a short connection note and two follow-ups with new angles.",
+      "assertions": [
+        "Opener is signal-anchored",
+        "Does not sound like a template with merge fields",
+        "Avoids creepy how-I-found-you language",
+        "Follow-ups add new angles"
+      ],
+      "files": []
+    }
+  ]
+}

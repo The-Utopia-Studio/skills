@@ -91,16 +91,19 @@ A skill is ready to graduate when it meets all of these:
 
 **To graduate:**
 
-1. Move `skills/sandbox/<skill>/` → `skills/<module>/<skill>/` (one of: `gtm`, `product`, `investments`, `founder-productivity`)
-2. Add the skill name to that module's pack in `packs.config.json`
-3. Run `./build-packs.sh`
-4. Open a PR explaining: what problem it solves, who asked for it, gotchas found so far
+1. Move `skills/sandbox/<skill>/` → `skills/<module>/<skill>/` (one of: `gtm/<submodule>`, `product`, `investments`, `founder-productivity`)
+2. Add the skill name to that module's pack in `packs.config.json` (keep the list alphabetized)
+3. Run `./build-packs.sh` (regenerates `plugins/`, the marketplace manifest, and public doc counts)
+4. Run `npm run validate` before opening the PR
+5. Open a PR explaining: what problem it solves, who asked for it, gotchas found so far
+
+CI on every PR checks marketplace integrity: packed skills resolve on disk, `SKILL.md` frontmatter is valid, eval/rubric JSON parses, and generated artifacts are in sync (`plugins/`, docs counts, registry).
 
 ## Modules
 
 Skills live in one of four modules. When proposing, pick the best fit:
 
-1. **GTM** (`skills/gtm/`) — sales, marketing, growth, retention, distribution
+1. **GTM** (`skills/gtm/<submodule>/`) — sales, marketing, growth, retention, distribution. Pick one of the seven sub-modules (Growth Strategy, Marketing & Comms, Sales Enablement, Customer Success, BD & Partnerships, GTM Engineering, IP Commercialisation).
 2. **Product** (`skills/product/`) — discovery, design, build, deploy, product metrics
 3. **Investments** (`skills/investments/`) — DD, finance, fundraising, markets, quant
 4. **Founder Productivity** (`skills/founder-productivity/`) — everything else (onboarding, legal, knowledge tools, agents)
