@@ -167,9 +167,9 @@ Before declaring the agent ready, verify:
 ## Example outputs (real Utopia agents)
 
 See:
-- [Ada](../../agents/ada/) — technical due diligence
-- [Khalil](../../agents/khalil/) — pitch deck builder
-- [Salim](../../agents/salim/) — Studio fellow coach
+- [Ada](../../../agents/ada/) — technical due diligence
+- [Khalil](../../../agents/khalil/) — pitch deck builder
+- [Salim](../../../agents/salim/) — Studio fellow coach
 
 These three are the canonical examples. Read them before designing your own.
 

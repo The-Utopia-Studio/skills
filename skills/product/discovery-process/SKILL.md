@@ -1,6 +1,6 @@
 ---
 name: discovery-process
-description: Run a full discovery cycle from problem hypothesis to validated solution. Use when a team needs a structured path through framing, interviews, synthesis, and experiments.
+description: Facilitates one bounded 3-4 week discovery cycle end to end — frame, plan research, interview, synthesise, run experiments, decide — with three explicit go/no-go decision points. Fires on "run a discovery cycle", "we need to investigate this churn problem properly", "take us from hypothesis to validated solution", "how do we validate this before we commit roadmap". Returns the filled `template.md` plus a decision at the end: build, kill, or keep learning. Do NOT fire when the fellow wants an ongoing living discovery practice rather than one bounded cycle (use `continuous-discovery-engine` — one opportunity tree kept current after launch); when only the interview plan is needed (use `discovery-interview-prep`); or when the discovery signal should come from production traces rather than new interviews (use `trace-to-interview`).
 intent: >-
   Guide product managers through a complete discovery cycle—from initial problem hypothesis to validated solution—by orchestrating problem framing, customer interviews, synthesis, and experimentation skills into a structured process. Use this to systematically explore problem spaces, validate assumptions, and build confidence before committing to full development—avoiding "build it and they will come" syndrome and ensuring you're solving real customer problems.
 type: workflow
@@ -52,15 +52,28 @@ The discovery process (Teresa Torres, Marty Cagan) is a structured approach to e
 - Continuous discovery (weekly customer touchpoints)
 
 ### When NOT to Use This
-- For well-understood problems (move to execution)
-- When stakeholders have already committed to a solution (address alignment first)
-- For tactical bug fixes or technical debt (no discovery needed)
+
+| Situation | Go here instead |
+|---|---|
+| The fellow wants a permanent discovery practice, not one cycle | `continuous-discovery-engine` (one living opportunity tree, fed continuously) |
+| Only the interview plan is needed | `discovery-interview-prep` |
+| Only the interview question script is needed | `interview-script` |
+| The product is already live and the signal is in the logs | `trace-to-interview` |
+| Capturing how one expert decides, by watching them work | `tacit-knowledge-interview` |
+| Well-understood problem | Nothing — move to execution |
+| Stakeholders have already committed to the solution | Nothing — address alignment first; discovery run to justify a decision already made is theatre |
+| Tactical bug fixes or technical debt | Nothing — no discovery needed |
+
+**The boundary that matters most:** this skill is a *bounded cycle with an end*.
+`continuous-discovery-engine` is a *standing practice with no end*. A fellow who
+asks to "set up discovery" usually wants the second one. A fellow who asks to
+"figure out why retention dropped" wants this one.
 
 ---
 
 ### Facilitation Source of Truth
 
-When running this workflow as a guided conversation, use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the interaction protocol.
+When running this workflow as a guided conversation, use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the interaction protocol.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -494,7 +507,6 @@ Mini example excerpt:
 
 ### Dean's Work
 - Productside Blueprint — Strategic discovery process
-- [If Dean has discovery resources, link here]
 
 ---
 
@@ -502,3 +514,9 @@ Mini example excerpt:
 **Suggested filename:** `discovery-process.md`
 **Suggested placement:** `/skills/workflows/`
 **Dependencies:** Orchestrates 10+ component and interactive skills across 6 phases
+
+---
+
+*Adapted from [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts)
+— discovery phase sequence and decision points. Sibling routing and the
+bounded-cycle vs standing-practice boundary added by the studio.*

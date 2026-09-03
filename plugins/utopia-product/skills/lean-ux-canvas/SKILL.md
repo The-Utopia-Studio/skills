@@ -128,7 +128,7 @@ Use the template: "We believe [business outcome] will be achieved if [user] atta
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)

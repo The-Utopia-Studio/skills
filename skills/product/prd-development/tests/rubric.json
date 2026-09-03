@@ -1,0 +1,43 @@
+{
+  "skill": "prd-development",
+  "pass_threshold": 21,
+  "max": 25,
+  "min_per_dimension": 4,
+  "dimensions": [
+    {
+      "id": "method_fidelity",
+      "weight": 5,
+      "desc": "Follows the Icarus method exactly; no steps skipped or softened."
+    },
+    {
+      "id": "artifact_complete",
+      "weight": 5,
+      "desc": "Produces the named artifact, fully filled, with the required numbers and citations."
+    },
+    {
+      "id": "proprietary_edge",
+      "weight": 5,
+      "desc": "Could NOT have come from a generic prompt. Uses first-principles / evidence-ladder / eval logic."
+    },
+    {
+      "id": "challenge",
+      "weight": 5,
+      "desc": "Pushes back on weak input; names gaps, kill criteria, and what would change the view."
+    },
+    {
+      "id": "evidence_standard",
+      "weight": 5,
+      "desc": "Phase 2 does not close without evidence \u2014 customer quotes, data, or research. Where the fellow has none, the phase is named as blocked rather than filled, and downstream sections resting on it are marked as resting on it. Stated intent is never recorded as measured behaviour.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
+    }
+  ],
+  "auto_fail": [
+    "Fabricated a specific number, quote, or citation not in the input",
+    "Flattered a weak idea instead of challenging it",
+    "Fired outside its trigger scope / poached a sibling skill",
+    "Output is generic PM boilerplate",
+    "Ran the 8 phases as a single-response document generator instead of a facilitated workflow",
+    "Directed the fellow to a skill that does not exist in this marketplace"
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
+}

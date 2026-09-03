@@ -1,6 +1,6 @@
 ---
 name: discovery-interview-prep
-description: Plan customer discovery interviews with the right goal, segment, constraints, and method. Use when preparing interviews for problem validation, churn research, or new product ideas.
+description: Decides the research *plan* before any questions get written — the one learning goal, which segment and how many, the constraints on access, and which interview method fits. Fires on "who should we interview and how many", "what method should we use for this research", "we only get 5 customer calls, how do we spend them", "plan the churn interviews". Returns an interview plan: goal, segment and sample, method choice with the reason, recruiting approach, and the biases this design is exposed to. Do NOT fire when the plan already exists and the fellow needs the actual question script (use `interview-script` — that writes the Mom-Test questions); when the job is to watch an expert work rather than ask them questions (use `tacit-knowledge-interview`); or when the fellow needs the whole discovery cycle facilitated, not just the research design (use `discovery-process`).
 intent: >-
   Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effective interview plans, craft targeted questions, avoid common biases, and maximize learning from limited customer access—ensuring discovery interviews yield actionable insights rather than confirmation bias or surface-level feedback.
 type: interactive
@@ -51,15 +51,30 @@ An interactive process that:
 - Preparing for customer development sprints
 
 ### When NOT to Use This
-- User testing a prototype (use usability testing frameworks instead)
-- Quantitative research at scale (use surveys, analytics)
-- When you already know the problem (move to solution validation)
+
+| Situation | Go here instead |
+|---|---|
+| The plan is set; you need the actual questions to ask | `interview-script` |
+| You have a transcript and need it synthesised | `summarize-interview` |
+| The expert cannot articulate the judgment — you need to watch them work | `tacit-knowledge-interview` |
+| The product is live and behaviour is already recorded | `trace-to-interview` |
+| The whole discovery cycle needs facilitating | `discovery-process` |
+| User testing a prototype | `usability-test-protocol` |
+| Quantitative research at scale | Nothing — use surveys and analytics |
+| You already know the problem | Nothing — move to solution validation |
+
+**The `interview-script` boundary is the one that gets crossed.** This skill
+decides *who, how many, and by what method*. `interview-script` decides *what
+comes out of your mouth in the room*. A fellow who says "help me prepare for
+these interviews" could mean either — ask which they are missing. Producing a
+question script here, or a sampling plan there, means the fellow gets half of
+each and neither is checkable.
 
 ---
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -408,3 +423,9 @@ You'll know these interviews are successful if:
 **Suggested filename:** `discovery-interview-prep.md`
 **Suggested placement:** `/skills/interactive/`
 **Dependencies:** Uses `problem-statement.md`, `proto-persona.md`, `jobs-to-be-done.md`
+
+---
+
+*Adapted from [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts)
+— research-design question set. The `interview-script` boundary and the
+sibling routing table added by the studio.*

@@ -78,7 +78,7 @@ Roadmap planning is the process of:
 
 ### Facilitation Source of Truth
 
-When running this workflow as a guided conversation, use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the interaction protocol.
+When running this workflow as a guided conversation, use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the interaction protocol.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -493,9 +493,6 @@ Later: Mobile workflows (DAU lift)
 - Bruce McCarthy, *Product Roadmaps Relaunched* (2017) — Outcome-driven roadmaps
 - C. Todd Lombardo, *Product Roadmaps Relaunched* (2017) — Now/Next/Later framework
 - Intercom, "RICE Prioritization" (2016) — Prioritization framework
-
-### Dean's Work
-- [If Dean has roadmap planning resources, link here]
 
 ---
 

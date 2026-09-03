@@ -64,7 +64,7 @@ Opportunity  Opportunity  Opportunity (3)
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -410,7 +410,6 @@ Mini example excerpt:
 
 ### Dean's Work
 - Productside Blueprint — Strategic product discovery process
-- [If Dean has OST resources, link here]
 
 ---
 

@@ -67,7 +67,7 @@ Details/Acceptance Criteria (at the bottom)
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -462,9 +462,6 @@ UI Layer → API Layer → Database Layer → Deployment
 ### External Frameworks
 - Jeff Patton, *User Story Mapping* (2014) — Origin of story mapping framework
 - Jeff Patton, "The New User Story Backlog is a Map" (blog) — Explains backbone concept
-
-### Dean's Work
-- [If Dean has story mapping resources, link here]
 
 ### Provenance
 - Derived from `skills/user-story/SKILL.md`, `skills/user-story-splitting/SKILL.md`, and `skills/user-story-mapping/SKILL.md`.

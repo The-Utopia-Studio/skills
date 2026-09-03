@@ -1,6 +1,6 @@
 ---
 name: prd-development
-description: Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a major initiative.
+description: Facilitates a PRD into existence over 8 phases and 2-4 days, orchestrating other skills for each section — for a major initiative where the content does not exist yet. Fires on "run us through building the PRD", "we finished discovery, turn it into a PRD my engineers can act on", "facilitate the PRD for this initiative", "we have scattered notes and Slack threads and need one source of truth". Returns the filled `template.md` — 10 sections from executive summary to open questions, each with the phase outputs behind it. Do NOT fire when the fellow wants a document drafted now from material they already have (use `create-prd` — one pass, no facilitation); when a 1-2 page go/no-go spec is what is needed (use `one-pager-prd`); or when the problem is still unframed (use `problem-statement` first). This is a multi-day facilitated workflow — do not run it as a single-response document generator.
 intent: >-
   Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
 type: workflow
@@ -105,15 +105,27 @@ A PRD (Product Requirements Document) is a structured document that answers:
 - Onboarding new team members to a project
 
 ### When NOT to Use This
-- For small bug fixes or trivial features (overkill)
-- When problem and solution are already clear and aligned (just write user stories)
-- For continuous discovery experiments (use Lean UX Canvas instead)
+
+| Situation | Go here instead |
+|---|---|
+| The fellow already has the research and wants the document drafted now | `create-prd` (one pass over an 8-section template) |
+| A 1-2 page spec to get a go/no-go | `one-pager-prd` |
+| The problem is not yet framed | `problem-statement` |
+| The team does not yet know what to build | `discovery-process` |
+| Continuous discovery experiments | `lean-ux-canvas` |
+| Small bug fixes or trivial features | Nothing — this is overkill; write the ticket |
+| Problem and solution already clear and aligned | Nothing — write user stories (`user-story`) |
+
+**The most common misfire is the first row.** This skill costs the fellow 2-4
+days of facilitated sessions. If they have the material and want it structured,
+that is `create-prd` and it costs one pass. Check which one they are asking for
+before opening Phase 1.
 
 ---
 
 ### Facilitation Source of Truth
 
-When running this workflow as a guided conversation, use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the interaction protocol.
+When running this workflow as a guided conversation, use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the interaction protocol.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -188,10 +200,12 @@ Non-technical small business owners (solopreneurs, 1-10 employees) who sign up f
 ```
 
 **2. Add Supporting Context (Optional)**
-- **Customer journey map:** If problem spans multiple touchpoints
-- **Use:** `skills/customer-journey-mapping-workshop/SKILL.md` output
+- **Customer journey map:** If the problem spans multiple touchpoints. No
+  journey-mapping skill exists in this marketplace — sketch the touchpoints
+  inline from Phase 2 evidence, or record the journey map as a named gap. Do
+  not tell the fellow to run a skill that is not installed.
 - **Jobs-to-be-done:** If motivations are key
-- **Use:** `skills/jobs-to-be-done/SKILL.md` output
+- **Use:** [`jobs-to-be-done`](../jobs-to-be-done/SKILL.md) output
 
 ### Outputs from Phase 2
 
@@ -382,7 +396,11 @@ We're building a **guided onboarding checklist** that walks new users through co
 ### Activities
 
 **1. Write Epic Hypothesis**
-- **Use:** `skills/epic-hypothesis/SKILL.md` (component)
+- **Use:** written inline against `template.md` — no `epic-hypothesis` skill
+  exists in this marketplace. The hypothesis must name the measured baseline it
+  moves from, the target, the mechanism, and the metric and window it is judged
+  on. If the baseline is not measured, tag it `[Assumption]` in the PRD rather
+  than stating it flat.
 - **Participants:** PM
 - **Duration:** 30 minutes
 - **Output:** Epic hypothesis statement
@@ -391,7 +409,11 @@ We're building a **guided onboarding checklist** that walks new users through co
 > "We believe that adding a guided onboarding checklist for non-technical users will increase activation rate from 40% to 60% because users currently drop off due to lack of guidance. We'll measure success by activation rate 30 days post-launch."
 
 **2. Break Down Epic into User Stories**
-- **Use:** `skills/epic-breakdown-advisor/SKILL.md` (interactive - with Richard Lawrence's 9 patterns)
+- **Use:** [`user-story`](../user-story/SKILL.md) to write them, then
+  [`user-story-splitting`](../user-story-splitting/SKILL.md) for any story too
+  big for one sprint. (Earlier versions pointed at an `epic-breakdown-advisor`
+  skill carrying Richard Lawrence's 9 splitting patterns; that skill does not
+  exist here — `user-story-splitting` is the installed equivalent.)
 - **Participants:** PM, design, engineering
 - **Duration:** 90 minutes
 - **Output:** User stories split by patterns (workflow, CRUD, business rules, etc.)
@@ -531,12 +553,12 @@ Day 1:
 
 Day 2:
 ├─ Phase 5: Solution Overview (60 min)
-│  └─ Use: skills/user-story-mapping-workshop/SKILL.md (optional)
+│  └─ Use: skills/product/user-story-mapping-workshop/SKILL.md (optional)
 ├─ Phase 6: Success Metrics (30 min)
 └─ Phase 7: User Stories & Requirements (90-120 min)
-   ├─ Use: skills/epic-hypothesis/SKILL.md
-   ├─ Use: skills/epic-breakdown-advisor/SKILL.md
-   └─ Use: skills/user-story/SKILL.md
+   ├─ Epic hypothesis: written inline (no skill installed)
+   ├─ Use: skills/product/user-story-splitting/SKILL.md
+   └─ Use: skills/product/user-story/SKILL.md
 
 Day 3:
 ├─ Phase 8: Out of Scope & Dependencies (30 min)
@@ -619,37 +641,42 @@ Mini example excerpt:
 
 ### Related Skills (Orchestrated by This Workflow)
 
-**Phase 2:**
-- `skills/problem-statement/SKILL.md` (component)
-- `skills/problem-framing-canvas/SKILL.md` (interactive, for context)
-- `skills/customer-journey-mapping-workshop/SKILL.md` (interactive, optional)
+Every path below resolves in this marketplace. If you reach for a skill that is
+not on this list, check it exists before telling the fellow to run it.
 
-**Phase 3:**
-- `skills/proto-persona/SKILL.md` (component)
-- `skills/jobs-to-be-done/SKILL.md` (component, optional)
+| Phase | Skill | Role |
+|---|---|---|
+| 2 | [`problem-statement`](../problem-statement/SKILL.md) | component |
+| 2 | [`problem-framing-canvas`](../problem-framing-canvas/SKILL.md) | interactive, for context |
+| 3 | [`proto-persona`](../proto-persona/SKILL.md) | component |
+| 3 | [`jobs-to-be-done`](../jobs-to-be-done/SKILL.md) | component, optional |
+| 4 | [`tam-sam-som-calculator`](../../founder-productivity/tam-sam-som-calculator/SKILL.md) | interactive, optional |
+| 5 | [`user-story-mapping-workshop`](../user-story-mapping-workshop/SKILL.md) | interactive, optional |
+| 7 | [`user-story`](../user-story/SKILL.md) | component |
+| 7 | [`user-story-splitting`](../user-story-splitting/SKILL.md) | component, for oversized stories |
+| all | [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) | interaction protocol |
 
-**Phase 4:**
-- `skills/tam-sam-som-calculator/SKILL.md` (interactive, optional)
-
-**Phase 5:**
-- `skills/user-story-mapping-workshop/SKILL.md` (interactive, optional)
-
-**Phase 7:**
-- `skills/epic-hypothesis/SKILL.md` (component)
-- `skills/epic-breakdown-advisor/SKILL.md` (interactive)
-- `skills/user-story/SKILL.md` (component)
+**Phase 7 has no epic-decomposition skill in this marketplace.** Earlier versions
+of this file pointed at `epic-hypothesis` and `epic-breakdown-advisor`; neither
+exists here. Run Phase 7 with `user-story` plus `user-story-splitting` and write
+the epic hypothesis inline against the template. Phase 2 likewise pointed at
+`customer-journey-mapping-workshop`, which does not exist — use
+`problem-framing-canvas` for that context, or say the journey map is a gap.
 
 ### External Frameworks
 - Martin Eriksson, "How to Write a Good PRD" (2012) — PRD structure
 - Marty Cagan, *Inspired* (2017) — Product spec principles
 - Amazon, "Working Backwards" (PR/FAQ format) — Alternative to PRD
 
-### Dean's Work
-- [If Dean has PRD templates, link here]
+---
+
+*Adapted from [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts)
+— PRD phase structure and facilitation sequence. The routing table, the
+existence check on Phase 7, and the `create-prd` boundary were added by the
+studio.*
 
 ---
 
 **Skill type:** Workflow
 **Suggested filename:** `prd-development.md`
-**Suggested placement:** `/skills/workflows/`
-**Dependencies:** Orchestrates 8+ component and interactive skills across 8 phases
+**Dependencies:** Orchestrates 8 component and interactive skills across 8 phases

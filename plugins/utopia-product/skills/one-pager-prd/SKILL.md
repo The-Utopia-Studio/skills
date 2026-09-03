@@ -1,11 +1,25 @@
 ---
 name: one-pager-prd
-description: Creates concise, decision-ready product specifications (one-pagers and PRDs) that align stakeholders on problem, solution, users, success metrics, and constraints. Use when proposing new features/products, documenting product requirements, creating concise specs for stakeholder alignment, pitching initiatives, scoping projects before detailed design, capturing user stories and success metrics, or when user mentions one-pager, PRD, product spec, feature proposal, product requirements, or brief.
+description: Writes a 1-2 page decision-ready spec that gets a go/no-go from a stakeholder, and self-scores it against a rubric before it ships. Fires on "write a one-pager", "I need a short spec to get this approved", "feature proposal", "brief for the exec review", "scope this before we design it". Returns `one-pager-prd.md` — problem with validation, solution at what-not-how altitude, personas, metrics with baselines and targets, explicit in/out of scope, constraints, open questions — plus a self-assessment against `resources/evaluators/rubric_one_pager_prd.json` (ship at average ≥ 3.5). Do NOT fire when the fellow wants the full 8-section long-form document (use `create-prd`); when the PRD has to be built with a team over days because the content does not exist yet (use `prd-development`); or when the problem is not yet framed (use `problem-statement` first).
 ---
 
 # One-Pager PRD
 
-**When NOT to use:** Detailed technical design docs (use ADRs instead), comprehensive product strategy (too high-level for one-pager), user research synthesis (different format), post-launch retrospectives (use postmortem skill).
+**When NOT to use:**
+
+| Situation | Go here instead |
+|---|---|
+| The fellow wants the full 8-section long-form PRD | `create-prd` |
+| The PRD has to be *built* with the team over 2-4 days — the content does not exist yet | `prd-development` |
+| The problem is not yet framed (no clear who/what/why-it-matters) | `problem-statement`, then come back |
+| Synthesising interview transcripts into findings | `summarize-interview` |
+| Deciding what to build at all, before any spec | `discovery-process` |
+
+Also out of scope, with no skill in this marketplace to route to: detailed
+technical design docs, architecture decision records, comprehensive product
+strategy, and post-launch retrospectives. Say so plainly rather than stretching
+the one-pager over them — a one-pager pretending to be an ADR is how a design
+decision gets made without an engineer in the room.
 
 ## Workflow
 
