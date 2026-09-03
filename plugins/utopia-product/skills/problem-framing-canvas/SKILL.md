@@ -81,7 +81,7 @@ The Problem Framing Canvas (MITRE Innovation Toolkit, v3) is a structured framew
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use [`workshop-facilitation`](../../founder-productivity/workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -454,9 +454,6 @@ Mini example excerpt:
 ### External Frameworks
 - MITRE Innovation Toolkit, "Problem Framing Canvas v3" (2021) — Origin of canvas, equity-driven design thinking
 - Stanford d.school, "How Might We" statements — Actionable problem framing
-
-### Dean's Work
-- [If Dean has problem framing resources, link here]
 
 ---
 

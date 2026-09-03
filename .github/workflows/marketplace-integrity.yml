@@ -1,0 +1,140 @@
+name: Marketplace integrity
+
+# CONTRIBUTING.md has always told contributors:
+#
+#   "CI on every PR checks marketplace integrity: packed skills resolve on disk,
+#    SKILL.md frontmatter is valid, eval/rubric JSON parses, and generated
+#    artifacts are in sync (plugins/, docs counts, registry)."
+#
+# No such workflow existed. .github/ contained only copilot-instructions.md, and
+# the only checks running on PRs came from GitHub's default CodeQL setup. That is
+# how `node scripts/validate-marketplace.mjs` came to be broken on main for a
+# whole commit without anyone noticing, and how three references to skills that
+# do not exist shipped inside prd-development.
+#
+# This makes the promise true.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Packed skills resolve on disk, frontmatter is valid, no duplicate skill
+      # names, description length within limits — plus plugins/ in sync.
+      - name: Validate marketplace
+        run: npm run validate
+
+      # Every tests/rubric.json parses and holds the canonical shape. A rubric
+      # that does not parse silently disables a skill's whole eval suite.
+      - name: Validate eval rubrics
+        run: |
+          fail=0
+          while IFS= read -r f; do
+            node -e '
+              const fs = require("fs");
+              const f = process.argv[1];
+              let r;
+              try { r = JSON.parse(fs.readFileSync(f, "utf8")); }
+              catch (e) { console.error(`  ${f}: does not parse — ${e.message}`); process.exit(1); }
+              const errs = [];
+              if (r.max !== 25) errs.push(`max=${r.max}, want 25`);
+              if (r.pass_threshold !== 21) errs.push(`pass_threshold=${r.pass_threshold}, want 21`);
+              if (r.min_per_dimension !== 4) errs.push(`min_per_dimension=${r.min_per_dimension}, want 4`);
+              if (!Array.isArray(r.dimensions) || r.dimensions.length !== 5)
+                errs.push(`${r.dimensions?.length} dimensions, want 5`);
+              if (!Array.isArray(r.auto_fail) || r.auto_fail.length < 4)
+                errs.push(`${r.auto_fail?.length} auto_fail entries, want >= 4`);
+              const want = ["method_fidelity","artifact_complete","proprietary_edge","challenge","evidence_standard"];
+              const got = (r.dimensions || []).map(d => d.id);
+              for (const id of want) if (!got.includes(id)) errs.push(`missing dimension ${id}`);
+              if (errs.length) { console.error(`  ${f}:\n    ` + errs.join("\n    ")); process.exit(1); }
+            ' "$f" || fail=1
+          done < <(find skills -path '*/tests/rubric.json')
+          [ "$fail" -eq 0 ] && echo "✓ all rubrics parse and match the canonical shape"
+          exit "$fail"
+
+      # A suite is only complete at 5 golden + 3 adversarial + rubric + RESULTS.
+      # A half-built suite reads as coverage it does not have.
+      - name: Check eval suite completeness
+        run: |
+          fail=0
+          while IFS= read -r d; do
+            skill=$(basename "$(dirname "$d")")
+            g=$(find "$d/golden" -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
+            a=$(find "$d/adversarial" -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
+            [ -f "$d/rubric.json" ] && r=ok || r=MISSING
+            [ -f "$d/RESULTS.md" ]  && R=ok || R=MISSING
+            if [ "$g" -lt 5 ] || [ "$a" -lt 3 ] || [ "$r" = MISSING ] || [ "$R" = MISSING ]; then
+              echo "  $skill: ${g} golden (want >=5), ${a} adversarial (want >=3), rubric.json=$r, RESULTS.md=$R"
+              fail=1
+            fi
+          done < <(find skills -type d -name tests -not -path '*/scripts/*')
+          [ "$fail" -eq 0 ] && echo "✓ every tests/ directory holds a complete suite"
+          exit "$fail"
+
+      # Every relative reference in a CHANGED SKILL.md must resolve.
+      #
+      # RATCHET, not a repo-wide gate. There is a real backlog this cannot block
+      # on: 49 references point into a `tools/` directory that does not exist in
+      # this repo at all (tools/REGISTRY.md and tools/integrations/*.md, cited by
+      # ~12 GTM and product skills), and 3 more in `hallmark` point into the
+      # upstream repo's own layout. Both need a maintainer decision — was tools/
+      # never built, or does it live somewhere else? — not a scripted fix.
+      #
+      # So: no NEW dangling references, while the backlog is reported and tracked.
+      - name: Check cross-skill references resolve (changed files)
+        run: |
+          base="${{ github.event.pull_request.base.sha }}"
+          if [ -z "$base" ]; then echo "not a PR — backlog report only"; changed=""; else
+            changed=$(git diff --name-only "$base" HEAD -- 'skills/**/SKILL.md' || true)
+          fi
+
+          check() {  # $1 = SKILL.md path; prints each dangling ref
+            local f="$1" d
+            d=$(dirname "$f")
+            grep -o '](\.\.[^)]*)' "$f" 2>/dev/null | sed 's/](\(.*\))/\1/' | sort -u \
+            | while IFS= read -r p; do [ -e "$d/$p" ] || echo "  ${f#skills/} -> $p"; done
+          }
+
+          : > /tmp/new_dangling
+          for f in $changed; do [ -f "$f" ] && check "$f" >> /tmp/new_dangling; done
+
+          : > /tmp/all_dangling
+          while IFS= read -r f; do check "$f" >> /tmp/all_dangling; done \
+            < <(find skills -mindepth 2 -name SKILL.md)
+
+          echo "Backlog across the whole tree: $(wc -l < /tmp/all_dangling | tr -d ' ') dangling reference(s)."
+          echo "  $(grep -c 'tools/' /tmp/all_dangling || true) of them point into the non-existent tools/ tree."
+          echo
+
+          if [ -s /tmp/new_dangling ]; then
+            echo "Dangling references in files changed by this PR:"
+            cat /tmp/new_dangling
+            echo
+            echo "A SKILL.md must not tell a fellow to run something that is not installed."
+            exit 1
+          fi
+          echo "✓ no new dangling references in this PR"
+
+      # Unresolved authoring placeholders must not ship. Six skills carried
+      # "- [If Dean has <topic> resources, link here]" into production, including
+      # one inside a phase instruction a fellow would have been told to follow.
+      # This is repo-wide and blocking: the tree is clean as of this commit.
+      - name: Check for unresolved authoring placeholders
+        run: |
+          if grep -rnE '\[If [A-Z][a-z]+ has |\[link here\]|\[TODO|\[TBD|\[FIXME' skills --include=SKILL.md; then
+            echo
+            echo "^ unresolved authoring placeholder(s) in a shipped SKILL.md"
+            exit 1
+          fi
+          echo "✓ no unresolved authoring placeholders"

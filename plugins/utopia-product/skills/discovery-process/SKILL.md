@@ -507,7 +507,6 @@ Mini example excerpt:
 
 ### Dean's Work
 - Productside Blueprint — Strategic discovery process
-- [If Dean has discovery resources, link here]
 
 ---
 

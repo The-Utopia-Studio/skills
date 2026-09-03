@@ -73,81 +73,126 @@ already documented *one-way* from the Icarus side
 
 ## Blockers found while taking inventory
 
-These are defects in the checkout, not eval gaps. They change what "run every
-skill through evals" can honestly mean.
+### The root cause: there was no CI
 
-1. ~~**The repo's own validator does not run on `main`.**~~ **FIXED.** `node
+CONTRIBUTING.md has always told contributors:
+
+> "CI on every PR checks marketplace integrity: packed skills resolve on disk,
+> `SKILL.md` frontmatter is valid, eval/rubric JSON parses, and generated
+> artifacts are in sync (`plugins/`, docs counts, registry)."
+
+**No such workflow existed.** `.github/` contained only
+`copilot-instructions.md`, and the only checks running on pull requests came
+from GitHub's default CodeQL setup. Every defect below follows from that: with
+nothing checking, a broken validator, three references to non-existent skills,
+and six unresolved authoring placeholders all shipped to `main` and stayed
+there.
+
+`.github/workflows/marketplace-integrity.yml` now makes the promise true —
+`npm run validate`, rubric shape, suite completeness, a cross-reference ratchet,
+and a placeholder gate. All five pass on the current tree.
+
+### Fixed in this pass
+
+1. ~~**The validator did not run on `main`.**~~ `node
    scripts/validate-marketplace.mjs` threw before validating anything:
-   `Error: Duplicate skill name "account-tier-scoring" in
-   skills/gtm/05-bd-partnerships/account-tier-scoring and
-   skills/gtm/account-tier-scoring`. Cause: commit `edc6b9f` ("Reorganize GTM
-   skills into seven sub-modules") copied every flat `skills/gtm/<skill>/` into
-   `skills/gtm/<NN-submodule>/<skill>/` and did not delete the originals.
-   All 84 pairs were byte-identical (`diff -rq` clean), every one was listed in
+   `Error: Duplicate skill name "account-tier-scoring"…`. Commit `edc6b9f`
+   ("Reorganize GTM skills into seven sub-modules") copied every flat
+   `skills/gtm/<skill>/` into `skills/gtm/<NN-submodule>/<skill>/` and did not
+   delete the originals. All 84 pairs were byte-identical, all 84 were listed in
    `scripts/gtm-submodules.json` — which declares the sub-module paths
    *canonical* — and only `growth-strategy` and `company-moc` existed solely in
    a sub-module. The 84 flat directories are deleted; the validator now passes
-   at 350 packed skills, for the first time.
-   `build-packs.sh` also keys `SKILL_PATH_MAP` by directory basename, so for
-   each duplicated pair whichever tree `find` emitted last silently won — that
-   trap is gone with the duplicates.
-2. ~~**`npm run validate` is documented but does not exist.**~~ **FIXED.**
-   CONTRIBUTING.md step 4 says to run it before opening a PR; `package.json`
-   had no `validate` script. It now runs the marketplace validator plus a new
-   pack-sync check.
-2b. **`build-packs.sh` cannot run on a stock macOS.** It uses `declare -A`
-   (bash 4+); macOS ships bash 3.2, so `./build-packs.sh` dies at line 37 with
-   `declare: -A: invalid option` before doing anything. A contributor on a Mac
-   therefore cannot regenerate `plugins/` locally at all. Not fixed — rewriting
-   the build script is out of scope for a QA pass — but
-   `scripts/check-pack-sync.mjs` now answers the question the build script would
-   ("is the generated tree in sync?") using only node, so a PR can at least be
-   verified without installing a newer bash.
-3. **`prd-development` shipped an unresolved authoring placeholder** —
-   `- [If Dean has PRD templates, link here]` at line 648. *Fixed in Pack 1.*
-4. **`prd-development` referenced 3 skills that do not exist** —
+   at 350 packed skills for the first time.
+2. ~~**`npm run validate` documented but nonexistent.**~~ CONTRIBUTING.md step 4
+   told contributors to run it; `package.json` had no such script. Added.
+3. ~~**Six skills shipped the placeholder `- [If Dean has <topic> resources,
+   link here]`.**~~ `prd-development`, `discovery-process`,
+   `problem-framing-canvas`, `opportunity-solution-tree`,
+   `user-story-mapping-workshop`, `roadmap-planning`. All removed, and the CI
+   placeholder gate now blocks the class repo-wide.
+4. ~~**`prd-development` referenced 3 skills that do not exist.**~~
    `customer-journey-mapping-workshop`, `epic-hypothesis`,
-   `epic-breakdown-advisor` — in its Phase 2 and Phase 7 instructions, its
-   References block, and its workflow tree. Its other cross-references used a
-   pre-module `skills/<skill>/SKILL.md` path shape that no longer resolves.
-   *Fixed in Pack 1.*
-5. **`one-pager-prd` routed to two destinations that do not exist** — "use ADRs
-   instead" and "use postmortem skill". *Fixed in Pack 1.*
-6. **`impeccable` points at an attribution file that does not exist** — its
+   `epic-breakdown-advisor` — in its Phase 2 and Phase 7 *activities*, its
+   References block, and its workflow tree. A fellow following the workflow
+   would have been told to run a skill that is not installed. Replaced with what
+   is installed; the absences are now stated so the next editor does not re-add
+   them.
+5. ~~**Ten skills linked `../workshop-facilitation/SKILL.md`,**~~ which resolves
+   inside their own module. It lives in `founder-productivity`. Recomputed with
+   `relpath` and each one verified to resolve. `agent-persona-builder` had the
+   same class of bug on `../../agents/<name>/`.
+6. ~~**`one-pager-prd` routed to two destinations that do not exist**~~ — "use
+   ADRs instead" and "use postmortem skill".
+7. ~~**`summarize-interview` used the upstream author's real name**~~ as the
+   example action-item owner, which would have leaked into fellow-facing
+   interview summaries.
+
+### Still open — needs a maintainer, not a script
+
+8. **49 references point into a `tools/` directory that does not exist** —
+   `tools/REGISTRY.md` and `tools/integrations/*.md`, cited by roughly twelve
+   GTM and product skills (`revops`, `paid-ads`, `ad-creative`,
+   `referral-program`, `email-sequence`, `analytics-tracking`,
+   `churn-prevention`, `sales-enablement`, `launch-strategy`…). Every one of
+   those skills tells a fellow to consult a tool registry that was never
+   committed. Was it never built, or does it live in another repo? That decision
+   is not guessable, which is why the CI reference check ships as a **ratchet**
+   (blocking on files a PR changes, reporting the backlog) rather than a
+   repo-wide gate. 3 further dangling refs are inside `hallmark` and point into
+   the upstream repo's own layout.
+9. **`build-packs.sh` cannot run on a stock macOS.** It uses `declare -A`
+   (bash 4+); macOS ships bash 3.2, so it dies at line 37 before doing anything
+   and `plugins/` cannot be regenerated locally there at all. Not fixed —
+   rewriting the build script is out of scope for a QA pass — but
+   `scripts/check-pack-sync.mjs` answers the question it would ("is the
+   generated tree in sync?") using only node. It caught real drift three
+   separate times during this pass.
+10. **`impeccable` points at an attribution file that does not exist** — its
    frontmatter says `See NOTICE.md for attribution`; there is no `NOTICE.md` in
    the skill directory or the repo.
-7. **`DESIGN_GUIDE.md` links to a `skills/taste/` module that does not exist** —
-   all 7 Taste skills live under `skills/product/`. Same for its Impeccable and
-   Efecto tables.
-8. **5 skills have descriptions over the 1024-character validator limit** —
+11. **`DESIGN_GUIDE.md` links to a `skills/taste/` module that does not
+   exist** — all 7 Taste skills live under `skills/product/`. Same for its
+   Impeccable and Efecto tables.
+12. **5 skills exceed the 1024-character description limit** —
    `deal-velocity-engineer`, `data-rights-clause`, `fellow-level-ladder`,
    `trace-to-interview`, `usability-test-protocol`. Warnings, not errors.
-9. **`discovery-process`'s `best_for` claims a sibling's job** — "Setting up
+   `interview-script` is now at 1011 and has no headroom left.
+13. **`discovery-process`'s `best_for` claims a sibling's job** — "Setting up
    continuous discovery as an ongoing practice" belongs to
    `continuous-discovery-engine`. Not read by the router, so it does not fail
-   Gate 1, but it misleads a human reading the file. Left in place and flagged;
-   it belongs with the other `intent:`/`theme:`/`best_for:` skills from the same
-   upstream.
+   Gate 1, but it misleads a human reading the file. Belongs with the other
+   `intent:`/`theme:`/`best_for:` skills inherited from the same upstream.
 
-## Open question this pass could not settle alone
+## The rubric question, and how it was settled
 
-Four of Pack 1's seven skills (`one-pager-prd`, `prd-development`,
-`discovery-process`, `discovery-interview-prep`) do not use the Icarus
-`[Fact]`/`[Assumption]`/`[Hypothesis]` claim-tagging convention, because all
-four derive from the same two external sources. `rubric.json`'s
-`evidence_standard` dimension is written in Icarus terms and assumes it.
+`rubric.json`'s `evidence_standard` dimension was written in Icarus
+`[Fact]`/`[Assumption]`/`[Hypothesis]` terms. Four of Pack 1's seven skills
+never use that convention, because all four derive from the same two external
+sources. Scoring them against the rubric as written would have measured that
+mismatch four times and reported it as four skill defects.
 
-Scoring those four against the rubric as written would penalise them for a
-convention their own bodies never ask for — measuring the mismatch four times
-and reporting it as four skill defects. **This is a rubric problem, not four
-skill problems, and it should be decided once at pack level before any Gate 2
-is scored.** Either fold the tag convention into those four bodies, or give
-`evidence_standard` a definition a non-Icarus skill can satisfy.
+Settled by splitting the **principle** from the **mechanism**:
 
-`interview-script` and `summarize-interview` are the exceptions and need no
-retrofit: their evidence discipline is question-type and said-vs-inferred
-discipline, which is the right form for their artifacts. `create-prd` had
-tagging added directly, because its artifact is a document full of numbers.
+> *Principle, shared by all seven:* weight money and behaviour over opinion, and
+> make the strength of every claim visible to a reader who was not there.
+>
+> *Mechanism, per skill:* whatever suits that skill's artifact.
+
+| Skill | Mechanism |
+|---|---|
+| `create-prd` | claim-tagging — its artifact is a document full of numbers, so the Icarus form is right and was added to the body |
+| `one-pager-prd` | problem cites validation; every metric carries a baseline **and** a target, leading and lagging both |
+| `prd-development` | Phase 2 does not close without evidence; where there is none the phase is named blocked, not filled |
+| `discovery-process` | conclusions pass the three decision points; a cycle whose DP3 cannot come back negative is named as theatre |
+| `discovery-interview-prep` | states what the sample can and cannot support; names the biases; never assumes a response rate |
+| `interview-script` | question-type discipline — past-tense, specific-instance, no hypothetical survives |
+| `summarize-interview` | said-vs-inferred — every claim traces to a quote, inference marked, ungiven ratings left `-` |
+
+The dimension keeps weight 5 and stays comparable across skills, because the
+standard did not move — only the test for it. Forcing claim-tagging onto an
+interview script or a transcript summary would have added ceremony without
+adding discipline.
 
 ## The first fully scored suite — and it failed
 
