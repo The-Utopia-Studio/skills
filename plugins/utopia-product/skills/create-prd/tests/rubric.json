@@ -27,7 +27,8 @@
     {
       "id": "evidence_standard",
       "weight": 5,
-      "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]."
+      "desc": "Every number in the PRD is tagged [Fact] (measured, source named) / [Assumption] (a stated belief being acted on) / [Hypothesis] (a guess this PRD exists to test). Untagged numbers read as measured and are the failure. Section 7.4 lists the beliefs that would kill the initiative, each with what would show it wrong.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
     }
   ],
   "auto_fail": [
@@ -36,5 +37,6 @@
     "Fired outside its trigger scope / poached a sibling skill",
     "Output is generic PM boilerplate",
     "Filled a template section with plausible content the input did not support, instead of naming the gap"
-  ]
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
 }

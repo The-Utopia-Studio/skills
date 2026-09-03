@@ -120,11 +120,26 @@ coverage honestly is better than a total that hides which half was tested.
 | challenge | yes | 5 named Pitfalls with wrong/right pairs; `When NOT to Use This` routing table led by the most common misfire; golden 03 (committed solution) and golden 04 (workflow too heavy) both push back. |
 | evidence_standard | **partial** | Phase 2 demands evidence — customer quotes, data, research — and Pitfall 2 is "No Evidence in Problem Statement". But like `one-pager-prd`, the body does not use `[Fact]`/`[Assumption]`/`[Hypothesis]` tags; that requirement enters only via the golden cases and the rubric. Same open item as `one-pager-prd`. |
 
-**Open item carried forward (shared with `one-pager-prd`):** the rubric's
-`evidence_standard` dimension is defined in Icarus terms (explicit claim
-tagging) that this skill's body never asks for. Decide whether to fold the tag
-convention in or give the dimension a skill-local definition **before** scoring
-Gate 2, or the score measures the mismatch rather than the skill.
+**Pack-level open item — RESOLVED this pass.** The rubric's
+`evidence_standard` dimension was written in Icarus `[Fact]`/`[Assumption]`/
+`[Hypothesis]` terms, which four of this pack's seven skills never use because
+they derive from external sources. Rather than retrofit the tagging convention
+onto four upstream bodies, the dimension now carries a **shared principle and a
+skill-local mechanism**:
+
+> *Principle (all seven):* weights money and behaviour over opinion, and makes
+> the strength of every claim visible to a reader who was not there.
+> *Mechanism (per skill):* see `evidence_standard.desc` in `rubric.json`.
+
+For this skill the mechanism is: Phase 2 does not close without customer quotes, data, or research. Where the fellow has none, the phase is named as blocked rather than filled, and the sections resting on it are marked as resting on it.
+
+This unblocks Gate 2 scoring. It is the right call and not merely the
+convenient one: claim-tagging is one way to expose evidence strength, not the
+only one, and forcing it onto an interview script or a transcript summary would
+add ceremony without adding discipline. The dimension stays weighted 5 and
+comparable across skills, because the standard did not move — only the test for
+it.
+
 
 **Auto-fail checks (static):** the skill-specific auto-fail *"directed the
 fellow to a skill that does not exist in this marketplace"* **would have fired

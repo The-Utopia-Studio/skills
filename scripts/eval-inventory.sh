@@ -29,8 +29,10 @@ verdict(){ # $1 = tests/RESULTS.md
   local f=$1 runs sc ref
   [ -f "$f" ] || { echo "missing"; return; }
   runs=$(sed -n '/^## Runs/,/^## [^R]/p' "$f")
-  sc=$(grep -o "Rubric score — [0-9]*/25\|PASS — [0-9]*/25" "$f" | head -1 | grep -o "[0-9][0-9]*/25")
+  sc=$(grep -o "Rubric score — [0-9]*/25\|PASS — [0-9]*/25\|PASS [0-9]*/25" "$f" | head -1 | grep -o "[0-9][0-9]*/25")
   ref=""; grep -q "^## Refine run" "$f" && ref=" +refine"
+  # a suite that logged a real FAIL before passing says so — that is the useful signal
+  echo "$runs" | grep -qE "\*\*(FAIL|[0-9]+ PASS / [0-9]+ FAIL)" && ref="$ref after-FAIL"
   if   echo "$runs" | grep -q  "pending judge";     then echo "SEEDED-UNSCORED"
   elif echo "$runs" | grep -q  "SEEDED-UNSCORED";   then
        # cases authored; some gates scored, rubric gates deliberately not

@@ -27,7 +27,8 @@
     {
       "id": "evidence_standard",
       "weight": 5,
-      "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]."
+      "desc": "Phase 2 does not close without evidence \u2014 customer quotes, data, or research. Where the fellow has none, the phase is named as blocked rather than filled, and downstream sections resting on it are marked as resting on it. Stated intent is never recorded as measured behaviour.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
     }
   ],
   "auto_fail": [
@@ -37,5 +38,6 @@
     "Output is generic PM boilerplate",
     "Ran the 8 phases as a single-response document generator instead of a facilitated workflow",
     "Directed the fellow to a skill that does not exist in this marketplace"
-  ]
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
 }

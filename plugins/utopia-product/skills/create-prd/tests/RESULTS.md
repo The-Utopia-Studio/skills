@@ -107,3 +107,13 @@ fabricated data, no flattery, trigger scope is explicit with three sibling
 routes, and the added content is specific rather than boilerplate. The
 skill-specific auto-fail (filling a section the input did not support) is
 enforced in golden 01, 04 and 05.
+
+**Pack-level `evidence_standard` decision (recorded for consistency).** Across
+Pack 1 the dimension now carries a shared principle with a skill-local
+mechanism, because four of the seven skills derive from external sources that do
+not use Icarus claim-tagging. **This skill was the exception in the other
+direction:** its artifact is a document full of numbers, so claim-tagging *is*
+the right mechanism and it was added to the SKILL.md body directly rather than
+localised away. `rubric.json`'s `evidence_standard.desc` states it explicitly so
+a judge is not left inferring which convention applies.
+

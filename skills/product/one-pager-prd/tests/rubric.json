@@ -27,7 +27,8 @@
     {
       "id": "evidence_standard",
       "weight": 5,
-      "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]."
+      "desc": "The problem cites validation (analytics, interviews, support tickets), not assertion. Every metric carries a baseline AND a target, with leading and lagging both present. Where no baseline exists the page says so rather than inventing one. Internal enthusiasm and competitor feature-lists are never presented as user validation.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
     }
   ],
   "auto_fail": [
@@ -37,5 +38,6 @@
     "Output is generic PM boilerplate",
     "Shipped without the rubric self-assessment, or claimed a score it did not compute",
     "Exceeded 2 pages \u2014 length is the artifact's constraint, not a guideline"
-  ]
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
 }

@@ -27,7 +27,8 @@
     {
       "id": "evidence_standard",
       "weight": 5,
-      "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]."
+      "desc": "The plan states what the achieved sample can and cannot support \u2014 recurring reasons yes, frequency and ranking no \u2014 and names the biases the design is exposed to (single-customer, non-response, friendship, self-selection). Response rates and sample sizes are never assumed as if measured. Recruiting access is named as the binding constraint when it is.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
     }
   ],
   "auto_fail": [
@@ -37,5 +38,6 @@
     "Output is generic PM boilerplate",
     "Wrote interview questions instead of the research design (that is interview-script)",
     "Set a sample size without naming the access constraint behind it"
-  ]
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
 }

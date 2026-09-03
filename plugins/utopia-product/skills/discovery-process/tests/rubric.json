@@ -27,7 +27,8 @@
     {
       "id": "evidence_standard",
       "weight": 5,
-      "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]."
+      "desc": "Conclusions pass the three decision points rather than skipping them: DP1 enough context, DP2 saturation actually reached, DP3 experiments actually ran. A cycle whose DP3 cannot come back negative is named as theatre. Founder intuition and synthetic-user output are never substituted for Phase 3 respondents.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
     }
   ],
   "auto_fail": [
@@ -37,5 +38,6 @@
     "Output is generic PM boilerplate",
     "Reached a build/kill decision without passing the three decision points",
     "Ran the cycle to justify a solution the fellow had already committed to"
-  ]
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
 }

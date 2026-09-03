@@ -46,8 +46,9 @@ Reading every `RESULTS.md` Runs table:
 | **SEEDED-UNSCORED** | 23 | Runs table reads `(pending judge)`. Cases authored, never judged. |
 | **GRADUATE-READY (+refine)** | 13 | Six-gate judge run recorded, all executable gates PASS. |
 | **PASS (+refine / 25-25)** | 9 | Rubric-scored run recorded, several with a `Refine run 2` that applied judge fixes back into SKILL.md. |
-| **GATE1-SCORED · G2/3-UNSCORED** | 7 | Pack 1 of this pass. Trigger precision scored (and it failed first — see below); rubric gates deliberately left unscored rather than invented. |
-| **FAIL** | 0 | — |
+| **GATE1-SCORED · G2/3-UNSCORED** | 6 | Pack 1. Trigger precision scored — and it failed first — with rubric gates left unscored rather than invented. |
+| **PASS 24/25 after-FAIL** | 1 | `interview-script`. Fully run and scored: 8 cases, 7 pass, **1 real FAIL** at 20/25, fixed, re-run at 24/25. |
+| **FAIL (unresolved)** | 0 | — |
 
 Before this pass, **22 of 350 skills had ever been scored** — 6.3%. Nothing in
 `gtm`, `investments` or `founder-productivity` has been scored at all.
@@ -148,6 +149,49 @@ retrofit: their evidence discipline is question-type and said-vs-inferred
 discipline, which is the right form for their artifacts. `create-prd` had
 tagging added directly, because its artifact is a document full of numbers.
 
+## The first fully scored suite — and it failed
+
+`interview-script` was run end to end: all 8 cases through
+`./scripts/eval-run.sh`, every produced artifact committed under
+`skills/product/interview-script/tests/runs/2026-09-03/`, four judgment-free
+auto-fails gated by `tests/checks.sh`, then each output scored against
+`rubric.json`.
+
+| | |
+|---|---|
+| Run 1 | **7 pass / 1 FAIL**, mean 22.9, spread 20–25 |
+| The failure | golden 02 (compliments diagnosis) at **20/25** |
+| Run 2, after fix | **24/25 PASS** |
+
+**Why it failed is the useful part.** The golden-02 output was good — it named
+the mechanism, gave ordered fixes, named what would not fix it. It scored 20
+because *the SKILL.md did not instruct any of it*: there was no diagnosis mode
+in the file at all, so `method_fidelity` had no method to be faithful to and
+`artifact_complete` had no named artifact. The behaviour was the model's general
+competence wearing the skill's name. Swap in a weaker model and it disappears,
+with nothing in the file to hold it up. That distinction is what the gate is
+for, and a rubric that cannot draw it is not worth running.
+
+Fixed by adding an explicit **Two modes** gate (write / diagnose) with a 5-step
+diagnose branch, and diagnose-mode trigger phrasings in the description.
+Run 2 scores 24, not 25 — `artifact_complete` stays at 4 because diagnose mode
+still names no deliverable. Recorded as an open item rather than rounded up.
+
+**The run also found two defects in the tests, not the skill.**
+`tests/checks.sh` was wrong on 5 of 8 outputs on its first execution — it
+applied script-shape checks to outputs that correctly contain no script
+(routing, diagnosis, refusal), and failed one case for *quoting* banned
+questions in order to condemn them. And `adversarial/02`'s Fail-if clause
+("keeps any of them in the output") would have failed a correct answer, since
+the passing output quotes each banned question in a was→now rewrite table. Both
+fixed, both recorded in `RESULTS.md`.
+
+**Caveat that belongs on the number:** author and judge were the same agent, so
+22.9 is a self-assessment against a written rubric, not an independent verdict.
+The FAIL is the part worth trusting. A self-scoring pass that finds nothing is
+worth very little — which is the reading to apply to the 22 pre-existing
+suites that all passed first time.
+
 ## Full checklist
 
 `tests` = has the full 5+3+rubric+RESULTS suite. `RESULTS` = the verdict
@@ -220,8 +264,8 @@ recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
 | `expansion-plays` | gtm | — | **no** | missing | unknown |
 | `expansion-retention` | gtm | — | **no** | missing | unknown |
 | `growth-loops` | gtm | — | **no** | missing | found-outside-NO-LINE |
-| `growth-strategy` | gtm | — | **no** | missing | built-inside |
-| `gtm-engineering` | gtm | — | **no** | missing | unknown |
+| `growth-strategy` | gtm | — | **no** | missing | unknown |
+| `gtm-engineering` | gtm | — | **no** | missing | built-inside |
 | `gtm-metrics` | gtm | — | **no** | missing | unknown |
 | `gtm-motions` | gtm | — | **no** | missing | found-outside-NO-LINE |
 | `gtm-strategy` | gtm | — | **no** | missing | found-outside-NO-LINE |
@@ -231,7 +275,7 @@ recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
 | `lead-enrichment` | gtm | — | **no** | missing | unknown |
 | `lead-magnets` | gtm | — | **no** | missing | unknown |
 | `lead-qualification` | gtm | — | **no** | missing | unknown |
-| `manifesto` | gtm | — | **no** | missing | built-inside |
+| `manifesto` | gtm | — | **no** | missing | unknown |
 | `marketing-ideas` | gtm | — | **no** | missing | unknown |
 | `marketing-psychology` | gtm | — | **no** | missing | unknown |
 | `meddic-checklist` | gtm | — | **no** | missing | unknown |
@@ -320,8 +364,8 @@ recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
 | `macro-rates-monitor` | investments | — | **no** | missing | unknown |
 | `option-vol-analysis` | investments | — | **no** | missing | unknown |
 | `pct-application` | investments | — | **no** | missing | unknown |
-| `pitch-deck` | investments | — | **no** | missing | built-inside |
-| `pitch-deck-web` | investments | — | **no** | missing | built-inside |
+| `pitch-deck` | investments | — | **no** | missing | unknown |
+| `pitch-deck-web` | investments | — | **no** | missing | unknown |
 | `ppt-template-creator` | investments | — | **no** | missing | unknown |
 | `reference-class-forecasting` | investments | — | **no** | missing | unknown |
 | `relative-valuation-multiples` | investments | — | **no** | missing | unknown |
@@ -329,7 +373,7 @@ recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
 | `scout-mindset-bias-check` | investments | — | **no** | missing | unknown |
 | `swap-curve-strategy` | investments | — | **no** | missing | unknown |
 | `tear-sheet` | investments | — | **no** | missing | unknown |
-| `technical-dd` | investments | — | **no** | missing | built-inside |
+| `technical-dd` | investments | — | **no** | missing | unknown |
 | `valuation-reconciler` | investments | — | **no** | missing | unknown |
 | `variance-strategy-selector` | investments | — | **no** | missing | unknown |
 | `market-skill-ingestion` | meta | — | **no** | missing | found-outside |
@@ -411,7 +455,7 @@ recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
 | `ink` | product | — | **no** | missing | unknown |
 | `integration-linker` | product | — | **no** | missing | unknown |
 | `interface-craft` | product | — | **no** | missing | unknown |
-| `interview-script` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
+| `interview-script` | product | — | yes | PASS 24/25 after-FAIL | found-outside |
 | `invent-by-hand` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `job-in-primitives` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `job-stories` | product | — | **no** | missing | found-outside-NO-LINE |
@@ -427,7 +471,7 @@ recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
 | `monitoring-setup` | product | — | **no** | missing | unknown |
 | `north-star-metric` | product | — | **no** | missing | found-outside-NO-LINE |
 | `null-hypothesis-test` | product | yes | yes | SEEDED-UNSCORED | built-inside |
-| `one-pager-prd` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | built-inside |
+| `one-pager-prd` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | unknown |
 | `opportunity-solution-tree` | product | — | **no** | missing | found-outside-NO-LINE |
 | `optimize` | product | — | **no** | missing | found-outside |
 | `overdrive` | product | — | **no** | missing | found-outside |

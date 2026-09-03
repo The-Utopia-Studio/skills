@@ -27,7 +27,8 @@
     {
       "id": "evidence_standard",
       "weight": 5,
-      "desc": "Weights money and behaviour over opinion; tags claims [Fact]/[Assumption]/[Hypothesis]."
+      "desc": "Said-vs-inferred is separated: every line under Problems and What-They-Like traces to a quote or near-quote, and any summariser inference is marked [inference]. Ratings the participant did not give are '-', never inferred from tone. Willingness-to-pay evidence is graded by kind \u2014 money already spent > stated budget > 'we'd probably pay'. A compliment is never recorded as satisfaction.",
+      "principle": "Weights money and behaviour over opinion, and makes the strength of every claim visible to a reader who was not there. The MECHANISM is skill-local (see desc); the standard is not."
     }
   ],
   "auto_fail": [
@@ -37,5 +38,6 @@
     "Output is generic PM boilerplate",
     "Wrote a line under Problems/What-They-Like that the transcript does not support",
     "Merged several transcripts into one summary instead of summarising each"
-  ]
+  ],
+  "notes": "evidence_standard is defined skill-locally: the principle is shared, the mechanism is whatever suits this skill's artifact. Four of this pack's seven skills derive from external sources that do not use Icarus claim-tagging; scoring them against the tagging convention would measure that mismatch rather than the skill. See tests/RESULTS.md."
 }

@@ -1,6 +1,6 @@
 ---
 name: interview-script
-description: "Writes the actual words you say in the room — a Mom-Test interview script with warm-up, JTBD core exploration, probing techniques, wrap-up, and a note-taking template. Fires on \"write the interview script\", \"what questions should I ask\", \"give me an interview guide for X\", \"I keep getting compliments instead of answers\". Every question is past-tense and behavioural; the script never pitches. Do NOT fire when the fellow has not yet decided who to interview, how many, or by what method (use `discovery-interview-prep` — that is the research design, and this script is worthless without it); when the expert cannot articulate the judgment and must be watched working instead (use `tacit-knowledge-interview`); or when the interview already happened and a transcript needs synthesising (use `summarize-interview`)."
+description: "Writes the actual words you say in the room — a Mom-Test interview script with warm-up, JTBD core exploration, probing techniques, wrap-up, and a note-taking template. Fires on \"write the interview script\", \"what questions should I ask\", \"give me an interview guide for X\" (write mode) and on \"my interviews go well but I learn nothing\", \"they all said it sounds great and nobody signed up\", \"here is my script, something is wrong with it\" (diagnose mode — diagnose the questions, do not silently rewrite). Every question is past-tense and behavioural; the script never pitches. Do NOT fire when the fellow has not yet decided who to interview, how many, or by what method (use `discovery-interview-prep` — that is the research design, and this script is worthless without it); when the expert cannot articulate the judgment and must be watched working instead (use `tacit-knowledge-interview`); or when the interview already happened and a transcript needs synthesising (use `summarize-interview`)."
 ---
 
 ## Customer Interview Script
@@ -22,6 +22,45 @@ A script without a research design behind it is a list of good questions
 pointed at the wrong people. If the fellow cannot say who they are interviewing
 and what decision the research unblocks, say so and route to
 `discovery-interview-prep` first — do not fill the gap by assuming a segment.
+
+## Two modes
+
+**Write mode** (the default) — the fellow needs a script. Run the Instructions
+below.
+
+**Diagnose mode** — the fellow already has a script, or has run interviews and
+something is wrong with what came back. Symptoms that put you here: *"they all
+said it sounds great and then nobody signed up"*, *"my interviews go well but I
+learn nothing"*, *"the questions feel wrong and I can't say why"*, or a pasted
+script.
+
+Do not write a fresh script in diagnose mode. Diagnose, then offer the rewrite.
+
+1. **Name the mechanism, not just the rule.** Almost every case of
+   pleasant-but-useless interviews has the same cause: the idea was described
+   and then a reaction was requested. Once the idea is on the table the
+   respondent's job switches from reporting their life to evaluating a
+   proposal, and evaluating a stranger's proposal politely is what nearly
+   everyone does. The compliments are a fact about manners, not about the
+   product. Say this — "compliments are noise" is the rule, but the fellow needs
+   the cause to fix it themselves next time.
+2. **Go question by question.** For each: is it past-tense? Is it about a
+   specific instance? Does it mention the product? Could it be answered
+   politely? Any question that fails the last two is deleted, not softened — a
+   well-phrased leading question is a more effective leading question.
+3. **Name what is missing, not only what is wrong.** Usually: no disconfirming
+   answer written down, so the interview had no way to come back negative.
+4. **Name what will not fix it.** More interviews, or a different segment. The
+   script is the variable; twenty more calls with the same script return twenty
+   more compliments. Say so plainly — the fellow's instinct will be to blame
+   the sample.
+5. **Point at the strongest signal they are missing.** An existing workaround —
+   a spreadsheet, a mail rule, a recurring calendar block, a person they ping.
+   Someone maintaining one has paid for the problem with their own time. One
+   workaround outweighs ten enthusiastic calls, and no opinion question can
+   surface it.
+
+Then offer to rewrite the script question by question if they paste it.
 
 ### Domain Context
 

@@ -82,11 +82,26 @@ total that hides which half ran.
 | challenge | yes | 5 named Pitfalls (leading questions, saturation, analysis paralysis, discovery-as-one-time); `When NOT to Use This` explicitly excludes pre-committed stakeholders; golden 03 refuses the theatre run and golden 04 refuses an already-validated problem. |
 | evidence_standard | **partial** | DP2 (saturation) and Pitfall 3 are real evidence discipline. But the body has no `[Fact]`/`[Assumption]`/`[Hypothesis]` convention — it enters only through the golden cases and the rubric. Same open item as `one-pager-prd` and `prd-development`. |
 
-**Open item carried forward (third occurrence in this pack):** the rubric's
-`evidence_standard` dimension is written in Icarus claim-tagging terms that
-none of the four upstream-derived skills in this pack use natively. Three of
-seven skills now carry this note. **This is a rubric problem, not three skill
-problems** — decide it once, at the pack level, before scoring Gate 2 anywhere.
+**Pack-level open item — RESOLVED this pass.** The rubric's
+`evidence_standard` dimension was written in Icarus `[Fact]`/`[Assumption]`/
+`[Hypothesis]` terms, which four of this pack's seven skills never use because
+they derive from external sources. Rather than retrofit the tagging convention
+onto four upstream bodies, the dimension now carries a **shared principle and a
+skill-local mechanism**:
+
+> *Principle (all seven):* weights money and behaviour over opinion, and makes
+> the strength of every claim visible to a reader who was not there.
+> *Mechanism (per skill):* see `evidence_standard.desc` in `rubric.json`.
+
+For this skill the mechanism is: conclusions pass the three decision points rather than skipping them, saturation is actually reached before DP2 closes, and a cycle whose DP3 cannot come back negative is named as theatre.
+
+This unblocks Gate 2 scoring. It is the right call and not merely the
+convenient one: claim-tagging is one way to expose evidence strength, not the
+only one, and forcing it onto an interview script or a transcript summary would
+add ceremony without adding discipline. The dimension stays weighted 5 and
+comparable across skills, because the standard did not move — only the test for
+it.
+
 
 **Auto-fail checks (static):** none triggered by the SKILL.md. The
 skill-specific auto-fails — reaching a decision without passing the three

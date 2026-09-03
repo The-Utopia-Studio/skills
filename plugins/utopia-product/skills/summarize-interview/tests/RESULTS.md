@@ -85,13 +85,26 @@ depend on transcript content.
 | challenge | yes | Golden 02 refuses to merge and tests the fellow's "all saying the same thing"; golden 05 records enthusiasm-with-no-workaround as a negative finding; adversarial 02 refuses to filter a summary on a conclusion. |
 | evidence_standard | **yes — natively, after this pass** | Before this pass the body had no evidence discipline beyond "use `-` if unavailable". It now carries a real one appropriate to the artifact: trace-to-what-was-said, mark inferences, grade WTP by what it is, and never record a compliment as satisfaction. Like `interview-script`, this is question/record discipline rather than claim-tagging, and it is the right form here. |
 
-**Note on the pack-level open item:** along with `interview-script`, this skill
-does **not** need the `[Fact]`/`[Assumption]`/`[Hypothesis]` convention
-retrofitted. The relevant distinction for a transcript summary is
-said-vs-inferred, which is now explicit. Two of seven skills in this pack are
-therefore fine as they are; four need the rubric question resolved; one
-(`create-prd`) had tagging added directly because its artifact is a document
-full of numbers.
+**Pack-level open item — RESOLVED this pass.** The rubric's
+`evidence_standard` dimension was written in Icarus `[Fact]`/`[Assumption]`/
+`[Hypothesis]` terms, which four of this pack's seven skills never use because
+they derive from external sources. Rather than retrofit the tagging convention
+onto four upstream bodies, the dimension now carries a **shared principle and a
+skill-local mechanism**:
+
+> *Principle (all seven):* weights money and behaviour over opinion, and makes
+> the strength of every claim visible to a reader who was not there.
+> *Mechanism (per skill):* see `evidence_standard.desc` in `rubric.json`.
+
+For this skill the mechanism is: said-vs-inferred separation — every Problems/What-They-Like line traces to a quote, summariser inference marked `[inference]`, ungiven ratings left as `-`, and WTP graded by kind.
+
+This unblocks Gate 2 scoring. It is the right call and not merely the
+convenient one: claim-tagging is one way to expose evidence strength, not the
+only one, and forcing it onto an interview script or a transcript summary would
+add ceremony without adding discipline. The dimension stays weighted 5 and
+comparable across skills, because the standard did not move — only the test for
+it.
+
 
 **Auto-fail checks (static):** none triggered by the SKILL.md. Both
 skill-specific auto-fails — an unsupported line under Problems/What-They-Like,

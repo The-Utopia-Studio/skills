@@ -73,15 +73,26 @@ mechanically checkable, and both are skill-specific auto-fails in
 | challenge | yes | Red Flags section names solution-looking-for-problem and scope creep; golden 03 refuses invented baselines; golden 04 argues the artifact is not worth its cost; adversarial 02 rejects capability-gap-as-problem. |
 | evidence_standard | **strengthened but upstream-thin** | The skill demands validation ("cite data, not assumptions") and baselines + targets, which is real. It does **not** natively use `[Fact]`/`[Assumption]`/`[Hypothesis]` tags — that requirement enters only through the golden cases (01, 05) and the rubric. A judge should expect tags in outputs and will not find the convention in the SKILL.md body. **This is a known gap left open deliberately** rather than retrofitting the tag convention onto an upstream skill mid-pass; see below. |
 
-**Open item for the next pass (not silently fixed here):** `one-pager-prd` and
-the Icarus evidence-ladder convention disagree. Icarus skills tag every claim
-`[Fact]`/`[Assumption]`/`[Hypothesis]`; this skill inherits a
-validated/not-validated binary from upstream. The rubric's `evidence_standard`
-dimension is written in Icarus terms, so scoring this skill against it will
-penalise it for a convention its own body never asks for. Either the tag
-convention gets folded into the SKILL.md body, or `evidence_standard` needs a
-skill-local definition. **Do not score Gate 2 until that is decided** — the
-result would be noise either way.
+**Pack-level open item — RESOLVED this pass.** The rubric's
+`evidence_standard` dimension was written in Icarus `[Fact]`/`[Assumption]`/
+`[Hypothesis]` terms, which four of this pack's seven skills never use because
+they derive from external sources. Rather than retrofit the tagging convention
+onto four upstream bodies, the dimension now carries a **shared principle and a
+skill-local mechanism**:
+
+> *Principle (all seven):* weights money and behaviour over opinion, and makes
+> the strength of every claim visible to a reader who was not there.
+> *Mechanism (per skill):* see `evidence_standard.desc` in `rubric.json`.
+
+For this skill the mechanism is: the problem cites validation rather than assertion; every metric carries a baseline **and** a target, leading and lagging both; internal enthusiasm and competitor feature-lists are never presented as user validation.
+
+This unblocks Gate 2 scoring. It is the right call and not merely the
+convenient one: claim-tagging is one way to expose evidence strength, not the
+only one, and forcing it onto an interview script or a transcript summary would
+add ceremony without adding discipline. The dimension stays weighted 5 and
+comparable across skills, because the standard did not move — only the test for
+it.
+
 
 **Auto-fail checks (static):** none triggered by the SKILL.md. The two
 skill-specific auto-fails (over 2 pages; missing or claimed-but-uncomputed

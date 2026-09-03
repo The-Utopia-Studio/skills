@@ -80,15 +80,26 @@ multi-turn harness with a simulated fellow.
 | challenge | yes | Anti-Patterns reject sales-demo and survey-at-scale framings; routing table has a destination or an explicit "nothing" per row; golden 04 refuses to call n=3 validation and names friendship bias; adversarial 02 rejects hypothetical WTP. |
 | evidence_standard | **partial** | Bias and sample-size discipline are present and real. No `[Fact]`/`[Assumption]`/`[Hypothesis]` convention in the body — enters only via the golden cases and rubric. **Fourth occurrence of this note in this pack.** |
 
-**Open item — now pack-level and blocking:** four of the seven skills in this
-pack (`one-pager-prd`, `prd-development`, `discovery-process`,
-`discovery-interview-prep`) do not use Icarus claim-tagging natively, because
-all four derive from the same two upstream sources. The rubric's
-`evidence_standard` dimension assumes the convention. **Resolve this once at
-the pack level before any Gate 2 is scored** — either fold the tag convention
-into these four bodies, or give `evidence_standard` a definition that a
-non-Icarus skill can satisfy. Scoring first would measure the mismatch four
-times and call it four skill defects.
+**Pack-level open item — RESOLVED this pass.** The rubric's
+`evidence_standard` dimension was written in Icarus `[Fact]`/`[Assumption]`/
+`[Hypothesis]` terms, which four of this pack's seven skills never use because
+they derive from external sources. Rather than retrofit the tagging convention
+onto four upstream bodies, the dimension now carries a **shared principle and a
+skill-local mechanism**:
+
+> *Principle (all seven):* weights money and behaviour over opinion, and makes
+> the strength of every claim visible to a reader who was not there.
+> *Mechanism (per skill):* see `evidence_standard.desc` in `rubric.json`.
+
+For this skill the mechanism is: the plan states what the achieved sample can and cannot support, names the biases the design is exposed to, and never assumes a response rate or sample size as if measured.
+
+This unblocks Gate 2 scoring. It is the right call and not merely the
+convenient one: claim-tagging is one way to expose evidence strength, not the
+only one, and forcing it onto an interview script or a transcript summary would
+add ceremony without adding discipline. The dimension stays weighted 5 and
+comparable across skills, because the standard did not move — only the test for
+it.
+
 
 **Auto-fail checks (static):** none triggered by the SKILL.md. The
 skill-specific auto-fails — writing questions instead of the design, and
