@@ -31,8 +31,12 @@ verdict(){ # $1 = tests/RESULTS.md
   runs=$(sed -n '/^## Runs/,/^## [^R]/p' "$f")
   sc=$(grep -o "Rubric score — [0-9]*/25\|PASS — [0-9]*/25" "$f" | head -1 | grep -o "[0-9][0-9]*/25")
   ref=""; grep -q "^## Refine run" "$f" && ref=" +refine"
-  if   echo "$runs" | grep -q  "pending judge";  then echo "SEEDED-UNSCORED"
-  elif echo "$runs" | grep -qi "GRADUATE-READY"; then echo "GRADUATE-READY${sc:+ $sc}$ref"
+  if   echo "$runs" | grep -q  "pending judge";     then echo "SEEDED-UNSCORED"
+  elif echo "$runs" | grep -q  "SEEDED-UNSCORED";   then
+       # cases authored; some gates scored, rubric gates deliberately not
+       if echo "$runs" | grep -q "Trigger precision"; then echo "GATE1-SCORED · G2/3-UNSCORED"
+       else echo "SEEDED-UNSCORED"; fi
+  elif echo "$runs" | grep -qi "GRADUATE-READY";    then echo "GRADUATE-READY${sc:+ $sc}$ref"
   else echo "PASS${sc:+ $sc}$ref"; fi
 }
 
@@ -67,14 +71,18 @@ find skills -mindepth 2 -name SKILL.md | sort | while read -r f; do
   elif hasprefix "$n" "$VENDOR_PREFIX" || inlist "$n" "$VENDOR_EXACT"; then cls=unknown-vendor-wrapper
        ev="wraps an external product/CLI; no provenance line"
   else
+    # STRONG internal markers only. "fellow"/"Utopia" are deliberately NOT used:
+    # they appear in studio-authored *edits* (routing tables, gotchas) as readily as
+    # in studio-authored *origins*, so they detect who last touched the file rather
+    # than who wrote the method. Using them mis-classified one-pager-prd as
+    # built-inside the moment a routing table containing the word "fellow" was added.
     mk=""
-    grep -qi "icarus" "$f"        && mk="${mk}Icarus,"
-    grep -q  "CKM" "$f"           && mk="${mk}CKM,"
-    grep -qi "karan\|kmjp" "$f"   && mk="${mk}Karan,"
-    grep -qi "utopia" "$f"        && mk="${mk}Utopia,"
-    grep -qi "fellow" "$f"        && mk="${mk}fellow,"
-    if [ -n "$mk" ]; then cls=built-inside; ev="internal studio marker in SKILL.md: ${mk%,}"
-    else cls=unknown; ev="no provenance line, no internal marker"; fi
+    grep -qi "icarus" "$f"                        && mk="${mk}Icarus,"
+    grep -q  "CKM" "$f"                           && mk="${mk}CKM,"
+    grep -qi "karan\|kmjp\|@kmjp" "$f"            && mk="${mk}Karan,"
+    grep -qi "custom internal\|studio-built" "$f"  && mk="${mk}declared-internal,"
+    if [ -n "$mk" ]; then cls=built-inside; ev="strong internal marker in SKILL.md: ${mk%,}"
+    else cls=unknown; ev="no provenance line, no strong internal marker"; fi
   fi
   printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" \
     "$n" "$d" "$pack" "$cls" "$ev" "$suite" "$ic" "$(verdict "$d/tests/RESULTS.md")"

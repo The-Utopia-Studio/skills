@@ -17,79 +17,134 @@ tests/
 
 | | Count |
 |---|---|
-| Canonical skills (`skills/**/SKILL.md`, duplicates excluded) | **350** |
-| Full suite (5 golden + 3 adversarial + rubric.json + RESULTS.md) | **45** |
+| Canonical skills (`skills/**/SKILL.md`) | **350** |
+| Full suite (5 golden + 3 adversarial + rubric.json + RESULTS.md) | **52** |
 | Partial suite | **0** |
-| No tests at all | **305** |
+| No tests at all | **298** |
 
-Every one of the 45 tested skills is an Icarus skill (`scripts/icarus-skills.json`), and every
-Icarus skill is tested. The two sets match exactly — no Icarus skill is untested, and nothing
-outside Icarus has ever been tested.
+Of the 52 suites, 45 are the Icarus set (`scripts/icarus-skills.json`) — every
+Icarus skill is tested and nothing outside Icarus was tested before this QA pass.
+The other 7 are **Pack 1** of this pass (the PRD + discovery-interview cluster).
 
 ### Missing tests, by pack
 
 | Pack | Skills | Tested | Missing |
 |---|---|---|---|
-| product | 173 | 45 | 128 |
+| product | 173 | 52 | 121 |
 | gtm | 86 | 0 | 86 |
 | investments | 60 | 0 | 60 |
 | founder-productivity | 30 | 0 | 30 |
 | meta | 1 | 0 | 1 |
-| **Total** | **350** | **45** | **305** |
+| **Total** | **350** | **52** | **298** |
 
+## Having a `tests/` directory is not the same as having been run
 
-## The 45 existing suites are mostly unscored
-
-Having a `tests/` directory is not the same as having been run. Reading every `RESULTS.md`
-Runs table:
+Reading every `RESULTS.md` Runs table:
 
 | State | Count | What it means |
 |---|---|---|
-| **SEEDED-UNSCORED** | 23 | Runs table literally reads `\| (pending judge) \| \| \| \|`. Cases authored, never judged. |
-| **GRADUATE-READY** | 13 | Six-gate judge run recorded, all executable gates PASS. |
-| **PASS** | 9 | Rubric-scored run recorded (25/25 or 24/25), several with a `Refine run 2` that applied judge fixes back into SKILL.md. |
+| **SEEDED-UNSCORED** | 23 | Runs table reads `(pending judge)`. Cases authored, never judged. |
+| **GRADUATE-READY (+refine)** | 13 | Six-gate judge run recorded, all executable gates PASS. |
+| **PASS (+refine / 25-25)** | 9 | Rubric-scored run recorded, several with a `Refine run 2` that applied judge fixes back into SKILL.md. |
+| **GATE1-SCORED · G2/3-UNSCORED** | 7 | Pack 1 of this pass. Trigger precision scored (and it failed first — see below); rubric gates deliberately left unscored rather than invented. |
 | **FAIL** | 0 | — |
 
-So of 350 skills, **22 have ever been scored** — 6.3%. Nothing in `gtm`,
-`investments`, or `founder-productivity` has ever been scored at all.
+Before this pass, **22 of 350 skills had ever been scored** — 6.3%. Nothing in
+`gtm`, `investments` or `founder-productivity` has been scored at all.
 
-No suite records a failure. That is worth reading as a warning rather than a
-result: the author and the judge were the same pipeline, and a 22-for-22 pass
-rate on a first pass is the signature of a rubric that is not yet
-discriminating. The three suites whose verdict cell says only "see block below"
+No pre-existing suite records a failure. That is worth reading as a warning
+rather than a result: author and judge were the same pipeline, and 22-for-22 on
+a first pass is the signature of a rubric that is not yet discriminating. The
+three suites whose verdict cell says only "see block below"
 (`evidence-ladder`, `metrics-that-matter`, `paper-sketch-probe`) each carry a
 "Gotchas surfaced" section listing real defects the judge found — including
-`metrics-that-matter`'s example tagging a **fabricated plateau as `[Fact]`** —
-and then a `Refine run 2` that fixed them. Those are the honest runs. They
-should have been scored below 25 before the refine, and the log should show it.
+`metrics-that-matter`'s example tagging a **fabricated plateau as `[Fact]`**,
+since fixed — and then a `Refine run 2`. Those are the honest runs. They should
+have scored below 25 before the refine, and the log should show it.
+
+**Pack 1 records 7 real Gate 1 failures.** All seven skills failed trigger
+precision before their SKILL.md was patched: three PRD skills claiming the same
+trigger phrase with no NOT-clause naming each other, and four
+discovery/interview skills with the same collision. Two of those boundaries were
+already documented *one-way* from the Icarus side
+(`tacit-knowledge-interview` → `interview-script`, `trace-to-interview` →
+`summarize-interview`) and silent on the return path.
+
 ## Blockers found while taking inventory
 
-These are defects in the checkout, not eval gaps. They are listed here because they change what
-"run every skill through evals" can honestly mean.
+These are defects in the checkout, not eval gaps. They change what "run every
+skill through evals" can honestly mean.
 
-1. **84 duplicated GTM skill directories.** Commit `edc6b9f` ("Reorganize GTM skills into seven
-   sub-modules") copied every flat `skills/gtm/<skill>/` into `skills/gtm/<NN-submodule>/<skill>/`
-   but did not delete the originals. All 84 pairs are byte-identical (`diff -rq` clean). Only
-   `growth-strategy` and `company-moc` exist solely in a sub-module.
-   `build-packs.sh` keys `SKILL_PATH_MAP` by directory basename, so for each duplicated pair the
-   copy that `find` happens to emit last silently wins — which of the two identical trees gets
-   packed is filesystem-order-dependent. Harmless while they are identical; a silent divergence
-   trap the moment anyone edits one side. **Delete the 84 flat directories.**
-2. **`prd-development` ships an unresolved authoring placeholder** —
-   `skills/product/prd-development/SKILL.md:648` reads `- [If Dean has PRD templates, link here]`.
-3. **`prd-development` has 3 dangling skill references** — `customer-journey-mapping-workshop`,
-   `epic-hypothesis`, `epic-breakdown-advisor` do not exist anywhere in `skills/`. Its other
-   cross-references use a pre-module `skills/<skill>/SKILL.md` path shape that no longer resolves.
-4. **`impeccable` points at an attribution file that does not exist** — its frontmatter says
-   `See NOTICE.md for attribution`; there is no `NOTICE.md` in the skill directory or the repo.
-5. **`DESIGN_GUIDE.md` links to a `skills/taste/` module that does not exist** — all 7 Taste
-   skills live at `skills/product/`. Same for the Impeccable and Efecto tables.
+1. **The repo's own validator does not run on `main`.** `node
+   scripts/validate-marketplace.mjs` throws before validating anything:
+   `Error: Duplicate skill name "account-tier-scoring" in
+   skills/gtm/05-bd-partnerships/account-tier-scoring and
+   skills/gtm/account-tier-scoring`. Cause: commit `edc6b9f` ("Reorganize GTM
+   skills into seven sub-modules") copied every flat `skills/gtm/<skill>/` into
+   `skills/gtm/<NN-submodule>/<skill>/` and did not delete the originals.
+   All 84 pairs are byte-identical (`diff -rq` clean), every one of the 84 is
+   listed in `scripts/gtm-submodules.json` — which declares the sub-module
+   paths *canonical* — and only `growth-strategy` and `company-moc` exist solely
+   in a sub-module. **Deleting the 84 flat directories clears it**; the
+   validator then passes at 350 packed skills. Verified in a scratch copy, not
+   yet applied here.
+   `build-packs.sh` also keys `SKILL_PATH_MAP` by directory basename, so for
+   each duplicated pair whichever tree `find` emits last silently wins.
+2. **`npm run validate` is documented but does not exist.** CONTRIBUTING.md
+   step 4 says to run it before opening a PR; `package.json` has no `validate`
+   script. The validator has to be invoked as
+   `node scripts/validate-marketplace.mjs`.
+3. **`prd-development` shipped an unresolved authoring placeholder** —
+   `- [If Dean has PRD templates, link here]` at line 648. *Fixed in Pack 1.*
+4. **`prd-development` referenced 3 skills that do not exist** —
+   `customer-journey-mapping-workshop`, `epic-hypothesis`,
+   `epic-breakdown-advisor` — in its Phase 2 and Phase 7 instructions, its
+   References block, and its workflow tree. Its other cross-references used a
+   pre-module `skills/<skill>/SKILL.md` path shape that no longer resolves.
+   *Fixed in Pack 1.*
+5. **`one-pager-prd` routed to two destinations that do not exist** — "use ADRs
+   instead" and "use postmortem skill". *Fixed in Pack 1.*
+6. **`impeccable` points at an attribution file that does not exist** — its
+   frontmatter says `See NOTICE.md for attribution`; there is no `NOTICE.md` in
+   the skill directory or the repo.
+7. **`DESIGN_GUIDE.md` links to a `skills/taste/` module that does not exist** —
+   all 7 Taste skills live under `skills/product/`. Same for its Impeccable and
+   Efecto tables.
+8. **5 skills have descriptions over the 1024-character validator limit** —
+   `deal-velocity-engineer`, `data-rights-clause`, `fellow-level-ladder`,
+   `trace-to-interview`, `usability-test-protocol`. Warnings, not errors.
+9. **`discovery-process`'s `best_for` claims a sibling's job** — "Setting up
+   continuous discovery as an ongoing practice" belongs to
+   `continuous-discovery-engine`. Not read by the router, so it does not fail
+   Gate 1, but it misleads a human reading the file. Left in place and flagged;
+   it belongs with the other `intent:`/`theme:`/`best_for:` skills from the same
+   upstream.
+
+## Open question this pass could not settle alone
+
+Four of Pack 1's seven skills (`one-pager-prd`, `prd-development`,
+`discovery-process`, `discovery-interview-prep`) do not use the Icarus
+`[Fact]`/`[Assumption]`/`[Hypothesis]` claim-tagging convention, because all
+four derive from the same two external sources. `rubric.json`'s
+`evidence_standard` dimension is written in Icarus terms and assumes it.
+
+Scoring those four against the rubric as written would penalise them for a
+convention their own bodies never ask for — measuring the mismatch four times
+and reporting it as four skill defects. **This is a rubric problem, not four
+skill problems, and it should be decided once at pack level before any Gate 2
+is scored.** Either fold the tag convention into those four bodies, or give
+`evidence_standard` a definition a non-Icarus skill can satisfy.
+
+`interview-script` and `summarize-interview` are the exceptions and need no
+retrofit: their evidence discipline is question-type and said-vs-inferred
+discipline, which is the right form for their artifacts. `create-prd` had
+tagging added directly, because its artifact is a document full of numbers.
 
 ## Full checklist
 
-`tests` = has the full 5+3+rubric+RESULTS suite. `RESULTS` = the verdict recorded in
-`tests/RESULTS.md`, or `missing` where there is no suite. `provenance` per
-[PROVENANCE.md](./PROVENANCE.md).
+`tests` = has the full 5+3+rubric+RESULTS suite. `RESULTS` = the verdict
+recorded in `tests/RESULTS.md`, or `missing` where there is no suite.
+`provenance` per [PROVENANCE.md](./PROVENANCE.md).
 
 | Skill | Pack | Icarus | tests | RESULTS | provenance |
 |---|---|---|---|---|---|
@@ -299,7 +354,7 @@ These are defects in the checkout, not eval gaps. They are listed here because t
 | `concierge-probe` | product | yes | yes | GRADUATE-READY +refine | built-inside |
 | `continuous-discovery-engine` | product | yes | yes | GRADUATE-READY +refine | built-inside |
 | `cost-optimizer` | product | — | **no** | missing | unknown |
-| `create-prd` | product | — | **no** | missing | found-outside-NO-LINE |
+| `create-prd` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
 | `critique` | product | — | **no** | missing | found-outside |
 | `current-state-map` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `data-rights-clause` | product | yes | yes | SEEDED-UNSCORED | built-inside |
@@ -311,8 +366,8 @@ These are defects in the checkout, not eval gaps. They are listed here because t
 | `design-taste-frontend` | product | — | **no** | missing | found-outside |
 | `devops-advisor` | product | — | **no** | missing | unknown |
 | `diagram-design` | product | — | **no** | missing | found-outside |
-| `discovery-interview-prep` | product | — | **no** | missing | found-outside-NO-LINE |
-| `discovery-process` | product | — | **no** | missing | found-outside-NO-LINE |
+| `discovery-interview-prep` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
+| `discovery-process` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
 | `distill` | product | — | **no** | missing | found-outside |
 | `efecto-graphic-design` | product | — | **no** | missing | found-outside |
 | `efecto-web-design` | product | — | **no** | missing | found-outside |
@@ -348,7 +403,7 @@ These are defects in the checkout, not eval gaps. They are listed here because t
 | `ink` | product | — | **no** | missing | unknown |
 | `integration-linker` | product | — | **no** | missing | unknown |
 | `interface-craft` | product | — | **no** | missing | unknown |
-| `interview-script` | product | — | **no** | missing | found-outside-NO-LINE |
+| `interview-script` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
 | `invent-by-hand` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `job-in-primitives` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `job-stories` | product | — | **no** | missing | found-outside-NO-LINE |
@@ -357,14 +412,14 @@ These are defects in the checkout, not eval gaps. They are listed here because t
 | `lean-canvas` | product | — | **no** | missing | found-outside-NO-LINE |
 | `lean-ux-canvas` | product | — | **no** | missing | unknown |
 | `metrics-dashboard` | product | — | **no** | missing | found-outside-NO-LINE |
-| `metrics-that-matter` | product | yes | yes | PASS 24/25 +refine | built-inside |
+| `metrics-that-matter` | product | yes | yes | PASS +refine | built-inside |
 | `minimalist-ui` | product | — | **no** | missing | found-outside |
 | `moat-design-canvas` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `monetization-strategy` | product | — | **no** | missing | found-outside-NO-LINE |
 | `monitoring-setup` | product | — | **no** | missing | unknown |
 | `north-star-metric` | product | — | **no** | missing | found-outside-NO-LINE |
 | `null-hypothesis-test` | product | yes | yes | SEEDED-UNSCORED | built-inside |
-| `one-pager-prd` | product | — | **no** | missing | unknown |
+| `one-pager-prd` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | built-inside |
 | `opportunity-solution-tree` | product | — | **no** | missing | found-outside-NO-LINE |
 | `optimize` | product | — | **no** | missing | found-outside |
 | `overdrive` | product | — | **no** | missing | found-outside |
@@ -373,7 +428,7 @@ These are defects in the checkout, not eval gaps. They are listed here because t
 | `pilot-six-term-sheet` | product | yes | yes | GRADUATE-READY +refine | built-inside |
 | `platform-vs-venture` | product | yes | yes | PASS +refine | built-inside |
 | `polish` | product | — | **no** | missing | found-outside |
-| `prd-development` | product | — | **no** | missing | found-outside-NO-LINE |
+| `prd-development` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
 | `pricing-strategy` | product | — | **no** | missing | unknown |
 | `probe-matrix` | product | yes | yes | GRADUATE-READY +refine | built-inside |
 | `problem-framing-canvas` | product | — | **no** | missing | found-outside-NO-LINE |
@@ -414,7 +469,7 @@ These are defects in the checkout, not eval gaps. They are listed here because t
 | `sql-queries` | product | — | **no** | missing | found-outside-NO-LINE |
 | `startup-canvas` | product | — | **no** | missing | found-outside-NO-LINE |
 | `stitch-design-taste` | product | — | **no** | missing | found-outside |
-| `summarize-interview` | product | — | **no** | missing | found-outside-NO-LINE |
+| `summarize-interview` | product | — | yes | GATE1-SCORED · G2/3-UNSCORED | found-outside |
 | `synthetic-users` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `tacit-knowledge-interview` | product | yes | yes | SEEDED-UNSCORED | built-inside |
 | `tdd-red-green-refactor` | product | — | **no** | missing | unknown |

@@ -1,76 +1,111 @@
 # Provenance — found from outside vs built from inside
 
-Generated 2026-09-03 from this checkout (`./scripts/eval-inventory.sh`). **This is provenance, not
-[SKILL_TAXONOMY](./SKILL_TAXONOMY.md) modules.** A skill's module (GTM / Product / Investments /
-Founder Productivity) says what job it does. Its provenance says who wrote the method.
+Generated 2026-09-03 from this checkout (`./scripts/eval-inventory.sh`).
+**This is provenance, not [SKILL_TAXONOMY](./SKILL_TAXONOMY.md) modules.** A skill's
+module (GTM / Product / Investments / Founder Productivity) says what job it does.
+Its provenance says who wrote the method.
 
 ## Classification rules
 
-A skill is only classified on evidence found in this checkout. Nothing here is inferred from
-the skill's name, topic, or vibe.
+A skill is classified only on evidence found in this checkout. Nothing here is
+inferred from a skill's name, topic, or subject matter.
 
 | Class | Count | Evidence required |
 |---|---|---|
-| `built-inside` | **63** | Listed in `scripts/icarus-skills.json`; or named "custom internal" in the DESIGN_GUIDE Sources & credits table; or an explicit studio marker (Icarus / CKM / Karan / Utopia / fellow) in the body |
-| `found-outside` | **56** | A compliant `Adapted from <url>` / `Attribution:` line in `SKILL.md`; or a `license:` field naming an upstream; or a row in the DESIGN_GUIDE Sources & credits table |
-| `found-outside-NO-LINE` | **39** | The body names an external author or source, but there is **no compliant provenance line**. Documented external origin, undocumented per CONTRIBUTING.md |
+| `built-inside` | **59** | Listed in `scripts/icarus-skills.json`; or named "custom internal" in the DESIGN_GUIDE Sources & credits table; or a **strong** internal authorship marker in the body (Icarus, CKM, Karan/@kmjp, an explicit "custom internal") |
+| `found-outside` | **62** | A compliant `Adapted from <url>` / `Attribution:` line in `SKILL.md`; or a `license:` field naming an upstream; or a row in the DESIGN_GUIDE Sources & credits table |
+| `found-outside-NO-LINE` | **33** | The body names an external author or source, but there is **no compliant provenance line**. Documented external origin, undocumented per CONTRIBUTING.md |
 | `unknown-vendor-wrapper` | **34** | Wraps a named external product or CLI (Railway, Vercel, Hugging Face, Clerk, Obsidian…). Almost certainly distilled from vendor docs, but **nothing in the repo says so** — so not classified |
-| `unknown` | **158** | No provenance line and no internal marker. **Not guessed.** |
+| `unknown` | **162** | No provenance line and no strong internal marker. **Not guessed.** |
 
-Totals: **95 outside · 63 inside · 192 unclassified** of 350.
+Totals: **95 outside · 59 inside · 196 unclassified** of 350.
+
+### Why "fellow" and "Utopia" are not accepted as evidence
+
+An earlier version of this classifier counted the words *fellow* and *Utopia*
+in a body as internal-authorship markers. It mis-classified `one-pager-prd` as
+`built-inside` the moment this QA pass added a routing table containing the
+phrase "the fellow wants…".
+
+Those words detect **who last edited the file**, not who wrote the method. Any
+studio edit — a routing table, a gotcha, a worked example — introduces them.
+Since this QA programme will edit most of the catalog, the heuristic would have
+converted the whole marketplace to "built-inside" one patch at a time. Only
+strong authorship markers count now, and the remainder stays `unknown` rather
+than being flattered into `built-inside`.
 
 ## The headline
 
-**The unclassified bucket is the finding.** 192 of 350 skills — 55% — carry no
+**The unclassified bucket is the finding.** 196 of 350 skills — 56% — carry no
 provenance statement of any kind. CONTRIBUTING.md's provenance convention
 (`Adapted from <source-url>` in the body, `supersedes:` in frontmatter) is
-written down and is followed by 56 skills. It is not enforced, so it does not
+written down and followed by 62 skills. It is not enforced, so it does not
 hold for the rest.
 
-Two clusters can be dated by internal evidence even though they carry no line:
+Two external clusters can be dated from internal evidence despite carrying no line:
 
 - **`deanpeters/product-manager-prompts`** — 9 skills carry a compliant
-  `Adapted from \`prompts/<file>.md\`` line. A further **9** reference "Dean's
-  Work" or Dean's templates in the body with no line at all:
-  `prd-development`, `discovery-process`, `discovery-interview-prep`,
+  `Adapted from \`prompts/<file>.md\`` line. A further 9 referenced "Dean's Work"
+  or Dean's templates with no line at all. **Three of those nine were fixed in
+  Pack 1** (`prd-development`, `discovery-process`,
+  `discovery-interview-prep`). The **six** still undocumented:
   `roadmap-planning`, `opportunity-solution-tree`, `problem-framing-canvas`,
   `user-story-mapping-workshop`, `founder-productivity/tam-sam-som-calculator`,
-  `gtm/01-growth-strategy/positioning-workshop`. Same source, half-documented —
-  and the undocumented half is *more* than the documented half by one.
-  `prd-development` still ships the unresolved authoring placeholder
-  `- [If Dean has PRD templates, link here]` at line 648.
-- **`productcompass.pm` (Paweł Huryn)** — **30** skills cite productcompass.pm
-  in Further Reading, and `summarize-interview` uses "Paweł Huryn" as the
-  literal example action-item owner. **Zero** of the 30 carry a provenance line.
+  `gtm/01-growth-strategy/positioning-workshop`.
+  `prd-development` also shipped the unresolved authoring placeholder
+  `- [If Dean has PRD templates, link here]` — removed in Pack 1.
+- **`productcompass.pm` (Paweł Huryn)** — 30 skills cited productcompass.pm in
+  Further Reading with **zero** provenance lines, and `summarize-interview`
+  used "Paweł Huryn" as the literal example action-item owner — a real person's
+  name that would have leaked into fellow-facing interview summaries. **Three
+  were fixed in Pack 1** (`create-prd`, `interview-script`,
+  `summarize-interview`, the last including the name); 27 remain.
 
 Neither cluster is a policy violation on its own — folding external value in is
-exactly what the ingestion rule asks for. The gap is the one-line record it
-asks for in exchange.
+exactly what the ingestion rule asks for. The gap is the one-line record it asks
+for in exchange.
 
 **One wholesale vendoring is still in the tree.** `skills/product/product-manager-skills/`
-carries the external repo copied in whole — `LICENSE`, `CHANGELOG.md`, `package.json`,
-`VERSION`, `bin/`, `docs/`, `README.md`, `README.zh-CN.md`, `TODOS.md`, `ETHOS.md`,
-`STARTER-PROMPTS.md`, `SKILL.md.tmpl`, and **its own `CONTRIBUTING.md`**.
-This repo's CONTRIBUTING.md names this exact directory as the banned example
-("that is how `skills/product/product-manager-skills/` ended up carrying an entire
-external repo"). It is documented as banned and still present, so the rule currently
+carries the external repo copied in whole — `LICENSE`, `CHANGELOG.md`,
+`package.json`, `VERSION`, `bin/`, `docs/`, `README.md`,
+`README.zh-CN.md`, `TODOS.md`, `ETHOS.md`, `STARTER-PROMPTS.md`,
+`SKILL.md.tmpl`, and **its own `CONTRIBUTING.md`**. This repo's
+CONTRIBUTING.md names this exact directory as its banned example ("that is how
+`skills/product/product-manager-skills/` ended up carrying an entire external
+repo"). It is documented as banned and still present, so the rule currently
 reads as a description of the tree rather than a constraint on it.
+
+## What to do with the unclassified 196
+
+Not a guessing exercise. Three mechanical passes clear most of it:
+
+1. **The 34 vendor wrappers** (`railway-*` ×13, `huggingface-*` ×9,
+   `vercel-*` ×4, `obsidian-*` ×3, plus `hf-cli`, `transformers-js`,
+   `defuddle`, `deploy-to-vercel`, `json-canvas`) each wrap one named
+   external product. Whoever added them knows whether they came from a public
+   skill or from the vendor's docs. One line each, and the Icarus rubric
+   probably should not be applied to them at all — `proprietary_edge` and
+   `evidence_standard` are close to meaningless for a deterministic CLI
+   wrapper.
+2. **The 27 remaining productcompass skills and 6 remaining Dean skills** are
+   already evidenced — verified by grep, listed in the full table below. They
+   just need the line. Mechanical.
+3. **The residue** — mostly `investments` (60 skills: 58 unclassified, 2
+   built-inside, **0 tested**) and `gtm` (86 skills, 0 tested) — needs the
+   person who added them. Do not guess these. `investments` is the largest
+   completely-dark pack in the marketplace on both axes at once.
 
 ## Full table
 
 | Skill | Pack | Classification | Evidence |
 |---|---|---|---|
-| `salim` | founder-productivity | built-inside | internal studio marker in SKILL.md: Karan,Utopia,fellow |
+| `salim` | founder-productivity | built-inside | strong internal marker in SKILL.md: Karan |
 | `brand-narrative-playbook` | gtm | built-inside | DESIGN_GUIDE Sources: custom internal |
 | `business-narrative-builder` | gtm | built-inside | DESIGN_GUIDE Sources: custom internal |
-| `growth-strategy` | gtm | built-inside | internal studio marker in SKILL.md: Utopia,fellow |
-| `kmjp-social` | gtm | built-inside | internal studio marker in SKILL.md: Karan,Utopia |
-| `manifesto` | gtm | built-inside | internal studio marker in SKILL.md: Utopia |
-| `ada` | investments | built-inside | internal studio marker in SKILL.md: Karan,Utopia |
-| `khalil` | investments | built-inside | internal studio marker in SKILL.md: Karan,Utopia |
-| `pitch-deck` | investments | built-inside | internal studio marker in SKILL.md: Utopia |
-| `pitch-deck-web` | investments | built-inside | internal studio marker in SKILL.md: Utopia |
-| `technical-dd` | investments | built-inside | internal studio marker in SKILL.md: Utopia |
+| `gtm-engineering` | gtm | built-inside | strong internal marker in SKILL.md: declared-internal |
+| `kmjp-social` | gtm | built-inside | strong internal marker in SKILL.md: Karan |
+| `ada` | investments | built-inside | strong internal marker in SKILL.md: Karan |
+| `khalil` | investments | built-inside | strong internal marker in SKILL.md: Karan |
 | `agent-concierge-probe` | product | built-inside | scripts/icarus-skills.json (Icarus method skill) |
 | `agent-design` | product | built-inside | scripts/icarus-skills.json (Icarus method skill) |
 | `bottoms-up-quantification` | product | built-inside | scripts/icarus-skills.json (Icarus method skill) |
@@ -146,10 +181,13 @@ reads as a description of the tree rather than a constraint on it.
 | `bolder` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `clarify` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `colorize` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
+| `create-prd` | product | found-outside | SKILL.md: Adapted from [productcompass.pm](https://www.productcompass.pm/p/prd-template) |
 | `critique` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `delight` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `design-taste-frontend` | product | found-outside | DESIGN_GUIDE Sources: Leonxlnx/taste-skill (all 7 Taste skills) |
 | `diagram-design` | product | found-outside | DESIGN_GUIDE Sources: named external repo |
+| `discovery-interview-prep` | product | found-outside | SKILL.md: Adapted from [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts) |
+| `discovery-process` | product | found-outside | SKILL.md: Adapted from [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts) |
 | `distill` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `efecto-graphic-design` | product | found-outside | DESIGN_GUIDE Sources: pablostanley/efecto-plugin (all 3) |
 | `efecto-web-design` | product | found-outside | DESIGN_GUIDE Sources: pablostanley/efecto-plugin (all 3) |
@@ -159,12 +197,14 @@ reads as a description of the tree rather than a constraint on it.
 | `high-end-visual-design` | product | found-outside | DESIGN_GUIDE Sources: Leonxlnx/taste-skill (all 7 Taste skills) |
 | `impeccable` | product | found-outside | frontmatter license: Apache 2.0. Based on Anthropic's frontend-design skill. See NOTICE.md for attribution. |
 | `industrial-brutalist-ui` | product | found-outside | DESIGN_GUIDE Sources: Leonxlnx/taste-skill (all 7 Taste skills) |
+| `interview-script` | product | found-outside | SKILL.md: Adapted from [productcompass.pm](https://www.productcompass.pm/p/interviewing-customers-the-ultimate) |
 | `jobs-to-be-done` | product | found-outside | SKILL.md: Adapted from `prompts/jobs-to-be-done.md` in the `https://github.com/deanpeters/product-manager-prompts` repo. |
 | `layout` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `minimalist-ui` | product | found-outside | DESIGN_GUIDE Sources: Leonxlnx/taste-skill (all 7 Taste skills) |
 | `optimize` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `overdrive` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `polish` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
+| `prd-development` | product | found-outside | SKILL.md: Adapted from [deanpeters/product-manager-prompts](https://github.com/deanpeters/product-manager-prompts) |
 | `problem-statement` | product | found-outside | SKILL.md: Adapted from `prompts/framing-the-problem-statement.md` in the `https://github.com/deanpeters/product-manager-promp |
 | `proto-persona` | product | found-outside | SKILL.md: Adapted from `prompts/proto-persona-profile.md` in the `https://github.com/deanpeters/product-manager-prompts` repo |
 | `quieter` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
@@ -174,6 +214,7 @@ reads as a description of the tree rather than a constraint on it.
 | `saas-revenue-growth-metrics` | product | found-outside | SKILL.md: Adapted from `research/finance/Finance for Product Managers.md` |
 | `shape` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `stitch-design-taste` | product | found-outside | DESIGN_GUIDE Sources: Leonxlnx/taste-skill (all 7 Taste skills) |
+| `summarize-interview` | product | found-outside | SKILL.md: Adapted from [productcompass.pm](https://www.productcompass.pm/p/interviewing-customers-the-ultimate) |
 | `typeset` | product | found-outside | DESIGN_GUIDE Sources: pbakaus/impeccable (17-skill workflow) |
 | `ui-ux-pro-max` | product | found-outside | DESIGN_GUIDE Sources: named external repo |
 | `user-story` | product | found-outside | SKILL.md: Adapted from `prompts/user-story-prompt-template.md` in the `https://github.com/deanpeters/product-manager-prompts` |
@@ -198,184 +239,182 @@ reads as a description of the tree rather than a constraint on it.
 | `ab-test-analysis` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `brainstorm-experiments-new` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `business-model` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
-| `create-prd` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
-| `discovery-interview-prep` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
-| `discovery-process` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
 | `identify-assumptions-existing` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `identify-assumptions-new` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
-| `interview-script` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `job-stories` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `lean-canvas` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `metrics-dashboard` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `monetization-strategy` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `north-star-metric` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `opportunity-solution-tree` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
-| `prd-development` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
 | `problem-framing-canvas` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
 | `roadmap-planning` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
 | `sql-queries` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `startup-canvas` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
-| `summarize-interview` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `user-stories` | product | found-outside-NO-LINE | body cites productcompass.pm (Pawel Huryn); no Adapted-from line |
 | `user-story-mapping-workshop` | product | found-outside-NO-LINE | body cites deanpeters/product-manager-prompts ("Dean's Work"); no Adapted-from line |
-| `agent-prd` | founder-productivity | unknown | no provenance line, no internal marker |
-| `alignment-values-north-star` | founder-productivity | unknown | no provenance line, no internal marker |
-| `draft-nda` | founder-productivity | unknown | no provenance line, no internal marker |
-| `executive-onboarding-playbook` | founder-productivity | unknown | no provenance line, no internal marker |
-| `find-skills` | founder-productivity | unknown | no provenance line, no internal marker |
-| `grammar-check` | founder-productivity | unknown | no provenance line, no internal marker |
-| `last30days` | founder-productivity | unknown | no provenance line, no internal marker |
-| `prioritization` | founder-productivity | unknown | no provenance line, no internal marker |
-| `privacy-policy` | founder-productivity | unknown | no provenance line, no internal marker |
-| `proof` | founder-productivity | unknown | no provenance line, no internal marker |
-| `role-switch` | founder-productivity | unknown | no provenance line, no internal marker |
-| `skillshare` | founder-productivity | unknown | no provenance line, no internal marker |
-| `swot-analysis` | founder-productivity | unknown | no provenance line, no internal marker |
-| `workshop-facilitation` | founder-productivity | unknown | no provenance line, no internal marker |
-| `activation-map` | gtm | unknown | no provenance line, no internal marker |
-| `ad-creative` | gtm | unknown | no provenance line, no internal marker |
-| `ai-cold-outreach` | gtm | unknown | no provenance line, no internal marker |
-| `ai-sdr` | gtm | unknown | no provenance line, no internal marker |
-| `churn-prevention` | gtm | unknown | no provenance line, no internal marker |
-| `cold-email` | gtm | unknown | no provenance line, no internal marker |
-| `cold-email-personalization` | gtm | unknown | no provenance line, no internal marker |
-| `cold-outreach` | gtm | unknown | no provenance line, no internal marker |
-| `company-moc` | gtm | unknown | no provenance line, no internal marker |
-| `content-strategy` | gtm | unknown | no provenance line, no internal marker |
-| `content-to-pipeline` | gtm | unknown | no provenance line, no internal marker |
-| `copy-editing` | gtm | unknown | no provenance line, no internal marker |
-| `copywriting` | gtm | unknown | no provenance line, no internal marker |
-| `customer-research` | gtm | unknown | no provenance line, no internal marker |
-| `deal-desk` | gtm | unknown | no provenance line, no internal marker |
-| `deal-review` | gtm | unknown | no provenance line, no internal marker |
-| `discovery-calls` | gtm | unknown | no provenance line, no internal marker |
-| `email-sequence` | gtm | unknown | no provenance line, no internal marker |
-| `escalation-framework` | gtm | unknown | no provenance line, no internal marker |
-| `expansion-playbook` | gtm | unknown | no provenance line, no internal marker |
-| `expansion-plays` | gtm | unknown | no provenance line, no internal marker |
-| `expansion-retention` | gtm | unknown | no provenance line, no internal marker |
-| `gtm-engineering` | gtm | unknown | no provenance line, no internal marker |
-| `gtm-metrics` | gtm | unknown | no provenance line, no internal marker |
-| `launch-strategy` | gtm | unknown | no provenance line, no internal marker |
-| `lead-enrichment` | gtm | unknown | no provenance line, no internal marker |
-| `lead-magnets` | gtm | unknown | no provenance line, no internal marker |
-| `lead-qualification` | gtm | unknown | no provenance line, no internal marker |
-| `marketing-ideas` | gtm | unknown | no provenance line, no internal marker |
-| `marketing-psychology` | gtm | unknown | no provenance line, no internal marker |
-| `meddic-checklist` | gtm | unknown | no provenance line, no internal marker |
-| `member-insights` | gtm | unknown | no provenance line, no internal marker |
-| `multi-platform-launch` | gtm | unknown | no provenance line, no internal marker |
-| `onboarding-cro` | gtm | unknown | no provenance line, no internal marker |
-| `outbound-plays` | gtm | unknown | no provenance line, no internal marker |
-| `page-cro` | gtm | unknown | no provenance line, no internal marker |
-| `paid-ads` | gtm | unknown | no provenance line, no internal marker |
-| `partner-affiliate` | gtm | unknown | no provenance line, no internal marker |
-| `positioning` | gtm | unknown | no provenance line, no internal marker |
-| `positioning-icp` | gtm | unknown | no provenance line, no internal marker |
-| `pql-framework` | gtm | unknown | no provenance line, no internal marker |
-| `product-marketing-context` | gtm | unknown | no provenance line, no internal marker |
-| `product-name` | gtm | unknown | no provenance line, no internal marker |
-| `referral-program` | gtm | unknown | no provenance line, no internal marker |
-| `renewal-playbooks` | gtm | unknown | no provenance line, no internal marker |
-| `retention-dashboard` | gtm | unknown | no provenance line, no internal marker |
-| `retention-ltv-playbook` | gtm | unknown | no provenance line, no internal marker |
-| `revops` | gtm | unknown | no provenance line, no internal marker |
-| `sales-enablement` | gtm | unknown | no provenance line, no internal marker |
-| `sales-motion-design` | gtm | unknown | no provenance line, no internal marker |
-| `sentiment-analysis` | gtm | unknown | no provenance line, no internal marker |
-| `sentiment-feedback-loop` | gtm | unknown | no provenance line, no internal marker |
-| `signal-scoring` | gtm | unknown | no provenance line, no internal marker |
-| `signup-flow-cro` | gtm | unknown | no provenance line, no internal marker |
-| `social-content` | gtm | unknown | no provenance line, no internal marker |
-| `social-selling` | gtm | unknown | no provenance line, no internal marker |
-| `solo-founder-gtm` | gtm | unknown | no provenance line, no internal marker |
-| `stakeholder-ops` | gtm | unknown | no provenance line, no internal marker |
-| `suppression-logic` | gtm | unknown | no provenance line, no internal marker |
-| `voice-of-customer` | gtm | unknown | no provenance line, no internal marker |
-| `3-statement-model` | investments | unknown | no provenance line, no internal marker |
-| `adverse-selection-prior` | investments | unknown | no provenance line, no internal marker |
-| `auction-first-price-shading` | investments | unknown | no provenance line, no internal marker |
-| `auction-winners-curse-haircut` | investments | unknown | no provenance line, no internal marker |
-| `audit-xls` | investments | unknown | no provenance line, no internal marker |
-| `bayesian-reasoning-calibration` | investments | unknown | no provenance line, no internal marker |
-| `bond-futures-basis` | investments | unknown | no provenance line, no internal marker |
-| `bond-relative-value` | investments | unknown | no provenance line, no internal marker |
-| `capital-structure-optimizer` | investments | unknown | no provenance line, no internal marker |
-| `causal-inference-root-cause` | investments | unknown | no provenance line, no internal marker |
-| `clean-data-xls` | investments | unknown | no provenance line, no internal marker |
-| `competitive-analysis` | investments | unknown | no provenance line, no internal marker |
-| `comps-analysis` | investments | unknown | no provenance line, no internal marker |
-| `cost-of-capital-estimator` | investments | unknown | no provenance line, no internal marker |
-| `datapack-builder` | investments | unknown | no provenance line, no internal marker |
-| `dcf-model` | investments | unknown | no provenance line, no internal marker |
-| `decision-matrix` | investments | unknown | no provenance line, no internal marker |
-| `deck-refresh` | investments | unknown | no provenance line, no internal marker |
-| `deliberation-debate-red-teaming` | investments | unknown | no provenance line, no internal marker |
-| `design-of-experiments` | investments | unknown | no provenance line, no internal marker |
-| `earnings-analysis` | investments | unknown | no provenance line, no internal marker |
-| `earnings-preview-single` | investments | unknown | no provenance line, no internal marker |
-| `environmental-scanning-foresight` | investments | unknown | no provenance line, no internal marker |
-| `epc-search` | investments | unknown | no provenance line, no internal marker |
-| `epo-patent-analyzer` | investments | unknown | no provenance line, no internal marker |
-| `equity-research` | investments | unknown | no provenance line, no internal marker |
-| `estimation-fermi` | investments | unknown | no provenance line, no internal marker |
-| `expected-value` | investments | unknown | no provenance line, no internal marker |
-| `fixed-income-portfolio` | investments | unknown | no provenance line, no internal marker |
-| `forecast-discipline` | investments | unknown | no provenance line, no internal marker |
-| `forecast-modeling` | investments | unknown | no provenance line, no internal marker |
-| `forecast-premortem` | investments | unknown | no provenance line, no internal marker |
-| `fsi-strip-profile` | investments | unknown | no provenance line, no internal marker |
-| `funding-digest` | investments | unknown | no provenance line, no internal marker |
-| `fx-carry-trade` | investments | unknown | no provenance line, no internal marker |
-| `hypothesis-library` | investments | unknown | no provenance line, no internal marker |
-| `hypotheticals-counterfactuals` | investments | unknown | no provenance line, no internal marker |
-| `ib-check-deck` | investments | unknown | no provenance line, no internal marker |
-| `ib-pitch-deck` | investments | unknown | no provenance line, no internal marker |
-| `initiating-coverage` | investments | unknown | no provenance line, no internal marker |
-| `intrinsic-valuation-dcf` | investments | unknown | no provenance line, no internal marker |
-| `kill-criteria-exit-ramps` | investments | unknown | no provenance line, no internal marker |
-| `lbo-model` | investments | unknown | no provenance line, no internal marker |
-| `macro-rates-monitor` | investments | unknown | no provenance line, no internal marker |
-| `option-vol-analysis` | investments | unknown | no provenance line, no internal marker |
-| `pct-application` | investments | unknown | no provenance line, no internal marker |
-| `ppt-template-creator` | investments | unknown | no provenance line, no internal marker |
-| `reference-class-forecasting` | investments | unknown | no provenance line, no internal marker |
-| `relative-valuation-multiples` | investments | unknown | no provenance line, no internal marker |
-| `research-claim-map` | investments | unknown | no provenance line, no internal marker |
-| `scout-mindset-bias-check` | investments | unknown | no provenance line, no internal marker |
-| `swap-curve-strategy` | investments | unknown | no provenance line, no internal marker |
-| `tear-sheet` | investments | unknown | no provenance line, no internal marker |
-| `valuation-reconciler` | investments | unknown | no provenance line, no internal marker |
-| `variance-strategy-selector` | investments | unknown | no provenance line, no internal marker |
-| `agent-dx-cli-scale` | product | unknown | no provenance line, no internal marker |
-| `ai-pricing` | product | unknown | no provenance line, no internal marker |
-| `analytics-tracking` | product | unknown | no provenance line, no internal marker |
-| `code-structure` | product | unknown | no provenance line, no internal marker |
-| `cohort-analysis` | product | unknown | no provenance line, no internal marker |
-| `cost-optimizer` | product | unknown | no provenance line, no internal marker |
-| `deployment-engineer` | product | unknown | no provenance line, no internal marker |
-| `design-critique` | product | unknown | no provenance line, no internal marker |
-| `devops-advisor` | product | unknown | no provenance line, no internal marker |
-| `evidence-driven-testing` | product | unknown | no provenance line, no internal marker |
-| `financial-unit-economics` | product | unknown | no provenance line, no internal marker |
-| `greploop` | product | unknown | no provenance line, no internal marker |
-| `ink` | product | unknown | no provenance line, no internal marker |
-| `integration-linker` | product | unknown | no provenance line, no internal marker |
-| `interface-craft` | product | unknown | no provenance line, no internal marker |
-| `lean-ux-canvas` | product | unknown | no provenance line, no internal marker |
-| `monitoring-setup` | product | unknown | no provenance line, no internal marker |
-| `one-pager-prd` | product | unknown | no provenance line, no internal marker |
-| `pricing-strategy` | product | unknown | no provenance line, no internal marker |
-| `product-manager-skills` | product | unknown | no provenance line, no internal marker |
-| `prompt-engineer` | product | unknown | no provenance line, no internal marker |
-| `prototyping-pretotyping` | product | unknown | no provenance line, no internal marker |
-| `repo-scanner` | product | unknown | no provenance line, no internal marker |
-| `repo-structurer` | product | unknown | no provenance line, no internal marker |
-| `security-auditor` | product | unknown | no provenance line, no internal marker |
-| `tdd-red-green-refactor` | product | unknown | no provenance line, no internal marker |
-| `typed-service-contracts` | product | unknown | no provenance line, no internal marker |
-| `ui-polish` | product | unknown | no provenance line, no internal marker |
-| `web-design-guidelines` | product | unknown | no provenance line, no internal marker |
+| `agent-prd` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `alignment-values-north-star` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `draft-nda` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `executive-onboarding-playbook` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `find-skills` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `grammar-check` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `last30days` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `prioritization` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `privacy-policy` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `proof` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `role-switch` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `skillshare` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `swot-analysis` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `workshop-facilitation` | founder-productivity | unknown | no provenance line, no strong internal marker |
+| `activation-map` | gtm | unknown | no provenance line, no strong internal marker |
+| `ad-creative` | gtm | unknown | no provenance line, no strong internal marker |
+| `ai-cold-outreach` | gtm | unknown | no provenance line, no strong internal marker |
+| `ai-sdr` | gtm | unknown | no provenance line, no strong internal marker |
+| `churn-prevention` | gtm | unknown | no provenance line, no strong internal marker |
+| `cold-email` | gtm | unknown | no provenance line, no strong internal marker |
+| `cold-email-personalization` | gtm | unknown | no provenance line, no strong internal marker |
+| `cold-outreach` | gtm | unknown | no provenance line, no strong internal marker |
+| `company-moc` | gtm | unknown | no provenance line, no strong internal marker |
+| `content-strategy` | gtm | unknown | no provenance line, no strong internal marker |
+| `content-to-pipeline` | gtm | unknown | no provenance line, no strong internal marker |
+| `copy-editing` | gtm | unknown | no provenance line, no strong internal marker |
+| `copywriting` | gtm | unknown | no provenance line, no strong internal marker |
+| `customer-research` | gtm | unknown | no provenance line, no strong internal marker |
+| `deal-desk` | gtm | unknown | no provenance line, no strong internal marker |
+| `deal-review` | gtm | unknown | no provenance line, no strong internal marker |
+| `discovery-calls` | gtm | unknown | no provenance line, no strong internal marker |
+| `email-sequence` | gtm | unknown | no provenance line, no strong internal marker |
+| `escalation-framework` | gtm | unknown | no provenance line, no strong internal marker |
+| `expansion-playbook` | gtm | unknown | no provenance line, no strong internal marker |
+| `expansion-plays` | gtm | unknown | no provenance line, no strong internal marker |
+| `expansion-retention` | gtm | unknown | no provenance line, no strong internal marker |
+| `growth-strategy` | gtm | unknown | no provenance line, no strong internal marker |
+| `gtm-metrics` | gtm | unknown | no provenance line, no strong internal marker |
+| `launch-strategy` | gtm | unknown | no provenance line, no strong internal marker |
+| `lead-enrichment` | gtm | unknown | no provenance line, no strong internal marker |
+| `lead-magnets` | gtm | unknown | no provenance line, no strong internal marker |
+| `lead-qualification` | gtm | unknown | no provenance line, no strong internal marker |
+| `manifesto` | gtm | unknown | no provenance line, no strong internal marker |
+| `marketing-ideas` | gtm | unknown | no provenance line, no strong internal marker |
+| `marketing-psychology` | gtm | unknown | no provenance line, no strong internal marker |
+| `meddic-checklist` | gtm | unknown | no provenance line, no strong internal marker |
+| `member-insights` | gtm | unknown | no provenance line, no strong internal marker |
+| `multi-platform-launch` | gtm | unknown | no provenance line, no strong internal marker |
+| `onboarding-cro` | gtm | unknown | no provenance line, no strong internal marker |
+| `outbound-plays` | gtm | unknown | no provenance line, no strong internal marker |
+| `page-cro` | gtm | unknown | no provenance line, no strong internal marker |
+| `paid-ads` | gtm | unknown | no provenance line, no strong internal marker |
+| `partner-affiliate` | gtm | unknown | no provenance line, no strong internal marker |
+| `positioning` | gtm | unknown | no provenance line, no strong internal marker |
+| `positioning-icp` | gtm | unknown | no provenance line, no strong internal marker |
+| `pql-framework` | gtm | unknown | no provenance line, no strong internal marker |
+| `product-marketing-context` | gtm | unknown | no provenance line, no strong internal marker |
+| `product-name` | gtm | unknown | no provenance line, no strong internal marker |
+| `referral-program` | gtm | unknown | no provenance line, no strong internal marker |
+| `renewal-playbooks` | gtm | unknown | no provenance line, no strong internal marker |
+| `retention-dashboard` | gtm | unknown | no provenance line, no strong internal marker |
+| `retention-ltv-playbook` | gtm | unknown | no provenance line, no strong internal marker |
+| `revops` | gtm | unknown | no provenance line, no strong internal marker |
+| `sales-enablement` | gtm | unknown | no provenance line, no strong internal marker |
+| `sales-motion-design` | gtm | unknown | no provenance line, no strong internal marker |
+| `sentiment-analysis` | gtm | unknown | no provenance line, no strong internal marker |
+| `sentiment-feedback-loop` | gtm | unknown | no provenance line, no strong internal marker |
+| `signal-scoring` | gtm | unknown | no provenance line, no strong internal marker |
+| `signup-flow-cro` | gtm | unknown | no provenance line, no strong internal marker |
+| `social-content` | gtm | unknown | no provenance line, no strong internal marker |
+| `social-selling` | gtm | unknown | no provenance line, no strong internal marker |
+| `solo-founder-gtm` | gtm | unknown | no provenance line, no strong internal marker |
+| `stakeholder-ops` | gtm | unknown | no provenance line, no strong internal marker |
+| `suppression-logic` | gtm | unknown | no provenance line, no strong internal marker |
+| `voice-of-customer` | gtm | unknown | no provenance line, no strong internal marker |
+| `3-statement-model` | investments | unknown | no provenance line, no strong internal marker |
+| `adverse-selection-prior` | investments | unknown | no provenance line, no strong internal marker |
+| `auction-first-price-shading` | investments | unknown | no provenance line, no strong internal marker |
+| `auction-winners-curse-haircut` | investments | unknown | no provenance line, no strong internal marker |
+| `audit-xls` | investments | unknown | no provenance line, no strong internal marker |
+| `bayesian-reasoning-calibration` | investments | unknown | no provenance line, no strong internal marker |
+| `bond-futures-basis` | investments | unknown | no provenance line, no strong internal marker |
+| `bond-relative-value` | investments | unknown | no provenance line, no strong internal marker |
+| `capital-structure-optimizer` | investments | unknown | no provenance line, no strong internal marker |
+| `causal-inference-root-cause` | investments | unknown | no provenance line, no strong internal marker |
+| `clean-data-xls` | investments | unknown | no provenance line, no strong internal marker |
+| `competitive-analysis` | investments | unknown | no provenance line, no strong internal marker |
+| `comps-analysis` | investments | unknown | no provenance line, no strong internal marker |
+| `cost-of-capital-estimator` | investments | unknown | no provenance line, no strong internal marker |
+| `datapack-builder` | investments | unknown | no provenance line, no strong internal marker |
+| `dcf-model` | investments | unknown | no provenance line, no strong internal marker |
+| `decision-matrix` | investments | unknown | no provenance line, no strong internal marker |
+| `deck-refresh` | investments | unknown | no provenance line, no strong internal marker |
+| `deliberation-debate-red-teaming` | investments | unknown | no provenance line, no strong internal marker |
+| `design-of-experiments` | investments | unknown | no provenance line, no strong internal marker |
+| `earnings-analysis` | investments | unknown | no provenance line, no strong internal marker |
+| `earnings-preview-single` | investments | unknown | no provenance line, no strong internal marker |
+| `environmental-scanning-foresight` | investments | unknown | no provenance line, no strong internal marker |
+| `epc-search` | investments | unknown | no provenance line, no strong internal marker |
+| `epo-patent-analyzer` | investments | unknown | no provenance line, no strong internal marker |
+| `equity-research` | investments | unknown | no provenance line, no strong internal marker |
+| `estimation-fermi` | investments | unknown | no provenance line, no strong internal marker |
+| `expected-value` | investments | unknown | no provenance line, no strong internal marker |
+| `fixed-income-portfolio` | investments | unknown | no provenance line, no strong internal marker |
+| `forecast-discipline` | investments | unknown | no provenance line, no strong internal marker |
+| `forecast-modeling` | investments | unknown | no provenance line, no strong internal marker |
+| `forecast-premortem` | investments | unknown | no provenance line, no strong internal marker |
+| `fsi-strip-profile` | investments | unknown | no provenance line, no strong internal marker |
+| `funding-digest` | investments | unknown | no provenance line, no strong internal marker |
+| `fx-carry-trade` | investments | unknown | no provenance line, no strong internal marker |
+| `hypothesis-library` | investments | unknown | no provenance line, no strong internal marker |
+| `hypotheticals-counterfactuals` | investments | unknown | no provenance line, no strong internal marker |
+| `ib-check-deck` | investments | unknown | no provenance line, no strong internal marker |
+| `ib-pitch-deck` | investments | unknown | no provenance line, no strong internal marker |
+| `initiating-coverage` | investments | unknown | no provenance line, no strong internal marker |
+| `intrinsic-valuation-dcf` | investments | unknown | no provenance line, no strong internal marker |
+| `kill-criteria-exit-ramps` | investments | unknown | no provenance line, no strong internal marker |
+| `lbo-model` | investments | unknown | no provenance line, no strong internal marker |
+| `macro-rates-monitor` | investments | unknown | no provenance line, no strong internal marker |
+| `option-vol-analysis` | investments | unknown | no provenance line, no strong internal marker |
+| `pct-application` | investments | unknown | no provenance line, no strong internal marker |
+| `pitch-deck` | investments | unknown | no provenance line, no strong internal marker |
+| `pitch-deck-web` | investments | unknown | no provenance line, no strong internal marker |
+| `ppt-template-creator` | investments | unknown | no provenance line, no strong internal marker |
+| `reference-class-forecasting` | investments | unknown | no provenance line, no strong internal marker |
+| `relative-valuation-multiples` | investments | unknown | no provenance line, no strong internal marker |
+| `research-claim-map` | investments | unknown | no provenance line, no strong internal marker |
+| `scout-mindset-bias-check` | investments | unknown | no provenance line, no strong internal marker |
+| `swap-curve-strategy` | investments | unknown | no provenance line, no strong internal marker |
+| `tear-sheet` | investments | unknown | no provenance line, no strong internal marker |
+| `technical-dd` | investments | unknown | no provenance line, no strong internal marker |
+| `valuation-reconciler` | investments | unknown | no provenance line, no strong internal marker |
+| `variance-strategy-selector` | investments | unknown | no provenance line, no strong internal marker |
+| `agent-dx-cli-scale` | product | unknown | no provenance line, no strong internal marker |
+| `ai-pricing` | product | unknown | no provenance line, no strong internal marker |
+| `analytics-tracking` | product | unknown | no provenance line, no strong internal marker |
+| `code-structure` | product | unknown | no provenance line, no strong internal marker |
+| `cohort-analysis` | product | unknown | no provenance line, no strong internal marker |
+| `cost-optimizer` | product | unknown | no provenance line, no strong internal marker |
+| `deployment-engineer` | product | unknown | no provenance line, no strong internal marker |
+| `design-critique` | product | unknown | no provenance line, no strong internal marker |
+| `devops-advisor` | product | unknown | no provenance line, no strong internal marker |
+| `evidence-driven-testing` | product | unknown | no provenance line, no strong internal marker |
+| `financial-unit-economics` | product | unknown | no provenance line, no strong internal marker |
+| `greploop` | product | unknown | no provenance line, no strong internal marker |
+| `ink` | product | unknown | no provenance line, no strong internal marker |
+| `integration-linker` | product | unknown | no provenance line, no strong internal marker |
+| `interface-craft` | product | unknown | no provenance line, no strong internal marker |
+| `lean-ux-canvas` | product | unknown | no provenance line, no strong internal marker |
+| `monitoring-setup` | product | unknown | no provenance line, no strong internal marker |
+| `one-pager-prd` | product | unknown | no provenance line, no strong internal marker |
+| `pricing-strategy` | product | unknown | no provenance line, no strong internal marker |
+| `product-manager-skills` | product | unknown | no provenance line, no strong internal marker |
+| `prompt-engineer` | product | unknown | no provenance line, no strong internal marker |
+| `prototyping-pretotyping` | product | unknown | no provenance line, no strong internal marker |
+| `repo-scanner` | product | unknown | no provenance line, no strong internal marker |
+| `repo-structurer` | product | unknown | no provenance line, no strong internal marker |
+| `security-auditor` | product | unknown | no provenance line, no strong internal marker |
+| `tdd-red-green-refactor` | product | unknown | no provenance line, no strong internal marker |
+| `typed-service-contracts` | product | unknown | no provenance line, no strong internal marker |
+| `ui-polish` | product | unknown | no provenance line, no strong internal marker |
+| `web-design-guidelines` | product | unknown | no provenance line, no strong internal marker |
 | `defuddle` | founder-productivity | unknown-vendor-wrapper | wraps an external product/CLI; no provenance line |
 | `json-canvas` | founder-productivity | unknown-vendor-wrapper | wraps an external product/CLI; no provenance line |
 | `obsidian-bases` | founder-productivity | unknown-vendor-wrapper | wraps an external product/CLI; no provenance line |
