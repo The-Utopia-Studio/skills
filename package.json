@@ -9,7 +9,8 @@
     "ceramic:doctor": "utopia-ds doctor --json",
     "docs:theme": "bash scripts/sync-docs-theme.sh",
     "docs:serve": "python3 -m http.server 4173 --directory docs",
-    "build:packs": "./build-packs.sh"
+    "build:packs": "./build-packs.sh",
+    "validate": "node scripts/validate-marketplace.mjs && node scripts/check-pack-sync.mjs"
   },
   "repository": {
     "type": "git",

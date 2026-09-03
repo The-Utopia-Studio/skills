@@ -75,25 +75,33 @@ already documented *one-way* from the Icarus side
 These are defects in the checkout, not eval gaps. They change what "run every
 skill through evals" can honestly mean.
 
-1. **The repo's own validator does not run on `main`.** `node
-   scripts/validate-marketplace.mjs` throws before validating anything:
+1. ~~**The repo's own validator does not run on `main`.**~~ **FIXED.** `node
+   scripts/validate-marketplace.mjs` threw before validating anything:
    `Error: Duplicate skill name "account-tier-scoring" in
    skills/gtm/05-bd-partnerships/account-tier-scoring and
    skills/gtm/account-tier-scoring`. Cause: commit `edc6b9f` ("Reorganize GTM
    skills into seven sub-modules") copied every flat `skills/gtm/<skill>/` into
    `skills/gtm/<NN-submodule>/<skill>/` and did not delete the originals.
-   All 84 pairs are byte-identical (`diff -rq` clean), every one of the 84 is
-   listed in `scripts/gtm-submodules.json` — which declares the sub-module
-   paths *canonical* — and only `growth-strategy` and `company-moc` exist solely
-   in a sub-module. **Deleting the 84 flat directories clears it**; the
-   validator then passes at 350 packed skills. Verified in a scratch copy, not
-   yet applied here.
+   All 84 pairs were byte-identical (`diff -rq` clean), every one was listed in
+   `scripts/gtm-submodules.json` — which declares the sub-module paths
+   *canonical* — and only `growth-strategy` and `company-moc` existed solely in
+   a sub-module. The 84 flat directories are deleted; the validator now passes
+   at 350 packed skills, for the first time.
    `build-packs.sh` also keys `SKILL_PATH_MAP` by directory basename, so for
-   each duplicated pair whichever tree `find` emits last silently wins.
-2. **`npm run validate` is documented but does not exist.** CONTRIBUTING.md
-   step 4 says to run it before opening a PR; `package.json` has no `validate`
-   script. The validator has to be invoked as
-   `node scripts/validate-marketplace.mjs`.
+   each duplicated pair whichever tree `find` emitted last silently won — that
+   trap is gone with the duplicates.
+2. ~~**`npm run validate` is documented but does not exist.**~~ **FIXED.**
+   CONTRIBUTING.md step 4 says to run it before opening a PR; `package.json`
+   had no `validate` script. It now runs the marketplace validator plus a new
+   pack-sync check.
+2b. **`build-packs.sh` cannot run on a stock macOS.** It uses `declare -A`
+   (bash 4+); macOS ships bash 3.2, so `./build-packs.sh` dies at line 37 with
+   `declare: -A: invalid option` before doing anything. A contributor on a Mac
+   therefore cannot regenerate `plugins/` locally at all. Not fixed — rewriting
+   the build script is out of scope for a QA pass — but
+   `scripts/check-pack-sync.mjs` now answers the question the build script would
+   ("is the generated tree in sync?") using only node, so a PR can at least be
+   verified without installing a newer bash.
 3. **`prd-development` shipped an unresolved authoring placeholder** —
    `- [If Dean has PRD templates, link here]` at line 648. *Fixed in Pack 1.*
 4. **`prd-development` referenced 3 skills that do not exist** —
