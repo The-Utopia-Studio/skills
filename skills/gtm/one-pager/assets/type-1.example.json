@@ -1,0 +1,142 @@
+{
+  "type": 1,
+  "slug": "vyapti-resonance-one-pager",
+  "meta": {
+    "wordmark": { "lead": "VYAPTI", "rest": "RESONANCE" },
+    "docLabel": "One Page Brief",
+    "url": "www.vyaptiresonance.com",
+    "location": "Hyderabad, India",
+    "tagline": "Measure every cryptographic path. With evidence, not assumption."
+  },
+  "challenge": {
+    "title": "The challenge",
+    "eyebrow": "Every encrypted system, every day",
+    "headline": "Quantum risk starts before the break. Most security stacks cannot see ",
+    "headlineAccent": "the migration window.",
+    "body": "Long-life data can be captured now, classical trust anchors can outlive migration plans, and cryptographic implementations can drift in ways an inventory will never show. The question is not only what algorithm is deployed.",
+    "bodyEmphasis": "It is how the system behaves while you move.",
+    "cards": [
+      {
+        "label": "01 CAPTURED NOW",
+        "title": "Stored today. Exposed later.",
+        "body": "Long-life encrypted data can be retained now and attacked once quantum capability becomes practical."
+      },
+      {
+        "label": "02 TRUST FROZEN IN PLACE",
+        "title": "Certificates become blockers.",
+        "body": "Long-lived identities, signing dependencies and trust anchors make migration harder than replacing one algorithm."
+      },
+      {
+        "label": "03 BEHAVIOUR NOT VISIBLE",
+        "title": "Crypto can pass and still drift.",
+        "body": "Timing, symmetry, parity and noise can reveal implementation-level exposure that configuration checks do not show."
+      }
+    ],
+    "stakesLabel": "The stakes:",
+    "stakes": "data can outlive today's cryptography · migration dependencies sit across identity and applications · production is the wrong place to discover the gap."
+  },
+  "solution": {
+    "title": "The solution",
+    "eyebrow": "The observation layer for post-quantum migration",
+    "lead": "Software beside your cryptographic stack, without decrypting the payload.",
+    "sub": "QSP compares classical and post-quantum paths under the same conditions and shows where exposure persists.",
+    "subEmphasis": "Controlled sandbox. Defined interfaces. No production data.",
+    "points": [
+      { "title": "Exposure, per workload", "body": "Classical and PQC paths measured side by side." },
+      { "title": "Behavioural drift surfaced", "body": "Symmetry, timing, parity and noise tracked independently." },
+      { "title": "Trust without decryption", "body": "Runtime behaviour becomes a statistical trust state." },
+      { "title": "Lightweight integration", "body": "Config-file hooks. Structured JSON/CSV. No invasive changes." }
+    ],
+    "flow": [
+      "Provision two sandboxes",
+      "Connect QSP through defined interfaces",
+      "Run controlled anomaly playbooks"
+    ],
+    "flowAccent": "Compare · explain · report",
+    "figure": null
+  },
+  "differentiation": {
+    "title": "Differentiation",
+    "eyebrow": "Why this works, and why now",
+    "points": [
+      {
+        "title": "Behaviour, not checklist",
+        "lead": "We measure what the session does.",
+        "body": "Inventory is the evidence underneath it, not the conclusion."
+      },
+      {
+        "title": "Side by side, before rollout",
+        "lead": "Same conditions. Before production.",
+        "body": "Classical and post-quantum paths face the same test."
+      },
+      {
+        "title": "Payload stays closed",
+        "lead": "Observe the behaviour. Not the content.",
+        "body": "Key health, timing and protocol state stay measurable."
+      },
+      {
+        "title": "Fits the lab you have",
+        "lead": "Beside what already runs.",
+        "body": "Defined interfaces. No invasive rack changes."
+      }
+    ],
+    "standingLabel": "Standing:",
+    "standing": "QSP platform defined · controlled sandbox protocol · Qatar validation route identified · research-grade scorecards and JSON/CSV outputs"
+  },
+  "founder": {
+    "title": "Founder Profile",
+    "name": "Vijay Krishna Somaraju",
+    "role": "Founder & CEO",
+    "photo": "assets/founder.jpg",
+    "banner": null,
+    "credentials": [
+      { "title": "QSP creator", "body": "Runtime cryptographic observability" },
+      { "title": "Security engineering", "body": "Cloud, identity & distributed systems" },
+      { "title": "Enterprise systems", "body": "High-reliability infrastructure" },
+      { "title": "Post-quantum security", "body": "Industry & academic speaker" },
+      { "title": "Deep-tech founder", "body": "Quantum-safe cybersecurity & AI trust" },
+      { "title": "Operating principle", "body": "Measurable trust before production change" }
+    ]
+  },
+  "asks": {
+    "title": "The asks",
+    "eyebrow": "Where an introduction changes the outcome",
+    "headline": "Two doors in Qatar. ",
+    "headlineAccent": "Each ends in independent evidence.",
+    "items": [
+      {
+        "title": "A quantum environment for a scoped validation",
+        "body": "One controlled QKD/PQC environment. QSP beside it. Run the same sessions and compare the behaviour. If it shows nothing useful, we stop.",
+        "logosLabel": "TARGET VALIDATION ENVIRONMENT",
+        "logos": [
+          { "src": "assets/logo-hbku.png", "name": "HBKU" },
+          { "src": "assets/logo-qc2.png", "name": "QC2" },
+          { "src": "assets/logo-ooredoo.png", "name": "Ooredoo" },
+          { "src": "assets/logo-moi.png", "name": "Ministry of Interior" },
+          { "src": "assets/logo-idq.png", "name": "IDQ" }
+        ]
+      },
+      {
+        "title": "An enterprise security team for a controlled sandbox",
+        "body": "One workload. Two isolated non-production environments: classical and post-quantum. No live data. Time-boxed, auditable, decision-ready output.",
+        "logosLabel": "PRIORITY ENTERPRISE ROUTE",
+        "logos": [
+          { "src": "assets/logo-qnb.png", "name": "QNB" },
+          { "src": "assets/logo-qfcra.png", "name": "QFCRA" }
+        ]
+      }
+    ],
+    "strips": [
+      {
+        "label": "ACADEMIC NETWORK",
+        "logos": [
+          { "src": "assets/logo-qu.png", "name": "Qatar University" },
+          { "src": "assets/logo-tamu.png", "name": "Texas A&M Qatar" },
+          { "src": "assets/logo-cmu.png", "name": "Carnegie Mellon Qatar" }
+        ]
+      }
+    ],
+    "note": "Target organisations shown for introduction context; no partnership implied."
+  },
+  "partners": []
+}
