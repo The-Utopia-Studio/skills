@@ -1,0 +1,105 @@
+{
+  "type": 2,
+  "slug": "dextrum-one-pager",
+  "meta": {
+    "wordmark": { "lead": "DEXTRUM" },
+    "url": "www.dextrum.ai",
+    "headline": "A neutral verification layer for multi-party oil & gas fiscal operations",
+    "standfirst": "Dextrum reads the systems each party already runs, re-derives allocation, lifting and valuation under the agreed terms, and gives every party one tamper-evident record to check: per-period, at close.",
+    "founder": {
+      "eyebrow": "ENCODED FROM THE OPERATOR'S SIDE",
+      "name": "Jamal Kamaludin, Founder",
+      "detail": " · 40+ years oil & gas (EXXON, DIALOG Group); BSc Chem Eng, UK ’82. MBA, France 2024",
+      "geography": "Malaysia · Australia · Saudi Arabia · S Korea · USA."
+    }
+  },
+  "columns": [
+    {
+      "eyebrow": "01 · THE PROBLEM",
+      "heading": "Assurance stops at the party boundary",
+      "deck": "For the parties who settle fiscal outcomes across company boundaries:",
+      "blocks": [
+        {
+          "kind": "chips",
+          "items": ["OPERATORS", "JV · PSC PARTNERS", "REGULATORS", "AUDITORS"]
+        },
+        {
+          "kind": "stack",
+          "items": [
+            { "label": "OPERATOR", "body": "Computes the number inside its own systems, on its own boundary." },
+            { "label": "PARTNER", "body": "Re-derives alone, from statements, over the same evidence." },
+            { "label": "REGULATOR · AUDITOR", "body": "Sampled look-back, months after the exposure opened." }
+          ],
+          "connector": { "glyph": "×", "text": "HAND-OFF · ASSURANCE STOPS HERE", "tone": "danger" }
+        }
+      ],
+      "foot": {
+        "lead": "Custody, not capability.",
+        "body": "The systems work, but the number is computed on a system owned and operated by the party being audited. Proof arrives slow, manual and after the fact."
+      }
+    },
+    {
+      "eyebrow": "02 · THE SOLUTION",
+      "heading": "A read-only layer above your systems",
+      "deck": "Nothing replaced, nothing re-keyed, no new system of record for the operator to run.",
+      "blocks": [
+        {
+          "kind": "stack",
+          "items": [
+            { "label": "OPERATOR · PARTNER · REGULATOR · AUDITOR", "body": "All verify the same result at the same moment." },
+            { "label": "ONE NEUTRAL RECORD · TAMPER-EVIDENT", "body": "SHA-256 provenance · exceptions raised at close, evidence attached." },
+            { "label": "DEXTRUM · THE VERIFICATION LAYER", "body": "Re-derives the result under the agreed arrangement · stamps provenance." },
+            { "label": "OPERATIONAL & MONITORING SYSTEMS", "body": "Meters · allocation systems · operator ERPs" }
+          ],
+          "connectors": [
+            { "glyph": "▲", "text": "EACH CHECKS INDEPENDENTLY" },
+            { "glyph": "▲", "text": "EMITS" },
+            { "glyph": "▲", "text": "READ-ONLY" }
+          ]
+        }
+      ],
+      "foot": {
+        "lead": "Produce → prove.",
+        "body": "Your systems produce the data; Dextrum turns it into continuous, audit-defensible evidence, mappable to ISAE 3000."
+      }
+    },
+    {
+      "eyebrow": "03 · WHAT'S DIFFERENT",
+      "heading": "CEEP: the encoded control library",
+      "deck": "Four decades of operator-side fiscal practice, written down as deterministic controls.",
+      "blocks": [
+        {
+          "kind": "grid",
+          "items": [
+            { "title": "Controls", "body": "Does the number follow the agreed basis?" },
+            { "title": "Evidence", "body": "Every figure traced to its source record." },
+            { "title": "Exceptions", "body": "Raised at close, evidence attached." },
+            { "title": "Provenance", "body": "Tamper-evident stamp every party can check." }
+          ]
+        },
+        {
+          "kind": "note",
+          "lead": "Deterministic checks decide.",
+          "body": "AI explains: labelled advisory, never in the verification path. Above all parties: owned by none, verifiable by all."
+        },
+        {
+          "kind": "note",
+          "lead": "Built and live: a working MVP.",
+          "body": "C-001 founder-validated on a simulated Malaysian PSC scenario; C-002 and C-003 mechanism-validated against spec. Fiscal first. CCUS MRV at the point of CO₂ injection follows."
+        },
+        {
+          "kind": "checks",
+          "label": "THE THREE-DIMENSION TEST",
+          "items": ["CONTINUOUS", "CROSS-PARTY", "AUDIT-DEFENSIBLE"],
+          "body": "Continuous means every record, every period. No incumbent category passes all three."
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "lines": [
+      "Your systems already produce the numbers. Dextrum turns them into proof every party can check.",
+      "Each period closes with its evidence in place."
+    ]
+  }
+}
