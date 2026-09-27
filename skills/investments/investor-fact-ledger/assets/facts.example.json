@@ -1,0 +1,76 @@
+{
+  "_": "Single source of truth for every investor-facing claim. Change a number HERE first, move the old value into `retired` with a why, then bring the surfaces to match and run `node fact-check.mjs --check`.",
+  "updated": "2026-09-27",
+  "root": ".",
+  "sources": {
+    "model": "Projections_2026.09.15v4.xlsx",
+    "valuation": "Valuation_Note_v3.1.pdf",
+    "instrument": "SAFE_executed.pdf"
+  },
+  "surfaces": {
+    "deal-sheet": "docs/deal-sheet.html",
+    "memo": "docs/memorandum.html",
+    "faq": "docs/faq.html",
+    "deck": "docs/deck.html"
+  },
+  "published": {
+    "docs/deal-sheet.html": "public/room/deal-sheet/index.html",
+    "docs/memorandum.html": "public/room/memorandum/index.html"
+  },
+  "scanGlobs": [
+    "docs/*.html",
+    "public/*.html",
+    "public/*/index.html"
+  ],
+  "facts": [
+    {
+      "id": "raise",
+      "value": ["$6M", "$6.0M"],
+      "on": ["deal-sheet", "memo", "faq", "deck"],
+      "note": "Round size. Source: instrument"
+    },
+    {
+      "id": "pre-money",
+      "value": "$24M",
+      "on": ["deal-sheet", "memo", "faq"],
+      "note": "Pre-money valuation. Source: valuation"
+    },
+    {
+      "id": "contracted-arr",
+      "value": ["$1.4M", "1,400,000"],
+      "on": ["deal-sheet", "memo", "deck"],
+      "note": "Signed contracted ARR at 2026-09-01. Source: model, tab 'Bookings'"
+    },
+    {
+      "id": "gross-margin",
+      "value": ["38.5%", "38%", "about 38%"],
+      "on": ["memo", "deck"],
+      "note": "Blended gross margin, 2028 base case. Source: model, tab 'P&L'"
+    },
+    {
+      "id": "as-of",
+      "value": "as at 1 September 2026",
+      "on": ["deal-sheet", "memo"],
+      "note": "As-of date for every traction figure. Update quarterly."
+    },
+    {
+      "id": "market-size",
+      "value": "$4.2bn",
+      "on": ["memo", "deck"],
+      "note": "Addressable market 2030. Source: Gartner, May 2026 — cite inline, do not paraphrase"
+    }
+  ],
+  "retired": [
+    {
+      "value": "$20M",
+      "now": "$24M",
+      "why": "Repriced after the August supplier quote lifted the margin floor",
+      "unless": "previously valued at"
+    },
+    {
+      "value": "42% gross margin",
+      "now": "38.5%",
+      "why": "Old deck figure predated the supplier quote; the model was always 38.5%"
+    }
+  ]
+}

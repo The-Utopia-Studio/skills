@@ -1,0 +1,110 @@
+/* Investor document system — print-first A4 stylesheet.
+   Change the tokens below. Leave the print block at the bottom alone. */
+
+:root{
+  --ink:#101014;          /* body text, dark bands */
+  --charcoal:#41455c;     /* secondary text */
+  --muted:#6d7280;        /* labels, captions */
+  --accent:#1f5eff;       /* one accent, used sparingly */
+  --paper:#ffffff;
+  --vlight:#f4f5f7;       /* table stripes, callout fills */
+  --rule:#e2e4e9;
+  --display:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+body{
+  margin:0;background:var(--vlight);color:var(--ink);
+  font-family:var(--display);font-size:15px;line-height:1.6;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── the page ──────────────────────────────────────────────────────────── */
+.page{
+  width:210mm;min-height:297mm;margin:22px auto;position:relative;
+  background:var(--paper);padding:20mm 18mm 16mm;
+  box-shadow:0 2px 18px rgba(16,16,20,.14);
+  display:flex;flex-direction:column;
+}
+.page--dark{background:var(--ink);color:var(--paper);}
+.page--dark .lead,.page--dark .page-head,.page--dark .page-foot{color:rgba(255,255,255,.72);}
+.page--dark .stat-value{color:var(--paper);}
+
+.page-head,.page-foot{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);
+}
+.page-head{border-bottom:1px solid var(--rule);padding-bottom:6mm;margin-bottom:10mm;}
+.page-foot{border-top:1px solid var(--rule);padding-top:5mm;margin-top:auto;}
+.mark{font-weight:600;color:var(--ink);letter-spacing:.12em;}
+.page--dark .mark{color:var(--paper);}
+.page--dark .page-head{border-color:rgba(255,255,255,.18);}
+.page--dark .page-foot{border-color:rgba(255,255,255,.18);}
+
+/* ── headings and body ────────────────────────────────────────────────── */
+.section-label{font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 4mm;}
+.section-title{font-size:27px;line-height:1.2;font-weight:600;margin:0 0 4mm;letter-spacing:-.01em;}
+.lead{font-size:17px;line-height:1.5;color:var(--charcoal);max-width:62ch;margin:0 0 8mm;}
+h3{font-size:16px;font-weight:600;margin:7mm 0 2mm;}
+p,li{max-width:72ch;}
+p{margin:0 0 4mm;}
+ul,ol{margin:0 0 4mm;padding-left:5mm;}
+li{margin-bottom:1.5mm;}
+strong{font-weight:600;}
+a{color:var(--accent);}
+.small{font-size:13px;color:var(--muted);}
+.source{font-size:11px;color:var(--muted);font-family:var(--mono);}
+
+/* ── cover ────────────────────────────────────────────────────────────── */
+.cover{padding:0;overflow:hidden;}
+.cover-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;}
+.cover-inner{position:relative;z-index:1;min-height:297mm;padding:22mm 18mm;
+  display:flex;flex-direction:column;justify-content:space-between;}
+.cover-title{font-size:44px;line-height:1.08;font-weight:600;letter-spacing:-.02em;margin:0 0 6mm;max-width:22ch;}
+.cover-sub{font-size:18px;color:rgba(255,255,255,.78);max-width:46ch;}
+.cover-meta{font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,.7);}
+
+/* ── numbers ──────────────────────────────────────────────────────────── */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(38mm,1fr));
+  gap:6mm;margin:0 0 8mm;break-inside:avoid;}
+.stat-value{font-size:26px;font-weight:600;letter-spacing:-.01em;line-height:1.1;}
+.stat-label{font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);margin-top:1.5mm;}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:0 0 6mm;break-inside:avoid;}
+th,td{padding:2.6mm 3mm;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top;}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--muted);border-bottom:1px solid var(--ink);}
+td.num,th.num{text-align:right;white-space:nowrap;}
+tbody tr:nth-child(even){background:var(--vlight);}
+
+.callout{background:var(--vlight);border-left:2px solid var(--accent);
+  padding:5mm 6mm;margin:0 0 6mm;font-size:14px;color:var(--charcoal);break-inside:avoid;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:8mm;break-inside:avoid;}
+.card{border:1px solid var(--rule);padding:5mm;break-inside:avoid;}
+.card h3{margin-top:0;}
+figure{margin:0 0 6mm;break-inside:avoid;}
+figcaption{font-size:11px;color:var(--muted);margin-top:2mm;}
+img{max-width:100%;}
+
+/* keep anything self-contained off a page boundary */
+.stats,table,figure,.callout,.card,.grid-2,blockquote{break-inside:avoid;page-break-inside:avoid;}
+h2,h3,.section-title{break-after:avoid;page-break-after:avoid;}
+
+/* ── print ─ load-bearing: edit with care ─────────────────────────────── */
+@media print{
+  @page{size:A4 portrait;margin:0;}
+  html,body{background:var(--paper);}
+  .page{
+    width:210mm;min-height:297mm;margin:0;box-shadow:none;
+    page-break-after:always;break-after:page;
+  }
+  .page:last-child{page-break-after:auto;break-after:auto;}
+  .cover-inner{min-height:297mm;}
+  .no-print{display:none !important;}
+}

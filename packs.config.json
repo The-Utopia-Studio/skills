@@ -2,7 +2,7 @@
   "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF).",
   "marketplace": {
     "name": "skills",
-    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 350 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 356 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
     "owner": {
       "name": "The Utopia Studio",
       "email": "karanmjpinto@gmail.com",
@@ -449,8 +449,8 @@
     },
     {
       "name": "utopia-investments",
-      "description": "Investments — due diligence, financial modeling, valuation, capital markets, fundraising decks, and quant pricing. For funds team and fundraising.",
-      "version": "2.0.0",
+      "description": "Investments — due diligence, financial modeling, valuation, capital markets, fundraising decks, and quant pricing, plus the founder-side investor reading room. For funds team and fundraising.",
+      "version": "2.1.0",
       "keywords": [
         "investments",
         "dd",
@@ -501,6 +501,12 @@
         "ib-pitch-deck",
         "initiating-coverage",
         "intrinsic-valuation-dcf",
+        "investor-deal-sheet",
+        "investor-doc-system",
+        "investor-fact-ledger",
+        "investor-faq",
+        "investor-memorandum",
+        "investor-reading-room",
         "khalil",
         "kill-criteria-exit-ramps",
         "lbo-model",

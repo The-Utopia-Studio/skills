@@ -1,7 +1,7 @@
 {
   "name": "utopia-investments",
-  "description": "Investments — due diligence, financial modeling, valuation, capital markets, fundraising decks, and quant pricing. For funds team and fundraising.",
-  "version": "2.0.0",
+  "description": "Investments — due diligence, financial modeling, valuation, capital markets, fundraising decks, and quant pricing, plus the founder-side investor reading room. For funds team and fundraising.",
+  "version": "2.1.0",
   "author": { "name": "The Utopia Studio" },
   "keywords": ["investments","dd","finance","fundraising","valuation"]
 }
