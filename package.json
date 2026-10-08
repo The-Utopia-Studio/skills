@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/The-Utopia-Studio/skills#readme",
   "dependencies": {
-    "@utopia-studio-design/design-system": "^0.7.0"
+    "@utopia-studio-design/design-system": "^0.11.1"
   },
   "devDependencies": {
     "@utopia-studio-design/design-system-cli": "^0.5.0"
