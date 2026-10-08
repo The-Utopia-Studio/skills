@@ -4,12 +4,16 @@
   "description": "AI skill marketplace for The Utopia Studio \u2014 GTM, Product, Investments, Founder Productivity.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ceramic": "utopia-ds",
-    "ceramic:doctor": "utopia-ds doctor --json",
+    "build:packs": "./build-packs.sh",
+    "validate": "node scripts/validate-marketplace.mjs",
+    "validate:drift": "node scripts/validate-marketplace.mjs --check-drift",
+    "docs:sync": "node scripts/sync-marketplace-docs.mjs",
     "docs:theme": "bash scripts/sync-docs-theme.sh",
     "docs:serve": "python3 -m http.server 4173 --directory docs",
-    "build:packs": "./build-packs.sh"
+    "check": "npm run validate && npm run build:packs",
+    "ceramic": "utopia-ds",
+    "ceramic:doctor": "utopia-ds doctor --json",
+    "test": "npm run validate"
   },
   "repository": {
     "type": "git",

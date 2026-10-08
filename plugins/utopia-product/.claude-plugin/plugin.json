@@ -1,7 +1,7 @@
 {
   "name": "utopia-product",
   "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": { "name": "The Utopia Studio" },
   "keywords": ["product","discovery","design","engineering","deploy"]
 }

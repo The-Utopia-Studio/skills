@@ -2,7 +2,7 @@
   "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF).",
   "marketplace": {
     "name": "skills",
-    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 356 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 357 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
     "owner": {
       "name": "The Utopia Studio",
       "email": "karanmjpinto@gmail.com",
@@ -263,7 +263,7 @@
     {
       "name": "utopia-product",
       "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "keywords": [
         "product",
         "discovery",
@@ -281,6 +281,7 @@
         "analytics-tracking",
         "animate",
         "architecture-diagram",
+        "asd-ste100",
         "audit",
         "bolder",
         "bottoms-up-quantification",

@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  marketplace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Validate marketplace
+        run: node scripts/validate-marketplace.mjs
+
+      - name: Build packs
+        run: ./build-packs.sh
+
+      - name: Sync public docs
+        run: node scripts/sync-marketplace-docs.mjs
+
+      - name: Fail on generated drift
+        run: |
+          git diff --exit-code -- \
+            plugins/ \
+            .claude-plugin/ \
+            docs/skills.html \
+            docs/index.html \
+            README.md \
+            INSTALL.md \
+            SKILL_TAXONOMY.md \
+            packs.config.json

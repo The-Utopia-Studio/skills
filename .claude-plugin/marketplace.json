@@ -5,7 +5,7 @@
     "email": "karanmjpinto@gmail.com",
     "url": "https://github.com/The-Utopia-Studio"
   },
-  "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 356 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+  "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 357 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
   "plugins": [
     {
       "name": "utopia-gtm",
@@ -17,7 +17,7 @@
       "name": "utopia-product",
       "source": "./plugins/utopia-product",
       "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-      "version": "2.0.0"
+      "version": "2.1.0"
     },
     {
       "name": "utopia-investments",
