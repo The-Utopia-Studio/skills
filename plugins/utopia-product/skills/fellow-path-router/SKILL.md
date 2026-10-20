@@ -1,15 +1,14 @@
 ---
 name: fellow-path-router
 description: >-
-  Routes a fellow through the Icarus module by situation type, not by tearing down one
-  idea. Fires on "where do I start", "I already have a product / traction — which stages
-  apply to me", "onboard me to Icarus", "which stages should I skip", "I have a mature
-  product, what's my path". Classifies the fellow as Type A (blank page), B (traction, no
-  moat), or C (mature product) on the evidence ladder, then returns a keep / trim /
-  subtract / leap stage ledger and a think:build:test ratio tied to that type's dominant
-  risk. Do NOT fire to tear down or grade one idea (use concept-council or
-  so-what-stress-test), to assess the fellow's own skill level (use fellow-level-ladder),
-  or to draw the platform build-vs-buy line (use platform-vs-venture).
+  Route a fellow through the Icarus module by their situation type when they start: where do I start,
+  I already have a product or traction which stages apply, onboard me to Icarus, which stages should I
+  skip, I have a mature product what's my path. Classifies the fellow as Type A (blank page), B
+  (traction, no moat) or C (mature product) on the evidence ladder and returns a keep / trim /
+  subtract / leap stage ledger with a think:build:test ratio tied to that type's dominant risk. Do NOT
+  use for a fellow already in a Cobuild module who is stuck and asks what to do next or wants coaching
+  (use salim), tearing down or grading one idea (use concept-council or so-what-stress-test), or
+  assessing the fellow's level (use fellow-level-ladder).
 type: interactive
 supersedes: none
 ---

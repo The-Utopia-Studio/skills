@@ -17,4 +17,3 @@ Skills in this sub-module:
 - `gtm-metrics`
 - `revops`
 - `revops-forecasting`
-- `stakeholder-ops`

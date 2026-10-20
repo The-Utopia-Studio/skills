@@ -663,7 +663,7 @@ For detailed patterns (React cleanup, servers, browser), see **[Code Examples](.
 
 | Task | Task ID |
 |------|---------|
-| Text classification | `text-classification` or `sentiment-analysis` |
+| Text classification | `text-classification` or `customer-research` |
 | Token classification | `token-classification` or `ner` |
 | Question answering | `question-answering` |
 | Fill mask | `fill-mask` |

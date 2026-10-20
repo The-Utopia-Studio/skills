@@ -1,6 +1,12 @@
 ---
 name: huggingface-papers
-description: Look up and read Hugging Face paper pages in markdown, and use the papers API for structured metadata such as authors, linked models/datasets/spaces, Github repo and project page. Use when the user shares a Hugging Face paper page URL, an arXiv URL or ID, or asks to summarize, explain, or analyze an AI research paper.
+description: >-
+  Look up a research paper on Hugging Face Papers by arXiv ID or URL: read it as
+  markdown, summarise contributions and results, and list the linked models,
+  datasets, Spaces, GitHub repo and project page via the papers API. Use
+  whenever the user gives an arXiv ID or URL or a huggingface.co/papers link and
+  asks to summarise, explain or analyse the paper or find its linked models and
+  datasets. Not for broad multi-source literature research on a topic.
 ---
 
 # Hugging Face Paper Pages

@@ -1,6 +1,6 @@
 ---
 name: warm-intro-intelligence
-description: "Use this skill when a rep wants warm intro paths into a target prospect \u2014 \\\"Find warm intro paths for [company]\\\", \\\"Who do we know at [company]?\\\", \\\"Can anyone intro me to [role] at [company]?\\\", \\\"Warm intro - [company]\\\". Surfaces the strongest available warm intro paths from your company's relationship network \u2014 employees, customers, partners, investors, advisors, call transcripts \u2014 with honest, evidence-based confidence labels. Decision support only: never contacts anyone, never writes to the CRM. The rep always decides."
+description: "Use this skill when a rep wants warm intro paths into a target prospect \u2014 'Find warm intro paths for [company]', 'Who do we know at [company]?', 'Can anyone intro me to [role] at [company]?', 'Warm intro - [company]'. Surfaces the strongest available warm intro paths from your company's relationship network \u2014 employees, customers, partners, investors, advisors, call transcripts \u2014 with honest, evidence-based confidence labels. Decision support only: never contacts anyone, never writes to the CRM. The rep always decides."
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/din-arbel/warm-intro-intelligence
@@ -75,6 +75,8 @@ Find contacts at the prospect matching the specified persona using CRM contacts 
 
 ## Step 4 - Query the Node Registry and Compute Edges
 
+Full rules: `references/node-registry-and-edge-discovery.md`.
+
 Load and follow the Node Registry and Edge Discovery sub-page of this skill.
 
 For each target contact identified in Step 3, query each node type in the registry to find potential bridge nodes with a plausible connection to the target.
@@ -86,6 +88,8 @@ Track which sources were checked vs. unavailable - this appears in the output ca
 ---
 
 ## Step 5 - Assess Edge Confidence
+
+Full rules: `references/evidence-rules-and-confidence-scoring.md`.
 
 Load and follow the Evidence Rules and Confidence Scoring sub-page of this skill.
 
@@ -134,6 +138,8 @@ This step costs one web research call and up to two scraper runs per path. Run o
 
 ## Step 8 - Warm Relationship Intake Check
 
+Full rules: `references/warm-relationship-intake.md`.
+
 Load and follow the Warm Relationship Intake sub-page of this skill.
 
 Check both conditions:
@@ -143,6 +149,8 @@ Check both conditions:
 ---
 
 ## Step 9 - Generate Output Card
+
+Full rules: `references/warm-intro-output-card-format.md`.
 
 Load and follow the Warm Intro Output Card Format sub-page of this skill.
 

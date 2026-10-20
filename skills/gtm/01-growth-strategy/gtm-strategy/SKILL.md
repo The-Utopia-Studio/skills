@@ -1,16 +1,28 @@
 ---
 name: gtm-strategy
-description: "Create a go-to-market strategy covering marketing channels, messaging, success metrics, and launch timeline. Use when planning a product launch, creating a GTM plan from scratch, or defining a launch strategy for a new market."
+description: >-
+  Use this skill to create a go-to-market plan for a product or a new market or
+  geography: score the seven GTM motions (inbound, outbound, paid digital,
+  community, partners, ABM, PLG) with their tools, pick a 2-4 motion stack, then
+  define messaging, success metrics, budget and a 90-day roadmap. Use when
+  creating a GTM plan from scratch, entering a new market, choosing between
+  inbound and outbound, or selecting marketing channels and motions. Not for a
+  growth strategy document for a named Utopia fellow or portfolio company (use
+  growth-strategy), mapping existing customer segments to CS and expansion plays
+  (use expansion-retention), launch-day planning, Product Hunt or waitlists (use
+  launch-strategy), choosing PLG vs sales-led (use sales-motion-design), a list of
+  marketing ideas (use marketing-ideas), or a solo founder's playbook (use
+  solo-founder-gtm).
 ---
 # GTM Strategy
 
 ## Overview
-Create a comprehensive go-to-market strategy for a product launch. This skill covers marketing channels, messaging development, success metrics definition, and launch planning.
+Create a comprehensive go-to-market strategy for a product or a new market. This skill covers GTM motion selection, marketing channels, messaging development, success metrics definition, and the rollout plan. For launch-day execution (Product Hunt, waitlists, directories) hand off to launch-strategy.
 
 ## When to Use
-- Planning a product launch
 - Creating a GTM plan from scratch
-- Defining a launch strategy for a new market
+- Entering a new market or geography
+- Choosing between inbound vs outbound, or selecting GTM motions and channels
 - Developing product-to-market fit strategy
 - Preparing a product go-live roadmap
 
@@ -24,8 +36,8 @@ The system will help you load and analyze early research about your product and 
 - Competitive landscape information
 - Any available customer interviews or survey data
 
-### Step 2: Define Marketing Channels
-Evaluate which channels best reach your target audience:
+### Step 2: Score GTM Motions and Pick a Motion Stack
+Score all seven motions (inbound, outbound, paid digital, community, partners, ABM, PLG) 1-10 for this product on price point and ACV, sales cycle, buyer type, team capacity, budget and timeline. Pick a primary motion plus 1-3 secondary motions, sequence them, and allocate resources. The motion catalogue (tools, tactics, best-for, strengths and challenges) and the scoring steps are in `references/gtm-motions.md`. Then evaluate the specific channels inside the chosen motions:
 - Digital marketing channels (paid search, social media, display)
 - Content and inbound channels (blog, SEO, thought leadership)
 - Sales and outbound channels (direct outreach, partnerships)
@@ -66,7 +78,8 @@ Use $ARGUMENTS to pass:
 
 ## Output
 A structured GTM strategy document including:
-- Recommended marketing channels with justification
+- Scoring of all 7 GTM motions and the recommended motion stack (primary and secondary)
+- Recommended marketing channels and tools with justification
 - Channel-specific messaging and positioning
 - Launch timeline with key milestones
 - KPI targets and measurement framework

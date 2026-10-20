@@ -1,6 +1,15 @@
 ---
 name: saas-economics-efficiency-metrics
-description: Evaluate SaaS unit economics and capital efficiency. Use when deciding whether the business can scale efficiently or needs correction.
+description: >-
+  Calculate and judge unit economics and capital efficiency from the user's numbers: gross and
+  contribution margin, CAC, LTV, LTV:CAC, CAC payback, burn, runway, Rule of 40, magic number, by
+  segment and channel, for SaaS and for marketplace, e-commerce, freemium or enterprise models. Use
+  whenever the user pastes figures like ARPA, AOV, take rate, churn, CAC, S&M spend or burn and asks
+  to check or analyze unit economics, whether LTV/CAC is healthy, the payback, or whether they can
+  scale paid acquisition; also for quick formula and benchmark lookups ('what's the formula and a good
+  benchmark for CAC payback / magic number / Rule of 40'). Not for MRR, churn, NRR and expansion
+  metrics (use saas-revenue-growth-metrics) or cost per outcome of an AI product (use
+  metrics-that-matter).
 intent: >-
   Determine whether your SaaS business model is fundamentally viable and capital-efficient. Use this to calculate unit economics, assess profitability, manage cash runway, and decide when to scale vs. optimize. Essential for fundraising, board reporting, and making smart investment trade-offs.
 type: component
@@ -13,7 +22,6 @@ scenarios:
   - "Help me analyze CAC payback, LTV, and burn for our product"
   - "I need a SaaS efficiency check for our board deck"
 ---
-
 
 ## Purpose
 
@@ -674,12 +682,16 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 
 ## References
 
+### Bundled Resources
+- `references/quickref.md` — one-table cheat sheet for every SaaS finance metric (formulas, benchmarks), 4 quick decision frameworks (build this feature? scale this channel? change pricing? is the business healthy?) and red flags by category. Use it when the user only needs a fast formula or benchmark.
+- `references/unit-economics-by-model.md` — unit economics for non-SaaS or mixed models (subscription, e-commerce/transactional, marketplace, freemium/PLG, enterprise), with fully-loaded CAC and cohort-LTV guardrails.
+- `resources/unit-economics-template.md`, `resources/unit-economics-methodology.md` — fill-in templates (unit definition, CAC, LTV, contribution margin, cohort table, interpretation) and the detailed method.
+- `resources/evaluators/rubric_financial_unit_economics.json` — self-check rubric (aim for an average ≥ 3.5).
+
 ### Related Skills
 - `saas-revenue-growth-metrics` — Revenue, retention, and growth metrics that feed into LTV
-- `finance-metrics-quickref` — Fast lookup for all metrics
-- `feature-investment-advisor` — Uses margin and contribution calculations for feature ROI
-- `acquisition-channel-advisor` — Uses CAC, LTV, payback for channel evaluation
-- `business-health-diagnostic` — Uses efficiency metrics for health checks
+- `metrics-that-matter` — cost per outcome and the retention gate for a launched AI product
+- `pricing-strategy` — when the unit economics point to a pricing change
 
 ### External Frameworks
 - **David Skok (Matrix Partners):** "SaaS Metrics" blog — Definitive guide to CAC, LTV, payback
@@ -687,8 +699,3 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 - **Ben Murray:** *The SaaS CFO* — Advanced unit economics modeling
 - **Jason Lemkin (SaaStr):** SaaS benchmarking research
 - **Brad Feld:** *Venture Deals* — Understanding investor perspective on unit economics
-
-### Provenance
-- Adapted from `research/finance/Finance for Product Managers.md`
-- Consolidated from `research/finance/Finance_QuickRef.md`
-- Common mistakes from `research/finance/Finance_Metrics_Additions_Reference.md`

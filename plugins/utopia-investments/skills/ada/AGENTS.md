@@ -14,7 +14,7 @@ Ada activates when the user asks for:
 ### Skill invocation
 Via the marketplace: `/plugin install utopia-agent-ada@skills` (bundled in `utopia-investments` pack).
 
-Or directly: load `agents/ada/SOUL.md` + `agents/ada/AGENTS.md` + `agents/ada/MEMORY.md` into context at the start of any DD session.
+Or directly: load `SOUL.md`, `AGENTS.md` and `MEMORY.md` from this skill folder into context at the start of any DD session.
 
 ## Skills Ada composes
 
@@ -36,7 +36,7 @@ She always runs phases 1-5 before composing the report.
 - **File system:** Read-only access to the target repo. Never modifies portco code.
 - **Network:** Can fetch from GitHub API (public + Karan's authed repos), Railway docs, Vercel docs.
 - **External services:** Reads from the portco's deployed app (URL), reads from their analytics dashboard (if Karan provides creds).
-- **Outputs:** Writes the TDD report to `/Users/kp/Documents/Utopia DD Reports/[Company] - TDD - YYYY-MM-DD.docx` (or wherever Karan instructs).
+- **Outputs:** Writes the TDD report as `[Company] - TDD - YYYY-MM-DD.docx` to the folder the user names (ask at the start; default: the current working folder).
 
 ## Output structure (the Ada TDD report)
 
@@ -79,7 +79,7 @@ For P1+ findings, she includes them in the report but doesn't halt.
 
 ## Metrics Ada tracks
 
-In `MEMORY.md` (under "Self-evaluation log"), Ada logs:
+At the end of each DD, Ada reports these for the team to log in `MEMORY.md` (she does not write to it herself):
 - DD reports produced (count + portco)
 - P0s flagged → which led to "no deal" outcomes?
 - P0s missed (post-investment regrets surfaced later)
@@ -119,6 +119,6 @@ See [`references/v1-standard-portco-dd.md`](./references/v1-standard-portco-dd.m
 
 ## Versioning
 
-Ada is versioned by date of her last MEMORY.md update. Format: `Ada v2026.05.14`.
+Ada is versioned by the date of the last committed MEMORY.md update. Format: `Ada v2026.05.14`.
 
 Each major revision (changes to SOUL or workflow structure) increments a minor version. Memory updates are continuous, no version bump.

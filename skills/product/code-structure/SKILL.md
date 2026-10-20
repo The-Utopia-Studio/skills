@@ -1,6 +1,14 @@
 ---
 name: code-structure
-description: Use when multiple workflows duplicate the same operational logic, when deciding what belongs in actions vs shared services, or when refactoring repeated operational blocks across domain flows. Use when adding new features that share mechanics with existing ones.
+description: >-
+  Refactor duplicated operational logic into a service layer: decide what stays
+  in actions or server actions (business rules, auth, state transitions) and
+  what moves into shared service functions (sandbox, email, payment, provider or
+  SDK calls), then migrate one caller at a time. Use when the user says several
+  actions, workflows or endpoints copy-paste the same code, a bug fix in one
+  flow did not reach the others, or asks how to split actions vs services. Not
+  for spec-and-handler Zod contracts with Result types (use typed-service-
+  contracts).
 ---
 
 # Service Layer Architecture

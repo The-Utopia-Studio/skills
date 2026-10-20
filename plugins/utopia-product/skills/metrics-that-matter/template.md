@@ -2,9 +2,8 @@
 
 **Fellow:** <name> · **Date:** <date> · **Stage:** refine / metrics
 
-Route depth, do not restate it here: the NSM framework → `north-star-metric`; AARRR →
-its resource; cohort mechanics → `cohort-analysis`; the dashboard build → `retention-dashboard`;
-CAC/LTV/payback → `financial-unit-economics`. This scorecard adds the two things they skip:
+Route depth, do not restate it here: the NSM framework and AARRR are in SKILL.md Step 1-2; cohort mechanics → `saas-revenue-growth-metrics`; the dashboard build → `metrics-dashboard`;
+CAC/LTV/payback → `saas-economics-efficiency-metrics`. This scorecard adds the two things they skip:
 the retention gate (C) and cost-per-outcome (D).
 
 ## A. Business game and North Star

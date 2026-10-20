@@ -1,6 +1,12 @@
 ---
 name: prompt-engineer
-description: Makes a repository AI-native by creating AGENTS.md, .cursorrules, and documentation that helps any AI agent understand the codebase. Follows the WHAT/WHY/HOW framework from best practices. Use when the user asks to "make repo AI-ready", "add cursor rules", "create AGENTS.md", "set up for AI coding", or "make agents work better". Don't use for deployment (use deployment-engineer), monitoring (use monitoring-setup), or code organization (use repo-structurer).
+description: >-
+  Make a repository AI-native by writing AGENTS.md, CLAUDE.md-style context,
+  .cursorrules and .cursor/rules so coding agents (Claude Code, Cursor, Codex,
+  Copilot) understand the stack, commands, structure, conventions and
+  boundaries. Use when the user asks to write or improve an AGENTS.md, CLAUDE.md
+  or .cursorrules, make a repo AI-native or agent-friendly, or onboard AI coding
+  agents to a codebase. Not for general repo cleanup (use repo-structurer).
 ---
 
 # Prompt Engineer

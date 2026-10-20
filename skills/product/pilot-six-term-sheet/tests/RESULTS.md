@@ -12,7 +12,7 @@ MUST fire (5):
 5. "Structure the pilot so it isn't a free trial."
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Brainstorm 3–5 revenue models and validate which one customers will pay for" → belongs to `monetization-strategy`
+1. "Brainstorm 3–5 revenue models and validate which one customers will pay for" → belongs to `pricing-strategy`
 2. "Draft the data-rights legal clause for the pilot" → belongs to `data-rights-clause` (section 06)
 3. "Is this the right wedge — will it actually get adopted?" → belongs to `wedge-five-questions`
 
@@ -25,9 +25,9 @@ MUST NOT fire (3, name the sibling each belongs to):
 
 | Gate | Result | Evidence |
 |---|---|---|
-| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire hit explicit trigger phrases in the description ("pilot terms", "structure the deal", "paid pilot", "pilot term sheet", "structure the pilot so it isn't a free trial"). All 3 MUST-NOT are explicitly excluded in the description and routed to monetization-strategy / data-rights-clause / wedge-five-questions. |
+| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire hit explicit trigger phrases in the description ("pilot terms", "structure the deal", "paid pilot", "pilot term sheet", "structure the pilot so it isn't a free trial"). All 3 MUST-NOT are explicitly excluded in the description and routed to pricing-strategy / data-rights-clause / wedge-five-questions. |
 | 2 Golden | PASS (5/5) | per-case table below |
-| 3 Adversarial | PASS (3/3) | 01: Step 1 stops and asks named customer + one workflow + pay signal, no fabrication. 02: price ladder + "free pilot for the marquee logo" gotcha refuse LOI/testimonial/logo/exposure as term 2 (0.1–0.3, no money moved). 03: declines without poaching, names monetization-strategy, offers explore-then-commit ordering. No fabrication, no flattery, no scope-poaching. |
+| 3 Adversarial | PASS (3/3) | 01: Step 1 stops and asks named customer + one workflow + pay signal, no fabrication. 02: price ladder + "free pilot for the marquee logo" gotcha refuse LOI/testimonial/logo/exposure as term 2 (0.1–0.3, no money moved). 03: declines without poaching, names pricing-strategy, offers explore-then-commit ordering. No fabrication, no flattery, no scope-poaching. |
 | 4 Head-to-head | n/a | `supersedes: none` — new skill, nothing to beat. |
 | 5 Anti-generic | PASS | Golden-01 output could NOT come from a generic PM prompt: a generic prompt blesses the free "reference" POC and defers pricing — the exact two moves this skill refuses via the evidence ladder (money-moved 1.0) and the "two terms fellows skip" reframe. Binary-AND 6/6 kill line, [Fact]/[Assumption]/[Hypothesis] tagging, and sibling routing are Icarus-specific. Guidance is tabular throughout (term bars, price ladder, conversion basis, verdict) — no load-bearing prose that should be a table. |
 | 6 Real-use | pending | requires 5+ real fellow uses — not executable here |

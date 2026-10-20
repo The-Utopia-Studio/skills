@@ -1,6 +1,6 @@
 ---
 name: signup-flow-cro
-description: When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "trial conversion rate," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.
+description: When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions "signup conversions," "registration friction," "signup form optimization," "free trial signup," "reduce signup dropoff," "account creation flow," "people aren't signing up," "signup abandonment," "trial conversion rate," "nobody completes registration," "too many steps to sign up," or "simplify our signup." Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro.
 metadata:
   version: 1.1.0
 ---
@@ -354,6 +354,5 @@ Organized by:
 ## Related Skills
 
 - **onboarding-cro**: For optimizing what happens after signup
-- **form-cro**: For non-signup forms (lead capture, contact)
 - **page-cro**: For the landing page leading to signup
-- **ab-test-setup**: For testing signup flow changes
+- **ab-test-analysis**: For testing signup flow changes

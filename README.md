@@ -5,7 +5,7 @@
 
 **The best GTM skill pack for AI agents** — plus Product, Investments, and Founder Productivity.
 
-357 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
+254 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
 
 > **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills) · **Install:** [INSTALL.md](./INSTALL.md) (~2 minutes)
 
@@ -70,19 +70,22 @@ npx skills add The-Utopia-Studio/skills
 
 | Module | Pack | Skills | Covers |
 |--------|------|--------|--------|
-| **GTM** | `utopia-gtm` `v2.2.0` | 86 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
-| **Product** | `utopia-product` `v2.1.0` | 174 | Discovery, PRDs, design, build, deploy, product metrics |
-| **Investments** | `utopia-investments` `v2.1.0` | 66 | DD, modeling, valuation, capital markets, fundraising decks |
-| **Founder Productivity** | `utopia-founder-productivity` `v2.0.0` | 31 | Onboarding, legal, Obsidian, agents, meta tools |
+| **GTM** | `utopia-gtm` `v2.2.0` | 55 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
+| **Product** | `utopia-product` `v2.1.0` | 129 | Discovery, PRDs, design, build, deploy, product metrics |
+| **Investments** | `utopia-investments` `v2.1.0` | 43 | DD, modeling, valuation, capital markets, fundraising decks |
+| **Founder Productivity** | `utopia-founder-productivity` `v2.0.0` | 27 | Onboarding, legal, Obsidian, agents, meta tools |
 
 Exact lists: [`packs.config.json`](./packs.config.json).
+
+Consolidation changes, measured routing results, and remaining test work:
+[`Skill consolidation report`](./reports/2026-10-20-skill-consolidation/README.md).
 
 ### GTM highlights
 
 | Skill | Use when… |
 |-------|-----------|
 | `cold-email` / `outreach-execution` | Outbound with peer tone + approval rails |
-| `signal-anchored-message` / `account-tier-scoring` | Intent → prioritized outreach |
+| `cold-email` / `account-tier-scoring` | Intent → prioritized outreach |
 | `warm-intro-intelligence` | Warm paths into target accounts |
 | `deal-velocity-engineer` / `revops-forecasting` | Stalled deals + forecast accuracy |
 | `call-scorecards` / `earned-autonomy` | Call coaching + agent autonomy levels |

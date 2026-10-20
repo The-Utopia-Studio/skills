@@ -1,6 +1,17 @@
 ---
 name: ai-sdr
-description: "When the user wants to deploy AI sales development reps, automate sales qualification, build signal-to-action routing, or design AI agent architecture for sales. Also use when the user mentions 'AI SDR,' 'AI sales agent,' 'automated qualification,' 'signal routing,' 'sales automation,' '11x,' 'Artisan,' 'AiSDR,' 'AI BDR,' or 'autonomous sales.' This skill covers AI SDR deployment, qualification automation, and agent architecture for sales development."
+description: >-
+  Use this skill to build an AI-powered outbound or cold outreach system end to
+  end: "build our AI SDR", "set up our outbound machine", "Clay-enriched lists
+  into Instantly with AI-written first lines", "how many domains and mailboxes for
+  600 emails a day", "what reply and meeting rates should we expect", "cost per
+  meeting". Covers buying an AI SDR platform (11x, Artisan, AiSDR) versus building
+  on Clay, Instantly, Smartlead, n8n and an LLM; signal-to-sequence routing;
+  automated qualification; sending capacity; reply handling and human handoff;
+  the 4-week rollout; benchmarks and cost model. Not for writing, personalizing
+  or scoring individual emails (use cold-email), diagnosing spam placement or a
+  blocklisted domain (use email-deliverability), enrichment waterfall design (use
+  lead-enrichment), or scoring accounts (use account-tier-scoring).
 ---
 
 # AI SDR Skill
@@ -20,6 +31,12 @@ Before giving AI SDR advice, establish:
 7. **Data quality** - Clean CRM data vs. starting from scratch?
 
 If any of these are unclear, ask before proceeding. Bad inputs produce bad AI SDR outputs.
+
+---
+
+## Reference
+
+For the full outbound stack (signal sources, enrichment, AI personalization, sequencing, Instantly vs Smartlead, reply handling), outbound benchmarks (reply rate by hook, personalization depth and sequence position, send times), the week-by-week build, the cost model and advanced tactics (micro-lists, reactivation, negative personalization), read `references/outbound-system-playbook.md`. Domain and mailbox sizing and warmup live in the email-deliverability skill (its cold-sending-infrastructure reference); email copy rules live in cold-email.
 
 ---
 
@@ -903,7 +920,9 @@ When advising on AI SDR deployment, always ask:
 
 ## Related Skills
 
-- **ai-cold-outreach** - Deep dive on cold email copywriting, deliverability, and multi-channel sequencing
+- **cold-email** - Writing, personalizing and scoring the cold emails and signal-triggered messages
+- **email-deliverability** - Sending infrastructure, warmup and spam diagnosis
+- **outreach-execution** - Staging sequences with sender assignment and approval rails
 - **lead-enrichment** - Detailed enrichment waterfall design, data provider selection, and Clay workflows
 - **sales-motion-design** - End-to-end sales motion architecture from first touch to close
 - **gtm-engineering** - Technical GTM infrastructure, API integrations, and workflow automation

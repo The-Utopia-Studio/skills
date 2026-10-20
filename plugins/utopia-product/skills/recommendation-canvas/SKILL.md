@@ -6,7 +6,6 @@ intent: >-
 type: component
 ---
 
-
 ## Purpose
 Evaluate and propose AI product solutions using a structured canvas that assesses business outcomes, customer outcomes, problem framing, solution hypotheses, positioning, risks, and value justification. Use this to build a comprehensive, defensible recommendation for stakeholders and decision-makers—especially when proposing AI-powered features or products that carry higher uncertainty and risk.
 
@@ -61,8 +60,8 @@ Use `template.md` for the full fill-in structure.
 
 ### Step 1: Gather Context
 Before filling out the canvas, ensure you have:
-- **Problem understanding:** User research, pain points (reference `skills/problem-statement/SKILL.md`)
-- **Persona clarity:** Who experiences the problem? (reference `skills/proto-persona/SKILL.md`)
+- **Problem understanding:** User research, pain points (reference `problem-statement`)
+- **Persona clarity:** Who experiences the problem? (reference `proto-persona`)
 - **Market context:** Competitive landscape, category positioning
 - **Business constraints:** Budget, timelines, strategic priorities
 
@@ -110,7 +109,7 @@ What's in it for the customer? Use this format:
 ---
 
 ### Step 3: Frame the Problem
-Use the problem framing narrative from `skills/problem-statement/SKILL.md`:
+Use the problem framing narrative from `problem-statement`:
 
 ```markdown
 ## The Problem Statement
@@ -130,7 +129,7 @@ Use the problem framing narrative from `skills/problem-statement/SKILL.md`:
 ### Step 4: Define the Solution Hypothesis
 
 #### Hypothesis Statement
-Use the epic hypothesis format from `skills/epic-hypothesis/SKILL.md`:
+Use the epic hypothesis format ("We believe that [capability] for [persona] will achieve [outcome] because [evidence]"):
 
 ```markdown
 ## Solution Hypothesis
@@ -178,7 +177,7 @@ Define validation measures:
 ---
 
 ### Step 5: Define Positioning
-Use the positioning statement format from `skills/positioning-statement/SKILL.md`:
+Use a Geoffrey Moore-style positioning statement (for depth, use the `positioning-workshop` skill):
 
 ```markdown
 ## Positioning Statement
@@ -350,26 +349,15 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/problem-statement/SKILL.md` — Informs the problem narrative
-- `skills/epic-hypothesis/SKILL.md` — Informs the solution hypothesis structure
-- `skills/positioning-statement/SKILL.md` — Informs positioning section
-- `skills/proto-persona/SKILL.md` — Defines target persona
-- `skills/jobs-to-be-done/SKILL.md` — Informs customer outcomes
+- `problem-statement` — Informs the problem narrative
+- `positioning-workshop` — Informs positioning section
+- `proto-persona` — Defines target persona
+- `jobs-to-be-done` — Informs customer outcomes
 
 ### External Frameworks
 - Osterwalder's Value Proposition Canvas — Influences problem/solution framing
 - PESTEL Analysis — Risk assessment framework
 - SMART Goals — Success metrics structure
 
-### Dean's Work
-- AI Recommendation Canvas Template (created for Productside "AI Innovation for Product Managers" class)
-
 ### Provenance
-- Adapted from `prompts/recommendation-canvas-template.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `recommendation-canvas.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/problem-statement/SKILL.md`, `skills/epic-hypothesis/SKILL.md`, `skills/positioning-statement/SKILL.md`, `skills/proto-persona/SKILL.md`, `skills/jobs-to-be-done/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

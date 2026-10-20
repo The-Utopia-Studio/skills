@@ -1,6 +1,14 @@
 ---
 name: agent-persona-builder
-description: "Design persistent AI agent personas with distinct voices, durable memory, and clear operating rules. Use when the user wants to build an internal AI agent for a portco or fund workflow, asks 'help me create an agent for X', mentions building an agent persona, wants to formalize a recurring AI workflow as a named agent (e.g. 'Ada the DD analyst'), or asks how to design agents that don't sound generic. Based on Jack & Jill's agent-builder methodology — 25 questions across 5 phases, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md (cross-session knowledge), and BOOTSTRAP.md (first-boot orientation)."
+description: >-
+  Design a persistent, named AI agent persona with a distinct voice, durable memory and clear
+  operating rules, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md
+  (cross-session knowledge) and BOOTSTRAP.md (first boot). Use when the user asks to create or build a
+  named internal agent (e.g. 'Noura who drafts LP letters', 'Ada the DD analyst'), give an agent a
+  personality, voice or memory, or turn a recurring fund, portco or studio workflow into a named
+  agent. Runs a 25-question, 5-phase interview (Jack & Jill agent-builder method). Not for the
+  engineering PRD and work orders of an agent system (use agent-prd) or a fellow's role / tools /
+  memory / eval spec (use agent-design).
 ---
 
 # Agent Persona Builder
@@ -167,9 +175,9 @@ Before declaring the agent ready, verify:
 ## Example outputs (real Utopia agents)
 
 See:
-- [Ada](../../agents/ada/) — technical due diligence
-- [Khalil](../../agents/khalil/) — pitch deck builder
-- [Salim](../../agents/salim/) — Studio fellow coach
+- [Ada](https://github.com/The-Utopia-Studio/skills/tree/main/agents/ada) — technical due diligence
+- [Khalil](https://github.com/The-Utopia-Studio/skills/tree/main/agents/khalil) — pitch deck builder
+- [Salim](https://github.com/The-Utopia-Studio/skills/tree/main/agents/salim) — Studio fellow coach
 
 These three are the canonical examples. Read them before designing your own.
 

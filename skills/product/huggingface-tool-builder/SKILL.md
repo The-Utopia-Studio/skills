@@ -1,6 +1,13 @@
 ---
 name: huggingface-tool-builder
-description: Use this skill when the user wants to build tool/scripts or achieve a task where using data from the Hugging Face API would help. This is especially useful when chaining or combining API calls or the task will be repeated/automated. This Skill creates a reusable script to fetch, enrich or process data.
+description: >-
+  Write reusable scripts (Python, shell or TypeScript) that fetch, chain, enrich
+  and export data from the Hugging Face Hub API: top or trending models by task,
+  licenses, base models, linked papers, model-card metadata, to CSV or JSON for
+  repeated runs. Use when the user asks for a script or tool that pulls models,
+  datasets or Spaces data from the Hugging Face API, especially one they will
+  rerun weekly or automate. Not for one-off CLI downloads or uploads (use hf-
+  cli).
 ---
 
 # Hugging Face API Tool Builder

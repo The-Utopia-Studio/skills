@@ -1,6 +1,15 @@
 ---
 name: design-of-experiments
-description: Generates structured experimental designs (factorial, response surface, Taguchi) to systematically discover how multiple factors affect outcomes while minimizing experimental runs. Use when optimizing multi-factor systems with limited experimental budget, screening many variables to find the vital few, discovering interactions between parameters, mapping response surfaces for peak performance, validating robustness to noise factors, or when users mention factorial designs, A/B/n testing, parameter tuning, or process optimization.
+description: >-
+  Design a multi-factor experiment so you learn the most from the fewest runs or cohorts: full
+  and fractional factorial, Plackett-Burman screening, response surface and Taguchi designs,
+  with the design matrix, randomisation, blocking, power and an analysis plan. Use this skill
+  whenever the user wants to test several factors or variables at once ("we want to test 5
+  onboarding changes but can only run 8 cohorts", "which combination of price, trial length
+  and copy", "screen these 10 parameters"), mentions factorial or fractional factorial
+  designs, A/B/n or multivariate tests, interactions between factors, parameter tuning or
+  process optimisation. Not for analysing results of a finished A/B test or for one-variable
+  experiments.
 ---
 # Design of Experiments
 
@@ -30,15 +39,15 @@ Clarify the experiment goal (screening vs optimization), response metric(s), exp
 
 **Step 2: Identify factors, levels, and responses**
 
-List all candidate factors (controllable inputs), specify levels for each factor (low/high or discrete values), categorize factors (control vs noise), and define response variables (measurable outputs). For screening many factors (8+), see [resources/methodology.md](resources/methodology.md#screening-designs) for Plackett-Burman and fractional factorial approaches.
+List all candidate factors (controllable inputs), specify levels for each factor (low/high or discrete values), categorize factors (control vs noise), and define response variables (measurable outputs). For screening many factors (8+), see [resources/methodology.md](resources/methodology.md#1-screening-designs) for Plackett-Burman and fractional factorial approaches.
 
 **Step 3: Choose experimental design**
 
 Based on objective and constraints:
-- **For screening 5+ factors with limited runs** → Use [resources/methodology.md](resources/methodology.md#screening-designs) for fractional factorial or Plackett-Burman
-- **For optimizing 2-5 factors** → Use [resources/template.md](resources/template.md#factorial-designs) for full or fractional factorial
-- **For response surface mapping** → Use [resources/methodology.md](resources/methodology.md#response-surface-methodology) for central composite or Box-Behnken
-- **For robust design against noise** → Use [resources/methodology.md](resources/methodology.md#taguchi-methods) for parameter vs noise factor arrays
+- **For screening 5+ factors with limited runs** → Use [resources/methodology.md](resources/methodology.md#1-screening-designs) for fractional factorial or Plackett-Burman
+- **For optimizing 2-5 factors** → Use [resources/template.md](resources/template.md#full-factorial-designs) for full or fractional factorial
+- **For response surface mapping** → Use [resources/methodology.md](resources/methodology.md#2-response-surface-methodology) for central composite or Box-Behnken
+- **For robust design against noise** → Use [resources/methodology.md](resources/methodology.md#3-taguchi-methods-robust-parameter-design) for parameter vs noise factor arrays
 
 **Step 4: Plan execution details**
 

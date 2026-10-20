@@ -1,6 +1,13 @@
 ---
 name: alignment-values-north-star
-description: Creates actionable alignment frameworks that give teams a shared North Star (direction), values (guardrails), and decision tenets (behavioral standards). Enables autonomous decision-making while maintaining organizational coherence. Use when starting new teams, scaling organizations, defining culture, establishing product vision, resolving misalignment, creating strategic clarity, or when user mentions North Star, team values, mission, principles, guardrails, decision framework, or cultural alignment.
+description: >-
+  Create a team or company alignment framework: a North Star mission statement (aspirational
+  direction), 3-5 values as guardrails, decision tenets ('when X vs Y, we...') and observable
+  behaviours, so people can decide autonomously. Use when the user asks to define team values,
+  culture, mission, operating principles or a decision framework, or to fix misalignment in how a team
+  makes calls. Not for choosing a North Star product metric or input metrics (use
+  metrics-that-matter), or product vision, strategy, OKRs and roadmap from a validated problem (use
+  product-frame-stack).
 ---
 
 # Alignment: Values & North Star
@@ -65,11 +72,11 @@ Gather background: team/organization (size, stage, structure), current situation
 
 **Step 2: Choose framework**
 
-For new teams/startups (< 30 people, defining identity from scratch) → Use `resources/template.md`. For scaling organizations (existing values need refinement, multiple teams, need decision framework) → Study `resources/methodology.md`. To see examples → Review `resources/examples/` (engineering-team.md, product-vision.md, company-values.md).
+For new teams/startups (< 30 people, defining identity from scratch) → Use `resources/template.md`. For scaling organizations (existing values need refinement, multiple teams, need decision framework) → Study `resources/methodology.md`. To see a worked example → Review `resources/examples/engineering-team.md`.
 
 **Step 3: Develop alignment artifact**
 
-Create `alignment-values-north-star.md` with: compelling North Star (1-2 sentences, aspirational but specific), 3-5 core values (specific to this team, not generic), decision tenets ("When X vs Y, we..."), observable behaviors (concrete examples), anti-patterns (optional - what we DON'T do), and context (optional - why these values). See [Common Patterns](#common-patterns) for team-type specific guidance.
+Create an alignment document (e.g. alignment-values-north-star.md) with: compelling North Star (1-2 sentences, aspirational but specific), 3-5 core values (specific to this team, not generic), decision tenets ("When X vs Y, we..."), observable behaviors (concrete examples), anti-patterns (optional - what we DON'T do), and context (optional - why these values). See [Common Patterns](#common-patterns) for team-type specific guidance.
 
 **Step 4: Validate quality**
 
@@ -129,7 +136,7 @@ Present completed framework with rationale (why these values), examples of appli
 
 - **Standard template**: `resources/template.md`
 - **Scaling/complex cases**: `resources/methodology.md`
-- **Examples**: `resources/examples/engineering-team.md`, `resources/examples/product-vision.md`, `resources/examples/company-values.md`
+- **Example**: `resources/examples/engineering-team.md`
 - **Quality rubric**: `resources/evaluators/rubric_alignment_values_north_star.json`
 
-**Output naming**: `alignment-values-north-star.md` or `{team-name}-alignment.md`
+**Output naming**: alignment-values-north-star.md or {team-name}-alignment.md

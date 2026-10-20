@@ -9,25 +9,19 @@
       "description": "Value proposition, target segments, business model, flywheels, and the GTM plan.",
       "skills": [
         "beachhead-segment",
-        "brand-narrative-playbook",
         "business-narrative-builder",
         "company-moc",
         "customer-research",
         "growth-loops",
         "growth-strategy",
-        "gtm-motions",
         "gtm-strategy",
         "ideal-customer-profile",
         "manifesto",
-        "positioning",
-        "positioning-icp",
         "positioning-workshop",
         "product-marketing-context",
         "sales-motion-design",
         "solo-founder-gtm",
-        "value-prop-statements",
-        "value-proposition",
-        "voice-of-customer"
+        "value-proposition"
       ]
     },
     {
@@ -43,12 +37,10 @@
         "copy-editing",
         "copywriting",
         "efecto-social-media",
-        "kmjp-social",
         "launch-strategy",
         "lead-magnets",
         "marketing-ideas",
         "marketing-psychology",
-        "multi-platform-launch",
         "onboarding-cro",
         "page-cro",
         "paid-ads",
@@ -67,13 +59,8 @@
       "skills": [
         "call-scorecards",
         "competitive-battlecard",
-        "deal-desk",
-        "deal-review",
         "deal-velocity-engineer",
         "discovery-calls",
-        "lead-qualification",
-        "meddic-checklist",
-        "pql-framework",
         "sales-enablement"
       ]
     },
@@ -84,19 +71,9 @@
       "tagline": "How you keep and grow customers",
       "description": "Retention, expansion, renewals, sentiment, and account health.",
       "skills": [
-        "activation-map",
         "churn-prevention",
-        "escalation-framework",
-        "expansion-playbook",
-        "expansion-plays",
         "expansion-retention",
-        "member-insights",
-        "referral-program",
-        "renewal-playbooks",
-        "retention-dashboard",
-        "retention-ltv-playbook",
-        "sentiment-analysis",
-        "sentiment-feedback-loop"
+        "referral-program"
       ]
     },
     {
@@ -107,22 +84,15 @@
       "description": "Outbound, signals, account tiering, warm intros, partners, and ScaleOn leverage.",
       "skills": [
         "account-tier-scoring",
-        "ai-cold-outreach",
         "ai-sdr",
         "cold-email",
-        "cold-email-personalization",
         "cold-offer-architect",
-        "cold-outreach",
         "email-deliverability",
         "email-sequence",
         "lead-enrichment",
-        "outbound-plays",
         "outreach-execution",
         "partner-affiliate",
-        "signal-anchored-message",
-        "signal-scoring",
         "social-selling",
-        "suppression-logic",
         "warm-intro-intelligence"
       ]
     },
@@ -137,8 +107,7 @@
         "gtm-engineering",
         "gtm-metrics",
         "revops",
-        "revops-forecasting",
-        "stakeholder-ops"
+        "revops-forecasting"
       ]
     },
     {

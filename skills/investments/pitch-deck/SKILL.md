@@ -1,6 +1,17 @@
 ---
 name: pitch-deck
-description: "Generate investor-ready pitch decks as branded PPTX files from founder meeting notes, uploaded decks, DD reports, and strategy docs. Use this skill whenever the user mentions building a pitch deck, turning notes into slides, creating an investor deck, preparing for a co-investor presentation, or helping a portfolio company with their deck. Also trigger when the user uploads Granola meeting notes, founder call transcripts, or company materials and asks for a deck, slides, or presentation for investors. Covers co-investor syndication decks and founder coaching decks. Even if the user just says 'build a deck from these notes' or 'make this into a pitch deck' or 'help [company] with their deck', use this skill."
+description: >-
+  Builds investor-ready pitch decks as branded PPTX files from founder meeting notes,
+  call transcripts (e.g. Granola), uploaded decks, DD reports and strategy docs, and
+  improves existing decks. Scores the input materials and the output on a 15-dimension
+  rubric, marks gaps as [NEEDS INPUT] instead of inventing metrics, and covers co-investor
+  syndication decks and founder coaching decks with Utopia or portfolio-company branding.
+  Use when the user wants a pitch deck, investor deck, investor presentation, syndication
+  or co-investor deck, wants notes turned into slides, or wants help with a portco's deck.
+  Not for a deck website (use pitch-deck-web), filling a banker's PPT template
+  (use ib-pitch-deck), QC of a finished deck (use ib-check-deck), swapping numbers in an
+  existing deck (use deck-refresh), or the written memo or one-pager behind the deck
+  (use investor-memorandum or investor-deal-sheet).
 ---
 
 # Pitch Deck Skill
@@ -13,7 +24,7 @@ This skill is built for The Studio (Utopia Capital). The default audience is co-
 
 ## Before You Start
 
-1. Read the pptx skill: `view /mnt/skills/public/pptx/SKILL.md` — then read `pptxgenjs.md` for from-scratch creation
+1. Read the installed `pptx` skill (its SKILL.md, then its `pptxgenjs.md` guide for from-scratch creation)
 2. Read `references/slide-frameworks.md` — Global Context and Growth Flywheel frameworks (the two signature slides)
 3. Read `references/slide-best-practices.md` — research-backed guidance for every slide in the deck
 4. Read `references/scoring-rubric.md` — the 15-dimension scoring framework (score inputs and outputs)
@@ -137,11 +148,20 @@ Adapt language and metrics by sector:
 
 ## Step 5: Build the PPTX
 
-Use the pptx skill's `pptxgenjs` approach (from-scratch creation). Before writing code:
+Use the pptx skill's `pptxgenjs` approach (from-scratch creation) and save the `.pptx` to the current working folder unless the user names another. Before writing code:
 
-1. Re-read `/mnt/skills/public/pptx/pptxgenjs.md` for the full API reference
+1. Re-read the `pptx` skill's `pptxgenjs.md` for the full API reference
 2. Apply the branding from `assets/utopia-branding.md` (Studio default) or the portfolio company's brand if specified
 3. Follow the pptx skill's design guidance — no boring slides, vary layouts, use visual elements on every slide
+
+### Hard Rules (Utopia house style — never violate)
+
+- Ask who the audience is before drafting (LP, co-investor/syndication, portco coaching, portco pitch, external launch) unless it is already clear.
+- Lead with the verdict / thesis; never bury the ask. The ask is specific: check size, role, timeline.
+- Headline every slide as a complete idea, not a label. One idea per slide, max 3 bullets; default to fewer slides (8-12 is the sweet spot unless the standard structure below is requested).
+- Pull the founder's own strong phrases from the notes. No buzzwords ("revolutionizing", "next-generation").
+- Never use the Inter font, never purple gradients, never a generic Sequoia/YC template, never a "company overview" slide (the deck is the overview).
+- Anything about valuation, terms or other sensitive content: draft it, but flag it for review before it is shared.
 
 ### Branding Logic
 
@@ -167,7 +187,7 @@ Do not repeat the same layout across slides. Rotate through:
 
 Follow the pptx skill's QA process exactly:
 
-1. Convert to images: `python scripts/office/soffice.py --headless --convert-to pdf output.pptx` then `pdftoppm`
+1. Convert to images: `soffice --headless --convert-to pdf output.pptx` (LibreOffice) then `pdftoppm -jpeg -r 110 output.pdf slide`. If LibreOffice is not installed, say so and skip to the content check.
 2. Visually inspect every slide — check for overlaps, cut-off text, alignment issues, low contrast
 3. Content check: `python -m markitdown output.pptx` — verify no missing content or placeholder text
 4. Fix issues and re-verify

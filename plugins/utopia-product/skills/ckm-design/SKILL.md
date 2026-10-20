@@ -1,6 +1,16 @@
 ---
-name: ckm:design
-description: "Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads."
+name: ckm-design
+description: >-
+  Brand-identity and graphic design toolkit: logo design and AI logo generation
+  (55 styles), corporate identity mockups (business cards, letterheads, vehicle
+  livery, signage), HTML slide decks with Chart.js, social-media and ad banners
+  at exact platform sizes with PNG export, SVG icon sets and social photos. Use
+  when the user asks to design a logo or logo directions, brand identity or CIP
+  mockups, banners, covers or headers for Twitter/X, LinkedIn, Instagram or ads,
+  HTML slides or a pitch deck in HTML, or icons. Not for app or web UI code (use
+  impeccable or ckm-ui-styling), design tokens (use ckm-design-system), brand
+  voice (use ckm-brand), Google Stitch DESIGN.md files (use stitch-design-
+  taste), or work inside the Efecto app (use efecto-graphic-design).
 argument-hint: "[design-type] [context]"
 license: MIT
 metadata:
@@ -27,9 +37,9 @@ Unified design skill: brand, tokens, UI, logo, CIP, slides, banners, social phot
 
 | Task | Sub-skill | Details |
 |------|-----------|---------|
-| Brand identity, voice, assets | `brand` | External skill |
-| Tokens, specs, CSS vars | `design-system` | External skill |
-| shadcn/ui, Tailwind, code | `ui-styling` | External skill |
+| Brand identity, voice, assets | `ckm-brand` | Sibling skill |
+| Tokens, specs, CSS vars | `ckm-design-system` | Sibling skill |
+| shadcn/ui, Tailwind, code | `ckm-ui-styling` | Sibling skill |
 | Logo creation, AI generation | Logo (built-in) | `references/logo-design.md` |
 | CIP mockups, deliverables | CIP (built-in) | `references/cip-design.md` |
 | Presentations, pitch decks | Slides (built-in) | `references/slides.md` |
@@ -44,15 +54,15 @@ Unified design skill: brand, tokens, UI, logo, CIP, slides, banners, social phot
 ### Logo: Generate Design Brief
 
 ```bash
-python3 ~/.claude/skills/design/scripts/logo/search.py "tech startup modern" --design-brief -p "BrandName"
+python3 scripts/logo/search.py "tech startup modern" --design-brief -p "BrandName"
 ```
 
 ### Logo: Search Styles/Colors/Industries
 
 ```bash
-python3 ~/.claude/skills/design/scripts/logo/search.py "minimalist clean" --domain style
-python3 ~/.claude/skills/design/scripts/logo/search.py "tech professional" --domain color
-python3 ~/.claude/skills/design/scripts/logo/search.py "healthcare medical" --domain industry
+python3 scripts/logo/search.py "minimalist clean" --domain style
+python3 scripts/logo/search.py "tech professional" --domain color
+python3 scripts/logo/search.py "healthcare medical" --domain industry
 ```
 
 ### Logo: Generate with AI
@@ -60,8 +70,8 @@ python3 ~/.claude/skills/design/scripts/logo/search.py "healthcare medical" --do
 **ALWAYS** generate output logo images with white background.
 
 ```bash
-python3 ~/.claude/skills/design/scripts/logo/generate.py --brand "TechFlow" --style minimalist --industry tech
-python3 ~/.claude/skills/design/scripts/logo/generate.py --prompt "coffee shop vintage badge" --style vintage
+python3 scripts/logo/generate.py --brand "TechFlow" --style minimalist --industry tech
+python3 scripts/logo/generate.py --prompt "coffee shop vintage badge" --style vintage
 ```
 
 **IMPORTANT:** When scripts fail, try to fix them directly.
@@ -75,32 +85,32 @@ After generation, **ALWAYS** ask user about HTML preview via `AskUserQuestion`. 
 ### CIP: Generate Brief
 
 ```bash
-python3 ~/.claude/skills/design/scripts/cip/search.py "tech startup" --cip-brief -b "BrandName"
+python3 scripts/cip/search.py "tech startup" --cip-brief -b "BrandName"
 ```
 
 ### CIP: Search Domains
 
 ```bash
-python3 ~/.claude/skills/design/scripts/cip/search.py "business card letterhead" --domain deliverable
-python3 ~/.claude/skills/design/scripts/cip/search.py "luxury premium elegant" --domain style
-python3 ~/.claude/skills/design/scripts/cip/search.py "hospitality hotel" --domain industry
-python3 ~/.claude/skills/design/scripts/cip/search.py "office reception" --domain mockup
+python3 scripts/cip/search.py "business card letterhead" --domain deliverable
+python3 scripts/cip/search.py "luxury premium elegant" --domain style
+python3 scripts/cip/search.py "hospitality hotel" --domain industry
+python3 scripts/cip/search.py "office reception" --domain mockup
 ```
 
 ### CIP: Generate Mockups
 
 ```bash
 # With logo (RECOMMENDED)
-python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TopGroup" --logo /path/to/logo.png --deliverable "business card" --industry "consulting"
+python3 scripts/cip/generate.py --brand "TopGroup" --logo /path/to/logo.png --deliverable "business card" --industry "consulting"
 
 # Full CIP set
-python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TopGroup" --logo /path/to/logo.png --industry "consulting" --set
+python3 scripts/cip/generate.py --brand "TopGroup" --logo /path/to/logo.png --industry "consulting" --set
 
 # Pro model (4K text)
-python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TopGroup" --logo logo.png --deliverable "business card" --model pro
+python3 scripts/cip/generate.py --brand "TopGroup" --logo logo.png --deliverable "business card" --model pro
 
 # Without logo
-python3 ~/.claude/skills/design/scripts/cip/generate.py --brand "TechFlow" --deliverable "business card" --no-logo-prompt
+python3 scripts/cip/generate.py --brand "TechFlow" --deliverable "business card" --no-logo-prompt
 ```
 
 Models: `flash` (default, `gemini-2.5-flash-image`), `pro` (`gemini-3-pro-image-preview`)
@@ -108,7 +118,7 @@ Models: `flash` (default, `gemini-2.5-flash-image`), `pro` (`gemini-3-pro-image-
 ### CIP: Render HTML Presentation
 
 ```bash
-python3 ~/.claude/skills/design/scripts/cip/render-html.py --brand "TopGroup" --industry "consulting" --images /path/to/cip-output
+python3 scripts/cip/render-html.py --brand "TopGroup" --industry "consulting" --images /path/to/cip-output
 ```
 
 **Tip:** If no logo exists, use Logo Design section above first.
@@ -131,17 +141,7 @@ Load `references/slides-create.md` for the creation workflow.
 
 ## Banner Design (Built-in)
 
-22 art direction styles across social, ads, web, print. Uses `frontend-design`, `ai-artist`, `ai-multimodal`, `chrome-devtools` skills.
-
-Load `references/banner-sizes-and-styles.md` for complete sizes and styles reference.
-
-### Banner: Workflow
-
-1. **Gather requirements** via `AskUserQuestion` — purpose, platform, content, brand, style, quantity
-2. **Research** — Activate `ui-ux-pro-max`, browse Pinterest for references
-3. **Design** — Create HTML/CSS banner with `frontend-design`, generate visuals with `ai-artist`/`ai-multimodal`
-4. **Export** — Screenshot to PNG at exact dimensions via `chrome-devtools`
-5. **Present** — Show all options side-by-side, iterate on feedback
+22 art-direction styles across social, ads, web and print. Load [references/banner-workflow.md](references/banner-workflow.md) for the full five-step workflow (requirements → art direction → HTML build plus optional Gemini visuals → PNG export → iterate), and `references/banner-sizes-and-styles.md` for every size and style.
 
 ### Banner: Quick Size Reference
 
@@ -183,21 +183,21 @@ Load `references/banner-sizes-and-styles.md` for complete sizes and styles refer
 ### Icon: Generate Single Icon
 
 ```bash
-python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "settings gear" --style outlined
-python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "shopping cart" --style filled --color "#6366F1"
-python3 ~/.claude/skills/design/scripts/icon/generate.py --name "dashboard" --category navigation --style duotone
+python3 scripts/icon/generate.py --prompt "settings gear" --style outlined
+python3 scripts/icon/generate.py --prompt "shopping cart" --style filled --color "#6366F1"
+python3 scripts/icon/generate.py --name "dashboard" --category navigation --style duotone
 ```
 
 ### Icon: Generate Batch Variations
 
 ```bash
-python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "cloud upload" --batch 4 --output-dir ./icons
+python3 scripts/icon/generate.py --prompt "cloud upload" --batch 4 --output-dir ./icons
 ```
 
 ### Icon: Multi-size Export
 
 ```bash
-python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "user profile" --sizes "16,24,32,48" --output-dir ./icons
+python3 scripts/icon/generate.py --prompt "user profile" --sizes "16,24,32,48" --output-dir ./icons
 ```
 
 ### Icon: Top Styles
@@ -216,20 +216,20 @@ python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt "user profile"
 
 ## Social Photos (Built-in)
 
-Multi-platform social image design: HTML/CSS → screenshot export. Uses `ui-ux-pro-max`, `brand`, `design-system`, `chrome-devtools` skills.
+Multi-platform social image design: HTML/CSS → screenshot export. Uses `ui-ux-pro-max`, `ckm-brand` and `ckm-design-system`; export with headless Chrome or Playwright.
 
 Load `references/social-photos-design.md` for sizes, templates, best practices.
 
 ### Social Photos: Workflow
 
-1. **Orchestrate** — `project-management` skill for TODO tasks; parallel subagents for independent work
+1. **Orchestrate** — track TODO tasks; use parallel subagents for independent work
 2. **Analyze** — Parse prompt: subject, platforms, style, brand context, content elements
 3. **Ideate** — 3-5 concepts, present via `AskUserQuestion`
-4. **Design** — `/ckm:brand` → `/ckm:design-system` → randomly invoke `/ck:ui-ux-pro-max` OR `/ck:frontend-design`; HTML per idea × size
-5. **Export** — `chrome-devtools` or Playwright screenshot at exact px (2x deviceScaleFactor)
-6. **Verify** — Use Chrome MCP or `chrome-devtools` skill to visually inspect exported designs; fix layout/styling issues and re-export
+4. **Design** — `ckm-brand` → `ckm-design-system` → `ui-ux-pro-max` or `impeccable`; HTML per idea × size
+5. **Export** — headless Chrome or Playwright screenshot at exact px (2x deviceScaleFactor)
+6. **Verify** — Use a browser tool to visually inspect exported designs; fix layout/styling issues and re-export
 7. **Report** — Summary to `plans/reports/` with design decisions
-8. **Organize** — Invoke `assets-organizing` skill to sort output files and reports
+8. **Organize** — sort output files and reports into `assets/`
 
 ### Social Photos: Key Sizes
 
@@ -298,5 +298,5 @@ pip install google-genai pillow
 
 ## Integration
 
-**External sub-skills:** brand, design-system, ui-styling
-**Related Skills:** frontend-design, ui-ux-pro-max, ai-multimodal, chrome-devtools
+**Sibling skills:** ckm-brand, ckm-design-system, ckm-ui-styling
+**Related skills:** impeccable, ui-ux-pro-max

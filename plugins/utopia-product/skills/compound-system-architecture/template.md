@@ -76,7 +76,7 @@ fails. Fill it or delete the swap point.
 
 ## F. Diagram
 
-Do not draw it here. Once C is filled, route to `design/architecture-diagram` with the
+Do not draw it here. Once C is filled, route to `diagram-design` with the
 component table and hand off the render. This skill decides the shape; that skill draws it.
 
 ## Kill line — self-check before returning

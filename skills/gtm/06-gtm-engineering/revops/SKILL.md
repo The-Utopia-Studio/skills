@@ -1,6 +1,17 @@
 ---
 name: revops
-description: "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy."
+description: >-
+  Use this skill for revenue operations plumbing: lead lifecycle stages, MQL and
+  SQL definitions, lead routing rules, speed-to-lead and the marketing-to-sales
+  handoff SLA, pipeline stage definitions, CRM automation, data hygiene, and the
+  new-business deal desk. Use when the user mentions RevOps, revenue operations,
+  MQL, SQL, lead routing, pipeline stages, CRM automation, "leads aren't getting
+  to sales" or "when should marketing hand off to sales". Not for designing a
+  lead, intent or PQL scoring model, qualifying a specific list of leads, or
+  do-not-touch suppression rules (use account-tier-scoring); renewal discounts or
+  a renewal deal desk (use expansion-retention); forecasting (use
+  revops-forecasting); cold emails (use cold-email); or pricing (use
+  pricing-strategy).
 metadata:
   version: 1.1.0
 ---
@@ -318,20 +329,20 @@ Format each as a standalone document the user can implement directly. Include pl
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key RevOps tools:
+Key RevOps tools:
 
-| Tool | What It Does | Guide |
-|------|-------------|-------|
-| **HubSpot** | CRM, marketing automation, lead scoring, workflows | [hubspot.md](../../tools/integrations/hubspot.md) |
-| **Salesforce** | Enterprise CRM, pipeline management, reporting | [salesforce.md](../../tools/integrations/salesforce.md) |
-| **Calendly** | Meeting scheduling, round-robin routing | [calendly.md](../../tools/integrations/calendly.md) |
-| **SavvyCal** | Scheduling with priority-based availability | [savvycal.md](../../tools/integrations/savvycal.md) |
-| **Clearbit** | Real-time lead enrichment and scoring | [clearbit.md](../../tools/integrations/clearbit.md) |
-| **Apollo** | Contact data, enrichment, and outbound sequences | [apollo.md](../../tools/integrations/apollo.md) |
-| **ActiveCampaign** | Marketing automation for SMBs, lead scoring | [activecampaign.md](../../tools/integrations/activecampaign.md) |
-| **Zapier** | Cross-tool automation and workflow glue | [zapier.md](../../tools/integrations/zapier.md) |
-| **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs | [introw.md](../../tools/integrations/introw.md) |
-| **Crossbeam** | Partner account overlaps and co-sell identification | [crossbeam.md](../../tools/integrations/crossbeam.md) |
+| Tool | What It Does |
+|------|-------------|
+| **HubSpot** | CRM, marketing automation, lead scoring, workflows |
+| **Salesforce** | Enterprise CRM, pipeline management, reporting |
+| **Calendly** | Meeting scheduling, round-robin routing |
+| **SavvyCal** | Scheduling with priority-based availability |
+| **Clearbit** | Real-time lead enrichment and scoring |
+| **Apollo** | Contact data, enrichment, and outbound sequences |
+| **ActiveCampaign** | Marketing automation for SMBs, lead scoring |
+| **Zapier** | Cross-tool automation and workflow glue |
+| **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs |
+| **Crossbeam** | Partner account overlaps and co-sell identification |
 
 ---
 

@@ -1,6 +1,15 @@
 ---
 name: content-to-pipeline
-description: "When the user wants to turn content into revenue, build a content-led GTM motion, reverse engineer distribution, or repurpose content across platforms. Also use when the user mentions 'content marketing,' 'content-led growth,' 'content to pipeline,' 'distribution,' 'content repurposing,' 'content strategy,' 'thought leadership,' 'newsletter,' 'content flywheel,' 'organic growth.' This skill covers content-to-revenue systems from creation through pipeline attribution."
+description: >-
+  Turn content into revenue: build a content-led GTM motion, reverse engineer
+  distribution, repurpose pillar content across platforms, run a newsletter as a
+  pipeline channel, convert content engagement into DMs and meetings, and attribute
+  pipeline to content including dark social. Use when the user mentions
+  content-led growth, content to pipeline, content flywheel, newsletter growth or
+  monetization, thought leadership that drives deals, or "our content doesn't
+  turn into revenue." Not for deciding topics, pillars or an editorial calendar
+  (use content-strategy), writing individual social posts (use social-content),
+  or a solo founder's overall playbook (use solo-founder-gtm).
 ---
 
 # Content-to-Pipeline: Turning Content Into Revenue
@@ -518,10 +527,8 @@ For founders starting from zero or resetting their content strategy, a structure
 | Skill | When to Cross-Reference |
 |---|---|
 | social-selling | When building DM conversion workflows and LinkedIn engagement systems |
-| ai-seo | When creating SEO-optimized pillar content, blog posts, and competitor alternative pages |
-| multi-platform-launch | When coordinating content across platforms for a product launch |
-| ai-ugc-ads | When repurposing organic content into paid ad creative |
-| positioning-icp | When defining the audience and messaging that content should target |
+| launch-strategy | When coordinating content across platforms for a product launch |
+| positioning-workshop | When defining the audience and messaging that content should target |
 | solo-founder-gtm | When a solo founder needs to prioritize content activities with limited time |
 | paid-creative-ai | When amplifying top-performing organic content with paid distribution |
 | partner-affiliate | When building newsletter cross-promotions and affiliate content partnerships |

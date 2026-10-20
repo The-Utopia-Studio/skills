@@ -1,6 +1,12 @@
 ---
 name: repo-scanner
-description: Scans a GitHub repository to understand its tech stack, hosting, monitoring, integrations, and current production readiness. Use when the user asks to "audit", "check", or "scan" their repo. Don't use for code review or bug detection.
+description: >-
+  Scan a repository and score its production readiness out of 10: tech stack,
+  hosting, CI/CD, environments, error tracking, docs, security, cost,
+  integrations, LLM-readiness, code organisation, plus the top 3 issues and
+  which skills fix them. Use when the user asks how production-ready their repo
+  is, wants a repo scan, audit or readiness score, or asks what to fix first
+  before launch. Not for a deep security review (use security-auditor).
 ---
 
 # Repo Scanner
@@ -117,17 +123,17 @@ grep -rn "sk-\|api_key\s*=\s*['\"].\+['\"]" --include="*.ts" --include="*.js" --
 
 ## 🛠️ Recommended Next Steps
 
-Run these vibe-to-prod skills to fix the issues above:
+Run these skills to fix the issues above:
 
-1. `skills/{skill-name}/` — {what it will fix}
-2. `skills/{skill-name}/` — {what it will fix}
-3. `skills/{skill-name}/` — {what it will fix}
+1. `{skill-name}` — {what it will fix}
+2. `{skill-name}` — {what it will fix}
+3. `{skill-name}` — {what it will fix}
 ````
 
 **Rules for the output:**
 - Use the EXACT table format above with ✅/⚠️/❌ status icons
 - Score is X/10 where ✅=1, ⚠️=0.5, ❌=0
 - Top 3 issues must include specific file:line references when possible
-- Recommended next steps must reference actual skill directory names
+- Recommended next steps must name real skills from this set: `deployment-engineer` (CI/CD, Docker, environments), `deploy-to-vercel` or `railway` (hosting), `monitoring-setup` (errors, analytics, health), `security-auditor` (secrets, deps, auth), `cost-optimizer` (cloud spend), `integration-linker` (Slack/Linear/Sentry wiring), `prompt-engineer` (AGENTS.md / LLM-readiness), `repo-structurer` (READMEs, dead code, modularity)
 - Keep the entire output under 100 lines
 - Do NOT add extra sections, executive summaries, or risk assessments

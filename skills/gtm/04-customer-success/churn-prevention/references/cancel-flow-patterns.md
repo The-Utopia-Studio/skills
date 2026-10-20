@@ -184,7 +184,7 @@ For multi-plan products, downgrade is the strongest save:
 When the cancel reason is "switching to competitor":
 
 1. **Ask which competitor** (optional, don't force it)
-2. **Show a comparison** if you have one (see competitor-alternatives skill)
+2. **Show a comparison** if you have one (see competitive-battlecard skill)
 3. **Offer a migration credit** ("We'll match their price for 3 months")
 4. **Request a feedback call** ("15 minutes to understand what we're missing")
 

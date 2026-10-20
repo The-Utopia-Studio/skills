@@ -8,11 +8,6 @@ description: Systematically investigates causal relationships to identify true r
 ## Table of Contents
 
 - [Workflow](#workflow)
-  - [1. Define the Effect](#1--define-the-effect)
-  - [2. Generate Hypotheses](#2--generate-hypotheses)
-  - [3. Build Causal Model](#3--build-causal-model)
-  - [4. Test Causality](#4--test-causality)
-  - [5. Document & Validate](#5--document--validate)
 - [Common Patterns](#common-patterns)
 - [Guardrails](#guardrails)
 - [Quick Reference](#quick-reference)

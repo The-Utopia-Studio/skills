@@ -6,7 +6,6 @@ intent: >-
 type: component
 ---
 
-
 ## Purpose
 Break down large user stories, epics, or features into smaller, independently deliverable stories using systematic splitting patterns. Use this to make work more manageable, reduce risk, enable faster feedback cycles, and maintain flow in agile development. This skill applies to user stories, epics, and any work that's too large to complete in a single sprint.
 
@@ -55,7 +54,7 @@ Based on Richard Lawrence and Peter Green's "Humanizing Work Guide to Splitting 
 ## Application
 
 ### Step 1: Identify the Original Story
-Start with the story/epic/feature that needs splitting. Ensure it's written using the user story format (reference `skills/user-story/SKILL.md` or `skills/epic-hypothesis/SKILL.md`).
+Start with the story/epic/feature that needs splitting. Ensure it's written using the user story format (reference `user-story`; for an epic, state it as "We believe [capability] for [persona] will achieve [outcome]").
 
 ```markdown
 ### Original Story:
@@ -176,7 +175,7 @@ Work through the 8 splitting patterns in order. Stop when you find one that appl
 
 ### Step 3: Write the Split Stories
 
-For each split, write a complete user story using the format from `skills/user-story/SKILL.md`:
+For each split, write a complete user story using the format from `user-story`:
 
 ```markdown
 ### Split 1 using [Pattern Name]:
@@ -279,25 +278,13 @@ As a team admin, I want to manage team members so that I can control access.
 ## References
 
 ### Related Skills
-- `skills/user-story/SKILL.md` — Format for writing the split stories
-- `skills/epic-hypothesis/SKILL.md` — Epics often need splitting before becoming stories
-- `skills/jobs-to-be-done/SKILL.md` — Helps identify meaningful splits along user jobs
+- `user-story` — Format for writing the split stories
+- `jobs-to-be-done` — Helps identify meaningful splits along user jobs
 
 ### External Frameworks
 - Richard Lawrence & Peter Green, *The Humanizing Work Guide to Splitting User Stories* — Origin of the 8 splitting patterns
 - Bill Wake, *INVEST in Good Stories* (2003) — Criteria for well-formed stories (Independent, Negotiable, Valuable, Estimable, Small, Testable)
 - Mike Cohn, *User Stories Applied* (2004) — Story decomposition techniques
 
-### Dean's Work
-- User Story Splitting Prompt Template (based on Humanizing Work framework)
-
 ### Provenance
-- Adapted from `prompts/user-story-splitting-prompt-template.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `user-story-splitting.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/user-story/SKILL.md`, `skills/epic-hypothesis/SKILL.md`
-**Applies to:** User stories, epics, and any work that's too large to complete in a single sprint
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

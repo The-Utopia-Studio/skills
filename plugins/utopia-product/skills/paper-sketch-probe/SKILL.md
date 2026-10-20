@@ -73,4 +73,4 @@ Kill line (auto-fail): the read-out claims the sketch proved demand, willingness
 - `wizard-of-oz-probe` — the next rung when the claim is "would they use it if it worked."
 - `concierge-probe` — when the claim is trust or willingness to pay under real stakes.
 - `evidence-ladder` — the scoring ladder this read-out uses.
-Supersedes nothing. It absorbs the paper/L1 rung of `skills/discovery/prototyping-pretotyping` and sharpens it: that skill tests "workflow"; this one tests legibility and decision location, and refuses to let a sketch speak about demand. It **narrows** that one rung — it does not replace the whole skill. `probe-matrix` is what supersedes `prototyping-pretotyping`, so this skill's `supersedes: none` is correct.
+Supersedes nothing. It absorbs the paper/L1 rung of the generic prototyping fidelity ladder and sharpens it: the ladder tests "workflow"; this one tests legibility and decision location, and refuses to let a sketch speak about demand. It **narrows** that one rung — it does not replace the whole ladder. `probe-matrix` is what replaced it, so this skill's `supersedes: none` is correct.

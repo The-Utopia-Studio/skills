@@ -1,6 +1,16 @@
 ---
 name: trace-to-interview
-description: Turns a set of production traces into discovery interviews — recovering, for each behaviour pattern, the discovery question the user answered by acting instead of talking. Fires on "learn from usage", "mine the logs", "what are our production traces telling us", "turn usage data into discovery", "what are users saying in the logs". Outputs a trace-interview log: one card per behaviour pattern with the observed behaviour [Fact, 0.7], the discovery question it answers, the inferred JTBD/satisfaction signal [Hypothesis], distinct-user weight, the confirm-the-why probe, and the cost of the scheduled interview it replaced — routed to continuous-discovery-engine as a feed-2 signal. NOT the AARRR/retention/North-Star scorecard (use metrics-that-matter — that keeps the number; this recovers the question behind it), NOT structuring a recorded human interview transcript (use summarize-interview — that is words at 0.3; this is behaviour at 0.7), NOT standing up the whole three-feed discovery loop and its cadence (use continuous-discovery-engine — this decodes one feed and hands the cards up).
+description: >-
+  Turns production traces into discovery interviews, recovering for each behaviour pattern the
+  discovery question the user answered by acting instead of talking. Fires on 'learn from usage',
+  'mine the logs', 'what are our production traces telling us', 'turn usage data into discovery'.
+  Outputs a trace-interview log: one card per pattern with the observed behaviour [Fact, 0.7], the
+  question it answers, the inferred JTBD or satisfaction signal [Hypothesis], distinct-user weight,
+  the confirm-the-why probe, and the cost of the interview it replaced, routed to
+  continuous-discovery-engine as a feed-2 signal. NOT the AARRR / retention / North Star scorecard
+  (use metrics-that-matter), NOT structuring a recorded interview transcript (use
+  summarize-interview), NOT standing up the whole three-feed discovery loop (use
+  continuous-discovery-engine).
 type: generator
 supersedes: none
 ---

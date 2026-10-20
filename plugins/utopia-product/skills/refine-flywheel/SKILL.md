@@ -1,6 +1,14 @@
 ---
 name: refine-flywheel
-description: Stands up the post-launch loop for a shipped AI product — ship behind sign-off → observe tweak-time (how much the customer edits before accepting) → learn by re-running the WHOLE eval set on every model release → refine by promoting autonomy only as a scored eval result, never by feel. Fires on "what happens after launch", "improve the product", "set up the loop", "a new model dropped, should we upgrade", "can we raise the autonomy / drop the sign-off yet". Returns a filled flywheel cadence doc. NOT for which metrics/North Star/retention to track (use metrics-that-matter), NOT for turning one trace into a discovery interview (use trace-to-interview), NOT for writing the eval set or autonomy ladder in the first place (use eval-first-spec — this re-runs what that created).
+description: >-
+  Set up the post-launch improvement loop for a shipped AI product: ship behind human sign-off,
+  observe tweak-time (how much customers edit before accepting), re-run the WHOLE eval set on every
+  new model release, and raise autonomy only on a scored eval result, never by feel. Use when the user
+  asks what to do after launch, whether to upgrade to a newly released model, whether they can drop
+  the human sign-off or raise autonomy, or how to set up the improvement loop. Returns a flywheel
+  cadence doc. NOT which metrics or North Star to track (use metrics-that-matter), NOT turning traces
+  into discovery interviews (use trace-to-interview), NOT writing the eval set or autonomy ladder in
+  the first place (use eval-first-spec).
 type: generator
 supersedes: none
 ---

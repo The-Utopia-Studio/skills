@@ -1,6 +1,13 @@
 ---
 name: deployment-engineer
-description: Sets up CI/CD pipelines, Docker configurations, and dev/staging/production environments. Use when the user asks to "set up deployment", "add CI/CD", "create Docker", "configure environments", or "automate deploys". Don't use for monitoring, security, or code organization.
+description: >-
+  Set up CI/CD and deployment infrastructure: GitHub Actions for lint, tests and
+  deploys, a production Dockerfile and docker-compose, dev/staging/production
+  environment separation with env vars, and health checks. Use when the user
+  asks to set up CI/CD, add GitHub Actions, dockerize an app, create staging and
+  production environments, automate deploys, or stop deploying by SSH and git
+  pull. Not for one-off Vercel deploys (use deploy-to-vercel), Railway (use
+  railway), or monitoring (use monitoring-setup).
 ---
 
 # Deployment Engineer

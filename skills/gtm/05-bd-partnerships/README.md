@@ -13,20 +13,13 @@ Install the full GTM pack (all seven sub-modules):
 Skills in this sub-module:
 
 - `account-tier-scoring`
-- `ai-cold-outreach`
 - `ai-sdr`
 - `cold-email`
-- `cold-email-personalization`
 - `cold-offer-architect`
-- `cold-outreach`
 - `email-deliverability`
 - `email-sequence`
 - `lead-enrichment`
-- `outbound-plays`
 - `outreach-execution`
 - `partner-affiliate`
-- `signal-anchored-message`
-- `signal-scoring`
 - `social-selling`
-- `suppression-logic`
 - `warm-intro-intelligence`

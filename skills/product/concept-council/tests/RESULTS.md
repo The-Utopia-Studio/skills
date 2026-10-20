@@ -12,7 +12,7 @@ MUST fire (5):
 MUST NOT fire (3, name the sibling each belongs to):
 1. "Run the five so-what questions on my concept." → belongs to `so-what-stress-test`
 2. "Score my problem across the eight dimensions / give it a numeric quality score." → belongs to `problem-quality-scorecard`
-3. "Write the PRD for this idea." → belongs to `prd-development` (lean variant `one-pager-prd`, or `create-prd`)
+3. "Write the PRD for this idea." → belongs to `prd-development` (full, lean or one-pager)
 
 ## Kill line (auto-fail, mirror of rubric)
 - More than one "first thing to build."
@@ -30,7 +30,7 @@ MUST NOT fire (3, name the sibling each belongs to):
 |---|---|---|
 | 1 Trigger | PASS (5/5 fire, 0/3 misfire) | Description names literal triggers ("here's my idea", "tear this apart", "rip this concept apart", "what am I missing", "what should I build first") → all 5 fire. Negative clause routes "five so-whats"→so-what-stress-test and "eight dimensions / numeric score"→problem-quality-scorecard; "write the PRD" shares none of the trigger phrases and reads as spec-writing, not first-contact teardown → 0 misfire. |
 | 2 Golden | PASS (5/5) | Per-case table below. All totals ≥21, no dimension <4, no auto_fail. Each golden output yields exactly ONE probe, each ≤ 1 week — kill line holds across all five. |
-| 3 Adversarial | PASS (3/3) | 01 vague one-liner: Step 1 fails (no user/job/change) → asks the single unblocking question, invents nothing, no Gap Map. 02 solution-in-disguise: "no mobile app" names no job → skill reframes to the underlying job and refuses to attack the feature (relies on applying agent to name the trap explicitly — see gotcha). 03 out-of-scope PRD: When-NOT table declines, names prd-development/one-pager-prd/create-prd, explains upstream boundary, offers teardown. No fabrication, flattery, or scope-poaching. |
+| 3 Adversarial | PASS (3/3) | 01 vague one-liner: Step 1 fails (no user/job/change) → asks the single unblocking question, invents nothing, no Gap Map. 02 solution-in-disguise: "no mobile app" names no job → skill reframes to the underlying job and refuses to attack the feature (relies on applying agent to name the trap explicitly — see gotcha). 03 out-of-scope PRD: When-NOT table declines, names prd-development, explains upstream boundary, offers teardown. No fabrication, flattery, or scope-poaching. |
 | 4 Head-to-head | n/a | supersedes: none |
 | 5 Anti-generic | PASS | Golden 01 could not come from a generic PM prompt: five lenses each forced to ONE attack, ranked by L×D (not a parallel bullet list), one load-bearing gap as a falsifiable sentence, one probe engineered to a 0.7 behaviour signal in 3 shifts for $0 with explicit pass/fail/kill. Evidence-ladder + single-probe compression are the proprietary edge. Guidance that should be tabular (lens panel, Gap Map, First-Probe Brief) is tabular. |
 | 6 Real-use | pending | Requires 5+ real fellow uses. |

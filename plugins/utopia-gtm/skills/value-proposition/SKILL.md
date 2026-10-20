@@ -1,13 +1,21 @@
 ---
 name: value-proposition
-description: "Design a detailed value proposition using a 6-part JTBD template — Who, Why, What before, How, What after, Alternatives. Use when creating a value proposition, analyzing customer value delivery, or articulating why customers should choose your product."
+description: >-
+  Design a value proposition with a 6-part JTBD template (Who, Why, What before,
+  How, What after, Alternatives), then turn it into segment- and channel-specific
+  value proposition statements for marketing, sales and onboarding. Use when
+  creating or sharpening a value proposition, analyzing customer value delivery,
+  articulating why customers should choose you, or generating value prop
+  statements from an existing value proposition. Not for the positioning
+  statement, message house or brand narrative (use positioning-workshop), full
+  website copy (use copywriting), or ICP definition (use ideal-customer-profile).
 ---
 # Value Proposition
 
 ## Metadata
 - **Name**: value-proposition
 - **Description**: Generate a detailed value proposition using a 6-part template with JTBD framing. Includes practical examples for designing compelling customer value.
-- **Triggers**: value proposition, value prop, customer value, JTBD value, value map
+- **Triggers**: value proposition, value prop, customer value, JTBD value, value map, value proposition statements, segment messaging
 
 ## Instructions
 
@@ -72,6 +80,22 @@ Your task is to develop a comprehensive value proposition that articulates the c
 6. Compare against competitive alternatives
 7. Create a concise value prop statement (1-2 sentences)
 8. Develop a positioning statement for marketing use
+9. Write value proposition statements per segment and channel (below)
+
+## Value Proposition Statements (per segment and channel)
+
+Once the 6-part value proposition exists (or the user supplies one), write one statement per target segment or use case, and adapt it for where it will be used: marketing (website, ads), sales (deck, talk track) and onboarding (welcome email, first-run screen). Each statement must:
+- Address one specific segment or use case directly
+- Lead with the primary benefit and desired outcome
+- Name the key capabilities that make that outcome possible
+- Use the audience's own language, in the brand's tone
+
+**Example (Canva):**
+1. **For social media marketers:** Canva lets social media marketers create on-brand designs without expensive design software or a dedicated designer, producing professional graphics that lift engagement and keep the brand consistent across channels.
+2. **For small business owners:** With drag-and-drop editing and thousands of templates, small business owners can launch polished campaigns in minutes: website graphics, social posts, flyers and promotions, with no design experience.
+3. **For content creators:** Canva lets creators spend their time on storytelling instead of design logistics, producing consistent, platform-ready visuals at scale.
+
+Ask for: existing value props or key benefits, target segments and their pains, differentiators, the distribution channels, and any tone-of-voice guidelines.
 
 ### Domain Context
 

@@ -56,7 +56,7 @@ The two enthusiastic panellists produced nothing. That is expected, and it is wh
 
 Proposed revision: "Mentix reads the alarm's rise rate the way your best supervisor does — so the line stays up when it should, and stops when it must." Re-run the panel on the revised copy (cheap).
 
-**Then PROMOTE.** The rise-rate-vs-level distinction and the bearing-change exception are exactly what a real interview must probe. Book the six interviews via `interview-script`, but now with a sharper question: does the manager experience the copilot as confirming their read or overriding it? That is the load-bearing question the synthetic screen surfaced — and it would have been invisible if the fellow had read the two "I'd use it every shift" responses as a green light.
+**Then PROMOTE.** The rise-rate-vs-level distinction and the bearing-change exception are exactly what a real interview must probe. Book the six interviews via `discovery-interview-prep`, but now with a sharper question: does the manager experience the copilot as confirming their read or overriding it? That is the load-bearing question the synthetic screen surfaced — and it would have been invisible if the fellow had read the two "I'd use it every shift" responses as a green light.
 
 ## 6. Honesty check
 

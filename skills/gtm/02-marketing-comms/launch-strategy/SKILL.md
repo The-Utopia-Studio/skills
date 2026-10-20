@@ -1,6 +1,16 @@
 ---
 name: launch-strategy
-description: "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas."
+description: >-
+  Plan and run a product launch, feature announcement or release: the five-phase
+  launch (internal, alpha, beta, early access, full), owned/rented/borrowed
+  channels, waitlists, Product Hunt and Show HN, directory submissions, AppSumo,
+  launch-day hour-by-hour execution and post-launch momentum. Use when the user
+  mentions launch, Product Hunt, Hacker News, BetaList, waitlist, beta or early
+  access, launch day, launch checklist, multi-channel launch or "we're about to
+  ship." Not for the overall go-to-market plan or motion selection (use
+  gtm-strategy), ongoing marketing ideas after launch (use marketing-ideas), the
+  working-backwards planning press release (use press-release), or referral loops
+  (use referral-program).
 metadata:
   version: 1.1.0
 ---
@@ -93,7 +103,7 @@ Tap into someone else's audience to shortcut the hardest part—getting noticed.
 1. List industry leaders your audience follows
 2. Pitch win-win collaborations
 3. Use tools like SparkToro or Listen Notes to find audience overlap
-4. Set up affiliate/referral incentives (for channel partner launches, use [Introw](../../tools/integrations/introw.md) to manage deal registration and commissions)
+4. Set up affiliate/referral incentives (for channel partner launches, see the partner-affiliate skill)
 
 **Example - TRMNL:**
 Sent a free e-ink display to YouTuber Snazzy Labs—not a paid sponsorship, just hoping he'd like it. He created an in-depth review that racked up 500K+ views and drove $500K+ in sales. They also set up an affiliate program for ongoing promotion.
@@ -297,6 +307,12 @@ Even small changelog updates remind customers your product is evolving. This bui
 
 ---
 
+## Platform Playbooks
+
+For the platform landscape (discovery, developer, indie, AI directories), the launch sequence framework, the Product Hunt algorithm and launch-page anatomy, Show HN, waitlist building, directory tiers, AppSumo, G2/Capterra, zero-spend UGC, platform timing, the launch-day hour-by-hour plan, launch metrics and the 7-day review, read `references/platform-playbooks.md`.
+
+---
+
 ## Launch Checklist
 
 ### Pre-Launch
@@ -349,5 +365,4 @@ Even small changelog updates remind customers your product is evolving. This bui
 - **email-sequence**: For launch and onboarding email sequences
 - **page-cro**: For optimizing launch landing pages
 - **marketing-psychology**: For psychology behind waitlists and exclusivity
-- **programmatic-seo**: For comparison pages mentioned in post-launch
 - **sales-enablement**: For launch sales collateral and enablement materials

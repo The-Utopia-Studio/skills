@@ -1,6 +1,12 @@
 ---
 name: cost-optimizer
-description: Identifies cloud cost issues, unused resources, and billing optimization opportunities. Use when the user asks about "costs", "billing", "AWS invoice", "cloud spending", "reduce costs", or "optimize resources". Don't use for monitoring setup, deployment, or security.
+description: >-
+  Cut cloud and hosting costs: find cost traps (always-on EC2, multi-AZ RDS, NAT
+  gateways, log retention, S3 lifecycle, Vercel and Railway tiers), unused or
+  oversized resources, quick wins with estimated monthly savings, and billing
+  alerts. Use when the user mentions a high or rising AWS, GCP, Vercel or cloud
+  bill, asks where the money is going, wants to reduce cloud spend, or lists
+  their infrastructure and asks what to cut.
 ---
 
 # Cost Optimizer

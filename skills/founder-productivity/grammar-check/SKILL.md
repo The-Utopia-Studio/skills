@@ -1,6 +1,12 @@
 ---
 name: grammar-check
-description: "Identify grammar, logical, and flow errors in text and suggest targeted fixes without rewriting the entire text. Use when proofreading content, checking writing quality, or reviewing a draft."
+description: >-
+  Proofread text for grammar, spelling, punctuation, logic and flow errors and suggest targeted fixes
+  (location, error, fix, rationale) without rewriting the whole text. Use whenever the user pastes a
+  paragraph, memo, email, report, investor update or document and asks to check grammar, proofread,
+  find errors, or fix mistakes while keeping their wording. Not for improving or rewriting marketing
+  copy such as landing pages, ads or campaign emails (use copy-editing) or writing new copy (use
+  copywriting).
 ---
 # Grammar and Flow Checking
 

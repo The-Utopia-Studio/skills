@@ -1,6 +1,13 @@
 ---
 name: distill
-description: Strip designs to their essence by removing unnecessary complexity. Great design is simple, powerful, and clean. Use when the user asks to simplify, declutter, reduce noise, remove elements, or make a UI cleaner and more focused.
+description: >-
+  Simplify an overloaded existing UI: remove, merge or hide tabs, toggles,
+  panels, accordions and duplicate controls; reduce choices; apply progressive
+  disclosure; and describe the leaner layout. Use when the user says a screen is
+  overwhelming, cluttered, has too many options, tabs, settings or panels, or
+  asks to declutter, strip down or simplify it. Not for building a page in a
+  minimalist visual style (use minimalist-ui) or toning down loud colors (use
+  quieter).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"

@@ -23,7 +23,7 @@ Load before every deck session:
    - `datapack-builder`
    - `ib-check-deck`
    - `deck-refresh`
-4. **Confirm output path** with Karan: typically `/Users/kp/Documents/Utopia Decks/`
+4. **Confirm output path** with the user (default: the current working folder)
 5. **Read one past Utopia deck** to calibrate voice and visual style.
 
 ## First task

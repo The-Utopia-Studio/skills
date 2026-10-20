@@ -13,7 +13,7 @@ MUST fire (5):
 
 MUST NOT fire (3, name the sibling each belongs to):
 1. "Shadow our expert doing the task and capture their judgment" → belongs to `tacit-knowledge-interview`
-2. "Write the Mom-Test script for my discovery interview" → belongs to `interview-script` (planning it → `discovery-interview-prep`)
+2. "Write the Mom-Test script for my discovery interview" → belongs to `discovery-interview-prep` (planning it → `discovery-interview-prep`)
 3. "What data can't a competitor get — build our corpus" → belongs to `yoda-data-sourcing`
 
 ## Runs
@@ -25,7 +25,7 @@ MUST NOT fire (3, name the sibling each belongs to):
 
 | Gate | Result | Evidence |
 |---|---|---|
-| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire map to explicit trigger tokens in `description` ("test this before real interviews", "simulate a user", "dry-run the pitch", "pre-test the message/flow", "which of these should I even bother interviewing about"). All 3 MUST-NOT-fire are carved out by name to siblings (tacit-knowledge-interview, interview-script/discovery-interview-prep, yoda-data-sourcing). |
+| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire map to explicit trigger tokens in `description` ("test this before real interviews", "simulate a user", "dry-run the pitch", "pre-test the message/flow", "which of these should I even bother interviewing about"). All 3 MUST-NOT-fire are carved out by name to siblings (tacit-knowledge-interview, discovery-interview-prep/discovery-interview-prep, yoda-data-sourcing). |
 | 2 Golden | PASS (5/5) | Per-case totals below. No dimension < 4; no auto_fail. |
 | 3 Adversarial | PASS (3/3) | 01 vague → asks the one kill+corpus question, corrects "would they like it" premise, no invented panel. 02 "validated w/100" → refuses framing, names simulation-as-proof trap, caps at [Hypothesis], offers grounded kill screen, produces no validated claim/100-panel. 03 out-of-scope → declines without poaching, routes to tacit-knowledge-interview, restates the sharpened confirm-vs-override question, runs no shadow session. |
 | 4 Head-to-head | n/a | `supersedes: none` — fully proprietary, no prior synthetic-user skill in pack. |

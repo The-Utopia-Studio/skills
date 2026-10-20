@@ -293,16 +293,16 @@ Before launching campaigns, ensure proper tracking and account setup.
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key advertising platforms:
+Key advertising platforms:
 
-| Platform | Best For | MCP | Guide |
-|----------|----------|:---:|-------|
-| **Google Ads** | Search intent, high-intent traffic | ✓ | [google-ads.md](../../tools/integrations/google-ads.md) |
-| **Meta Ads** | Demand gen, visual products, B2C | - | [meta-ads.md](../../tools/integrations/meta-ads.md) |
-| **LinkedIn Ads** | B2B, job title targeting | - | [linkedin-ads.md](../../tools/integrations/linkedin-ads.md) |
-| **TikTok Ads** | Younger demographics, video | - | [tiktok-ads.md](../../tools/integrations/tiktok-ads.md) |
+| Platform | Best For | MCP |
+|----------|----------|:---:|
+| **Google Ads** | Search intent, high-intent traffic | ✓ |
+| **Meta Ads** | Demand gen, visual products, B2C | - |
+| **LinkedIn Ads** | B2B, job title targeting | - |
+| **TikTok Ads** | Younger demographics, video | - |
 
-For tracking, see also: [ga4.md](../../tools/integrations/ga4.md), [segment.md](../../tools/integrations/segment.md)
+For tracking, pair with the analytics-tracking skill (GA4, Segment).
 
 ---
 
@@ -311,5 +311,5 @@ For tracking, see also: [ga4.md](../../tools/integrations/ga4.md), [segment.md](
 - **ad-creative**: For generating and iterating ad headlines, descriptions, and creative at scale
 - **copywriting**: For landing page copy that converts ad traffic
 - **analytics-tracking**: For proper conversion tracking setup
-- **ab-test-setup**: For landing page testing to improve ROAS
+- **ab-test-analysis**: For landing page testing to improve ROAS
 - **page-cro**: For optimizing post-click conversion rates

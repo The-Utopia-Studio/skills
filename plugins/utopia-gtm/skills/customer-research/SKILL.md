@@ -1,6 +1,18 @@
 ---
 name: customer-research
-description: When the user wants to conduct, analyze, or synthesize customer research. Use when the user mentions "customer research," "ICP research," "talk to customers," "analyze transcripts," "customer interviews," "survey analysis," "support ticket analysis," "voice of customer," "VOC," "build personas," "customer personas," "jobs to be done," "JTBD," "what do customers say," "what are customers struggling with," "Reddit mining," "G2 reviews," "review mining," "digital watering holes," "community research," "forum research," "competitor reviews," "customer sentiment," or "find out why customers churn/convert/buy." Use for both analyzing existing research assets AND gathering new research from online sources. For writing copy informed by research, see copywriting. For acting on research to improve pages, see page-cro.
+description: >-
+  Use this skill whenever the user hands you customer feedback to analyze or
+  wants a feedback program set up: synthesize interview snippets or transcripts
+  into themes with frequency, confidence and money quotes; analyze sentiment in
+  community posts, reviews, NPS or CSAT comments and flag what needs escalation;
+  set up a voice-of-customer program (sources, tagging taxonomy, cadence, routing
+  insights to owners, weekly VOC digest); build a closed feedback loop from CSM
+  and churn-call notes; analyze loyalty or membership program members by tier;
+  mine Reddit, G2 and app reviews; build research-based personas and JTBD maps.
+  Not for an opportunity solution tree or product discovery cadence (use
+  continuous-discovery-engine), defining the ICP (use ideal-customer-profile),
+  writing copy from the research (use copywriting), or planning discovery
+  interviews (use discovery-interview-prep).
 metadata:
   version: 1.0.0
 ---
@@ -168,6 +180,19 @@ After gathering from multiple sources, synthesize into:
 
 ---
 
+## Continuous VOC and Sentiment Program
+
+Folded in from the retired voice-of-customer, sentiment-analysis, sentiment-feedback-loop and member-insights skills. Use when research is an ongoing loop, not a one-off study.
+
+1. **Program design:** objective, personas, journey stages or touchpoints, sources (NPS/CSAT, tickets, call notes, community threads, reviews, surveys), sample size and cadence. Keep consent logs; rotate interview participants quarterly.
+2. **Tagging schema:** every item gets product area, journey stage, persona, sentiment (positive / negative / neutral / frustrated), emotion, urgency or severity, and theme. Keep the taxonomy fixed between cycles so trends are comparable.
+3. **Trend tracking:** count themes per period and per segment; correlate spikes with launches, incidents or pricing changes. Use NLP for volume, human review for nuance.
+4. **Risk scoring and routing:** define escalation thresholds (negative volume spike, an influential customer or community member involved, a compliance issue) and route critical items to an owner (product, engineering, CS, exec sponsor) with a response SLA.
+5. **Insight packaging:** a weekly VOC digest (top themes, trend direction, 3-5 money quotes, recommended action per theme). Highlight positive sentiment too, for advocacy and references.
+6. **Closed loop:** log every action taken, its owner and status, and follow up with the customers who raised it. Pair each insight with an experiment and the metric it should move.
+
+---
+
 ## Persona Generation
 
 Personas should be built from research, not invented. Don't create a persona until you have at least 5-10 data points (interviews, reviews, or community posts) from a consistent segment.
@@ -263,7 +288,7 @@ Don't ask all five at once — lead with #1 and #2, then follow up as needed.
 |-----------------|-------|
 | Writing copy informed by the research | `copywriting` |
 | Optimizing a page using VOC insights | `page-cro` |
-| Building a competitor comparison page | `competitor-alternatives` |
+| Building a competitor battlecard | `competitive-battlecard` |
 | Creating a churn prevention strategy from churn research | `churn-prevention` |
 | Planning paid ads informed by research | `paid-ads` |
 | Writing cold email using research on pain/trigger | `cold-email` |

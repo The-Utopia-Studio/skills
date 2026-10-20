@@ -1,0 +1,14 @@
+[
+  {
+    "expected": "code-structure",
+    "group": "build",
+    "prompt": "Three of our server actions (createWorkspace, importRepo, retryBuild) each copy-paste about 60 lines that spin up a sandbox, clone the repo, detect the package manager and run install. A bug fix in one didn't reach the others. How should I split this into actions vs a shared service layer, and in what order should I migrate?",
+    "runs": 1,
+    "hits": 0,
+    "errors": 1,
+    "fired": {
+      "error: You've hit your session limit · resets 1:40pm (Africa/Cairo)": 1
+    },
+    "status": "ERROR"
+  }
+]

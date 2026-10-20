@@ -1,6 +1,15 @@
 ---
 name: bayesian-reasoning-calibration
-description: Applies Bayesian reasoning to systematically update probability estimates with new evidence, helping make better forecasts and avoid overconfidence. Use when making predictions or judgments under uncertainty, forecasting outcomes, evaluating probabilities, testing hypotheses, calibrating confidence, assessing risks with uncertain data, or when user mentions priors, likelihoods, Bayes theorem, probability updates, forecasting, calibration, or belief revision.
+description: >-
+  Update a probability with new evidence using Bayes' rule, and show the maths: prior,
+  likelihoods P(E|H) and P(E|not H), likelihood ratio, posterior, and a calibration and
+  sensitivity check. Use this skill whenever the user says something like "I thought there was
+  a 30% chance, now X happened, what should I believe?", "update my probability", "how much
+  should this evidence move me", "given these hit rates, what are the odds now", or gives a
+  prior plus new data (a pilot result, a signal, a test outcome) and wants a revised estimate.
+  Also for priors, likelihoods, Bayes theorem, belief revision and calibrating confidence. Not
+  for finding the starting base rate (use reference-class-forecasting) or for auditing your
+  reasoning for bias (use scout-mindset-bias-check).
 ---
 
 # Bayesian Reasoning & Calibration
@@ -8,11 +17,6 @@ description: Applies Bayesian reasoning to systematically update probability est
 ## Table of Contents
 
 - [Workflow](#workflow)
-  - [1. Define the Question](#1--define-the-question)
-  - [2. Establish Prior Beliefs](#2--establish-prior-beliefs)
-  - [3. Identify Evidence & Likelihoods](#3--identify-evidence--likelihoods)
-  - [4. Calculate Posterior](#4--calculate-posterior)
-  - [5. Calibrate & Document](#5--calibrate--document)
 - [Common Patterns](#common-patterns)
 - [Guardrails](#guardrails)
 - [Quick Reference](#quick-reference)
@@ -134,7 +138,7 @@ Check calibration (over/underconfident?), validate assumptions (are likelihoods 
 
 - **Standard template**: `resources/template.md`
 - **Multiple hypotheses**: `resources/methodology.md`
-- **Examples**: `resources/examples/product-launch.md`, `resources/examples/medical-diagnosis.md`
+- **Example**: `resources/examples/product-launch.md`
 - **Quality rubric**: `resources/evaluators/rubric_bayesian_reasoning_calibration.json`
 
 **Bayesian Formula (Odds Form)**:

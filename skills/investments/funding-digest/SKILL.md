@@ -1,6 +1,15 @@
 ---
 name: funding-digest
-description: "Generate a polished one-page PowerPoint slide summarizing key takeaways from recent funding rounds and notable capital markets activity across a user's watched sectors or companies. Use this skill when the user asks for a deal flow summary, weekly recap, funding digest, transaction roundup, or capital markets briefing. Triggers on: 'deal flow digest', 'weekly funding recap', 'deal roundup', 'transaction summary this week', 'what happened in [sector] this week', 'capital markets update', or any request to compile recent funding activity into a briefing slide. Produces a professional single-slide PPTX with key takeaways, valuation data, and Capital IQ deal links."
+description: >-
+  Produces a single-slide PowerPoint deal-flow digest: the funding rounds raised in a period
+  across the user's sectors or companies (company, round, amount, valuation, lead investors,
+  dates, deal links) plus three or four key takeaways, as a branded one-page PPTX briefing.
+  Use this skill, rather than general web research, whenever the user asks for "this week's
+  deal flow digest", a "weekly funding recap", "deal roundup", "what rounds closed in [sector]
+  this week/month", a "capital markets update" or any summary of recent funding rounds as a
+  slide or briefing. Uses S&P Capital IQ MCP data when connected, otherwise web sources with a
+  link per deal. Not for a profile of one company (use tear-sheet) or a multi-slide
+  competitive landscape (use competitive-analysis).
 ---
 
 **AI DISCLAIMER (MANDATORY):**
@@ -14,7 +23,7 @@ You MUST include the following disclaimer text in the powerpoint footer. This is
 
 # Weekly Deal Flow Digest
 
-Generate an analyst-quality **single-slide PowerPoint** that summarizes key takeaways from recent funding rounds across watched sectors or companies, using S&P Global Capital IQ data. Each deal links back to its Capital IQ profile for quick drill-down.
+Generate an analyst-quality **single-slide PowerPoint** that summarizes key takeaways from recent funding rounds across watched sectors or companies, using S&P Global Capital IQ data when that MCP server is connected, or web sources when it is not. Each deal links back to its source (Capital IQ profile, or the announcement/press article) for quick drill-down.
 
 ## When to Use
 
@@ -30,7 +39,14 @@ Trigger on any of these patterns:
 ## Nested Skills
 
 This skill produces a one-slide PPTX briefing:
-- **Read** `/mnt/skills/public/pptx/SKILL.md` before generating the PowerPoint (and its sub-reference `pptxgenjs.md` for creating from scratch)
+- **Read** the installed `pptx` skill before generating the PowerPoint (and its `pptxgenjs.md` guide for creating from scratch)
+
+## Data Source: Capital IQ MCP, or Web Fallback
+
+Check whether S&P Global / Capital IQ MCP tools (e.g. `get_rounds_of_funding_from_identifiers`) are available.
+
+- **Available:** follow the entity-resolution rules and Steps 2-4 below as written.
+- **Not available (web fallback):** for each sector or company in the universe, web-search for rounds announced in the period: company press releases and blogs, lead-investor announcements, reputable tech/finance press (e.g. TechCrunch, Bloomberg, Reuters, FT, Axios Pro, Wamda and MAGNiTT for MENA), regulatory filings where they exist (e.g. SEC Form D). For each deal record company, round type, amount, pre/post-money if disclosed, lead investor(s), announced date and the source URL. Require one primary source (company or investor) or two independent press sources per deal; mark single-source items "[unconfirmed]". In the slide's Deal Link column, link to the source article instead of Capital IQ, and change the footer source line to "Sources: company releases and press, compiled [date]". Skip Rules 0-6 (they are Capital IQ specific), but still exclude subsidiaries and defunct companies using `references/sector-seeds.md`.
 
 ## Entity Resolution & Tool Robustness
 
@@ -307,7 +323,7 @@ async function fetchLogo(companyName, outputDir) {
 
 ### Step 7: Generate the One-Page PPTX
 
-Read `/mnt/skills/public/pptx/SKILL.md` and `/mnt/skills/public/pptx/pptxgenjs.md` before creating the slide.
+Read the installed `pptx` skill and its `pptxgenjs.md` guide before creating the slide.
 
 Create a **single-slide** PowerPoint using `pptxgenjs`. The slide should be information-dense but visually clean — think "executive dashboard" not "wall of text."
 
@@ -471,17 +487,17 @@ Follow the QA process from the PPTX skill:
 1. **Content QA:** `python -m markitdown deal-flow-digest.pptx` — verify all text, numbers, company names, valuation figures, and deal links are correct
 2. **Visual QA:** Convert to image and inspect:
    ```bash
-   python /mnt/skills/public/pptx/scripts/office/soffice.py --headless --convert-to pdf deal-flow-digest.pptx
+   soffice --headless --convert-to pdf deal-flow-digest.pptx   # LibreOffice; if missing, say so and rely on content QA
    pdftoppm -jpeg -r 200 deal-flow-digest.pdf slide
    ```
    Check for overlapping elements, text overflow, alignment issues, low-contrast text, logo sizing problems, and that deal link text is visible.
-3. **Link QA:** Verify that the Capital IQ URLs in the table are correctly formatted with the right transaction IDs.
+3. **Link QA:** Verify that the Capital IQ URLs (or, in web-fallback mode, the source URLs) in the table are correct and resolve.
 4. **Fix and re-verify** — at least one fix-and-verify cycle before declaring done.
 
 ### Step 9: Present Results
 
-1. Copy the final `.pptx` to `/mnt/user-data/outputs/`
-2. Use `present_files` to share the slide
+1. Save the final `.pptx` in the current working folder (or a folder the user names)
+2. Tell the user the file path
 3. Provide a 2–3 sentence verbal summary:
    - "Your digest covers X rounds totaling $Y raised across [sectors]."
    - Call out the single most notable deal and its valuation

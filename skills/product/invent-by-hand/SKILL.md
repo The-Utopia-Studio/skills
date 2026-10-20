@@ -1,6 +1,15 @@
 ---
 name: invent-by-hand
-description: Invent an original product concept before the machine hands you the generic one — onion the stated idea to its invariant core need, diverge and keep the strange child, anchor every concept to your proprietary YODA corpus, then run the generic-prompt test (if the one-line prompt a competitor would type reaches your concept, it isn't yours yet). Returns an invented concept + rationale. Fires on "what should we actually build", "invent the solution", "make it non-obvious", "give me a concept a competitor couldn't just prompt for", "what's the product idea here". Not for carving and adoption-testing the first slice (use wedge-five-questions, run it next), not for finding the proprietary data the concept stands on (use yoda-data-sourcing, run it first), not for designing a cheap experiment to validate an already-chosen idea (use concierge-probe / probe-matrix, section 04).
+description: >-
+  Invent an original, non-obvious product concept instead of the generic one every competitor would
+  prompt for. Use when the user says their space is crowded with the same 'ChatGPT for X' idea, or
+  asks what to actually build, to invent the solution, to make it non-obvious, or for a concept a
+  competitor couldn't just prompt for, especially when they hold proprietary data. Onions the stated
+  idea to its invariant core need, diverges and keeps the strange child, anchors every concept to the
+  proprietary YODA corpus, then runs the generic-prompt test. Returns an invented concept with
+  rationale. Not for carving and adoption-testing the first slice (use wedge-five-questions), finding
+  the proprietary data (use yoda-data-sourcing), or designing an experiment for an already-chosen idea
+  (use probe-matrix).
 type: interactive
 supersedes: none
 ---
@@ -133,6 +142,6 @@ Invention mistaken for validation. A D2 concept is unreachable, not proven. It r
 
 `first-mocks` (sibling, section 05) — renders a chosen concept as a clickable prototype (Crazy 8s → paper → digital → clickable). This skill's hand sketch is the minimum concrete artefact to close the invention loop; when the fellow wants a real clickable prototype, route there.
 
-`concierge-probe` / `probe-matrix` (section 04) — the Icarus home for "now test it cheaply." This is where the experiment-design job of the absorbed `brainstorm-experiments-new` lives; this skill keeps only the invention job.
+`concierge-probe` / `probe-matrix` (section 04) — the Icarus home for "now test it cheaply." This is where the experiment-design job (XYZ hypotheses, pretotypes) lives; this skill keeps only the invention job.
 
-Supersedes: none. Absorbs `discovery/brainstorm-experiments-new`'s useful bones — YODA (your own data beats others' data), skin-in-the-game, behaviour over opinion — but reframes from experiment-design to invention. Brainstorm-experiments designs pretotypes for an already-chosen idea; this produces the idea worth pretotyping and refuses the generic one. For pretotype design itself, route to section 04 probes.
+Supersedes: none. Absorbs the useful bones of generic lean-startup experiment brainstorming — YODA (your own data beats others' data), skin-in-the-game, behaviour over opinion — but reframes from experiment-design to invention. Experiment brainstorming designs pretotypes for an already-chosen idea; this produces the idea worth pretotyping and refuses the generic one. For pretotype design itself, route to section 04 probes.

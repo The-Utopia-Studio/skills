@@ -21,10 +21,10 @@ MUST NOT fire (3, name the sibling each belongs to):
 - Fabricates a trace or eval number to fill a dark feed (esp. pre-launch, Golden 02).
 - Ranks the POC on raw score alone, ignoring the evidence rung (that is the old OST).
 
-## Head-to-head vs. opportunity-solution-tree (Gate 4)
-This skill sets `supersedes: skills/discovery/opportunity-solution-tree` and must beat it on the same input.
+## Head-to-head vs. continuous-discovery-engine (Gate 4)
+This skill replaced the static opportunity-solution-tree skill (now retired) and had to beat it on the same input.
 
-| Dimension | opportunity-solution-tree (static) | continuous-discovery-engine (this) |
+| Dimension | continuous-discovery-engine (static) | continuous-discovery-engine (this) |
 |---|---|---|
 | Inputs | one workshop, whatever is in the room | three live feeds: interviews + production traces + eval telemetry |
 | Freshness | drawn once, goes stale | updates on a cadence; nodes stamped with feed + rung + date |
@@ -49,7 +49,7 @@ The head-to-head: on Golden 01, the static OST would keep "add more cooling-anom
 | 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 must-fire phrasings are literally enumerated in the `description` ("set up discovery", "keep learning after launch", "opportunity tree", "continuous discovery", "discovery after launch"). All 3 must-not are named as sibling redirects in the same line (evidence-ladder / probe-matrix / tacit-knowledge-interview). Clean. |
 | 2 Golden | PASS (5/5) | per-case table below; all ≥21, no dimension <4, no auto_fail triggered |
 | 3 Adversarial | PASS (3/3) | 01 vague → method Step 1/2 forces "has it shipped? which feeds live? / what metric?" and builds nothing. 02 solution-in-disguise → the Icarus core inversion + "Interview-only inflation" gotcha arm the reframe (job = keep tree current with highest-rung feed, not maximise interviews; post-launch traces 0.7 beat interviews 0.3). 03 out-of-scope → description + When-NOT table decline and name `probe-matrix`, no probe designed. No fabrication/flattery/poaching. |
-| 4 Head-to-head | PASS | new vs superseded on this rubric (3 inputs): new ≈24–25 each; opportunity-solution-tree ≈7–8 each. New wins on TOTAL and on both named dims: proprietary_edge 5 vs 1, challenge 5 vs 2. |
+| 4 Head-to-head | PASS | new vs superseded on this rubric (3 inputs): new ≈24–25 each; continuous-discovery-engine ≈7–8 each. New wins on TOTAL and on both named dims: proprietary_edge 5 vs 1, challenge 5 vs 2. |
 | 5 Anti-generic | PASS | Golden-01 output could NOT come from a generic PM prompt: Raw×rung weighting mechanically demotes opinion-backed solutions, and the loop turn kills an interview-backed 0.3 solution (A1 cooling alerts) with a 0.7 trace — moves a generic OST cannot make. All load-bearing mechanics are tabular, not prose. |
 | 6 Real-use | pending | requires 5+ real fellow uses |
 

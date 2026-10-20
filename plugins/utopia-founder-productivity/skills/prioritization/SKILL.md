@@ -1,11 +1,14 @@
 ---
 name: prioritization
-description: >
-  Framework-driven feature and initiative prioritization using RICE, ICE, or
-  weighted scoring. Grounds prioritization in strategic pillars and demands
-  evidence-based scoring. Trigger phrases: "prioritize features",
-  "prioritization", "rank these initiatives", "RICE score", "ICE score",
-  "what should we build next", "prioritize my backlog"
+description: >-
+  Rank features, initiatives or customer problems with an evidence-based framework (RICE, ICE,
+  weighted scoring, or Opportunity Score for problems) tied to strategic pillars, then produce a
+  ranked list, sequencing and a cut line. Also answers which framework to use (RICE vs ICE, Kano,
+  MoSCoW, Eisenhower, Impact vs Effort) with formulas and when-to-use guidance. Use on 'prioritize my
+  backlog', 'RICE score', 'rank these initiatives', 'what should we build next', or 'which
+  prioritization framework'. Not for sequencing a quarter or half-year roadmap across teams (use
+  roadmap-planning) or a go/no-go on whether one problem is worth building (use
+  problem-quality-scorecard).
 argument-hint: "[list-of-features-or-initiatives]"
 ---
 
@@ -24,7 +27,7 @@ Ask the PM:
 3. **Who are the key stakeholders?** Whose input matters for this prioritization?
 4. **What are your constraints?** Team size, timeline, budget, technical dependencies.
 
-STOP if the PM cannot articulate any strategic context. Prioritization without strategy is random ordering. Recommend running the `strategy` skill first.
+STOP if the PM cannot articulate any strategic context. Prioritization without strategy is random ordering. Recommend building the strategy layer first with the `product-frame-stack` skill.
 
 ### Step 2: Choose a Framework
 
@@ -48,6 +51,34 @@ Present the three frameworks and help the PM choose:
 - Weight each criterion by importance (weights sum to 100%)
 - Score each initiative 1-5 on each criterion
 - **Score** = Σ (weight × score)
+
+#### Opportunity Score (for prioritizing customer problems, not features)
+Dan Olsen, *The Lean Product Playbook*. Survey customers on **Importance** and **Satisfaction** for each need, normalized to 0-1.
+- **Current value** = Importance × Satisfaction
+- **Opportunity Score** = Importance × (1 − Satisfaction)
+- **Customer value created** = Importance × (S2 − S1), where S1 = satisfaction before, S2 = after
+
+High importance + low satisfaction = best opportunity (upper-left of an Importance vs Satisfaction plot). Use it before RICE/ICE when the list is customer problems rather than solutions; it can also feed RICE/ICE as the Impact term (Impact = Opportunity Score × customers affected).
+
+**Core principle:** never let customers design solutions. Prioritize problems (opportunities), then solutions.
+
+#### Framework Selection Reference
+
+| Framework | Best for | Key insight |
+|---|---|---|
+| Eisenhower Matrix | Personal tasks | Urgent vs important, for individual task management |
+| Impact vs Effort | Quick triage | Simple 2×2, not rigorous for strategic decisions |
+| Risk vs Reward | Initiatives | Like Impact vs Effort but accounts for uncertainty |
+| **Opportunity Score** | Customer problems | Importance × (1 − Satisfaction), normalized 0-1 |
+| Kano Model | Understanding expectations | Must-be, Performance, Attractive, Indifferent, Reverse. For understanding, not ranking |
+| Weighted Decision Matrix | Multi-factor decisions | Weighted criteria; good for stakeholder buy-in |
+| **ICE** | Ideas, quick ranking | Impact × Confidence × Ease |
+| **RICE** | Ideas at scale | (Reach × Impact × Confidence) / Effort |
+| MoSCoW | Requirements | Must/Should/Could/Won't; project-management origin, use with caution |
+
+If the user only asks "which framework should I use" or "RICE vs ICE", answer from this table and stop; run the full scoring process only when they bring a list to rank.
+
+Templates: [Importance vs Satisfaction (Dan Olsen, Google Slides)](https://docs.google.com/presentation/d/1jg-LuF_3QHsf6f1nE1f98i4C0aulnRNMOO1jftgti8M/edit#slide=id.g796641d975_0_3), [ICE (Google Sheets)](https://docs.google.com/spreadsheets/d/1LUfnsPolhZgm7X2oij-7EUe0CJT-Dwr-/edit?usp=share_link&ouid=111307342557889008106&rtpof=true&sd=true), [RICE (Google Sheets)](https://docs.google.com/spreadsheets/d/1S-6QpyOz5MCrV7B67LUWdZkAzn38Eahv/edit?usp=sharing&ouid=111307342557889008106&rtpof=true&sd=true).
 
 ### Step 3: Score Each Initiative
 

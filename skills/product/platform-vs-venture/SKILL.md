@@ -1,17 +1,14 @@
 ---
 name: platform-vs-venture
 description: >-
-  Draws the ownership line for an AI build. For every component it decides one of
-  three things: Daedalus (the studio platform) builds it once and the fellow inherits
-  it, the fellow builds it because it is their moat, or it is a rented commodity.
-  Fires on "build vs buy", "build or use the platform", "what does Daedalus give me",
-  "do we build our own eval harness / RAG / router", "what's ours vs the studio's",
-  "should we build our own model". Returns a build/buy boundary map that splits each
-  component into platform substrate (inherit) and domain signal (build), and kills two
-  errors: rebuilding a platform primitive, or buying/outsourcing what is actually the
-  moat. Not for sequencing the moat into dated gates (use moat-design-canvas), not for
-  laying out the component pipeline and effort split (use compound-system-architecture —
-  run it first), not for writing the actual guardrail rules and thresholds (use
+  Decide build vs buy for each component of an AI product: what the studio platform Daedalus builds
+  once and the fellow inherits, what the fellow must build because it is their moat, and what is a
+  rented commodity. Use when the user asks whether to build their own eval harness, RAG pipeline,
+  model router, guardrails or fine-tuned model, build or use the platform, what Daedalus gives them,
+  or what's ours vs the studio's. Returns a build/buy boundary map splitting platform substrate
+  (inherit) from domain signal (build), and kills two errors: rebuilding a platform primitive, or
+  outsourcing the moat. Not for sequencing the moat into dated gates (use moat-design-canvas), laying
+  out the component pipeline (use compound-system-architecture), or writing guardrail rules (use
   guardrail-design).
 type: generator
 supersedes: none

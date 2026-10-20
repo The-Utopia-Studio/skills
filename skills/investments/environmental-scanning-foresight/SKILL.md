@@ -34,11 +34,11 @@ Systematically collect trends across Political, Economic, Social, Technological,
 
 **Step 3: Detect and validate weak signals**
 
-Identify early indicators that diverge from mainstream expectations—anomalies, edge cases, emergent behaviors. Validate signal credibility (source quality, supporting evidence, plausibility) and assess potential impact if signal amplifies. See [resources/methodology.md](resources/methodology.md#weak-signal-detection) for detection techniques.
+Identify early indicators that diverge from mainstream expectations—anomalies, edge cases, emergent behaviors. Validate signal credibility (source quality, supporting evidence, plausibility) and assess potential impact if signal amplifies. See [resources/methodology.md](resources/methodology.md#2-weak-signal-detection) for detection techniques.
 
 **Step 4: Assess cross-impacts and interactions**
 
-Map how trends interact (reinforcing, offsetting, cascading). Identify critical uncertainties (high impact + high uncertainty) and predetermined elements (high impact + low uncertainty). See [resources/methodology.md](resources/methodology.md#cross-impact-analysis) for interaction mapping.
+Map how trends interact (reinforcing, offsetting, cascading). Identify critical uncertainties (high impact + high uncertainty) and predetermined elements (high impact + low uncertainty). See [resources/methodology.md](resources/methodology.md#3-cross-impact-analysis) for interaction mapping.
 
 **Step 5: Develop scenarios for plausible futures**
 

@@ -1,6 +1,14 @@
 ---
 name: deck-refresh
-description: Updates a presentation with new numbers — quarterly refreshes, earnings updates, comp rolls, rebased market data. Use whenever the user asks to "update the deck with Q4 numbers", "refresh the comps", "roll this forward", "swap in the new earnings", "change all the $485M to $512M", or any request to swap figures across an existing deck without rebuilding it.
+description: >-
+  Roll an existing presentation forward with new numbers without rebuilding it: finds every
+  instance of each old figure (text, tables, chart data, axis labels, footnotes, in all its
+  formats such as $41.2M / 41.2 / $41.2 million), shows the full change list and the derived
+  numbers that might now be stale, waits for approval, then edits in place with the formatting
+  kept. Use this skill whenever the user says "update the deck with Q4 numbers", "roll this
+  deck forward", "refresh the LP update / board deck / comps", "swap in the new figures", "NAV
+  went from X to Y, update the slides" or "change all the $485M to $512M". Not for building a
+  new deck (use pitch-deck) or QC of a finished deck (use ib-check-deck).
 ---
 
 # Deck Refresh
@@ -20,7 +28,7 @@ This is a four-phase process and the third phase is an approval gate. Don't edit
 
 ## Phase 1 — Get the data
 
-Use `ask_user_question` to find out how the new numbers are arriving:
+Use `AskUserQuestion` to find out how the new numbers are arriving:
 
 - **Pasted mapping** — user types or pastes "revenue $485M → $512M, EBITDA $120M → $135M." The clearest case.
 - **Uploaded Excel** — old/new columns, or a fresh output sheet the user wants pulled from. Read it, confirm which column is which before you trust it.
@@ -72,7 +80,7 @@ FLAGGED — possibly derived, not in your mapping:
 
 The flagged section matters. You're not just executing a find-replace — you're catching the second-order effects the user would've missed at 11pm. If the mapping says `$485M → $512M` and slide 3 also has `+15% YoY` right next to it, that growth rate is probably wrong now. Flag it; don't silently fix it, don't silently leave it.
 
-Use `ask_user_question` for the approval: proceed as shown, proceed but skip the flagged items, or let them revise the mapping first.
+Use `AskUserQuestion` for the approval: proceed as shown, proceed but skip the flagged items, or let them revise the mapping first.
 
 ## Phase 4 — Execute, preserve, report
 

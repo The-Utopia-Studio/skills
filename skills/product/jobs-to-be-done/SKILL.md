@@ -1,11 +1,15 @@
 ---
 name: jobs-to-be-done
-description: Uncover customer jobs, pains, and gains in a structured JTBD format. Use when clarifying unmet needs, repositioning a product, or improving discovery and messaging.
+description: >-
+  Map customer jobs to be done (functional, social, emotional), pains and gains in a structured JTBD /
+  Value Proposition Canvas format, from interview notes or research. Use when the user asks for jobs
+  to be done, a JTBD analysis, or customer jobs, pains and gains. Not for ranking the one durable need
+  under a list of feature requests (use unserved-needs-finder), writing or planning an interview
+  script (use discovery-interview-prep), or job stories for a backlog (use job-stories).
 intent: >-
   Systematically explore what customers are trying to accomplish (functional, social, emotional jobs), the pains they experience, and the gains they seek. Use this framework to uncover unmet needs, validate product ideas, and ensure your solution addresses real motivations—not just surface-level feature requests.
 type: component
 ---
-
 
 ## Purpose
 Systematically explore what customers are trying to accomplish (functional, social, emotional jobs), the pains they experience, and the gains they seek. Use this framework to uncover unmet needs, validate product ideas, and ensure your solution addresses real motivations—not just surface-level feature requests.
@@ -66,7 +70,7 @@ Use `template.md` for the full fill-in structure.
 
 ### Step 1: Define the Context
 Before exploring JTBD, clarify:
-- **Target customer segment:** Who are you studying? (reference `skills/proto-persona/SKILL.md`)
+- **Target customer segment:** Who are you studying? (reference `proto-persona`)
 - **Situation:** In what context does the job arise? (e.g., "When managing a project deadline...")
 - **Current solutions:** What do they use today? (competitors, workarounds, doing nothing)
 
@@ -277,7 +281,7 @@ Ask: "How would your life be better if this job were easier?"
 
 - **Rank pains by intensity:** Which pains are acute vs. mild annoyances?
 - **Identify must-have vs. nice-to-have gains:** What would drive adoption vs. what's just a bonus?
-- **Cross-reference with personas:** Do different personas have different jobs/pains/gains? (reference `skills/proto-persona/SKILL.md`)
+- **Cross-reference with personas:** Do different personas have different jobs/pains/gains? (reference `proto-persona`)
 - **Validate with data:** Survey a broader audience to confirm JTBD insights from interviews
 
 ---
@@ -346,25 +350,14 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/proto-persona/SKILL.md` — Defines who has these jobs/pains/gains
-- `skills/problem-statement/SKILL.md` — JTBD informs the "Trying to" and "But" sections
-- `skills/positioning-statement/SKILL.md` — JTBD informs the "that need" statement
+- `proto-persona` — Defines who has these jobs/pains/gains
+- `problem-statement` — JTBD informs the "Trying to" and "But" sections
+- `positioning-workshop` — JTBD informs the "that need" statement
 
 ### External Frameworks
 - Clayton Christensen, *Competing Against Luck* (2016) — Origin of Jobs-to-be-Done theory
 - Tony Ulwick, *Outcome-Driven Innovation* (2016) — Quantifying jobs and outcomes
 - Alexander Osterwalder, *Value Proposition Canvas* (2014) — Customer jobs/pains/gains framework
 
-### Dean's Work
-- [Link to relevant Dean Peters' Substack articles if applicable]
-
 ### Provenance
-- Adapted from `prompts/jobs-to-be-done.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `jobs-to-be-done.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/proto-persona/SKILL.md`
-**Used by:** `skills/positioning-statement/SKILL.md`, `skills/problem-statement/SKILL.md`, `skills/epic-hypothesis/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

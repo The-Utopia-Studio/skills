@@ -1,6 +1,15 @@
 ---
 name: agent-concierge-probe
-description: Runbook for having an AGENT run a real task end to end, to measure the automation frontier (which steps it does unaided vs which need a human) and the cost-per-outcome to the cent (input+output tokens + tool calls + human-fix minutes, all priced). Fires on "agent does the task", "measure cost per outcome", "agent concierge", "automation frontier", "price it to the cent", "what can the agent not do unaided". Output: a cost-per-outcome read with the full breakdown, plus a frontier map. Not probe-matrix (that picks the probe); not concierge-probe (the founder, not an agent, runs it, and it tests willingness to pay); not wizard-of-oz-probe; not paper-sketch-probe (that tests whether a workflow reads on paper). It is honest about cost and frontier and says nothing about self-serve UX or trust/adoption — it lies about those.
+description: >-
+  Have an AI agent run a real, already-mapped task end to end on several real cases, to measure the
+  automation frontier (which steps it does unaided vs needs a human) and cost-per-outcome to the cent
+  (input and output tokens, tool calls and human-fix minutes, all priced). Use when the user wants an
+  agent to do the real task before automating a service, asks what one outcome costs, wants it priced
+  to the cent, or asks what the agent can't do unaided. Output: a cost-per-outcome breakdown plus a
+  green/amber/red frontier map. Not for choosing the probe (use probe-matrix), the founder delivering
+  by hand to test willingness to pay (use concierge-probe), faking the interface (use
+  wizard-of-oz-probe), or testing a workflow on paper (use paper-sketch-probe). Honest about cost and
+  frontier; says nothing about self-serve UX, trust or adoption.
 type: generator
 supersedes: none
 ---
@@ -81,8 +90,8 @@ Done means: ≥5 logged runs, a cost-per-outcome with all four cost components s
 See `examples/sample.md` — Mentix runs an agent to triage plant maintenance work orders end to end, prices each triaged order to the cent with the full token/tool/human-fix breakdown, and maps the frontier where ambiguous fault codes force a human takeover.
 
 ## Related skills
-- `../probe-matrix` — the router that sends you here; run it first if unsure.
-- `../concierge-probe` — run this first: it gives you the real workflow (and its exceptions) plus the price a customer actually paid, which you compare the CPO against.
-- `../wizard-of-oz-probe` — use instead when the question is would-they-use-it-if-it-worked, not what-does-it-cost.
-- `../../02-customer-discovery/evidence-ladder` — the rungs the read-out scores against.
+- `probe-matrix` — the router that sends you here; run it first if unsure.
+- `concierge-probe` — run this first: it gives you the real workflow (and its exceptions) plus the price a customer actually paid, which you compare the CPO against.
+- `wizard-of-oz-probe` — use instead when the question is would-they-use-it-if-it-worked, not what-does-it-cost.
+- `evidence-ladder` — the rungs the read-out scores against.
 - Supersedes nothing. It absorbs the concierge idea and beats the "can an agent do it?" demo by forcing a priced, itemised cost-per-outcome and a frontier map instead of one happy-path run.

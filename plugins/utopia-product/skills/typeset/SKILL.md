@@ -47,7 +47,7 @@ Analyze what's weak or generic about the current type:
 
 ## Plan Typography Improvements
 
-Consult the [typography reference](reference/typography.md) from the impeccable skill for detailed guidance on scales, pairing, and loading strategies.
+Consult the [typography reference](../impeccable/reference/typography.md) from the impeccable skill for detailed guidance on scales, pairing, and loading strategies.
 
 Create a systematic plan:
 

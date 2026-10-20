@@ -1,6 +1,16 @@
 ---
 name: explicit-vs-tacit-capture
-description: Split a body of expertise into the tell-able procedures (explicit) and the show-only judgment (tacit), and flag the tacit half as the defensible product. Fires when a fellow says "what's teachable vs judgment", "codify the expertise", "split explicit from tacit", "which part of our know-how is defensible", "what can we write down vs what's in their head", or "turn our expertise into a product spec". Returns an Explicit/Tacit Ledger: every piece of know-how classified by one test — could a stranger execute it from the words alone? — with the tacit rows scored on the evidence ladder and the moat named. NOT for running the live watch session that observes an unobserved judgment (use tacit-knowledge-interview), NOT for sorting data sources by whether a model can already reach them (use yoda-data-sourcing), NOT for turning captured expertise into a labelled dataset and golden cases (use dataset-builder).
+description: >-
+  Split a body of expertise into the tell-able procedures (explicit) and the show-only judgment
+  (tacit), and flag the tacit half as the defensible product. Fires when a fellow says "what's
+  teachable vs judgment", "codify the expertise", "split explicit from tacit", "which part of our
+  know-how is defensible", "what can we write down vs what's in their head", or "turn our expertise
+  into a product spec". Returns an Explicit/Tacit Ledger: every piece of know-how classified by one
+  test — could a stranger execute it from the words alone? — with the tacit rows scored on the
+  evidence ladder and the moat named. NOT for running the live watch session that observes an
+  unobserved judgment (use tacit-knowledge-interview), NOT for sorting data sources by whether a model
+  can already reach them (use yoda-data-sourcing), NOT for turning captured expertise into a labelled
+  dataset and golden cases (use dataset-builder).
 type: generator
 supersedes: none
 ---

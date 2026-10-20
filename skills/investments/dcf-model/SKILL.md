@@ -1,6 +1,15 @@
 ---
 name: dcf-model
-description: Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations.
+description: >-
+  Discounted cash flow (DCF) valuation of a company. Two modes: (1) a full Excel DCF model
+  with WACC tab, bear/base/bull cases, terminal value and fully formula-driven sensitivity
+  tables; (2) a quick markdown DCF with no spreadsheet. Picks the right variant (FCFF at WACC,
+  FCFE or dividend discount at cost of equity, two- or three-stage growth), builds the equity
+  bridge (debt, cash, options, minorities) and a per-share intrinsic value. Use when the user
+  asks for a DCF, discounted cash flow, intrinsic value, fair value, terminal value, free cash
+  flow valuation, FCFF/FCFE/DDM, or an implied share price.
+  Not for peer multiples or trading comps (use comps-analysis), WACC on its own
+  (use cost-of-capital-estimator), or reconciling several valuations into a call (use valuation-reconciler).
 ---
 
 # DCF Model Builder
@@ -8,6 +17,33 @@ description: Real DCF (Discounted Cash Flow) model creation for equity valuation
 ## Overview
 
 This skill creates institutional-quality DCF models for equity valuation following investment banking standards. Each analysis produces a detailed Excel model (with sensitivity analysis included at the bottom of the DCF sheet).
+
+## Choose the mode first
+
+- **Excel model (default when the user wants a model, a file, or a public ticker):** follow the full workflow below.
+- **Quick markdown DCF (user wants a fast answer, a private company, or says "no spreadsheet"):** skip Excel. Produce one markdown write-up using `references/markdown-dcf-template.md` (base-year inputs, year-by-year projection table, terminal value, equity bridge, sensitivity grid). Score it with `references/rubric_dcf.json` (average >= 3.5).
+
+### Pick the model variant (both modes)
+
+See `references/intrinsic-methodology.md` for the full decision tree, growth estimation, terminal value, option adjustment and three-stage mechanics.
+
+| Situation | Model | Discount rate |
+|---|---|---|
+| Most companies, changing capital structure | FCFF | WACC (bridge to equity) |
+| Stable, predictable debt ratio; financial firms | FCFE | Cost of equity |
+| Mature dividend payers (utilities, REITs, banks) | DDM | Cost of equity |
+| Long runway needing a transition | Three-stage (high growth, linear fade, stable) | WACC or ke |
+
+**Guardrails (both modes):**
+1. Match cash flows to rates: FCFF at WACC, FCFE and dividends at cost of equity.
+2. Stable growth must not exceed the risk-free rate / nominal GDP growth.
+3. Flag terminal value above ~85-90% of total value: the high-growth period is probably too short.
+4. Stable-period reinvestment rate = g / ROC; growth without reinvestment is value from thin air.
+5. Equity bridge: subtract market value of debt, add cash and non-operating assets, subtract employee options and minority interests; divide by diluted shares.
+6. In the stable period, beta converges toward 1 and WACC toward mature-company levels.
+7. Report value as a range (sensitivity on growth x discount rate), not a point.
+
+For the discount rate itself, use `cost-of-capital-estimator` when the user wants the WACC derivation in depth.
 
 ## Tools
 
@@ -19,7 +55,7 @@ These constraints apply throughout all DCF model building. Review before startin
 
 **Environment: Office JS vs Python/openpyxl:**
 - **If running inside Excel (Office Add-in / Office JS environment):** Use Office JS directly — do NOT use Python/openpyxl. Write formulas via `range.formulas = [["=D19*(1+$B$8)"]]`. No separate recalc step needed; Excel calculates natively. Use `range.format.*` for styling. The same formulas-over-hardcodes rule applies: set `.formulas`, never `.values` for derived cells.
-- **If generating a standalone .xlsx file (no live Excel session):** Use Python/openpyxl as described below, then run `recalc.py` before delivery.
+- **If generating a standalone .xlsx file (no live Excel session):** Use Python/openpyxl as described below, then run `python scripts/recalc.py model.xlsx 30` (bundled, uses headless LibreOffice) before delivery.
 - The rest of this skill uses openpyxl examples — translate to Office JS API calls when in that environment, but all principles (formula strings, cell comments, section checkpoints, sensitivity table loops) apply identically.
 
 **⚠️ Office JS merged cell pitfall:** When building section headers with merged cells, do NOT call `.merge()` then set `.values` on the merged range — Office JS still reports the range's original dimensions and will throw `InvalidArgument: The number of rows or columns in the input array doesn't match the size or dimensions of the range`. Instead, write the value to the top-left cell alone, then merge and format the full range:
@@ -78,7 +114,7 @@ This applies to every merged section header in the DCF (market data, scenario bl
 - Test formulas immediately after creation
 
 **Formula Recalculation:**
-- Run `python recalc.py model.xlsx 30` before delivery
+- Run `python scripts/recalc.py model.xlsx 30` before delivery
 - Fix ALL errors until status is "success"
 - Zero formula errors required (#REF!, #DIV/0!, #VALUE!, etc.)
 
@@ -760,7 +796,7 @@ In addition, be aware of these errors:
 **This skill uses the `xlsx` skill for all spreadsheet operations.** The xlsx skill provides:
 - Standardized formula construction rules
 - Number formatting conventions
-- Automated formula recalculation via `recalc.py` script
+- Formula recalculation via the bundled `scripts/recalc.py`
 - Comprehensive error checking and validation
 
 All Excel files created by this skill must follow xlsx skill requirements, including zero formula errors and proper recalculation.
@@ -799,15 +835,15 @@ Create **two sheets**:
 
 ### Formula Recalculation (MANDATORY)
 
-After creating or modifying the Excel model, **recalculate all formulas** using the recalc.py script from the xlsx skill:
+After creating or modifying the Excel model, **recalculate all formulas** using the bundled `scripts/recalc.py` (headless LibreOffice; if LibreOffice is not installed it says so — then deliver with a note that the user should open in Excel to calculate, and still run the validator):
 
 ```bash
-python recalc.py [path_to_excel_file] [timeout_seconds]
+python scripts/recalc.py [path_to_excel_file] [timeout_seconds]
 ```
 
 Example:
 ```bash
-python recalc.py AAPL_DCF_Model_2025-10-12.xlsx 30
+python scripts/recalc.py AAPL_DCF_Model_2025-10-12.xlsx 30
 ```
 
 The script will:
@@ -840,7 +876,7 @@ The script will:
 }
 ```
 
-**Fix all errors** and re-run recalc.py until status is "success" before delivering the model.
+**Fix all errors** and re-run scripts/recalc.py until status is "success" before delivering the model.
 
 ### Formatting Standards
 
@@ -1222,13 +1258,15 @@ This approach centralizes scenario logic, making the model easier to audit and m
    - Cell comments on ALL hardcoded inputs
    - Professional borders around major sections
 
-2. **Recalculate formulas**: Run `python recalc.py model.xlsx 30`
+2. **Recalculate formulas**: Run `python scripts/recalc.py model.xlsx 30`
 
 3. **Check output**:
    - If `status` is `"success"` → Continue to step 4
    - If `status` is `"errors_found"` → Check `error_summary` and read [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for debugging guidance
 
-4. **Fix errors and re-run recalc.py** until status is "success"
+4. **Fix errors and re-run scripts/recalc.py** until status is "success"
+
+4b. **Run the DCF validator**: `python scripts/validate_dcf.py model.xlsx` (needs `pip install -r requirements.txt`; run it after recalc.py so cached values exist). It checks formula errors plus DCF-specific mistakes (terminal growth vs WACC, terminal value share, sheet structure). Fix every error it reports; review its warnings (ignore "Recommended sheet missing: Sensitivity" — in this skill the sensitivity tables live at the bottom of the DCF sheet).
 
 5. **Spot-check formulas**:
    - Test one FCF formula - does it reference the correct assumption rows?
@@ -1249,7 +1287,8 @@ This approach centralizes scenario logic, making the model easier to audit and m
 Before delivering DCF model:
 
 **Required:**
-- Run `python recalc.py model.xlsx 30` until status is "success" (zero formula errors)
+- Run `python scripts/recalc.py model.xlsx 30` until status is "success" (zero formula errors)
+- Run `python scripts/validate_dcf.py model.xlsx` and clear its errors
 - Two sheets: DCF (with sensitivity at bottom), WACC
 - Font colors: Blue=inputs, Black=formulas, Green=sheet links
 - Cell comments on ALL hardcoded inputs

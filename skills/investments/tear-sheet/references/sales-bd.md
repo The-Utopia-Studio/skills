@@ -14,18 +14,18 @@ Start with these queries. Follow up if results are incomplete.
 **Query 1 — Company profile + financials:**
 "[Company] business description overview products services headquarters employees sector industry revenue gross margin last 2 fiscal years"
 → Header, Company Overview, Financial Snapshot
-→ **Immediately write** to `/tmp/tear-sheet/company-profile.txt`
-→ **Immediately write** raw financials to `/tmp/tear-sheet/financials.csv`
+→ **Immediately write** to `./tear-sheet-data/company-profile.txt`
+→ **Immediately write** raw financials to `./tear-sheet-data/financials.csv`
 
 **Query 2 — Strategy + earnings:**
 "[Company] most recent earnings call strategic priorities CEO commentary guidance key initiatives"
 → Strategic Priorities
-→ **Immediately write** to `/tmp/tear-sheet/earnings.txt`
+→ **Immediately write** to `./tear-sheet-data/earnings.txt`
 
 **Query 3 — Relationships + news:**
 "[Company] key customers suppliers partners competitors business relationships recent acquisitions partnerships announcements"
 → Key Relationships, Recent News
-→ **Immediately write** to `/tmp/tear-sheet/relationships.txt`
+→ **Immediately write** to `./tear-sheet-data/relationships.txt`
 
 Three queries is usually sufficient. For well-known companies, these return rich results. For smaller or private companies, Queries 2 and 3 may be sparse — that's fine. The qualitative sections still deliver value because Claude synthesizes whatever is available into useful framing.
 

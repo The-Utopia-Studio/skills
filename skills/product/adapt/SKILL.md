@@ -1,6 +1,12 @@
 ---
 name: adapt
-description: Adapt designs to work across different screen sizes, devices, contexts, or platforms. Implements breakpoints, fluid layouts, and touch targets. Use when the user mentions responsive design, mobile layouts, breakpoints, viewport adaptation, or cross-device compatibility.
+description: >-
+  Make an existing UI work on phones, tablets, other screen sizes, print or
+  email: breakpoints, fluid layouts, touch targets, turning wide tables and
+  hover tooltips into mobile-friendly patterns. Use when the user says a page
+  was designed desktop-only, asks to make it responsive or mobile-friendly,
+  mentions breakpoints, a 375px screen, touch, tablet or cross-device support.
+  Not for new page builds (use impeccable) or slow pages (use optimize).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target] [context (mobile, tablet, print...)]"

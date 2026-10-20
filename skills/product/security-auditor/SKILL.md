@@ -1,6 +1,13 @@
 ---
 name: security-auditor
-description: Audits repository security — hardcoded secrets, dependency vulnerabilities, environment variable management, and authentication patterns. Use when the user asks to "check security", "find secrets", "audit dependencies", or "secure my repo". Don't use for code review, deployment, or monitoring.
+description: >-
+  Audit a whole repository before launch or open-sourcing: hardcoded API keys
+  and secrets (including git history), committed .env files, npm or pip
+  dependency vulnerabilities, unprotected admin or API routes, CORS, rate
+  limiting and input validation, with critical issues and fixes. Use when the
+  user asks to check a repo or codebase for security issues, find leaked secrets
+  or keys, run npm audit, or is about to open-source. Not for reviewing only the
+  current branch's diff or PR changes.
 ---
 
 # Security Auditor

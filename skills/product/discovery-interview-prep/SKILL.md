@@ -1,6 +1,15 @@
 ---
 name: discovery-interview-prep
-description: Plan customer discovery interviews with the right goal, segment, constraints, and method. Use when preparing interviews for problem validation, churn research, or new product ideas.
+description: >-
+  Plan and script customer discovery interviews: pick the research goal (problem validation, JTBD,
+  churn, feature priority), segment, constraints and method, then produce an interview plan or a
+  ready-to-use Mom Test interview script (warm-up, JTBD core questions, probes, willingness-to-pay,
+  wrap-up) with a note-taking template and biases to avoid. Use when the user asks to write an
+  interview script or interview guide, prepare or plan customer or user interviews, or mentions The
+  Mom Test. Not for analysing jobs, pains and gains from notes you already have (use jobs-to-be-done),
+  shadowing an expert to capture tacit judgment (use tacit-knowledge-interview), summarizing a
+  transcript (use summarize-interview), or testing a prototype with users (use
+  usability-test-protocol).
 intent: >-
   Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effective interview plans, craft targeted questions, avoid common biases, and maximize learning from limited customer access—ensuring discovery interviews yield actionable insights rather than confirmation bias or surface-level feedback.
 type: interactive
@@ -15,7 +24,6 @@ scenarios:
   - "I want to understand why users aren't activating on our core feature"
 estimated_time: "15-20 min"
 ---
-
 
 ## Purpose
 Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effective interview plans, craft targeted questions, avoid common biases, and maximize learning from limited customer access—ensuring discovery interviews yield actionable insights rather than confirmation bias or surface-level feedback.
@@ -59,7 +67,7 @@ An interactive process that:
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use the `workshop-facilitation` skill as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -315,6 +323,43 @@ You'll know these interviews are successful if:
 
 ---
 
+## Script Mode: Write the Interview Script
+
+When the user just wants the script ("write me an interview guide / script"), skip the 4 questions if the goal and segment are already clear, clarify only the research objectives (what decisions this informs, which assumptions need validating), and produce a script plus a note-taking template. Follow The Mom Test: ask about their life, not your idea.
+
+**Opening (2-3 min):** introduce yourself and the purpose (learning, not selling); "There are no right or wrong answers"; ask permission to record; confirm time.
+
+**Warm-up (5 min):** "Tell me about your role and what a typical week looks like." "How long have you been doing [activity]?"
+
+**Core exploration, JTBD (15-20 min), past tense and specific instances:**
+- *Current behaviour:* "Walk me through the last time you [did the thing]. What happened?" "What tools or methods did you use?" "How long did it take? Who else was involved?"
+- *Pains:* "What was the hardest part?" "What have you tried to solve this? What happened?" "If you could wave a magic wand, what would change?"
+- *Desired outcomes:* "What does 'good' look like here?" "How would you know it was working?"
+- *Willingness to pay / priority (skin in the game):* "How much time or money do you spend on this now?" "Have you looked for a better solution? What did you find?" "What would you give up to have this solved?"
+
+**Probing:** "Tell me more about that." "Why?" (gently, 2-3 times). "Can you give me a specific example?" "What happened next?" "How did that make you feel?"
+
+**Mom Test rules:** their life, not your idea; the past, not the future ("Would you use X?" is useless); talk 20%, listen 80%; never pitch; chase strong emotion; compliments are noise.
+
+**Wrap-up (3-5 min):** "Anything I didn't ask that matters?" "Who else should I talk to?" Thank them; share next steps.
+
+**Note-taking template:**
+```
+Participant: [Name / ID]
+Date: [Date]
+Key Jobs: [What they're trying to accomplish]
+Current Solution: [What they use today]
+Biggest Pain: [Their #1 frustration]
+Desired Outcome: [What success looks like]
+Willingness to Pay: [How much they invest / would invest]
+Surprise Finding: [Something unexpected]
+Follow-up: [Next steps]
+```
+
+Customize to the product area, persona and interview length. Interviews work best when the product trio (PM, designer, engineer) runs them together, with direct access to users and no proxies. Save the script and template as markdown.
+
+---
+
 ## Examples
 
 ### Example 1: Good Discovery Interview Prep (Problem Validation)
@@ -390,21 +435,14 @@ You'll know these interviews are successful if:
 ## References
 
 ### Related Skills
-- `problem-statement.md` — Use interview insights to frame problem statement
-- `proto-persona.md` — Define interview target segment
-- `jobs-to-be-done.md` — JTBD methodology for interviews
+- `problem-statement` — Use interview insights to frame problem statement
+- `proto-persona` — Define interview target segment
+- `jobs-to-be-done` — JTBD methodology for interviews
+
+- `summarize-interview` — Turn each finished transcript into a JTBD summary
+- `tacit-knowledge-interview` — Shadow an expert to capture judgment, not a customer interview
 
 ### External Frameworks
 - Rob Fitzpatrick, *The Mom Test* (2013) — How to ask good questions without biasing answers
 - Clayton Christensen, *Jobs to Be Done* — Interview methodology for understanding motivations
 - Teresa Torres, *Continuous Discovery Habits* (2021) — Opportunity solution tree interviews
-
-### Dean's Work
-- Problem Framing Canvas (synthesizes interview findings)
-
----
-
-**Skill type:** Interactive
-**Suggested filename:** `discovery-interview-prep.md`
-**Suggested placement:** `/skills/interactive/`
-**Dependencies:** Uses `problem-statement.md`, `proto-persona.md`, `jobs-to-be-done.md`

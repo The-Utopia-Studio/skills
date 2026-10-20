@@ -1,6 +1,15 @@
 ---
 name: manifesto
-description: Write or critique a company manifesto, mission page, founding essay, or "why we exist" document. Use when someone asks for a manifesto, a vision statement, a values page, an "about" or "mission" page with real conviction, a founding blog post, a charter, or a principles document. Also use to audit an existing one for hedging, empty values, and missing stakes. Grounded in a study of 36 tech manifestos from manifestos.tech (Tesla, SSI, Mozilla, Anduril, Obsidian, Linear, Anthropic, Physical Intelligence and others).
+description: >-
+  Use this skill to write or critique a company manifesto, mission page,
+  founding essay, "why we exist" page, vision statement, values page, charter or
+  principles document: "write a manifesto for", "draft our mission page", "what
+  do we believe", "audit our values page". It interviews for a contestable belief
+  and the cost the company accepted, picks one of seven archetypes, drafts to the
+  spine, cuts, and audits against a checklist, grounded in 36 tech manifestos
+  (Tesla, SSI, Mozilla, Obsidian, Linear, Anthropic and others). Not for
+  positioning statements, message houses or brand narrative pillars (use
+  positioning-workshop).
 ---
 
 # Manifesto
@@ -177,20 +186,6 @@ The same manifesto lands differently by surface. Decide which you are writing:
 - **Charter.** Numbered clauses, stable grammar, written to be cited later.
 - **Deck.** One beat per slide, the naming line gets its own slide.
 - **Recruiting page.** Ends on the invitation and means it.
-
-## If this is a Navon manifesto
-
-Navon has house rules that sit on top of everything here:
-
-- Plain human English. No AI cadence, no sentence fragments used for drama, no
-  rhetorical pairs ("not X, but Y" repeated as a tic).
-- No em dashes anywhere.
-- Light on detail, heavy on what is actually true. Do not invent traction.
-- White-label framing where partners are involved.
-
-Read `.claude/skills/navon-design/SKILL.md` for surface and typography rules
-before building the page or document, and `design-system/tokens.json` for the
-token contract. For a printed version, use the `navon-brand-doc` skill.
 
 ## Do not
 

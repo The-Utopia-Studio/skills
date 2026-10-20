@@ -1,6 +1,15 @@
 ---
-name: ckm:design-system
-description: Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.
+name: ckm-design-system
+description: >-
+  Build a design-token architecture: three-layer tokens (primitive -> semantic
+  -> component), token JSON, generated CSS variables, spacing and typography
+  scales, component specs mapping each state to semantic tokens, and validation
+  against hard-coded values (including slides). Use when the user asks for
+  design tokens, a token system or architecture, CSS variables from brand
+  colors, a component spec, or to find hard-coded colors and spacing. Not for
+  picking a style, palette and fonts from a style database (use ui-ux-pro-max),
+  logos or banners (use ckm-design), or shadcn/Tailwind component code (use ckm-
+  ui-styling).
 argument-hint: "[component or token]"
 license: MIT
 metadata:
@@ -102,8 +111,7 @@ node scripts/validate-tokens.cjs --dir src/
 **With brand:** Extract primitives from brand colors/typography
 **With ui-styling:** Component tokens → Tailwind config
 
-**Skill Dependencies:** brand, ui-styling
-**Primary Agents:** ui-ux-designer, frontend-developer
+**Sibling skills:** ckm-brand, ckm-ui-styling, ckm-design
 
 ## Slide System
 
@@ -111,12 +119,13 @@ Brand-compliant presentations using design tokens + Chart.js + contextual decisi
 
 ### Source of Truth
 
-| File | Purpose |
+These live in the user's project, not in this skill. `ckm-brand` creates the guidelines; `scripts/generate-tokens.cjs` creates the token files from `templates/design-tokens-starter.json`.
+
+| Project file | Purpose |
 |------|---------|
-| `docs/brand-guidelines.md` | Brand identity, voice, colors |
-| `assets/design-tokens.json` | Token definitions (primitive→semantic→component) |
-| `assets/design-tokens.css` | CSS variables (import in slides) |
-| `assets/css/slide-animations.css` | CSS animation library |
+| `<project>/docs/brand-guidelines.md` | Brand identity, voice, colors |
+| `<project>/assets/design-tokens.json` | Token definitions (primitive→semantic→component) |
+| `<project>/assets/design-tokens.css` | CSS variables (import in slides) |
 
 ### Slide Search (BM25)
 
@@ -158,7 +167,7 @@ python scripts/search-slides.py "cta" --context --position 9 --prev-emotion frus
    b. Query slide-typography.csv → type scale
    c. Query slide-color-logic.csv → color treatment
    d. Query slide-backgrounds.csv → image if needed
-   e. Apply animation class from slide-animations.css
+   e. Apply entrance animation with transform/opacity only (respect prefers-reduced-motion)
         ↓
 4. Generate HTML with design tokens
         ↓
@@ -177,7 +186,7 @@ System calculates pattern breaks at 1/3 and 2/3 positions.
 ### Slide Requirements
 
 **ALL slides MUST:**
-1. Import `assets/design-tokens.css` - single source of truth
+1. Import `<project>/assets/design-tokens.css` - single source of truth
 2. Use CSS variables: `var(--color-primary)`, `var(--slide-bg)`, etc.
 3. Use Chart.js for charts (NOT CSS-only bars)
 4. Include navigation (keyboard arrows, click, progress bar)
@@ -221,18 +230,9 @@ color: #FF6B6B;
 font-family: 'Space Grotesk';
 ```
 
-### Reference Implementation
-
-Working example with all features:
-```
-assets/designs/slides/claudekit-pitch-251223.html
-```
-
 ### Command
 
-```bash
-/slides:create "10-slide investor pitch for ClaudeKit Marketing"
-```
+For the full slide-creation workflow (strategy, layouts, copy formulas, HTML template), use the `ckm-design` skill's Slides section. This skill adds the token compliance and the BM25 decision search above.
 
 ## Best Practices
 

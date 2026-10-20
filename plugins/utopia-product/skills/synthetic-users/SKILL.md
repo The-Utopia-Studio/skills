@@ -1,6 +1,16 @@
 ---
 name: synthetic-users
-description: Build a synthetic user panel grounded in your YODA corpus and pre-test a concept, message, or flow against it — cheaply, before you spend real interview time. Returns a Synthetic Panel + Pre-Test Transcript carrying a lie ledger (what synthetic users systematically get wrong: they never pay, never no-show, over-rationalise, over-agree) and a kill / revise / promote-to-real-interview verdict. Fires on "test this before real interviews", "simulate a user", "dry-run the pitch", "pre-test the message/flow", "which of these should I even bother interviewing about". NOT for running the real interview that captures an expert's judgment (use tacit-knowledge-interview), scripting a Mom-Test discovery interview (use interview-script) or planning one (use discovery-interview-prep), or sourcing the corpus the panel is built from (use yoda-data-sourcing). Never treats a synthetic response as validation.
+description: >-
+  Build a synthetic user panel grounded in your YODA corpus and pre-test a concept, message, or flow
+  against it — cheaply, before you spend real interview time. Returns a Synthetic Panel + Pre-Test
+  Transcript carrying a lie ledger (what synthetic users systematically get wrong: they never pay,
+  never no-show, over-rationalise, over-agree) and a kill / revise / promote-to-real-interview
+  verdict. Fires on "test this before real interviews", "simulate a user", "dry-run the pitch",
+  "pre-test the message/flow", "which of these should I even bother interviewing about". NOT for
+  running the real interview that captures an expert's judgment (use tacit-knowledge-interview),
+  scripting a Mom-Test discovery interview (use discovery-interview-prep) or planning one (use
+  discovery-interview-prep), or sourcing the corpus the panel is built from (use yoda-data-sourcing).
+  Never treats a synthetic response as validation.
 type: interactive
 supersedes: none
 ---
@@ -22,7 +32,7 @@ Do not use it for:
 | If the fellow wants… | Use instead | Why not this skill |
 |---|---|---|
 | To watch a real expert do a real task and capture their judgment | `tacit-knowledge-interview` | That creates real behaviour signal (0.7); this simulates and caps at [Hypothesis]. This runs *before* it to decide whether that interview is worth booking. |
-| A Mom-Test script for a real discovery interview | `interview-script` | That prepares questions for a real person; this poses a concept to a simulation. |
+| A Mom-Test script for a real discovery interview | `discovery-interview-prep` | That prepares questions for a real person; this poses a concept to a simulation. |
 | To plan/prep real discovery interviews (goal, segment, method) | `discovery-interview-prep` | That plans the real round; this pre-screens what the round should even cover. |
 | To source the proprietary data the panel is built from | `yoda-data-sourcing` | That finds the corpus; this consumes it. No corpus, no grounded panel — see Step 0. |
 | To find the unmet need, or map who the buyer is | `unserved-needs-finder`, `user-buyer-decider-map` | Those define what to build for and who buys; this pre-tests a concept once you have one. |
@@ -96,7 +106,7 @@ Three outcomes. There is no fourth.
 |---|---|---|
 | **KILL** | A corpus-grounded panellist could not grasp the concept, or named a cheaper existing path | Drop or rethink before spending a real interview. One real confirmation is still worth it before you fully bury it. |
 | **REVISE** | The message or flow broke at a specific, nameable point | Fix that point and re-run the panel — it is cheap |
-| **PROMOTE** | It survived the synthetic kill screen | It has *earned a real interview* — `tacit-knowledge-interview` / `interview-script`. Surviving synthetic is a ticket to spend the real interview, not validation. |
+| **PROMOTE** | It survived the synthetic kill screen | It has *earned a real interview* — `tacit-knowledge-interview` / `discovery-interview-prep`. Surviving synthetic is a ticket to spend the real interview, not validation. |
 
 **Kill line.** The output must never say "validated", and must carry the lie ledger. If it presents a synthetic response as real validation, or omits the what-they-lie-about caveat, it is auto-failed — that is the exact failure this skill exists to prevent.
 
@@ -134,8 +144,8 @@ See `examples/sample.md` for a full run on Mentix: a four-panellist panel built 
 
 - `yoda-data-sourcing` (section 03) — sources the corpus this skill consumes. Run it first; a panel with no corpus is Step 0's stop.
 - `tacit-knowledge-interview` (section 02) — the real interview this skill pre-tests *before*. A captured judgment is also excellent grounding for a panellist. Promote survivors here; never let this skill stand in for it.
-- `interview-script`, `discovery-interview-prep` (section 02) — the real Mom-Test round. This skill decides what that round is even worth covering.
+- `discovery-interview-prep` (section 02) — the real Mom-Test round. This skill decides what that round is even worth covering.
 - `unserved-needs-finder`, `user-buyer-decider-map` (section 02) — define the need and the buyer; this pre-tests a concept once you have one.
-- `prototyping-pretotyping` (discovery) — the next rung up: a cheap test with real people. Synthetic pre-test comes below it, run first to decide what to pretotype.
+- `probe-matrix` (discovery) — the next rung up: a cheap test with real people. Synthetic pre-test comes below it, run first to decide what to pretotype.
 
 Supersedes: none. Fully proprietary — there is no prior synthetic-user skill in the pack, and the generic "role-play a persona" pattern is the exact anti-pattern this skill is built to correct.

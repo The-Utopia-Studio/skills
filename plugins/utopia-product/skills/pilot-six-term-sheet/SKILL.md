@@ -1,6 +1,6 @@
 ---
 name: pilot-six-term-sheet
-description: Turn a would-be pilot into a six-term paid-pilot sheet — scope, price (paid or prepaid), the signed data-rights clause, success metrics, kill criteria, and conversion terms priced now — and refuse to call anything a pilot unless all six terms are non-empty. Fires on "pilot terms", "structure the deal", "paid pilot", "pilot term sheet", "structure the pilot so it isn't a free trial". Not for brainstorming or validating which revenue model to bet on (that is `monetization-strategy`, exploratory; this commits one basis to price the conversion term now), not for drafting the data-rights legal language (that is `data-rights-clause`, section 06; this carries the clause as term 3 and routes there), not for testing whether the thing will get adopted at all (that is `wedge-five-questions`).
+description: Turn a would-be pilot into a six-term paid-pilot sheet — scope, price (paid or prepaid), the signed data-rights clause, success metrics, kill criteria, and conversion terms priced now — and refuse to call anything a pilot unless all six terms are non-empty. Fires on "pilot terms", "structure the deal", "paid pilot", "pilot term sheet", "structure the pilot so it isn't a free trial". Not for brainstorming or validating which revenue model to bet on (that is `pricing-strategy`, exploratory; this commits one basis to price the conversion term now), not for drafting the data-rights legal language (that is `data-rights-clause`, section 06; this carries the clause as term 3 and routes there), not for testing whether the thing will get adopted at all (that is `wedge-five-questions`).
 type: generator
 supersedes: none
 ---
@@ -21,7 +21,7 @@ Do not use when:
 
 | Request | Belongs to |
 |---|---|
-| "Brainstorm 3–5 revenue models for the product and validate willingness to pay" | `monetization-strategy` (exploratory: which model to bet on, tested cheaply). This skill does the opposite — it commits to ONE pricing basis so the conversion term is a signed number today. |
+| "Brainstorm 3–5 revenue models for the product and validate willingness to pay" | `pricing-strategy` (exploratory: which model to bet on, tested cheaply). This skill does the opposite — it commits to ONE pricing basis so the conversion term is a signed number today. |
 | "Draft the actual data-rights legal clause / the language we put in the contract" | `data-rights-clause` (section 06, forthcoming). This skill carries that clause as term 3 and routes there; it does not write legal language. |
 | "Is this even the right first thing to build / will it get adopted?" | `wedge-five-questions` (section 06). A pilot around a non-wedge is a priced dead end. Confirm the wedge first. |
 
@@ -76,7 +76,7 @@ Conversion is priced at pilot signing, on ONE basis. Pick one; name the reason:
 | Subscription per site / line / asset | a fixed recurring unit | stable, always-on workflows |
 | Transaction fee | % of value flowing through | marketplace / flow products |
 
-Reframe boundary: `monetization-strategy` explores which of these to bet on and tests willingness to pay. This skill does the opposite — it commits to one basis so the conversion price is a signed number today, not an open question. Term 6 also names the **conversion trigger**: which success metric (term 4), at what threshold, flips pilot into production. Without a trigger, "conversion" is a hope.
+Reframe boundary: `pricing-strategy` explores which of these to bet on and tests willingness to pay. This skill does the opposite — it commits to one basis so the conversion price is a signed number today, not an open question. Term 6 also names the **conversion trigger**: which success metric (term 4), at what threshold, flips pilot into production. Without a trigger, "conversion" is a hope.
 
 ### Step 5 — Compute the verdict (binary AND across six)
 
@@ -116,7 +116,7 @@ Unbounded scope becomes free consulting. "Pilot the whole platform" with no end 
 
 ## Related skills
 
-`monetization-strategy` (concept) — the skill this one absorbs and reframes. It brainstorms and validates which revenue model to bet on across the product; this skill commits to one basis so the conversion term is a signed number at pilot signing. Send a fellow there when the pricing model itself is still open; use this when it is time to write the deal.
+`pricing-strategy` (concept) — the exploratory pricing skill. It brainstorms and validates which revenue model to bet on across the product; this skill commits to one basis so the conversion term is a signed number at pilot signing. Send a fellow there when the pricing model itself is still open; use this when it is time to write the deal.
 
 `data-rights-clause` (section 06, forthcoming) — owns term 3's legal language. This skill flags that the clause must be signed at pilot #1 and routes there; it does not draft the clause.
 

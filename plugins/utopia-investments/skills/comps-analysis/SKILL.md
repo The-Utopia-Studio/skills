@@ -1,36 +1,31 @@
 ---
 name: comps-analysis
-description: |
-  Build institutional-grade comparable company analyses with operating metrics, valuation multiples, and statistical benchmarking in Excel/spreadsheet format.
-
-  **Perfect for:**
-  - Public company valuation (M&A, investment analysis)
-  - Benchmarking performance vs. industry peers
-  - Pricing IPOs or funding rounds
-  - Identifying valuation outliers (over/under-valued)
-  - Supporting investment committee presentations
-  - Creating sector overview reports
-
-  **Not ideal for:**
-  - Private companies without comparable public peers
-  - Highly diversified conglomerates
-  - Distressed/bankrupt companies
-  - Pre-revenue startups
-  - Companies with unique business models
+description: >-
+  Comparable company analysis and relative valuation. Builds a trading comps table in
+  Excel (operating metrics, EV/Revenue, EV/EBITDA, P/E, P/B, mean/median/quartiles) and
+  analyses multiples properly: defines each multiple consistently, describes the peer
+  distribution, links each multiple to its fundamental drivers (growth, risk, payout,
+  ROE, margin) and runs a sector regression to get a predicted multiple and implied value.
+  Use when valuing a company against peers, selecting comparables, benchmarking multiples,
+  pricing a round off public comps, or when the user mentions comps, trading multiples,
+  relative valuation, PE ratio, EV/EBITDA, price-to-book or "is this premium justified".
+  Not for DCF or intrinsic value (use dcf-model), combining DCF and multiples into a
+  recommendation (use valuation-reconciler), or a competitor strategy landscape deck
+  (use competitive-analysis).
 ---
 
 # Comparable Company Analysis
 
 ## ⚠️ CRITICAL: Data Source Priority (READ FIRST)
 
-**ALWAYS follow this data source hierarchy:**
+Use the best source available, in this order, and cite every number:
 
-1. **FIRST: Check for MCP data sources** - If S&P Kensho MCP, FactSet MCP, or Daloopa MCP are available, use them exclusively for financial and trading information
-2. **DO NOT use web search** if the above MCP data sources are available
-3. **ONLY if MCPs are unavailable:** Then use Bloomberg Terminal, SEC EDGAR filings, or other institutional sources
-4. **NEVER use web search as a primary data source** - it lacks the accuracy, audit trails, and reliability required for institutional-grade analysis
+1. **Structured financial-data MCP servers, if connected** (e.g. S&P Capital IQ/Kensho, FactSet, Daloopa). Use them for financials and trading data.
+2. **Otherwise, primary filings:** SEC EDGAR (10-K, 10-Q, 8-K, 20-F) and company investor-relations releases, or the equivalent regulator/exchange filings for non-US issuers (e.g. Tadawul, ADX/DFM, QSE disclosures).
+3. **Web search for market data and gaps** (share price, shares outstanding, consensus estimates, private-company figures) — prefer the issuer's own pages, exchanges and reputable financial press; record the URL and access date.
+4. **User-provided files** override all of the above.
 
-**Why this matters:** MCP sources provide verified, institutional-grade data with proper citations. Web search results can be outdated, inaccurate, or unreliable for financial analysis.
+Every figure gets a citation in the Notes block: source, document/page or URL, and date accessed. Flag any web-sourced or estimated value with "[E]". Do not mix fiscal periods without labelling them.
 
 ---
 
@@ -39,7 +34,7 @@ This skill teaches Claude to build institutional-grade comparable company analys
 
 **Reference Material & Contextualization:**
 
-An example comparable company analysis is provided in `examples/comps_example.xlsx`. When using this or other example files in this skill directory, use them intelligently:
+If the user provides an example or template comps file, use it intelligently:
 
 **DO use examples for:**
 - Understanding structural hierarchy (how sections flow)
@@ -66,6 +61,32 @@ An example comparable company analysis is provided in `examples/comps_example.xl
 **Core principle:** Use template principles (clear structure, statistical rigor, transparent formulas) but vary execution based on context. The goal is institutional-quality analysis, not institutional-looking templates.
 
 User-provided examples and explicit preferences always take precedence over defaults.
+
+## Relative valuation: multiples and drivers
+
+Use this when the question is "is this multiple justified?" or "what should the target trade at?", not just "build the table". Full method: `references/relative-valuation-methodology.md`; worksheets (peer table, distribution, regression, implied value): `references/relative-valuation-template.md`; quality check: `references/rubric_relative_valuation.json` (average >= 3.5).
+
+**Four steps**
+1. **Define** — numerator and denominator at the same claim level: equity multiples (P/E, P/B) use equity value and equity earnings/book; firm multiples (EV/EBITDA, EV/Sales) use EV and firm-level metrics. Same period (LTM or NTM) for every peer.
+2. **Describe** — report count, mean, median, 25th/75th percentile and standard deviation. Prefer the median: multiples are right-skewed. Exclude negative denominators and say how many were dropped.
+3. **Analyze** — every multiple is a compressed DCF:
+   - P/E = payout x (1+g) / (ke - g)
+   - P/B = (ROE - g) / (ke - g)
+   - EV/Sales = after-tax operating margin x (1 - reinvestment rate) x (1+g) / (WACC - g)
+   - EV/EBITDA is driven by tax rate, reinvestment, growth and WACC
+4. **Apply** — either compare to the peer median and adjust qualitatively, or (with 15-20+ peers) regress the multiple on its drivers, e.g. `EV/Sales = a + b1·growth + b2·margin`, report R², plug in the target and compute (actual - predicted) / predicted.
+
+**Which multiple for which company**
+
+| Company type | Primary | Secondary |
+|---|---|---|
+| Earnings-positive, stable | P/E | EV/EBITDA |
+| Capital-intensive | EV/EBITDA | P/B |
+| Banks / insurers | P/B | P/E |
+| Negative earnings / early-stage / high-growth tech | EV/Sales | forward P/E or EV/EBITDA if positive |
+| Cross-border | EV/EBITDA | EV/Sales |
+
+Relative valuation says cheap or expensive *versus peers*; if the whole sector is mispriced, the cheapest name can still be overvalued. Say so in the conclusion.
 
 ## Core Philosophy
 **"Build the right structure first, then let the data tell the story."**
@@ -269,10 +290,10 @@ Same structure as operating section: Max, 75th, Median, 25th, Min for every metr
 ### Required Components
 
 **Data Sources & Quality:**
-- Where did the data come from? (S&P Kensho MCP, FactSet MCP, Daloopa MCP, Bloomberg, SEC filings)
+- Where did the data come from? (data MCP server, SEC EDGAR / exchange filing, company IR page, web source with URL)
 - What period does it cover? (Q4 2024, audited figures)
 - How was it verified? (Cross-checked against 10-K/10-Q)
-- Note: Prioritize MCP data sources (S&P Kensho, FactSet, Daloopa) if available for better accuracy and traceability
+- Note: Prefer structured MCP data or primary filings over secondary web sources
 
 **Key Definitions:**
 - EBITDA calculation method (Gross Profit + D&A, or Operating Income + D&A)
@@ -357,9 +378,9 @@ If you have more than 15 metrics, you're probably including noise. Edit ruthless
 2. **Add cell comments to ALL hard-coded inputs** - Right-click cell → Insert Comment → Document source OR assumption
 
    **For sourced data, cite exactly where it came from:**
-   - Example: "Bloomberg Terminal - MSFT Equity DES, accessed 2024-10-02"
+   - Example: "Yahoo Finance quote page, https://finance.yahoo.com/quote/MSFT, accessed 2024-10-02 [E]"
    - Example: "Q4 2024 10-K filing, page 42, line item 'Total Revenue'"
-   - Example: "FactSet consensus estimate as of 2024-10-02"
+   - Example: "Consensus EPS from data MCP server (or company-reported guidance), as of 2024-10-02"
    - **Include hyperlinks when possible**: Right-click cell → Link → paste URL to SEC filing, data source, or report
 
    **For assumptions, explain the reasoning:**
@@ -440,7 +461,7 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
    - Lock in units and date references
 
 2. **Gather data** (60-90 minutes)
-   - Pull from primary sources (S&P Kensho MCP, FactSet MCP, Daloopa MCP if available; otherwise Bloomberg, SEC)
+   - Pull from primary sources (data MCP server if connected; otherwise SEC EDGAR / exchange filings, then web search with citations)
    - Input all raw numbers in blue
    - Document sources in notes section
 
@@ -469,7 +490,7 @@ This helps answer: "Is our target company trading rich or cheap vs. peers?"
 ### Pro Tips
 - **Save templates**: Build once, reuse forever
 - **Color-code outliers**: Conditional formatting for values >2 standard deviations
-- **Link to source files**: Hyperlink to Bloomberg screenshots or SEC filings
+- **Link to source files**: Hyperlink to SEC/exchange filings or the web sources used
 - **Version control**: Save as "Comps_v1_2024-12-15" with clear dating
 - **Collaborative reviews**: Have someone else check your formulas
 
@@ -639,7 +660,7 @@ Before delivering a comp analysis, verify:
 - [ ] Units are clearly labeled (millions/billions)
 - [ ] Formulas reference cells, not hardcoded values
 - [ ] **All hard-coded input cells have comments with either: (1) exact data source with citation, OR (2) clear assumption with explanation**
-- [ ] **Hyperlinks added where relevant** (SEC EDGAR filings, Bloomberg pages, research reports)
+- [ ] **Hyperlinks added where relevant** (SEC EDGAR filings, exchange filings, web sources, research reports)
 - [ ] Statistics include at least 5 metrics (Max, 75th, Med, 25th, Min)
 - [ ] Notes section documents sources and methodology
 - [ ] Visual formatting follows conventions (blue = input, black = formula)

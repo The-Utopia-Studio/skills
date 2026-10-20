@@ -14,11 +14,6 @@ Skills in this sub-module:
 
 - `call-scorecards`
 - `competitive-battlecard`
-- `deal-desk`
-- `deal-review`
 - `deal-velocity-engineer`
 - `discovery-calls`
-- `lead-qualification`
-- `meddic-checklist`
-- `pql-framework`
 - `sales-enablement`

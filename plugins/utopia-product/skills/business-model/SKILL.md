@@ -1,13 +1,27 @@
 ---
 name: business-model
-description: "Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model."
+description: >-
+  Build a business model canvas for a product or venture: a Lean Canvas (problem, solution, UVP,
+  unfair advantage, channels, segments, revenue, costs, key metrics), a Startup Canvas (9
+  product-strategy sections plus costs and revenue), or the 9-block Business Model Canvas, with key
+  assumptions and validation experiments. Use when the user asks for a Lean Canvas, startup canvas,
+  BMC or business model canvas, or to model how a new venture or marketplace makes money. Not for Jeff
+  Gothelf's Lean UX Canvas of business problem, hypotheses and experiments for a feature (use
+  lean-ux-canvas), the vision-to-roadmap stack (use product-frame-stack), or choosing a revenue model
+  or price (use pricing-strategy).
 ---
-# Business Model Canvas
+# Business Model Canvases
 
-## Metadata
-- **Name**: business-model
-- **Description**: Generate a Business Model Canvas with all 9 building blocks. Use when creating a business model, documenting how a business creates value, or analyzing an existing business model.
-- **Triggers**: business model canvas, BMC, business model, how we make money
+## Choose the Canvas First
+
+| Canvas | Use when | Template |
+|---|---|---|
+| **Business Model Canvas** (Osterwalder, 9 blocks) | Established business, corporate strategy, investor materials; showing how partners, activities, resources, channels and money connect | this file |
+| **Lean Canvas** (Ash Maurya) | Fast hypothesis testing for a new venture; Problem / Solution / UVP / Unfair Advantage replace Partners / Activities / Resources | `references/lean-canvas.md` |
+| **Startup Canvas** (Paweł Huryn) | New product needing strategic clarity AND a business model: 9 Product Strategy sections (vision, segments, relative costs, value proposition, trade-offs, key metrics, growth, capabilities, can't/won't) + cost structure and revenue streams | `references/startup-canvas.md` |
+
+If the user names a canvas, use it. If they just say "model my startup / business model for my idea", default to the Lean Canvas for a very early idea and the Startup Canvas once they need strategy, and say why in one line. Whatever the canvas, finish with the riskiest assumptions and 2-3 cheap validation experiments.
+
 
 ## Instructions
 

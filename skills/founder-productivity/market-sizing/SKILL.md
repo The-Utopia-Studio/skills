@@ -1,6 +1,13 @@
 ---
 name: market-sizing
-description: "Estimate market size using TAM, SAM, and SOM with top-down and bottom-up approaches. Use when sizing a market opportunity, estimating addressable market, preparing for investor pitches, or evaluating market entry."
+description: >-
+  Estimate TAM, SAM and SOM top-down and bottom-up with cited sources, explicit assumptions, a 2-3
+  year projection and validation questions, one-shot or as a guided Q&A with a deterministic sizing
+  script. Use when the user asks for TAM / SAM / SOM, market size, addressable market, the market
+  slide for an investor pitch, or market entry sizing. Not when the user says 'don't give me a TAM' or
+  wants the size built from countable units with every rung's evidence shown (use
+  bottoms-up-quantification), the per-unit prize of one job (use physics-floor-gap), or customer
+  segments (use market-segments).
 ---
 
 # Estimate Market Size (TAM, SAM, SOM)
@@ -68,6 +75,35 @@ If the user provides market research, industry reports, financial data, or compe
 - Confidence level for each (high / medium / low)
 - How to validate the most uncertain assumptions
 - What would materially change the estimates
+
+## Guided Mode (Interactive)
+
+If the user wants to work it through step by step (or has little data), run up to 4 adaptive questions, one per turn, each with 4 numbered, context-aware options plus "write your own" (follow the `workshop-facilitation` skill for pacing):
+
+0. **Context first:** ask for website copy, landing pages, positioning or a sales deck. With no product yet, use a competitor's or analog's homepage as the reference point; marketing copy already names the target, pains and value.
+1. **Problem space** (e.g., B2B SaaS productivity, consumer fintech, telehealth, e-commerce enablement), extracted from "we help [target] solve [problem]" phrases if copy was shared.
+2. **Geography** (US for Census/BLS depth, EU via Eurostat, global via World Bank/IMF, or a specific country/region). Adapt: B2B SaaS leans US/EU; consumer fintech often favors high-mobile emerging markets.
+3. **Industry segments**, each option with a cited count and revenue (e.g., "SMB services sector, 5.4M businesses (US Census, 2023)").
+4. **Potential customers** (firmographics/demographics), again with cited counts.
+
+Then fill `template.md`. Every tier shows population, the math, the source and a URL; SOM shows Year 1-3 customers and revenue with competition, GTM capacity and conversion assumptions; end with three validation questions (does TAM match third-party reports, can our GTM reach SAM, is the SOM share realistic) and next steps. See `examples/sample.md` for a filled analysis.
+
+**Deterministic math helper.** When population and ARPU (or a TAM) are known, compute the tiers and a Markdown table without network access:
+
+```bash
+python3 scripts/market-sizing.py --population 5400000 --arpu 1000 --sam-share 30% --som-share 10%
+```
+
+**Data sources for citations:** US: Census Bureau, BLS, IBISWorld, Statista. Europe: Eurostat, national statistics agencies. Global: World Bank, IMF, Gartner, Forrester. For MENA, add national statistics authorities and central-bank reports.
+
+## Common Pitfalls
+
+- **TAM without citations** ("the market is $50B"): cite reports with URLs.
+- **SOM equals SAM:** SOM should be roughly 1-20% of SAM in years 1-3.
+- **No population estimates:** always give customer counts as well as dollars; sales plans need volume.
+- **Static assumptions:** reassess annually.
+- **Ignoring GTM constraints:** ground SOM in sales capacity, marketing budget and conversion rates.
+- **Sizing before the problem is defined, or treating size as product-market fit:** pair with customer research.
 
 ## Best Practices
 

@@ -12,28 +12,28 @@ Start with these queries. If results are incomplete, break into narrower follow-
 **Query 1 — Profile + market data:**
 "[Company] company overview sector industry market capitalization enterprise value stock price 52-week high low shares outstanding beta"
 → Header, Business Description
-→ **Immediately write** to `/tmp/tear-sheet/company-profile.txt`
+→ **Immediately write** to `./tear-sheet-data/company-profile.txt`
 
 **Query 2 — Historical financials:**
 "[Company] annual income statement revenue gross profit EBITDA net income EPS free cash flow total debt cash and equivalents last 4 fiscal years"
 → Financial Summary (pull 4 years; display 3; use the earliest year only for YoY growth computation)
-→ **Immediately write** raw values to `/tmp/tear-sheet/financials.csv`
+→ **Immediately write** raw values to `./tear-sheet-data/financials.csv`
 
 **Query 2b — Segments (if available):**
 "[Company] revenue by segment business unit last 2 fiscal years"
 → Revenue & Segment Breakdown (need 2 years for YoY growth). If segment data is unavailable, skip this section — do not leave a blank table.
-→ **Immediately write** to `/tmp/tear-sheet/segments.csv` (skip if no segment data returned)
+→ **Immediately write** to `./tear-sheet-data/segments.csv` (skip if no segment data returned)
 
 **Query 3 — Valuation + consensus:**
 "[Company] P/E EV/EBITDA EV/Revenue valuation multiples consensus revenue EPS estimates analyst recommendations price target"
 → Valuation Snapshot, Consensus Estimates
-→ **Immediately write** multiples to `/tmp/tear-sheet/valuation.csv`
-→ **Immediately write** estimates to `/tmp/tear-sheet/consensus.csv`
+→ **Immediately write** multiples to `./tear-sheet-data/valuation.csv`
+→ **Immediately write** estimates to `./tear-sheet-data/consensus.csv`
 
 **Query 4 — Earnings:**
 "[Company] most recent earnings call key takeaways guidance"
 → Earnings Highlights
-→ **Immediately write** to `/tmp/tear-sheet/earnings.txt`
+→ **Immediately write** to `./tear-sheet-data/earnings.txt`
 
 **Query 5 — Stock performance:**
 "[Company] stock price return 1 month 3 month 6 month 1 year YTD performance"
@@ -42,7 +42,7 @@ Start with these queries. If results are incomplete, break into narrower follow-
 **Query 6 (if user provided comps):**
 "[Comp company] market cap EV/Revenue EV/EBITDA revenue growth" — repeat for each comp
 → Peer context for Valuation Snapshot
-→ **Immediately write** to `/tmp/tear-sheet/peer-comps.csv`
+→ **Immediately write** to `./tear-sheet-data/peer-comps.csv`
 
 ## Sections
 

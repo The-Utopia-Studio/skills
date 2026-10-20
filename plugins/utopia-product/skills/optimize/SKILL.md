@@ -1,6 +1,13 @@
 ---
 name: optimize
-description: Diagnoses and fixes UI performance across loading speed, rendering, animations, images, and bundle size. Use when the user mentions slow, laggy, janky, performance, bundle size, load time, or wants a faster, smoother experience.
+description: >-
+  Diagnose and fix frontend performance: LCP, INP and CLS (Core Web Vitals),
+  bundle size, code splitting, image formats and sizing, font loading, janky
+  scrolling and animations, re-renders. Use when the user reports a slow or
+  janky page, gives Lighthouse or Web Vitals numbers like LCP or CLS, a large JS
+  bundle or huge images, or asks to make the UI faster. Not for React/Next.js
+  code-pattern review (use vercel-react-best-practices) or server scaling (use
+  devops-advisor).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"

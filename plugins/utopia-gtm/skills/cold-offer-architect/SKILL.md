@@ -1,6 +1,6 @@
 ---
 name: cold-offer-architect
-description: "Use this skill when the thing being sold to strangers isn't landing, or before writing a single line of cold copy \u2014 to build a new cold-traffic offer, audit an existing one against a hard bar, or diagnose why one that reads fine gets no replies. Covers cold email, cold DM, cold ads, and cold mail: any audience with zero trust and no reason to believe you. Produces an architected offer plus a pass/fail score against eight binary criteria. Trigger phrasings: \"my offer isn't converting\", \"low reply rate\", \"nobody's booking\", \"fix my offer\", \"what should I offer\", \"score this offer\", \"is this offer any good\", \"we changed the copy and nothing happened\"."
+description: "Use this skill when the thing being sold to strangers isn't landing, or before writing a single line of cold copy \u2014 to build a new cold-traffic offer, audit an existing one against a hard bar, or diagnose why one that reads fine gets no replies. Covers cold email, cold DM, cold ads, and cold mail: any audience with zero trust and no reason to believe you. Produces an architected offer plus a pass/fail score against eight binary criteria. Trigger phrasings: 'my offer isn't converting', 'low reply rate', 'nobody's booking', 'fix my offer', 'what should I offer', 'score this offer', 'is this offer any good', 'we changed the copy and nothing happened'."
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/tanyo-gochev/cold-offer-architect

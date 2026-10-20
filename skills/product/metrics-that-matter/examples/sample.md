@@ -4,8 +4,8 @@
 
 Illustrative fixtures. Numbers are plausible, not real client data.
 
-Depth routed: NSM framework → `north-star-metric`; AARRR → its resource; cohort mechanics →
-`cohort-analysis`; dashboard build → `retention-dashboard`; unit economics → `financial-unit-economics`.
+Depth routed: NSM framework and AARRR → SKILL.md Steps 1-2; cohort mechanics →
+`saas-revenue-growth-metrics`; dashboard build → `metrics-dashboard`; unit economics → `saas-economics-efficiency-metrics`.
 This scorecard adds the retention gate (C) and cost-per-outcome (D).
 
 The fellow arrived with: *"Our North Star is documents drafted — we're at 40,000 all-time

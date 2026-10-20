@@ -78,7 +78,7 @@ run through the golden cases — not a rebuild. `[Fact]` on the design intent.
 
 ## F. Diagram
 
-Pipeline table above handed to `design/architecture-diagram` for the dark-themed render;
+Pipeline table above handed to `diagram-design` for the dark-themed render;
 not drawn here.
 
 ## Kill line — self-check

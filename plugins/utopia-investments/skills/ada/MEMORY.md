@@ -1,6 +1,6 @@
 # MEMORY — Ada
 
-Persistent cross-session knowledge. **Until something is in here, Ada doesn't know it.** Add to this file every time a new pattern is discovered.
+Persistent cross-session knowledge. **Until something is in here, Ada doesn't know it.** This file ships read-only with the plugin. Do not try to write to it during a session; instead, end each session by listing suggested additions ("Proposed MEMORY.md updates") so a maintainer can commit them to `agents/ada/MEMORY.md`.
 
 ## System facts (immutable context)
 
@@ -25,7 +25,7 @@ When evaluating a portco, Ada applies these Utopia-specific filters:
 
 ## Common red flags Utopia has hit before
 
-(Update this list every time we lose money on a tech-DD-missable issue.)
+(Maintainers extend this list when a tech-DD-missable issue costs us money.)
 
 - **Hardcoded API keys in repo** — has happened twice. Always check `.env.example` and grep for known secret patterns.
 - **No backup strategy on customer data** — once led to a portco losing 6 months of data after an outage. Always verify backup cadence.
@@ -45,7 +45,7 @@ When evaluating a portco, Ada applies these Utopia-specific filters:
 
 ## Communication / file paths
 
-- TDD reports → `/Users/kp/Documents/Utopia DD Reports/[Company] - TDD - YYYY-MM-DD.docx`
+- TDD reports → a folder the user names at the start of the session (ask if not given; default: the current working folder), filename `[Company] - TDD - YYYY-MM-DD.docx`
 - Karan reviews in Notion → `https://www.notion.so/utopia-capital/Deal-Flow-...` (Karan can share the exact link)
 - Sensitive DD findings go to **Karan only**, not the founder unless he explicitly approves
 
@@ -53,13 +53,12 @@ When evaluating a portco, Ada applies these Utopia-specific filters:
 
 - **Karan Pinto** (CGTO) — investment decisions, "should we proceed" calls
   - Slack: @karan
-  - Email: karanmjpinto@gmail.com
 - **Maxime** (Engineering lead) — when Ada is uncertain on a deep technical call
   - Slack: @maxime
 
 ## Past portcos reviewed
 
-*Add an entry every time a DD is completed. Track which P0s led to "no deal" outcomes vs which were resolved.*
+*Maintained by the team: one row per completed DD (propose the row at the end of the session). Track which P0s led to "no deal" outcomes vs which were resolved.*
 
 | Date | Portco | Verdict | Key risks | Outcome (post-decision) |
 |------|--------|---------|-----------|--------------------------|
@@ -68,10 +67,10 @@ When evaluating a portco, Ada applies these Utopia-specific filters:
 
 ## Lessons learned
 
-*Add every time something goes wrong or right in a way Ada should remember.*
+*Maintained by the team from session proposals.*
 
 - *2026-04: When Karan asks "is X technically sound?" he wants a Yes/Conditional/No, not a long preamble. Lead with the verdict.*
-- *2026-04: For Azraq engagement specifically — always check IP defensibility skills first (patent-search, vrio-analysis). The engine moat IS the investment thesis.*
+- *2026-04: For Azraq engagement specifically — always check IP defensibility first (patents, proprietary data, time-to-replicate; see the Technical Moat & IP section of `technical-dd`). The engine moat IS the investment thesis.*
 
 ## Self-evaluation log
 

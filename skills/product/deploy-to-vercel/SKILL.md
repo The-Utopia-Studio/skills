@@ -1,6 +1,13 @@
 ---
 name: deploy-to-vercel
-description: Deploy applications and websites to Vercel. Use when the user requests deployment actions like "deploy my app", "deploy and give me the link", "push this live", or "create a preview deployment".
+description: >-
+  Deploy apps and websites to Vercel and manage the deployment: link the
+  project, deploy previews or production, use a VERCEL_TOKEN when interactive
+  login is impossible, set environment variables, inspect builds and logs, and
+  add domains. Use when the user says "deploy my app", "deploy to vercel", "push
+  this live", "give me the link", "create a preview deployment", "add env vars
+  to vercel", or has a Vercel access token. Not for CI/CD pipelines or Docker
+  (use deployment-engineer) or Railway (use railway).
 metadata:
   author: vercel
   version: "3.0.0"
@@ -11,6 +18,10 @@ metadata:
 Deploy any project to Vercel. **Always deploy as preview** (not production) unless the user explicitly asks for production.
 
 The goal is to get the user into the best long-term setup: their project linked to Vercel with git-push deploys. Every method below tries to move the user closer to that state.
+
+## Token-based auth (no interactive login)
+
+If `vercel whoami` fails but a token exists (`VERCEL_TOKEN` in the environment, a `.env*` file, or one the user provides), follow [token-auth](references/token-auth.md). It covers locating the token, quick deploy by project ID, the link-then-deploy flow, env vars, inspecting deployments, domains and troubleshooting. Never pass the token as `--token` on the command line or echo it. Export it as `VERCEL_TOKEN` so the CLI reads it.
 
 ## Step 1: Gather Project State
 
@@ -161,10 +172,12 @@ The Vercel CLI isn't set up at all.
 
 ### No-Auth Fallback — claude.ai sandbox
 
+`<skill-dir>` is the folder containing this SKILL.md (on claude.ai, usually `/mnt/skills/user/deploy-to-vercel`).
+
 **When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
 
 ```bash
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
+bash <skill-dir>/resources/deploy.sh [path]
 ```
 
 **Arguments:**
@@ -173,13 +186,13 @@ bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
 **Examples:**
 ```bash
 # Deploy current directory
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh
+bash <skill-dir>/resources/deploy.sh
 
 # Deploy specific project
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh /path/to/project
+bash <skill-dir>/resources/deploy.sh /path/to/project
 
 # Deploy existing tarball
-bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh /path/to/project.tgz
+bash <skill-dir>/resources/deploy.sh /path/to/project.tgz
 ```
 
 The script auto-detects the framework from `package.json`, packages the project (excluding `node_modules`, `.git`, `.env`), uploads it, and waits for the build to complete.
@@ -228,13 +241,13 @@ The script handles framework detection, packaging, and deployment. It waits for 
 
 ### Claude Code / terminal-based agents
 
-You have full shell access. Do NOT use the `/mnt/skills/` path. Follow the decision flow above using the CLI directly.
+You have full shell access. Follow the decision flow above using the CLI directly.
 
 For the no-auth fallback, run the deploy script from the skill's installed location:
 ```bash
-bash ~/.claude/skills/deploy-to-vercel/resources/deploy.sh [path]
+bash <skill-dir>/resources/deploy.sh [path]
 ```
-The path may vary depending on where the user installed the skill.
+`<skill-dir>` is the folder this SKILL.md was loaded from (its `resources/` sits next to it).
 
 ### Sandboxed environments (claude.ai)
 

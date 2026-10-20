@@ -28,3 +28,17 @@ cp -r skills/sandbox/<skill-name> ~/.claude/skills/
 ```
 
 Or symlink via skillshare.
+
+## Retired from packs (2026-10 consolidation)
+
+These were removed from the packs because they don't work without a paid data feed or local setup that most users won't have, or because they're too niche for founders, fellows and the fund. They're kept here unchanged so anyone who needs one can copy it in.
+
+| Skill | Why it left the packs |
+|-------|-----------------------|
+| `bond-futures-basis`, `bond-relative-value`, `fixed-income-portfolio`, `fx-carry-trade`, `macro-rates-monitor`, `option-vol-analysis`, `swap-curve-strategy`, `equity-research` | Every step needs LSEG/Refinitiv MCP tools; no fallback. Rates, FX and public-equity desk work. |
+| `earnings-preview-single` | Kensho / S&P Global MCP only, with web search explicitly forbidden. |
+| `earnings-analysis`, `initiating-coverage`, `capital-structure-optimizer`, `lbo-model` | Public-markets / PE buyout work; `lbo-model` also needs an example workbook that was never in the repo. |
+| `huggingface-paper-publisher` | Publishing research papers on the HF Hub; little use for founders, fellows or the fund. |
+| `sketch-prompt` | Needs a local ComfyUI + Flux install at hard-coded personal paths. |
+| `kmjp-social` | Personal ghost-writer for one person, tied to their local files. |
+| `executive-onboarding-playbook`, `review-resume`, `sql-queries` | Career/hiring or generic tasks Claude does well without a skill. |

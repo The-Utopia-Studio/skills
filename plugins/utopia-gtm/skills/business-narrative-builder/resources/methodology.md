@@ -159,7 +159,7 @@ Expected FCFF = Revenue x Operating Margin x (1 - Tax Rate) - Reinvestment
 Value = Sum of PV(FCFF) over high-growth period + PV(Terminal Value)
 ```
 
-This step is handled by the `intrinsic-valuation-dcf` skill. The narrative builder's job is to produce the inputs; the DCF skill computes the output.
+This step is handled by the `dcf-model` skill. The narrative builder's job is to produce the inputs; the DCF skill computes the output.
 
 ### Step 5: Keep the feedback loop open
 

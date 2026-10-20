@@ -216,5 +216,4 @@ When recommending experiments, consider tests for:
 
 - **signup-flow-cro**: For optimizing the signup before onboarding
 - **email-sequence**: For onboarding email series
-- **paywall-upgrade-cro**: For converting to paid during/after onboarding
-- **ab-test-setup**: For testing onboarding changes
+- **ab-test-analysis**: For testing onboarding changes

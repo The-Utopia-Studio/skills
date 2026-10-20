@@ -14,7 +14,7 @@ MUST fire (5):
 MUST NOT fire (3, name the sibling each belongs to):
 1. "Design the after-launch loop — how we ship, observe, and promote autonomy by eval." → belongs to `refine-flywheel`
 2. "Turn our production traces / usage logs into discovery interviews." → belongs to `trace-to-interview`
-3. "Build the cohort retention dashboard — write the SQL and set the alert thresholds." → belongs to `retention-dashboard` (M9)
+3. "Build the cohort retention dashboard — write the SQL and set the alert thresholds." → belongs to `metrics-dashboard` (M9)
 
 ## Runs
 
@@ -26,11 +26,11 @@ MUST NOT fire (3, name the sibling each belongs to):
 
 | Gate | Result | Evidence |
 |---|---|---|
-| 1 Trigger | **PASS** (5/5 fire, 0/3 misfire) | Description lists all 5 must-fire phrasings near-verbatim ("what metrics should we track", "what should our North Star be", "is our retention any good / does the curve flatten", MAU-vanity, "what's our cost per outcome"). All 3 must-not-fire are carved out by name in the `Do NOT fire` clause → refine-flywheel / trace-to-interview / retention-dashboard+cohort-analysis. Clean negative scope. |
+| 1 Trigger | **PASS** (5/5 fire, 0/3 misfire) | Description lists all 5 must-fire phrasings near-verbatim ("what metrics should we track", "what should our North Star be", "is our retention any good / does the curve flatten", MAU-vanity, "what's our cost per outcome"). All 3 must-not-fire are carved out by name in the `Do NOT fire` clause → refine-flywheel / trace-to-interview / expansion-retention+saas-revenue-growth-metrics. Clean negative scope. |
 | 2 Golden | **PASS** (5/5) | Per-case totals below. All ≥ 24/25, no dimension < 4, no auto_fail triggered. |
 | 3 Adversarial | **PASS** (3/3) | 01 vague one-liner → skill's `When NOT` clause asks the exact one question ("what single outcome does this product deliver?"), invents nothing. 02 MAU-as-NS → names the up-and-to-the-right lie, refuses to adopt/track, reframes to received outcome, demands flattening gate. 03 out-of-scope loop → `When NOT` table row 1 declines and names `refine-flywheel` with the one-line boundary. No fabrication, flattery, or scope-poaching. |
 | 4 Head-to-head | **n/a** | `supersedes: none`. |
-| 5 Anti-generic | **PASS** | Golden-01 output could NOT come from a generic PM prompt: the flattening-retention *gate* (shape law: ≤~1pt tail slope = flat/VALID, ≥~2pt = INVALID, PROVISIONAL until passed), cost-per-outcome to the cent with AI-specific margin-inversion-at-scale check, and the money/behaviour/opinion evidence ladder are all Icarus-specific spine, not decoration. Guidance is table/checklist-first in both SKILL.md and template.md — no depth written as prose that should be a table. Verified thin-wrapper: cohort mechanics → cohort-analysis, NSM framework → north-star-metric, CAC/LTV → financial-unit-economics, dashboard → retention-dashboard; all resolve to real M9 skills. |
+| 5 Anti-generic | **PASS** | Golden-01 output could NOT come from a generic PM prompt: the flattening-retention *gate* (shape law: ≤~1pt tail slope = flat/VALID, ≥~2pt = INVALID, PROVISIONAL until passed), cost-per-outcome to the cent with AI-specific margin-inversion-at-scale check, and the money/behaviour/opinion evidence ladder are all Icarus-specific spine, not decoration. Guidance is table/checklist-first in both SKILL.md and template.md — no depth written as prose that should be a table. Verified thin-wrapper: cohort mechanics → saas-revenue-growth-metrics, NSM framework → metrics-that-matter, CAC/LTV → saas-economics-efficiency-metrics, dashboard → expansion-retention; all resolve to real M9 skills. |
 | 6 Real-use | pending | Requires 5+ real fellow uses. |
 
 ### Golden per-case scores (rubric: /25, pass ≥21 AND no dim <4)

@@ -1,6 +1,15 @@
 ---
 name: efecto-social-media
-description: Design social media assets with Efecto — Instagram posts, carousels, stories, YouTube thumbnails, TikTok covers, Twitter/X images, LinkedIn slides, Pinterest pins, and Facebook graphics. Use when asked to "design a post", "create a carousel", "make a thumbnail", "design social media", or any social content task. Requires Efecto MCP server.
+description: >-
+  Use this skill whenever the user wants a social media graphic designed in
+  Efecto: Instagram posts and carousels (1080x1080, 1080x1350), stories and
+  reels covers, YouTube thumbnails, TikTok covers, Twitter/X images, LinkedIn
+  carousel slides, Pinterest pins and Facebook graphics, with platform sizes,
+  safe zones and bold social typography. Use when asked to "design an Instagram
+  carousel", "make a thumbnail", "design a social post" or anything sized for a
+  social platform. Requires the Efecto MCP server. Not for posters, flyers,
+  banners or other non-social graphics (use efecto-graphic-design), web pages
+  (use efecto-web-design), or writing the post text (use social-content).
 metadata:
   mcp-server: efecto
   author: pablostanley

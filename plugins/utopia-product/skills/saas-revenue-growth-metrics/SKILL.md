@@ -1,6 +1,13 @@
 ---
 name: saas-revenue-growth-metrics
-description: Calculate SaaS revenue, retention, and growth metrics. Use when diagnosing momentum, churn, expansion, or product-market-fit signals.
+description: >-
+  Calculate and interpret SaaS revenue and retention metrics from the user's numbers: MRR and ARR
+  growth, ARPU, ARPA, ACV, logo and revenue churn, gross and net revenue retention (GRR, NRR),
+  expansion, quick ratio, revenue mix and cohort trends. Use whenever the user gives starting MRR plus
+  new, expansion, contraction and churned MRR, or asks to compute churn, NRR or quick ratio for a
+  board deck, or to diagnose momentum and product-market-fit signals. Not for CAC, LTV, payback, burn
+  and efficiency ratios (use saas-economics-efficiency-metrics) or choosing a North Star (use
+  metrics-that-matter).
 intent: >-
   Master revenue and retention metrics to understand SaaS business momentum, evaluate product-market fit, and make data-driven decisions about growth investments. Use this to calculate key metrics, interpret trends, identify problems early, and communicate business health to stakeholders.
 type: component
@@ -14,7 +21,6 @@ scenarios:
   - "Help me understand the difference between gross and net revenue retention and how to improve it"
 estimated_time: "10-15 min"
 ---
-
 
 ## Purpose
 
@@ -611,11 +617,8 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 ## References
 
 ### Related Skills
-- `saas-economics-efficiency-metrics` — Unit economics (CAC, LTV, margins, burn rate)
-- `finance-metrics-quickref` — Fast lookup for all metrics
-- `feature-investment-advisor` — Uses revenue metrics to evaluate feature ROI
-- `finance-based-pricing-advisor` — Uses ARPU/ARPA to evaluate pricing changes
-- `business-health-diagnostic` — Uses revenue/retention metrics to diagnose business health
+- `saas-economics-efficiency-metrics` — Unit economics (CAC, LTV, margins, burn rate), plus a fast formula/benchmark cheat sheet for every SaaS metric
+- `metrics-that-matter` — North Star, retention truth test and cost per outcome for a launched product
 
 ### External Frameworks
 - **Bessemer Venture Partners:** "SaaS Metrics 2.0" — Definitive guide to SaaS metrics
@@ -623,8 +626,3 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 - **Tomasz Tunguz (Redpoint):** SaaS benchmarking research
 - **Tien Tzuo:** *Subscribed* — Subscription business model fundamentals
 - **ChartMogul, Baremetrics, ProfitWell:** SaaS analytics platforms with metric definitions
-
-### Provenance
-- Adapted from `research/finance/Finance for Product Managers.md`
-- Consolidated from `research/finance/Finance_QuickRef.md`
-- Common mistakes from `research/finance/Finance_Metrics_Additions_Reference.md`

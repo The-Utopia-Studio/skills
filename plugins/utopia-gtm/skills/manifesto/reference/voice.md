@@ -21,7 +21,7 @@ Use future tense once, near the end, for the world-after beat. Not before.
 - Companies: "we". Consistently, from the first paragraph.
 - Philosophies and founder essays: "I".
 - Never the company name in third person as the subject of belief sentences.
-  "At Navon, Navon believes" is the single clearest marker of a document written
+  "At Acme, Acme believes" is the single clearest marker of a document written
   by committee.
 - "You" is allowed in the direct-address beat of a Philosophy and in the
   invitation. Elsewhere it turns into ad copy.

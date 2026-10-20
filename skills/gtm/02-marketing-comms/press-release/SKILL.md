@@ -1,9 +1,19 @@
 ---
 name: press-release
-description: Write an Amazon-style press release that defines customer value before building. Use when aligning stakeholders on a new product, feature, or strategic bet.
-intent: >-
-  Create a visionary press release following Amazon's "Working Backwards" methodology to define and communicate a product or feature before building it. Use this to align stakeholders on the customer value proposition, clarify the problem being solved, and test if the product story resonates—treating the press release as a forcing function for clarity and customer-centricity.
-type: component
+description: >-
+  Write an Amazon-style working-backwards press release (with FAQ) that defines
+  customer value before building. Use when aligning stakeholders on a new
+  product, feature or strategic bet, or testing whether a product idea is
+  compelling before engineering starts. Not for launch-day announcements or the
+  launch plan (use launch-strategy), website copy (use copywriting), or a
+  positioning statement (use positioning-workshop).
+metadata:
+  type: component
+  intent: >-
+    Create a visionary press release following Amazon's "Working Backwards"
+    methodology to define and communicate a product or feature before building
+    it, aligning stakeholders on the customer value proposition and the problem
+    being solved.
 ---
 
 
@@ -67,10 +77,10 @@ Use `template.md` for the full fill-in structure.
 ### Step 1: Gather Context
 Before drafting, ensure you have:
 - **Product/feature description:** What are you building?
-- **Target customer/persona:** Who is this for? (reference `skills/proto-persona/SKILL.md`)
-- **Problem statement:** What customer problem does this solve? (reference `skills/problem-statement/SKILL.md`)
+- **Target customer/persona:** Who is this for? (see the proto-persona skill)
+- **Problem statement:** What customer problem does this solve? (see the problem-statement skill)
 - **Key benefits:** What outcomes does it deliver?
-- **Competitive context:** How is this different from alternatives? (reference `skills/positioning-statement/SKILL.md`)
+- **Competitive context:** How is this different from alternatives? (see the positioning-workshop skill)
 - **Company mission/values:** How does this fit the company's vision?
 
 **If missing context:** Run discovery, define the problem statement, or clarify positioning first.
@@ -245,10 +255,10 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/problem-statement/SKILL.md` — Defines the customer problem the press release highlights
-- `skills/positioning-statement/SKILL.md` — Informs the differentiation and value proposition
-- `skills/proto-persona/SKILL.md` — Defines the target customer mentioned in the press release
-- `skills/jobs-to-be-done/SKILL.md` — Informs the customer benefits and outcomes
+- `problem-statement` (product pack) — Defines the customer problem the press release highlights
+- `positioning-workshop` — Informs the differentiation and value proposition
+- `proto-persona` (product pack) — Defines the target customer mentioned in the press release
+- `jobs-to-be-done` (product pack) — Informs the customer benefits and outcomes
 
 ### External Frameworks
 - Amazon's Working Backwards process — Origin of the press release-first methodology
@@ -259,11 +269,4 @@ Mini example excerpt:
 - Visionary Press Release Prompt (inspired by Amazon's Working Backwards methodology)
 
 ### Provenance
-- Adapted from `prompts/visionary-press-release.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `press-release.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/problem-statement/SKILL.md`, `skills/positioning-statement/SKILL.md`, `skills/proto-persona/SKILL.md`, `skills/jobs-to-be-done/SKILL.md`
+- Adapted from the visionary-press-release prompt in https://github.com/deanpeters/product-manager-prompts.

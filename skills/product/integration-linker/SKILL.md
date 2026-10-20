@@ -1,6 +1,13 @@
 ---
 name: integration-linker
-description: Detects and connects development tools — Slack with GitHub, Linear with Git, error tracking with notifications. Provides step-by-step setup procedures for each integration. Use when the user asks to "connect tools", "link Slack", "set up notifications", "integrate Linear", or "connect my tools". Don't use for monitoring setup (use monitoring-setup), deployment (use deployment-engineer), or security (use security-auditor).
+description: >-
+  Connect a startup's dev tools so they talk to each other: GitHub and Vercel
+  notifications into Slack, Linear issues linked to branches and PRs, Sentry
+  error alerts into Slack, with step-by-step setup and a connectivity map. Use
+  when the user asks to connect or integrate GitHub, Slack, Linear, Jira, Sentry
+  or Vercel, set up PR, deploy or error notifications, or says their tools do
+  not talk to each other. Not for setting up Sentry itself (use monitoring-
+  setup) or CI/CD (use deployment-engineer).
 ---
 
 # Integration Linker

@@ -117,28 +117,28 @@ Use this structured approach when defining or applying kill criteria:
 □ Step 8: Execute kill decision (if triggered)
 ```
 
-**Step 1: Define success metrics and time horizon** ([details](#1-define-success-metrics-and-time-horizon))
+**Step 1: Define success metrics and time horizon**
 Specify quantifiable success criteria (e.g., "20% conversion") and evaluation period (e.g., "6 months post-launch").
 
-**Step 2: Establish objective kill criteria** ([details](#2-establish-objective-kill-criteria))
+**Step 2: Establish objective kill criteria**
 Set numeric thresholds that trigger stop decision (e.g., "If <10% conversion after 6 months"). Make criteria objective, not subjective.
 
-**Step 3: Assign decision rights and governance** ([details](#3-assign-decision-rights-and-governance))
+**Step 3: Assign decision rights and governance**
 Name specific person who makes kill decision. Define escalation process. Avoid "team consensus" (leads to paralysis).
 
-**Step 4: Set milestone gates or trigger points** ([details](#4-set-milestone-gates-or-trigger-points))
+**Step 4: Set milestone gates or trigger points**
 For multi-stage projects: define go/no-go gates. For ongoing projects: define triggers that prompt evaluation.
 
-**Step 5: Document formally** ([details](#5-document-formally))
+**Step 5: Document formally**
 Write kill criteria in PRD, project charter, or investment memo. Get stakeholders to sign/approve before launch (prevents moving goalposts).
 
-**Step 6: Monitor metrics regularly** ([details](#6-monitor-metrics-regularly))
+**Step 6: Monitor metrics regularly**
 Track metrics weekly/monthly. Dashboard with kill criteria thresholds clearly marked. Automate alerts when approaching thresholds.
 
-**Step 7: Evaluate at gates/triggers** ([details](#7-evaluate-at-gatestriggers))
+**Step 7: Evaluate at gates/triggers**
 When gate or trigger hit, conduct formal evaluation. Use pre-mortem inversion: "Would we start this today?" Decide: continue, pivot, or kill.
 
-**Step 8: Execute kill decision** ([details](#8-execute-kill-decision))
+**Step 8: Execute kill decision**
 If kill triggered: communicate decision, wind down project, reallocate resources, conduct postmortem. Execute quickly (avoid zombie projects).
 
 ---
@@ -258,8 +258,7 @@ Before launching project, answer:
 - **expected-value**: For quantifying opportunity cost of continuing vs. killing
 - **hypotheticals-counterfactuals**: For pre-mortem analysis ("what if we had killed earlier?")
 - **decision-matrix**: For comparing continue/pivot/kill options
-- **postmortem**: For learning from killed projects
-- **portfolio-roadmapping-bets**: For portfolio-level kill decisions
+- **forecast-premortem**: For stress-testing the plan before launch
 
 ---
 

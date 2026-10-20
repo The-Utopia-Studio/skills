@@ -1,6 +1,19 @@
 ---
 name: account-tier-scoring
-description: "Use this skill when you want a production-grade account scoring system instead of a vibes-based one: it tiers every account onto a Bronze/Silver/Gold/Diamond ladder, scoring pre-conversion accounts on intent signals + ACV potential and trials/customers on activation depth + expansion headroom. It encodes the judgment that makes scoring trustworthy \u2014 a hard self-serve gate with LinkedIn headcount verification, an enterprise persona gate, anonymous-signal and social-engagement caps, prior-relationship floors, and never-demote rules \u2014 with every threshold exposed as a tunable default. Each run produces a verified tier tag and ACV tag, a prepended signal-stack snapshot in account memory, a CRM lead-score sync, and correctly routed Gold/Diamond alerts with per-stakeholder engagement recommendations."
+description: >-
+  Use this skill whenever the user wants to qualify or score leads and accounts:
+  "qualify these leads", "which of these go to an AE today", "design our intent
+  scoring model", "weights and decay for our signals", "define our PQL / product
+  qualified lead model", "which usage signals count", or "define do-not-touch /
+  suppression rules for outreach". It tiers accounts Bronze/Silver/Gold/Diamond,
+  scoring pre-conversion leads on intent signals plus ACV potential and trials or
+  customers on usage depth (PQL/PQA) and expansion headroom, with a self-serve
+  gate, enterprise persona gate, signal weights and decay windows, anonymous
+  signal caps, prior-relationship floors, never-demote rules, suppression rules
+  with override owners, tier-to-play routing and model governance. Not for
+  defining the ICP (use ideal-customer-profile), MQL/SQL lifecycle stages and CRM
+  routing setup (use revops), enrichment (use lead-enrichment), or writing the
+  outreach (use cold-email or outreach-execution).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/amos-bar-joseph/account-tier-scoring
@@ -12,7 +25,7 @@ Scores any account onto a four-tier ladder — pre-conversion on intent + ACV po
 
 ## Template placeholders
 
-Replace every `{{...}}` before enabling. See the setup checklist reference for the full setup list.
+Replace every `{{...}}` before enabling. See `references/setup-customization-checklist.md` for the full setup list.
 
 - `{{CRM}}` — Your CRM (e.g. HubSpot, Attio, Salesforce)
 - `{{ALERTS_CHANNEL}}` — Channel where Gold/Diamond alerts post (your MQL channel)
@@ -39,7 +52,7 @@ Every scoring run produces two labels:
 - **A tier tag** (`tier: bronze|silver|gold|diamond`) — how strong is the case for human attention right now. Bronze is the floor.
 - **An ACV tag** (`high-acv-potential` / `medium-acv-potential` / `low-acv-potential`) — how big could this account get. Assessed once per run, before tiering, and consumed by the tier rules.
 
-Scoring mode follows lifecycle stage: customers score on usage + expansion headroom, trials on activation depth, pre-conversion accounts on intent, and zero-signal accounts get an ACV assessment only (no tier, no alert). Two reference pages carry the detailed rules: the **Intent scoring reference** and the **Trial scoring reference**.
+Scoring mode follows lifecycle stage: customers score on usage + expansion headroom, trials on activation depth, pre-conversion accounts on intent, and zero-signal accounts get an ACV assessment only (no tier, no alert). Two reference pages carry the detailed rules: the **Intent scoring reference** (`references/intent-scoring-reference.md`) and the **Trial scoring reference** (`references/trial-scoring-reference.md`).
 
 ---
 
@@ -114,8 +127,8 @@ If the account is in Closed Lost OR previously trialed your product, apply a **G
 
 In this order:
 1. **Paying customer (Closed Won)?** → Customer expansion scoring (below)
-2. **On trial?** → Load the **Trial scoring reference**
-3. **Any first-party intent signal?** (website visit, chat, completed meeting, outreach reply, LinkedIn profile view or post engagement on {{SOCIAL_SELLER}}) → Load the **Intent scoring reference**
+2. **On trial?** → Load the **Trial scoring reference** (`references/trial-scoring-reference.md`)
+3. **Any first-party intent signal?** (website visit, chat, completed meeting, outreach reply, LinkedIn profile view or post engagement on {{SOCIAL_SELLER}}) → Load the **Intent scoring reference** (`references/intent-scoring-reference.md`)
 4. **None** → No-signal handling (below)
 
 **LinkedIn caps (full rules in the intent reference):** a profile view is medium-high weight; post engagement is Silver-level alone at any volume. A profile view as the ONLY first-party signal caps at Silver; stacked with another high-intent first-party signal it qualifies for Gold — but only when the viewer is on {{BUYER_PERSONA_LIST}}. A weak-persona viewer with stacked signals: keep Silver and target a buyer persona from the buying committee (Step 6), never the junior viewer.
@@ -173,6 +186,17 @@ Also set the one-line state summary: `[SCORE: tier] [Mode] — [what drove it]`,
 **Agency check (after routing):** if the account is an agency/consultancy in your space, flag it to {{PARTNERSHIPS_OWNER}} in 3–4 sentences (company, domain, what they do, tier, triggering signal) as a potential partner. On signup/trial events this fires at every tier; otherwise Gold/Diamond only.
 
 ---
+
+### Scoring governance (signals, suppression, plays)
+
+Folded in from the retired lead-qualification, signal-scoring, pql-framework, outbound-plays and suppression-logic skills. Use when designing or auditing the model rather than scoring one account.
+
+- **Signal inventory:** list every signal source with freshness cadence, coverage %, reliability and an owner. Blend at least two independent signals before green-lighting a high-effort play.
+- **Weights and decay:** set a base weight per signal, adjust for persona relevance, and give each category a decay window (hours for pricing-page visits and demo requests, days for content and social engagement, weeks for funding and hiring). Expired signals drop out of the stack.
+- **Negative and disqualifying signals:** expired trials, churn risk, open support escalations, a competitor's employee, a student or personal domain. They subtract or gate, they never just fail to add.
+- **Suppression rules:** a shared do-not-touch matrix (reason, trigger condition, owner who can override, duration, auto-expiry) covering legal or compliance holds, open deals owned by someone else, active security incidents or support escalations, payment disputes, and customer-success-led renewals. Mirror it in CRM and MAP so channels never drift; suppressed accounts are scored and remembered but never alerted or contacted.
+- **Tier-to-play mapping:** Gold and Diamond route to a human same day; Silver goes to nurture with the triggering signal noted; Bronze stays in monitor. The first touch references the public signal that fired (see the shared signal rule in cold-email).
+- **Governance:** version the thresholds, review weights quarterly against closed-won data, keep a change log (rationale, evidence, approver), and QA-sample scored accounts so reps keep trusting the tiers.
 
 ## What good looks like
 

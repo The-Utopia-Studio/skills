@@ -68,4 +68,4 @@ Kill line (auto-fail): the read-out claims the WoZ proved feasibility, unit econ
 - `agent-concierge-probe` — the next rung up; hand it the wizard's effort log to get real cost-per-task.
 - `concierge-probe` — when the founder must do the real workflow by hand, exceptions and all, to learn willingness to pay.
 - `evidence-ladder` — the scoring ladder this read-out uses.
-Supersedes nothing. It absorbs the WoZ rung of `skills/discovery/prototyping-pretotyping` and sharpens it: that skill tests "user perception"; this one isolates usage by holding feasibility constant, and names cost and scale as lies rather than results. It **narrows** that one rung — `probe-matrix` is what supersedes `prototyping-pretotyping`, so this skill's `supersedes: none` is correct.
+Supersedes nothing. It absorbs the WoZ rung of the generic prototyping fidelity ladder and sharpens it: the ladder tests "user perception"; this one isolates usage by holding feasibility constant, and names cost and scale as lies rather than results. It **narrows** that one rung — `probe-matrix` is what replaced the fidelity ladder, so this skill's `supersedes: none` is correct.

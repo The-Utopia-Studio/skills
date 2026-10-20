@@ -1,6 +1,14 @@
 ---
 name: cost-of-capital-estimator
-description: Computes cost of equity (CAPM), cost of debt (synthetic rating), and weighted average cost of capital (WACC) for any company in any currency. Handles emerging market risk premiums, bottom-up beta estimation, and multi-country operations. Use when estimating discount rates, computing WACC, determining hurdle rates, analyzing cost of equity or debt, or when user mentions cost of capital, WACC, beta, equity risk premium, country risk premium, or discount rate.
+description: >-
+  Work out the discount rate for a company: cost of equity (CAPM with bottom-up beta), cost of
+  debt (synthetic rating) and WACC, in any currency, including country risk premiums for
+  emerging markets (GCC, MENA, LatAm, Asia) weighted by where revenue is earned. Use this
+  skill whenever the user asks "what discount rate should we use", "what's the WACC", "what
+  hurdle rate", "what's the cost of equity for X", "how much country risk premium for
+  Saudi/Qatar/Egypt", or gives a company's markets, beta or leverage and wants a rate. Also
+  for equity risk premium, levering or unlevering beta, and the riskfree rate in a local
+  currency. Not for a full DCF valuation (use dcf-model).
 ---
 # Cost of Capital Estimator
 

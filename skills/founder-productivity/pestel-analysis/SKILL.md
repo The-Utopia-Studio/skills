@@ -6,7 +6,6 @@ intent: >-
 type: component
 ---
 
-
 ## Purpose
 Conduct a systematic analysis of macro-environmental factors—Political, Economic, Social, Technological, Environmental, and Legal—that could impact your product or project. Use this to identify external opportunities and threats, inform strategic planning, assess market entry risks, and make data-driven decisions about product direction in the context of broader forces beyond your control.
 
@@ -353,24 +352,14 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/recommendation-canvas/SKILL.md` — PESTEL factors inform risk assessment in canvas
-- `skills/positioning-statement/SKILL.md` — PESTEL insights shape competitive positioning
-- `skills/problem-statement/SKILL.md` — Social/economic factors influence customer problems
+- `recommendation-canvas` — PESTEL factors inform risk assessment in canvas
+- `positioning-workshop` — PESTEL insights shape competitive positioning
+- `problem-statement` — Social/economic factors influence customer problems
 
 ### External Frameworks
 - Francis Joseph Aguilar, *Scanning the Business Environment* (1967) — Origin of PEST analysis
 - PESTEL (extension of PEST to include Environmental and Legal)
 - Michael Porter, *Competitive Strategy* (1980) — Complements PESTEL with industry-level analysis
 
-### Dean's Work
-- PESTEL Analysis Prompt Template (adapted from Aguilar's framework)
-
 ### Provenance
-- Adapted from `prompts/pestel-analysis-prompt-template.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `pestel-analysis.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/recommendation-canvas/SKILL.md`, `skills/positioning-statement/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

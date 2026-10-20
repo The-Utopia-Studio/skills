@@ -1,6 +1,13 @@
 ---
 name: estimation-fermi
-description: Decomposes complex unknowns into estimable components to produce rapid order-of-magnitude answers with bounded uncertainty. Use when making quick estimates (market sizing, resource planning, feasibility checks), bounding unknowns with upper/lower limits, sanity-checking strategic assumptions, or when user mentions Fermi estimation, back-of-envelope calculation, order of magnitude, ballpark estimate, or triangulation.
+description: >-
+  Produce a quick back-of-envelope (Fermi) estimate: break the unknown into factors you can
+  estimate, state each assumption, give upper and lower bounds, and cross-check with a second
+  decomposition path. Use this skill whenever the user asks for a ballpark, rough,
+  order-of-magnitude or back-of-envelope number, "roughly how many...", "give me a quick
+  estimate of...", "how many X could afford Y", or wants to sanity-check a figure fast,
+  including quick counts of potential customers. Not for a structured TAM/SAM/SOM
+  market-sizing analysis for a pitch or business case (use market-sizing).
 ---
 # Fermi Estimation
 
@@ -44,11 +51,11 @@ Break unknown into product/quotient of knowable parts. Choose decomposition stra
 
 **Step 3: Estimate components using anchors**
 
-Ground estimates in known quantities (population, physical constants, market sizes, personal experience). State assumptions explicitly. See [resources/methodology.md](resources/methodology.md#anchoring-techniques) for anchor sources and calibration.
+Ground estimates in known quantities (population, physical constants, market sizes, personal experience). State assumptions explicitly. See [resources/methodology.md](resources/methodology.md#1-anchoring-techniques) for anchor sources and calibration.
 
 **Step 4: Bound with upper/lower limits**
 
-Calculate optimistic (upper) and pessimistic (lower) bounds to bracket answer. Check if decision changes across range. See [resources/methodology.md](resources/methodology.md#bounding-techniques) for constraint-based bounding.
+Calculate optimistic (upper) and pessimistic (lower) bounds to bracket answer. Check if decision changes across range. See [resources/methodology.md](resources/methodology.md#2-bounding-techniques) for constraint-based bounding.
 
 **Step 5: Calculate and sanity-check**
 

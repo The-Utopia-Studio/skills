@@ -1,6 +1,17 @@
 ---
 name: deal-velocity-engineer
-description: "Diagnose and fix deal velocity problems. Sales cycle diagnostics, stage exit criteria, pipeline deflation, zombie deal elimination, multi-threading, mutual action plans, AI-driven deal scoring, revenue intelligence integration (Gong/Chorus), and compression tactics with sourced benchmarks. Trigger on 'deal velocity,' 'sales cycle too long,' 'deals stalling,' 'pipeline velocity,' 'stage exit criteria,' 'zombie deals,' 'pipeline deflation,' 'deals stuck,' 'multi-threading,' 'mutual action plan,' 'deal inspection,' 'pipeline hygiene,' 'cycle time,' 'stage conversion,' 'deals die in negotiation,' 'we keep slipping deals,' 'reps can't close,' or 'pipeline is bloated but nothing closes.' Connects stage gates, deal scoring, inspection cadence, and pipeline deflation into the operating cadence. Includes modern AI/automation patterns (HubSpot Breeze, Salesforce Agentforce, predictive pipeline management). BOUNDARY: For forecast methodology see revops-forecasting. For pipeline visibility and dashboards see gtm-metrics / revops. For sales methodology (SPICED/MEDDPICC) see meddic-checklist / sales-enablement. For operating cadence see revops / gtm-metrics."
+description: >-
+  Diagnose and fix deal velocity problems and run structured deal reviews: sales
+  cycle diagnostics, stage exit criteria, deal health scoring, opportunity
+  inspection (qualification pulse, stakeholder map, competitive story, committed
+  next steps), zombie-deal triage and pipeline deflation, multi-threading, mutual
+  action plans, AI deal scoring and compression tactics, with sourced benchmarks.
+  Use for "sales cycle too long", "deals stalling", "zombie deals", "pipeline is
+  bloated but nothing closes", "review this deal", "deal inspection", "stage exit
+  criteria" or "mutual action plan". Not for forecast methodology or the forecast
+  call (use revops-forecasting), metrics dashboards (use gtm-metrics), MEDDICC
+  qualification on a discovery call (use discovery-calls), or sales collateral
+  (use sales-enablement).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/rutger-katz/deal-velocity-engineer
@@ -39,7 +50,7 @@ Always diagnose against segment-appropriate benchmarks. A 120-day enterprise cyc
 
 Stage conversion rates are the system's vital signs. If conversion drops at a specific stage, that's the constraint.
 
-For the Sales Cycle Benchmarks by Segment table and the market trend context, see `references/sales-cycle-benchmarks.md`. For the full-funnel conversion rates, win rates by segment, and stage-specific win probabilities (with sources), see `references/conversion-rate-benchmarks.md`.
+For the Sales Cycle Benchmarks by Segment table and the market trend context, see `references/sales-cycle-benchmarks-by-segment.md`. For the full-funnel conversion rates, win rates by segment, and stage-specific win probabilities (with sources), see `references/stage-conversion-rate-benchmarks.md`.
 
 ---
 
@@ -270,7 +281,7 @@ Ranked by evidence strength:
 **How to implement:**
 - Minimum 2 contacts by end of Stage 1
 - Minimum 3 contacts by end of Stage 2
-- Map against 8 stakeholder roles (see meddic-checklist / sales-enablement)
+- Map against 8 stakeholder roles (see discovery-calls / sales-enablement)
 
 ### Tactic 3: Methodology Adherence (SPICED/MEDDPICC)
 
@@ -305,7 +316,7 @@ Ranked by evidence strength:
 
 The performance distribution in B2B sales is extreme and widening; top performers out-earn the rest by **11x** (up from 8.9x). The key insight for velocity engineering: that gap is not talent, it's methodology adherence, deal discipline, and inspection rigour. All system-level fixes. Design the system to pull the middle 60% toward the top 20%.
 
-For the full top-performer-vs-average gap table (volume, cycle, win rate, methodology, objection handling, with sources) and the 2024 quota-attainment crisis stats, see `references/top-performer-gap-analysis.md`.
+For the full top-performer-vs-average gap table (volume, cycle, win rate, methodology, objection handling, with sources) and the 2024 quota-attainment crisis stats, see `references/the-top-performer-gap.md`.
 
 ---
 
@@ -348,7 +359,7 @@ Modern velocity systems leverage AI and automation to scale inspection, scoring,
 
 Automated zombie detection runs nightly:
 
-1. **CRM query:** Extract deals matching 2+ zombie criteria (see zombie-detection-and-triage.md for full list)
+1. **CRM query:** Extract deals matching 2+ zombie criteria (see `references/zombie-detection-and-triage.md` for full list)
 2. **AI classification:** Estimate revive/push/close likelihood using historical data (what % of similar deals closed within 30 days?)
 3. **Alert routing:** High-confidence zombies surface in manager dashboard with recommended triage action; lower-confidence or uncertain deals flag for manager review
 4. **Workflow trigger:** Salesforce Flow or HubSpot workflow auto-creates tasks for rep follow-up or manager escalation
@@ -378,7 +389,7 @@ When a client's velocity is the binding constraint, structure the engagement in 
 - **Phase 2. Design (Weeks 4-6):** build stage gates, deal health model, MAP template, zombie detection. Output: Velocity System Blueprint.
 - **Phase 3. Install and Measure (Weeks 7-12):** activate, iterate, embed into the operating cadence and report.
 
-For the full week-by-week breakdown of each phase and the success-metrics table (90-day and 6-month targets), see `references/90-day-velocity-programme.md`.
+For the full week-by-week breakdown of each phase and the success-metrics table (90-day and 6-month targets), see `references/90-day-deal-velocity-programme.md`.
 
 ---
 
@@ -404,26 +415,34 @@ Forecast accuracy is a velocity output, not a separate problem. Fix stage defini
 
 ---
 
+## Running a Deal Review
+
+Folded in from the retired deal-review skill. For a single opportunity inspection (forecast prep, exec deal review, coaching):
+
+1. **Qualification pulse:** MEDDICC/BANT elements, economic buyer access, champion strength. Every gap becomes a named next step.
+2. **Stakeholder map:** buying committee roles, influencers and missing threads (see Multi-Threading Discipline).
+3. **Mutual action plan:** critical-path milestones, owners and risk mitigations (see Mutual Action Plans).
+4. **Competitive and value story:** differentiators, landmines and the proof still required.
+5. **Next actions:** committed next steps with dates and owners, written into the CRM during the review, not after it. Pull in SE, CS or an exec sponsor when a blocker needs them. Commit-grade forecasting rules live in revops-forecasting.
+
 ## Reference Files
 
 | File | When to read | What's inside |
 |------|-------------|---------------|
-| `references/sales-cycle-benchmarks.md` | Diagnosing cycle length vs. segment | Benchmark cycle table by segment + 2022-onward market trend context |
-| `references/conversion-rate-benchmarks.md` | Finding the conversion constraint | Full-funnel conversion, win rate by segment, stage win probability |
+| `references/sales-cycle-benchmarks-by-segment.md` | Diagnosing cycle length vs. segment | Benchmark cycle table by segment + 2022-onward market trend context |
+| `references/stage-conversion-rate-benchmarks.md` | Finding the conversion constraint | Full-funnel conversion, win rate by segment, stage win probability |
 | `references/zombie-detection-and-triage.md` | Running a pipeline deflation sprint | Full zombie criteria, impact stats, 3 triage paths, prevention cadence |
 | `references/stage-gate-framework-example.md` | Designing stage exit criteria | Worked 5-stage framework with exit criteria + gates |
 | `references/mutual-action-plan-template.md` | Building a MAP with a buyer | Fill-in MAP template + the rule set |
-| `references/top-performer-gap-analysis.md` | Framing the performance-distribution case | Top vs. average gap table + 2024 quota-attainment crisis stats |
-| `references/90-day-velocity-programme.md` | Scoping a velocity engagement | Week-by-week 3-phase plan + success-metrics targets |
+| `references/the-top-performer-gap.md` | Framing the performance-distribution case | Top vs. average gap table + 2024 quota-attainment crisis stats |
+| `references/90-day-deal-velocity-programme.md` | Scoping a velocity engagement | Week-by-week 3-phase plan + success-metrics targets |
 
 ## Related Skills
 
 - **revops-forecasting**: Forecast methodology that depends on velocity discipline
 - **gtm-metrics / revops**: Pipeline dashboards that surface velocity data
-- **meddic-checklist / sales-enablement**: SPICED and MEDDPICC frameworks that stage gates enforce
-- **revops-handoffs**: Handoff mechanics that affect stage transition speed
-
-> Built by [Neon Triforce](https://neontriforce.com)
+- **discovery-calls / sales-enablement**: MEDDICC qualification and talk tracks that stage gates enforce
+- **revops**: Lifecycle handoff mechanics that affect stage transition speed
 
 ---
 

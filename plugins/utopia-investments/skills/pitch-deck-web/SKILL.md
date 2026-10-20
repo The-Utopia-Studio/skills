@@ -1,13 +1,13 @@
 ---
 name: pitch-deck-web
-description: |
-  Build a responsive, interactive pitch-deck website from a brand book + a PRD/example deck.
-  Use when the user asks to "build a pitch deck", "make an investor deck", "create a sales deck",
-  generate a deck site from a brand book, or scaffold a deck from a PRD or existing slides.
-  Pulls brand tokens (colors, typography, voice) from a brandbook-builder-style repo, runs a
-  guided brief (investor vs sales, copy approval, image/logo intake, reference mining), then
-  scaffolds a Vite + React + TS + Tailwind + motion deck site mirroring the utopia-os-deck
-  section-scroll pattern.
+description: >-
+  Builds a pitch deck as a responsive, interactive website (Vite + React + TypeScript +
+  Tailwind + motion, section-scroll pattern) from a brand book plus a PRD or existing deck,
+  then validates and optionally deploys it. Use when the user wants a web deck, deck
+  website, interactive or scrolling pitch site, a deck as a React/Vite app, or a deck
+  deployed to Vercel/Netlify, for investor or sales audiences.
+  Not for a PowerPoint/PPTX deck (use pitch-deck) or for filling a banker's PPT template
+  (use ib-pitch-deck).
 ---
 
 # Pitch Deck — guided build
@@ -184,8 +184,7 @@ Run `npm install`, then `npm run build`. Run the skill's validator before bootin
 node <skill-root>/scripts/validate-pitchdeck-project.mjs <deck-output-path>
 ```
 
-(Resolved from `pitch-deck/scripts/validate-pitchdeck-project.mjs` inside the skills
-collection.) Then boot `npm run dev` and verify:
+(`<skill-root>` is this skill's folder; the script is `scripts/validate-pitchdeck-project.mjs`.) Then boot `npm run dev` and verify:
 
 - No console errors.
 - No horizontal scroll at 360, 768, 1280, 1920.

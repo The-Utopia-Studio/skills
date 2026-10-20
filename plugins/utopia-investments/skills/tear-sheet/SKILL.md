@@ -1,11 +1,21 @@
 ---
 name: tear-sheet
-description: "Generate professional company tear sheets using S&P Capital IQ data via the Kensho LLM-ready API MCP server. Use this skill whenever the user asks for a tear sheet, company one-pager, company profile, fact sheet, company snapshot, or company overview document — especially when they mention a specific company name or ticker. Also trigger when users ask for equity research summaries, M&A company profiles, corporate development target profiles, sales/BD meeting prep documents, or any concise single-company financial summary. This skill supports four audience types: equity research, investment banking/M&A, corporate development, and sales/business development. If the user doesn't specify an audience, ask. Works for both public and private companies."
+description: >-
+  Company tear sheets and strip profiles: a concise single-company profile as a Word
+  one-pager (four audiences: equity research, IB/M&A, corp dev, sales/BD) or as 1-4
+  information-dense PowerPoint "strip profile" slides for a pitch book or IC pack. Pulls
+  financials, segments, valuation, peers, M&A and relationships from a connected financial-data
+  MCP server when available, otherwise from SEC/exchange filings, company IR pages and web
+  search, with every figure cited. Works for public and private companies. Use when the user
+  asks for a tear sheet, company one-pager, company profile, strip profile, fact sheet, company
+  snapshot, target profile or meeting-prep summary of a company.
+  Not for a multi-company competitive landscape deck (use competitive-analysis), a peer
+  multiples table (use comps-analysis), or technical diligence (use technical-dd).
 ---
 
 # Financial Tear Sheet Generator
 
-Generate audience-specific company tear sheets by pulling live data from S&P Capital IQ via the S&P Global MCP tools and formatting the result as a professional Word document.
+Generate audience-specific company tear sheets by pulling data from a connected financial-data MCP server (e.g. S&P Capital IQ via Kensho) or, if none is connected, from filings and the web, and formatting the result as a professional Word document. For slides instead of a document, use the strip-profile mode in `references/strip-profile-pptx.md`.
 
 ## Style Configuration
 
@@ -69,7 +79,7 @@ These are sensible defaults. To customize for your firm's brand, modify this sec
 
 **Footer (document footer, not inline):**
 Place the source attribution and disclaimer in the actual document footer (repeated on every page), not as inline body text at the bottom. The footer is exactly two lines, centered, on every page:
-- Line 1: "Data: S&P Capital IQ via Kensho | Analysis: AI-generated | [Month Day, Year]"
+- Line 1: "Data: [sources actually used, e.g. S&P Capital IQ / SEC filings / company IR / web] | Analysis: AI-generated | [Month Day, Year]"
 - Line 2: "For informational purposes only. Not investment advice."
 - Style: 7pt italic, centered, #666666 text color
 - This footer text must be identical across all tear sheet types for the same company. Do not vary the wording by audience.
@@ -282,14 +292,14 @@ function createBulletList(items, style = "synthesis") {
 }
 
 // ── 5. createFooter ──
-// date: string (e.g., "February 23, 2026")
-function createFooter(date) {
+// date: string (e.g., "February 23, 2026"); sources: string
+function createFooter(date, sources) {
   return new Footer({
     children: [
       new Paragraph({
         children: [
           new TextRun({
-            text: `Data: S&P Capital IQ via Kensho | Analysis: AI-generated | ${date}`,
+            text: `Data: ${sources} | Analysis: AI-generated | ${date}`, // sources: e.g. "SEC filings, company IR, web"
             italics: true,
             size: 14, // 7pt
             color: COLORS.FOOTER_TEXT,
@@ -322,7 +332,7 @@ function createFooter(date) {
 4. Call `createTable(...)` for **all** tabular data — financial summaries, trading comps, M&A activity, relationship tables, funding history, etc. Pass `{ accentHeader: true }` for M&A activity tables (IB/M&A template). For non-numeric tables (e.g., relationships, ownership), the function still works correctly — it only right-aligns cells that contain numeric values.
 5. Call `createBulletList(items, "synthesis")` for earnings highlights, strategic fit, integration considerations, and conversation starters
 6. Call `createBulletList(items, "informational")` for relationship entries
-7. Pass `createFooter(date)` to the Document constructor's `footers.default` property
+7. Pass `createFooter(date, sources)` to the Document constructor's `footers.default` property
 
 **What these functions eliminate:**
 - Black background tables (enforces `ShadingType.CLEAR` everywhere)
@@ -343,7 +353,7 @@ Gather up to four things before proceeding:
    - **IB / M&A** — for bankers profiling a company in transaction context
    - **Corp Dev** — for internal strategic teams evaluating an acquisition target
    - **Sales / BD** — for commercial teams preparing for a client meeting
-3. **Comparable companies** (optional) — if the user has specific comps in mind, note them. Otherwise the skill will identify peers from S&P Global data. This matters for Equity Research, IB/M&A, and Corp Dev tear sheets.
+3. **Comparable companies** (optional) — if the user has specific comps in mind, note them. Otherwise identify peers from the data source or from the company's sector. This matters for Equity Research, IB/M&A, and Corp Dev tear sheets.
 4. **Page length preference** (optional) — defaults vary by audience (see below), but the user can override.
 
 If the user doesn't specify an audience, ask.
@@ -359,14 +369,19 @@ Read the corresponding reference file from this skill's directory:
 
 Each reference defines sections, a query plan, formatting guidance, and page length defaults.
 
-### Step 3: Pull Data via S&P Global MCP
+### Step 3: Pull Data (MCP server if connected, otherwise filings + web)
 
 **First:** Create the intermediate file directory:
 ```bash
-mkdir -p /tmp/tear-sheet/
+mkdir -p ./tear-sheet-data/
 ```
 
-Use the **S&P Global** MCP tools (also known as the Kensho LLM-ready API). Claude will have access to structured tools for financial data, company information, market data, consensus estimates, earnings transcripts, M&A transactions, and business relationships. The query plans in each reference file describe what data to retrieve for each section — map these to the appropriate S&P Global tools available in the conversation.
+**Source order:**
+1. **A connected financial-data MCP server** (e.g. S&P Global / Kensho, FactSet, Daloopa). Map each query-plan step in the reference file to the matching tool.
+2. **No MCP server?** Use primary sources: SEC EDGAR (10-K, 10-Q, 8-K, proxy, S-1), non-US exchange and regulator filings, the company's investor-relations site and annual report. For market data, consensus, funding rounds, M&A and relationships use web search (exchange pages, reputable financial press, company press releases, Crunchbase/PitchBook public pages for private companies).
+3. **User-provided files** override both.
+
+Record the source (document and page, or URL) and access date for every figure in the `source` column of the intermediate files, mark web-sourced estimates "[E]", and name the sources used in the footer. The query plans in each reference file describe what data to retrieve for each section; they were written for S&P Global tool names, so treat them as a checklist of data points when using filings and the web.
 
 **After each query step, immediately write the retrieved data to the intermediate file(s) specified in the reference file's query plan.** Do not defer writes — data written to disk is protected from context degradation in long conversations.
 
@@ -374,7 +389,7 @@ Use the **S&P Global** MCP tools (also known as the Kensho LLM-ready API). Claud
 Each reference file includes a query plan with 4-6 data retrieval steps. These are starting points, not rigid constraints. Prioritize data completeness over minimizing calls:
 
 - **Always pull 4 fiscal years of financial data**, even though only 3 years are displayed. The fourth (earliest) year is needed to compute YoY revenue growth for the first displayed year. Without it, the earliest year's growth rate will show "N/A" — which looks like missing data, not a design choice.
-- Execute the query plan as written, using whichever S&P Global tools match the data needed.
+- Execute the query plan as written, using whichever tools or sources match the data needed.
 - If a tool call returns incomplete results, try alternative tools or narrower queries. For example, if company summary doesn't include segment detail, try the segments tool directly.
 - If a data point isn't returned after a targeted retry, move on — label it "N/A" or "Not disclosed."
 - Never fabricate data. If the tools don't return a number, do not estimate from training knowledge.
@@ -384,7 +399,7 @@ Each reference file includes a query plan with 4-6 data retrieval steps. These a
 **Optional context from the user:** Listen for additional context the user provides naturally. If they mention who the acquirer is ("we're looking at this for our platform"), what they sell ("we sell data analytics to banks"), or who the likely buyers are ("this would be interesting to Salesforce or Microsoft"), incorporate that context into the relevant synthesis sections (Strategic Fit, Conversation Starters, Deal Angle). Don't prompt for this information — just use it if offered.
 
 **Private company handling:**
-CIQ includes private company data, so query the same way. However, expect sparser results. When generating for a private company:
+Private companies have sparser data (CIQ covers some; otherwise use press releases, funding announcements and the company site). When generating for a private company:
 - Skip: stock price, 52-week range, beta, stock performance, consensus estimates, trading comps
 - Lean into: business overview, relationships, ownership structure, whatever financials are available
 - Note "Private Company" prominently in the header
@@ -411,7 +426,7 @@ After all data collection is complete and intermediate files are written, comput
 
 If a validation fails: attempt recalculation from raw data. If still inconsistent, flag the metric as "N/A" rather than publishing incorrect numbers. Quiet math errors in a tear sheet destroy credibility.
 
-**Write results** to `/tmp/tear-sheet/calculations.csv` with columns: `metric,value,formula,components`
+**Write results** to `./tear-sheet-data/calculations.csv` with columns: `metric,value,formula,components`
 
 Example rows:
 ```
@@ -446,7 +461,7 @@ peer-comps.csv:      ✓ (12 rows)
 
 ### Step 4: Format as DOCX
 
-Read `/mnt/skills/public/docx/SKILL.md` for docx creation mechanics (docx-js via Node). Apply the Style Configuration above plus the section-specific formatting in the reference file.
+Use the installed `docx` skill for docx creation mechanics (docx-js via Node). Apply the Style Configuration above plus the section-specific formatting in the reference file.
 
 **Page length defaults (user can override):**
 - Equity Research: 1 page (density is the convention)
@@ -459,21 +474,21 @@ If content exceeds the target, each reference file specifies which sections to c
 **Output filename:** `[CompanyName]_TearSheet_[Audience]_[YYYYMMDD].docx`
 Example: `Nvidia_TearSheet_CorpDev_20260220.docx`
 
-Save to `/mnt/user-data/outputs/` and present to the user.
+Save to the current working folder and present to the user.
 
 ## Data Integrity Rules
 
 These override everything else:
-1. **S&P Global tools are the only source for financial data.** Do not fill gaps with training knowledge — it may be stale or wrong.
+1. **Every financial figure comes from a cited source** (data MCP server, filing, or web page with URL and date). Do not fill gaps with training knowledge — it may be stale or wrong.
 2. **Label what you can't find.** Use "N/A" or "Not disclosed" rather than omitting a row silently.
 3. **Dates matter.** Note the fiscal year end or reporting period. Don't assume calendar year = fiscal year. Market data (stock prices, market cap) should include an "as of" date.
 4. **Don't mix reporting periods.** If you have FY2023 revenue and LTM EBITDA, label them distinctly.
-5. **Prefer MCP-returned fields over manual computation.** If the S&P Global tools return a pre-computed field (e.g., net debt, EBITDA, FCF), use that value directly rather than computing it from components. Only compute derived metrics manually when the tools do not return the field. This reduces discrepancies.
+5. **Prefer MCP-returned fields over manual computation.** If the data source returns a pre-computed field (e.g., net debt, EBITDA, FCF), use that value directly rather than computing it from components. Only compute derived metrics manually when the tools do not return the field. This reduces discrepancies.
 6. **Ensure consistency across tear sheet types.** If generating multiple tear sheets for the same company (e.g., equity research and IB/M&A in the same session), the same underlying data points must produce identical values across all outputs. Net debt, revenue, EBITDA, margins, and growth rates must match exactly. Do not re-query or re-compute independently per report — reuse the same retrieved values.
 7. **Never downgrade known transaction values.** If the M&A tools return a deal value for a transaction, that value must appear in the output. Do not replace a known deal value with "Undisclosed." Use "Undisclosed" only when the tools genuinely return no value for a transaction.
 8. **Use consolidated revenue as the denominator for segment percentages.** When computing "% of Total" for segment tables, divide each segment's revenue by consolidated total revenue (as reported on the income statement), not by the sum of segment revenues. The sum of segments often exceeds consolidated revenue due to intersegment eliminations. Using consolidated revenue ensures percentages align with the total revenue figure shown elsewhere in the document.
 9. **Always include forward (NTM) multiples when available.** If the tools return both trailing and forward valuation multiples, both must appear in the output. Forward multiples are the primary valuation reference for equity research, IB/M&A, and corp dev audiences. Never show only trailing multiples when forward data is available.
-10. **No S&P Global tool returns executive or management data.** Do not populate management names, titles, or biographical details from training data — this violates Rule 1 and produces stale information. If a management section appears in a template, omit it entirely. Ownership structure (institutional holders, insider %, PE sponsor) may be included only if returned by the tools — gate with "data permitting."
+10. **Management data must be sourced.** Data MCP tools usually return none. Do not populate management names, titles, or biographical details from training data; use only a cited filing (proxy, annual report) or company page. Unsourced names violate Rule 1 and go stale. If a management section appears in a template, omit it entirely. Ownership structure (institutional holders, insider %, PE sponsor) may be included only if returned by the tools — gate with "data permitting."
 
 ## Intermediate File Rule
 
@@ -481,7 +496,7 @@ All data retrieved from MCP tools must be persisted to structured intermediate f
 
 **Setup:** At the start of Step 3, create the working directory:
 ```
-mkdir -p /tmp/tear-sheet/
+mkdir -p ./tear-sheet-data/
 ```
 
 **Write-after-query mandate:** After each MCP query step completes, immediately write the retrieved data to the appropriate intermediate file(s). Do not wait until all queries finish. Each reference file's query plan specifies which file(s) to write after each step.
@@ -490,16 +505,16 @@ mkdir -p /tmp/tear-sheet/
 
 | File | Format | Columns / Structure | Used By |
 |---|---|---|---|
-| `/tmp/tear-sheet/company-profile.txt` | Key-value text | name, ticker, exchange, HQ, sector, industry, founded, employees, market_cap, enterprise_value, stock_price, 52wk_high, 52wk_low, shares_outstanding, beta, ownership | All |
-| `/tmp/tear-sheet/financials.csv` | CSV | `period,line_item,value,source` | All |
-| `/tmp/tear-sheet/segments.csv` | CSV | `period,segment_name,revenue,source` | ER, IB, CD |
-| `/tmp/tear-sheet/valuation.csv` | CSV | `metric,trailing,forward,source` | ER, IB, CD |
-| `/tmp/tear-sheet/consensus.csv` | CSV | `metric,fy_year,value,source` | ER |
-| `/tmp/tear-sheet/earnings.txt` | Structured text | Quarter, date, key quotes, guidance, key drivers | ER, IB, Sales |
-| `/tmp/tear-sheet/relationships.txt` | Structured text | Customers, suppliers, partners, competitors — each with descriptors | IB, CD, Sales |
-| `/tmp/tear-sheet/peer-comps.csv` | CSV | `ticker,metric,value,source` | ER, IB, CD |
-| `/tmp/tear-sheet/ma-activity.csv` | CSV | `date,target,deal_value,type,rationale,source` | IB, CD |
-| `/tmp/tear-sheet/calculations.csv` | CSV | `metric,value,formula,components` | All (written in Step 3b) |
+| `./tear-sheet-data/company-profile.txt` | Key-value text | name, ticker, exchange, HQ, sector, industry, founded, employees, market_cap, enterprise_value, stock_price, 52wk_high, 52wk_low, shares_outstanding, beta, ownership | All |
+| `./tear-sheet-data/financials.csv` | CSV | `period,line_item,value,source` | All |
+| `./tear-sheet-data/segments.csv` | CSV | `period,segment_name,revenue,source` | ER, IB, CD |
+| `./tear-sheet-data/valuation.csv` | CSV | `metric,trailing,forward,source` | ER, IB, CD |
+| `./tear-sheet-data/consensus.csv` | CSV | `metric,fy_year,value,source` | ER |
+| `./tear-sheet-data/earnings.txt` | Structured text | Quarter, date, key quotes, guidance, key drivers | ER, IB, Sales |
+| `./tear-sheet-data/relationships.txt` | Structured text | Customers, suppliers, partners, competitors — each with descriptors | IB, CD, Sales |
+| `./tear-sheet-data/peer-comps.csv` | CSV | `ticker,metric,value,source` | ER, IB, CD |
+| `./tear-sheet-data/ma-activity.csv` | CSV | `date,target,deal_value,type,rationale,source` | IB, CD |
+| `./tear-sheet-data/calculations.csv` | CSV | `metric,value,formula,components` | All (written in Step 3b) |
 
 **Abbreviations:** ER = Equity Research, IB = IB/M&A, CD = Corp Dev, Sales = Sales/BD.
 

@@ -1,6 +1,14 @@
 ---
 name: value-based-pricing
-description: Set the price and the charging metric for a validated product — anchor the number at 10–20% of the MEASURED incremental value, and charge on the outcome / asset / decision the customer gets, never on seats or tiers. Emits a value-priced model. Fires on "how should we price this", "what do we charge", "per seat or per outcome", "set the price", "what's the number". Not for brainstorming which revenue model to bet on across the product (that is `monetization-strategy`, exploratory; this commits ONE value-anchored number on ONE metric), not for structuring the whole pilot deal — scope, success metrics, kill criteria (that is `pilot-six-term-sheet`; this produces the price and metric that become its term 2 and term 6), not for measuring the value in the first place (that is `current-state-map`, which prices the status quo this consumes).
+description: >-
+  Set the price and the charging metric for a validated product from MEASURED value: anchor the number
+  at 10-20% of the measured incremental value per outcome, check it clears the cost per outcome, and
+  charge on the outcome, asset or decision delivered, never on seats or tiers. Use when the user has
+  pilot results or measured value (e.g. money recovered or hours saved per outcome) and asks to set
+  the price, what to charge, what the number is, or per seat vs per outcome. Emits a value-priced
+  model, or refuses and routes to measurement when value is unmeasured. Not for brainstorming revenue
+  models or SaaS tiers and packaging (use pricing-strategy), structuring the whole pilot deal (use
+  pilot-six-term-sheet), or measuring today's cost (use current-state-map).
 type: generator
 supersedes: none
 ---
@@ -21,7 +29,7 @@ Do not use when:
 
 | Request | Belongs to |
 |---|---|
-| "Brainstorm 3–5 revenue models and test which one to bet on" | `monetization-strategy` (concept) — exploratory, tests willingness to pay across models. This skill does the opposite: it commits to ONE value-anchored number on ONE metric. |
+| "Brainstorm 3–5 revenue models and test which one to bet on" | `pricing-strategy` (concept) — exploratory, tests willingness to pay across models. This skill does the opposite: it commits to ONE value-anchored number on ONE metric. |
 | "Structure the whole pilot deal — scope, data-rights, success metrics, kill criteria, conversion" | `pilot-six-term-sheet` (section 07). This skill produces the price (its term 2) and the charging metric (its term 6 basis); it does not structure the six-term deal. |
 | "How is this done today / what does the status quo cost / what is it worth" | `current-state-map` (section 01) prices the status quo — the value denominator this skill consumes. If the value is not measured yet, route there first. |
 | "What does one outcome cost us to produce" | `eval-first-spec` (section 07) produces cost_per_outcome — the floor this skill checks the price against. |
@@ -120,7 +128,7 @@ The priceless outcome. When one outcome is a prevented fatality or an unbounded 
 
 ## Related skills
 
-`monetization-strategy` (concept) — the skill this one absorbs and reframes. It brainstorms 3–5 revenue models and tests willingness to pay to decide which to bet on; this skill takes the chosen model and commits ONE value-anchored number on ONE metric. Send a fellow there when the model itself is still open; use this when it is time to set the number.
+`pricing-strategy` (concept) — the exploratory pricing skill. Among other things it brainstorms 3–5 revenue models and tests willingness to pay to decide which to bet on; this skill takes the chosen model and commits ONE value-anchored number on ONE metric. Send a fellow there when the model itself is still open; use this when it is time to set the number.
 
 `pilot-six-term-sheet` (section 07) — consumes this skill's output: the price becomes term 2 and the metric becomes the term 6 conversion basis. That skill structures the whole deal (scope, data-rights, success metrics, kill criteria); this one only sets what to charge and on what. Route there to write the deal.
 

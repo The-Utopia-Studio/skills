@@ -15,7 +15,7 @@ Turns "here's a good public skill" into one of four decisions and, in the common
 
 **Every market skill is, by default, folded into an existing studio skill or rejected. It is never added as new surface, and never vendored wholesale.**
 
-The studio optimises for a small premium set. [Fact] Every skill Claude can load costs context for every fellow on every session. So net-new surface has to earn that recurring cost, not just be "good in isolation". The generic instinct is to `npx skills add` and drop the folder in a category. That is exactly the noise this skill exists to stop. [Fact] `skills/product/product-manager-skills/` is a full external repo vendored wholesale — README, CHANGELOG, LICENSE, `package.json`, `bin/`, `docs/`, `templates/` all still present. That is the failure mode: one useful idea buried under a repo's worth of dead weight.
+The studio optimises for a small premium set. [Fact] Every skill Claude can load costs context for every fellow on every session. So net-new surface has to earn that recurring cost, not just be "good in isolation". The generic instinct is to `npx skills add` and drop the folder in a category. That is exactly the noise this skill exists to stop. [Fact] The studio once vendored a whole external PM-skills repo (README, CHANGELOG, LICENSE, `package.json`, `bin/` and all) as one skill; it duplicated about thirty studio skills, hijacked routing and had to be retired.
 
 Adoption and behaviour outrank author opinion. A skill's install count and real usage are evidence; its README's self-description is not. Weigh the former.
 
@@ -40,7 +40,7 @@ Run the pipeline in order. Do not skip QUALIFY to get to the interesting part �
 
 ### 1. QUALIFY
 
-Apply the `find-skills` quality gate before anything else — install count, source reputation, GitHub stars. See `skills/meta/find-skills/SKILL.md` (the "Verify Quality Before Recommending" section); do not restate it here. Bands as a reminder only: ≥1K installs good, <100 caution. A low-signal source (unknown author, thin repo, no adoption) is a REJECT now — record it and stop.
+Apply the `find-skills` quality gate before anything else — install count, source reputation, GitHub stars. See the `find-skills` skill (its "Verify Quality Before Recommending" section); do not restate it here. Bands as a reminder only: ≥1K installs good, <100 caution. A low-signal source (unknown author, thin repo, no adoption) is a REJECT now — record it and stop.
 
 ### 2. LOCATE the incumbent(s)
 
@@ -91,7 +91,7 @@ Produce the concrete mutation, not a vibe.
 
 ### 6. RECORD
 
-Fill `template.md` (the Ingestion Decision Record) for the candidate. If the decision changed a studio skill, flag it for the usage-telemetry review: `hooks/log-skill-usage.sh` logs which skills actually fire, so a later pass can check whether the folded value earns its place or should be cut.
+Fill `template.md` (the Ingestion Decision Record) for the candidate. If the decision changed a studio skill, flag it for the usage-telemetry review: the repo-root `hooks/log-skill-usage.sh` logs which skills actually fire, so a later pass can check whether the folded value earns its place or should be cut.
 
 ## Evidence standard
 
@@ -108,13 +108,13 @@ Done means: an Ingestion Decision Record exists, the decision is one of the four
 - **ADD-NEW as the lazy default.** The interesting-sounding path is a new skill. It is also the one that grows the noise this skill exists to prevent. Force it through the rubric every time; most candidates come out as FOLD.
 - **Grading the README, not the skill.** A polished README oversells thin value. Judge the bones and the adoption numbers, not the prose.
 - **Folding into the wrong incumbent.** Overlap by *title* is not overlap by *trigger*. Two skills can share a name and do different jobs. Grep the descriptions and match on what actually fires them.
-- **Silent vendoring.** Copying "just the folder for now, we'll clean it later" never gets cleaned. The `product-manager-skills` repo is the proof. Emit a diff or reject; there is no "temporary" wholesale copy.
+- **Silent vendoring.** Copying "just the folder for now, we'll clean it later" never gets cleaned. The retired vendored PM-skills repo is the proof. Emit a diff or reject; there is no "temporary" wholesale copy.
 - **Superseding without beating.** Setting `supersedes:` does not make the new skill better. If it does not absorb the incumbent's useful bones and clearly win, it is a FOLD into the incumbent, not a supersede.
 - **The middle install band.** A source between the reminder bands (roughly 100–1K installs) is CAUTION, not a REJECT — proceed to DISTILL and let the bones decide, don't short-circuit on the number alone. Only a genuinely low-signal source (well under 100, unknown author, thin repo) is a QUALIFY-stage reject.
 
 ## Related skills
 
-- `skills/meta/find-skills/SKILL.md` — discovers and installs skills for personal use, and owns the quality gate this skill reuses in step 1. It stops at "installed"; this skill decides repo entry.
-- `skills/meta/skillshare/SKILL.md` — the mechanics of installing, tracking, and auditing skills across tools. Use it to fetch a candidate locally for distillation; it does not make the curation decision.
-- `CONTRIBUTING.md` — the sandbox → graduate flow and the "Kill duplicates / Don't write the obvious / Prefer scripts over prose" curation principles this pipeline enforces. ADD-NEW routes back through it.
-- `SKILL_TAXONOMY.md` — the 9 categories and the named gaps (Data Retrieval, Code Templates, Runbooks). Only a named gap can justify ADD-NEW.
+- `find-skills` — discovers and installs skills for personal use, and owns the quality gate this skill reuses in step 1. It stops at "installed"; this skill decides repo entry.
+- `skillshare` — the mechanics of installing, tracking, and auditing skills across tools. Use it to fetch a candidate locally for distillation; it does not make the curation decision.
+- the repo-root `CONTRIBUTING.md` — the sandbox → graduate flow and the "Kill duplicates / Don't write the obvious / Prefer scripts over prose" curation principles this pipeline enforces. ADD-NEW routes back through it.
+- the repo-root `SKILL_TAXONOMY.md` — the 9 categories and the named gaps (Data Retrieval, Code Templates, Runbooks). Only a named gap can justify ADD-NEW.

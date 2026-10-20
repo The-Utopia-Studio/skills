@@ -1,9 +1,17 @@
 ---
 name: identify-assumptions-new
-description: "Identify risky assumptions for a new product idea across 8 risk categories including Go-to-Market, Strategy, and Team. Use when evaluating startup risks, assessing a new product concept, or mapping assumptions for a new venture."
+description: >-
+  List and rate the risky assumptions behind a product idea or feature. For a new product or venture,
+  cover 8 risk categories (Value, Usability, Viability, Feasibility, Ethics, Go-to-Market, Strategy,
+  Team); for a feature in an existing product, play devil's advocate on the 4 core risks. Uses PM,
+  designer and engineer perspectives and gives each assumption a confidence and a test. Use when the
+  user asks for the riskiest assumptions, a risk assessment or assumption map, to play devil's
+  advocate on a feature, or why an idea might fail. Not for falsifying the few beliefs a chosen plan
+  rests on with kill signals (use null-hypothesis-test), a numeric go/no-go on the problem (use
+  problem-quality-scorecard), or picking the probe for one assumption (use probe-matrix).
 ---
 
-## Identify Assumptions (New Product)
+## Identify Assumptions (New Product or Existing-Product Feature)
 
 Comprehensive risk identification across 8 categories — extending the 4 core product risks (Teresa Torres, *Continuous Discovery Habits*) with Ethics, Go-to-Market, Strategy & Objectives, and Team risks that are critical for new products.
 
@@ -43,9 +51,21 @@ The user will describe the product concept, target segment, and feature idea. Wo
 
 Think step by step. Save as markdown.
 
+### Mode: Feature Idea in an Existing Product
+
+When the user is stress-testing a feature for a product that already exists (they describe the product, objective, segment and feature), run a narrower devil's-advocate pass:
+
+1. Argue why the feature might fail from three perspectives: **PM** (viability, market fit, strategic alignment), **Designer** (usability, adoption barriers), **Engineer** (feasibility, performance, integration).
+2. Cover only the **4 core risks**: Value (does it solve a real problem?), Usability (is the learning curve acceptable?), Viability (can marketing, sales, finance and legal support it?), Feasibility (existing tech, integration risks). Ethics, GTM, Strategy and Team usually already hold for a live product; add them only if the feature changes them.
+3. For each assumption note what specifically could go wrong, confidence (High/Medium/Low) and a suggested test.
+
+Be thorough but constructive: the goal is to strengthen the idea, not kill it. If the user provides designs, PRDs or research, read them first.
+
 ---
 
 ### Further Reading
+
+- [How to Manage Risks as a Product Manager](https://www.productcompass.pm/p/how-to-manage-risks-as-a-product-manager)
 
 - [Assumption Prioritization Canvas: How to Identify And Test The Right Assumptions](https://www.productcompass.pm/p/assumption-prioritization-canvas)
 - [What Is Product Discovery? The Ultimate Guide Step-by-Step](https://www.productcompass.pm/p/what-exactly-is-product-discovery)

@@ -1,21 +1,16 @@
 ---
 name: fellow-level-ladder
 description: >-
-  Assess where ONE fellow sits on the Icarus ladder — Literate → Practitioner →
-  Operator → Frontier → Author — by checking which EXIT ARTEFACT each level
-  requires actually EXISTS and can be cited, never by how ready the fellow feels.
-  Fires on "how's this fellow doing", "assess a fellow", "what level am I / is
-  this fellow at", "am I ready to level up", "level up this fellow". Output is a
-  filled level assessment: the ladder table with a cited artefact and evidence
-  rung per rung, the assigned level (highest level with an unbroken artefact
-  chain beneath it), and the single next exit artefact to produce plus the skill
-  that produces it. Self-assessment on feelings / confidence / tenure is banned
-  and scored 0.1. NOT the build-vs-buy boundary of what Daedalus gives the fellow
-  (use platform-vs-venture, sibling in section 10 — this reads that map only for
-  the Author rung), NOT where a fellow should START or which stages fit their
-  type (use fellow-path-router, section 00), NOT re-running an artefact's own
-  gate (problem-quality-scorecard / pilot-six-term-sheet / evidence-ladder — this
-  cites their verdicts, it does not re-derive them).
+  Assess where ONE fellow sits on the Icarus ladder (Literate, Practitioner, Operator, Frontier,
+  Author) by checking which EXIT ARTEFACT each level requires actually EXISTS and can be cited, never
+  by how ready the fellow feels. Fires on 'how's this fellow doing', 'assess a fellow', 'what level am
+  I / is this fellow at', 'am I ready to level up'. Output: the ladder table with a cited artefact and
+  evidence rung per rung, the assigned level (highest with an unbroken artefact chain beneath it), and
+  the single next exit artefact plus the skill that produces it. Self-assessment on feelings or tenure
+  scores 0.1. NOT the build-vs-buy boundary with Daedalus (use platform-vs-venture), NOT where a
+  fellow should start or which stages fit their type (use fellow-path-router), NOT re-running an
+  artefact's own gate (problem-quality-scorecard, pilot-six-term-sheet, evidence-ladder: this cites
+  their verdicts).
 type: interactive
 supersedes: none
 ---

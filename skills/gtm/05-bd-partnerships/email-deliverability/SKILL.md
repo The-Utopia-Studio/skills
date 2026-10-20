@@ -1,6 +1,15 @@
 ---
 name: email-deliverability
-description: "Use this skill when emails hit spam, open rates drop, a domain or IP gets blocklisted, or a sender wants a deliverability audit before scaling volume. Triggers: \"why are we going to spam\", \"audit my email setup\", \"open rates dropped\", \"we got blocklisted\", \"warm up this domain\", \"check my deliverability\". Produces a severity-ranked audit or a root-cause diagnosis with a recovery plan and the thresholds to monitor."
+description: >-
+  Use this skill when emails hit spam, open rates drop, a domain or IP gets
+  blocklisted, a sender needs a deliverability audit before scaling volume, or a
+  team is setting up cold-sending infrastructure (secondary domains, mailboxes,
+  SPF/DKIM/DMARC, warmup). Triggers: "why are we going to spam", "audit my email
+  setup", "open rates dropped", "we got blocklisted", "warm up this domain",
+  "how many domains do I need". Produces a severity-ranked audit or a root-cause
+  diagnosis with a recovery plan and thresholds to monitor. Not for writing the
+  emails (use cold-email or email-sequence) or choosing the outbound tool stack
+  (use ai-sdr).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/joshua-waldman/email-deliverability
@@ -20,7 +29,7 @@ Run this when email performance breaks, or before it gets the chance to. It prod
 4. Classify and prescribe. Blocklisted → delist, but fix the root cause first or the listing comes back. Content filtered → pause that provider for 24-48 hours, fix, retest on an engaged segment. Broken authentication → fix DNS, wait for propagation before resuming. New or damaged sender → run the ramp in references/warmup-playbook.md.
 5. Define monitoring. Set thresholds that trigger a pause, not a postmortem: bounce spikes, complaint rate above 0.3%, one provider dropping while the others hold.
 
-When the work goes deep, read references/warmup-playbook.md (week-by-week recovery ramp with per-provider volumes), references/shared-pool-management.md (pool contamination, compliance rails, high-risk verticals), and references/provider-specific-tactics.md (Gmail, Microsoft, Yahoo, iCloud, ProofPoint).
+When the work goes deep, read references/warmup-playbook.md (week-by-week recovery ramp with per-provider volumes), references/shared-pool-management.md (pool contamination, compliance rails, high-risk verticals), references/provider-specific-tactics.md (Gmail, Microsoft, Yahoo, iCloud, ProofPoint), and references/cold-sending-infrastructure.md (cold-outbound domain and mailbox sizing, per-mailbox limits, authentication checklist, DMARC rollout).
 
 ## What good looks like
 

@@ -97,7 +97,7 @@ Common patterns Khalil sees in incoming notes:
 
 ## Communication / file paths
 
-- PPTX outputs → `/Users/kp/Documents/Utopia Decks/`
+- PPTX outputs → a folder the user names (ask; default: the current working folder)
 - Brand kit → in the `pitch-deck` skill's `assets/utopia-branding.md`
 - Source notes typically come from Granola or Karan's Notion
 
@@ -105,11 +105,10 @@ Common patterns Khalil sees in incoming notes:
 
 - **Karan Pinto** (CGTO) — all approval calls, all sensitive content review
   - Slack: @karan
-  - Email: karanmjpinto@gmail.com
 
 ## Lessons learned
 
-*Update every time a deck succeeds or fails for a learnable reason.*
+*Maintained by the team. This file ships read-only with the plugin. Do not try to write to it during a session; instead, end each session by listing suggested additions ("Proposed MEMORY.md updates") so a maintainer can commit them to `agents/khalil/MEMORY.md`.*
 
 - *2026-04: Co-investors care less about TAM than about Utopia's lens. Cut TAM to one slide, expand "why we're investing" to two.*
 - *2026-04: For Azraq specifically — the moat slide IS the pitch. Lead with IP defensibility (patents, proprietary data).*

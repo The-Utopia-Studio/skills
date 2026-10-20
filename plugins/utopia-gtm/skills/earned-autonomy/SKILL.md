@@ -1,6 +1,15 @@
 ---
 name: earned-autonomy
-description: "Use this skill when deciding how much a GTM agent may do without a human looking, when a workflow is ready to run on a schedule, when outreach should stop requiring per-item approval, and when something has gone wrong and autonomy needs pulling back. Produces a level per task with the evidence required to move up and the triggers that drop it automatically. Trigger phrasings: \"can I let the agent send\", \"when do I stop reviewing every draft\", \"how much should I automate\", \"the agent made a mistake, now what\", \"is this workflow ready to run unattended\"."
+description: >-
+  Use this skill when the user asks whether an AI agent can stop being reviewed
+  or run unattended: "can I let the agent send", "can I stop reviewing every
+  draft", "how much should I automate", "is this workflow ready to run on a
+  schedule", "the agent made a mistake, now what". Given the agent's track record
+  (items reviewed, edit or reject rate, refusals, breaches) it assigns an
+  autonomy level L0-L3 per task, the evidence needed to move up, the triggers
+  that demote it automatically, and the guardrails no level crosses. Not for
+  staging the outreach itself (use outreach-execution) or scoring accounts (use
+  account-tier-scoring).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/nadav-david/earned-autonomy

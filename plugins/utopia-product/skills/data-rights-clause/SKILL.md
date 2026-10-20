@@ -1,6 +1,13 @@
 ---
 name: data-rights-clause
-description: Draft the data-rights clause for a fellow's first paid pilot. Run the three-part test — the data must be workflow exhaust, must compound with use, and must be covered by a clause signed at pilot #1 — then produce the actual clause language (data covered · retention · derived-data / compounding rights · training rights · survival on termination) with GCC/MENA jurisdiction points (residency, government-entity data, worker/sponsor consent) marked [Assumption] for counsel. Fires on "data rights", "what to sign at the pilot", "who owns the data", "data-rights clause", "can we keep and train on the pilot data", "protect our data", "make sure we keep our data", "change their standard agreement so the data stays ours". Not for deciding whether a source is a moat seed or model-reachable (use yoda-data-sourcing, section 03); not for structuring the whole pilot — scope, price, success metrics, conversion (use pilot-six-term-sheet, section 07, which carries this clause as one of its six terms); not for scoring whether a lone signal is real evidence (use evidence-ladder). Not a substitute for counsel.
+description: >-
+  Draft the data-rights clause for a fellow's first paid pilot. Runs the three-part test (workflow exhaust,
+  compounds with use, locked by a clause signed at pilot #1), then writes the clause language: data covered,
+  retention, derived-data rights, training rights, survival on termination, with GCC/MENA points (residency,
+  government-entity data, worker/sponsor consent) marked [Assumption] for counsel. Fires on "data rights",
+  "who owns the data", "what to sign at the pilot", "can we keep and train on the pilot data". Not for judging
+  whether a source is a moat seed (use yoda-data-sourcing), structuring the whole pilot (use
+  pilot-six-term-sheet) or scoring evidence (use evidence-ladder). Not a substitute for counsel.
 type: generator
 supersedes: none
 ---

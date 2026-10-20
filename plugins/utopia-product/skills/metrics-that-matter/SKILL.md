@@ -1,16 +1,15 @@
 ---
 name: metrics-that-matter
 description: >-
-  Fires when a fellow asks which numbers matter for a launched product —
-  "what metrics should we track", "what should our North Star be", "is our
-  retention any good / does the curve flatten", "our MAU is up-and-to-the-right,
-  is that real or vanity", "what's our cost per outcome". Returns a metric
-  scorecard: one customer-centric North Star, an AARRR one-metric skeleton, the
-  flattening-retention truth test that GATES the North Star, and cost-per-outcome
-  priced to the cent. Do NOT fire to design the post-launch improvement loop or
-  promote autonomy (use refine-flywheel), to turn production traces into discovery
-  interviews (use trace-to-interview), or to build the actual cohort dashboard,
-  SQL, or alert thresholds (use the M9 retention-dashboard / cohort-analysis skills).
+  Pick and validate the few metrics that matter for a product, especially a launched AI product. Use
+  when the user asks what metrics to track, to define or choose a North Star metric and its input
+  metrics, whether growing MAU or a headline number is real or vanity, whether cohort retention is
+  good or the curve flattens, or what one outcome costs. Returns a scorecard: the business game
+  (Attention / Transaction / Productivity), one customer-centric North Star checked against the 7
+  criteria with 3-5 input metrics, an AARRR one-metric skeleton, the flattening-retention test that
+  GATES the North Star, and cost-per-outcome to the cent. Not for a team's mission or values (use
+  alignment-values-north-star), the post-launch improvement loop (use refine-flywheel), mining traces
+  for discovery (use trace-to-interview), or the dashboard spec and alerts (use metrics-dashboard).
 type: generator
 supersedes: none
 ---
@@ -48,9 +47,8 @@ been proposed and needs the retention gate and a cost check before it is adopted
 |---|---|---|
 | "Design the after-launch loop — ship, observe, promote autonomy by eval" | `refine-flywheel` | That is the improvement cadence. This picks and validates the metrics the loop watches; it does not run the loop. |
 | "Mine our production traces / turn usage logs into discovery interviews" | `trace-to-interview` | That reads traces as discovery. This scores metrics; a trace is not a metric. |
-| "Build the cohort dashboard, write the SQL, set the alert thresholds" | `retention-dashboard`, `cohort-analysis`, `analytics-tracking` (M9) | Those render and instrument. This decides what to render and applies the truth test; route the build there. |
-| "Validate a North Star against the 7 NSM criteria / classify the business game" | `north-star-metric` (M9) | That is the framework. This calls it once, then adds the retention gate and cost-per-outcome it lacks. |
-| "Work out CAC, LTV, payback, contribution margin" | `financial-unit-economics` (M9) | That is full unit economics. This needs only cost-per-outcome and margin-per-outcome; route the rest there. |
+| "Build the metrics dashboard, set the alert thresholds, instrument the events" | `metrics-dashboard`, `analytics-tracking` (M9) | Those render and instrument. This decides what to render and applies the truth test; route the build there. |
+| "Work out CAC, LTV, payback, contribution margin" | `saas-economics-efficiency-metrics` (M9) | That is full unit economics. This needs only cost-per-outcome and margin-per-outcome; route the rest there. |
 
 If the input names no product and no outcome, do not invent metrics. Ask the one question
 that unblocks it — what single outcome does this product deliver for the customer? — or
@@ -62,7 +60,7 @@ Copy this checklist:
 
 ```
 Metrics That Matter progress:
-- [ ] Step 1: Name the business game and the one North Star (route the framework to M9)
+- [ ] Step 1: Name the business game, the one North Star and its 3-5 input metrics
 - [ ] Step 2: Fill the AARRR skeleton — one metric per stage, retention load-bearing
 - [ ] Step 3: Run the retention truth test — classify the curve, gate the North Star
 - [ ] Step 4: Price cost-per-outcome to the cent and check margin direction at scale
@@ -70,15 +68,29 @@ Metrics That Matter progress:
 - [ ] Step 6: Run the kill line before returning
 ```
 
-**Step 1 — game and North Star.** Classify Attention / Transaction / Productivity and pick
-ONE customer-centric outcome as the North Star. Do not restate the 7 criteria — route to
-`north-star-metric` (M9). This skill adds two hard rules: the North Star must be an
-**outcome the customer receives** (a resolved hazard, an accepted draft), never an output
-you emit (alerts sent) or an activity total (logins); and it is provisional until Step 3.
+**Step 1 — game and North Star.** Classify the business game:
+
+| Game | The North Star measures… | Examples |
+|---|---|---|
+| Attention | time customers spend in the product | Spotify, YouTube, TikTok |
+| Transaction | transactions between customers and the platform | Amazon, Uber, Airbnb |
+| Productivity | how efficiently someone completes their work | Canva, Dropbox, Notion |
+
+Pick ONE customer-centric outcome as the North Star and check it against the seven
+criteria of an effective North Star: (1) easy to understand, (2) customer-centric —
+reflects value delivered, not revenue or LTV, (3) sustainable value — indicates habit,
+(4) aligned with the vision, (5) quantitative, (6) actionable by teams, (7) a leading
+indicator of long-term business success. A North Star is a single metric, not an OKR (OKRs
+can express the expected change in it) and not a strategy. Then name **3-5 input metrics**:
+the levers that drive it, easier to move in the short term, showing where to focus.
+
+This skill adds two hard rules: the North Star must be an **outcome the customer
+receives** (a resolved hazard, an accepted draft), never an output you emit (alerts sent)
+or an activity total (logins); and it is provisional until Step 3.
 
 **Step 2 — AARRR skeleton.** One metric per stage. Retention is load-bearing; the other
 four are diagnostic inputs that explain the North Star, not rivals to it. Do not restate
-the funnel — see the AARRR resource in `north-star-metric`. Fill [template.md](template.md)
+the funnel. Fill [template.md](template.md)
 section C.
 
 | Stage | One metric (example shape) | Role here |
@@ -103,7 +115,7 @@ Flatten test [Assumption] on the exact points, the shape rule is the law: the cu
 flattened when the retention change between the last two equal-length periods is within
 ~1 percentage point of zero and the plateau is above zero. Still dropping ≥ ~2 points per
 period in the tail = not yet flat = North Star INVALID. Route the cohort mechanics (how to
-cut vintages, triangle tables) to `cohort-analysis`; this skill only reads the shape and
+cut vintages, triangle tables) to `saas-revenue-growth-metrics`; this skill only reads the shape and
 renders the verdict. A North Star that has never been checked against a flattening curve is
 not a North Star — it is a guess.
 
@@ -126,7 +138,7 @@ grows. Flag the inversion risk — if cost-per-outcome climbs with scale (longer
 more retries, more review) faster than price, the product loses money the more it works.
 This is the AI-specific trap SaaS dashboards do not show. Cost-per-outcome should sit well
 under price-per-outcome; if `value-based-pricing` set price at 10–20% of measured value,
-cost must leave room inside that. Route CAC / LTV / payback to `financial-unit-economics`.
+cost must leave room inside that. Route CAC / LTV / payback to `saas-economics-efficiency-metrics`.
 
 **Step 5 — vanity audit.** Tag every metric on the scorecard `vanity` or `actionable`
 (Yoskovitz's golden rule: if it would not change what you do, it is vanity). Any cumulative
@@ -182,12 +194,15 @@ volume grows.
 - `trace-to-interview` — reads production traces as discovery. Composes with this: the
   retention truth test says *whether* the product works; trace-mining says *why* users
   churn out of the tail.
-- `north-star-metric`, `retention-dashboard`, `metrics-dashboard`, `cohort-analysis`,
-  `financial-unit-economics` (M9 retention pack) — the depth this wrapper routes to for the
-  NSM framework, the dashboard build, cohort mechanics, and unit economics. This skill's
-  net-new over all of them is the flattening-retention gate and cost-per-outcome to the cent.
+- `metrics-dashboard`, `expansion-retention`, `saas-revenue-growth-metrics`,
+  `saas-economics-efficiency-metrics` (M9 retention pack) — the depth this skill routes to
+  for the dashboard build, retention plays, cohort mechanics, and unit economics. This
+  skill's net-new over all of them is the flattening-retention gate and cost-per-outcome to
+  the cent.
+- `alignment-values-north-star` — a team's *mission* North Star and values, not a metric.
 - `value-based-pricing` — sets price per outcome; this checks cost per outcome sits under it.
 - `guardrail-design` (07) — when a failure mode's cost-of-error is a safety or regulatory cost
   (a missed hazard, a breach), that cost sizes the *guardrail*, not the scorecard. Route it there;
   this skill stays on cost- and value-per-outcome (see golden 03: Barrier's cost-of-a-missed-hazard).
-- Supersedes nothing. It is the truth-test gate at the metrics step of the refine stage.
+- It is the truth-test gate at the metrics step of the refine stage, and the home of the North Star Framework (business games, 7 criteria, input metrics).
+- Further reading: [The North Star Framework 101](https://www.productcompass.pm/p/the-north-star-framework-101), [AARRR Pirate Metrics](https://www.productcompass.pm/p/aarrr-pirate-metrics).

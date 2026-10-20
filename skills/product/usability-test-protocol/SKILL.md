@@ -1,6 +1,15 @@
 ---
 name: usability-test-protocol
-description: Run a moderated usability session on a working prototype and return findings tied to the screen, not the user. Fires when a fellow says "run a usability test", "watch a user try it", "usability protocol", "can a first-time user complete X", or "see where they get stuck". Product runs, Engineering watches muted, Design notes; the task is framed as a goal not an instruction, the user is kept in user mode (no leading, no explaining, no "do you like it"), and every finding is scored on observed task success (behaviour 0.7), never stated preference (opinion 0.1). Output is a Usability Findings sheet — each defect tied to a step, counted across users, severity by frequency × blocking. NOT for building the prototype (use `first-mocks`; this tests what that builds), NOT for shadowing an expert to capture their judgment (use `tacit-knowledge-interview`; that mines expertise, this tests your design), and NOT for testing demand or willingness to pay (a user can complete every task and still never want it — route to `wizard-of-oz-probe` / `concierge-probe`).
+description: >-
+  Run a moderated usability session on a working prototype and return findings tied to the screen, not
+  the user. Fires on 'run a usability test', 'watch a user try it', 'usability protocol', 'can a
+  first-time user complete X', 'see where they get stuck'. Product runs, Engineering watches muted,
+  Design notes; tasks are framed as goals, the user is never led or asked 'do you like it', and every
+  finding is scored on observed task success (behaviour 0.7), never stated preference (opinion 0.1).
+  Output: a Usability Findings sheet with each defect tied to a step, counted across users, severity
+  by frequency x blocking. NOT for building the prototype (use first-mocks), shadowing an expert to
+  capture judgment (use tacit-knowledge-interview), or testing demand or willingness to pay (use
+  wizard-of-oz-probe or concierge-probe).
 type: interactive
 supersedes: none
 ---

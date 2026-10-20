@@ -1,6 +1,6 @@
 ---
 name: referral-program
-description: "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy."
+description: "When the user wants to create, optimize, or analyze a customer referral program or word-of-mouth strategy. Also use when the user mentions 'referral,' 'ambassador,' 'word of mouth,' 'refer a friend,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'refer-a-friend payout.' Use this whenever someone wants existing users or partners to bring in new customers. Not for reseller, integration or channel partner programs (use partner-affiliate), product growth loops beyond referrals (use growth-loops), or launch-specific virality (use launch-strategy)."
 metadata:
   version: 1.1.0
 ---
@@ -235,17 +235,17 @@ They get [their reward] too.
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key tools for referral programs:
+Key tools for referral programs:
 
-| Tool | Best For | Guide |
-|------|----------|-------|
-| **Rewardful** | Stripe-native affiliate programs | [rewardful.md](../../tools/integrations/rewardful.md) |
-| **Tolt** | SaaS affiliate programs | [tolt.md](../../tools/integrations/tolt.md) |
-| **Mention Me** | Enterprise referral programs | [mention-me.md](../../tools/integrations/mention-me.md) |
-| **Dub.co** | Link tracking and attribution | [dub-co.md](../../tools/integrations/dub-co.md) |
-| **Stripe** | Payment processing (for commission tracking) | [stripe.md](../../tools/integrations/stripe.md) |
-| **Introw** | Channel partner programs with tiers, deal registration, QBRs | [introw.md](../../tools/integrations/introw.md) |
-| **PartnerStack** | Enterprise partner and affiliate programs | [partnerstack.md](../../tools/integrations/partnerstack.md) |
+| Tool | Best For |
+|------|----------|
+| **Rewardful** | Stripe-native affiliate programs |
+| **Tolt** | SaaS affiliate programs |
+| **Mention Me** | Enterprise referral programs |
+| **Dub.co** | Link tracking and attribution |
+| **Stripe** | Payment processing (for commission tracking) |
+| **Introw** | Channel partner programs with tiers, deal registration, QBRs |
+| **PartnerStack** | Enterprise partner and affiliate programs |
 
 ---
 

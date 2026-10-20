@@ -29,7 +29,7 @@ description: (reference)
 ## 4. Behavioral invariants (do not remove)
 
 - No hook, no send — generic "stay top of mind" requests get pushed back, not drafted.
-- Never mention the signal directly — signals inform the angle, they are never quoted at the prospect.
+- Signal rule (shared with cold-email): name public changes (funding, hiring, launches, their own posts); never mention or hint at private behavior (site visits, intent data, opens, profile views) — those only inform the angle.
 - Scenario always wins over channel.
 - Prior-relationship check before every pre-conversion play — replied outreach, past meetings, and closed-lost deals make it warm; unanswered sequences and anonymous visits do not.
 - LinkedIn connection requests are always blank.

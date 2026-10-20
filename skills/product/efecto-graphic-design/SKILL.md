@@ -1,6 +1,13 @@
 ---
 name: efecto-graphic-design
-description: Design graphic assets with Efecto — presentations, pitch decks, event posters, email headers, blog images, open graph cards, business cards, resumes, menus, infographics, invitations, newsletters, and documents. Use when asked to "design a poster", "create a pitch deck", "make a presentation", "design a business card", or any graphic design task. Requires Efecto MCP server.
+description: >-
+  Design graphic assets inside the Efecto design tool via the Efecto MCP server:
+  decks, posters, email headers, OG cards, business cards, resumes, menus,
+  infographics, invitations, newsletters. Use only when the user mentions Efecto
+  or the Efecto MCP tools (create_session, add_section, get_document) are
+  available. Not for logos, brand identity or banners without Efecto (use ckm-
+  design), HTML decks (use ckm-design), or web pages and app UIs (use efecto-
+  web-design).
 metadata:
   mcp-server: efecto
   author: pablostanley

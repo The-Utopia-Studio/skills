@@ -1,6 +1,15 @@
 ---
 name: bottoms-up-quantification
-description: Builds the magnitude of an opportunity from the smallest countable units up, with every multiplier and its source shown in the open, and permits a top-down TAM only at the end as a labelled sanity check. Fires on "size this bottom-up", "build the number", "don't give me a TAM", "how big is this really, show me the arithmetic", "what's the total from the units up", or when a fellow has a per-unit value and wants a total market magnitude they can defend line by line. Outputs a filled bottom-up size model: atom + reachable population + frequency + value-per-event + capture, each rung ladder-weighted, weakest rung caps confidence, plus a TAM reconciliation band. NOT for the per-unit prize ratio of one unit (use physics-floor-gap — run it first), NOT for the 8-dimension problem gate (use problem-quality-scorecard), NOT for scoring the whole idea (use so-what-stress-test).
+description: >-
+  Build a market size from the smallest countable units up, never from a TAM: atom x reachable
+  population x frequency x value captured per event x capture fraction, every multiplier sourced and
+  ladder-weighted, the weakest rung capping confidence, and a top-down TAM allowed only at the end as
+  a labelled sanity check. Use when the user says 'don't give me a TAM', 'size this bottom-up', 'build
+  the number from the units', 'show me the arithmetic', or gives counts (registered firms, events per
+  year, price per event, win rate) and wants a total they can defend line by line. NOT a standard
+  TAM/SAM/SOM estimate (use market-sizing), the per-unit prize ratio (use physics-floor-gap, run it
+  first), the 8-dimension problem gate (use problem-quality-scorecard), or scoring the whole idea (use
+  so-what-stress-test).
 type: generator
 supersedes: none
 ---

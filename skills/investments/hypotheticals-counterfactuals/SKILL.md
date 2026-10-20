@@ -1,6 +1,15 @@
 ---
 name: hypotheticals-counterfactuals
-description: Applies "what if" thinking to explore alternative scenarios, test assumptions, understand causal relationships, and prepare for uncertainty. Guides through counterfactual reasoning, scenario exploration, pre-mortem analysis, and stress testing decisions against alternative futures. Use when exploring alternative scenarios, testing assumptions through "what if" questions, understanding causal relationships, conducting pre-mortem analysis, stress testing decisions, or when user mentions counterfactuals, hypothetical scenarios, thought experiments, alternative futures, what-if analysis, or needs to challenge assumptions.
+description: >-
+  Applies "what if" thinking to explore alternative scenarios, test assumptions, understand
+  causal relationships, and prepare for uncertainty. Guides through counterfactual reasoning
+  about past decisions, scenario exploration (three scenarios, 2x2 matrices), assumption
+  reversal and stress testing decisions against alternative futures. Use when exploring
+  alternative scenarios, asking "what would have happened if we had...", testing assumptions
+  through "what if" questions, stress testing a decision, or when user mentions
+  counterfactuals, hypothetical scenarios, thought experiments, alternative futures or what-if
+  analysis. Not for a premortem on a probability forecast (use forecast-premortem) or ongoing
+  PESTLE trend scanning (use environmental-scanning-foresight).
 ---
 # Hypotheticals and Counterfactuals
 

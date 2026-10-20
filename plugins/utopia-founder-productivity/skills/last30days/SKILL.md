@@ -1,7 +1,13 @@
 ---
 name: last30days
 version: "3.1.1"
-description: "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web."
+description: >-
+  Research what real people said about a topic in the last 30 days across Reddit, X/Twitter, YouTube,
+  TikTok, Instagram, Hacker News, Polymarket, GitHub and the web, with engagement and links, using the
+  bundled multi-source engine. Use whenever the user asks what people are saying, recent complaints
+  and praise, sentiment, reactions, trends or 'the last 30 days / this month' about a product,
+  company, tool or topic on social platforms or forums. Not for a general literature or market
+  deep-dive without a recency or social angle, or for reading one known URL (use defuddle).
 argument-hint: 'last30days nvidia earnings reaction | last30days AI video tools | last30days what users want in react'
 allowed-tools: Bash, Read, Write, AskUserQuestion, WebSearch
 homepage: https://github.com/mvanhorn/last30days-skill
@@ -272,14 +278,13 @@ Before proceeding to Step 1, handle first-run setup.
 - If the file exists and contains `SETUP_COMPLETE=true`, skip Step 0 entirely and go to Step 1 (CRITICAL: Parse User Intent below). Do NOT announce that setup is complete. The user does not need a status message on every run.
 
 **If this IS a first run:**
-- Use the Read tool to load `skills/last30days/nux-wizard.md` (relative to the skill root).
-- Follow the wizard's instructions end-to-end. The wizard handles platform detection (OpenClaw vs Claude Code), auto vs manual setup, ScrapeCreators opt-in, and the initial topic picker.
-- After the wizard writes `SETUP_COMPLETE=true` to `~/.config/last30days/.env`, proceed to research.
+- Tell the user, in two or three lines, what the skill needs: a `SCRAPECREATORS_API_KEY` (the primary source key) and, optionally, `OPENAI_API_KEY` / `XAI_API_KEY` / `OPENROUTER_API_KEY` / `BRAVE_API_KEY` / `PARALLEL_API_KEY` / `APIFY_API_TOKEN` for more sources. Ask them to add the keys they have to `~/.config/last30days/.env` themselves (never paste keys into chat or type them for the user).
+- Run `python3 "${SKILL_ROOT}/scripts/last30days.py" --diagnose` to show which sources are available.
+- **Browser cookies are opt-in.** The scripts can read the user's local browser cookie stores (Firefox, Safari, Chrome via `scripts/lib/cookie_extract.py`, `scripts/lib/chrome_cookies.py`, `scripts/lib/safari_cookies.py`) to unlock X/Twitter and similar sources. This reads private session cookies from the user's machine, so only offer it, explain exactly that, and enable it only after an explicit "yes": then write `BROWSER_CONSENT=true` and `FROM_BROWSER=auto` (or a single browser name) to the `.env`. Without that, extraction is off (`FROM_BROWSER` unset or `off`).
+- Append `SETUP_COMPLETE=true` to `~/.config/last30days/.env`, then proceed to research.
 
-The wizard lives in a separate file so the common-case (already set up) path through this file is short and the voice-contract rules further down stay in context.
 
 ---
-
 
 ## CRITICAL: Parse User Intent
 
@@ -878,7 +883,7 @@ if [ -z "$SKILL_ROOT" ] || [ ! -f "$SKILL_ROOT/scripts/last30days.py" ]; then
   CLAUDE_PLUGIN_ROOT="$(ls -d "$HOME/.claude/plugins/cache/last30days-skill/last30days/"*/ 2>/dev/null | sort -V | tail -1)"
   CLAUDE_PLUGIN_ROOT="${CLAUDE_PLUGIN_ROOT%/}"
   if [ -n "$CLAUDE_PLUGIN_ROOT" ]; then
-    if [ -f "$CLAUDE_PLUGIN_ROOT/skills/last30days/scripts/last30days.py" ]; then
+    if [ -f "$CLAUDE_PLUGIN_ROOT/scripts/last30days.py" ]; then
       SKILL_ROOT="$CLAUDE_PLUGIN_ROOT/skills/last30days"
     elif [ -f "$CLAUDE_PLUGIN_ROOT/scripts/last30days.py" ]; then
       SKILL_ROOT="$CLAUDE_PLUGIN_ROOT"
@@ -895,8 +900,8 @@ fi
 
 if [ -z "${SKILL_ROOT:-}" ] || [ ! -f "$SKILL_ROOT/scripts/last30days.py" ]; then
   echo "ERROR: Could not find scripts/last30days.py in Codex/Claude plugin cache or repo checkout" >&2
-  echo "Expected Codex: $HOME/.codex/plugins/cache/{MARKETPLACE}/last30days/{VERSION}/skills/last30days/scripts/last30days.py" >&2
-  echo "Expected Claude: $HOME/.claude/plugins/cache/last30days-skill/last30days/{VERSION}/skills/last30days/scripts/last30days.py" >&2
+  echo "Expected Codex: $HOME/.codex/plugins/cache/{MARKETPLACE}/last30days/{VERSION}/scripts/last30days.py" >&2
+  echo "Expected Claude: $HOME/.claude/plugins/cache/last30days-skill/last30days/{VERSION}/scripts/last30days.py" >&2
   exit 1
 fi
 
@@ -1407,7 +1412,7 @@ If the research output contains a `**🔍 Research Coverage:**` block, render it
 **Call AskUserQuestion:**
 Question: "X/Twitter wasn't searched. Want to unlock it?"
 Options:
-- "Scan my browser cookies (free)" - Get consent, run cookie scan, write BROWSER_CONSENT=true + FROM_BROWSER=auto to .env
+- "Scan my browser cookies (free)" - Opt-in only: explain that this reads private session cookies from their local browsers, and proceed only on an explicit yes; then write BROWSER_CONSENT=true + FROM_BROWSER=auto to .env
 - "I have an xAI API key" - Ask them to paste it, write XAI_API_KEY to .env
 - "Skip for now"
 

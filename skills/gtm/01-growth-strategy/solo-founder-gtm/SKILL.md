@@ -1,6 +1,15 @@
 ---
 name: solo-founder-gtm
-description: "When the user is a solo founder building their GTM motion, wants to scale without hiring, or needs to design an AI agent team for go-to-market. Also use when the user mentions 'solo founder,' 'one-person startup,' 'solopreneur,' 'bootstrapped,' 'no team,' 'AI agents as team,' 'scaling without hiring,' 'founder-led sales,' 'lean GTM,' 'one-person company,' or 'no employees.' This skill covers the complete solo founder GTM playbook from stack selection through agent team design, revenue-stage transitions, time allocation, and when to finally hire."
+description: >-
+  Use this skill when a solo founder needs their whole go-to-market operating
+  playbook: which motion to run at their MRR stage, the one-person tool stack,
+  which AI agents to set up first, how to split their hours, founder-led sales,
+  building in public, and when to make the first hire. Triggers: "I'm a solo
+  founder at $X MRR", "one-person startup", "solopreneur", "scale without hiring",
+  "AI agents as my team", "when should I hire". Not for a prioritized list of
+  marketing ideas or tactics to try (use marketing-ideas), a single channel's
+  execution (use paid-ads, social-content, cold-email), or choosing PLG vs
+  sales-led for a funded team (use sales-motion-design).
 ---
 
 # Solo Founder GTM: The Complete Playbook for Scaling Without Hiring
@@ -420,14 +429,14 @@ Document every conversation: objection log, winning phrases, losing patterns, pr
 | Skill | When to Cross-Reference |
 |---|---|
 | gtm-engineering | When building automated workflows, agent orchestration, and data pipelines |
-| ai-cold-outreach | When setting up the outreach agent with personalized sequences |
+| cold-email | When writing the outreach agent's personalized sequences |
 | ai-sdr | When designing the full AI SDR workflow from lead ID through meeting booking |
 | lead-enrichment | When building the research agent's enrichment waterfall and data quality |
 | content-to-pipeline | When converting content and audience into measurable pipeline |
 | social-selling | When building personal brand strategy and social selling workflows |
 | gtm-metrics | When scaling past $50K MRR and need comprehensive metrics frameworks |
-| ai-pricing | When setting or adjusting pricing for self-serve vs sales-led |
-| positioning-icp | When defining ICP and positioning with limited research bandwidth |
+| pricing-strategy | When setting or adjusting pricing for self-serve vs sales-led |
+| ideal-customer-profile | When defining ICP and positioning with limited research bandwidth |
 | sales-motion-design | When formalizing founder-led sales into a repeatable motion |
 | expansion-retention | When NRR becomes a growth lever at $30K+ MRR |
 | partner-affiliate | When building partner channels to scale distribution without hiring |

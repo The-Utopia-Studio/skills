@@ -28,7 +28,7 @@ MUST NOT fire (3, name the sibling each belongs to):
 | 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire phrasings appear verbatim in the description's "Fires on" list. All 3 MUST-NOT-fire are explicitly excluded in the description with the correct sibling named (wedge-five-questions / yoda-data-sourcing / concierge-probe·probe-matrix). Description is precise, not broad. |
 | 2 Golden | PASS (5/5) | Applied Method to each input; each yields the expected shape and scores ≥21 with no dim <4 and no auto_fail. Per-case totals below. |
 | 3 Adversarial | PASS (3/3) | 01 refuses bare domain + asks the single unblocking question (Method step 1 + template §1 blockquote handle this); 02 runs the generic-prompt test live and names the model-default-as-invention trap; 03 declines and hands to wedge-five-questions. No fabrication, no flattery, no scope-poaching. |
-| 4 Head-to-head | n/a | `supersedes: none`. Skill absorbs brainstorm-experiments-new's bones but supersedes nothing; Gate 4 does not apply. |
+| 4 Head-to-head | n/a | `supersedes: none`. Skill absorbs probe-matrix's bones but supersedes nothing; Gate 4 does not apply. |
 | 5 Anti-generic | PASS | Golden 01's output cannot come from a generic PM prompt — a generic prompt returns the very D0 concept (copilot/chatbot) the skill kills. Load-bearing mechanism is proprietary: the literal generic-prompt test, YODA-corpus anchoring, strange-child inversion, evidence-ladder + [Fact]/[Assumption]/[Hypothesis] tagging. All decision logic is tabular, not prose. |
 | 6 Real-use | pending | Requires 5+ real fellow uses — not executable here. |
 

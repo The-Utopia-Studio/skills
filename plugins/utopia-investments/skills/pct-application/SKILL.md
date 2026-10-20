@@ -1,8 +1,17 @@
 ---
 name: pct-application
-description: PCT international application preparation under PCT Rules 5-12 - unity of invention, formal requirements, national phase entry strategy, and deadline management
-tools: Bash, Read, Write
-model: sonnet
+description: >-
+  International and European patent work for portfolio companies: preparing or reviewing
+  a PCT application (PCT Rules 3-13 formalities, unity of invention, claims and abstract),
+  deadline and fee planning from the priority date, national/regional phase strategy, Euro-PCT
+  and EP quality checks (Art. 84 claim clarity and support, Art. 83 sufficiency, Rules 42-49
+  formalities, converting US-style claims to EPO two-part form), and researching EPC articles,
+  EPO Guidelines or PCT rules with citations. Use when the user mentions PCT, international
+  patent application, priority year, national phase, EPO, EP filing, EPC, Euro-PCT, unity
+  objection, two-part claims or Article 83/84.
+  Not for drafting a US provisional or US prosecution only, freedom-to-operate opinions, or
+  valuing IP in a deal (use technical-dd for the IP section of diligence).
+allowed-tools: Read, Write, Bash, WebSearch, WebFetch
 ---
 
 # PCT Application Skill
@@ -53,12 +62,17 @@ Provides comprehensive PCT application support:
    - National phase fee estimates
    - Strategic filing considerations
 
-## Required Data
+## Sources (no special tools needed)
 
-**MCP Tools Available**:
-- `check_pct_formalities` - PCT Rules 5-12 formalities checking
-- `search_patent_law` - Search PCT rules, regulations, administrative instructions
-- `search_patents_bigquery` - Prior art search for unity assessment
+There is no patent-law database connected. Work from the user's documents and the official texts, fetched with web search / web fetch, and cite the provision and the date you read it:
+
+- PCT Articles, Rules, Administrative Instructions and fee tables: https://www.wipo.int/pct/en/texts/ and the PCT Applicant's Guide https://www.wipo.int/pct/en/guide/
+- EPC articles and rules: https://www.epo.org/en/legal/epc ; EPO Guidelines for Examination: https://www.epo.org/en/legal/guidelines-epc ; Board of Appeal case law: https://www.epo.org/en/legal/case-law
+- Prior art for unity / novelty sanity checks: Espacenet https://worldwide.espacenet.com and WIPO PATENTSCOPE https://patentscope.wipo.int (search by keywords and CPC class; report what you searched)
+
+Quick provision map: `references/epc-pct-provisions.md`. EPO quality checklist and report format: `references/epo-compliance-checklist.md`.
+
+Fees and deadlines below are estimates; confirm current amounts on the WIPO/EPO fee schedules before quoting them. This skill gives procedural guidance, not legal advice; flag anything that needs a registered patent attorney.
 
 ## How to Use
 
@@ -290,16 +304,16 @@ DEADLINES:
 [Date] - National phase entry (30/31 months)
 ```
 
-## Integration
+## EPO / Euro-PCT quality check
 
-Works with other skills/agents:
-- Uses **EPO Patent Analyzer** skill for Euro-PCT quality
-- Coordinates with **EPO Patent Search** for EP prior art
-- Invokes **EPC Search** skill for PCT rule research
-- Uses **BigQuery Patent Search** for worldwide prior art
+When the user is entering the EP regional phase, filing directly at the EPO, or answering an EPO communication, run the checklist in `references/epo-compliance-checklist.md`:
 
-## Tools Available
+1. **Claims (Art. 84 EPC)** — clarity (relative terms need an objective reference), conciseness, support by the description, two-part form (Rule 43(1): preamble + "characterised in that"), claim categories, excluded subject matter (Art. 52(2), 53).
+2. **Sufficiency (Art. 83 EPC)** — reproducible by the skilled person, claim breadth vs disclosure, at least one worked example.
+3. **Formalities (Rules 42-49 EPC)** — description sections and order, claims form, drawings without text, abstract of max 150 words with a designated figure.
 
-- **Read**: To load application documents
-- **Bash**: To run PCT compliance checks
-- **Write**: To save compliance reports and application drafts
+Report issues as Critical / Important / Minor with the EPC article/rule and Guidelines section for each, plus a concrete fix. To convert US-style claims, identify the closest prior art, put the known features in the preamble and the novel features after "characterised in that". The EPO-vs-USPTO differences table (absolute novelty, problem-solution inventive step, medical-method exclusion) is in the checklist reference.
+
+## Legal research questions
+
+For "what does the EPC/PCT say about X": locate the provision in `references/epc-pct-provisions.md`, fetch the current text from the official site, quote the relevant passage briefly, give the article/rule/Guidelines section number, and note related Board of Appeal case law if found.

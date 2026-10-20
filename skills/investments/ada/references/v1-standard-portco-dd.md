@@ -104,13 +104,13 @@ If P0 found: continue the audit but flag for immediate escalation.
    - Distinguish observed vs inferred
    - P0/P1/P2/P3 severity on every risk
 4. End with "What to ask the founder" — 3-5 falsifiable questions
-5. Save to `/Users/kp/Documents/Utopia DD Reports/[Company] - TDD - YYYY-MM-DD.docx`
+5. Save as `[Company] - TDD - YYYY-MM-DD.docx` in the folder the user named (default: the current working folder)
 
 ## Step 7 — Self-evaluation (5 min)
 
 **Actions:**
-1. Log the DD to `MEMORY.md → Past portcos reviewed`
-2. If any new pattern was discovered, log it to `MEMORY.md → Common red flags` or `Lessons learned`
+1. Propose a `Past portcos reviewed` row for MEMORY.md in your final message (do not edit the file)
+2. If any new pattern was discovered, propose an addition to `Common red flags` or `Lessons learned`
 3. Note time-to-report
 
 ## Total time budget

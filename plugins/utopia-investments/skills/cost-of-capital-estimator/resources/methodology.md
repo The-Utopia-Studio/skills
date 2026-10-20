@@ -339,7 +339,7 @@ Banks and insurance companies use debt as operational raw material, not as finan
 - Use cost of equity only (not WACC) to discount cash flows to equity (FCFE or dividends).
 - Beta should reflect the equity risk of the financial institution.
 - Do not separate operating and financing debt; all debt is operational.
-- The excess return model (value = book equity + PV of (ROE - ke) x book equity) is the standard approach. This is covered in detail in the special-situations-valuation skill.
+- The excess return model (value = book equity + PV of (ROE - ke) x book equity) is the standard approach.
 
 ### Currency Conversion of WACC
 

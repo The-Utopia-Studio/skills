@@ -1,5 +1,5 @@
 ---
-name: ckm:brand
+name: ckm-brand
 description: Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.
 argument-hint: "[update|review|create] [args]"
 metadata:
@@ -42,17 +42,17 @@ node scripts/extract-colors.cjs <image-path>
 ## Brand Sync Workflow
 
 ```bash
-# 1. Edit docs/brand-guidelines.md (or use /brand update)
+# 1. Edit <project>/docs/brand-guidelines.md (or run the `update` subcommand)
 # 2. Sync to design tokens
 node scripts/sync-brand-to-tokens.cjs
 # 3. Verify
 node scripts/inject-brand-context.cjs --json | head -20
 ```
 
-**Files synced:**
-- `docs/brand-guidelines.md` → Source of truth
-- `assets/design-tokens.json` → Token definitions
-- `assets/design-tokens.css` → CSS variables
+**Files synced** (in the user's project, not this skill; start from `templates/brand-guidelines-starter.md`):
+- `<project>/docs/brand-guidelines.md` → Source of truth
+- `<project>/assets/design-tokens.json` → Token definitions
+- `<project>/assets/design-tokens.css` → CSS variables
 
 ## Subcommands
 

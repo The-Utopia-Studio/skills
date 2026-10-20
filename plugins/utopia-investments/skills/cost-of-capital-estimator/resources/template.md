@@ -233,7 +233,7 @@ WACC = Cost of Equity x (E/(D+E)) + After-tax Cost of Debt x (D/(D+E))
 
 ## WACC Sensitivity Table
 
-Compute WACC at varying debt ratios to see the cost of capital curve. This also feeds into the capital-structure-optimizer skill.
+Compute WACC at varying debt ratios to see the cost of capital curve.
 
 | Debt Ratio (D/(D+E)) | D/E | Levered Beta | Cost of Equity | Interest Coverage | Rating | Default Spread | Pre-tax kd | After-tax kd | WACC |
 |----------------------|-----|-------------|---------------|-------------------|--------|---------------|-----------|-------------|------|

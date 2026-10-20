@@ -1,6 +1,19 @@
 ---
 name: expansion-retention
-description: "When the user wants to reduce churn, build expansion revenue, automate customer success, or optimize net revenue retention. Also use when the user mentions 'churn,' 'retention,' 'expansion revenue,' 'upsell,' 'NRR,' 'net revenue retention,' 'customer success,' 'land and expand,' 'closed-lost,' or 'renewal.' This skill covers expansion and retention systems from usage triggers through automated customer success."
+description: >-
+  Use this skill for anything about keeping and growing existing customers'
+  revenue: NRR and GRR, upsell and cross-sell play cards, mapping customer
+  segments to CS and expansion plays with owners and KPIs, health scores,
+  renewal playbooks, renewal discount approvals and the renewal deal desk, at-risk
+  account escalations (competitor evaluation, lost exec sponsor) with escalation
+  tiers and who can approve concessions, subscription LTV lifecycle programs
+  (repeat purchase, loyalty, VIP, lapsed-customer win-back plays), and specifying
+  a retention dashboard (GRR, NRR, logo retention, expansion by cohort with
+  alerts). Use it when the user types "renewal", "at-risk account", "escalation",
+  "expansion plays", "QBR", "lift LTV", "retention dashboard" or "who approves
+  this discount". Not for building cancel flows, save offers or failed-payment
+  dunning (use churn-prevention), new-business lead routing (use revops), or a
+  go-to-market plan for new markets (use gtm-strategy).
 ---
 
 # Expansion & Retention Systems
@@ -375,6 +388,52 @@ Clients with strong ICP fit are 2x less likely to churn and 4x more likely to ex
 
 ---
 
+## 10. Renewal Escalations and Decision Authority
+
+Folded in from the retired escalation-framework and deal-desk skills. Use for at-risk renewals that need cross-functional help.
+
+### Escalation Tiers
+
+| Tier | Criteria (any one) | Response time | Owner | Required involvement |
+|---|---|---|---|---|
+| Green | Health 70+, sponsor engaged, no open blockers, renewal >90 days out | Standard cadence | CSM | None beyond the renewal playbook |
+| Yellow | Health 40-69, sponsor quiet 30+ days, an unresolved product or support blocker, or a downsell request | 48 hours | CSM + AE | Product or support lead on the specific blocker; weekly check-in |
+| Red | Health below 40, explicit churn or competitor evaluation, executive sponsor lost, or a renewal under 60 days with a major blocker | 24 hours | Exec sponsor | Exec sponsor, product, finance, legal as needed; twice-weekly war-room until resolved |
+
+### Decision Authority Matrix
+
+| Decision | CSM | AE / Account owner | VP CS or Sales | Finance | CEO / Exec sponsor |
+|---|---|---|---|---|---|
+| Discount up to 10% on renewal | Recommend | Approve | Inform | - | - |
+| Discount 10-25% or multi-year price lock | Recommend | Recommend | Approve | Consult | - |
+| Discount above 25%, credits, or non-standard payment terms | - | Recommend | Recommend | Approve | Approve |
+| Roadmap commitment to a customer | Recommend | Recommend | Consult | - | Approve (with product) |
+| Contract terms (liability, SLA, termination) | - | Recommend | Consult | Consult | Approve (with legal) |
+
+Set your own thresholds; the point is that the field team knows who can say yes before the call. Run every escalation through: intake (issue, impact, requested support, deadline) → executive brief (talking points, risks, desired outcome) → resolution tracker (actions, owners, next check-in) → post-escalation review that updates the renewal playbook. Log every concession and sync final terms to CRM and billing the same day.
+
+---
+
+## 11. Expansion Play Cards and the Retention Dashboard
+
+Folded in from the retired expansion-playbook, expansion-plays, renewal-playbooks, retention-dashboard and activation-map skills.
+
+**Play card** (one per play, top 3 plays per segment at most): trigger (usage milestone, idle licenses, success-plan completion, exec ask) → value narrative and proof (ROI, reference customer) → offer (add-on, bundle, multi-year, pilot) with commercial guardrails → owner (CSM, AE, lifecycle) and channel (QBR/EBR, in-app, nurture, exec program) → KPIs (attach rate, win rate, cycle time, ARR per account). Renewal plays use the same card keyed to health tier: green maintain, yellow accelerate, red save (escalate per section 10).
+
+**Activation matrix:** segment or insight → play → owner → timing → KPI, with a status and due-date column so owners stay accountable.
+
+**Retention dashboard spec:**
+
+| Layer | Contents |
+|---|---|
+| Metric definitions | Gross and net revenue retention, logo retention, expansion %, health score distribution; normalize to ARR, accounts or seats and say which |
+| Cohort dimensions | Start month, plan, persona, region, industry, product, acquisition channel |
+| Views | Summary tiles, cohort retention heatmap, ARR waterfall (start, expansion, contraction, churn, end), signal callouts |
+| Alerting | Thresholds that post to Slack or email when a cohort or account breaches target, with the recommended play attached |
+| Annotation | Commentary, actions taken and follow-up owner per alert, reviewed weekly |
+
+---
+
 ## Quick Reference
 
 ### Key Metric Targets
@@ -438,9 +497,10 @@ Clients with strong ICP fit are 2x less likely to churn and 4x more likely to ex
 
 ## Related Skills
 
-- **ai-pricing** - Pricing model design, tier structure, usage-based pricing strategy
+- **pricing-strategy** - Pricing model design, tier structure, usage-based pricing strategy
 - **sales-motion-design** - Sales process architecture, deal mechanics, handoff design
 - **gtm-metrics** - Full GTM measurement framework, dashboards, reporting cadences
 - **partner-affiliate** - Channel partnerships, referral programs, ecosystem revenue
 - **solo-founder-gtm** - CS and retention systems for teams of one
-- **positioning-icp** - ICP refinement drives better-fit customers who retain and expand
+- **ideal-customer-profile** - ICP refinement drives better-fit customers who retain and expand
+- **churn-prevention** - Cancel flows, save offers and dunning for self-serve subscriptions

@@ -6,7 +6,6 @@ intent: >-
 type: component
 ---
 
-
 ## Purpose
 Create an initial, assumption-based persona profile that synthesizes available user research, market data, and stakeholder knowledge into a working hypothesis about your target user. Use this to align teams early in product development, guide initial design decisions, and identify gaps in understanding that require validation through research.
 
@@ -65,7 +64,7 @@ Before creating a proto-persona, collect:
 - **Analytics:** Usage data, demographics, behavioral patterns
 - **Market data:** Industry reports, competitor user bases
 - **Stakeholder insights:** Sales/support/CS teams who interact with users
-- **Product context:** What problem are you solving? (reference `skills/problem-statement/SKILL.md`)
+- **Product context:** What problem are you solving? (reference `problem-statement`)
 
 **If missing context:** Don't fabricate—note gaps and plan research to fill them.
 
@@ -139,7 +138,7 @@ Use real or representative quotes that reveal how they think and speak.
 ### Step 4: Document Their Context
 
 #### Pains
-What problems or frustrations does this persona experience? (Reference `skills/jobs-to-be-done/SKILL.md` for structure.)
+What problems or frustrations does this persona experience? (Reference `jobs-to-be-done` for structure.)
 
 ```markdown
 ### Pains
@@ -301,26 +300,15 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/problem-statement/SKILL.md` — Persona informs the "I am" section
-- `skills/jobs-to-be-done/SKILL.md` — JTBD informs persona pains/goals
-- `skills/positioning-statement/SKILL.md` — Persona is the "For [target]"
-- `skills/user-story/SKILL.md` — Stories use "As a [persona]"
+- `problem-statement` — Persona informs the "I am" section
+- `jobs-to-be-done` — JTBD informs persona pains/goals
+- `positioning-workshop` — Persona is the "For [target]"
+- `user-story` — Stories use "As a [persona]"
 
 ### External Frameworks
 - Alan Cooper, *The Inmates Are Running the Asylum* (1998) — Origin of persona concept
 - Jeff Gothelf, *Lean UX* (2013) — Proto-personas as hypothesis-driven research tools
 - Indi Young, *Mental Models* (2008) — Behavior-driven persona development
 
-### Dean's Work
-- Proto-Persona Profile Prompt (inspired by Productside Product Manager's Playbook)
-
 ### Provenance
-- Adapted from `prompts/proto-persona-profile.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `proto-persona.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/jobs-to-be-done/SKILL.md`, `skills/problem-statement/SKILL.md`
-**Used by:** `skills/positioning-statement/SKILL.md`, `skills/user-story/SKILL.md`, `skills/problem-statement/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

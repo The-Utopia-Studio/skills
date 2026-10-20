@@ -1,6 +1,14 @@
 ---
 name: dataset-builder
-description: Turn field artefacts into a labelled dataset and 20+ golden cases — the seed of the eval suite that gates the build. Attaches a ground-truth label to every real artefact, scores each label on the evidence ladder, and clears each case through four gates (provenance, ground-truth, unreachable, held-out) so a foundation model cannot pre-pass its own memorised test. Fires on "make our own dataset", "create golden cases", "label this", "turn our field logs into a test set the model hasn't seen", "seed the eval suite". Not for finding which sources are proprietary in the first place (use yoda-data-sourcing, section 03), not for composing the labelled cases into the four-band spread / autonomy level / cost budget of a scoreable spec (use eval-first-spec, section 07), not for splitting an expert's teachable procedure from show-only judgment (use explicit-vs-tacit-capture, section 03).
+description: >-
+  Turn real field artefacts (scanned documents, logs, tickets, emails, expert
+  corrections) into a labelled dataset and 20+ golden cases for an eval suite,
+  with a ground-truth label per artefact, evidence scoring and four gates
+  (provenance, ground truth, unreachable by the model, held out). Use when the
+  user has pilot data or corrections and asks to build a dataset, label it,
+  create golden cases or a test set the model has not memorised, or seed evals.
+  Not for finding proprietary data sources (use yoda-data-sourcing) or writing
+  the full scoreable spec (use eval-first-spec).
 type: generator
 supersedes: none
 ---

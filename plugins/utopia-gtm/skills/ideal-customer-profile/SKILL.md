@@ -1,6 +1,16 @@
 ---
 name: ideal-customer-profile
-description: "Identify the Ideal Customer Profile (ICP) from research data with demographics, behaviors, JTBD, and needs. Use when defining your ICP, analyzing PMF survey data, or understanding who your best customers are."
+description: >-
+  Identify and score the Ideal Customer Profile (ICP) from research and customer
+  data: firmographics, behaviors, JTBD, pains, disqualifiers, a separate fit and
+  intent scoring model with an activate/nurture/monitor/disqualify matrix, and a
+  quarterly ICP and PMF revalidation (Sean Ellis bands, decay signals). Use when
+  defining or refreshing your ICP, analyzing PMF survey data, building an ICP
+  scoring model, or understanding who your best customers are. Not for picking
+  the first market to enter (use beachhead-segment), tiering individual live
+  accounts (use account-tier-scoring), enrichment waterfalls (use
+  lead-enrichment), building personas from interviews (use customer-research),
+  or positioning statements and messaging (use positioning-workshop).
 ---
 # Ideal Customer Profile
 
@@ -142,6 +152,9 @@ A comprehensive ICP definition including:
 - Go-to-market implications and messaging
 - Disqualification criteria (who is NOT a good fit)
 - High-value segment within ICP (ideal-of-the-ideal)
+
+## Scoring and Revalidation
+Once the ICP is defined, turn it into a fit score and an intent score (kept separate), place accounts on the activate/nurture/monitor/disqualify matrix, back-test against your last 10 wins, and revalidate every 90 days with a Sean Ellis survey. Full model, weights and PMF bands: `references/icp-scoring-and-pmf.md`.
 
 ## Framework
 Based on Jobs to Be Done theory by Clayton Christensen and customer profiling methodology. Combines behavioral data with motivational insights to define actionable customer profiles.

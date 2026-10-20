@@ -1,6 +1,14 @@
 ---
 name: copy-editing
-description: "When the user wants to edit, review, or improve existing marketing copy, or refresh outdated content. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' 'sharpen the messaging,' 'refresh this content,' 'update this page,' 'this content is outdated,' or 'content audit.' Use this when the user already has copy and wants it improved or refreshed rather than rewritten from scratch. For writing new copy, see copywriting."
+description: >-
+  Use this skill when the user pastes existing marketing copy and wants it
+  edited rather than rewritten: "tighten this", "edit this copy", "don't rewrite
+  it from scratch", "too wordy", "cut the jargon", "proofread", "polish this",
+  "this reads awkwardly", "sharpen the messaging", or refresh an outdated page or
+  run a content audit. It runs structured copy sweeps (clarity, jargon and
+  buzzword removal, voice, specificity, proof) and returns tracked edits. Not for
+  writing new copy from scratch (use copywriting) or editing cold emails (use
+  cold-email).
 metadata:
   version: 1.3.0
 ---
@@ -494,7 +502,7 @@ Copy editing isn't just for new content. Existing pages decay over time — outd
 - **copywriting**: For writing new copy from scratch (use this skill to edit after your first draft is complete)
 - **page-cro**: For broader page optimization beyond copy
 - **marketing-psychology**: For understanding why certain edits improve conversion
-- **ab-test-setup**: For testing copy variations
+- **ab-test-analysis**: For testing copy variations
 
 ---
 

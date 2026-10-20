@@ -1,6 +1,16 @@
 ---
 name: outreach-execution
-description: "Use this skill when a signal, account list, or named contact needs outreach \u2014 it loads sender voice and past approved messages, picks the right path for the situation, and drafts a multi-step sequence anchored on a real hook. It encodes production sender-assignment and approval rails: tiered senders, automatic executive multi-threading on large accounts, and a hard rule that AI-drafted sequences to senior executives are never auto-sent. Every sequence is staged with a written rationale for human approval, and approved copy feeds back into the voice library. Includes references for email/LinkedIn/breakup frameworks and objection handling."
+description: >-
+  Use this skill when a signal, account list, or named contact needs outreach
+  staged for sending: it loads sender voice and past approved messages, picks the
+  path, assigns the sender by account tier, adds executive multi-threading on
+  large accounts, runs a prior-relationship check, and stages a multi-step
+  email/LinkedIn sequence with a written rationale for human approval. AI-drafted
+  sequences to senior executives are never auto-sent; approved copy feeds the
+  voice library. Includes email/LinkedIn/breakup frameworks and objection
+  handling. Not for writing or scoring a single cold email or signal-triggered
+  message (use cold-email), scoring or tiering accounts (use account-tier-scoring),
+  or deciding how much an agent may send unattended (use earned-autonomy).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/jeremy-hurst/outreach-execution
@@ -8,7 +18,7 @@ metadata:
 
 ## Template placeholders
 
-Replace every `{{...}}` before enabling. See the setup checklist reference for the full setup list.
+Replace every `{{...}}` before enabling. See `references/setup-customization-checklist.md` for the full setup list.
 
 - `{{CRM}}` — Your CRM (e.g. HubSpot, Attio, Salesforce)
 - `{{SENDER_ROSTER}}` — The people who can send outreach, with which channels each has connected (email, LinkedIn)
@@ -53,11 +63,11 @@ Match the situation to the working path before drafting:
 |---|---|
 | Setup or voice questions | Voice/setup review — no sequence output |
 | Named company, named contact, or small account list | Targeted flow (Step 6 onward, one contact per account by default) |
-| LinkedIn-only audience (no work email, or LinkedIn-native brand) | LinkedIn-only cadence — see frameworks reference |
-| Email-only audience | Email cadence — see frameworks reference |
-| Final touch / close-the-loop | Breakup patterns — see frameworks reference |
+| LinkedIn-only audience (no work email, or LinkedIn-native brand) | LinkedIn-only cadence — see `references/email-linkedin-breakup-frameworks.md` |
+| Email-only audience | Email cadence — see `references/email-linkedin-breakup-frameworks.md` |
+| Final touch / close-the-loop | Breakup patterns — see `references/email-linkedin-breakup-frameworks.md` |
 | Mixed email + LinkedIn | Multichannel cadence (default when both channels are available) |
-| Prospect raised an objection or blocker | Objection handling reference — reply, not sequence |
+| Prospect raised an objection or blocker | `references/objection-handling.md` — reply, not sequence |
 | Pre-conversion signal (visit, intent, hiring, funding) | Run the prior-relationship check (Step 5) first, then route |
 | Executive threading needed on a live deal | Peer-to-peer exec outreach from {{AWARENESS_SENDER}}, drafted for their voice |
 
@@ -161,7 +171,7 @@ Every outreach starts from a hook. No hook, no send.
 
 If the hook is generic ("drum up pipeline," "stay top of mind"), push back and ask for the slice with a real reason.
 
-**Signal rule: never mention the signal directly.** Use signals to inform the angle — reference their role, company context, or challenges aligned with the signal. "Saw you visited our pricing page" is surveillance; "teams at your stage usually hit X" is insight. Keep it subtle.
+**Signal rule (shared with cold-email; identical wording governs both): name public changes, never private behavior.** A public, self-published change (funding, press, job posting, launch, the prospect's own post, a leadership move) may be named in the opener. A private or behavioral signal (website or pricing-page visits, intent surges, email opens, profile views, enrichment data) is never mentioned or hinted at; use it only to pick the angle. "Saw you visited our pricing page" is surveillance; "teams at your stage usually hit X" is insight. Never reveal how you found the person.
 
 ---
 
@@ -172,7 +182,7 @@ Default (scenario pages and saved voice can override):
 - 3–5 steps total
 - Days 0, 2, 5, 9, 14 as the starting rhythm for single-channel sequences (the multichannel table below has its own rhythm)
 - Each follow-up brings a new angle. "Just checking in" is not a step.
-- Last touch is a soft breakup — load the frameworks reference for the three patterns.
+- Last touch is a soft breakup — load `references/email-linkedin-breakup-frameworks.md` for the three patterns.
 - Single-channel by default unless the org's saved motion calls for multichannel.
 
 Default multichannel structure for a targeted play:
@@ -214,7 +224,7 @@ For a targeted play, in order:
 - MUST run the {{MULTITHREAD_THRESHOLD}} executive multi-thread check on every new primary sequence.
 - NEVER auto-send outside the explicit {{AUTO_APPROVE_CARVEOUT}} — and never to senior executives at large companies, period.
 - NEVER include attachments. Use links from {{RESOURCE_LIBRARY}} if a resource is needed.
-- **LinkedIn connection requests are ALWAYS blank.** No message text, no connection note. No exceptions, across any sequence type, sender, or scenario. No-note requests accept at meaningfully higher rates.
+- **LinkedIn connection requests are ALWAYS blank** (shared rule with cold-email). No message text, no connection note. No exceptions, across any sequence type, sender, or scenario. The signal-anchored first line goes in the first DM after acceptance.
 - NEVER wrap links in markdown syntax in outreach copy. Outreach channels don't render markdown — a markdown-wrapped link renders as duplicated text. Always plain-text URLs.
 - NEVER create a sequence without the contact's email (for email steps) or LinkedIn URL (for LinkedIn steps).
 - NEVER hardcode URLs in this skill. {{RESOURCE_LIBRARY}} is the single source of truth for booking links, demo videos, and trust/security docs. A final leave-behind step may casually offer one or two of these ("will leave two things for if/when relevant") — use judgment on which fit the scenario.
@@ -226,7 +236,7 @@ For a targeted play, in order:
 
 A great run produces one staged sequence per target with a hook the approver instantly recognizes as real: the rationale paragraph says who, why, and why-now in three sentences; the copy sounds unmistakably like the sender because it was drafted from their voice guide and past approved messages, not a template; the prior-relationship check caught the closed-lost history so the opener acknowledges it instead of pretending to be cold; the {{MULTITHREAD_THRESHOLD}} check quietly spawned the parallel executive thread and queued it for approval; connection requests went out blank; every follow-up carries a new angle and the last touch is a clean 25–50-word breakup; and nothing — nothing — reached a senior executive at a large company without a human clicking approve.
 
-Mediocre looks like: sequences with "staying top of mind" as the hook, "just checking in" follow-ups, a signal quoted back at the prospect ("saw you visited our site"), connection-request notes, markdown-wrapped calendar links rendering as duplicated text, duplicate sequences stacked on one contact, voice guessed from generic cold-email lore, or an auto-sent sequence to a VP because a trial trigger fired. Every one of those is a rule in this skill being ignored.
+Mediocre looks like: sequences with "staying top of mind" as the hook, "just checking in" follow-ups, a private signal quoted back at the prospect ("saw you visited our site"), connection-request notes, markdown-wrapped calendar links rendering as duplicated text, duplicate sequences stacked on one contact, voice guessed from generic cold-email lore, or an auto-sent sequence to a VP because a trial trigger fired. Every one of those is a rule in this skill being ignored.
 
 ---
 
