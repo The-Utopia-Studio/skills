@@ -49,6 +49,14 @@ Already installed? Refresh:
 /plugin marketplace update skills
 ```
 
+## Standalone plugins
+
+Plugins that live in their own repo and are listed here so one marketplace covers everything:
+
+| Plugin | What it does | Install |
+|--------|--------------|---------|
+| `prview` | PR preview videos ([ui-walkthrough](https://github.com/The-Utopia-Studio/ui-walkthrough)): a narrated before/after video of what a merged PR changed in your web app, recorded from the real app. The repo is private, so you need access to The-Utopia-Studio on GitHub. | `/plugin install prview@skills` |
+
 ## Single-skill installs (share these)
 
 ```bash

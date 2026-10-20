@@ -9,6 +9,8 @@
 #
 # To add a new pack: edit packs.config.json, then run ./build-packs.sh.
 # To add a skill to an existing pack: add it to that pack's "skills" array in packs.config.json.
+# To list a plugin that lives in its own repo: add it to "externalPlugins" in packs.config.json
+# ({name, source, description}); it is appended to marketplace.json as-is, never copied.
 # GTM skills live at skills/gtm/<submodule>/<skill>/ and must also be listed on utopia-gtm.submodules.
 #
 # Requirements: bash 4+, jq
@@ -114,7 +116,7 @@ jq --argjson packs "$(
     name: .marketplace.name,
     owner: .marketplace.owner,
     description: .marketplace.description,
-    plugins: $packs
+    plugins: ($packs + (.externalPlugins // []))
   }' "$CONFIG" > "$MARKETPLACE_DIR/marketplace.json"
 
 echo ""

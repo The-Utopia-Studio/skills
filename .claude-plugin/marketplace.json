@@ -30,6 +30,14 @@
       "source": "./plugins/utopia-founder-productivity",
       "description": "Founder Productivity — onboarding frameworks, legal docs, knowledge management, agents, and operator tools that don't fit GTM, Product, or Investments.",
       "version": "2.0.0"
+    },
+    {
+      "name": "prview",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/The-Utopia-Studio/ui-walkthrough.git"
+      },
+      "description": "PR preview videos (ui-walkthrough): a narrated before/after video of what a merged pull request changed in your web app, recorded from the real app and posted on the PR. Lives in its own repo, so it ships its own version."
     }
   ]
 }

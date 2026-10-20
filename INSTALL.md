@@ -85,6 +85,7 @@ Then open a terminal and run `claude`.
 | Discovery, design, building, deploy | `/plugin install utopia-product@skills` |
 | DD, fundraising, modeling, markets | `/plugin install utopia-investments@skills` |
 | Onboarding, legal, notes, agents | `/plugin install utopia-founder-productivity@skills` |
+| PR preview videos (ui-walkthrough) | `/plugin install prview@skills` |
 
 ### Step 4 — Stay up to date
 

@@ -1,5 +1,5 @@
 {
-  "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF).",
+  "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF). externalPlugins: whole plugins kept in their own repos, listed in the marketplace as-is (not copied into plugins/).",
   "marketplace": {
     "name": "skills",
     "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 357 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
@@ -572,6 +572,16 @@
         "tam-sam-som-calculator",
         "workshop-facilitation"
       ]
+    }
+  ],
+  "externalPlugins": [
+    {
+      "name": "prview",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/The-Utopia-Studio/ui-walkthrough.git"
+      },
+      "description": "PR preview videos (ui-walkthrough): a narrated before/after video of what a merged pull request changed in your web app, recorded from the real app and posted on the PR. Lives in its own repo, so it ships its own version."
     }
   ]
 }
