@@ -1,0 +1,19 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "startPath": "/",
+  "signInPath": "/sign-in",
+  "authPaths": ["/sign-in", "/sign-up", "sso-callback"],
+  "app": ".",
+  "viewport": { "width": 1420, "height": 799 },
+  "output": { "width": 1920, "height": 1080, "fps": 30 },
+  "zoom": 1,
+  "brand": {
+    "name": "Northwind",
+    "background": "#f4f1ec",
+    "text": "#1d1a18",
+    "muted": "#6b6460",
+    "accent": "#3b5bdb"
+  },
+  "voice": { "deepgram": "aura-2-thalia-en" },
+  "workDir": ".walkthrough-video"
+}
