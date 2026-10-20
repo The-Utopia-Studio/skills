@@ -2,7 +2,7 @@
 
 **Time:** ~2 minutes · **Hardest part:** copying and pasting
 
-Four modules · **358 skills** · Claude Code plugin marketplace for The Utopia Studio.
+Four modules · **359 skills** · Claude Code plugin marketplace for The Utopia Studio.
 
 **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills)
 
