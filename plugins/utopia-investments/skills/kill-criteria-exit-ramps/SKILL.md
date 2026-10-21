@@ -87,8 +87,8 @@ description: Establishes pre-defined, objective conditions for stopping projects
 **When**: Team resists killing project due to past investment
 
 **Technique**: **Pre-mortem inversion**
-1. Ask: "If we were starting today with zero investment, would we start this project?"
-2. If answer is "No" → Kill (sunk costs are irrelevant)
+1. Ask: "From today, do the incremental benefits of continuing exceed the remaining costs, wind-down effects and best feasible alternative?"
+2. If answer is "No" → evaluate stopping or pivoting with the named decision owner; ignore sunk spending but retain existing useful assets and remaining completion costs
 3. If answer is "Yes, but differently" → Pivot
 4. If answer is "Yes, exactly as-is" → Continue
 
@@ -136,7 +136,7 @@ Write kill criteria in PRD, project charter, or investment memo. Get stakeholder
 Track metrics weekly/monthly. Dashboard with kill criteria thresholds clearly marked. Automate alerts when approaching thresholds.
 
 **Step 7: Evaluate at gates/triggers**
-When gate or trigger hit, conduct formal evaluation. Use pre-mortem inversion: "Would we start this today?" Decide: continue, pivot, or kill.
+When gate or trigger hit, conduct formal evaluation. Use pre-mortem inversion: "Is continuing the best incremental use of resources from today?" Decide: continue, pivot, or kill.
 
 **Step 8: Execute kill decision**
 If kill triggered: communicate decision, wind down project, reallocate resources, conduct postmortem. Execute quickly (avoid zombie projects).
@@ -181,7 +181,7 @@ If kill triggered: communicate decision, wind down project, reallocate resources
 
 **Danger**: "We've invested $2M, can't stop now" — sunk cost fallacy
 
-**Guardrail**: Use pre-mortem inversion: "If starting today with $0 invested, would we do this?" Only future matters.
+**Guardrail**: Use pre-mortem inversion: "Which feasible option creates the most net value from today, using remaining costs and existing useful assets?" Only future matters.
 
 **Principle**: Past costs are gone. Only question: "Is future investment better here or elsewhere?"
 

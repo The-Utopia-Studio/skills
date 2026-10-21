@@ -22,6 +22,10 @@ scenarios:
 estimated_time: "10-15 min"
 ---
 
+## Calculation and evidence guardrails
+
+Keep one starting cohort and period for retention; exclude new customers from NRR. GRR = (starting recurring revenue - churn - contraction) / starting recurring revenue; expansion is excluded. Report undefined when the starting denominator is zero. Quick ratio with zero losses and positive gains is unbounded, not a finite score; 0/0 is undefined. Compare cohorts at equal maturity and expose sample sizes. Benchmarks and fictional examples are illustrative; neither a retention curve nor a revenue ratio alone proves PMF or profitability.
+
 ## Purpose
 
 Master revenue and retention metrics to understand SaaS business momentum, evaluate product-market fit, and make data-driven decisions about growth investments. Use this to calculate key metrics, interpret trends, identify problems early, and communicate business health to stakeholders.
@@ -36,7 +40,7 @@ The "top-line" metrics that measure how much money the business generates.
 
 **Revenue** — Total money earned from selling products/services before expenses. The "top line" of the income statement.
 - **Why PMs care:** Every feature should connect to revenue (direct or indirect). If you can't articulate revenue impact, prioritization becomes impossible.
-- **Formula:** Sum of all customer payments in a period
+- **Formula:** Revenue earned and recognized in the period under the applicable accounting policy
 - **Benchmark:** Growth rate matters more than absolute number (context-dependent by stage)
 
 **ARPU (Average Revenue Per User)** — Average revenue generated per individual user.
@@ -149,12 +153,12 @@ Use the templates in `template.md` to calculate your core revenue metrics.
 
 #### Revenue
 ```
-Revenue = Sum of all customer payments in period
+Revenue = Amount earned and recognized in period (not necessarily cash collected)
 ```
 
 **Example:**
-- Month 1 payments: $100,000
-- Revenue = $100,000
+- Annual service prepaid: $120,000 cash
+- With even service delivery over 12 months, monthly recognized revenue = $10,000; cash collection is reported separately
 
 **Quality checks:**
 - Is this gross or net revenue? (Clarify if discounts/refunds are included)
@@ -437,8 +441,8 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 **Revenue Metrics:**
 - MRR: $2M (growing 10% month-over-month)
 - ARR: $24M
-- ARPA: $1,200/month (200 accounts)
-- ARPU: $120/month (20,000 users)
+- ARPA: $10,000/month (200 accounts)
+- ARPU: $100/month (20,000 users)
 - Average seats: 100 per account
 
 **Retention Metrics:**
@@ -455,7 +459,7 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 - ✅ Sustainable (Quick Ratio 5.0)
 - ✅ Revenue churn < logo churn (losing smaller customers, good signal)
 
-**Action:** Scale acquisition. Unit economics are strong.
+**Action:** Check CAC, gross margin, payback and cash capacity before scaling; revenue/retention alone do not establish strong unit economics.
 
 ---
 
@@ -479,9 +483,9 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 **Cohort Analysis:**
 | Cohort | Month 6 Retention |
 |--------|-------------------|
-| 6 months ago | 75% |
-| 3 months ago | 65% |
-| Current | 58% |
+| Mature cohort A | 75% |
+| Mature cohort B | 65% |
+| Latest cohort with six months observed | 58% |
 
 **Analysis:**
 - ⚠️ High churn (6% monthly = ~50% annual)
@@ -502,9 +506,9 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 **Company:** Multi-product SaaS platform
 
 **Blended Metrics Look Great:**
-- MRR: $3M (growing 20% MoM)
-- Blended churn: 3%
-- Blended NRR: 110%
+- Ending MRR: $3M (approximately 12.75% MoM from the product changes below)
+- Blended churn: requires starting customer counts by product; not inferable from ending revenue mix
+- Blended NRR: requires starting cohort revenue by product; not inferable from ending revenue mix
 
 **But Revenue Mix Analysis Shows:**
 | Product | Revenue | % of Total | Growth | Churn | NRR |
@@ -590,7 +594,7 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 ### Pitfall 8: NRR >100% from Low Churn, Not Expansion
 **Symptom:** "NRR is 105%, we're expanding!"
 
-**Consequence:** NRR can be >100% just from very low churn, without meaningful expansion. True expansion-driven NRR is >120%.
+**Consequence:** NRR above 100% requires expansion to exceed churn plus contraction for the same starting cohort. Low churn alone cannot produce NRR above 100%; no universal 120% cutoff defines real expansion.
 
 **Fix:** Break down NRR into components: expansion MRR vs. churned/contracted MRR. Aim for expansion-driven NRR, not just low churn.
 
@@ -626,3 +630,5 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 - **Tomasz Tunguz (Redpoint):** SaaS benchmarking research
 - **Tien Tzuo:** *Subscribed* — Subscription business model fundamentals
 - **ChartMogul, Baremetrics, ProfitWell:** SaaS analytics platforms with metric definitions
+
+Accounting distinction: cash flows and net income differ; see the [SEC financial statement guide](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements). Examples are illustrative, with recognition/timing assumptions stated.

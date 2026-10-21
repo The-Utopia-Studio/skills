@@ -1,3 +1,5 @@
+> HISTORICAL / SUPERSEDED: This report predates the 2026-10-21 Codex contract corrections. Its scores and claimed runs are retained as historical records, not validation of the current skill or revised goldens. No rerun is claimed. New bounded fixtures are recorded in the Codex review evidence.
+
 # Eval log — physics-floor-gap
 
 Author agent seeds the trigger phrasings; the judge agent (separate) runs and scores.

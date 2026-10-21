@@ -53,7 +53,7 @@ You need three things or you have no test. Name them or stop:
 
 If any is missing, ask the one unblocking question (see Gotchas) and stop. Never fabricate a run log for a session you did not hold.
 
-Scale the session to the flow. Run at the weight of what you are testing — a 3-screen settings change is not a 5-segment study. One real user is a flag; a second turns any wall into a `[Fact]`. Don't force the full ceremony on a trivial flow; the discipline is behaviour-over-opinion, not the head-count.
+Scale the session to the flow. Run at the weight of what you are testing — a 3-screen settings change is not a 5-segment study. One directly observed failure is already a `[Fact]` about that session; additional users inform recurrence, not whether the event happened. Don't force the full ceremony on a trivial flow; the discipline is behaviour-over-opinion, not the head-count.
 
 ### Step 1 — Assign the three roles
 
@@ -120,7 +120,7 @@ If they are fully blocked: "Let's stop there and move on." Log it a Fail. Do not
 
 ### Step 5 — Attribute and rank the findings
 
-Every finding attaches to a step and is counted across users. A wall hit by ≥2 of 5 target users is a design fact `[Fact]` (0.7). A wall hit by 1 is a flag `[Hypothesis]` until a second user confirms it.
+Every finding attaches to a step and is counted across users. Log every observed failure as `[Fact]` for its session. Generalization and cause remain `[Hypothesis]` until supported. Counts below are practical triage heuristics, not prevalence estimates or a statistical validation threshold.
 
 | Users who hit it (of 5) | Task-blocking? | Severity | Action |
 |---|---|---|---|
@@ -128,10 +128,10 @@ Every finding attaches to a step and is counted across users. A wall hit by ≥2
 | 3+ | no | Major | Fix this cycle |
 | 2 | yes | Major | Fix this cycle |
 | 2 | no | Minor | Backlog |
-| 1 | yes | Flag | Watch — not yet a fact; needs a 2nd hit |
-| 1 | no | Note | Log, don't act |
+| 1 | yes | Severity assessed from impact | Investigate and fix confirmed severe defects now; prevalence unknown |
+| 1 | no | Note | Log the observed event; decide action from impact and reproducibility |
 
-On sample size: 5 per segment is the working number, because a wall hit by 2 of 5 is already a fact and a 6th user rarely changes which walls are Critical. More users of the *same* segment buys confidence you don't need; more *segments* buys coverage you probably do. Spend the budget on segments, not on the sixth user.
+Start with a small target-segment sample for formative testing, then expand based on risk, variation and unanswered questions. Five users is not a guarantee of coverage, and a sixth can reveal new issues. Report counts and selection limits; do not infer population prevalence from this convenience sample.
 
 ### Step 6 — Write the read-out
 
@@ -149,7 +149,7 @@ Behaviour beats talk. A task the user completed unaided (0.7) outranks anything 
 | Verbal commitment | 0.3 | "I'd use this for X" — anchored to the task, still not a finding on its own |
 | Opinion | 0.1 | "I like it" / "the blue is nice" — quarantined, never promoted |
 
-The findings sheet is done when every Critical/Major finding is tied to a specific step, backed by ≥2 users' observed behaviour (or 1 user plus a task-blocking failure, marked a flag not a fact), and every stated preference sits in the opinion quarantine at 0.1. Kill line: the session leads or coaches the user (any banned facilitator move), or the read-out reports "users liked it / didn't like it" as the finding instead of observed task success.
+The findings sheet is done when every Critical/Major finding is tied to a specific step, backed by observed behavior with the sample count stated; a single verified serious failure can justify action while its prevalence remains unknown, and every stated preference sits in the opinion quarantine at 0.1. Kill line: the session leads or coaches the user (any banned facilitator move), or the read-out reports "users liked it / didn't like it" as the finding instead of observed task success.
 
 ## Gotchas
 

@@ -171,18 +171,17 @@ For 4-quadrant layouts:
 ```python
 # Fill title
 for shape in slide.shapes:
-    if hasattr(shape, 'placeholder_format'):
+    if shape.is_placeholder:
         if shape.placeholder_format.type == 1:  # TITLE
             shape.text = "Slide Title"
 
 # Fill content with hierarchy (level 0 = header, level 1 = bullet)
 for shape in slide.shapes:
-    if hasattr(shape, 'placeholder_format'):
+    if shape.is_placeholder:
         idx = shape.placeholder_format.idx
         if idx == [CONTENT_IDX]:
             tf = shape.text_frame
-            for para in tf.paragraphs:
-                para.clear()
+            tf.clear()
 
             content = [
                 ("Section Header", 0),
@@ -203,7 +202,7 @@ for shape in slide.shapes:
 ```python
 slide = prs.slides.add_slide(prs.slide_layouts[[COVER_IDX]])
 for shape in slide.shapes:
-    if hasattr(shape, 'placeholder_format'):
+    if shape.is_placeholder:
         idx = shape.placeholder_format.idx
         if idx == [TITLE_IDX]:
             shape.text = "Company Name"
@@ -216,15 +215,14 @@ for shape in slide.shapes:
 ```python
 slide = prs.slides.add_slide(prs.slide_layouts[[CONTENT_IDX]])
 for shape in slide.shapes:
-    if hasattr(shape, 'placeholder_format'):
+    if shape.is_placeholder:
         ph_type = shape.placeholder_format.type
         idx = shape.placeholder_format.idx
         if ph_type == 1:
             shape.text = "Executive Summary"
         elif idx == [BODY_IDX]:
             tf = shape.text_frame
-            for para in tf.paragraphs:
-                para.clear()
+            tf.clear()
             content = [
                 ("Key Findings", 0),
                 ("Revenue grew 40% YoY to $50M", 1),

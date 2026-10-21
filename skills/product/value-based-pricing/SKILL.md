@@ -15,7 +15,7 @@ supersedes: none
 
 ## What it does
 
-Takes a validated product and returns one price on one metric, both defended. It forces the price to sit between two measured walls: a floor (your cost per outcome) and a ceiling (the incremental value the customer measures). The price is set at 10–20% of that incremental value — the band where the buyer keeps a 5–10× return and still feels the win — and it is charged on the outcome, asset, or decision the customer receives, not on seats, tiers, or usage. The output is a filled `template.md`: the measured value anchor with its evidence-ladder score, the incremental-over-status-quo calculation, the cost floor, the chosen metric with its coupling defended, the capture rate with its band position argued, and a single price statement a customer would see on an invoice. If the value is not measured, the skill does not produce a price. It names the gap and routes to where the value gets measured.
+Takes a validated product and returns one price on one metric, both defended. It forces the price to sit between two measured walls: a floor (your cost per outcome) and a ceiling (the incremental value the customer measures). The price is set at 10–20% of that incremental value — the band where the buyer receives a 5–10× gross benefit-to-price multiple (4–9× net ROI before other adoption costs) and still feels the win — and it is charged on the outcome, asset, or decision the customer receives, not on seats, tiers, or usage. The output is a filled `template.md`: the measured value anchor with its evidence-ladder score, the incremental-over-status-quo calculation, the cost floor, the chosen metric with its coupling defended, the capture rate with its band position argued, and a single price statement a customer would see on an invoice. If the value is not measured, the skill does not produce a price. It names the gap and routes to where the value gets measured.
 
 ## The Icarus reframe
 
@@ -67,7 +67,7 @@ Both terms measured. The status-quo figure comes from `current-state-map`. If yo
 
 ### Step 3 — Set the floor (Part 3)
 
-Pull cost_per_outcome from `eval-first-spec` (or estimate it: model + infra × attempts, human review, remediation). The price must clear this floor with margin, or the wedge is not economic regardless of value. State margin = PRICE ÷ cost_per_outcome.
+Pull cost_per_outcome from `eval-first-spec` (or estimate it: model + infra × attempts, human review, remediation). The price must clear this floor with margin, or the wedge is not economic regardless of value. State gross margin = (PRICE − cost_per_outcome) ÷ PRICE, as a percentage. PRICE ÷ cost_per_outcome is a price-to-cost multiple, not margin. Reject nonpositive value or price; handle zero cost without dividing by zero.
 
 ### Step 4 — Choose the metric, not the level (Part 4)
 
@@ -86,13 +86,13 @@ The improvement-proof column is the tie-breaker: the `refine-flywheel` makes the
 
 Capture is 10–20% of incremental value. Position within the band from evidence, not feel:
 
-| Lean 10% (buyer keeps ~10×) when | Lean 20% (buyer keeps ~5×) when |
+| Lean 10% (gross benefit/price ~10×; net ROI ~9×) when | Lean 20% (gross benefit/price ~5×; net ROI ~4×) when |
 |---|---|
 | attribution is contested / outcome is probabilistic | attribution is clean and undisputed |
 | buyer is budget-constrained; land-and-expand | you are the only path to the outcome (no substitute) |
 | early, unproven, few reference outcomes | high switching cost; large, lumpy value |
 
-The band *is* the buyer-return band: 10% capture ⇒ buyer keeps 10×; 20% ⇒ 5×. Below 10% you underprice and may not clear the floor; above 20% the buyer's retained win drops under 5× and stops justifying the switch. Then write the price as one line: **number + metric + what the customer sees on the invoice**, and run the three sanity checks.
+The 10–20% band is this studio's starting heuristic, not an empirical universal optimum. At 10% capture, incremental value/price = 10× and net ROI = (value − price)/price = 9×; at 20%, those are 5× and 4×. Include adoption and switching costs when assessing the customer's actual return. A price outside the band can be appropriate with evidence; never claim the band alone proves willingness to pay. Then write the price as one line: **number + metric + what the customer sees on the invoice**, and run the three sanity checks.
 
 **Kill line.** Auto-fail the output if the price is cost-plus or competitor-anchored; if it is charged on the level (seats/tiers) rather than an outcome/asset/decision metric; or if the value anchor scores ≤ 0.3 (a price with no measured value behind it). A value-priced model exists only when a ≥ 0.7 value anchor, a status-quo delta, a cleared cost floor, and an outcome-coupled metric are all present.
 
@@ -108,7 +108,7 @@ Every Icarus skill weights behaviour and money over opinion. The ladder:
 | Verbal commitment | 0.3 |
 | Opinion | 0.1 |
 
-This skill enforces the ladder on the *value denominator*, which is where pricing usually cheats. The price can be as precise as you like; if the value under it is a survey or a competitor glance, the whole model is 0.1. The bar: the value anchor must clear 0.7. The strongest anchor is a loss the customer already paid (1.0) because it proves both the number and the willingness — they have spent money on this problem before. Tag every figure `[Fact]`, `[Assumption]`, or `[Hypothesis]`. A price whose value case is `[Assumption]` is a hypothesis to test in a paid pilot, not a price to publish — carry it to `pilot-six-term-sheet` and let the pilot move it up the ladder.
+This skill enforces the ladder on the *value denominator*, which is where pricing usually cheats. The price can be as precise as you like; if the value under it is a survey or a competitor glance, the whole model is 0.1. The bar: the value anchor must clear 0.7. A documented past loss establishes that loss amount, not willingness to pay you or the fraction your product can prevent. Separately measure attributable incremental benefit and test the proposed price with a real buyer. Tag every figure `[Fact]`, `[Assumption]`, or `[Hypothesis]`. A price whose value case is `[Assumption]` is a hypothesis to test in a paid pilot, not a price to publish — carry it to `pilot-six-term-sheet` and let the pilot move it up the ladder.
 
 ## Gotchas
 

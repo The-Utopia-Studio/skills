@@ -57,7 +57,7 @@ These live in `utopia-branding.md` (referenced by the `pitch-deck` skill). Khali
 8. Asks (intros, follow-on conversations, etc.)
 
 ### Portco coaching deck (varies — Khalil teaches structure to the founder)
-- See `references/v2-portco-coaching-deck.md`
+- Use the loaded `pitch-deck` skill with the portfolio company's audience and branding; no separate V2 file is bundled.
 
 ## Audience-specific gotchas
 

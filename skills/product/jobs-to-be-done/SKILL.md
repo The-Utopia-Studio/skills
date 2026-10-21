@@ -5,7 +5,7 @@ description: >-
   Value Proposition Canvas format, from interview notes or research. Use when the user asks for jobs
   to be done, a JTBD analysis, or customer jobs, pains and gains. Not for ranking the one durable need
   under a list of feature requests (use unserved-needs-finder), writing or planning an interview
-  script (use discovery-interview-prep), or job stories for a backlog (use job-stories).
+  script (use discovery-interview-prep), or job stories for a backlog (use user-story situation-first mode).
 intent: >-
   Systematically explore what customers are trying to accomplish (functional, social, emotional jobs), the pains they experience, and the gains they seek. Use this framework to uncover unmet needs, validate product ideas, and ensure your solution addresses real motivations—not just surface-level feature requests.
 type: component
@@ -58,7 +58,7 @@ Influenced by Clayton Christensen and the Value Proposition Canvas (Osterwalder)
 - Marketing messaging (speak to jobs, not features)
 
 ### When NOT to Use This
-- After you've already built the product (too late for discovery)
+- For a purely mechanical implementation task with no question about customer motivations; discovery remains useful after launch for churn, adoption and new segments
 - For trivial features (don't over-analyze small tweaks)
 - As a substitute for quantitative validation (JTBD informs hypotheses; data validates them)
 

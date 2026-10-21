@@ -15,7 +15,7 @@ Turns "here's a good public skill" into one of four decisions and, in the common
 
 **Every market skill is, by default, folded into an existing studio skill or rejected. It is never added as new surface, and never vendored wholesale.**
 
-The studio optimises for a small premium set. [Fact] Every skill Claude can load costs context for every fellow on every session. So net-new surface has to earn that recurring cost, not just be "good in isolation". The generic instinct is to `npx skills add` and drop the folder in a category. That is exactly the noise this skill exists to stop. [Fact] The studio once vendored a whole external PM-skills repo (README, CHANGELOG, LICENSE, `package.json`, `bin/` and all) as one skill; it duplicated about thirty studio skills, hijacked routing and had to be retired.
+The studio optimises for a small premium set. [Fact] Every skill Claude can load costs context for every fellow on every session. So net-new surface has to earn that recurring cost, not just be "good in isolation". The generic instinct is to `npx skills add` and drop the folder in a category. That is exactly the noise this skill exists to stop. [Fact] The studio once vendored a whole external PM-skills repo (README, CHANGELOG, `package.json`, `bin/` and all) as one skill; it duplicated about thirty studio skills, hijacked routing and had to be retired.
 
 Adoption and behaviour outrank author opinion. A skill's install count and real usage are evidence; its README's self-description is not. Weigh the former.
 
@@ -47,10 +47,10 @@ Apply the `find-skills` quality gate before anything else — install count, sou
 Find which studio skill(s) already overlap by category and trigger. The default assumption is that one exists.
 
 ```bash
-# Category first (taxonomy has 9; blur confuses Claude and fellows)
-ls skills/<category>/
+# Module first: gtm, product, investments, founder-productivity
+ls skills/<module>/
 # Compare on trigger, not title — grep descriptions
-grep -ri "<candidate trigger phrase>" skills/*/*/SKILL.md
+rg -i --glob SKILL.md '<candidate trigger phrase>' skills/gtm skills/product skills/investments skills/founder-productivity
 ```
 
 List every incumbent that shares the candidate's job. If two or more overlap, the candidate is almost certainly a FOLD or a REJECT, not new surface.
@@ -61,10 +61,12 @@ Extract only the load-bearing, non-obvious value. Write one short list: "what's 
 
 | Keep (the bones) | Discard (the noise) |
 |---|---|
-| A non-obvious method, threshold, or checklist | README, CHANGELOG, LICENSE, `package.json`, `bin/` |
+| A non-obvious method, threshold, or checklist | README, CHANGELOG, `package.json`, `bin/` |
 | A template or script that does deterministic work | Restated defaults Claude already knows |
 | A sharp trigger boundary or gotcha | Prose that repeats basic domain knowledge |
 | A specific table/rubric worth reusing | Marketing copy, badges, contributor lists |
+
+Preserve source license notices, attribution and any required redistribution terms when adapting material. A provenance URL does not replace those obligations. Keep licensing files even when removing unrelated packaging.
 
 If the bones list is empty or is all things a generic prompt would already produce, that is a REJECT. Say so.
 
@@ -117,4 +119,4 @@ Done means: an Ingestion Decision Record exists, the decision is one of the four
 - `find-skills` — discovers and installs skills for personal use, and owns the quality gate this skill reuses in step 1. It stops at "installed"; this skill decides repo entry.
 - `skillshare` — the mechanics of installing, tracking, and auditing skills across tools. Use it to fetch a candidate locally for distillation; it does not make the curation decision.
 - the repo-root `CONTRIBUTING.md` — the sandbox → graduate flow and the "Kill duplicates / Don't write the obvious / Prefer scripts over prose" curation principles this pipeline enforces. ADD-NEW routes back through it.
-- the repo-root `SKILL_TAXONOMY.md` — the 9 categories and the named gaps (Data Retrieval, Code Templates, Runbooks). Only a named gap can justify ADD-NEW.
+- the repo-root `SKILL_TAXONOMY.md` — the four modules and the named gaps (Data Retrieval, Code Templates, Runbooks). Only a named gap can justify ADD-NEW.

@@ -65,15 +65,15 @@ Do not stop at "the user is saying" — that column is a `[Hypothesis]`. The fin
 
 **Why-rung mapping (state it, don't eyeball it).** An un-probed *why* behind a trace is inferred → **0.1 `[Hypothesis]`**. A *why* corroborated by a *second independent* trace or artefact, but with no probe yet landed → **0.3 `[Assumption]`**. A landed confirm-the-why probe, or a money-moved event, takes it to **0.7+**. Map the numeric rung and the word-tag together, and tag two cards resting on the same strength of evidence identically — do not stamp one `[Hypothesis]` and another `[Assumption]` for the same footing.
 
-**Step 6 — Weight by distinct users.** A pattern's strength is its rung times its coverage of the segment. A 0.7 behaviour from one user is a power user, not a finding.
+**Step 6 — Weight by distinct users.** A pattern's strength is its rung times its coverage of the segment. A directly observed event from one user is a fact about that event; prevalence and the inferred reason remain uncertain.
 
 | Distinct users producing the pattern | Treat as |
 |---|---|
-| 1 | anecdote — name it, do not promote it |
+| 1 | observed case; prevalence unknown. Investigate severe failures promptly. |
 | 2–4 or < 5% of active segment | candidate pattern — probe before acting |
 | ≥ 5 and ≥ ~15% of active segment | pattern — safe to route as a finding |
 
-State the distinct-user count on every card. A dramatic pattern from N=1 is trace worship; refuse it.
+State the distinct-user count on every card. Do not extrapolate population prevalence from N=1. A single verified security, safety, data-loss or task-blocking defect can warrant action. These count bands are triage heuristics, not statistical proof.
 
 **Step 7 — Price the interview it replaced.** For each recovered question, state what the equivalent scheduled interview would have cost — recruit + incentive + session + synthesis, roughly 2 hours of effort, an incentive, and a week or two of lead time, for a verbal (0.3) answer — versus the trace, which already happened at 0.7 for the triage minutes. This line is the flywheel made concrete: it shows discovery getting cheaper *and* more truthful as usage accrues.
 
@@ -82,12 +82,12 @@ State the distinct-user count on every card. A dramatic pattern from N=1 is trac
 **Kill line: a trace read as a metric only — "retries up 12%" with no recovered discovery question — fails the skill.** The number is never the finding; the question behind the behaviour is.
 
 ## Evidence standard
-A trace is behaviour observed, so *what happened* sits at 0.7 the moment it is in the log — a rung above anything a user tells you in an interview (0.3). A trace that is a spend or upgrade event is money moved, 1.0. But the *why* — the job, the intent, the dissatisfaction you read into the behaviour — is inferred, and inference starts at opinion (0.1) and only reaches behaviour-backed confidence once a confirm-the-why probe lands or a second behaviour corroborates it. So every card holds two rungs: 0.7+ on the observed behaviour, and a lower, explicit rung on the interpretation. Done means: patterns segmented by behaviour not counts; each decoded to its discovery question; each *why* tagged `[Hypothesis]` with a named probe; each pattern weighted by distinct users; the replaced-interview cost stated; and every card routed. Kill line: any card that reports a metric without recovering the question, asserts a *why* as 0.7 when only the behaviour is 0.7, or promotes an N=1 anecdote to a finding.
+A trace is behaviour observed, so *what happened* sits at 0.7 the moment it is in the log — a rung above anything a user tells you in an interview (0.3). A trace that is a spend or upgrade event is money moved, 1.0. But the *why* — the job, the intent, the dissatisfaction you read into the behaviour — is inferred, and inference starts at opinion (0.1) and only reaches behaviour-backed confidence once a confirm-the-why probe lands or a second behaviour corroborates it. So every card holds two rungs: 0.7+ on the observed behaviour, and a lower, explicit rung on the interpretation. Done means: patterns segmented by behaviour not counts; each decoded to its discovery question; each *why* tagged `[Hypothesis]` with a named probe; each pattern weighted by distinct users; the replaced-interview cost stated; and every card routed. Kill line: any card that reports a metric without recovering the question, asserts a *why* as 0.7 when only the behaviour is 0.7, or generalizes N=1 to population prevalence.
 
 ## Gotchas
 - **Metric relapse.** The easiest failure is to slide back into counting — "abandonment is 18%" — and call it a finding. A rate is a symptom; the interview is the pattern behind it and the question it answers. If a card has a number but no recovered discovery question, it is not this skill's output.
 - **Borrowing the behaviour's rung for the why.** The trace proves the user retried (0.7). It does not prove *why* they retried — that is your `[Hypothesis]` until a probe confirms it. Stamping the interpretation at 0.7 is the subtle lie this skill exists to prevent. Two rungs per card, always.
-- **Trace worship.** One vivid trace is one user. A power user who runs forty exports is not forty users, and a spike is not a pattern. Weight every reading by distinct-user coverage; refuse to promote N=1.
+- **Trace worship.** One vivid trace is one user. A power user who runs forty exports is not forty users, and a spike is not a pattern. Weight every reading by distinct-user coverage; do not generalize N=1 to the segment; act on verified severe defects without waiting for recurrence.
 - **Reading acceptance as trust.** A 95% accept-unedited rate is the classic flattering misread — it can mean the product is trusted, or that users stopped checking because the stakes feel low, or compliance theatre. Name both readings and the probe (inject a known error, interview five acceptors, check whether accepted outputs get silently corrected downstream) before claiming trust.
 - **Optimising the number instead of answering the question.** "Reduce the retry rate" can be achieved by hiding the retry button — which suppresses the interview without ever learning what the retries were telling you. Recover the question first; only then decide whether the behaviour is a defect to remove or a demand to serve.
 

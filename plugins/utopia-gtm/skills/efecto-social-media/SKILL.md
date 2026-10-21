@@ -320,7 +320,7 @@ Social media copy is NOT web copy. Write like a creative director at a streetwea
   <span className="text-xl font-semibold text-blue-400 uppercase tracking-widest">New drop</span>
   <h1 className="text-5xl font-extrabold text-white text-center leading-tight">Your bold statement here</h1>
   <p className="text-2xl text-gray-400 text-center leading-relaxed max-w-[900px]">One short sentence of context.</p>
-  <button className="px-10 py-5 text-xl font-bold text-gray-900 bg-white rounded-2xl">See more</button>
+  <div className="flex px-10 py-5 bg-white rounded-2xl"><span className="text-xl font-bold text-gray-900">See more</span></div>
 </section>
 ```
 

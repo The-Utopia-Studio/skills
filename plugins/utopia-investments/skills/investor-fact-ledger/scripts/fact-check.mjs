@@ -29,7 +29,48 @@ if (!existsSync(LEDGER)) {
   process.exit(2);
 }
 
-const facts = JSON.parse(readFileSync(LEDGER, 'utf8'));
+let facts;
+const nonempty = (value) => typeof value === 'string' && value.trim().length > 0;
+const object = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+try {
+  facts = JSON.parse(readFileSync(LEDGER, 'utf8'));
+  if (!object(facts) || !object(facts.surfaces) || !Object.keys(facts.surfaces).length ||
+      !Object.values(facts.surfaces).every(nonempty)) {
+    throw new Error('surfaces must name at least one file');
+  }
+  if (!Array.isArray(facts.facts) || !facts.facts.length) {
+    throw new Error('facts must contain at least one required fact');
+  }
+  const ids = new Set();
+  for (const fact of facts.facts) {
+    const values = Array.isArray(fact?.value) ? fact.value : [fact?.value];
+    if (!object(fact) || !nonempty(fact.id) || ids.has(fact.id) ||
+        !values.length || !values.every(nonempty) ||
+        !Array.isArray(fact.on) || !fact.on.length || !fact.on.every(nonempty)) {
+      throw new Error('each fact needs a unique id, nonempty value forms and at least one target surface');
+    }
+    ids.add(fact.id);
+  }
+  if (facts.retired !== undefined && (!Array.isArray(facts.retired) ||
+      !facts.retired.every((item) => object(item) && nonempty(item.value) &&
+        (item.unless === undefined || nonempty(item.unless)) &&
+        (item.window === undefined || Number.isInteger(item.window) && item.window >= 0)))) {
+    throw new Error('retired entries need a nonempty value and valid optional unless/window');
+  }
+  if (facts.scanGlobs !== undefined && (!Array.isArray(facts.scanGlobs) ||
+      !facts.scanGlobs.every((pattern) => nonempty(pattern) &&
+        (!pattern.includes('*') || /^[^*?\[\]]*\*(?:\.[^/*?\[\]]+|\/[^*?\[\]]+)$/.test(pattern))))) {
+    throw new Error('scanGlobs supports literal paths, dir/*.ext and dir/*/name.ext only');
+  }
+  if (facts.published !== undefined && (!object(facts.published) ||
+      !Object.values(facts.published).every(nonempty))) {
+    throw new Error('published must map source paths to destination paths');
+  }
+  if (facts.root !== undefined && !nonempty(facts.root)) throw new Error('root must be a nonempty path');
+} catch (error) {
+  console.error(`fact-check: invalid ledger: ${error.message}`);
+  process.exit(2);
+}
 const ROOT = resolve(dirname(LEDGER), facts.root ?? '.');
 const abs = (p) => (isAbsolute(p) ? p : join(ROOT, p));
 const read = (p) => (existsSync(abs(p)) ? readFileSync(abs(p), 'utf8') : null);

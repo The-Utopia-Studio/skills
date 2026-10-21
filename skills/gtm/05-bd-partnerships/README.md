@@ -21,5 +21,4 @@ Skills in this sub-module:
 - `lead-enrichment`
 - `outreach-execution`
 - `partner-affiliate`
-- `social-selling`
 - `warm-intro-intelligence`

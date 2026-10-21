@@ -123,7 +123,7 @@ Reversal Test Progress:
 - **Option 2:** Accept it in both directions (trust evidence regardless of direction)
 - **Option 3:** Weight it appropriately (maybe it's weak evidence both ways)
 
-**Probability adjustment:** If you detected double standards, move probability 10-15% toward 50%
+**Probability adjustment:** If you detect double standards, reassess evidence using a consistent standard; do not mechanically move toward50%
 
 **Next:** Return to [menu](#interactive-menu)
 
@@ -151,14 +151,14 @@ Scope Sensitivity Progress:
 
 ### Step 2: Test linear scaling
 
-**The Linearity Test:** Double the input, check if impact doubles.
+**The Linearity Test:** Vary the input and check the response against a justified mechanism. Saturation, thresholds and binding constraints can produce small or nonlinear changes.
 
 **Example: Startup funding**
 - If raised $1M: ___%
 - If raised $10M: ___%
 - If raised $100M: ___%
 
-**Scope sensitivity check:** Did probabilities scale reasonably? If they barely changed → Scope insensitive
+**Scope sensitivity check:** Did probabilities scale reasonably? If they barely change, explain whether saturation or another constraint makes that reasonable
 
 ### Step 3: Check reference point calibration
 
@@ -178,7 +178,7 @@ Scope Sensitivity Progress:
 - 10 months: P(success) = ___%
 - 100 months: P(success) = ___%
 
-**Expected:** Probability should change significantly. If all three estimates are within 10 percentage points → Scope insensitivity
+**Expected:** Changes depend on the mechanism and constraints; similar probabilities alone do not diagnose bias
 
 ### Step 5: Adjust for scope insensitivity
 
@@ -190,7 +190,7 @@ Scope Sensitivity Progress:
 
 **Method 2: Reference class by scale** - Don't use "startups" as reference class. Use "Startups that raised $1M" (10% success) vs "Startups that raised $100M" (60% success)
 
-**Method 3: Explicit calibration** - Use a formula: P(success) = base_rate + k × log(amount)
+**Method 3: Explicit calibration** - Use a justified bounded probability model fitted to relevant data; do not invent an unbounded log formula
 
 **Next:** Return to [menu](#interactive-menu)
 
@@ -235,7 +235,7 @@ Status quo predictions often get inflated probabilities because change feels ris
 
 ### Step 4: Apply entropy principle
 
-**Second Law of Thermodynamics (applied to forecasting):**
+**Maintenance analogy (not a quantitative law for social forecasts):**
 
 **Ask:**
 1. Is this system open or closed?
@@ -247,7 +247,7 @@ Status quo predictions often get inflated probabilities because change feels ris
 **If you detected status quo bias:**
 
 **For "no change" predictions that require high energy:**
-- Reduce P(status quo) by 10-20%
+- Reassess P(status quo) from evidence about persistence and change; no fixed percentage deduction
 - Increase P(change) correspondingly
 
 **For predictions where inertia truly helps:** No adjustment needed
@@ -293,7 +293,7 @@ Confidence Interval Audit Progress:
 **Three possible answers:**
 - **A) "Yes, I'd be very surprised"** - ✓ CI appropriately calibrated
 - **B) "No, not that surprised"** - ⚠ CI too narrow (overconfident) → Widen interval
-- **C) "I'd be amazed if it landed in the range"** - ⚠ CI too wide → Narrow interval
+- **C) "I'd be amazed if it landed in the range"** - Investigate miscentering or a wrong model; this does not establish excessive width
 
 ### Step 3: Check historical calibration
 
@@ -322,8 +322,7 @@ If your CI is narrower than reference class variance, you're claiming to know mo
 ### Step 5: Adjust CI width
 
 **Adjustment rules:**
-- **If overconfident:** Multiply current width by 1.5× to 2×
-- **If underconfident:** Reduce width by 0.5× to 0.75×
+- Re-estimate bounds from calibration data or a justified model; no universal widening/narrowing multiplier. Distinguish intervals for quantities from uncertainty about event probabilities; subjective ranges are not automatically statistical confidence intervals.
 
 **Next:** Return to [menu](#interactive-menu)
 
@@ -356,7 +355,7 @@ See [Cognitive Bias Catalog](resources/cognitive-bias-catalog.md) for detailed d
 **If NO to any → Confirmation bias detected**
 
 ### 2. Availability Bias
-- [ ] Did I rely on recent/memorable examples?
+- [ ] Did I avoid relying solely on recent/memorable examples?
 - [ ] Did I use systematic data vs "what comes to mind"?
 - [ ] Did I check if my examples are representative?
 
@@ -370,7 +369,7 @@ See [Cognitive Bias Catalog](resources/cognitive-bias-catalog.md) for detailed d
 **If NO to any → Anchoring bias detected**
 
 ### 4. Affect Heuristic
-- [ ] Do I have an emotional preference for the outcome?
+- [ ] Did I recognize and account for any emotional preference for the outcome?
 - [ ] Did I separate "what I want" from "what will happen"?
 - [ ] Would I make the same forecast if incentives were reversed?
 
@@ -397,15 +396,7 @@ See [Cognitive Bias Catalog](resources/cognitive-bias-catalog.md) for detailed d
 2. **Direction:** Pushing probability up or down?
 3. **Magnitude:** Estimated percentage point impact
 
-**Remediation example:**
-
-| Bias | Severity | Direction | Adjustment |
-|------|----------|-----------|------------|
-| Confirmation | High | Up | -15% |
-| Availability | Medium | Up | -10% |
-| Affect heuristic | High | Up | -20% |
-
-**Net adjustment:** -45% → Move probability down by 45 points (e.g., 80% → 35%)
+**Remediation:** Record the potentially biased evidence and reassess it once under consistent standards. Bias labels often overlap; do not add percentage-point deductions for each label. Recompute the forecast from justified evidence or retain it with an explicit uncertainty limitation.
 
 **Next:** Return to [menu](#interactive-menu)
 

@@ -50,13 +50,15 @@ Create systematic improvement plan:
 
 ```html
 <img 
-  src="hero.webp"
-  srcset="hero-400.webp 400w, hero-800.webp 800w, hero-1200.webp 1200w"
+  src="below-fold.webp"
+  srcset="below-fold-400.webp 400w, below-fold-800.webp 800w, below-fold-1200.webp 1200w"
   sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 1200px"
   loading="lazy"
-  alt="Hero image"
+  alt="Below-fold illustration"
 />
 ```
+
+For the above-fold LCP/hero image, load eagerly; do not copy `loading="lazy"` from the below-fold example.
 
 **Reduce JavaScript Bundle**:
 - Code splitting (route-based, component-based)
@@ -106,13 +108,13 @@ const HeavyChart = lazy(() => import('./HeavyChart'));
 // ❌ Bad: Alternating reads and writes (causes reflows)
 elements.forEach(el => {
   const height = el.offsetHeight; // Read (forces layout)
-  el.style.height = height * 2; // Write
+  el.style.height = `${height * 2}px`; // Write
 });
 
 // ✅ Good: Batch reads, then batch writes
 const heights = elements.map(el => el.offsetHeight); // All reads
 elements.forEach((el, i) => {
-  el.style.height = heights[i] * 2; // All writes
+  el.style.height = `${heights[i] * 2}px`; // All writes
 });
 ```
 

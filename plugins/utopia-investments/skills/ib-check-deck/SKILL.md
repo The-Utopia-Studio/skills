@@ -62,7 +62,7 @@ Map claims to the data that's supposed to support them. This is where decks go w
 
 - Trend statements ("declining margins") → does the chart actually go that direction?
 - Market position claims ("#1 player") → revenue and share data support it?
-- Plausibility — "#1 in a $100B market" with $200M revenue is 0.2% share; that's not #1
+- Plausibility — "#1 in a $100B market" with $200M revenue is 0.2% share; verify competitor shares and market definition before accepting or rejecting the rank. A fragmented market can have a small-share leader
 
 ### 3. Language polish
 

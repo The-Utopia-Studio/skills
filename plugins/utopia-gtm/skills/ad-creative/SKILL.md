@@ -256,7 +256,7 @@ Organize by angle, with character counts:
 ### Headlines (30 char max)
 1. "Stop Building Reports by Hand" (29)
 2. "Automate Your Weekly Reports" (28)
-3. "Reports Done in 5 Min, Not 5 Hr" (31) <- OVER LIMIT, trimmed below
+3. "Reports Done in 5 Min, Not 5 Hr" (31) <- within the 30-character limit; shorter variant below
    -> "Reports in 5 Min, Not 5 Hrs" (27)
 
 ### Descriptions (90 char max)

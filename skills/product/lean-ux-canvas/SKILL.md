@@ -419,7 +419,7 @@ Design an experiment to validate or invalidate the riskiest assumption (from Box
 
 Based on your riskiest assumption, here are experiment options:
 
-1. **Customer Interviews** — Talk to 10 users, ask if they'd use [solution], observe their current workaround
+1. **Customer Interviews** — Talk to users about recent concrete instances and observe their current workaround; stated intent alone does not validate use of [solution]
 2. **Landing Page Test** — Create a landing page describing [solution], measure signup rate
 3. **Concierge Test** — Manually deliver [benefit] to 5 users, observe if they achieve [outcome]
 4. **Wizard-of-Oz Prototype** — Fake [solution] with humans behind the scenes, see if users complete the workflow

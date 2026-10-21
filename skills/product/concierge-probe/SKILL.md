@@ -7,8 +7,8 @@ description: >-
   version before we automate". Output: a concierge log plus a willingness-to-pay signal scored on the
   evidence ladder (money charged 1.0 beats a verbal yes 0.3). Not probe-matrix (that picks which
   probe); not agent-concierge-probe (an agent, not the founder, runs the task, and it measures cost
-  not WTP); not wizard-of-oz-probe (fakes the interface to test would-they-use-it, not whether they
-  pay).
+  not WTP); not wizard-of-oz-probe (hides human delivery behind an interface to test use; real payments can
+  also evidence WTP for that delivered service).
 type: generator
 supersedes: none
 ---
@@ -27,7 +27,7 @@ Use it when you know the outcome a customer wants and you can produce it by hand
 Do not use it when:
 - You have not decided which probe to run — that is `probe-matrix` (the router).
 - You want an agent, not yourself, to run the task and price it — that is `agent-concierge-probe`.
-- You want to test whether people would use a slick interface if it worked, without doing the work by hand — that is `wizard-of-oz-probe` (it fakes the interface; it lies about unit cost and WTP).
+- You want to test whether people would use a slick interface if it worked, without doing the work by hand — that is `wizard-of-oz-probe` (it fakes the interface; it cannot establish automated unit cost or scale, though an actual payment evidences WTP for the service delivered).
 - You are still scoring whether the problem is worth solving at all — that is a problem-scoring skill, not a probe.
 
 ## Method
@@ -73,9 +73,9 @@ Decision bands: **≥0.7** (paid or used) = real pull, move to the next probe qu
 Done means: one named customer, one delivered outcome, a completed concierge log with the exceptions column populated, and a single WTP score with the signal that earned it. Behaviour and money outrank opinion — a paid invoice [Fact] beats a warm "we'd love this" [Opinion, 0.1] every time. Tag every claim in the read-out `[Fact]`, `[Assumption]`, or `[Hypothesis]`. The workflow you logged is `[Fact]`; that it generalises to other customers is `[Hypothesis]`, and this probe does not test it.
 
 ## Gotchas
-- **Hiding behind a fake UI.** If you do the work by hand but *hide* the human — the customer thinks they are using a finished product — that is a Wizard-of-Oz probe, not concierge. Concierge is overt: the customer knows the founder is delivering it by hand. The moment you fake the interface you are testing would-they-use-it, not will-they-pay; route to `wizard-of-oz-probe`.
+- **Hiding behind a fake UI.** If you do the work by hand but *hide* the human — the customer thinks they are using a finished product — that is a Wizard-of-Oz probe, not concierge. Concierge is overt: the customer knows the founder is delivering it by hand. A hidden-human test isolates interface use; if a real payment clears, it can also evidence WTP for the delivered service. It still cannot establish automated economics or scale. Route that setup to `wizard-of-oz-probe`.
 - **Smuggling in a pre-chosen solution.** "Let's run a concierge test of the dashboard" tests a feature you already decided to build, not whether the customer's outcome is worth paying for. Reframe to the outcome being delivered — what the customer actually wants done — and hand-deliver *that*. If the probe is scoped to your feature rather than their outcome, you are validating the build, not the demand.
-- **Free pilots.** If you waive the fee "to get started," you have converted a 1.0 test into a 0.1 opinion. No price, no WTP signal.
+- **Free pilots.** If you waive the fee, you have not demonstrated paid WTP (1.0). Actual use in the customer's workflow can still earn behaviour (0.7); a verbal promise earns 0.3 and praise alone 0.1. Report which signal occurred, without calling free use payment.
 - **You solve the exceptions silently.** The founder patches the missing permit in their head and never logs it. Then automation ships without that path and dies. Log the patch even when it took two minutes.
 - **Concluding scale.** "The operator loved it, so 100 operators will pay" is the kill line. One hand-made delivery cannot support a scale or self-serve claim. Say what it can support and stop.
 - **Counting your own enthusiasm as demand.** You enjoyed delivering it; that is not the customer paying. Only the ladder score counts.
@@ -86,6 +86,6 @@ See `examples/sample.md` — Barrier Intelligence hand-delivers a morning gas-sa
 ## Related skills
 - `probe-matrix` — the router that sends you here; run it first if you are unsure this is the right probe.
 - `agent-concierge-probe` — the next probe once WTP is real: hand the workflow you logged to an agent and price it.
-- `wizard-of-oz-probe` — use instead when the question is "would they use it if it worked," not "will they pay."
+- `wizard-of-oz-probe` — use for hidden-human delivery behind an interface; observe usage and, if charged, actual payment, without claiming automated feasibility or economics.
 - `evidence-ladder` — owns the rungs this skill scores against.
 - Supersedes nothing. It absorbs the concierge idea from generic pretotyping and beats it by making the price the experiment and the exceptions the deliverable.

@@ -66,4 +66,4 @@ For P1+ findings: include them in the report but keep going.
 
 ---
 
-*Ada is a Utopia internal agent. Designed using the [agent-persona-builder](https://github.com/The-Utopia-Studio/skills/blob/main/skills/meta/agent-persona-builder/SKILL.md) framework. See [`agents/README.md`](https://github.com/The-Utopia-Studio/skills/blob/main/agents/README.md) for the full agent system.*
+*Ada is a Utopia internal agent. Designed using the [agent-persona-builder](https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/agent-persona-builder/SKILL.md) framework. See [`agents/README.md`](https://github.com/The-Utopia-Studio/skills/blob/main/agents/README.md) for the full agent system.*

@@ -72,8 +72,8 @@ Flag highest-impact issues first:
 - Fix: "The team is working" (team is a collective noun, treated as singular in US English)
 
 **Tense Consistency**
-- Example error: "We launched the product last month and are seeing great results. Users report high satisfaction and prefer our solution." (mix of past and present)
-- Fix: Keep tense consistent based on timeframe
+- Valid example: "We launched the product last month and are seeing great results. Users report high satisfaction and prefer our solution." (different timeframes legitimately use different tenses)
+- No change: the launch happened in the past and results continue in the present. Change tense only when the intended timeframe conflicts.
 
 **Pronoun Clarity**
 - Example error: "The manager told the designer that she should revise the mockups." (Unclear if "she" refers to manager or designer)
@@ -89,7 +89,7 @@ Flag highest-impact issues first:
 
 **Unsupported Claims**
 - Example error: "Our product is the best on the market because customers love it."
-- Fix: Provide evidence: "Our product has a 4.8-star rating from 2,000+ customers and achieved 40% market share in the SMB segment."
+- Fix: Ask for supporting evidence or soften the claim. Do not invent ratings, customer counts or market share.
 
 **Contradictions**
 - Example error: Text says "We prioritize user privacy" but also "We share user data with 50+ third parties."
@@ -97,11 +97,11 @@ Flag highest-impact issues first:
 
 **Incomplete Logic**
 - Example error: "The feature was launched in Q3, so adoption increased." (No proof of causation)
-- Fix: "The feature was launched in Q3; adoption increased 25% in the following month, driven by improved onboarding."
+- Fix: "The feature launched in Q3; adoption subsequently increased." Ask for evidence before adding a magnitude or causal explanation.
 
 **Vague Claims**
 - Example error: "Our solution saves time and money."
-- Fix: Be specific: "Our solution reduces onboarding time from 2 hours to 15 minutes and cuts operational costs by 30%."
+- Fix: Ask for measured time or cost savings; retain the general statement if no supporting data exists. Never insert fabricated precision.
 
 ---
 
@@ -166,6 +166,7 @@ Brief assessment of how well the text achieves its objective ($OBJECTIVE) and wh
 - **Don't rewrite**: Provide specific fix suggestions, not rewrites of entire paragraphs. Let the author maintain their voice.
 - **Include rationale**: Explain why each fix matters. This helps the author understand the principle, not just the rule.
 - **Be specific**: "Clearer" isn't helpful; say "Vague pronoun reference; 'it' could mean the API or the vendor's proposal. Change to: 'The vendor's API proved too complex.'"
+- **Preserve facts**: Never add numbers, causes, names, quotes or evidence not supplied or verified. Distinguish an error from a legitimate dialect or style choice.
 - **Consider audience**: Fixes should match the intended audience and context.
 
 ---
@@ -197,7 +198,7 @@ Use this checklist to ensure thorough review:
 **Good feedback**: "The pronoun 'it' in 'the vendor's API, but it was too complex' is vague. Change to 'the vendor's API was too complex' for clarity."
 
 **Poor feedback**: "Fix the grammar here."
-**Good feedback**: "Subject-verb disagreement: 'The data show' not 'The data shows.' Collective nouns like 'data' take plural verbs in American English."
+**Good feedback**: "Check the house style: both singular mass-noun and plural uses of 'data' occur. Keep the author’s consistent, audience-appropriate usage."
 
 **Poor feedback**: "This doesn't flow well."
 **Good feedback**: "Choppy transitions between paragraphs. Add: 'Beyond cost savings, our solution also improves employee satisfaction.' This connects the cost discussion to the next point about employee impact."

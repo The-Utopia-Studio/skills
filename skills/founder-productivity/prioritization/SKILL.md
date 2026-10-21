@@ -58,7 +58,9 @@ Dan Olsen, *The Lean Product Playbook*. Survey customers on **Importance** and *
 - **Opportunity Score** = Importance × (1 − Satisfaction)
 - **Customer value created** = Importance × (S2 − S1), where S1 = satisfaction before, S2 = after
 
-High importance + low satisfaction = best opportunity (upper-left of an Importance vs Satisfaction plot). Use it before RICE/ICE when the list is customer problems rather than solutions; it can also feed RICE/ICE as the Impact term (Impact = Opportunity Score × customers affected).
+High importance + low satisfaction = best opportunity (upper-left of an Importance vs Satisfaction plot). Use it before RICE/ICE when the list is customer problems rather than solutions; it can also feed RICE/ICE as the Impact term (Impact = Opportunity Score as a per-customer proxy, with any scale conversion stated explicitly).
+
+Count customers only once: RICE Reach already supplies the affected population. If using Opportunity Score × customers affected as an aggregate impact, do not multiply by Reach again. Keep units and time horizons consistent.
 
 **Core principle:** never let customers design solutions. Prioritize problems (opportunities), then solutions.
 

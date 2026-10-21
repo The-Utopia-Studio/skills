@@ -1,0 +1,22 @@
+{
+  "method": "Deterministic Python arithmetic and string counts, synthetic examples; no live integrations or benchmark verification",
+  "ad_character_counts": {
+    "Stop Building Reports by Hand": 29,
+    "Automate Your Weekly Reports": 28,
+    "Reports Done in 5 Min, Not 5 Hr": 31,
+    "Reports in 5 Min, Not 5 Hrs": 27,
+    "Marketing teams save 10+ hours/week with automated reporting. Start free.": 73,
+    "Connect your data sources once. Get automated reports forever. No code required.": 80
+  },
+  "topic_a": 7.9,
+  "cac_months": [
+    1.25,
+    15.0
+  ],
+  "net_new_arr": 100,
+  "velocity_gain": 0.47888888888888936,
+  "coverage_15pct": 6.666666666666667,
+  "health_all_ten": 100.0,
+  "health_all_four": 40.00000000000001,
+  "health_all_zero": 0
+}

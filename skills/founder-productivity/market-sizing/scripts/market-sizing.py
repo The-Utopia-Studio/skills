@@ -5,6 +5,7 @@ No network access. Prints a Markdown summary to stdout.
 """
 
 import argparse
+import math
 import sys
 
 
@@ -44,8 +45,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def validate_share(name: str, value: float) -> None:
-    if value <= 0 or value >= 1:
-        raise ValueError(f"{name} must be between 0 and 1 (exclusive).")
+    if not math.isfinite(value) or value < 0 or value > 1:
+        raise ValueError(f"{name} must be finite and between 0 and 1 (inclusive).")
 
 
 def main() -> int:
@@ -55,6 +56,10 @@ def main() -> int:
         som_share = parse_share(args.som_share)
         validate_share("sam-share", sam_share)
         validate_share("som-share", som_share)
+
+        for name, value in (("tam", args.tam), ("population", args.population), ("arpu", args.arpu)):
+            if value is not None and (not math.isfinite(value) or value < 0):
+                raise ValueError(f"{name} must be finite and nonnegative.")
 
         if args.tam is not None:
             tam = args.tam
@@ -66,24 +71,26 @@ def main() -> int:
                 f"{format_money(args.arpu, args.currency)}"
             )
 
+        if not math.isfinite(tam):
+            raise ValueError("Calculated TAM must be finite.")
         sam = tam * sam_share
         som = sam * som_share
 
         print("# Market Size Summary\n")
         print("Inputs:")
         print(f"- {basis}")
-        print(f"- SAM share of TAM: {sam_share:.0%}")
-        print(f"- SOM share of SAM: {som_share:.0%}\n")
+        print(f"- SAM share of TAM: {sam_share * 100:g}%")
+        print(f"- SOM share of SAM: {som_share * 100:g}%\n")
         print("| Metric | Formula | Estimate |")
         print("| --- | --- | --- |")
         print(
             f"| TAM | {basis} | {format_money(tam, args.currency)} |"
         )
         print(
-            f"| SAM | TAM x {sam_share:.0%} | {format_money(sam, args.currency)} |"
+            f"| SAM | TAM x {sam_share * 100:g}% | {format_money(sam, args.currency)} |"
         )
         print(
-            f"| SOM | SAM x {som_share:.0%} | {format_money(som, args.currency)} |"
+            f"| SOM | SAM x {som_share * 100:g}% | {format_money(som, args.currency)} |"
         )
         return 0
     except (ValueError, argparse.ArgumentError) as exc:

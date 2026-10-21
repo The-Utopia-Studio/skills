@@ -50,6 +50,8 @@ Originating from Francis Joseph Aguilar's 1967 PEST analysis, PESTEL extends the
 
 ## Application
 
+Examples below illustrate categories, not verified current facts or universal legal rules. Verify each legal, tax and regulatory claim against the primary official authority for the specific jurisdiction, activity and date. Cite the source and distinguish applicability questions from confirmed obligations. Do not copy illustrative rates or deadlines into an analysis.
+
 Use `template.md` for the full fill-in structure.
 
 ### Step 1: Define the Scope
@@ -94,7 +96,7 @@ Examine government and regulatory influences:
 
 ### Taxation Policy
 - [Analyze taxation policies and implications]
-- [Example: "Digital services tax in EU (3% on revenue) could impact pricing strategy"]
+- [Example: "Determine whether a digital services tax applies in each target jurisdiction, including thresholds and rates, using that jurisdiction’s official authority"]
 ```
 
 **Quality checks:**
@@ -232,7 +234,7 @@ Examine legal and compliance landscape:
 
 ### Compliance Requirements
 - [Identify legal/compliance requirements]
-- [Example: "GDPR compliance required for EU customers; must implement data residency, right-to-be-forgotten, consent management"]
+- [Example: "Verify privacy-law applicability, lawful bases, rights and international-transfer requirements against official guidance; do not assume blanket data residency or consent requirements"]
 
 ### Intellectual Property Rights
 - [Evaluate IP importance and protection]
@@ -309,7 +311,7 @@ Mini example excerpt:
 
 **Consequence:** No actionable insights.
 
-**Fix:** Be specific: "EU AI Act requires explainable AI → Need transparency features by Q3 2026."
+**Fix:** Be specific: "Verify whether the relevant AI-system category has applicable transparency duties and deadlines in official EU guidance before scheduling work."
 
 ---
 

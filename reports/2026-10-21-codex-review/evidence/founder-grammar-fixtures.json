@@ -1,0 +1,23 @@
+{
+  "method": "Direct Codex authored outputs, one reviewer, three varied fixtures; not independent stochastic runs.",
+  "fixtures": [
+    {
+      "id": "mixed-timeframes",
+      "input": "We launched the product last month and are seeing great results. Users report high satisfaction.",
+      "actual_output": "No tense correction required: the launch is a completed past event, while results and reports continue in the present. The qualitative claims need evidence only if the document requires substantiation.",
+      "check": "Preserves legitimate temporal distinction; adds no facts."
+    },
+    {
+      "id": "unsupported-superlative",
+      "input": "Our product is the best on the market because customers love it.",
+      "actual_output": "Logic: customer affection alone does not establish market leadership. Ask for comparative evidence, or soften to \u201cCustomers have responded positively\u201d only if the stated feedback supports that. Do not add ratings or market share.",
+      "check": "No invented numerical support."
+    },
+    {
+      "id": "causation",
+      "input": "The feature launched in Q3, so adoption increased.",
+      "actual_output": "Logic: \u201cso\u201d asserts causation not established by timing alone. Suggested fix: \u201cThe feature launched in Q3; adoption subsequently increased.\u201d Ask for supporting causal evidence before attributing the increase to the launch.",
+      "check": "No fabricated 25% or improved-onboarding cause."
+    }
+  ]
+}

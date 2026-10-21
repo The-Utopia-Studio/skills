@@ -1,0 +1,35 @@
+{
+  "method": "Authored contract walkthroughs, not stochastic independent model runs",
+  "cases": [
+    {
+      "input": "Two competitor prompts missed an idea",
+      "before": "Proves no competitor can prompt it",
+      "after": "Bounded misses only; record exact outputs and model"
+    },
+    {
+      "input": "0 failures among20 curated golden cases",
+      "before": "Calibration point rate0 qualifies rare failure threshold",
+      "after": "No population guarantee; representative holdout and uncertainty required"
+    },
+    {
+      "input": "Postlaunch product churn interview notes",
+      "before": "JTBD excluded after build",
+      "after": "JTBD research permitted for churn and adoption"
+    },
+    {
+      "input": "Known audience and goal; write interview script",
+      "before": "Not a script generator conflicts with Script Mode",
+      "after": "Direct Script Mode permitted"
+    },
+    {
+      "input": "Brand motion contract and reduced-motion preference",
+      "before": "Output template still mandates perpetual microloops",
+      "after": "Template aligned with finite semantic motion and reduced-motion variant"
+    },
+    {
+      "input": "Feature has2 known criteria, no design link",
+      "before": "ModeB requires4-6 and links",
+      "after": "Use known criteria and mark absent design link"
+    }
+  ]
+}

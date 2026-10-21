@@ -42,10 +42,13 @@ Fill every line. Tag every number `[Fact]` / `[Assumption]` / `[Hypothesis]`. Do
 | Gap ratio | Band | Verdict |
 |---|---|---|
 | < 10× | No room | Walk away |
-| 10–20× | Thin | Marginal — only with volume or upmarket rate |
-| 20–100× | Real prize | Build |
+| 10 ≤ gap < 20× | Thin | Marginal — only with volume or upmarket rate |
+| 20 ≤ gap ≤ 100× | Real prize | Build |
 | > 100× | Suspicious | Stop — find the under-counted judgment or the hidden constraint |
 
 - **This unit lands at ____× → band: ________ → verdict: ________**
 - If > 100×: the hidden constraint / under-counted judgment is: ____________
 - What would change this verdict: [next model release drops A / a timed workflow revises Current / B is re-counted]
+
+## Calculation validation
+Require finite nonnegative inputs and a strictly positive denominator. Zero denominator is undefined, not infinite proven opportunity. Bands are studio screening heuristics, not calibrated success probabilities. Unpaid invoices, POs, quotes and rate cards are documents (0.5), not money moved; verified payment is 1.0.

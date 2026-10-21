@@ -52,6 +52,8 @@ Show a summary table before changing anything:
 
 ### Step 4: Apply
 
+Resolve date locale and number scale before conversion. `03/08/26` is ambiguous without a convention; retain it and flag it rather than guessing with DATEVALUE. Preserve identifiers with leading zeros; distinguish percent, decimal, thousands and millions. Use helper columns and source-to-output mapping for every transformation.
+
 - **Prefer formulas over hardcoded cleaned values** — where the cleaned output can be expressed as a formula (e.g. `=TRIM(A2)`, `=VALUE(SUBSTITUTE(B2,"$",""))`, `=UPPER(C2)`, `=DATEVALUE(D2)`), write the formula in an adjacent helper column rather than computing the result in Python and overwriting the original. This keeps the transformation transparent and auditable.
 - Only overwrite in place with computed values when the user explicitly asks for it, or when no sensible formula equivalent exists (e.g. encoding/mojibake repair)
 - For destructive operations (removing duplicates, filling blanks, overwriting originals), confirm with the user first

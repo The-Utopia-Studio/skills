@@ -18,7 +18,7 @@ Turns "I think we're ready" into a go / no-go decision made on recorded evidence
 
 ## The Icarus reframe
 
-95% of enterprise pilots ship a static tool: it does the same thing in week 4 as in week 1, and every edit the customer makes vanishes into a log nobody reads. That is the death shape, and it passes most launch reviews because the review scores polish and demos, not learning. This skill absorbs `evidence-driven-testing` — proof over prose, one recorded assertion per state change, show the old failure beside the new success — and points it at the launch decision itself, not at a single UI test. The 60-second test is a recorded session with a real stranger (behaviour observed, 0.7 on the ladder), never the fellow's "it's obvious" (opinion, 0.1). The corrections test reuses that skill's strongest move — the before/after that shows the old wrong output next to the new corrected one — and applies it to the whole product's ability to learn: seed one real correction, show the same input now yields the corrected output, on tape. A launch decision made on the fellow's confidence has measured nothing.
+A failure mode to check is a static pilot tool: it does the same thing in week 4 as in week 1, and every edit the customer makes vanishes into a log nobody reads. That is the death shape, and it passes most launch reviews because the review scores polish and demos, not learning. This skill absorbs `evidence-driven-testing` — proof over prose, one recorded assertion per state change, show the old failure beside the new success — and points it at the launch decision itself, not at a single UI test. The 60-second test is a recorded session with a real stranger (behaviour observed, 0.7 on the ladder), never the fellow's "it's obvious" (opinion, 0.1). The corrections test reuses that skill's strongest move — the before/after that shows the old wrong output next to the new corrected one — and applies it to the whole product's ability to learn: seed one real correction, show the same input now yields the corrected output, on tape. A launch decision made on the fellow's confidence has measured nothing.
 
 ## When to use / When NOT
 
@@ -69,7 +69,7 @@ Rules that make it real, not a friendly demo:
 | Restated the job in one correct sentence | ≥ 2 of 3 |
 | Evidence | Recorded session per stranger, cited [Fact] |
 
-Gate A is GREEN only on recorded strangers. "Everyone who's seen it gets it instantly" is disqualified input — those people are not strangers, and the claim is opinion.
+Gate A is GREEN only when at least 2 of the same 3 recorded strangers pass BOTH comprehension and first-correct-value checks. Separate marginal counts are insufficient. "Everyone who's seen it gets it instantly" is disqualified input — those people are not strangers, and the claim is opinion.
 
 ### Step 2 — Gate B: the learn-from-corrections test
 
@@ -79,11 +79,11 @@ The product must visibly improve from the customer's corrections. At the gate yo
 |---|---|---|---|
 | B1 | **Capture wired** | A code path logs every correction as a `(system_output → human_final)` diff — the edit the customer made before using the output. | Cite the path / event. Not "we can query the DB later." [Fact] |
 | B2 | **Feedback path named** | A named route by which a captured correction changes future output: into the golden set, a `lessons.md`, retrieval, or a re-prompt — with the trigger that fires it. | Name the path and trigger. "We'll look at the logs" is RED. [Fact] |
-| B3 | **Proven once** | Seed one real correction, then show the same input now produces the corrected output. Recorded before/after — old wrong beside new right. | Recorded diff, cited [Fact]. Behaviour observed, 0.7. |
+| B3 | **Proven once** | Seed one real correction, then show the same input now produces the corrected output. This proves the feedback path works for that case; separately run held-out cases and the full regression set before claiming general improvement. Recorded before/after — old wrong beside new right. | Recorded diff, cited [Fact]. Behaviour observed, 0.7. |
 | B4 | **Tweak-time instrumented** | The metric "how much the customer edits before accepting" is captured from day 1 (tweak-distance / tweak-time). This is the instrument `refine-flywheel` will read. | Cite the instrument. [Fact] |
 | B5 | **Delta committed** | A specific, checkable week-1 → week-4 promise on a named metric, e.g. "median tweak-distance on the top-5 recurring input types drops ≥ 30%". | The number and metric, stated now. [Hypothesis] until week 4. |
 
-Kill rule for Gate B: if B1–B4 are not all present and B5 is not a specific number, the mechanism is not wired and the launch bar is **NO-GO**, however good the output looks. "We'll add the feedback loop after launch" is exactly the static-tool trap; a promise to build the mechanism later is not the mechanism.
+Kill rule for Gate B: if ANY of B1–B4 is missing OR B5 is not a specific number, the mechanism is not wired and the launch bar is **NO-GO**, however good the output looks. "We'll add the feedback loop after launch" is exactly the static-tool trap; a promise to build the mechanism later is not the mechanism.
 
 ### Step 3 — The decision
 
@@ -116,7 +116,7 @@ The launch bar refuses to pass a gate on anything below behaviour observed (0.7)
 
 The friendly stranger. The most common cheat is running the "stranger" test on a colleague, an advisor, or the champion — someone already carrying context. Their instant success is worthless as evidence and disqualified as input. If the fellow cannot name three people who have genuinely never seen it, Gate A has not been run.
 
-The static tool that demos beautifully. A v1 can pass every polish check, win the room, and still be the 95% death shape — because nothing in it learns from a correction. Gate B is the only defence, and it is the gate fellows most want to skip because it is invisible in a demo. No B1–B4 wired, no launch, regardless of Gate A.
+The static tool that demos beautifully. A v1 can pass every polish check, win the room, and still be the static-tool failure mode — because nothing in it learns from a correction. Gate B is the only defence, and it is the gate fellows most want to skip because it is invisible in a demo. No B1–B4 wired, no launch, regardless of Gate A.
 
 Delta that cannot be judged. "It'll get better over the pilot" is not a B5 commitment. Without a named metric and a number, week 4 cannot tell success from drift, and `refine-flywheel` inherits a promise it cannot check. Force the number now.
 
@@ -128,7 +128,7 @@ Launching under the eval gate. This skill sits on top of `eval-first-spec`'s pas
 
 ## Examples
 
-`examples/sample.md` — a full worked launch bar for Azraq's data-centre risk product: Gate A run on three operations engineers who had never seen it (2 of 3 reached the correct top-risk read in ≤60 s), and Gate B initially RED because the monthly report was a static PDF with no correction capture — the classic 95% trap — forcing a NO-GO, the one wired fix (log the client's markups as diffs and feed them to the golden set + retrieval), a seeded before/after proving the loop closed, and a committed week-1 → week-4 delta before the decision flipped to GO.
+`examples/sample.md` — a full worked launch bar for Azraq's data-centre risk product: Gate A run on three operations engineers who had never seen it (2 of 3 reached the correct top-risk read in ≤60 s), and Gate B initially RED because the monthly report was a static PDF with no correction capture — the static-tool trap — forcing a NO-GO, the one wired fix (log the client's markups as diffs and feed them to the golden set + retrieval), a seeded before/after proving the loop closed, and a committed week-1 → week-4 delta before the decision flipped to GO.
 
 ## Related skills
 

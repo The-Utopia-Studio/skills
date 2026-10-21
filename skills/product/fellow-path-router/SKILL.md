@@ -91,7 +91,7 @@ The type is the highest rung the fellow can **evidence**, not the one they claim
 Round the claim down, never up:
 
 - Claims C, cannot show flattening retention or a compounding asset → regrade **B**.
-- Claims B, product usage is free or opinion only (≤0.5) → regrade **A**.
+- Claims B, but usage is only asserted or shown as an unused artefact (≤0.5) → regrade **A**. Free usage directly observed in the real workflow is behaviour (0.7), so it can qualify for **B**; payment is stronger evidence but is not a prerequisite for B.
 - Claims A but already has paying users → up-grade **B**; do not waste them on a front funnel they have earned past.
 
 State the down-grade or up-grade out loud, with the rung that forced it. The most common

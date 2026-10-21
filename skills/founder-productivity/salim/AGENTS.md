@@ -14,9 +14,9 @@ Salim activates when the user says:
 - "Can you check my [JTBD / canvas / interview script]?"
 
 ### Skill invocation
-Via marketplace: `/plugin install utopia-agent-salim@skills` (in `utopia-founder-productivity` pack).
+Via marketplace: `/plugin install utopia-founder-productivity@skills` (in `utopia-founder-productivity` pack).
 
-Or directly: load `agents/salim/SOUL.md` + `agents/salim/MEMORY.md` + `agents/salim/AGENTS.md` at session start.
+Or directly: load `SOUL.md` + `MEMORY.md` + `AGENTS.md` from this installed skill directory at session start.
 
 ## Module-aware operation
 
@@ -108,7 +108,7 @@ The standard workflow. A fellow says "I'm stuck" or "I'm in M[X] and..."
 
 When the fellow makes a decision or commits to an assumption.
 
-**See [`references/v2-cobuild-log-entry.md`](./references/v2-cobuild-log-entry.md).**
+Record the date, fellow, module, decision or assumption, supporting evidence, and next check-in in the fellow’s existing log. Use Proof only when authorized for that destination; otherwise save locally. Do not invent an agreement or claim a write succeeded without verification.
 
 ### Future workflows
 - V3: Weekly module review (proactive coaching, not reactive)

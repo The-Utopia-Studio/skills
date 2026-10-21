@@ -1,0 +1,98 @@
+[
+  {
+    "case": "ab-sizing",
+    "input": {
+      "baseline": 0.1,
+      "absolute_MDE": 0.02,
+      "alpha": 0.05,
+      "target_power": 0.8
+    },
+    "before_n_per_arm": 1729,
+    "before_approx_power": 0.5001219416434728,
+    "after_n_per_arm": 3841,
+    "method": "Executed formula extracted verbatim from SKILL.md; corrected two-proportion normal approximation uses alternative p1 and pooled pbar. Not stochastic agent replication."
+  },
+  {
+    "case": "ab-sizing",
+    "input": {
+      "baseline": 0.5,
+      "absolute_MDE": 0.05,
+      "alpha": 0.05,
+      "target_power": 0.8
+    },
+    "before_n_per_arm": 769,
+    "before_approx_power": 0.5004044349209368,
+    "after_n_per_arm": 1565,
+    "method": "Executed formula extracted verbatim from SKILL.md; corrected two-proportion normal approximation uses alternative p1 and pooled pbar. Not stochastic agent replication."
+  },
+  {
+    "case": "ab-sizing",
+    "input": {
+      "baseline": 0.02,
+      "absolute_MDE": 0.005,
+      "alpha": 0.05,
+      "target_power": 0.8
+    },
+    "before_n_per_arm": 6024,
+    "before_approx_power": 0.5000827304491526,
+    "after_n_per_arm": 13809,
+    "method": "Executed formula extracted verbatim from SKILL.md; corrected two-proportion normal approximation uses alternative p1 and pooled pbar. Not stochastic agent replication."
+  },
+  {
+    "case": "agent-concierge-cost",
+    "input": {
+      "in_tokens": 100000,
+      "out_tokens": 10000,
+      "tool_calls": 5,
+      "human_fix_min": 2,
+      "rate_in": 3,
+      "rate_out": 15,
+      "rate_call": 0.02,
+      "human_rate": 1,
+      "successful": 5
+    },
+    "before_total_literal_formula": 450002.1,
+    "after_total": 2.5500000000000003,
+    "before_CPO": 90000.42,
+    "after_CPO": 0.51,
+    "method": "Literal shipped formula executed; per-million units taken from same SKILL.md rates table; example already normalizes tokens correctly."
+  },
+  {
+    "case": "agent-concierge-cost",
+    "input": {
+      "in_tokens": 12000,
+      "out_tokens": 1500,
+      "tool_calls": 10,
+      "human_fix_min": 0,
+      "rate_in": 1,
+      "rate_out": 4,
+      "rate_call": 0.1,
+      "human_rate": 2,
+      "successful": 3
+    },
+    "before_total_literal_formula": 18001.0,
+    "after_total": 1.018,
+    "before_CPO": 6000.333333333333,
+    "after_CPO": 0.3393333333333333,
+    "method": "Literal shipped formula executed; per-million units taken from same SKILL.md rates table; example already normalizes tokens correctly."
+  },
+  {
+    "case": "agent-concierge-cost",
+    "input": {
+      "in_tokens": 5000,
+      "out_tokens": 1000,
+      "tool_calls": 5,
+      "human_fix_min": 10,
+      "rate_in": 2,
+      "rate_out": 10,
+      "rate_call": 0.01,
+      "human_rate": 1,
+      "successful": 0
+    },
+    "before_total_literal_formula": 20010.05,
+    "after_total": 10.07,
+    "before_CPO": "ZeroDivisionError",
+    "after_CPO": "undefined: no successful outcomes; report total spend",
+    "method": "Literal shipped formula executed; per-million units taken from same SKILL.md rates table; example already normalizes tokens correctly."
+  }
+]

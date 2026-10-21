@@ -22,13 +22,13 @@ Complete and populate integrated financial model templates with proper linkages 
 - If you find yourself computing a value in Python and writing the result to a cell — STOP. Write the formula instead.
 - Why: the model must flex when scenarios toggle or assumptions change. Hardcodes break every downstream integrity check silently.
 
-**Verify step-by-step with the user:**
-1. **After mapping the template** → show the user which tabs/sections you've identified and confirm before touching any cells
-2. **After populating historicals** → show the user the historical block and confirm values/periods match source data
-3. **After building IS projections** → run the subtotal checks, show the user the projected IS, confirm before moving to BS
-4. **After building BS** → show the user the balance check (Assets = L+E) for every period, confirm before moving to CF
-5. **After building CF** → show the user the cash tie-out (CF ending cash = BS cash), confirm before finalizing
-6. **Do NOT populate the entire model end-to-end and present it complete** — break at each statement, show the work, catch errors early
+**Verify each statement as you build:**
+1. Map the template's tabs, inputs and formulas before editing.
+2. Tie historical inputs to supplied sources, periods and units.
+3. Check IS subtotals before linking BS and CF.
+4. Check Assets = Liabilities + Equity in every period.
+5. Tie CF ending cash to BS cash and verify roll-forwards.
+6. Present the completed model with check results and unresolved assumptions. If the user has authorized the full model and inputs are sufficient, continue through these internal checkpoints. Ask only when missing inputs or conflicting sources materially change the result; do not require approval after every statement.
 
 ## Formatting — Professional Blue/Grey Palette (Default unless template/user specifies otherwise)
 
@@ -209,7 +209,7 @@ Before entering any data, thoroughly review the template to understand its archi
 5. If a formula cell must be modified, document the original formula before making changes
 
 **Handling Pre-Built Formulas**
-- If formulas reference cells you haven't populated yet, expect temporary errors (#REF!, #DIV/0!) until all inputs are complete
+- Missing input values can cause temporary #DIV/0! errors; #REF! means a broken reference and must be traced, not dismissed as an unfilled input
 - When formulas produce unexpected results, trace precedents to identify missing or incorrect inputs
 - Never delete rows/columns without checking for formula dependencies across all tabs
 
@@ -284,7 +284,7 @@ After validating individual sheets, confirm the three statements are properly in
 | Balance Sheet Balance | Assets - Liabilities - Equity | = 0 |
 | Cash Tie-Out | CF Ending Cash - BS Cash | = 0 |
 | Net Income Link | IS Net Income - CF Starting Net Income | = 0 |
-| Retained Earnings | Prior RE + NI - Dividends - BS Ending RE | = 0 (adjust for SBC/other items as needed) |
+| Retained Earnings | Prior RE + NI - Dividends - BS Ending RE | = 0 (include separately documented direct RE adjustments only) |
 
 ### Step 6: Final Review
 
@@ -309,8 +309,8 @@ See [references/formulas.md](references/formulas.md) for all formula details.
 | Cash Tie-Out | CF Ending Cash - BS Cash | = 0 |
 | Cash Monthly vs Annual | Closing Cash (Monthly) - Closing Cash (Annual) | = 0 |
 | Net Income Link | IS Net Income - CF Starting Net Income | = 0 |
-| Retained Earnings | Prior RE + NI + SBC - Dividends - BS Ending RE | = 0 |
-| Equity Financing | ΔCommon Stock/APIC (BS) - Equity Issuance (CFF) | = 0 |
+| Retained Earnings | Prior RE + NI - Dividends - BS Ending RE | = 0 |
+| Equity Financing | ΔCommon Stock/APIC (BS) - Equity Issuance (CFF) - Noncash Equity Changes | = 0 |
 | Year 0 Equity | Equity Raised (Year 0) - Beginning Equity Capital (Year 1) | = 0 |
 
 ### Sign Convention Reference
@@ -352,7 +352,7 @@ Enable iterative calculation in Excel: File → Options → Formulas → Enable 
 - CapEx ties to DA schedule
 
 **Section 4: Retained Earnings**
-- RE roll-forward check: Prior RE + NI + SBC - Dividends = Ending RE
+- RE roll-forward check: Prior RE + NI - Dividends = Ending RE
 - Show component breakdown for debugging
 
 **Section 5: Working Capital**
@@ -364,19 +364,19 @@ Enable iterative calculation in Excel: File → Options → Formulas → Enable 
 - Interest calculation ties to IS
 
 **Section 6b: Equity Financing**
-- Equity issuance proceeds tie to BS Common Stock/APIC increase
-- Cash increase from equity = Equity account increase (must balance)
-- Equity Raise Tie-Out: ΔCommon Stock/APIC (BS) = Equity Issuance (CFF) (must = 0)
+- Equity issuance proceeds plus documented noncash equity changes tie to BS Common Stock/APIC increase
+- Cash equity proceeds tie to the cash component of the equity roll-forward; separately reconcile SBC, conversions and other noncash changes
+- Equity Raise Tie-Out: ΔCommon Stock/APIC (BS) = Equity Issuance (CFF) + Noncash Equity Changes (must = 0)
 - Year 0 Equity Tie-Out: Equity Raised (Year 0) = Beginning Equity Capital (Year 1)
 
 **Section 6c: NOL Schedule**
-- Beginning NOL (Year 1 / Formation) = 0 (new business starts with zero NOL)
-- NOL increases only when EBT < 0 (losses must be realized to generate NOL)
+- Opening NOL comes from supported tax records; zero only for a new entity with no prior or transferred losses
+- NOL increases only for supported tax losses under the applicable rules
 - DTA ties to BS (NOL Schedule DTA = BS Deferred Tax Asset)
-- NOL utilization ≤ 80% of EBT (post-2017 federal limitation)
+- NOL utilization follows verified jurisdiction, tax-year, vintage and ownership-change rules; use taxable income before NOL, not automatically book EBT
 - NOL balance is non-negative (cannot utilize more than available)
-- NOL generated only when EBT < 0
-- Tax expense = 0 when taxable income ≤ 0
+- NOL generation follows the taxable-loss schedule, which may differ from book EBT
+- Separate current cash tax from deferred tax expense/benefit; a book loss does not establish zero total tax expense
 
 **Section 7: Scenario Hierarchy**
 - Absolute metrics: Upside > Base > Downside (NI, EBITDA, FCF)
@@ -406,3 +406,5 @@ When Master Status shows errors:
 3. Navigate to source tab to investigate
 4. Fix the underlying issue
 5. Return to Checks tab to verify resolution
+
+Equity-settled SBC expense is already included in net income. Its noncash equity credit belongs in APIC, not an additional credit to retained earnings. See the [SEC share-based compensation guidance](https://www.sec.gov/rules-regulations/staff-guidance/staff-accounting-bulletins/staff-accounting-bulletin-no-107) and reconcile the actual company equity schedule.

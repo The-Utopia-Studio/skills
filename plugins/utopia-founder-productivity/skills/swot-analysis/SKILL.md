@@ -69,10 +69,10 @@ What external factors could negatively impact us?
 - Supplier or partner consolidation
 
 ## Output Process
-1. Identify 5-7 strengths (be honest about competitive advantages)
-2. List 5-7 weaknesses (avoid minimizing; focus on addressable gaps)
-3. Map 5-7 opportunities (prioritize by market size and alignment)
-4. Flag 5-7 threats (assess probability and impact)
+1. Identify evidenced strengths (up to 5-7) (be honest about competitive advantages)
+2. List evidenced weaknesses (up to 5-7) (avoid minimizing; focus on addressable gaps)
+3. Map evidenced opportunities (up to 5-7) (prioritize by market size and alignment)
+4. Flag evidenced threats (up to 5-7) (assess probability and impact)
 5. Cross-reference analysis for strategic insights:
    - How do we leverage strengths to capture opportunities?
    - How do we shore up weaknesses to mitigate threats?
@@ -94,3 +94,5 @@ What external factors could negatively impact us?
 - Update SWOT quarterly or when market conditions change
 - Use SWOT to inform product roadmap, partnerships, and resource allocation
 - Opportunities and threats should consider both current and emerging dynamics
+
+Do not invent observations to fill a quadrant or count target. Mark assumptions and missing evidence explicitly.

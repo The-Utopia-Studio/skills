@@ -28,7 +28,7 @@ estimated_time: "15-20 min"
 ## Purpose
 Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effective interview plans, craft targeted questions, avoid common biases, and maximize learning from limited customer access—ensuring discovery interviews yield actionable insights rather than confirmation bias or surface-level feedback.
 
-This is not a script generator—it's a strategic prep process that outputs a tailored interview plan with methodology, question framework, and success criteria.
+Use planning mode for a tailored interview plan with methodology, question framework, and success criteria; use Script Mode below when the user needs a ready-to-use guide and enough context already exists.
 
 ## Key Concepts
 

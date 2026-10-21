@@ -117,12 +117,11 @@ Start with headers that force strategic thinking about what matters, input clean
 - The only hardcoded values should be raw input data (revenue, EBITDA, share price, etc.) — and every one of those gets a cell comment with its source
 - Why: the model must update automatically when an input changes. A hardcoded margin is a silent bug waiting to happen.
 
-**Verify step-by-step with the user:**
-- After setting up the structure → show the user the header layout before filling data
-- After entering raw inputs → show the user the input block and confirm sources/periods before building formulas
-- After building operating metrics formulas → show the calculated margins and sanity-check with the user before moving to valuation
-- After building valuation multiples → show the multiples and confirm they look reasonable before adding statistics
-- Do NOT build the entire sheet end-to-end and then present it — catch errors early by confirming each section
+**Verify each section as you build:**
+- Check source dates, periods, units and peer comparability before calculation.
+- Check operating metrics and multiples against their definitions before adding statistics.
+- Review outliers and document exclusions before interpreting the peer distribution.
+- Continue through these internal checks when the user authorized the full analysis. Ask for missing material inputs or conflicting sources; do not require repeated approval merely to calculate the next section.
 
 ---
 
@@ -274,7 +273,7 @@ P/E Ratio: =[Market Cap]/[Net Income]
 
 // Optional multiples - include if data available
 FCF Yield: =[LTM FCF]/[Market Cap]
-PEG Ratio: =[P/E]/[Growth Rate %]
+PEG Ratio: =[P/E]/([Growth Rate Decimal]*100)  // 20x / 20 percentage points = 1x; nonpositive growth is N/M
 ```
 
 ### Cross-Reference Rule
@@ -296,7 +295,7 @@ Same structure as operating section: Max, 75th, Median, 25th, Min for every metr
 - Note: Prefer structured MCP data or primary filings over secondary web sources
 
 **Key Definitions:**
-- EBITDA calculation method (Gross Profit + D&A, or Operating Income + D&A)
+- EBITDA calculation method (Operating Income + D&A included in operating costs; reconcile any adjustments separately)
 - Free Cash Flow formula (Operating CF - CapEx)
 - Special metrics explained (Rule of 40, FCF Conversion)
 - Time period definitions (LTM, CAGR calculation periods)
@@ -395,7 +394,7 @@ If you have more than 15 metrics, you're probably including noise. Edit ruthless
 6. **Add conditional formatting** - Highlight outliers automatically
 
 ### Sanity Checks
-- **Margin test**: Gross margin > EBITDA margin > Net margin (always true by definition)
+- **Margin test**: Inspect gross, EBITDA and net margins against their definitions; no universal ordering holds when D&A classifications, non-operating gains or tax benefits differ
 - **Multiple reasonableness**: 
   - EV/Revenue: typically 0.5-20x (varies widely by industry)
   - EV/EBITDA: typically 8-25x (fairly consistent across industries)
@@ -614,11 +613,11 @@ Add if relevant: Asset Turnover, Inventory Turns, Backlog
 =B7/C7                   // Simple ratio (Margin)
 =SUM(B7:B9)/3            // Average of multiple companies
 =IF(B7>0, C7/B7, "N/A")  // Conditional calculation
-=IFERROR(C7/D7, 0)       // Handle divide by zero
+=IF(D7>0,C7/D7,"N/M")  // Exclude non-meaningful denominators from multiple statistics
 
 // Cross-Sheet References
 ='Sheet1'!B7             // Reference another sheet
-=VLOOKUP(A7, Table1, 2)  // Lookup from data table
+=VLOOKUP(A7, Table1, 2, FALSE)  // Lookup from data table
 =INDEX(MATCH())          // Advanced lookup
 
 // Formatting

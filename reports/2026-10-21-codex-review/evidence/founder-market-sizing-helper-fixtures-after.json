@@ -1,0 +1,86 @@
+[
+  {
+    "id": "valid",
+    "args": [
+      "--population",
+      "1000",
+      "--arpu",
+      "120",
+      "--sam-share",
+      "30%",
+      "--som-share",
+      "10%"
+    ],
+    "expected_accept": true,
+    "returncode": 0,
+    "stdout": "# Market Size Summary\n\nInputs:\n- Population x ARPU: 1,000 x $120\n- SAM share of TAM: 30%\n- SOM share of SAM: 10%\n\n| Metric | Formula | Estimate |\n| --- | --- | --- |\n| TAM | Population x ARPU: 1,000 x $120 | $120,000 |\n| SAM | TAM x 30% | $36,000 |\n| SOM | SAM x 10% | $3,600 |\n",
+    "stderr": "",
+    "validation_pass": true
+  },
+  {
+    "id": "negative-population",
+    "args": [
+      "--population",
+      "-100",
+      "--arpu",
+      "100",
+      "--sam-share",
+      ".5",
+      "--som-share",
+      ".1"
+    ],
+    "expected_accept": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Error: population must be finite and nonnegative.\n",
+    "validation_pass": true
+  },
+  {
+    "id": "nonfinite-tam",
+    "args": [
+      "--tam",
+      "nan",
+      "--sam-share",
+      ".5",
+      "--som-share",
+      ".1"
+    ],
+    "expected_accept": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Error: tam must be finite and nonnegative.\n",
+    "validation_pass": true
+  },
+  {
+    "id": "nan-share",
+    "args": [
+      "--tam",
+      "10000",
+      "--sam-share",
+      "nan",
+      "--som-share",
+      ".1"
+    ],
+    "expected_accept": false,
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Error: sam-share must be finite and between 0 and 1 (inclusive).\n",
+    "validation_pass": true
+  },
+  {
+    "id": "tiny-share",
+    "args": [
+      "--tam",
+      "1000000",
+      "--sam-share",
+      ".001",
+      "--som-share",
+      ".1"
+    ],
+    "expected_accept": true,
+    "returncode": 0,
+    "stdout": "# Market Size Summary\n\nInputs:\n- TAM input: $1,000,000\n- SAM share of TAM: 0.1%\n- SOM share of SAM: 10%\n\n| Metric | Formula | Estimate |\n| --- | --- | --- |\n| TAM | TAM input: $1,000,000 | $1,000,000 |\n| SAM | TAM x 0.1% | $1,000 |\n| SOM | SAM x 10% | $100 |\n",
+    "stderr": "",
+    "validation_pass": true
+  }
+]

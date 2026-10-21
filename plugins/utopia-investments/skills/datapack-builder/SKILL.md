@@ -22,7 +22,8 @@ Every data pack must achieve these standards. Failure on any point makes the del
 
 ### 2. ESSENTIAL RULES
 
-**RULE 1: Financial data (measuring money) → Currency format with $**
+**RULE 1: Financial data (measuring money) → Declared currency format**
+Use $ only for a dollar-denominated source. Record source/reporting currency and units; formatting never performs an FX conversion.
 Triggers: Revenue, Sales, Income, EBITDA, Profit, Loss, Cost, Expense, Cash, Debt, Assets, Liabilities, Equity, Capex
 Format: $#,##0.0 for millions, $#,##0 for thousands
 Negatives: $(123.0) NOT -$123
@@ -184,7 +185,7 @@ Contents (industry-dependent):
 - Industry-specific KPIs
 
 **CRITICAL FORMAT NOTE:**
-NO dollar signs on operational metrics. These are quantities, not currency.
+Use the metric’s actual unit: counts have no currency symbol, while revenue per store, ADR and other monetary operating metrics retain their declared currency.
 
 Format:
 - Clear units specified (customers, employees, stores, square feet, etc.)
@@ -284,7 +285,7 @@ For each data point, determine format based on full context:
 **Step 2.3: Identify normalization adjustments**
 Common adjustments to document:
 - Restructuring charges (add back if truly non-recurring)
-- Stock-based compensation (add back per industry standard)
+- Stock-based compensation (show reported and adjusted measures separately; assess recurring economic cost and dilution)
 - Acquisition-related costs (add back, specify amounts)
 - Legal settlements or litigation costs (evaluate recurrence risk)
 - Asset sales or impairments (exclude from operating results)
@@ -510,7 +511,7 @@ Write concise, impactful summary including:
 - Example: "2023 restructuring: $3.0M facility closure, documented in source materials, one-time event"
 
 **2. Stock-based compensation**
-- Industry standard: add back for private equity analysis
+- Do not automatically add back. If presenting an adjusted measure excluding SBC, label and reconcile it, retain the reported measure, and assess recurring economic cost and dilution.
 - Treat as non-cash operating expense
 - Be consistent across all periods
 - Note if unusually high or includes one-time grants

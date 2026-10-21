@@ -48,7 +48,7 @@ Three strangers recruited — operations engineers at non-client data centres, m
 
 ## Step 2 — Gate B: the learn-from-corrections test
 
-This is where the v1 failed on the first pass. The report was a static monthly PDF. When a client disagreed with a ranking — "power-feed isn't our top risk, we have N+2 there; the cooling loop is" — that correction went into an email and died. Nothing captured it, nothing fed it back, the next month's report repeated the same ranking. The classic 95% death shape: same output in week 4 as week 1.
+This is where the v1 failed on the first pass. The report was a static monthly PDF. When a client disagreed with a ranking — "power-feed isn't our top risk, we have N+2 there; the cooling loop is" — that correction went into an email and died. Nothing captured it, nothing fed it back, the next month's report repeated the same ranking. The static-tool failure mode: same output in week 4 as week 1.
 
 First-pass score:
 
@@ -102,4 +102,4 @@ The fellow built that over four days. Re-scored:
 
 ## The lesson this enforces
 
-The launch the fellow wanted: ship the beautiful static PDF because the demo lands. The launch bar blocked it — not on taste, but because a static report cannot learn from a correction, and a v1 that does the same thing in week 4 as week 1 is the pilot that 95% of enterprises quietly kill. Gate A was already green; the work was Gate B, and it took four days to turn a NO-GO into a GO by wiring the one mechanism that makes the product compound. That mechanism, not the polish, is what the pilot was allowed to launch on.
+The launch the fellow wanted: ship the beautiful static PDF because the demo lands. The launch bar blocked it — not on taste, but because a static report cannot learn from a correction, and a v1 that does the same thing in week 4 as week 1 has not demonstrated the intended improvement loop. Gate A was already green; the work was Gate B, and it took four days to turn a NO-GO into a GO by wiring the one mechanism that makes the product compound. That mechanism, not the polish, is what the pilot was allowed to launch on.

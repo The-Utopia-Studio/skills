@@ -7,6 +7,10 @@ description: "When the user wants to build GTM automation with code, design work
 
 You are an expert in GTM engineering, workflow automation architecture, and AI agent orchestration for revenue teams. You combine deep technical knowledge of automation platforms (n8n, Make, Zapier, Tray.io, Workato) with API-first design principles, event-driven architectures, and the "architecture over tools" philosophy. You understand that the advantage is never the tool itself but the instruction stack, persistent context, and feedback loops built around it. You help founders, RevOps teams, and GTM engineers design, build, and scale automation systems that turn manual GTM processes into reliable, observable, cost-efficient pipelines. You understand the 2025-2026 landscape where GTM Engineer has emerged as a dedicated role combining software engineering skills with commercial acumen, and where AI agents are shifting from simple task automation to autonomous multi-step workflow execution.
 
+## Execution and scoring contract
+
+Architecture examples are proposals, not permission to contact people. Use the configured `account-tier-scoring` model; illustrative weights below must not replace it. Before any external message or enrollment, use `outreach-execution` for scope, suppression, prior history, sender, approval and duplicate checks. A score or private intent event is not contact authorization. Do not expose private tracked behavior in prospect-facing copy. Negative replies stop the sequence; objections and substantive replies go to the named human owner.
+
 ## Before Starting
 
 Gather this context before designing any GTM automation or architecture:
@@ -296,29 +300,7 @@ Use webhooks as the primary trigger mechanism. Polling wastes API calls and intr
 | Outreach | Email replied, meeting booked, sequence completed | CRM update, notification, next-step trigger |
 
 **2. Enrichment waterfall pattern**
-Call enrichment providers sequentially, stopping when confidence exceeds the threshold. This minimizes cost while maximizing data quality.
-
-```
-Input: company domain + contact name
-  |
-  v
-Provider 1 (Clay) --> confidence >= 0.85? --> ACCEPT, stop
-  |                                    |
-  | confidence < 0.85                  |
-  v                                    |
-Provider 2 (Apollo) --> confidence >= 0.85? --> ACCEPT, stop
-  |                                    |
-  | confidence < 0.85                  |
-  v                                    |
-Provider 3 (ZoomInfo) --> confidence >= 0.85? --> ACCEPT, stop
-  |                                    |
-  | confidence < 0.85                  |
-  v                                    |
-Provider 4 (BetterContact) --> SMTP verification
-  |
-  +--> confidence >= 0.50? --> ACCEPT with flag
-  +--> confidence < 0.50?  --> REJECT
-```
+Call providers sequentially for missing fields. Interpret each provider's native result using validated provider-specific rules (`lead-enrichment`); confidence scales are not interchangeable. Preserve source/date and conflicts, and return unresolved fields for review when none verifies. Verification does not authorize outreach.
 
 **3. Idempotent operations**
 Every API call and webhook handler should be idempotent. If the same event fires twice, the result should be the same. Use unique identifiers and deduplication checks.
@@ -376,17 +358,21 @@ Add firmographic, technographic, and contact data to raw records.
 **Enrichment waterfall implementation:**
 
 ```python
-# Pseudocode for enrichment waterfall
-def enrich_contact(email, domain):
-    for provider in [clay, apollo, zoominfo, bettercontact]:
-        result = provider.enrich(email, domain)
-        if result.confidence >= 0.85:
-            return result  # Stop at first high-confidence match
-    # If no high-confidence match found
-    best = max(results, key=lambda r: r.confidence)
-    if best.confidence >= 0.50:
-        return best.flag_as_unverified()
-    return reject(email, reason="low_confidence")
+# Illustrative dependency-injected waterfall; adapters implement validated
+# provider-specific verification. This does not send or enroll contacts.
+def enrich_contact(email, domain, providers, is_verified):
+    evidence = []
+    errors = []
+    for provider in providers:
+        try:
+            result = provider.enrich(email, domain)
+        except Exception as exc:
+            errors.append({"provider": provider.name, "error_type": type(exc).__name__})
+            continue
+        evidence.append({"provider": provider.name, "result": result})
+        if is_verified(provider.name, result):
+            return {"status": "verified", "evidence": evidence, "errors": errors}
+    return {"status": "unresolved", "evidence": evidence, "errors": errors}
 ```
 
 **Enrichment data points to collect:**
@@ -805,7 +791,7 @@ GTM engineers often build custom internal tools when off-the-shelf solutions do 
 | Make sweet spot | Visual workflow design, moderate complexity, budget-conscious teams |
 | Zapier sweet spot | Simple integrations, non-technical teams, fastest setup |
 | Enterprise iPaaS | Tray.io (mid-market), Workato (enterprise compliance) |
-| Enrichment waterfall threshold | 0.85+ confidence to accept, 0.50+ to accept with flag, below 0.50 reject |
+| Enrichment waterfall threshold | Validated provider-specific verification; unresolved evidence requires review |
 | Hot lead SLA | Respond in under 1 hour (ideally under 5 minutes for inbound) |
 | Warm lead SLA | Respond in under 4 hours |
 | Scoring formula (fit) | Firmographic 40% + Technographic 35% + Behavioral 25% |

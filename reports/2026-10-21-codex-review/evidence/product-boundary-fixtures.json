@@ -1,0 +1,54 @@
+{
+  "method": "Deterministic boundary cases evaluated from before/after instruction contracts. Authored classifications, not stochastic model replication.",
+  "cases": [
+    {
+      "skill": "bottoms-up-quantification",
+      "inputs": [
+        0.2,
+        0.3,
+        10.0
+      ],
+      "before": [
+        "uncovered",
+        "Triangulated",
+        "Divergent"
+      ],
+      "after": [
+        "Divergent",
+        "Triangulated",
+        "Divergent"
+      ]
+    },
+    {
+      "skill": "fellow-path-router",
+      "inputs": [
+        "free real workflow use directly observed, no moat",
+        "free signup only, no workflow use",
+        "paying users, no compounding asset"
+      ],
+      "before": [
+        "table B, downgrade bullet A: contradiction",
+        "A",
+        "B"
+      ],
+      "after": [
+        "B",
+        "A",
+        "B"
+      ]
+    },
+    {
+      "skill": "eval-first-spec",
+      "inputs": [
+        "20 deliberately curated cases pass, claim <1% production failures",
+        "zero failures in 20 independent representative production trials, claim <1%",
+        "representative sample with preregistered one-sided interval and enough outcomes to support target"
+      ],
+      "after": [
+        "regression coverage only; rate unproven",
+        "insufficient precision: one-sided 95% upper bound = 1 - .05**(1/20) = 13.91%",
+        "evaluate interval and sampling plan against threshold; do not infer from curated suite"
+      ]
+    }
+  ]
+}

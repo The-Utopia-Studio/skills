@@ -14,7 +14,7 @@ That is a feature. This skill recovers the decision underneath it and compresses
 - Feature-ban check: "copilot" and "AI" struck — they name the surface, not the call. The verb is *decides which to act on*.
 - Two decisions? No. "Act on vs ignore" is one triage call. (Setting alert thresholds is a separate, parked decision.)
 
-## 2. The decision-owner (exactly one)
+## 2. Primary accountable decision-owner and other approvers
 - **Title:** shift production supervisor.
 - **Stakes on being wrong:** a missed alert becomes an unplanned line stoppage; a needless intervention stops a healthy line. Both hit the shift's output number, which the supervisor owns.
 

@@ -20,6 +20,10 @@ The generated `DESIGN.md` serves as the **single source of truth** for prompting
 - Access to Google Stitch via [labs.google.com/stitch](https://labs.google.com/stitch)
 - Optionally: Stitch MCP Server for programmatic integration with Cursor, Antigravity, or Gemini CLI
 
+## Project Constraints Take Precedence
+
+Read the supplied brief and the project's existing design system before choosing values. Use its semantic tokens, components and motion contracts when present; these defaults do not replace an established theme or explicit user direction. If Stitch needs resolved values, obtain them from the inspected token source and record the mapping rather than inventing replacements. For Ceramic projects, follow the repository's manifest/search/inspection and semantic-motion workflow before selecting an adapter.
+
 ## The Goal
 Generate a `DESIGN.md` file that encodes:
 1. **Visual atmosphere** — the mood, density, and design philosophy
@@ -27,7 +31,7 @@ Generate a `DESIGN.md` file that encodes:
 3. **Typographic architecture** — font stacks, scale hierarchy, and anti-patterns
 4. **Component behaviors** — buttons, cards, inputs with interaction states
 5. **Layout principles** — grid systems, spacing philosophy, responsive strategy
-6. **Motion philosophy** — animation engine specs, spring physics, perpetual micro-interactions
+6. **Motion philosophy** — purposeful state feedback, semantic motion, and reduced-motion behavior
 7. **Anti-patterns** — explicit list of banned AI design clichés
 
 ## Analysis & Synthesis Instructions
@@ -94,9 +98,10 @@ Every design must work across all viewports:
 - **Spacing:** Vertical section gaps reduce proportionally (`clamp(3rem, 8vw, 6rem)`)
 
 ### 8. Encode Motion Philosophy
-- **Spring Physics default:** `stiffness: 100, damping: 20` — premium, weighty feel. No linear easing
-- **Perpetual Micro-Interactions:** Every active component should have an infinite loop state (Pulse, Typewriter, Float, Shimmer)
-- **Staggered Orchestration:** Never mount lists instantly — use cascade delays for waterfall reveals
+- **Motion choice:** Use the project's semantic motion contracts. Where none exist, choose timing or springs appropriate to the interaction and the user's direction; do not introduce an animation runtime solely to follow this example.
+- **Purposeful feedback:** An active button does not need an infinite loop. Use finite press/focus/state feedback; reserve persistent animation for a meaningful ongoing state, with an accessible static alternative.
+- **Reduced motion:** Describe a `prefers-reduced-motion: reduce` variant that removes nonessential movement and stagger while keeping content and state changes available. Preserve essential status information with text or static indicators.
+- **List behavior:** Make content and controls available immediately. Optional entrance stagger must not delay keyboard access, long-list rendering, or completion of the user's task. Use immediate rendering for reduced motion and where a reveal would impede interaction.
 - **Performance:** Animate exclusively via `transform` and `opacity`. Never animate `top`, `left`, `width`, `height`. Grain/noise filters on fixed pseudo-elements only
 
 ### 9. List Anti-Patterns (AI Tells)
@@ -157,9 +162,9 @@ Strict single-column collapse below 768px. Max-width containment.
 No flexbox percentage math. Generous internal padding.)
 
 ## 6. Motion & Interaction
-(Spring physics for all interactive elements. Staggered cascade reveals.
-Perpetual micro-loops on active dashboard components. Hardware-accelerated
-transforms only. Isolated Client Components for CPU-heavy animations.)
+(Use inspected project semantic-motion contracts, finite state feedback, and a
+reduced-motion variant. Content and controls remain immediately available;
+optional stagger never delays interaction. No perpetual idle loops by default.)
 
 ## 7. Anti-Patterns (Banned)
 (Explicit list of forbidden patterns: no emojis, no Inter, no pure black,

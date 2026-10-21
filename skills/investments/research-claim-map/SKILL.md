@@ -44,30 +44,30 @@ Document what's unknown, what assumptions were made, and where evidence is weak 
 
 **Step 5: Draw evidence-based conclusion**
 
-Synthesize findings into confidence level (0-100%) and actionable recommendation (believe/skeptical/reject claim). Self-check using `resources/evaluators/rubric_research_claim_map.json` before delivering. Minimum standard: Average score ≥ 3.5.
+Synthesize findings into explained confidence and an actionable recommendation (supported/uncertain/contradicted). Use a numerical probability only with a defensible model or explicitly labeled subjective judgment. Self-check using `resources/evaluators/rubric_research_claim_map.json` before delivering. Minimum standard: Average score ≥ 3.5.
 
 ## Evidence Quality Framework
 
 **Rating scale:**
 
-**Primary Evidence (Strongest):**
+**Primary Evidence (direct provenance, not automatically strongest):**
 - Direct observation or measurement
 - Original data or records
 - First-hand accounts from participants
 - Raw datasets, transaction logs
 - Example: Sales database showing 10,000 customer IDs
 
-**Secondary Evidence (Medium):**
+**Secondary Evidence (analysis of other sources):**
 - Analysis or interpretation of primary sources
 - Expert synthesis of multiple primary sources
-- Peer-reviewed research papers
+- Review papers synthesizing original research (an original empirical research paper is primary for its own measurements)
 - Verified news reporting with primary source citations
 - Example: Industry analyst report analyzing public filings
 
-**Tertiary Evidence (Weakest):**
+**Tertiary Evidence (summaries):**
 - Summaries of secondary sources
 - Textbooks, encyclopedias, Wikipedia
-- Press releases, marketing materials
+- Summaries of other reports. A company release is primary for what it announced, but does not independently establish its performance claims.
 - Anecdotal reports without verification
 - Example: Company blog post claiming customer count
 
@@ -133,7 +133,7 @@ Synthesize findings into confidence level (0-100%) and actionable recommendation
 - **Availability bias**: Vivid anecdotes ≠ representative data
 
 **Quality standards:**
-- Rate confidence numerically (0-100%), not vague terms ("probably", "likely")
+- State calibrated uncertainty when a defensible probability model exists; otherwise use explained qualitative confidence without invented precision
 - Document all assumptions explicitly
 - Distinguish "no evidence found" from "evidence of absence"
 - Update conclusions as new evidence emerges
@@ -156,9 +156,4 @@ Synthesize findings into confidence level (0-100%) and actionable recommendation
 
 **Credibility factors**: Expertise + Independence + Track Record + Methodology
 
-**Confidence calibration**:
-- 90-100%: Near certain, multiple primary sources, high credibility
-- 70-89%: Confident, strong secondary sources, some limitations
-- 50-69%: Uncertain, conflicting evidence or weak sources
-- 30-49%: Skeptical, more evidence against than for
-- 0-29%: Likely false, strong evidence against
+**Confidence calibration:** Source type and count do not mechanically determine truth probability. Evaluate independence, method, relevance and counterevidence; explain why a conclusion is warranted and what could overturn it. Treat any subjective percentage as a judgment, not a measured probability.

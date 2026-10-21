@@ -26,15 +26,15 @@ Key concepts: root cause (fundamental issue), proximate cause (immediate trigger
 
 ## Test:
 - Rollback UI (no change) → UI not cause
-- Check payment logs (confirm latency) → latency is cause
-- Trace to processor change → processor change is root cause
+- Check payment logs (confirm latency) → latency is a candidate mechanism, not causal proof
+- Trace timing to processor change → hypothesis to test against load, traffic mix and other simultaneous changes
 
 ## Counterfactual:
 "If we hadn't switched processors, would conversion have dropped?"
-→ No, conversion was fine with old processor
+→ Unknown: the before/after comparison alone cannot rule out confounding. Test a controlled rollback or comparable unaffected cohort.
 
 ## Conclusion:
-Root cause = processor switch
+Candidate root cause = processor switch, pending a discriminating test
 Mechanism = slow checkout → user abandonment
 ```
 

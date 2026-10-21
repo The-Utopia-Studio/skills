@@ -114,7 +114,7 @@ Apply the full ranking logic defined in the Evidence Rules and Confidence Scorin
 
 Select top 2 paths. Prefer paths targeting different personas where evidence quality allows. If both top paths target the same persona, note that no strong alternative path to a second persona was found.
 
-Always return the best available paths regardless of confidence level. Never return an empty result.
+Return evidence-supported paths with confidence labels. If none exist, return “No evidenced warm path found,” sources checked, and the specific missing information; never invent an edge to fill the card.
 
 ---
 
@@ -143,7 +143,7 @@ Full rules: `references/warm-relationship-intake.md`.
 Load and follow the Warm Relationship Intake sub-page of this skill.
 
 Check both conditions:
-- Any Inferred edge involves the rep who initiated the play -> send on-demand Slack confirmation prompt to that rep (and only that rep - intake never messages anyone else).
+- Any Inferred edge involves the rep who initiated the play -> ask that rep for confirmation in the current chat. External Slack messaging requires an explicit user request.
 - All paths are Low confidence -> add gap-triggered prompt to the output card (no Slack message).
 
 ---
@@ -163,7 +163,7 @@ Deliver the completed output card in chat. No tasks created. No CRM writes. No o
 - Every confidence tier traces to record CONTENT that was actually read - never to a meeting count, an email count, or a title. Honest under-labeling protects rep trust; a single false-Strong path destroys it.
 - Every path names its weakest edge explicitly, so the rep can see the gap without reading all edge details.
 - The card always shows what was checked and what wasn't - the sources footer is never omitted.
-- The best available paths are always returned, fully labeled, even when everything is Low - never an empty result, and never an inflated one.
+- Return existing low-confidence paths fully labeled; if no evidence supports any path, say so and request missing relationship evidence.
 - Nothing was sent, written, or contacted. The rep decides.
 
 ---

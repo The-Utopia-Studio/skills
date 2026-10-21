@@ -120,7 +120,7 @@ The **Global Context** (slide 2) and **Growth Flywheel** (slide 9) are the two s
 For each slide, consult `references/slide-best-practices.md` for research-backed guidance on what great looks like, what to avoid, and how investors evaluate that specific slide. Then produce:
 
 - **Headline** — an insight, not a label. "A $47B market growing 23% annually" beats "Market Size"
-- **Body content** — 3–5 bullets or a concise paragraph with evidence
+- **Body content** — up to3 bullets or a concise paragraph with evidence
 - **Visual direction** — what chart, diagram, or layout would strengthen this slide
 - **Speaker notes** — 2–3 sentences of talking points
 
@@ -244,5 +244,5 @@ When the user uploads an existing pitch deck and asks to improve it:
 When a Technical DD report exists:
 - Read `references/dd-integration.md` for extraction patterns
 - Pull technology assessment findings into the Product and Solution slides
-- Surface risk flags in speaker notes (not on-slide — these are for the presenter)
+- Surface material DD risks on the relevant slide or a clearly referenced risk appendix; speaker notes may add detail but must not be their only location in a forwardable deck
 - Reference the DD report's evidence ratings where relevant

@@ -86,6 +86,8 @@ npx -y -p parquetlens -p @parquetlens/sql parquetlens \
 
 ## Creating and Uploading Datasets
 
+Use this section only when the user requests dataset creation or upload. Exploration, preview, search, filtering and extraction remain read-only; never create a repo or upload data as a side effect of inspecting a dataset.
+
 Use one of these flows depending on dependency constraints.
 
 Zero local dependencies (Hub UI):

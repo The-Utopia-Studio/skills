@@ -526,7 +526,7 @@ For founders starting from zero or resetting their content strategy, a structure
 
 | Skill | When to Cross-Reference |
 |---|---|
-| social-selling | When building DM conversion workflows and LinkedIn engagement systems |
+| outreach-execution | When building DM conversion workflows and LinkedIn engagement systems |
 | launch-strategy | When coordinating content across platforms for a product launch |
 | positioning-workshop | When defining the audience and messaging that content should target |
 | solo-founder-gtm | When a solo founder needs to prioritize content activities with limited time |

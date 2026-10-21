@@ -32,23 +32,12 @@ Intent Score = (Third-Party Intent * 0.35) + (First-Party Signals * 0.40) + (Tri
 
 ### ICP Prioritization Matrix
 
-```
-                    High Intent
-                        |
-         NURTURE        |        ACTIVATE
-     (Good fit,         |     (Good fit,
-      not ready yet)    |      ready now)
-                        |
-  ----------------------+----------------------
-                        |
-         DISQUALIFY     |        MONITOR
-     (Poor fit,         |     (Poor fit but
-      not ready)        |      showing intent)
-                        |
-                    Low Intent
+| | Low fit | High fit |
+|---|---|---|
+| **High intent** | MONITOR: inspect fit assumptions; do not activate on intent alone | ACTIVATE: appropriate sales review |
+| **Low intent** | DISQUALIFY: do not prioritize | NURTURE: good fit, not ready yet |
 
-         Low Fit                    High Fit
-```
+Apply configured suppression and eligibility rules before any routing or enrollment. These labels are decision support, not authorization to contact anyone.
 
 - **ACTIVATE (High Fit + High Intent)**: Route to sales immediately. These accounts match your ICP and are actively looking. Target response time: under 4 hours.
 - **NURTURE (High Fit + Low Intent)**: Enroll in targeted content sequences. They will convert when a trigger event hits.

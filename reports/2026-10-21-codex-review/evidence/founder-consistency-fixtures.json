@@ -1,0 +1,140 @@
+{
+  "method": "Executed arithmetic/boolean contract fixtures. Interpretive outputs below authored by this Codex reviewer; no new live model/provider run or user study.",
+  "floor": [
+    {
+      "input": [
+        10,
+        1
+      ],
+      "actual": "thin"
+    },
+    {
+      "input": [
+        20,
+        1
+      ],
+      "actual": "real prize"
+    },
+    {
+      "input": [
+        100,
+        1
+      ],
+      "actual": "real prize"
+    },
+    {
+      "input": [
+        101,
+        1
+      ],
+      "actual": "suspicious"
+    },
+    {
+      "input": [
+        1,
+        0
+      ],
+      "actual": "invalid"
+    },
+    {
+      "input": [
+        -1,
+        1
+      ],
+      "actual": "invalid"
+    }
+  ],
+  "compression": [
+    {
+      "input": [
+        1,
+        1
+      ],
+      "actual": "no compression"
+    },
+    {
+      "input": [
+        2,
+        1
+      ],
+      "actual": "step change"
+    },
+    {
+      "input": [
+        10,
+        1
+      ],
+      "actual": "order of magnitude"
+    },
+    {
+      "input": [
+        1,
+        0
+      ],
+      "actual": "invalid"
+    },
+    {
+      "input": [
+        -1,
+        1
+      ],
+      "actual": "invalid"
+    }
+  ],
+  "retention": [
+    {
+      "input": "49% to48% in one month; no cohort N",
+      "change_pp": -1,
+      "interpretation": "Slowing decline; no PMF or indefinite plateau inference without denominators, horizon and replication."
+    },
+    {
+      "input": "1 of1 retained in two periods",
+      "rate": 1.0,
+      "interpretation": "Observed100% for one case; not population persistence proof."
+    },
+    {
+      "input": "55% atW8 to54% atW12",
+      "change_pp_per_week": -0.25,
+      "interpretation": "-0.25pp/week descriptive slope, not flat forever."
+    }
+  ],
+  "scorecard": {
+    "old": [
+      4,
+      5,
+      5,
+      4,
+      4,
+      5,
+      4,
+      3
+    ],
+    "new": [
+      4,
+      5,
+      3,
+      4,
+      4,
+      3,
+      4,
+      3
+    ],
+    "new_total": 30,
+    "verdict": "REDESIGN",
+    "reason": "unpaidPO and fine schedule are documents, not completed payment/loss"
+  },
+  "observation": [
+    {
+      "input": "One user loses saved work, reproduction confirms defect",
+      "output": "Fact for that session and confirmed defect; act by severity; prevalence unknown."
+    },
+    {
+      "input": "Two of5 users click wrong menu",
+      "output": "Observed2/5 in this sample; do not claim population40% or automatic proof."
+    },
+    {
+      "input": "Public test set held out from development; private set used for tuning",
+      "output": "Public held-out set can support evaluation; private tuning set is not independent eval solely because proprietary."
+    }
+  ]
+}

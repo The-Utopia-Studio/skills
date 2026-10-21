@@ -27,12 +27,12 @@ Finds and fixes common security issues in repositories built by solo founders an
 ### Step 1: Scan for Hardcoded Secrets
 ```bash
 # Check for common secret patterns
-grep -rn --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.py" --include="*.env" \
+grep -rl --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.py" --include="*.env" \
   -E "(sk-[a-zA-Z0-9]{20,}|api_key\s*=\s*['\"][^'\"]+|password\s*=\s*['\"][^'\"]+|secret\s*=\s*['\"][^'\"]+|AWS_ACCESS_KEY|PRIVATE_KEY)" . \
   | grep -v node_modules | grep -v '.env.example' | head -30
 ```
 
-If matches found: **flag as critical** and recommend moving to environment variables.
+The scan prints filenames only, never matching lines or secret values. Inspect candidates locally with values redacted; placeholders and variable names are not confirmed leaks. For a confirmed exposed credential, recommend revocation/rotation and removal from code/history as appropriate, then environment or secret-manager storage.
 
 ### Step 2: Check Environment Variable Management
 - `.env` should be in `.gitignore` (if not: **critical**)

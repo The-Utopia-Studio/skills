@@ -54,7 +54,7 @@ Metrics are organized into four families:
 | **LTV:CAC** | LTV / CAC | Unit economics efficiency | 3:1 healthy; <1:1 unsustainable; >5:1 underinvesting | LTV:CAC <1.5:1 |
 | **Payback Period** | CAC / (Monthly ARPU × Gross Margin %) | Months to recover CAC | <12 months great; 12-18 ok; >24 concerning | Payback >24 months (cash trap) |
 | **Contribution Margin** | (Revenue - All Variable Costs) / Revenue × 100 | True contribution after variable costs | 60-80% good for SaaS; <40% concerning | Contribution margin <40% |
-| **Burn Rate** | Monthly Cash Spent - Revenue | Cash consumed per month | Net burn <$200K manageable early; <$500K growth | Net burn accelerating |
+| **Burn Rate** | Monthly Cash Spent - Cash Collected | Cash consumed per month | Net burn <$200K manageable early; <$500K growth | Net burn accelerating |
 | **Runway** | Cash Balance / Monthly Net Burn | Months until money runs out | 12+ months good; 6-12 ok; <6 crisis | Runway <6 months |
 | **OpEx** | S&M + R&D + G&A | Costs to run the business | Should grow slower than revenue | OpEx growing faster than revenue |
 | **Net Income** | Revenue - All Expenses | Actual profit/loss | Early negative ok; mature 10-20%+ margin | Losses accelerating without growth |

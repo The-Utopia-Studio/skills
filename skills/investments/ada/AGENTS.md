@@ -12,7 +12,7 @@ Ada activates when the user asks for:
 - "[Company] DD report"
 
 ### Skill invocation
-Via the marketplace: `/plugin install utopia-agent-ada@skills` (bundled in `utopia-investments` pack).
+Via the marketplace: `/plugin install utopia-investments@skills` (bundled in `utopia-investments` pack).
 
 Or directly: load `SOUL.md`, `AGENTS.md` and `MEMORY.md` from this skill folder into context at the start of any DD session.
 

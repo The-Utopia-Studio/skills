@@ -77,7 +77,7 @@ Monthly Expenses:
   - COGS: $50,000
 Total Monthly Burn: $950,000
 
-Monthly Revenue: $416,665 ($5M ARR / 12)
+Monthly Cash Collected (assumed equal to recognized revenue in this simplified example): $416,665 ($5M ARR / 12)
 Net Burn: $533,335/month 🚨
 
 Cash Balance: $6,000,000

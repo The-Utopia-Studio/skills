@@ -56,7 +56,7 @@ Folded in from the retired meddic-checklist skill. After every major call, updat
 Mark each element captured (green), partial (yellow) or missing (red), keep the colour rules consistent across reps, and tie every yellow or red to a specific question or next step for the following call.
 
 ## Tips
-- Time-box sections (2/3/8/4/3) to keep 30-min calls crisp.
+- Time-box sections (2/3/8/4/3 minutes = 20 minutes), reserving 10 minutes for buyer questions and buffer in a 30-minute call.
 - Mirror the prospect’s vocabulary from research notes to build rapport fast.
 - Always confirm next steps live and send recap within 1 hour.
 - Tag recordings with chapters so AEs can jump to pain/impact moments.

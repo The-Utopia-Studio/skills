@@ -1,0 +1,52 @@
+{
+  "reviewer": "Codex review_product; independent second reviewer",
+  "method": "Read supplied fixture inputs and current merged outreach-execution skill plus both social resources. Did not read first reviewer's walkthrough outputs. Authored offline independent walkthroughs, not live sends, external staging, model stochastic repetitions or measured routing accuracy.",
+  "cases": [
+    {
+      "id": "social-01",
+      "output": {
+        "audience": "Maya, VP Sales at Northstar Analytics; one contact only",
+        "owner": "Lea drafts; Sam approves",
+        "public_evidence": "Yesterday's post says onboarding five AEs strains manager coaching time.",
+        "plan": ["Day 1: verify public post and read discussion; check no-contact status and existing drafts before any execution.", "Day 2: prepare a useful public contribution tied to coaching new AEs; avoid generic praise.", "Days 3–4: respond only where there is relevant new discussion; if connection is appropriate and approved, propose a blank request. None is sent here.", "Days 5–7: after acceptance and execution checks, offer approved coaching checklist in the contextual DM. Without acceptance, keep the DM conditional; do not substitute guessed email or escalate contacts."],
+        "public_draft": "For five new AEs, a shared checklist for the first five calls can give managers a consistent coaching starting point. I can share the approved checklist here if useful.",
+        "conditional_dm_draft": "Your post about onboarding five AEs raised the manager coaching question. Would a checklist for the first five calls be useful?",
+        "transition": "DM only after accepted connection and required checks/approval; live reply hands conversation to Lea.",
+        "review_status": "Draft text only for Sam; no staging or sending performed. No-contact lookup unavailable, so execution not cleared.",
+        "internal_only": "Pricing-page activity informs relevance but is absent from public comment and DM. Company size may warrant assessing multithreading; no additional contacts requested, so do not create them."
+      },
+      "checks": {"public_signal_opener": true,"private_signal_excluded_from_copy": true,"voice_plain_one_dm_question": true,"no_unverified_results": true,"blank_connection_condition": true,"no_unrequested_email_or_multithread": true,"no_live_send": true}
+    },
+    {
+      "id": "social-02",
+      "output": {
+        "audience": "Ivo in specialist operations Slack community",
+        "owner": "Rae",
+        "public_evidence": "Ivo's community question about night-shift incident handoffs losing context.",
+        "week_one": "Read rules and thread context; draft a concrete public answer. Offer the approved blank template in-thread. Reply to substantive questions where useful, with no activity quota or pitch.",
+        "public_draft": "Three fields can keep a night-shift handoff concrete: incident, next action, named owner. I can paste the blank template here if useful.",
+        "week_two": "Review new public follow-up questions and refine the shared template if invited. Continue helping in-thread. Absence of a reply does not authorize a DM. Track useful replies and opt-in requests with dates rather than promise meetings.",
+        "dm_condition": "Only Ivo's explicit invitation authorizes a DM in this community. A reaction, silence, or generic interest in the template is not permission for a promotional DM. If invited, Rae drafts a short reply delivering the requested template only.",
+        "review_status": "Plan and copy only; no outbound execution, no invented sender connection requirement for community planning."
+      },
+      "checks": {"slack_invitation_required": true,"public_value_first": true,"no_promotional_dm": true,"no_email_linkedin_setup_block": true,"no_invented_proof": true,"no_live_send": true}
+    },
+    {
+      "id": "social-03",
+      "output": {
+        "audience": "Noor, Director of Operations at Cedar Services; existing accepted LinkedIn connection",
+        "owner": "Lea drafts replacement for Sam's review",
+        "relationship": "Prior discovery six months ago, closed lost on timing. Warm re-engagement, never cold intro.",
+        "draft_handling": "Edit the existing unsent branch-expansion-play draft; create no new sequence or connection request. Since this is offline, provide replacement copy and proposed edit rather than claim existing record was changed.",
+        "replacement_copy": "When we spoke six months ago, the timing was wrong for a rollout. Has the new branch opening changed that priority?",
+        "plan": "Verify public branch announcement and suppression before execution. Submit replacement copy to Sam. If Noor replies positively, Lea can offer the branch-readiness checklist as a subsequent agreed follow-through; no fabricated case-study metrics.",
+        "channel": "LinkedIn only, appropriate to the request and12,000 followers; no email step.",
+        "internal_only": "Profile views are excluded from all prospect-facing text.",
+        "review_status": "Replacement draft text for approval only; no tool-backed edit, staging or send claimed."
+      },
+      "checks": {"warm_history_acknowledged": true,"public_change_only": true,"private_views_excluded": true,"existing_draft_edit_not_duplicate": true,"no_reconnection": true,"linkedin_only": true,"approval_required": true,"no_live_send": true}
+    }
+  ],
+  "verdict": "All three scenarios preserve the social nurture method in the merged skill, including public-only copy, community permission and duplicate prevention. No missing unique social capability demonstrated by these cases. Generic parent statements about mandatory connected channels and staged output could be read too broadly, but the explicit planning-mode exception resolves these fixtures; retain the exception prominently.",
+  "limitations": "No CRM suppression lookup or draft mutation was performed. This independently authors outputs against the contract; it does not demonstrate autonomous runtime routing or delivery."
+}

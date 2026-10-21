@@ -1,5 +1,5 @@
 {
-  "_comment": "Canonical GTM sub-module map from the fellow Go-to-Market module reference. Every utopia-gtm skill belongs to exactly one sub-module. Source paths: skills/gtm/<id>/<skill>/ — ids are numbered so they never collide with skill folder names.",
+  "_comment": "Canonical GTM sub-module map from the fellow Go-to-Market module reference. Every utopia-gtm skill belongs to exactly one sub-module. Source paths: skills/gtm/<id>/<skill>/ \u2014 ids are numbered so they never collide with skill folder names.",
   "submodules": [
     {
       "id": "01-growth-strategy",
@@ -92,7 +92,6 @@
         "lead-enrichment",
         "outreach-execution",
         "partner-affiliate",
-        "social-selling",
         "warm-intro-intelligence"
       ]
     },
@@ -115,7 +114,7 @@
       "order": 7,
       "label": "IP Commercialisation",
       "tagline": "Defensibility from the start",
-      "description": "Patent strategy and commercial pathways. Operator-led today — skills land here once codified.",
+      "description": "Patent strategy and commercial pathways. Operator-led today \u2014 skills land here once codified.",
       "skills": []
     }
   ]

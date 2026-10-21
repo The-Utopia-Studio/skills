@@ -79,7 +79,7 @@ Your task is to develop a comprehensive value proposition that articulates the c
 5. Envision the improved outcome
 6. Compare against competitive alternatives
 7. Create a concise value prop statement (1-2 sentences)
-8. Develop a positioning statement for marketing use
+8. If a category-level positioning statement is needed, hand the completed value proposition to positioning-workshop; do not create a competing positioning framework here
 9. Write value proposition statements per segment and channel (below)
 
 ## Value Proposition Statements (per segment and channel)

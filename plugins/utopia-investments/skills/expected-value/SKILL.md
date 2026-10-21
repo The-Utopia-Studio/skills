@@ -28,7 +28,7 @@ EV = (p₁ × v₁) + (p₂ × v₂) + ... + (pₙ × vₙ)
 where probabilities must sum to 1.0
 ```
 
-**Example**: Launch feature with 60% chance of $100k revenue, 40% chance of -$20k sunk cost.
+**Example**: Launch feature with 60% chance of +$100k incremental net payoff, 40% chance of -$20k future net loss.
 EV = (0.6 x $100k) + (0.4 x -$20k) = $60k - $8k = **$52k** (positive EV, rational to launch if risk tolerance allows)
 
 ## Workflow
@@ -99,7 +99,7 @@ Validate using [resources/evaluators/rubric_expected_value.json](resources/evalu
 - **Use case**: Financial modeling, project timelines, resource planning, sensitivity analysis
 - **Pros**: Captures full uncertainty, avoids discrete scenario bias, provides confidence intervals
 - **Cons**: Requires distributional assumptions, computationally intensive, harder to communicate
-- **Example**: Revenue ~ Normal($500k, $100k std dev). Run 10,000 simulations → mean = $510k, 90% CI = [$350k, $670k].
+- **Example**: For an assumed Normal($500k, $100k standard deviation) outcome, the analytic mean is $500k and the central 90% outcome interval is approximately [$335.5k, $664.5k]. This is not a confidence interval for the estimated mean or a claimed simulation run.
 
 **Pattern 5: Competitive Game (Payoff Matrix)**
 - **Structure**: Your outcome depends on competitor's choice, create payoff matrix
@@ -141,7 +141,7 @@ Validate using [resources/evaluators/rubric_expected_value.json](resources/evalu
 
 **Expected Value**: EV = Σ (pᵢ × vᵢ) where p = probability, v = value
 
-**Expected Utility** (for risk aversion): EU = Σ (pᵢ × U(vᵢ)) where U = utility function
+**Expected Utility** (for risk aversion): EU = Σ (pᵢ × U(W₀ + vᵢ)), where W₀ is initial wealth and vᵢ is incremental payoff. Check the function domain: square root requires nonnegative final wealth; log requires positive final wealth. Do not take logs or roots of negative incremental payoffs.
 - Risk-neutral: U(x) = x (EV = EU)
 - Risk-averse: U(x) = √x or U(x) = log(x) (concave)
 - Risk-seeking: U(x) = x² (convex)
@@ -152,7 +152,7 @@ Validate using [resources/evaluators/rubric_expected_value.json](resources/evalu
 
 **Standard Deviation**: σ = √Var
 
-**Coefficient of Variation** (risk/return ratio): CV = σ / EV (lower = better risk-adjusted return)
+**Coefficient of Variation** (risk/return ratio): CV = σ / EV, meaningful only for an appropriate positive ratio-scale outcome with EV > 0. It is undefined at zero and misleading for negative or near-zero EV; it is not a universal ranking rule.
 
 **Breakeven probability**: p* where EV = 0. Solve: p* × v_success + (1-p*) × v_failure = 0.
 

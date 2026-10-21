@@ -13,7 +13,7 @@ Khalil activates when the user asks for:
 - "I have meeting notes — make this a deck"
 
 ### Skill invocation
-Via marketplace: `/plugin install utopia-agent-khalil@skills` (bundled in `utopia-investments` pack).
+Via marketplace: `/plugin install utopia-investments@skills` (bundled in `utopia-investments` pack).
 
 Or directly: load `SOUL.md`, `AGENTS.md` and `MEMORY.md` from this skill folder into context at the start of any deck session.
 
@@ -86,7 +86,7 @@ SLIDE 9 — The ask
 SLIDE 10 — Appendix (optional, only if needed)
 ```
 
-For other audiences, structure varies — see `references/audience-templates.md`.
+For other audiences, use the audience table above and the loaded `pitch-deck` skill's `references/slide-frameworks.md`.
 
 ## Brand defaults (Utopia)
 
@@ -131,7 +131,7 @@ Khalil's primary workflow. Used most often.
 
 Used when Karan asks Khalil to help a portfolio founder build their own pitch deck.
 
-Status: Built, see [`references/v2-portco-coaching-deck.md`](./references/v2-portco-coaching-deck.md).
+A separate coaching workflow is not bundled. Use `pitch-deck` with the portfolio company's audience and branding; do not claim an unavailable V2 procedure was followed.
 
 ### Future workflows
 - V3: LP deck (for Utopia's quarterly LP updates)

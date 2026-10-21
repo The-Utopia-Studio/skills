@@ -38,10 +38,11 @@ Map out all data your product collects:
 - **Special categories**: Does the product handle health data, financial data, children's data, biometric data?
 
 ### Step 3: Identify Applicable Laws
+Verify current requirements using primary official authorities for the relevant jurisdiction and processing activities. Record the source and date; mark unresolved applicability as a review question rather than inventing a rule.
 Note which laws apply:
-- **GDPR** (EU users): Stricter; requires explicit consent, data subject rights, DPA
+- **GDPR**: Assess applicability, lawful basis for each purpose, data-subject rights and processor arrangements against current official guidance; do not assume every processing purpose requires consent.
 - **CCPA/CPRA** (California): Consumer rights to access, delete, opt-out
-- **Other US states**: Laws like VIPA, TDPSA emerging
+- **Other jurisdictions**: Verify current applicable laws and thresholds against official authority; do not rely on an undated list.
 - **Industry-specific**: HIPAA (health), GLBA (finance), FERPA (education)
 - Determine if your product serves international users
 
@@ -141,7 +142,7 @@ How long you keep data:
 - What cookies and tracking tools are used
 - Why each is used (functionality, analytics, marketing)
 - How to manage/disable cookies
-- Whether explicit consent is required (GDPR requires it for non-essential cookies)
+- Whether consent is required for each technology under the applicable jurisdiction’s current rules, verified against primary official guidance
 
 #### 10. Security
 Measures taken to protect data:
@@ -203,7 +204,7 @@ Quick reference:
 - Contact information
 
 ### Part 2: Full Privacy Policy Document
-A complete, ready-to-publish privacy policy.
+A complete draft for factual verification and jurisdiction-specific review before publication.
 
 ### Part 3: Customization and Compliance Notes
 Guidance on:
@@ -217,7 +218,7 @@ Guidance on:
 
 ## Key Compliance Reminders
 
-- **GDPR compliance** (if serving EU users): Requires explicit consent, clear rights, DPA with processors, DPIA for risky processing
+- **GDPR assessment**: Verify territorial applicability, lawful bases, rights, processor terms and whether an impact assessment is required. Cite the applicable official authority rather than asserting blanket consent requirements.
 - **CCPA/CPRA** (California users): Requires rights to access, delete, opt-out; detailed disclosures; no discrimination for exercising rights
 - **Transparency**: Users must understand what data is collected, how it's used, and who can access it
 - **Accuracy**: Keep your policy updated as data practices change

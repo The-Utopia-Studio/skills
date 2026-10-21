@@ -21,6 +21,11 @@ Efecto is a real-time web design tool that AI agents control programmatically. Y
 
 ---
 
+## Content accuracy
+
+Use user-provided or verified content for real deliverables. Templates below are fictional layout examples, not evidence: replace sample metrics, certifications, testimonials, customer logos, dates, venues and prices with supported content or clearly labeled placeholders. Never invent a person's employment, achievements, qualifications, or endorsements. Keep fictional mockup content visibly labeled as fictional and separate from production content.
+
+
 ## Setup
 
 This skill requires the **Efecto MCP server**. Check if it's available by looking for tools like `create_session`, `add_section`, or `get_document` in your tool list.

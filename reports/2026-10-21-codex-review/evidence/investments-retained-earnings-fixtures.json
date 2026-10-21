@@ -1,0 +1,38 @@
+[
+  {
+    "input": {
+      "opening_RE": 100,
+      "net_income_after_SBC": 20,
+      "dividends": 5,
+      "equity_settled_SBC": 3
+    },
+    "before_RE": 118,
+    "correct_RE": 115,
+    "noncash_APIC_credit": 3,
+    "before_overstatement": 3
+  },
+  {
+    "input": {
+      "opening_RE": 0,
+      "net_income_after_SBC": -10,
+      "dividends": 0,
+      "equity_settled_SBC": 4
+    },
+    "before_RE": -6,
+    "correct_RE": -10,
+    "noncash_APIC_credit": 4,
+    "before_overstatement": 4
+  },
+  {
+    "input": {
+      "opening_RE": 200,
+      "net_income_after_SBC": 40,
+      "dividends": 10,
+      "equity_settled_SBC": 0
+    },
+    "before_RE": 230,
+    "correct_RE": 230,
+    "noncash_APIC_credit": 0,
+    "before_overstatement": 0
+  }
+]

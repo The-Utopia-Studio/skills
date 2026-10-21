@@ -1,0 +1,98 @@
+[
+  {
+    "case": "selection-evidence",
+    "input": {
+      "p": 0.8,
+      "a": 0.5,
+      "b": 0.5
+    },
+    "posterior_via_odds": 0.8,
+    "independent_expected": 0.8
+  },
+  {
+    "case": "selection-evidence",
+    "input": {
+      "p": 0.6,
+      "a": 0.2,
+      "b": 0.8
+    },
+    "posterior_via_odds": 0.27272727272727265,
+    "independent_expected": 0.2727272727272727
+  },
+  {
+    "case": "selection-evidence",
+    "input": {
+      "p": 0.2,
+      "a": 0.9,
+      "b": 0.1
+    },
+    "posterior_via_odds": 0.6923076923076923,
+    "independent_expected": 0.6923076923076923
+  },
+  {
+    "case": "ab-sizing",
+    "p0": 0.1,
+    "delta": 0.02,
+    "root_n_per_arm": 3841
+  },
+  {
+    "case": "ab-sizing",
+    "p0": 0.5,
+    "delta": 0.05,
+    "root_n_per_arm": 1565
+  },
+  {
+    "case": "ab-sizing",
+    "p0": 0.02,
+    "delta": 0.005,
+    "root_n_per_arm": 13809
+  },
+  {
+    "case": "agent-cost",
+    "input": [
+      100000,
+      10000,
+      3,
+      15,
+      5,
+      0.02,
+      2,
+      1,
+      5
+    ],
+    "root_cost": 2.55,
+    "root_CPO": 0.51
+  },
+  {
+    "case": "agent-cost",
+    "input": [
+      12000,
+      1500,
+      1,
+      4,
+      10,
+      0.1,
+      0,
+      2,
+      3
+    ],
+    "root_cost": 1.018,
+    "root_CPO": 0.3393333333333333
+  },
+  {
+    "case": "agent-cost",
+    "input": [
+      5000,
+      1000,
+      2,
+      10,
+      5,
+      0.01,
+      10,
+      1,
+      0
+    ],
+    "root_cost": 10.07,
+    "root_CPO": null
+  }
+]

@@ -31,10 +31,14 @@ If the user provides data files (CSV, Excel, or analytics exports), read and ana
 
 2. **Validate the test setup**:
    - **Sample size**: Is the sample large enough for the expected effect size?
-     - Use the formula: n = (Z²α/2 × 2 × p × (1-p)) / MDE²
-     - Flag if the test is underpowered (<80% power)
+     - Plan with baseline conversion `p0`, absolute minimum detectable difference `delta`, target `p1 = p0 + delta`, two-sided alpha (normally 0.05), and desired power (normally 0.80). Validate both probabilities are in (0, 1), delta is nonzero, and the allocation is 1:1 before using this approximation.
+     - Let `pbar = (p0 + p1)/2`, `z_alpha = Φ⁻¹(1-alpha/2)`, and `z_power = Φ⁻¹(power)`. Required sample **per arm**, rounded up:
+       `n = (z_alpha*sqrt(2*pbar*(1-pbar)) + z_power*sqrt(p0*(1-p0)+p1*(1-p1)))² / delta²`.
+     - This is a normal approximation for independent binary outcomes and equal allocation. Use an appropriate power calculation for unequal allocation, clustering, repeated measures or rare events. Do not apply this formula to revenue means.
+     - Compare enrollment to the prespecified target/MDE; do not use observed-effect post-hoc power to declare a completed experiment adequate.
    - **Duration**: Did the test run for at least 1-2 full business cycles?
-   - **Randomization**: Any evidence of sample ratio mismatch (SRM)?
+   - **Randomization**: Test sample ratio mismatch (SRM) against the planned allocation; investigate an SRM failure before interpreting treatment effects.
+   - **Analysis plan**: Check the prespecified stopping rule, primary metric, and corrections for multiple variants/metrics or repeated looks. A nominal p-value is not valid evidence after unadjusted peeking.
    - **Novelty/primacy effects**: Was there enough time to wash out initial behavior changes?
 
 3. **Calculate statistical significance**:
@@ -55,10 +59,10 @@ If the user provides data files (CSV, Excel, or analytics exports), read and ana
 
    | Outcome | Recommendation |
    |---|---|
-   | Significant positive lift, no guardrail issues | **Ship it** — roll out to 100% |
+   | Significant positive lift, valid setup and stopping rule, meaningful effect, no guardrail issues | **Ship candidate** — assess rollout risk and uncertainty |
    | Significant positive lift, guardrail concerns | **Investigate** — understand trade-offs before shipping |
-   | Not significant, positive trend | **Extend the test** — need more data or larger effect |
-   | Not significant, flat | **Stop the test** — no meaningful difference detected |
+   | Not significant, positive trend | **Inconclusive** — continue only to a prespecified stopping point; otherwise design a new adequately powered test |
+   | Not significant, flat | **Inconclusive** — use the confidence interval to assess plausible effects; absence of significance does not establish equivalence |
    | Significant negative lift | **Don't ship** — revert to control, analyze why |
 
 6. **Provide the analysis summary**:

@@ -49,6 +49,7 @@ Bands:
 | Panels followed unprompted | ≥ 80% | Legible enough to build the flow |
 | Panels followed unprompted | < 80% | Redraw; do not advance |
 | Panels carrying the decision | 1 | Workflow is decomposed |
+| Panels carrying the decision | 2 | Review needed: clarify whether these are two independent decisions or one decision split across panels; do not declare decomposed yet |
 | Panels carrying the decision | > 2 | Not decomposed yet; the job is still fuzzy |
 
 Legibility % = (panels not blocked by a legibility gap) / N. A decision-point pause does NOT count against legibility — the operator followed the panel and reached for off-page judgment, which is the finding, not a failure.

@@ -73,7 +73,7 @@ Validate using [resources/evaluators/rubric_hypotheticals_counterfactuals.json](
 - **Best for**: Learning from past decisions, understanding what mattered
 - **Process**: (1) Identify decision, (2) Imagine alternative, (3) Trace different outcome, (4) Identify causal factor
 - **When**: Post-mortem, retrospective, learning from success/failure
-- **Output**: Causal insight (X caused Y because...)
+- **Output**: Causal hypothesis and tests needed; an imagined alternative does not establish causation
 
 **Pattern 3: Three Scenarios (Optimistic, Baseline, Pessimistic)**
 - **Format**: Describe best case, expected case, worst case futures
@@ -115,7 +115,7 @@ Validate using [resources/evaluators/rubric_hypotheticals_counterfactuals.json](
 
 4. **Specify mechanism**: Don't just state outcome ("sales would be higher"), explain HOW ("sales would be higher because lower price → higher conversion → more customers despite lower margin").
 
-5. **Assign probabilities** (scenarios): Don't treat all scenarios as equally likely. Estimate rough probabilities (e.g., 60% baseline, 25% pessimistic, 15% optimistic). Avoids equal-weight fallacy.
+5. **Probability discipline:** Assign probabilities only to clearly defined mutually exclusive, collectively exhaustive outcomes with a defensible basis. Exploratory scenario narratives may remain unweighted; neither equal weights nor forced unequal weights are evidence.
 
 6. **Time horizon clarity**: Specify WHEN in future. "Product fails" is vague. "In 6 months, adoption <1000 users" is concrete. Enables tracking.
 

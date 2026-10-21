@@ -18,37 +18,24 @@ supersedes: none
 
 ## What it does
 
-Turns "what should we measure?" into a one-page scorecard with a single North Star, an
-AARRR skeleton, a retention curve that must flatten, and a cost-per-outcome to the cent.
-This is a thin wrapper: it does not re-teach the North Star framework, AARRR, cohorts, or
-unit economics — those live in the M9 retention pack and are routed to, not restated. Its
-whole job is the two things the generic frameworks skip: it treats the **flattening
-retention curve as a gate** the North Star must pass before it counts, and it forces a
-**cost-per-outcome** because an AI product pays a variable cost per outcome that can invert
-the margin as volume grows.
+Builds a one-page scorecard with an outcome-focused North Star, an AARRR skeleton, a cohort retention diagnostic and cost per outcome. Keep the metric's definition separate from its current performance. A useful metric can reveal weak retention; a short flat or rising curve does not establish PMF.
 
 ## The Icarus reframe
 
-Most metric frameworks let a fellow name a North Star and stop. Icarus says the North Star
-is a lie until the retention curve flattens: a cohort curve that decays toward zero means
-no product-market fit, and any headline number rising above it is rising on acquisition
-spend, not on a product people come back to. Retention is the truth; everything else is
-diagnostic. And every North Star outcome carries a variable cost — inference, review time,
-infra — so Icarus prices it to the cent and checks that margin per outcome holds or widens
-as volume scales, not just that the outcome count goes up.
+Compare retention across mature cohorts with counts and uncertainty, and price inference, review and infrastructure in consistent units. Do not equate a descriptive curve shape with proof of permanent value. Track the contribution per outcome as volume and model requirements change.
 
 ## When to use / When NOT
 
 Use when: a product is live and the fellow needs to pick the few numbers that matter; a
 headline metric looks great and the fellow wants to know if it is real; a North Star has
-been proposed and needs the retention gate and a cost check before it is adopted.
+been proposed and needs the retention diagnostic and a cost check.
 
 | Not this skill | Use instead | Why |
 |---|---|---|
 | "Design the after-launch loop — ship, observe, promote autonomy by eval" | `refine-flywheel` | That is the improvement cadence. This picks and validates the metrics the loop watches; it does not run the loop. |
 | "Mine our production traces / turn usage logs into discovery interviews" | `trace-to-interview` | That reads traces as discovery. This scores metrics; a trace is not a metric. |
-| "Build the metrics dashboard, set the alert thresholds, instrument the events" | `metrics-dashboard`, `analytics-tracking` (M9) | Those render and instrument. This decides what to render and applies the truth test; route the build there. |
-| "Work out CAC, LTV, payback, contribution margin" | `saas-economics-efficiency-metrics` (M9) | That is full unit economics. This needs only cost-per-outcome and margin-per-outcome; route the rest there. |
+| "Build the metrics dashboard, set the alert thresholds, instrument the events" | `metrics-dashboard`, `analytics-tracking` | Those render and instrument. This decides what to render and applies the truth test; route the build there. |
+| "Work out CAC, LTV, payback, contribution margin" | `saas-economics-efficiency-metrics` | That is full unit economics. This needs only cost-per-outcome and margin-per-outcome; route the rest there. |
 
 If the input names no product and no outcome, do not invent metrics. Ask the one question
 that unblocks it — what single outcome does this product deliver for the customer? — or
@@ -62,7 +49,7 @@ Copy this checklist:
 Metrics That Matter progress:
 - [ ] Step 1: Name the business game, the one North Star and its 3-5 input metrics
 - [ ] Step 2: Fill the AARRR skeleton — one metric per stage, retention load-bearing
-- [ ] Step 3: Run the retention truth test — classify the curve, gate the North Star
+- [ ] Step 3: Run the retention diagnostic — classify the curve and report uncertainty
 - [ ] Step 4: Price cost-per-outcome to the cent and check margin direction at scale
 - [ ] Step 5: Vanity audit — tag every metric, kill the totals
 - [ ] Step 6: Run the kill line before returning
@@ -97,9 +84,9 @@ section C.
 |---|---|---|
 | Acquisition | new activated teams / week | input — is the top filling? |
 | Activation | % reaching first accepted outcome | input — does value land? |
-| **Retention** | **cohort % still delivering the outcome at week N** | **the truth — Step 3 gates on this** |
+| **Retention** | **cohort % still delivering the outcome at week N** | **diagnostic — Step 3 interprets this** |
 | Referral | % of teams that pull in another | input — does it spread? |
-| Revenue | expansion / net revenue retention | money-moved (1.0) confirmation |
+| Revenue | expansion / net revenue retention | documented revenue basis; distinguish collection from recognition |
 
 **Step 3 — the retention truth test.** Plot the newest full cohort's retention (share of
 the cohort still delivering the North Star outcome) across equal periods and classify the
@@ -107,17 +94,11 @@ tail:
 
 | Curve shape | Reading | North Star verdict |
 |---|---|---|
-| Decays toward 0 | Leaky bucket. No PMF. The headline rides acquisition. | **INVALID** — vanity North Star |
-| Flattens at a plateau > 0 | A stable fraction stays. That plateau is the business. | **VALID** — record the plateau height |
-| Smiles (dips then rises) | Resurrection + expansion beat churn. Strong PMF. | **VALID** — strongest |
+| Decays toward 0 | Investigate retention and acquisition dependence. | Outcome metric may still be useful; performance is weak. |
+| Flattens above 0 | Potential retained segment. | Provisional evidence; record maturity, denominators and uncertainty. |
+| Smiles (dips then rises) | Investigate reactivation, seasonality and measurement changes. | Does not by itself prove PMF. |
 
-Flatten test [Assumption] on the exact points, the shape rule is the law: the curve has
-flattened when the retention change between the last two equal-length periods is within
-~1 percentage point of zero and the plateau is above zero. Still dropping ≥ ~2 points per
-period in the tail = not yet flat = North Star INVALID. Route the cohort mechanics (how to
-cut vintages, triangle tables) to `saas-revenue-growth-metrics`; this skill only reads the shape and
-renders the verdict. A North Star that has never been checked against a flattening curve is
-not a North Star — it is a guess.
+A last-two-period change within one percentage point is only a descriptive screening heuristic. A one-person cohort can be perfectly flat without supporting a population claim. Compare multiple mature cohorts over a relevant usage horizon, report sample sizes and uncertainty, and check instrumentation. Declining performance does not make an otherwise well-defined outcome metric invalid. Route cohort construction to `saas-revenue-growth-metrics`.
 
 **Step 4 — cost-per-outcome to the cent.** One North Star outcome has a variable cost. Sum
 it to the cent **once you have the token / compute rate and the price**; until you do, the
@@ -126,8 +107,8 @@ resolves it. Then check its direction as volume grows.
 
 | Line | How to get it | Example |
 |---|---|---|
-| Inference / API per outcome | tokens × rate, all model calls in the pipeline | $0.__ |
-| Human-in-loop per outcome | review minutes × loaded rate | $0.__ |
+| Inference / API per outcome | sum(input tokens × input rate + output tokens × output rate) / 1,000,000 for rates per million tokens | $0.__ |
+| Human-in-loop per outcome | review minutes / 60 × loaded hourly rate | $0.__ |
 | Infra / retrieval per outcome | vector + compute allocated per outcome | $0.__ |
 | **Cost per outcome** | sum above, to the cent | **$0.__** |
 | Price per outcome | what the customer pays per outcome | $_.__ |
@@ -150,15 +131,7 @@ is a total is an automatic KILL (see the kill line).
 
 ## Evidence standard
 
-Money moved 1.0 → behaviour observed 0.7 → artefact shown 0.5 → verbal commitment 0.3 →
-opinion 0.1. Retention is exactly why this ladder exists: a cohort still delivering the
-outcome is **behaviour observed (0.7)**, and expansion / net revenue retention is **money
-moved (1.0)** — those, and only those, validate the North Star. A North Star propped up by
-a survey, an NPS, or "users say they love it" is **opinion (0.1)** and cannot pass Step 3
-no matter how high the number. The bar: the North Star is adopted only when a real cohort
-curve has flattened (≥ 0.7) and cost-per-outcome is a `[Fact]` computed from real usage,
-not an estimate. Tag every number `[Fact]`, `[Assumption]`, or `[Hypothesis]`; invent none
-the fellow did not give.
+Tag measured observations, estimates and hypotheses separately. Record cohort denominators, maturity, outcome definition and instrumentation. Curve shape is descriptive evidence, not a calibrated PMF probability. Revenue recognition/NRR is not automatically cash collected; cite the accounting basis and distinguish paid spend from unpaid invoices or commitments. Compute costs from actual usage and explicit rates, or label estimates and missing inputs. Never invent figures to fill a scorecard.
 
 ## Gotchas
 
@@ -182,7 +155,7 @@ the fellow did not give.
 
 [examples/sample.md](examples/sample.md) — Durian Labs' shift-handover drafter: the
 proposed North Star ("documents drafted", a vanity total) reframed to accepted handovers
-per active team per week, gated by a team-level retention curve that flattens at ~55% by
+per active team per week, accompanied by an illustrative team-level retention curve near55% by
 week 8, with cost-per-outcome priced at $0.14 against a $2.00 price, margin holding as
 volume grows.
 
@@ -192,17 +165,17 @@ volume grows.
   refine). This skill chooses and validates the numbers the loop watches; it does not run
   the loop.
 - `trace-to-interview` — reads production traces as discovery. Composes with this: the
-  retention truth test says *whether* the product works; trace-mining says *why* users
+  retention diagnostic describes observed persistence; trace-mining proposes hypotheses about why users
   churn out of the tail.
 - `metrics-dashboard`, `expansion-retention`, `saas-revenue-growth-metrics`,
-  `saas-economics-efficiency-metrics` (M9 retention pack) — the depth this skill routes to
+  `saas-economics-efficiency-metrics` — the depth this skill routes to
   for the dashboard build, retention plays, cohort mechanics, and unit economics. This
-  skill's net-new over all of them is the flattening-retention gate and cost-per-outcome to
+  skill's net-new over all of them is the retention diagnostic and cost-per-outcome to
   the cent.
 - `alignment-values-north-star` — a team's *mission* North Star and values, not a metric.
 - `value-based-pricing` — sets price per outcome; this checks cost per outcome sits under it.
 - `guardrail-design` (07) — when a failure mode's cost-of-error is a safety or regulatory cost
   (a missed hazard, a breach), that cost sizes the *guardrail*, not the scorecard. Route it there;
   this skill stays on cost- and value-per-outcome (see golden 03: Barrier's cost-of-a-missed-hazard).
-- It is the truth-test gate at the metrics step of the refine stage, and the home of the North Star Framework (business games, 7 criteria, input metrics).
+- It is the diagnostic at the metrics step of the refine stage, and the home of the North Star Framework (business games, 7 criteria, input metrics).
 - Further reading: [The North Star Framework 101](https://www.productcompass.pm/p/the-north-star-framework-101), [AARRR Pirate Metrics](https://www.productcompass.pm/p/aarrr-pirate-metrics).

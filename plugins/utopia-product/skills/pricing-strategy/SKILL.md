@@ -80,11 +80,11 @@ Most products end up hybrid (freemium + upgrade, subscription + usage). Pricing 
 Price should be based on value delivered, not cost to serve:
 
 - **Customer's perceived value** — The ceiling
-- **Your price** — Between alternatives and perceived value
-- **Next best alternative** — The floor for differentiation
+- **Your price** — Test willingness to pay, differentiation, costs and margin constraints
+- **Next best alternative** — A reference price, not a mandatory price floor
 - **Your cost to serve** — Only a baseline, not the basis
 
-**Key insight:** Price between the next best alternative and perceived value.
+**Key insight:** The next best alternative anchors comparison; a lower price can be deliberate. Validate willingness to pay and sustainable delivery economics rather than imposing that anchor as a floor.
 
 ---
 

@@ -1,10 +1,10 @@
 # Amplification ladders
 
-Read this when a gate criterion scores "no". Each ladder runs weakest to strongest. Climb until the criterion bites, then re-score.
+Read this when a gate criterion scores "no". Each ladder runs weakest to strongest. Use only defensible improvements, then re-score. Stop with a provisional draft and evidence gaps when inputs are unavailable.
 
 ## Risk (criterion 3)
 
-The buyer should not be able to lose. Climb until that's literally true:
+Reduce buyer risk within approved terms and delivery capacity. No offer removes every cost or risk. These are options, not a mandatory escalation:
 
 1. A bare claim — "we get results"
 2. Money back if unhappy
@@ -12,7 +12,7 @@ The buyer should not be able to lose. Climb until that's literally true:
 4. Work free until the first win lands
 5. The value is delivered free, in full, before any commitment
 
-Rungs 4 and 5 are the only ones that reliably work when you have no brand. If guarantees are contractually banned, rung 5 is the answer: the free asset must be so complete that judging it costs the prospect nothing.
+Choose a sustainable option supported by evidence. If guarantees are prohibited, describe a bounded deliverable and its limitations; free work still costs the buyer attention and may require permissions. Do not imply guaranteed business results.
 
 ## Proof (criterion 6)
 

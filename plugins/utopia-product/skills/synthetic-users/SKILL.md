@@ -21,7 +21,7 @@ Takes a concept, a message, or a flow you are about to take to real customers, a
 
 ## The Icarus reframe
 
-The generic move is to prompt an LLM to role-play a persona and ask it whether it likes your idea. It will say yes, because a base model agrees, never pays, and never no-shows. That is not a test; it is a machine built to flatter you. The Icarus version fixes two things. First, ground every panellist in your proprietary corpus, not the model's prior — a persona a generic prompt could invent only tells you what every competitor's model already believes about your market. Second, run it as a kill screen, never a validation: positive signal is null, only negative signal (confusion, an existing workaround, a flow that breaks) may transfer to a real user, and even then it caps at [Hypothesis]. Synthetic output sits below opinion on the evidence ladder. Its whole value is spending a real interview well, not replacing it.
+The generic move is to prompt an LLM to role-play a persona and ask it whether it likes your idea. It will say yes, because a base model agrees, never pays, and never no-shows. That is not a test; it is a machine built to flatter you. The Icarus version fixes two things. First, ground every panellist in your proprietary corpus, not the model's prior — a persona a generic prompt could invent only tells you what every competitor's model already believes about your market. Second, run it as a kill screen, never a validation: positive signal is null, negative signal (confusion, an existing workaround, a flow that breaks) also requires a real-user check before it can be generalized, and even then it caps at [Hypothesis]. Synthetic output sits below opinion on the evidence ladder. Its whole value is spending a real interview well, not replacing it.
 
 ## When to use / When NOT
 
@@ -76,8 +76,8 @@ Pose the concept, message, or flow to each grounded panellist and capture the tr
 
 | Synthetic response | Read it as | Action |
 |---|---|---|
-| Confusion — can't parse the message / value | Kill signal, likely transfers | Log it; it is the highest-value output here |
-| Names an existing workaround from the corpus | Kill signal, likely transfers (the corpus is talking) | Log it; the concept may be competing with a free habit |
+| Confusion — can't parse the message / value | Candidate issue, transfer unverified | Log it; it is the highest-value output here |
+| Names an existing workaround from the corpus | Candidate issue, transfer unverified (the corpus is talking) | Log it; the concept may be competing with a free habit |
 | Stalls at a specific flow step | Kill/revise signal | Log the exact step |
 | Flat "no / I wouldn't" | Weak kill signal | Log, but a real check is cheap; do not over-weight |
 | "Yes / I'd use this / great idea" | **Null** | Discard. Acquiescence + never-pay. Reading this as a win is the whole trap. |
@@ -104,7 +104,7 @@ Three outcomes. There is no fourth.
 
 | Verdict | When | Next |
 |---|---|---|
-| **KILL** | A corpus-grounded panellist could not grasp the concept, or named a cheaper existing path | Drop or rethink before spending a real interview. One real confirmation is still worth it before you fully bury it. |
+| **KILL** | A corpus-grounded panellist could not grasp the concept, or named a cheaper existing path | Pause or revise the concept for the next real check. Do not permanently reject it on synthetic output alone; confirm the alleged failure with a real target user or direct corpus evidence. |
 | **REVISE** | The message or flow broke at a specific, nameable point | Fix that point and re-run the panel — it is cheap |
 | **PROMOTE** | It survived the synthetic kill screen | It has *earned a real interview* — `tacit-knowledge-interview` / `discovery-interview-prep`. Surviving synthetic is a ticket to spend the real interview, not validation. |
 
@@ -118,9 +118,9 @@ Which synthetic signals transfer to a real user:
 
 | Synthetic signal | Transfers? | Why |
 |---|---|---|
-| Confusion / can't parse the message | Often | Comprehension rides on language, where the lies bite least. A message a grounded synthetic can't parse, a real user probably can't either. |
+| Confusion / can't parse the message | Unknown until tested | Model confusion can be a false negative. Test the specific wording with real target users; it does not establish human confusion. |
 | Names a workaround already in the corpus | Often | It is echoing recorded behaviour, not the model's prior |
-| Relative ranking of two framings | Direction only | Trust which one wins, never by how much — magnitude is a lie |
+| Relative ranking of two framings | Direction only | Use the ranking only to propose a real comparison; neither its direction nor magnitude is validated |
 | "I would use this" / enthusiasm | No | Over-agree + never-pay + never-no-show, stacked |
 | "I would pay $X" | Never | Never-pay. WTP is money-moved, and this is a simulation. |
 | A tidy reason "why" they'd choose | No | Over-rationalise |

@@ -23,6 +23,10 @@ scenarios:
   - "I need a SaaS efficiency check for our board deck"
 ---
 
+## Calculation and evidence guardrails
+
+Match periods and use decimal margins/churn in formulas. Count each cost once: processing/support already in COGS must not be added again. Zero revenue/customers/CAC or nonpositive contribution makes the associated ratio undefined; zero/negative burn has no finite static runway, so use a cash forecast. The simple churn LTV assumes positive stable monthly logo churn, stable margin and no expansion; zero or negative churn does not prove infinite LTV. Benchmarks below are illustrative screening heuristics, not universal investment rules. Revenue is not cash collection; net income includes nonoperating items and taxes. State the profit definition used in Rule of 40. The two payback labels below use the same gross-profit formula; revenue payback is CAC / monthly ARPU.
+
 ## Purpose
 
 Determine whether your SaaS business model is fundamentally viable and capital-efficient. Use this to calculate unit economics, assess profitability, manage cash runway, and decide when to scale vs. optimize. Essential for fundraising, board reporting, and making smart investment trade-offs.
@@ -47,7 +51,7 @@ Metrics that measure profitability at the customer level—the foundation of sus
 - **Benchmark:** Varies by model—Enterprise $10K+ ok; SMB <$500 target
 - **Include:** Marketing spend, sales salaries, tools, commissions
 
-**LTV (Lifetime Value)** — Total revenue expected from one customer over their lifetime.
+**LTV (Lifetime Value)** — Specify revenue LTV versus gross-profit LTV; use gross-profit LTV for CAC comparisons.
 - **Why PMs care:** Tells you what you can afford to spend on acquisition. Higher LTV enables premium channels and longer payback periods.
 - **Formula (simple):** `ARPU × Average Customer Lifetime (months)`
 - **Formula (better):** `ARPU × Gross Margin % / Churn Rate`
@@ -91,7 +95,7 @@ Metrics that measure how efficiently you use cash to grow the business.
 **Burn Rate** — Cash consumed per month.
 - **Why PMs care:** Determines what you can build and when you need funding. High burn requires aggressive revenue growth.
 - **Formula (Gross Burn):** `Monthly Cash Spent (all expenses)`
-- **Formula (Net Burn):** `Monthly Cash Spent - Monthly Revenue`
+- **Formula (Net Burn):** `Monthly Cash Spent - Monthly Cash Collected`
 - **Benchmark:** Net burn <$200K manageable for early stage; >$500K needs clear path to revenue
 
 **Runway** — Months until cash runs out.
@@ -107,7 +111,7 @@ Metrics that measure how efficiently you use cash to grow the business.
 
 **Net Income (Profit Margin)** — Actual profit or loss after all expenses.
 - **Why PMs care:** True bottom line. Are you making money? Can you self-fund growth?
-- **Formula:** `Revenue - All Expenses (COGS + OpEx)`
+- **Formula:** `Revenue - COGS - OpEx + Net Nonoperating Income - Income Tax Expense`
 - **Benchmark:** Early SaaS often negative (growth mode); mature should be 10-20%+ margin
 
 **Working Capital Impact** — Cash timing differences between revenue recognition and cash collection.
@@ -309,8 +313,8 @@ Variable Costs include:
 
 **Example:**
 - Revenue: $1,000,000
-- COGS: $200,000
-- Variable Support: $50,000
+- COGS excluding the separately listed processing: $200,000
+- Variable Support outside COGS: $50,000
 - Payment Processing: $30,000
 - Contribution Margin = ($1M - $280K) / $1M = 72%
 
@@ -326,12 +330,12 @@ Variable Costs include:
 #### Burn Rate
 ```
 Gross Burn Rate = Total Monthly Cash Spent
-Net Burn Rate = Total Monthly Cash Spent - Monthly Revenue
+Net Burn Rate = Total Monthly Cash Spent - Monthly Cash Collected
 ```
 
 **Example:**
 - Monthly Expenses: $800,000
-- Monthly Revenue: $400,000
+- Monthly Cash Collected: $400,000
 - Gross Burn: $800,000/month
 - Net Burn: $400,000/month
 
@@ -387,7 +391,8 @@ G&A as % of Revenue
 
 #### Net Income (Profit Margin)
 ```
-Net Income = Revenue - COGS - OpEx
+Operating Income = Revenue - COGS - OpEx
+Net Income = Operating Income + Net Nonoperating Income - Income Tax Expense
 Profit Margin % = Net Income / Revenue × 100
 ```
 
@@ -395,7 +400,8 @@ Profit Margin % = Net Income / Revenue × 100
 - Revenue: $10M
 - COGS: $2M
 - OpEx: $9M
-- Net Income = $10M - $2M - $9M = -$1M (loss)
+- Operating Income = $10M - $2M - $9M = -$1M (loss)
+- Net Income = -$1M only if net nonoperating items and income tax expense are zero
 - Profit Margin = -10%
 
 **Quality checks:**
@@ -467,7 +473,7 @@ Magic Number = (Current Quarter Revenue - Previous Quarter Revenue) × 4 / Previ
 Track over time to see if you're scaling efficiently.
 
 **Example:**
-| Quarter | Revenue | YoY Growth | OpEx | YoY Growth | Leverage |
+| Quarter | Revenue | QoQ Growth | OpEx | QoQ Growth | Leverage |
 |---------|---------|------------|------|------------|----------|
 | Q1 2024 | $8M | - | $6M | - | - |
 | Q2 2024 | $10M | 25% | $7M | 17% | Positive ✅ |
@@ -528,36 +534,15 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 
 ---
 
-### Example 2: Good LTV:CAC, Bad Payback (Cash Trap)
+### Example 2: Long Payback and an Unsupported LTV Claim
 
-**Company:** EnterpriseCRM (enterprise sales motion)
+Illustrative enterprise motion: CAC $80,000, monthly ARPU approximately $2,614.38, gross margin 85%, average lifetime 48 months, runway nine months.
 
-**Unit Economics:**
-- CAC: $80,000
-- LTV: $400,000
-- LTV:CAC: 5:1 ✅ (looks great!)
-- Payback Period: 36 months 🚨 (terrible!)
-- Gross Margin: 85%
+- Monthly gross profit is approximately $2,222.22; gross-profit payback is 36 months.
+- Undiscounted gross-profit LTV is approximately $106,667, or 1.33× CAC—not a claimed $400,000/5× ratio. The latter would require additional supported expansion or a much longer lifetime.
+- Nine months of runway is a cash constraint. Forecast collections and outflows; annual prepayment improves timing but does not mechanically reduce gross-profit payback to 12 months.
 
-**Capital Efficiency:**
-- Monthly Net Burn: $2M
-- Runway: 9 months 🚨
-- Average Customer Lifetime: 48 months
-- Average Contract: $100K/year
-
-**Analysis:**
-- ⚠️ Great LTV:CAC ratio (5:1) masks cash problem
-- 🚨 36-month payback with 9-month runway = cash trap
-- 🚨 Takes 3 years to recover CAC, but only 9 months of cash
-- ⚠️ Customers stay 4 years, so economics work IF you have cash
-
-**Problem:** You'll run out of cash before recovering acquisition costs.
-
-**Actions:**
-1. Negotiate upfront annual payments (reduce payback to 12 months)
-2. Raise capital to extend runway (need 36+ months to sustain growth)
-3. Reduce CAC (shorten sales cycle, improve conversion)
-4. Target smaller deals with faster payback (mid-market vs. enterprise)
+Investigate lower CAC, improved gross contribution and funding needs before increasing acquisition. Do not assume that a high claimed LTV resolves near-term liquidity.
 
 ---
 
@@ -568,13 +553,13 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 **Quarter-over-Quarter Trend:**
 | Quarter | Revenue | OpEx | Net Income | Revenue Growth | OpEx Growth |
 |---------|---------|------|------------|----------------|-------------|
-| Q1 | $1.0M | $800K | -$800K | - | - |
-| Q2 | $1.3M | $1.2M | -$1.2M | 30% | 50% 🚨 |
-| Q3 | $1.6M | $1.8M | -$1.8M | 23% | 50% 🚨 |
+| Q1 | $1.0M | $800K | $0 | - | - |
+| Q2 | $1.3M | $1.2M | -$160K | 30% | 50% 🚨 |
+| Q3 | $1.6M | $1.8M | -$520K | 23% | 50% 🚨 |
 
 **Analysis:**
 - 🚨 OpEx growing FASTER than revenue (50% vs. 23-30%)
-- 🚨 Losses accelerating ($800K → $1.8M in 2 quarters)
+- 🚨 Losses grow from $0 to $520K, assuming 20% COGS and zero nonoperating items/taxes
 - 🚨 Negative operating leverage (should be positive)
 - ⚠️ Scaling S&M and R&D without corresponding revenue growth
 
@@ -699,3 +684,5 @@ See `examples/` folder for detailed scenarios. Mini examples below:
 - **Ben Murray:** *The SaaS CFO* — Advanced unit economics modeling
 - **Jason Lemkin (SaaStr):** SaaS benchmarking research
 - **Brad Feld:** *Venture Deals* — Understanding investor perspective on unit economics
+
+Accounting distinction: cash flows and net income differ; see the [SEC financial statement guide](https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements). Examples are illustrative, with recognition/timing assumptions stated.

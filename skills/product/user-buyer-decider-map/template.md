@@ -1,7 +1,7 @@
 # Stakeholder-Role Map — fill-in
 
 Four people, not one. Fill every line. Tag claims `[Fact]` / `[Assumption]` / `[Hypothesis]`.
-Two auto-fails: (a) user and buyer collapsed with no self-serve reason; (b) a buyer with no budget line and no why-now.
+Two auto-fails: (a) user and buyer collapsed with no evidence of spending authority; (b) a buyer with no budget line and no why-now.
 
 ## 0. The situation, as the fellow said it
 > [paste the fellow's own words — "the customer" / "they" / "the market" language stays HERE and nowhere below]
@@ -18,7 +18,7 @@ Two auto-fails: (a) user and buyer collapsed with no self-serve reason; (b) a bu
 
 ## 2. Budget — buyer only
 - **Buyer's line item:** [name]  ·  **size:** [$__]  ·  **rung:** [money 1.0 / behaviour 0.7 / artefact 0.5 / verbal 0.3 / opinion 0.1]  `[Fact | Assumption]`
-- Other three roles: **no budget** (correct, not missing). A non-buyer with a budget is mis-filed — move them to Buyer.
+- Other roles: record verified authority or cross-reference the same person in Buyer; do not invent absent budgets.
 - If the buyer's rung = 0.1 → **STOP: not a buyer yet.** Cheapest check: [ask for the line item / ask what they pay the incumbent].
 
 ## 3. Why-now — one per role
@@ -38,7 +38,7 @@ A role with no why-now will not move this quarter. Write **none found** — do n
 
 ## 5. Collapse check
 - Any two roles the same person? [which two]
-- Is that collapse **REAL** (self-serve / sole trader / solo practitioner — say so and delete the roles above them) or an **ERROR** (you sold the user and never found the money)? [real | error + reason]
+- Is the overlap verified by actual authority and budget (including enterprise roles), or unsupported enthusiasm? [verified | unverified + evidence]
 
 ## 6. Path to yes
 > [champion] → [buyer, budget line] → [decision-maker, signature], with the fifth face neutralised at [step].
@@ -53,7 +53,7 @@ A role with no why-now will not move this quarter. Write **none found** — do n
 |---|---|
 | Four roles; buyer budget + why-now on ≥ artefact; champion found; fifth face named | MAP HOLDS |
 | Buyer budget or why-now rests on verbal/opinion | THIN MAP — probe named; buyer-clarity capped at 2 |
-| User = buyer without a self-serve reason, OR buyer has no budget line + no why-now | COLLAPSED MAP — not a buyer; buyer-clarity caps at 1 |
+| User = buyer without evidence of spending authority, OR buyer has no budget line + no why-now | COLLAPSED MAP — not a buyer; buyer-clarity caps at 1 |
 
 - **This map: __________**  — reason (name the binding hole, not just the label): [__________]
 

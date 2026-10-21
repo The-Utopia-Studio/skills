@@ -28,9 +28,9 @@ It does **not** cover:
 - `.eval_results` generation or publishing
 - PR creation or community-evals automation
 
-If the user wants to **run the same eval remotely on Hugging Face Jobs**, hand off to the `hugging-face-jobs` skill and pass it one of the local scripts in this skill.
+If the user wants to **run the same eval remotely on Hugging Face Jobs**, hand off to the `hf-cli` skill and pass it one of the local scripts in this skill.
 
-If the user wants to **publish results into the community evals workflow**, stop after generating the evaluation run and hand off that publishing step to `~/code/community-evals`.
+If the user wants to **publish results into the community evals workflow**, stop after generating the evaluation run and use the user-specified community-evals repository and its publishing instructions; do not assume a developer-local checkout exists. Ask for the target repository if it is missing.
 
 > All paths below are relative to the directory containing this `SKILL.md`.
 
@@ -57,7 +57,7 @@ nvidia-smi
 
 If `nvidia-smi` is unavailable, either:
 - use `scripts/inspect_eval_uv.py` for lighter provider-backed evaluation, or
-- hand off to the `hugging-face-jobs` skill if the user wants remote compute.
+- hand off to the `hf-cli` skill if the user wants remote compute.
 
 # Core Workflow
 
@@ -71,7 +71,7 @@ If `nvidia-smi` is unavailable, either:
    - `inspect-ai`: add `--limit 10` or similar.
    - `lighteval`: add `--max-samples 10`.
 4. Scale up only after the smoke test passes.
-5. If the user wants remote execution, hand off to `hugging-face-jobs` with the same script + args.
+5. If the user wants remote execution, hand off to `hf-cli` with the same script + args.
 
 # Quick Start
 
@@ -151,7 +151,7 @@ If the user wants to:
 - schedule recurring runs
 - inspect / cancel / monitor jobs
 
-then switch to the **`hugging-face-jobs`** skill and pass it one of these scripts plus the chosen arguments.
+then switch to the **`hf-cli`** skill and pass it one of these scripts plus the chosen arguments.
 
 # Task Selection
 
@@ -186,7 +186,7 @@ Multiple `lighteval` tasks can be comma-separated in `--tasks`.
 |---|---|
 | `< 3B` | consumer GPU / Apple Silicon / small dev GPU |
 | `3B - 13B` | stronger local GPU |
-| `13B+` | high-memory local GPU or hand off to `hugging-face-jobs` |
+| `13B+` | high-memory local GPU or hand off to `hf-cli` |
 
 For smoke tests, prefer cheaper local runs plus `--limit` or `--max-samples`.
 
@@ -196,7 +196,7 @@ For smoke tests, prefer cheaper local runs plus `--limit` or `--max-samples`.
   - reduce `--batch-size`
   - reduce `--gpu-memory-utilization`
   - switch to a smaller model for the smoke test
-  - if necessary, hand off to `hugging-face-jobs`
+  - if necessary, hand off to `hf-cli`
 - Model unsupported by `vllm`:
   - switch to `--backend hf` for `inspect-ai`
   - switch to `--backend accelerate` for `lighteval`

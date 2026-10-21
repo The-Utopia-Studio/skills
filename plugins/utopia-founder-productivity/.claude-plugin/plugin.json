@@ -1,7 +1,7 @@
 {
   "name": "utopia-founder-productivity",
   "description": "Founder Productivity — onboarding frameworks, legal docs, knowledge management, agents, and operator tools that don't fit GTM, Product, or Investments.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": { "name": "The Utopia Studio" },
   "keywords": ["founder","productivity","onboarding","ops","knowledge"]
 }

@@ -1,10 +1,11 @@
 ---
 name: outreach-execution
 description: >-
-  Use this skill when a signal, account list, or named contact needs outreach
+  Plan social selling, LinkedIn nurture and community engagement, or use this
+  skill when a signal, account list, or named contact needs outreach
   staged for sending: it loads sender voice and past approved messages, picks the
-  path, assigns the sender by account tier, adds executive multi-threading on
-  large accounts, runs a prior-relationship check, and stages a multi-step
+  path, assigns the sender by account tier, evaluates requested executive
+  multi-threading, runs a prior-relationship check, and stages a multi-step
   email/LinkedIn sequence with a written rationale for human approval. AI-drafted
   sequences to senior executives are never auto-sent; approved copy feeds the
   voice library. Includes email/LinkedIn/breakup frameworks and objection
@@ -15,6 +16,14 @@ metadata:
   version: 1.0.0
   adapted_from: swan-gtm/jeremy-hurst/outreach-execution
 ---
+
+## Social nurture planning mode
+
+For a warm-engagement plan, public community answer, or social-selling routine, start with `references/social-engagement-playbook.md` and `assets/social-nurture-checklist.md`. Produce a plan and draft examples with clear transition conditions. No connected email or LinkedIn sender is needed to plan public/community engagement; do not block a planning-only request on execution setup. Use supplied voice and evidence, mark missing proof, and never invent relationships or results.
+
+Preserve the ladder: listen → relevant public engagement → useful contribution → permission-appropriate DM → agreed follow-through. Community rules govern public posts and DMs; an invitation is required where unsolicited DMs are prohibited. Existing relationships and accepted connections change the next step. Private behavior may guide the angle but must not appear in copy.
+
+When the user requests an actual staged sequence, continue through sender/voice, relationship, suppression, duplicate and approval checks below. Planning, drafting and staging are distinct from sending. Check the no-contact list before proposing contact; a missing suppression check is a blocker for execution, not evidence of clearance. Never claim that a message was staged or sent without tool confirmation.
 
 ## Template placeholders
 
@@ -27,7 +36,7 @@ Replace every `{{...}}` before enabling. See `references/setup-customization-che
 - `{{LOW_TIER_SENDER}}` — Primary sequence sender for your lower account tiers
 - `{{TIER_MODEL}}` — Your account tiering scheme and which tiers count as "high" vs "low" (e.g. Gold/Diamond = high, Silver/Bronze = low)
 - `{{APPROVAL_OWNER}}` — The human who reviews and approves staged sequences before anything sends
-- `{{MULTITHREAD_THRESHOLD}}` — Company size above which an executive multi-thread must run in parallel with the primary sequence (default: >200 employees)
+- `{{MULTITHREAD_THRESHOLD}}` — Company size above which to consider an executive multi-thread, within the user's requested scope (default: >200 employees)
 - `{{LARGE_COMPANY_THRESHOLD}}` — Company size above which executives are never auto-contacted without approval (default: 100+ employees)
 - `{{VOICE_SOURCE}}` — Where sender voice lives: saved voice guides, past approved messages, or both
 - `{{RESOURCE_LIBRARY}}` — Single source of truth for shareable URLs: booking links, demo video, trust/security docs, one-pagers
@@ -95,7 +104,7 @@ The high-tier sender never sends primary sequences to low-tier accounts, and vic
 **Stage 3 — Multi-threading.**
 {{AWARENESS_SENDER}} is the multi-threading sender for executive-level contacts (C-level, VP-level) at any account.
 
-**Rule: any account above {{MULTITHREAD_THRESHOLD}} MUST have an executive multi-thread from {{AWARENESS_SENDER}} running in parallel alongside the primary sequence.** This fires automatically whenever a primary sequence is created for an account above the threshold. Multi-threading sequences always require {{APPROVAL_OWNER}}'s approval — no exceptions, including when triggered by a signup or trial event.
+**Scope rule:** above {{MULTITHREAD_THRESHOLD}}, assess whether an executive thread would help and record the recommendation. Do not add contacts or create a parallel sequence unless multi-threading is within the user's requested scope. Requested multi-threading still requires verified contacts, the designated sender and {{APPROVAL_OWNER}}'s approval, including for signup or trial events.
 
 ---
 
@@ -221,7 +230,7 @@ For a targeted play, in order:
 - MUST run the prior-relationship check before any pre-conversion play (Step 5).
 - MUST check for existing unsent sequences before creating a new one.
 - MUST attach a written outreach rationale to every staged sequence.
-- MUST run the {{MULTITHREAD_THRESHOLD}} executive multi-thread check on every new primary sequence.
+- MUST assess {{MULTITHREAD_THRESHOLD}} on a new primary sequence, but never expand the contact scope automatically.
 - NEVER auto-send outside the explicit {{AUTO_APPROVE_CARVEOUT}} — and never to senior executives at large companies, period.
 - NEVER include attachments. Use links from {{RESOURCE_LIBRARY}} if a resource is needed.
 - **LinkedIn connection requests are ALWAYS blank** (shared rule with cold-email). No message text, no connection note. No exceptions, across any sequence type, sender, or scenario. The signal-anchored first line goes in the first DM after acceptance.
@@ -234,7 +243,7 @@ For a targeted play, in order:
 
 ## What good looks like
 
-A great run produces one staged sequence per target with a hook the approver instantly recognizes as real: the rationale paragraph says who, why, and why-now in three sentences; the copy sounds unmistakably like the sender because it was drafted from their voice guide and past approved messages, not a template; the prior-relationship check caught the closed-lost history so the opener acknowledges it instead of pretending to be cold; the {{MULTITHREAD_THRESHOLD}} check quietly spawned the parallel executive thread and queued it for approval; connection requests went out blank; every follow-up carries a new angle and the last touch is a clean 25–50-word breakup; and nothing — nothing — reached a senior executive at a large company without a human clicking approve.
+A great run produces one staged sequence per target with a hook the approver instantly recognizes as real: the rationale paragraph says who, why, and why-now in three sentences; the copy sounds unmistakably like the sender because it was drafted from their voice guide and past approved messages, not a template; the prior-relationship check caught the closed-lost history so the opener acknowledges it instead of pretending to be cold; the {{MULTITHREAD_THRESHOLD}} check recorded whether an executive thread would help, and staged it only when within the requested scope; connection requests went out blank; every follow-up carries a new angle and the last touch is a clean 25–50-word breakup; and nothing — nothing — reached a senior executive at a large company without a human clicking approve.
 
 Mediocre looks like: sequences with "staying top of mind" as the hook, "just checking in" follow-ups, a private signal quoted back at the prospect ("saw you visited our site"), connection-request notes, markdown-wrapped calendar links rendering as duplicated text, duplicate sequences stacked on one contact, voice guessed from generic cold-email lore, or an auto-sent sequence to a VP because a trial trigger fired. Every one of those is a rule in this skill being ignored.
 

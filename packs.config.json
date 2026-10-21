@@ -2,7 +2,7 @@
   "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF).",
   "marketplace": {
     "name": "skills",
-    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 254 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 251 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
     "owner": {
       "name": "The Utopia Studio",
       "email": "karanmjpinto@gmail.com",
@@ -13,7 +13,7 @@
     {
       "name": "utopia-gtm",
       "description": "Go-to-Market — seven sub-modules (Growth Strategy, Marketing & Comms, Sales Enablement, Customer Success, BD & Partnerships, GTM Engineering, IP Commercialisation). Positioning, outbound, signals, content, paid, RevOps, retention, and agent governance.",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "keywords": [
         "gtm",
         "sales",
@@ -73,7 +73,6 @@
         "sales-motion-design",
         "signup-flow-cro",
         "social-content",
-        "social-selling",
         "solo-founder-gtm",
         "value-proposition",
         "warm-intro-intelligence"
@@ -170,7 +169,6 @@
             "lead-enrichment",
             "outreach-execution",
             "partner-affiliate",
-            "social-selling",
             "warm-intro-intelligence"
           ]
         },
@@ -201,7 +199,7 @@
     {
       "name": "utopia-product",
       "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "keywords": [
         "product",
         "discovery",
@@ -275,7 +273,6 @@
         "interface-craft",
         "invent-by-hand",
         "job-in-primitives",
-        "job-stories",
         "jobs-to-be-done",
         "layout",
         "lean-ux-canvas",
@@ -344,7 +341,7 @@
     {
       "name": "utopia-investments",
       "description": "Investments — due diligence, financial modeling, valuation, capital markets, fundraising decks, and quant pricing, plus the founder-side investor reading room. For funds team and fundraising.",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "keywords": [
         "investments",
         "dd",
@@ -355,7 +352,6 @@
       "skills": [
         "3-statement-model",
         "ada",
-        "adverse-selection-prior",
         "auction-first-price-shading",
         "audit-xls",
         "bayesian-reasoning-calibration",
@@ -401,7 +397,7 @@
     {
       "name": "utopia-founder-productivity",
       "description": "Founder Productivity — onboarding frameworks, legal docs, knowledge management, agents, and operator tools that don't fit GTM, Product, or Investments.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "keywords": [
         "founder",
         "productivity",

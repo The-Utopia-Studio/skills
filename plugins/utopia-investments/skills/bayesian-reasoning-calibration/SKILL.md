@@ -7,7 +7,8 @@ description: >-
   a 30% chance, now X happened, what should I believe?", "update my probability", "how much
   should this evidence move me", "given these hit rates, what are the odds now", or gives a
   prior plus new data (a pilot result, a signal, a test outcome) and wants a revised estimate.
-  Also for priors, likelihoods, Bayes theorem, belief revision and calibrating confidence. Not
+  Also for adverse selection in unsolicited offers: assess how the proposer selected the deal
+  using an evidence-based prior and selection likelihoods, not a fixed penalty. Not
   for finding the starting base rate (use reference-class-forecasting) or for auditing your
   reasoning for bias (use scout-mindset-bias-check).
 ---
@@ -38,6 +39,8 @@ Before beta testing: 60% chance of adoption >20%
 Beta test: 35% of users adopted (70 of 200 users)
 
 ## Likelihoods
+The likelihoods below are illustrative assumptions, not estimates derived from the 70/200 observation. A real analysis needs a sampling model or empirical likelihoods.
+
 If true adoption is >20%:
 - P(seeing 35% in beta | adoption >20%) = 75% (likely to see high beta if true)
 
@@ -80,11 +83,15 @@ Assess evidence (specific observation/data), diagnostic power (does it distingui
 
 **Step 4: Calculate posterior**
 
-Apply Bayes' Theorem: P(H|E) = [P(E|H) × P(H)] / P(E), or use odds form: Posterior Odds = Prior Odds × Likelihood Ratio. Calculate P(E) = P(E|H)×P(H) + P(E|¬H)×P(¬H), get posterior probability, and interpret change. For simple cases → Use `resources/template.md` calculator. For complex cases (multiple hypotheses) → Study `resources/methodology.md`.
+Apply Bayes' Theorem: P(H|E) = [P(E|H) × P(H)] / P(E), or use odds form: Posterior Odds = Prior Odds × Likelihood Ratio. Calculate P(E) = P(E|H)×P(H) + P(E|¬H)×P(¬H), get posterior probability, and interpret change. Inputs must be finite probabilities in [0, 1]. If P(E) = 0, the evidence is impossible under the specified model; revise the model instead of dividing by zero. Use the probability form when endpoint priors or zero likelihoods make odds undefined. For simple cases → Use `resources/template.md` calculator. For complex cases (multiple hypotheses) → Study `resources/methodology.md`.
 
 **Step 5: Calibrate and document**
 
-Check calibration (over/underconfident?), validate assumptions (are likelihoods reasonable?), perform sensitivity analysis, create `bayesian-reasoning-calibration.md`, and note limitations. Self-check using `resources/evaluators/rubric_bayesian_reasoning_calibration.json`: verify prior based on base rates, likelihoods justified, evidence diagnostic (LR ≠ 1), calculation correct, posterior calibrated, assumptions stated, sensitivity noted. Minimum standard: Score ≥ 3.5.
+Check calibration (over/underconfident?), validate assumptions (are likelihoods reasonable?), perform sensitivity analysis, create `bayesian-reasoning-calibration.md`, and note limitations. Self-check using `resources/evaluators/rubric_bayesian_reasoning_calibration.json`: verify prior based on base rates, likelihoods justified, evidence diagnosticity interpreted correctly (LR = 1 leaves the prior unchanged; LR < 1 supports the alternative), calculation correct, posterior calibrated, assumptions stated, sensitivity noted. Minimum standard: Score ≥ 3.5.
+
+## Selection evidence in unsolicited offers
+
+Use [resources/selection-evidence.md](resources/selection-evidence.md) when the question is why a counterparty chose to offer a deal, share an allocation, or bid for an asset. Define who benefits and the comparison alternative. Use the selection event as evidence in the same Bayesian calculation; do not assign a universal below-50% prior or convert a probability into a valuation haircut without a payoff model.
 
 ## Common Patterns
 

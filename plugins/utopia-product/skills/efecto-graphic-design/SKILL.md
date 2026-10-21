@@ -21,6 +21,11 @@ Design graphic assets — presentations, pitch decks, event posters, email heade
 
 ---
 
+## Content accuracy
+
+Use user-provided or verified content for real deliverables. Templates below are fictional layout examples, not evidence: replace sample metrics, certifications, testimonials, customer logos, dates, venues and prices with supported content or clearly labeled placeholders. Never invent a person's employment, achievements, qualifications, or endorsements. Keep fictional mockup content visibly labeled as fictional and separate from production content.
+
+
 ## Setup
 
 This skill requires the **Efecto MCP server**. Check if it's available by looking for tools like `create_session`, `add_section`, or `get_document` in your tool list.
@@ -140,7 +145,7 @@ Icons: `<svg icon="arrow-right" className="w-5 h-5 text-gray-600" />`
 - **Artboard `backgroundColor` is a property, NOT a className** — use `backgroundColor: "#1a1a1a"`, not `className: "bg-gray-900"`
 - **Never use arbitrary hex in className** — `bg-[#f9f9f9]` silently fails. Use named colors (`bg-gray-50`) or inline `style`
 - **Use `grow` instead of `flex-1`** — `flex-1` doesn't work in Efecto
-- **Buttons ignore children** — use a flex container with `<span>` + `<svg>` instead
+- **Buttons cannot contain nested element nodes** — plain JSX text becomes `textContent`; use a flex container with `<span>` + `<svg>` for a multi-element visual
 - **Always add `w-full`** on direct children of artboards
 
 ---
@@ -658,7 +663,7 @@ A single-page professional document that must be scannable in 6 seconds.
 - NO icons for contact info — they waste space. Just text.
 - NO decorative elements. Every pixel should convey information.
 - USE consistent date formatting: "Jan 2023 - Present" or "2023 - Present"
-- USE real-sounding content, not "Lorem ipsum." Realistic job titles, companies, and bullet points.
+- USE the person’s supplied employment history, qualifications, and achievements. Ask for missing facts; do not invent job titles, employers, or accomplishments.
 
 ---
 
@@ -837,7 +842,7 @@ Since Efecto doesn't have native chart components, represent data visually with 
 - NO more than 4 data sections. After 4, attention drops sharply.
 - NO raw data tables. Translate EVERY number into a visual element.
 - ALWAYS cite sources (text-xs at bottom). Even "Source: Company Annual Report 2025" adds credibility.
-- USE real-sounding data. "73% of remote workers prefer async communication" — not "X% of people do Y."
+- USE verified data with a traceable source. If no data is supplied, use a labeled placeholder; fictional demo statistics must be explicitly marked fictional.
 - NEVER crowd sections. Gap-8 to gap-12 between data blocks. Let each section breathe.
 
 ---
@@ -890,7 +895,7 @@ A personal, often emotional piece that sets the tone for an event.
 ### Rules
 
 - NO clutter. An invitation should feel spacious and intentional. When in doubt, remove elements.
-- NO lorem ipsum. Use realistic names ("Emma & Lucas"), real dates, real venues.
+- Use supplied event names, dates, venues and contact details. Mark missing details as placeholders; label any fictional demonstration clearly.
 - ALWAYS include: event name, date, time, location, RSVP method.
 - For weddings: names of the couple are THE design, not a detail. Make them magnificent.
 

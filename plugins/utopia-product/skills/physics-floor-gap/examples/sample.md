@@ -43,8 +43,8 @@ The part that carries liability: a senior analyst deciding which risks are *mate
 | Gap ratio | Band | Verdict |
 |---|---|---|
 | < 10× | No room | Walk away |
-| 10–20× | Thin | Marginal |
-| **20–100×** | **Real prize** | **Build** |
+| 10 ≤ gap < 20× | Thin | Marginal |
+| **20 ≤ gap ≤ 100×** | **Real prize** | **Build** |
 | > 100× | Suspicious | Stop |
 
 - **22.6× → band: Real prize → verdict: BUILD.**

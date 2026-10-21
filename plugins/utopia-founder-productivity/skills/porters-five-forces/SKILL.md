@@ -60,7 +60,7 @@ The ability of suppliers to increase prices or reduce quality, affecting your pr
 **High Supplier Power When:**
 - Few suppliers or concentrated supplier base
 - Switching costs are high (changing suppliers is expensive)
-- Backward integration threat (suppliers become competitors)
+- Forward integration threat (suppliers enter your market and become competitors)
 - Suppliers' product is critical or unique
 - Suppliers have strong bargaining position
 - No substitutes for supplier offerings
@@ -71,7 +71,7 @@ The ability of suppliers to increase prices or reduce quality, affecting your pr
 - Low switching costs
 - Suppliers depend on your business
 - Commodity products (interchangeable suppliers)
-- Threat of forward integration (you become your own supplier)
+- Credible backward integration by your company (you become your own supplier)
 - Available substitutes for supplier offerings
 - You have significant bargaining leverage
 

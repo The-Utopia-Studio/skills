@@ -373,7 +373,7 @@ Each reference defines sections, a query plan, formatting guidance, and page len
 
 **First:** Create the intermediate file directory:
 ```bash
-mkdir -p ./tear-sheet-data/
+mkdir -p ./tear-sheet-data/[company-run-id]/
 ```
 
 **Source order:**
@@ -420,13 +420,13 @@ After all data collection is complete and intermediate files are written, comput
 
 - **Margin calculations:** Verify EBITDA Margin = EBITDA / Revenue, Gross Margin = Gross Profit / Revenue, etc. If the computed margin doesn't match the raw numbers, use the computation from raw components.
 - **Growth rates:** Verify YoY growth = (Current − Prior) / Prior. Don't rely on pre-computed growth rates if you have the underlying values.
-- **Segment totals:** If showing revenue by segment, verify segments sum to total revenue (within rounding tolerance). If they don't, omit the total row rather than publishing inconsistent math.
-- **Percentage columns:** Verify "% of Total" columns sum to ~100%.
+- **Segment totals:** If showing revenue by segment, verify segments sum to total revenue (within rounding tolerance). If they do not, reconcile intersegment eliminations and unallocated items explicitly; preserve the sourced consolidated total and flag unexplained differences.
+- **Percentage columns:** Verify segment percentages plus explicit eliminations/unallocated reconciliation sum to ~100%; gross segment shares alone can exceed100%.
 - **Valuation cross-checks:** If you show both EV and EV/Revenue, verify EV / Revenue ≈ the stated multiple.
 
 If a validation fails: attempt recalculation from raw data. If still inconsistent, flag the metric as "N/A" rather than publishing incorrect numbers. Quiet math errors in a tear sheet destroy credibility.
 
-**Write results** to `./tear-sheet-data/calculations.csv` with columns: `metric,value,formula,components`
+**Write results** to `./tear-sheet-data/[company-run-id]/calculations.csv` with columns: `metric,value,formula,components`
 
 Example rows:
 ```
@@ -483,7 +483,7 @@ These override everything else:
 2. **Label what you can't find.** Use "N/A" or "Not disclosed" rather than omitting a row silently.
 3. **Dates matter.** Note the fiscal year end or reporting period. Don't assume calendar year = fiscal year. Market data (stock prices, market cap) should include an "as of" date.
 4. **Don't mix reporting periods.** If you have FY2023 revenue and LTM EBITDA, label them distinctly.
-5. **Prefer MCP-returned fields over manual computation.** If the data source returns a pre-computed field (e.g., net debt, EBITDA, FCF), use that value directly rather than computing it from components. Only compute derived metrics manually when the tools do not return the field. This reduces discrepancies.
+5. **Reconcile provider fields and computed values.** Retain both with definitions, period and source. Recompute comparable ratios from the same components; if a provider uses a different definition, label it rather than silently overriding either value. Investigate unexplained discrepancies.
 6. **Ensure consistency across tear sheet types.** If generating multiple tear sheets for the same company (e.g., equity research and IB/M&A in the same session), the same underlying data points must produce identical values across all outputs. Net debt, revenue, EBITDA, margins, and growth rates must match exactly. Do not re-query or re-compute independently per report — reuse the same retrieved values.
 7. **Never downgrade known transaction values.** If the M&A tools return a deal value for a transaction, that value must appear in the output. Do not replace a known deal value with "Undisclosed." Use "Undisclosed" only when the tools genuinely return no value for a transaction.
 8. **Use consolidated revenue as the denominator for segment percentages.** When computing "% of Total" for segment tables, divide each segment's revenue by consolidated total revenue (as reported on the income statement), not by the sum of segment revenues. The sum of segments often exceeds consolidated revenue due to intersegment eliminations. Using consolidated revenue ensures percentages align with the total revenue figure shown elsewhere in the document.
@@ -496,7 +496,7 @@ All data retrieved from MCP tools must be persisted to structured intermediate f
 
 **Setup:** At the start of Step 3, create the working directory:
 ```
-mkdir -p ./tear-sheet-data/
+mkdir -p ./tear-sheet-data/[company-run-id]/
 ```
 
 **Write-after-query mandate:** After each MCP query step completes, immediately write the retrieved data to the appropriate intermediate file(s). Do not wait until all queries finish. Each reference file's query plan specifies which file(s) to write after each step.
@@ -505,16 +505,16 @@ mkdir -p ./tear-sheet-data/
 
 | File | Format | Columns / Structure | Used By |
 |---|---|---|---|
-| `./tear-sheet-data/company-profile.txt` | Key-value text | name, ticker, exchange, HQ, sector, industry, founded, employees, market_cap, enterprise_value, stock_price, 52wk_high, 52wk_low, shares_outstanding, beta, ownership | All |
-| `./tear-sheet-data/financials.csv` | CSV | `period,line_item,value,source` | All |
-| `./tear-sheet-data/segments.csv` | CSV | `period,segment_name,revenue,source` | ER, IB, CD |
-| `./tear-sheet-data/valuation.csv` | CSV | `metric,trailing,forward,source` | ER, IB, CD |
-| `./tear-sheet-data/consensus.csv` | CSV | `metric,fy_year,value,source` | ER |
-| `./tear-sheet-data/earnings.txt` | Structured text | Quarter, date, key quotes, guidance, key drivers | ER, IB, Sales |
-| `./tear-sheet-data/relationships.txt` | Structured text | Customers, suppliers, partners, competitors — each with descriptors | IB, CD, Sales |
-| `./tear-sheet-data/peer-comps.csv` | CSV | `ticker,metric,value,source` | ER, IB, CD |
-| `./tear-sheet-data/ma-activity.csv` | CSV | `date,target,deal_value,type,rationale,source` | IB, CD |
-| `./tear-sheet-data/calculations.csv` | CSV | `metric,value,formula,components` | All (written in Step 3b) |
+| `./tear-sheet-data/[company-run-id]/company-profile.txt` | Key-value text | name, ticker, exchange, HQ, sector, industry, founded, employees, market_cap, enterprise_value, stock_price, 52wk_high, 52wk_low, shares_outstanding, beta, ownership | All |
+| `./tear-sheet-data/[company-run-id]/financials.csv` | CSV | `period,line_item,value,source` | All |
+| `./tear-sheet-data/[company-run-id]/segments.csv` | CSV | `period,segment_name,revenue,source` | ER, IB, CD |
+| `./tear-sheet-data/[company-run-id]/valuation.csv` | CSV | `metric,trailing,forward,source` | ER, IB, CD |
+| `./tear-sheet-data/[company-run-id]/consensus.csv` | CSV | `metric,fy_year,value,source` | ER |
+| `./tear-sheet-data/[company-run-id]/earnings.txt` | Structured text | Quarter, date, key quotes, guidance, key drivers | ER, IB, Sales |
+| `./tear-sheet-data/[company-run-id]/relationships.txt` | Structured text | Customers, suppliers, partners, competitors — each with descriptors | IB, CD, Sales |
+| `./tear-sheet-data/[company-run-id]/peer-comps.csv` | CSV | `ticker,metric,value,source` | ER, IB, CD |
+| `./tear-sheet-data/[company-run-id]/ma-activity.csv` | CSV | `date,target,deal_value,type,rationale,source` | IB, CD |
+| `./tear-sheet-data/[company-run-id]/calculations.csv` | CSV | `metric,value,formula,components` | All (written in Step 3b) |
 
 **Abbreviations:** ER = Equity Research, IB = IB/M&A, CD = Corp Dev, Sales = Sales/BD.
 

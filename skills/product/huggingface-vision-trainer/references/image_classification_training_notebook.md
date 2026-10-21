@@ -15,7 +15,7 @@ after a natural disaster, monitoring crop health, or helping screen medical imag
 
 This guide illustrates how to:
 
-1. Fine-tune [ViT](../model_doc/vit) on the [Food-101](https://huggingface.co/datasets/ethz/food101) dataset to classify a food item in an image.
+1. Fine-tune [ViT](https://huggingface.co/docs/transformers/v5.2.0/en/model_doc/vit) on the [Food-101](https://huggingface.co/datasets/ethz/food101) dataset to classify a food item in an image.
 2. Use your fine-tuned model for inference.
 
 To see all architectures and checkpoints compatible with this task, we recommend checking the [task-page](https://huggingface.co/tasks/image-classification)
@@ -159,7 +159,7 @@ Your `compute_metrics` function is ready to go now, and you'll return to it when
 
 ## Train
 
-If you aren't familiar with finetuning a model with the [Trainer](/docs/transformers/v5.2.0/en/main_classes/trainer#transformers.Trainer), take a look at the basic tutorial [here](../training#train-with-pytorch-trainer)!
+If you aren't familiar with finetuning a model with the [Trainer](/docs/transformers/v5.2.0/en/main_classes/trainer#transformers.Trainer), take a look at the basic tutorial [here](https://huggingface.co/docs/transformers/v5.2.0/en/training#train-with-pytorch-trainer)!
 
 You're ready to start training your model now! Load ViT with [AutoModelForImageClassification](/docs/transformers/v5.2.0/en/model_doc/auto#transformers.AutoModelForImageClassification). Specify the number of labels along with the number of expected labels, and the label mappings:
 

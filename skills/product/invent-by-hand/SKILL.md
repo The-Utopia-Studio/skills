@@ -20,7 +20,7 @@ Takes a fellow's stated idea and forces an original product concept out of it �
 
 ## The Icarus reframe
 
-In the age of the machine, the danger is not that you cannot generate ideas; it is that you generate the same idea as everyone else. Ask a model "what should we build in factory operations?" and it returns the average of everything ever built there — a copilot, a dashboard, a chatbot — the one concept no one can defend, because the model will hand it to your competitor on the same afternoon. So this skill inverts the usual brainstorm: it invents *by hand first*, grounded in the fellow's own corpus, and then uses the machine only as an adversary. The rule is one line — **if a generic prompt could produce it, it isn't yours yet** — and it is enforced literally: every candidate is run against the prompt a competitor would type, and only the concepts that prompt cannot reach, for a reason you can name, are allowed to survive. The concept that survives is still a hypothesis; the test proves no competitor can prompt their way to it, not that a customer wants it.
+In the age of the machine, the danger is not that you cannot generate ideas; it is that you generate the same idea as everyone else. Ask a model "what should we build in factory operations?" and it returns the average of everything ever built there — a copilot, a dashboard, a chatbot — the one concept no one can defend, because the model will hand it to your competitor on the same afternoon. So this skill inverts the usual brainstorm: it invents *by hand first*, grounded in the fellow's own corpus, and then uses the machine only as an adversary. The rule is one line — **if a generic prompt could produce it, it isn't yours yet** — and it is enforced literally: every candidate is run against the prompt a competitor would type, and only the concepts that prompt cannot reach, for a reason you can name, are allowed to survive. The concept that survives is still a hypothesis; the test records what the tested prompts reached, not what every competitor could ever reach or whether a customer wants it.
 
 ## When to use / When NOT
 
@@ -82,7 +82,7 @@ For each survivor, write the actual one-line prompt a competitor with no proprie
 |---|---|---|
 | **D0 — reachable** | The generic prompt's default answer *is* this concept (a chatbot, a dashboard, an OCR tool, "an AI copilot for X"). | Commodity. The machine hands it to every competitor. Kill it. |
 | **D1 — variant** | The prompt reaches a near-neighbour; your concept is a tweak (nicer UI, one extra feature) the model would also suggest if pushed. | Not yours yet. Push further, or anchor harder to the corpus. |
-| **D2 — unreachable** | No generic prompt reaches it, and you can name *why*: it depends on your band-P corpus, a tacit judgment the model cannot see, a non-obvious inversion, or a structural aggregation position (a cross-party vantage no single competitor holds — e.g. a cross-operator delta no one operator can see). | Yours. Proceed — but it is still a `[Hypothesis]`. |
+| **D2 — not reached in these trials** | Neither tested competitor prompt reaches it, and you can name *why*: it depends on your band-P corpus, a tacit judgment the model cannot see, a non-obvious inversion, or a structural aggregation position (a cross-party vantage no single competitor holds — e.g. a cross-operator delta no one operator can see). | Yours. Proceed — but it is still a `[Hypothesis]`. |
 
 The "why" must be specific: the corpus row from Step 3, the inversion from Step 2, or the aggregation position named above. "It's unreachable because we're more creative" is not a why — that is a D1 in disguise. If every survivor is D0 or D1, the honest output is *this isn't yours yet*; return to Step 2 with the corpus in hand.
 
@@ -110,7 +110,7 @@ Every Icarus skill weights behaviour and money over opinion. Here is the honest 
 | Verbal commitment | 0.3 |
 | Opinion | 0.1 |
 
-The bar this skill enforces: **the core need must be observed and the corpus anchor must be a real band-P source, each ≥ 0.5.** A concept invented on an assumed need (0.1) and an imaginary dataset (0.1) is invention on sand, however non-obvious it looks. Tag every empirical claim `[Fact]`, `[Assumption]`, or `[Hypothesis]`. The generic-prompt test proves that no competitor can prompt their way to the concept; it does not prove a customer wants it. That proof is the wedge and the probe — do not let a clever D2 concept skip the adoption test.
+The bar this skill enforces: **the core need must be observed and the corpus anchor must be a real band-P source, each ≥ 0.5.** A concept invented on an assumed need (0.1) and an imaginary dataset (0.1) is invention on sand, however non-obvious it looks. Tag every empirical claim `[Fact]`, `[Assumption]`, or `[Hypothesis]`. The generic-prompt test is a bounded adversarial probe, not proof that no competitor can prompt their way to the concept. Record the exact prompts, model/version and actual outputs when executed; label an authored prediction as untested. Two misses do not establish universal unreachability, and the test does not prove a customer wants it. That proof is the wedge and the probe — do not let a clever D2 concept skip the adoption test.
 
 ## Gotchas
 

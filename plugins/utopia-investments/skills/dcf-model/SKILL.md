@@ -39,7 +39,7 @@ See `references/intrinsic-methodology.md` for the full decision tree, growth est
 2. Stable growth must not exceed the risk-free rate / nominal GDP growth.
 3. Flag terminal value above ~85-90% of total value: the high-growth period is probably too short.
 4. Stable-period reinvestment rate = g / ROC; growth without reinvestment is value from thin air.
-5. Equity bridge: subtract market value of debt, add cash and non-operating assets, subtract employee options and minority interests; divide by diluted shares.
+5. Equity bridge: subtract market value of debt, add cash and non-operating assets, subtract minority interests and account for employee awards once: either deduct their value and divide by corresponding basic shares, or use a consistent dilution/proceeds method without also deducting the same awards.
 6. In the stable period, beta converges toward 1 and WACC toward mature-company levels.
 7. Report value as a range (sensitivity on growth x discount rate), not a point.
 
@@ -264,16 +264,16 @@ Market Value Equity = Current Stock Price × Shares Outstanding
 Net Debt = Total Debt - Cash & Equivalents
 Enterprise Value = Market Cap + Net Debt
 
-Equity Weight = Market Cap / Enterprise Value
-Debt Weight = Net Debt / Enterprise Value
+Equity Weight = Market Cap / (Market Cap + Market Value of Gross Debt)
+Debt Weight = Market Value of Gross Debt / (Market Cap + Market Value of Gross Debt)
 
 WACC = (Cost of Equity × Equity Weight) + (After-Tax Cost of Debt × Debt Weight)
 ```
 
 **Special Cases:**
 - **Net Cash Position**: If Cash > Debt, Net Debt is NEGATIVE
-  - Debt Weight may be negative
-  - WACC calculation adjusts accordingly
+  - WACC debt weight remains nonnegative; use gross market debt, not net debt
+  - Cash enters the enterprise-to-equity bridge separately; do not use negative debt weights
 - **No Debt**: WACC = Cost of Equity
 
 **Typical WACC Ranges:**
@@ -432,12 +432,12 @@ EBIT Margin (%),50%,51%,52%,53%,54%
 
 **How to reference assumptions - Create a consolidation column:**
 1. Case selector cell (e.g., B6) contains 1=Bear, 2=Base, or 3=Bull
-2. Create a consolidation column with INDEX or OFFSET formulas to pull from the correct scenario block
+2. Create a consolidation column with CHOOSE formulas to pull from the correct scenario block
 3. Projection formulas reference the consolidation column (clean cell references)
 4. Each scenario block contains full set of DCF assumptions across projection years
 
-**Recommended consolidation column pattern (using INDEX):**
-`=INDEX(B10:D10, 1, $B$6)`
+**Recommended consolidation column pattern (using CHOOSE):**
+`=CHOOSE($B$6,B10,B30,B50)`
 
 **NOT this - scattered IF statements throughout:**
 `=IF($B$6=1,[Bear block cell],IF($B$6=2,[Base block cell],[Bull block cell]))`
@@ -446,24 +446,24 @@ The consolidation column approach centralizes logic and makes the model easier t
 
 ### Correct Revenue Projection Pattern
 
-**Create a consolidation column with INDEX formulas, then reference it in projections:**
+**Create a consolidation column with CHOOSE formulas, then reference it in projections:**
 
 **Step 1 - Consolidation column for FY1 growth:**
-`=INDEX([Bear FY1 growth]:[Bull FY1 growth], 1, $B$6)`
+`=CHOOSE($B$6,[Bear FY1 growth],[Base FY1 growth],[Bull FY1 growth])`
 
 **Step 2 - Revenue projection references the consolidation column:**
 `Revenue Year 1: =D29*(1+$E$10)`
 
 Where:
 - D29 = Prior year revenue
-- $E$10 = Consolidation column cell for FY1 growth (contains INDEX formula)
+- $E$10 = Consolidation column cell for FY1 growth (contains CHOOSE formula)
 - $B$6 = Case selector (1=Bear, 2=Base, 3=Bull)
 
 **This approach is cleaner than embedding IF statements in every projection formula** and makes it much easier to audit which scenario assumptions are being used.
 
 ### Correct FCF Formula Pattern
 
-**Use consolidation columns with INDEX formulas, then reference them in FCF calculations:**
+**Use consolidation columns with CHOOSE formulas, then reference them in FCF calculations:**
 
 **Consolidation column approach:**
 ```csv
@@ -474,7 +474,7 @@ CapEx,=E29*$E$22,$E$22 = consolidation column for CapEx %
 Unlevered FCF,=E57+E58-E60-E62,E57=NOPAT E58=D&A E60=CapEx E62=Δ NWC
 ```
 
-**Each consolidation column cell contains an INDEX formula** that pulls from the appropriate scenario block based on case selector. This keeps projection formulas clean and auditable.
+**Each consolidation column cell contains an CHOOSE formula** that pulls from the appropriate scenario block based on case selector. This keeps projection formulas clean and auditable.
 
 Before writing formulas, confirm scenario block row locations and set up consolidation columns.
 
@@ -528,7 +528,7 @@ WACC,X%,,,,
 
 **WITHOUT the column header row showing projection years (FY2025E, FY2026E, etc.), users cannot tell which assumption value corresponds to which year. This row is MANDATORY.**
 
-**Then create a consolidation column** (typically the next column to the right) that uses INDEX formulas to pull from the selected scenario block based on the case selector. This consolidation column is what your projection formulas reference.
+**Then create a consolidation column** (typically the next column to the right) that uses CHOOSE formulas to pull from the selected scenario block based on the case selector. This consolidation column is what your projection formulas reference.
 
 ### Correct Row Planning Process
 
@@ -953,7 +953,7 @@ Row,Content
 2,Ticker: [XXX] | Date: [Date] | Year End: [FYE]
 3,Blank
 4,Case Selector Cell (1=Bear 2=Base 3=Bull)
-5,Case Name Display (formula: =IF([Selector]=1"Bear"IF([Selector]=2"Base""Bull")))
+5,Case Name Display (formula: =CHOOSE([Selector],"Bear","Base","Bull"))
 ```
 
 **Section 2: Market Data (NOT case dependent)**
@@ -1091,8 +1091,8 @@ WEIGHTED AVERAGE COST OF CAPITAL,X.XX%,[Green output]
 Market Cap = Price × Shares
 Net Debt = Total Debt - Cash
 Enterprise Value = Market Cap + Net Debt
-Equity Weight = Market Cap / EV
-Debt Weight = Net Debt / EV
+Equity Weight = Market Cap / (Market Cap + Market Value of Gross Debt)
+Debt Weight = Market Value of Gross Debt / (Market Cap + Market Value of Gross Debt)
 WACC = (Cost of Equity × Equity Weight) + (After-tax Cost of Debt × Debt Weight)
 ```
 
@@ -1153,10 +1153,10 @@ WACC = (Cost of Equity × Equity Weight) + (After-tax Cost of Debt × Debt Weigh
 
 **Formula Implementation:**
 
-**DO NOT use nested IF formulas scattered throughout.** Instead, create a consolidation column that uses INDEX or OFFSET formulas to pull from the appropriate scenario block.
+**DO NOT use nested IF formulas scattered throughout.** Instead, create a consolidation column that uses CHOOSE formulas to pull from the appropriate scenario block.
 
-**Recommended pattern (using INDEX):**
-`=INDEX(B10:D10, 1, $B$6)` where `B10:D10` = Bear/Base/Bull values, `1` = row offset, `$B$6` = case selector cell (1, 2, or 3)
+**Recommended pattern (using CHOOSE):**
+`=CHOOSE($B$6,B10,B30,B50)` where B10, B30 and B50 are the corresponding FY1 cells in the three vertical scenario blocks, `$B$6` = case selector cell (1, 2, or 3)
 
 **Then reference the consolidation column** in all projections:
 `Revenue Year 1: =D29*(1+$E$10)` where $E$10 is the consolidation column value for Year 1 growth.
@@ -1171,7 +1171,7 @@ This approach centralizes scenario logic, making the model easier to audit and m
 1. **DCF** - Complete model with Bear/Base/Bull cases + three sensitivity tables at bottom (WACC vs Terminal Growth, Revenue Growth vs EBIT Margin, Beta vs Risk-Free Rate)
 2. **WACC** - Cost of capital calculation
 
-**Key features**: Case selector (1/2/3), consolidation column with INDEX/OFFSET formulas, color-coded cells, cell comments on all inputs, professional borders
+**Key features**: Case selector (1/2/3), consolidation column with CHOOSE formulas, color-coded cells, cell comments on all inputs, professional borders
 
 ## Best Practices
 

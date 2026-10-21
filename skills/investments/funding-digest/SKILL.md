@@ -17,7 +17,7 @@ You MUST include the following disclaimer text in the powerpoint footer. This is
 
 > **"Analysis is AI-generated — please confirm all outputs"**
 
-**Footer** — At the bottom of the generated slide, as a prominent yellow banner: "Analysis is AI-generated — please confirm all outputs"
+**Footer** — At the bottom of the generated slide, as a clearly readable footer banner consistent with the selected palette: "Analysis is AI-generated — please confirm all outputs"
 
 ---
 
@@ -46,7 +46,7 @@ This skill produces a one-slide PPTX briefing:
 Check whether S&P Global / Capital IQ MCP tools (e.g. `get_rounds_of_funding_from_identifiers`) are available.
 
 - **Available:** follow the entity-resolution rules and Steps 2-4 below as written.
-- **Not available (web fallback):** for each sector or company in the universe, web-search for rounds announced in the period: company press releases and blogs, lead-investor announcements, reputable tech/finance press (e.g. TechCrunch, Bloomberg, Reuters, FT, Axios Pro, Wamda and MAGNiTT for MENA), regulatory filings where they exist (e.g. SEC Form D). For each deal record company, round type, amount, pre/post-money if disclosed, lead investor(s), announced date and the source URL. Require one primary source (company or investor) or two independent press sources per deal; mark single-source items "[unconfirmed]". In the slide's Deal Link column, link to the source article instead of Capital IQ, and change the footer source line to "Sources: company releases and press, compiled [date]". Skip Rules 0-6 (they are Capital IQ specific), but still exclude subsidiaries and defunct companies using `references/sector-seeds.md`.
+- **Not available (web fallback):** for each sector or company in the universe, web-search for rounds announced in the period: company press releases and blogs, lead-investor announcements, reputable tech/finance press (e.g. TechCrunch, Bloomberg, Reuters, FT, Axios Pro, Wamda and MAGNiTT for MENA), regulatory filings where they exist (e.g. SEC Form D). For each deal record company, round type, amount, pre/post-money if disclosed, lead investor(s), announced date and the source URL. Require one primary source (company or investor) or two independent press sources per deal; mark single-source items "[unconfirmed]". In the slide's Deal Link column, link to the source article instead of Capital IQ, and change the footer source line to "Sources: company releases and press, compiled [date]". Skip Rules 0-6 (they are Capital IQ specific), but check ownership and operating status as of the requested period; the seeds file is a lead, not dated transaction evidence.
 
 ## Entity Resolution & Tool Robustness
 
@@ -70,11 +70,11 @@ If `get_rounds_of_funding_from_identifiers` returns empty for a company you expe
 1. **Try the legal entity name or company_id.** Brand names usually work, but some don't. See the alias table in `references/sector-seeds.md` for known mismatches. Common pattern: "[Brand] AI" → "[Legal Name], Inc." (e.g., Together AI → "Together Computer, Inc.", Character.ai → "Character Technologies, Inc.", Runway ML → "Runway AI, Inc.").
 2. **Verify the company exists in S&P.** If you skipped Rule 0, call `get_info_from_identifiers(identifiers=["Company"])` now — if this also returns empty, the company may be too early-stage or not yet indexed.
 
-### Rule 2: Subsidiaries have no funding rounds
+### Rule 2: Subsidiary status requires date-aware interpretation
 
-Companies that are divisions or wholly-owned subsidiaries of larger companies (e.g., DeepMind under Alphabet, GitHub under Microsoft, BeReal under Voodoo) will return **zero funding rounds**. Their capital events are tracked at the parent level.
+Companies that are divisions or wholly-owned subsidiaries of larger companies (e.g., DeepMind under Alphabet, GitHub under Microsoft, BeReal under Voodoo) may have historical or subsidiary-level capital events. Check ownership status as of the requested period and the provider definition; do not assume zero rounds from current status alone.
 
-**How to detect:** The `status` field from `get_info_from_identifiers` will show `"Operating Subsidiary"`. The `references/sector-seeds.md` file also flags known subsidiaries with ⚠️ warnings. Skip these for funding queries.
+**How to detect:** The `status` field from `get_info_from_identifiers` will show `"Operating Subsidiary"`. The `references/sector-seeds.md` file also flags known subsidiaries with ⚠️ warnings. Check their status during the requested period and include only capital events within the defined deal universe.
 
 ### Rule 3: Use `get_rounds_of_funding_from_identifiers` as the primary tool, not `get_funding_summary_from_identifiers`
 
@@ -129,7 +129,7 @@ For each sector specified, build a company universe using a validated bootstrapp
    ```
    Triage the results into two buckets:
    - ✅ **Resolved & Operating** (`status` = "Operating") → proceed to competitor expansion
-   - ❌ **Unresolved or Subsidiary** → retry with alias/legal name from seeds file; subsidiaries are noted for context but excluded from funding queries
+   - ❌ **Unresolved** → retry with alias/legal name from seeds file. For subsidiaries, check dated ownership and transaction scope before including or excluding.
 
 3. **Expand via competitors** (using only the ✅ resolved seeds):
    ```
@@ -140,7 +140,7 @@ For each sector specified, build a company universe using a validated bootstrapp
    ```
    get_info_from_identifiers(identifiers=[new_competitors])
    ```
-   Apply the same triage. Filter by `simple_industry` matching the target sector. Drop any unresolved names or subsidiaries.
+   Apply the same triage. Filter by `simple_industry` matching the target sector. Flag unresolved names as coverage gaps; assess subsidiaries against dated ownership and the defined deal scope.
 
 If the user provides specific companies, add those directly but still run them through the pre-validation triage. Never skip validation — even well-known brand names can fail silently.
 
@@ -298,7 +298,7 @@ async function generateInitialLogo(companyName, outputPath) {
 
 ```javascript
 async function fetchLogo(companyName, outputDir) {
-    const fileName = companyName.toLowerCase().replace(/[\s.]+/g, '-') + '.png';
+    const fileName = companyName.toLowerCase().replace(/[^a-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '') + '.png';
     const outPath = path.join(outputDir, fileName);
 
     // Tier 1: Try simple-icons
@@ -315,7 +315,7 @@ async function fetchLogo(companyName, outputDir) {
 ```
 
 **Logo guidelines:**
-- Save all logos to `/home/claude/logos/[company-name].png`
+- Save all logos to `./logos/[company-name].png`
 - All logos are 128×128 PNG with transparent backgrounds
 - On the slide, display logos at 0.35"–0.5" tall — they're accents, not focal points
 - Initial-fallback circles use gray (`BDBDBD`) fill with white text — consistent with the monochrome palette
@@ -434,14 +434,15 @@ In pptxgenjs, hyperlinks are added to table cells using the `options.hyperlink` 
 Always center the deal table on the slide. Calculate the x position dynamically:
 ```javascript
 const SLIDE_W = 13.33; // 16:9 slide width
-const TABLE_W = 12.5;  // total table width (sum of all column widths)
-const TABLE_X = (SLIDE_W - TABLE_W) / 2; // ≈ 0.42"
+const COLUMN_WIDTHS = [1.8, 0.9, 0.9, 0.9, 1.0, 1.1, 1.2, 1.6, 0.7];
+const TABLE_W = COLUMN_WIDTHS.reduce((sum, width) => sum + width, 0);
+const TABLE_X = (SLIDE_W - TABLE_W) / 2; // ≈ 1.62"
 
 slide.addTable(tableRows, {
   x: TABLE_X,
   y: tableY,
   w: TABLE_W,
-  colW: [1.8, 0.9, 0.9, 0.9, 1.0, 1.1, 1.2, 1.6, 0.7], // Company, Type, Announced, Closed, Amount, Pre-$, Post-$, Lead, Link
+  colW: COLUMN_WIDTHS, // Company, Type, Announced, Closed, Amount, Pre-$, Post-$, Lead, Link
   // ... other options
 });
 ```
@@ -475,7 +476,7 @@ const SLIDE_W = 13.33; // 16:9 slide width in inches
 //    - Center the table: x = (SLIDE_W - tableWidth) / 2
 // 5. Footer
 
-pres.writeFile({ fileName: "/home/claude/deal-flow-digest.pptx" });
+pres.writeFile({ fileName: "./deal-flow-digest.pptx" });
 ```
 
 Use factory functions (not shared objects) for shadows and repeated styles per the pptxgenjs pitfalls guidance.
@@ -507,13 +508,13 @@ Follow the QA process from the PPTX skill:
 
 ### Entity Resolution Failures
 - **Empty results for a known company:** First check `get_info_from_identifiers` — if that fails, try the alias from `references/sector-seeds.md` or the `company_id` directly. Common brand→legal mismatches: Together AI → "Together Computer, Inc.", Character.ai → "Character Technologies, Inc.", Runway ML → "Runway AI, Inc.".
-- **Subsidiary companies:** DeepMind, GitHub, Instagram, WhatsApp, YouTube, BeReal, etc. are subsidiaries — they have zero independent funding rounds. Note these as "acquired/subsidiary" in context but do not report them as "no activity."
+- **Subsidiary companies:** Do not infer zero historical rounds from current ownership. Verify status during the requested period, distinguish acquisition consideration from financing, and record exclusions with reasons.
 - **Defunct companies:** Companies like Convoy (shut down Oct 2023) still resolve in S&P Global but will never have new activity. The `references/sector-seeds.md` file flags these — check it before including a company.
 - **`get_funding_summary_from_identifiers` errors or returns zeros:** Fall back to `get_rounds_of_funding_from_identifiers` — the summary tool is less reliable. Never rely on the summary tool as the sole data source.
 - **Wrong `role` parameter:** If investor-perspective queries return empty, verify you're using `company_investing_in_round_of_funding`, not `company_raising_funds` (and vice versa).
 
 ### Data Quality Issues
-- **No activity in period:** If a sector had zero funding rounds, note this explicitly on the slide ("No transactions recorded in [Sector] during the period") — absence of activity is itself informative.
+- **No activity in period:** If a sector had zero funding rounds, note this explicitly on the slide ("No transactions recorded in [Sector] during the period") — this describes only the searched universe and available sources, not proof of no sector activity.
 - **Sparse valuation data:** If pre-money and post-money valuations are undisclosed for most transactions, note the data limitation in a footer annotation and use "—" in the table. Adjust the stat card to show a different metric (e.g., Median Round Size) instead of Avg Pre-Money.
 - **Logo retrieval failures:** The `simple-icons` npm package provides ~43% coverage for typical deal flow companies. For the remainder, use the `sharp`-generated initial-based fallback. Keep a consistent icon style — don't mix random approaches. If `simple-icons` or `sharp` fail to install, fall back to pptxgenjs shape-based initials (gray ellipse + white text overlay) which require no external dependencies.
 - **Too many deals for one slide:** If there are more than 6 notable deals, show the top 6 in the table and add a footnote: "+N additional deals not shown." Prioritize by deal size.

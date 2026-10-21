@@ -96,7 +96,7 @@ Every Icarus skill weights behaviour and money over opinion. The ladder:
 | Verbal commitment | 0.3 |
 | Opinion | 0.1 |
 
-The pilot is the instrument that moves a claim to 1.0. A "successful" free pilot proves nothing above 0.3 — they used it and said nice things — because no money changed hands. So the two money terms carry the bar: term 2 (price) must clear money-moved 1.0, or committed 0.5 with a signed PO; term 6 (conversion) must be a signed production price, which is a booked 1.0 commitment for the next stage. A letter of intent, a testimonial, a logo, or "budget next quarter" are 0.3 or below and do not clear either term. Tag each empirical claim `[Fact]`, `[Assumption]`, or `[Hypothesis]`. A term whose whole case is `[Assumption]` (e.g. "they'll probably sign the PO") is not filled; it is a thing to go get signed before the pilot starts.
+The pilot is the instrument that moves a claim to 1.0. A free pilot can demonstrate observed use (0.7), but it does not establish paid willingness to buy (1.0). Score the claim supported: usage evidence does not become payment evidence. So the two money terms carry the bar: term 2 (price) must clear money-moved 1.0, or committed 0.5 with a signed PO; term 6 (conversion) must be a signed production price, which is a signed artefact (0.5) for the next stage; only collected payment is money-moved evidence (1.0). A letter of intent, a testimonial, a logo, or "budget next quarter" are 0.3 or below and do not clear either term. Tag each empirical claim `[Fact]`, `[Assumption]`, or `[Hypothesis]`. A term whose whole case is `[Assumption]` (e.g. "they'll probably sign the PO") is not filled; it is a thing to go get signed before the pilot starts.
 
 ## Gotchas
 
@@ -106,7 +106,7 @@ Conversion deferred to "after we prove value." This is term 6 left empty, dresse
 
 The free pilot for the marquee logo. A big-name customer tempts a fellow to waive price "for the reference." A free pilot selects for the buyer who never had budget, and the reference is worth less than the signal that they would not pay. If they genuinely cannot pay cash, take prepaid credit or a signed conversion price — never zero. Zero is not a discount; it is the absence of the signal the pilot exists to produce.
 
-Data-rights left for the production contract. "We'll sort out data rights when we do the real deal" loses the moat seed: the workflow exhaust generated during the pilot is the compounding asset, and the clause signs at pilot #1 or the right is gone (route to `data-rights-clause`). Term 3 is not bolt-on-able later.
+Data-rights left for the production contract. "We'll sort out data rights when we do the real deal" loses the moat seed: the workflow exhaust generated during the pilot is the compounding asset, and the clause signs at pilot #1 or those uses remain unapproved until rights are secured (route to `data-rights-clause`). Do not use pilot data beyond the rights actually agreed; later terms do not automatically authorize earlier processing.
 
 Unbounded scope becomes free consulting. "Pilot the whole platform" with no end date and no OUT-of-scope list has no pass bar; it drifts into months of unpaid customization. Term 1 must name what is out and a hard end date, or the pilot funds the customer, not the other way round.
 

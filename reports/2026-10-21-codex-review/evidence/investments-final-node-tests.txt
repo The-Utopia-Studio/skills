@@ -1,0 +1,31 @@
+✔ fact checker rejects empty ledger (22.277834ms)
+✔ fact checker rejects empty required value (20.233667ms)
+✔ fact checker rejects fact with no target (21.696917ms)
+✔ fact checker accepts alternative forms and rejects missing facts (41.571209ms)
+✔ retired phrase exemption does not hide a second bare occurrence (40.692ms)
+✔ published drift and unknown target surfaces fail (41.696ms)
+✔ unsupported recursive globs fail instead of silently passing (20.414417ms)
+✔ auction benchmark v=100 N=2 reserve=0 (24.883292ms)
+✔ auction benchmark v=100 N=5 reserve=0 (23.460959ms)
+✔ auction benchmark v=100 N=20 reserve=0 (23.015958ms)
+✔ auction benchmark v=100 N=2 reserve=80 (22.881708ms)
+✔ auction benchmark v=100 N=1 reserve=80 (23.190416ms)
+✔ auction benchmark v=50 N=2 reserve=80 (22.930375ms)
+✔ auction benchmark v=0 N=2 reserve=0 (23.59ms)
+✔ auction helper rejects invalid estimates instead of clamping (95.846041ms)
+✔ market sizing computes nested shares and preserves small percentages (51.458375ms)
+✔ market sizing rejects negative population (25.618042ms)
+✔ market sizing rejects nonfinite TAM (23.834875ms)
+✔ market sizing rejects nonfinite share (23.020041ms)
+✔ market sizing rejects overflow (26.824ms)
+✔ usage limits checkpoint the error and preserve unattempted cases as pending (411.0365ms)
+✔ resume skips scored cases and retries infrastructure failures (294.972666ms)
+✔ invalid concurrency fails before running a prompt (22.79775ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 758.077917

@@ -4,7 +4,7 @@
 
 Route depth, do not restate it here: the NSM framework and AARRR are in SKILL.md Step 1-2; cohort mechanics → `saas-revenue-growth-metrics`; the dashboard build → `metrics-dashboard`;
 CAC/LTV/payback → `saas-economics-efficiency-metrics`. This scorecard adds the two things they skip:
-the retention gate (C) and cost-per-outcome (D).
+the retention diagnostic (C) and cost-per-outcome (D).
 
 ## A. Business game and North Star
 
@@ -13,10 +13,10 @@ the retention gate (C) and cost-per-outcome (D).
 | Business game | Attention / Transaction / Productivity |
 | North Star (one, outcome received by the customer) | <e.g. accepted handovers per active team per week> |
 | Why it is an outcome, not an output/total | <the customer *got* X, not "we emitted X"> |
-| Status | **PROVISIONAL** until the retention gate (C) passes |
+| Status | **Candidate outcome metric**; evaluate usefulness separately from current retention performance |
 
 Rules: exactly one North Star. It must be a customer-received outcome, never an emitted
-output ("alerts sent") or a cumulative total ("all-time drafts"). It is not adopted until C.
+output ("alerts sent") or a cumulative total ("all-time drafts"). Report retention performance separately from metric definition.
 
 ## B. AARRR skeleton (one metric per stage)
 
@@ -28,37 +28,24 @@ Retention is load-bearing; the other four explain it, they do not replace it.
 | Activation | <% reaching first accepted outcome> | <__> | <rung + tag> |
 | **Retention** | **<cohort % still delivering the outcome at week N>** | **<__>** | **<behaviour 0.7 `[Fact]`>** |
 | Referral | <% pulling in another unit> | <__> | <rung + tag> |
-| Revenue | <expansion / net revenue retention> | <__> | <money 1.0 `[Fact]`> |
+| Revenue | <expansion / net revenue retention> | <__> | <verified accounting basis + tag; cash collection separately> |
 
-## C. Retention truth test — the gate
+## C. Retention diagnostic
 
-Plot the newest full cohort's retention on the North Star **outcome** across equal periods.
+Record outcome definition, cohort-entry rule, usage cadence, cohort dates, denominators, retained counts and uncertainty. Compare multiple mature cohorts at equal age.
 
-| Period | W0 | W1 | W2 | W4 | W8 | W12 |
-|---|---|---|---|---|---|---|
-| % of cohort still delivering the outcome | 100% | <__> | <__> | <__> | <__> | <__> |
+| Cohort | Age | Starting N | Retained N | Rate | Measurement caveats |
+|---|---|---|---|---|---|
+| _ | _ | _ | _ | _ | _ |
 
-| Read | Value |
-|---|---|
-| Curve shape | decays-to-0 / flattens / smiles |
-| Plateau height (if flat) | <__%> `[Fact/Assumption]` |
-| Period it flattened | <e.g. ~W8> |
-| Tail slope (last two equal periods) | <__ pts/period> |
-| **Verdict** | **NORTH STAR VALID / INVALID** |
-
-Flatten rule: flat = tail slope within ~1 pt of zero AND plateau > 0. Still dropping ≥ ~2
-pts/period = INVALID (no PMF yet). Decays toward 0 = the North Star is a vanity metric
-riding acquisition — INVALID. Points are `[Assumption]`; the shape rule is the law.
-
-If INVALID: the North Star does not count yet. Name the smallest change that could bend the
-tail flat, and say what evidence (which cohort, measured how) would move the verdict.
+Describe declining / apparently stable / rising retention. A tail change within 1 percentage point is a screening heuristic, not proof of PMF, permanence, or a valid North Star. A useful outcome metric can reveal poor retention. Name the next diagnostic and missing data; do not infer infinity from a short tail.
 
 ## D. Cost-per-outcome (to the cent)
 
 | Line | Source | Amount |
 |---|---|---|
-| Inference / API per outcome | tokens × rate, every model call in the pipeline | $0.__ `[Fact/Assumption]` |
-| Human-in-loop per outcome | review minutes × loaded rate | $0.__ |
+| Inference / API per outcome | sum(input tokens × input rate + output tokens × output rate) /1,000,000 for per-million rates | $0.__ `[Fact/Assumption]` |
+| Human-in-loop per outcome | review minutes /60 × loaded hourly rate | $0.__ |
 | Infra / retrieval per outcome | vector + compute per outcome | $0.__ |
 | **Cost per outcome** | sum, to the cent | **$0.__** |
 | Price per outcome | what the customer pays per outcome | $_.__ |
@@ -88,9 +75,7 @@ headline is a total is a KILL.
 
 - [ ] Exactly ONE North Star, and it is a customer-received outcome — not an emitted output
       ("alerts sent") or a cumulative total. A vanity-total headline is an automatic KILL.
-- [ ] The retention truth test (C) was run. The North Star is marked VALID only if a real
-      cohort curve has flattened (or smiled); INVALID if it still decays. No North Star
-      passes without this check.
+- [ ] Retention diagnostic reports cohort maturity, denominators and uncertainty; curve shape alone is not PMF proof or a metric-validity verdict.
 - [ ] Cost-per-outcome (D) is computed to the cent, with margin-per-outcome and its
       direction at scale. Inversion risk named if present.
 - [ ] Retention is measured on the North Star outcome, over the cohort that reached the

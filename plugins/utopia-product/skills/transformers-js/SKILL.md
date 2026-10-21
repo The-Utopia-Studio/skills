@@ -389,15 +389,23 @@ env.cacheDir = './.cache';     // Cache directory location
 // Optional: override logging level (default is LogLevel.WARNING)
 env.logLevel = LogLevel.INFO;
 
-// Optional: custom fetch for auth headers, retries, abort signals, etc.
-env.fetch = (url, options) =>
-  fetch(url, {
-    ...options,
-    headers: {
-      ...options?.headers,
-      Authorization: `Bearer ${HF_TOKEN}`,
-    },
-  });
+// Optional SERVER-ONLY authenticated fetch. Never bundle a private token in a
+// browser app. This example authorizes only the exact HTTPS Hub origin.
+const hfToken = process.env.HF_TOKEN;
+env.fetch = (input, options) => {
+  const request = new Request(input, options);
+  const headers = new Headers(request.headers);
+  headers.delete('Authorization');
+  const url = new URL(request.url);
+  const authorized = url.origin === 'https://huggingface.co';
+  if (authorized && hfToken) headers.set('Authorization', `Bearer ${hfToken}`);
+  return fetch(new Request(request, {
+    headers,
+    // Do not automatically forward an authenticated request through redirects.
+    // Handle required redirects separately after validating the destination.
+    redirect: authorized && hfToken ? 'error' : request.redirect,
+  }));
+};
 ```
 
 **Configuration Patterns:**
@@ -663,7 +671,7 @@ For detailed patterns (React cleanup, servers, browser), see **[Code Examples](.
 
 | Task | Task ID |
 |------|---------|
-| Text classification | `text-classification` or `customer-research` |
+| Text classification | `text-classification` or `sentiment-analysis` |
 | Token classification | `token-classification` or `ner` |
 | Question answering | `question-answering` |
 | Fill mask | `fill-mask` |

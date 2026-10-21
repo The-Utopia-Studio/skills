@@ -29,7 +29,7 @@ Gather this context before building any metrics framework, dashboard, or measure
 | Metric | Definition | How to Calculate | Target |
 |---|---|---|---|
 | ARR / MRR | Recurring revenue | Sum of active subscription revenue | Growth rate benchmarks below |
-| Net New ARR | New minus churned | New ARR + Expansion - Churned ARR | Positive every quarter |
+| Net New ARR | New minus churned | New ARR + Expansion - Contraction - Churned ARR | Positive every quarter |
 | Revenue Latency | Days from first signal to closed deal | Median days first-touch to closed-won | <30d SMB, <90d mid-market, <180d enterprise |
 | Expansion Revenue % | New ARR from existing customers | Expansion ARR / Total New ARR | >40% at scale ($50M+ ARR companies ~60%) |
 
@@ -38,7 +38,7 @@ Gather this context before building any metrics framework, dashboard, or measure
 | Metric | How to Calculate | Target |
 |---|---|---|
 | CAC | Total S&M spend / New customers | Varies by segment |
-| CAC Payback | CAC / (ARR per customer * Gross Margin) | <8 months (median 8.6; top performers 5-7) |
+| CAC Payback | CAC / (MRR per customer * Gross Margin) | <8 months (median 8.6; top performers 5-7) |
 | Magic Number | Net New ARR (qtr) / S&M Spend (prior qtr) | >0.75 efficient, >1.0 excellent, <0.5 red flag |
 | LTV:CAC Ratio | (ARPA * Margin * Lifetime) / CAC | >3:1 healthy, >5:1 may be under-investing |
 | Burn Multiple | Net Burn / Net New ARR | <2x good, <1x excellent, >3x concerning |
@@ -122,7 +122,7 @@ AI products carry cost structures that traditional SaaS metrics miss. These supp
 | AI Cost of Revenue | Inference + compute cost / Revenue | <20% of revenue |
 | Cost per AI Action | Total AI compute / Actions generated | Decreasing over time |
 | ROAI | AI-attributed revenue / (Inference + compute overhead) | >10x for high performers |
-| Gross Margin after AI | (Revenue - COGS - AI compute) / Revenue | >70% (vs. ~80% pure SaaS) |
+| Gross Margin after AI | (Revenue - Total COGS including AI compute once) / Revenue | >70% (vs. ~80% pure SaaS) |
 
 ### Usage-Based Pricing Metrics
 
@@ -180,7 +180,7 @@ B2B data decays at 2.1% monthly on average. Required enrichment refresh cadence:
 
 ## 5. Attribution Models
 
-Attribution answers "what caused the deal?" Getting it right determines where you invest next.
+Attribution allocates observed credit across recorded touches; it does not establish causality. Use controlled experiments or causal analysis for incremental impact before reallocating investment.
 
 ### Model Comparison
 

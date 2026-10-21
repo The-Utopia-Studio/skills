@@ -40,7 +40,7 @@ Provides comprehensive PCT application support:
    - Abstract requirements (Rule 8 PCT)
    - Drawings standards (Rule 11 PCT)
    - Physical requirements (Rule 11 PCT)
-   - Sequence listings (Rule 12 PCT, WIPO Standard ST.26)
+   - Sequence listings: verify the applicable current PCT provisions and WIPO ST.26 requirements
 
 2. **Unity of Invention** (Rule 13 PCT):
    - Single general inventive concept assessment
@@ -139,7 +139,7 @@ Structure requirements:
 
 ### Abstract (Rule 8 PCT)
 
-- Maximum 150 words
+- Confirm the current Rule8 abstract length guidance and language-specific counting requirements from WIPO before assessing compliance
 - Indicate technical field
 - Clear summary of technical problem, solution, and principal use
 - Designate most illustrative figure
@@ -188,44 +188,9 @@ Special Technical Feature: "feature X" - shared across all groups
 Unity: MAINTAINED (single general inventive concept linked by X)
 ```
 
-## PCT Timeline
+## PCT Deadline and Fee Planning
 
-```
-Month 0:  File PCT application at Receiving Office (RO)
-Month 3:  International search begins (ISA)
-Month 16: International Search Report (ISR) issued
-Month 18: International publication (WIPO)
-Month 22: Demand for preliminary examination (optional, Chapter II)
-Month 28: International Preliminary Examination Report (IPER)
-Month 30: National/regional phase entry deadline (most countries)
-Month 31: National phase deadline (some countries: US, JP, etc.)
-```
-
-## Fee Calculation
-
-### Base Fees (2025 estimates)
-
-| Fee | Amount | Notes |
-|-----|--------|-------|
-| Transmittal fee | Varies by RO | RO/US: USD 280 |
-| International filing fee | CHF 1,330 | Electronic reduction: -CHF 200 |
-| Search fee | Varies by ISA | ISA/EP: EUR 1,775; ISA/US: USD 2,680 |
-| Additional page fee | CHF 16/page | Beyond 30 pages |
-| Additional claim fee | Varies | Beyond limits set by ISA |
-
-### Electronic Filing Reduction
-
-Filing via ePCT: CHF 200 reduction on international filing fee
-
-### National Phase Fees (Estimates)
-
-| Country | Entry Fee | Notes |
-|---------|-----------|-------|
-| US (371) | ~USD 1,600 | Basic filing + search + examination |
-| EP (Euro-PCT) | ~EUR 2,595 | Filing + search + designation |
-| JP | ~JPY 195,000 | National fee + translation |
-| CN | ~CNY 3,500 | National fee + translation |
-| KR | ~KRW 460,000 | National fee + translation |
+Build a dated jurisdiction-specific table from the current WIPO Applicant’s Guide, receiving/designated office rules and current fee schedules. The old hardcoded month/fee table is withdrawn as unverified; do not use it for a filing decision. Establish the earliest claimed priority date, international filing date, notices and relevant office before calculating each deadline. Include the exact governing provision, trigger, extensions/restoration conditions if applicable and source access date. Missing trigger dates or office rules mean the deadline is unresolved, not guessed.
 
 ## National Phase Strategy
 
@@ -243,7 +208,7 @@ Filing via ePCT: CHF 200 reduction on international filing fee
 - US + EP + CN + JP + KR (covers ~85% of global patent value)
 
 **Cost-Conscious**:
-- US + EP only (defer others until commercial validation)
+- Prioritize jurisdictions using current deadlines and commercial evidence; do not assume deferred jurisdictions remain available after their entry deadlines
 
 **Technology-Specific**:
 - Pharma: US + EP + JP + CN + IN + BR
@@ -280,7 +245,7 @@ Special technical feature: [identified feature]
 Risk of unity objection: LOW/MEDIUM/HIGH
 
 ABSTRACT (Rule 8 PCT):
-[PASS/FAIL] Word count within 150
+[PASS/WARN/FAIL] Word count assessed against cited current provision
 [PASS/FAIL] Figure designated
 [PASS/FAIL] Technical field indicated
 
@@ -297,11 +262,7 @@ Search: [amount]
 Total: [amount]
 
 DEADLINES:
-[Date] - Priority expires (12 months)
-[Date] - Furnish priority doc (16 months)
-[Date] - International publication (18 months)
-[Date] - Chapter II demand (22 months)
-[Date] - National phase entry (30/31 months)
+[Date or unresolved] - Each deadline with office, triggering date, governing provision and source access date
 ```
 
 ## EPO / Euro-PCT quality check
@@ -310,7 +271,7 @@ When the user is entering the EP regional phase, filing directly at the EPO, or 
 
 1. **Claims (Art. 84 EPC)** — clarity (relative terms need an objective reference), conciseness, support by the description, two-part form (Rule 43(1): preamble + "characterised in that"), claim categories, excluded subject matter (Art. 52(2), 53).
 2. **Sufficiency (Art. 83 EPC)** — reproducible by the skilled person, claim breadth vs disclosure, at least one worked example.
-3. **Formalities (Rules 42-49 EPC)** — description sections and order, claims form, drawings without text, abstract of max 150 words with a designated figure.
+3. **Formalities (Rules 42-49 EPC)** — description sections and order, claims form, drawings without text, abstract length and figure requirements verified against the current EPC rules.
 
 Report issues as Critical / Important / Minor with the EPC article/rule and Guidelines section for each, plus a concrete fix. To convert US-style claims, identify the closest prior art, put the known features in the preamble and the novel features after "characterised in that". The EPO-vs-USPTO differences table (absolute novelty, problem-solution inventive step, medical-method exclusion) is in the checklist reference.
 

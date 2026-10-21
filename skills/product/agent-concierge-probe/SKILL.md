@@ -53,10 +53,12 @@ If you cannot capture human-fix minutes, you cannot run this probe — the human
 **Step 4 — Price it to the cent.** Show the breakdown, then the number.
 
 ```
-CPO = [ (in_tokens × rate_in) + (out_tokens × rate_out)
+CPO = [ (in_tokens ÷ 1,000,000 × rate_in) + (out_tokens ÷ 1,000,000 × rate_out)
         + (tool_calls × rate_call)
         + (human_fix_min × human_rate) ] ÷ successful_outcomes
 ```
+
+Rates above are per million tokens; normalize token counts before multiplying. Include spend from failed runs and all human verification or correction time. If successful_outcomes = 0, report total spend and “CPO undefined: no successful outcomes”; never divide by zero or present $0/outcome. Round only the final displayed cost, retaining precision in the breakdown.
 
 Reporting a cost-per-outcome without the token / tool / human-fix breakdown is the kill line. Expected band from the honesty contract is ~$0.50–5 / task; if your CPO exceeds what a concierge customer paid, flag the inverted economics.
 

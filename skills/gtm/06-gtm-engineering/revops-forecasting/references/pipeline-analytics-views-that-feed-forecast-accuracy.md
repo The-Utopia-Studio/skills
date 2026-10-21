@@ -45,7 +45,7 @@ Six risk signals with threshold triggers:
 
 | Risk Signal | Threshold | Action When Triggered |
 |------------|-----------|----------------------|
-| No activity in 14+ days | 14 days since last logged activity | Flag deal owner — deal is likely dead |
+| No activity in 14+ days | 14 days since last logged activity | Flag deal owner to inspect the agreed next step and buyer timeline; inactivity alone does not establish a dead deal |
 | Close date unchanged 3+ weeks | Same close date for 21+ days | Challenge close date in next forecast call |
 | Single-threaded | Only 1 contact on deal | Coach multi-threading immediately |
 | No next step scheduled | Next activity date is empty | Create task: "Set concrete next step within 48 hours" |

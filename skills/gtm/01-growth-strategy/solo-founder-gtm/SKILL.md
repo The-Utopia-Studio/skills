@@ -433,7 +433,7 @@ Document every conversation: objection log, winning phrases, losing patterns, pr
 | ai-sdr | When designing the full AI SDR workflow from lead ID through meeting booking |
 | lead-enrichment | When building the research agent's enrichment waterfall and data quality |
 | content-to-pipeline | When converting content and audience into measurable pipeline |
-| social-selling | When building personal brand strategy and social selling workflows |
+| outreach-execution | When building personal brand strategy and social selling workflows |
 | gtm-metrics | When scaling past $50K MRR and need comprehensive metrics frameworks |
 | pricing-strategy | When setting or adjusting pricing for self-serve vs sales-led |
 | ideal-customer-profile | When defining ICP and positioning with limited research bandwidth |

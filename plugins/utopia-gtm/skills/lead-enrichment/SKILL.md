@@ -1,11 +1,11 @@
 ---
 name: lead-enrichment
-description: "When the user wants to build data enrichment workflows, score leads against ICP, set up Clay waterfalls, or improve contact data quality. Also use when the user mentions 'enrichment,' 'data enrichment,' 'Clay,' 'waterfall enrichment,' 'ICP scoring,' 'lead scoring,' 'intent data,' 'contact verification,' 'Apollo,' 'ZoomInfo,' or 'data quality.' This skill covers lead enrichment waterfalls, ICP scoring frameworks, and contact verification systems."
+description: "Build data enrichment workflows, Clay waterfalls and contact verification systems; improve missing, stale or unreliable contact data. Use for enrichment, data quality, provider waterfalls and verified field provenance. Feed separate fit and intent evidence into ideal-customer-profile and account-tier-scoring; do not define a competing lead score or enroll contacts in outreach."
 ---
 
 # Lead Enrichment Skill
 
-You are a B2B data enrichment architect. You build waterfall enrichment systems, ICP scoring frameworks, and contact verification pipelines that maximize coverage while minimizing cost per verified lead. You know the provider landscape cold and design workflows that sequence providers for maximum incremental yield.
+You are a B2B data enrichment architect. You build waterfall enrichment systems, evidence handoffs to configured scoring models, and contact verification pipelines that maximize coverage while minimizing cost per verified lead. You know the provider landscape cold and design workflows that sequence providers for maximum incremental yield.
 
 ## Before Starting
 
@@ -15,11 +15,11 @@ If the user provides a draft workflow or existing Clay table, analyze it before 
 
 ---
 
-## Section 1: ICP Scoring Framework
+## Section 1: Evidence for ICP and Account Scoring
 
 ### The Three Signal Layers
 
-Every ICP score pulls from three distinct signal categories. Each layer answers a different question about whether to pursue an account.
+Collect three separate categories of evidence for the configured ICP and account model. Enrichment establishes data quality; it does not independently authorize pursuit.
 
 | Signal Layer | What It Tells You | Key Data Points | Primary Tools |
 |---|---|---|---|
@@ -27,112 +27,20 @@ Every ICP score pulls from three distinct signal categories. Each layer answers 
 | Technographic | "Do they use tools that signal fit?" | Tech stack, CRM, marketing automation, cloud infra | BuiltWith, Wappalyzer, HG Insights |
 | Intent | "Are they actively looking right now?" | Content consumption, G2 visits, job postings, funding events | Bombora, G2 Buyer Intent, Clay signals |
 
-### ICP Scoring Formula
+### Scoring ownership
 
-```
-ICP Score = (Firmographic Fit x 0.30) + (Technographic Fit x 0.30) + (Intent Score x 0.40)
-```
+Keep fit and intent evidence separate. Use ideal-customer-profile for the ICP model and account-tier-scoring for account qualification, suppression, decay and routing. The field examples below illustrate possible enrichment inputs, not a universal score or permission to contact someone. Use the configured model; unknown data is unknown, not automatically a disqualification. Return source, observed date and confidence with each field.
 
-Weight intent highest because timing beats targeting. A perfect-fit company with zero buying intent converts worse than a decent-fit company actively researching solutions.
+### Field evidence to collect
 
-### Firmographic Fit Scoring (0-100)
+- **Firmographic:** employee count with source/range, revenue if disclosed, industry, operating geography and funding with dates. Missing funding is not zero funding; do not use one vendor's absence of data as disqualification.
+- **Technographic:** confirmed integration or competitor usage, infrastructure compatibility and dated adoption/removal signals. Distinguish observed facts from inference; a missing detection is not proof a tool is absent.
+- **Intent:** retain provider-native measures and definitions (for example, a surge score), first-party event type/time, and public hiring or funding events. Record person versus account scope, identity confidence, duplicates and expiry. Do not convert every event into points without the configured model.
+- **Provenance:** field, value, source, observed_at, confidence/limitations, and conflict notes. Keep multiple disagreeing values visible for adjudication.
 
-Score each firmographic dimension, then average:
+### Enrichment handoff
 
-| Dimension | 100 (Ideal) | 75 (Strong) | 50 (Acceptable) | 25 (Stretch) | 0 (Disqualify) |
-|---|---|---|---|---|---|
-| Employee Count | 50-200 | 200-500 | 20-50 or 500-1000 | 10-20 or 1000-2000 | <10 or >2000 |
-| Annual Revenue | $5M-$50M | $50M-$100M | $1M-$5M | $100M-$500M | <$1M or >$500M |
-| Industry | SaaS B2B | Fintech, Healthtech | Professional Services | Retail, Media | Government, Education |
-| Geography | US, UK, CA | DACH, Nordics | ANZ, Benelux | LATAM, SEA | Sanctioned regions |
-| Funding Stage | Series A-B | Series C | Seed, Series D+ | Pre-seed | No data |
-
-Adjust the ranges to your actual closed-won customer profile. Pull ranges from your CRM data, not assumptions.
-
-### Technographic Fit Scoring (0-100)
-
-Score based on tech stack signals that indicate readiness for your product:
-
-```
-Tech_Score = (Stack_Match x 0.50) + (Complexity_Signal x 0.30) + (Migration_Signal x 0.20)
-```
-
-**Stack Match (0-100):** Does their current tooling create a natural integration or replacement opportunity?
-
-| Signal | Score |
-|---|---|
-| Uses your direct integration partner | 100 |
-| Uses a competitor you commonly displace | 85 |
-| Uses adjacent tooling in your category | 60 |
-| Generic/unknown stack | 30 |
-| Uses a tool that blocks adoption | 0 |
-
-**Complexity Signal (0-100):** Does their tech footprint suggest they can absorb your product?
-
-| Signal | Score |
-|---|---|
-| 3-5 tools in your category (consolidation ready) | 100 |
-| Running modern cloud infra + APIs | 80 |
-| 1-2 tools, clear gap | 60 |
-| Legacy on-prem heavy | 30 |
-| No detectable tech presence | 10 |
-
-**Migration Signal (0-100):** Are they showing signs of switching?
-
-| Signal | Score |
-|---|---|
-| Job posting for role that owns your category | 100 |
-| Recently adopted adjacent tool | 75 |
-| Removed a competitor from their stack (BuiltWith delta) | 90 |
-| Stable stack, no changes in 12 months | 20 |
-
-### Intent Score Calculation (0-100)
-
-Intent scoring requires combining multiple signal sources. No single provider captures the full picture.
-
-```
-Intent_Score = max(Bombora_Surge, G2_Intent, First_Party) x 0.60
-             + Hiring_Signal x 0.20
-             + Funding_Signal x 0.20
-```
-
-**Bombora Company Surge scoring:**
-
-| Surge Score | Interpretation | Lead Priority |
-|---|---|---|
-| 80-100 | Heavy active research across multiple topics | Route to SDR within 24 hours |
-| 60-79 | Moderate research, early buying cycle | Add to nurture + monitor |
-| 40-59 | Light research, could be noise | Score with other signals before acting |
-| Below 40 | No meaningful surge detected | Do not prioritize |
-
-**G2 Buyer Intent signals:**
-
-| Signal Type | Weight | Why It Matters |
-|---|---|---|
-| Visited your G2 profile | High | Direct purchase consideration |
-| Compared you vs. competitor | Very High | Active evaluation stage |
-| Visited category page | Medium | Early research phase |
-| Read reviews in your category | Medium-High | Validation stage |
-
-**First-party intent signals (your own data):**
-
-| Signal | Score Boost |
-|---|---|
-| Pricing page visit (2+ times) | +30 |
-| Demo page visit without booking | +25 |
-| Downloaded gated content | +15 |
-| Blog visit (3+ pages, single session) | +10 |
-| Email opened but no click | +5 |
-
-### Composite Score Interpretation
-
-| ICP Score Range | Action | SLA |
-|---|---|---|
-| 85-100 | Hot lead - immediate SDR outreach | Contact within 4 hours |
-| 70-84 | Warm lead - prioritized sequence | Enroll within 24 hours |
-| 50-69 | Nurture - automated drip | Weekly content touches |
-| 30-49 | Monitor - check quarterly | Re-score monthly |
-| Below 30 | Disqualify - do not pursue | Archive, re-evaluate in 6 months |
+Return verified fields, missing fields, provenance, freshness and uncertainty. Pass firmographic/technographic evidence and intent evidence separately to the configured scoring model. Never collapse them into a single ICP score, invent default eligibility, or enroll a lead directly from enrichment. Suppression and execution authorization remain mandatory downstream.
 
 ---
 
@@ -166,9 +74,9 @@ Input Lead
   |                   Fields: current title, company, location
   v
 [Verification]       Bounce check, catch-all flag, dedup
-  |                   Threshold: >85% confidence = deliverable
+  |                   Retain native verification status and source/date
   v
-[Score + Route]      Apply ICP score, push to sequence or nurture
+[Scoring handoff]    Pass separate fit/intent evidence to the configured model
 ```
 
 ### Provider Selection by Use Case
@@ -287,12 +195,12 @@ Col F: Employee Count        (Clearbit or Clay built-in)
 Col G: Industry              (Clearbit or Clay built-in)
 Col H: Tech Stack            (BuiltWith via Clay)
 Col I: Bombora Surge Score   (Bombora integration or manual import)
-Col J: Firmographic Score    (Formula: weighted average of F, G, geography)
-Col K: Technographic Score   (Formula: based on H match rules)
-Col L: Intent Score          (Formula: based on I + hiring + funding signals)
-Col M: ICP Score             (Formula: J*0.30 + K*0.30 + L*0.40)
+Col J: Firmographic Evidence (values, sources, dates, conflicts)
+Col K: Technographic Evidence (verified H plus source/date)
+Col L: Intent Evidence       (native I plus dated hiring/funding events)
+Col M: Model Handoff         (separate fit and intent; configured model/version)
 Col N: AI Personalization    (AI column: generate first-line based on B, E, H)
-Col O: Routing               (Formula: if M > 85 then "hot" elif M > 70 then "warm")
+Col O: Review Status         (pending scoring/suppression/authorized execution)
 ```
 
 ### Credit Governance Rules
@@ -320,14 +228,9 @@ Unverified cold email lists carry 10-30% invalid addresses. Sending to bad addre
 | 5 | Role account check | Flag info@, support@, admin@, sales@ | Provider-based |
 | 6 | Confidence scoring | Assign final deliverability score | Computed |
 
-### Confidence Score Thresholds
+### Confidence interpretation
 
-| Confidence | Classification | Action |
-|---|---|---|
-| >0.85 | Deliverable | Safe to send. Include in sequences. |
-| 0.70-0.85 | Risky | Send in small batches. Monitor bounce rate per batch. |
-| 0.50-0.69 | Catch-all/Unverifiable | Segment separately. Maximum 50 per day. Watch closely. |
-| <0.50 | Invalid/High Risk | Reject. Do not send. Re-enrich with alternate provider. |
+Provider confidence scales are not interchangeable or proof of consent, eligibility or inbox placement. Retain provider, verification date and native result. Use validated provider-specific thresholds; ambiguous or catch-all results remain unverified and require review or re-enrichment. Invalid addresses are excluded. A high confidence score alone never authorizes a send or sequence enrollment.
 
 ### Catch-All Domain Handling
 
@@ -457,11 +360,11 @@ Budget > $5,000/mo?
 1. [ ] Import leads to Clay or enrichment platform
 2. [ ] Pre-filter: remove invalid domains, wrong industries, wrong geo
 3. [ ] Run waterfall: primary > secondary > tertiary > LinkedIn
-4. [ ] Verify all emails (confidence threshold >0.85)
+4. [ ] Verify emails using documented provider-specific results and dates
 5. [ ] Segment catch-all addresses into separate pool
-6. [ ] Calculate ICP scores (firmographic + technographic + intent)
-7. [ ] Route hot leads (>85 score) to SDR for immediate outreach
-8. [ ] Route warm leads (70-84) to automated sequence
+6. [ ] Keep fit and intent evidence separate
+7. [ ] Hand off to the configured account-tier-scoring model with provenance
+8. [ ] Require suppression and authorized execution checks before any outreach
 9. [ ] Push enriched data to CRM with source attribution
 10. [ ] Set re-enrichment reminder at 90 days
 

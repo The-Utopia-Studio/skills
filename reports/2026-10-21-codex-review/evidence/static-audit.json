@@ -1,0 +1,734 @@
+{
+  "skill_count": 251,
+  "missing_relative_links": [
+    {
+      "file": "skills/founder-productivity/last30days/SKILL.md",
+      "line": 179,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/SKILL.md",
+      "line": 179,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/SKILL.md",
+      "line": 179,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/SKILL.md",
+      "line": 1282,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/references/save-html-brief.md",
+      "line": 28,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/references/save-html-brief.md",
+      "line": 35,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/references/save-html-brief.md",
+      "line": 36,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/references/save-html-brief.md",
+      "line": 37,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/last30days/references/save-html-brief.md",
+      "line": 63,
+      "target": "url"
+    },
+    {
+      "file": "skills/founder-productivity/obsidian-markdown/SKILL.md",
+      "line": 19,
+      "target": "url"
+    },
+    {
+      "file": "skills/investments/3-statement-model/references/formatting.md",
+      "line": 71,
+      "target": "0.00"
+    },
+    {
+      "file": "skills/investments/auction-first-price-shading/resources/methodology.md",
+      "line": 5,
+      "target": "F(t"
+    }
+  ],
+  "missing_inline_resources": [
+    {
+      "file": "skills/investments/khalil/AGENTS.md",
+      "line": 89,
+      "target": "references/slide-frameworks.md"
+    }
+  ],
+  "syntax": [
+    {
+      "file": "skills/founder-productivity/last30days/scripts/store.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/last30days.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/watchlist.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/briefing.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/xurl_x.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/rerank.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/truthsocial.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/planner.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/signals.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/hackernews.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/resolve.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/env.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/query.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/render.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/log.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/polymarket.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/ui.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/categories.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/subproc.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/dedupe.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/normalize.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/bird_x.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/perplexity.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/__init__.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/pinterest.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/snippet.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/setup_wizard.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/providers.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/threads.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/entity_extract.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/html_render.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/cluster.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/pipeline.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/http.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/fusion.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/instagram.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/quality_nudge.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/tiktok.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/dates.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/bluesky.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/safari_cookies.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/github.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/reddit_public.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/grounding.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/reddit.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/competitors.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/xquik.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/cookie_extract.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/fanout.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/xai_x.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/youtube_yt.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/schema.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/relevance.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/preflight.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/chrome_cookies.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/reddit_enrich.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/xiaohongshu_api.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/bird-search.mjs",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/runtime-query-ids.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/twitter-client-utils.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/twitter-client-constants.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/cookies.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/runtime-features.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/twitter-client-search.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/twitter-client-features.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/twitter-client-types.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/twitter-client-base.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/last30days/scripts/lib/vendor/bird-search/lib/paginate-cursor.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/market-sizing/scripts/market-sizing.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/founder-productivity/skillshare/scripts/run.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/gtm/01-growth-strategy/growth-strategy/assets/build_growth_strategy.js",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/investments/3-statement-model/scripts/recalc.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/investments/auction-first-price-shading/scripts/uniform_bid.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/investments/dcf-model/scripts/recalc.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/investments/dcf-model/scripts/validate_dcf.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/investments/ib-check-deck/scripts/extract_numbers.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/investments/investor-doc-system/scripts/render-pdf.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/investments/investor-fact-ledger/scripts/fact-check.mjs",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/investments/pitch-deck-web/scripts/validate-pitchdeck-project.mjs",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/product/asd-ste100/scripts/ste_check.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/cip/generate.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/cip/core.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/cip/render-html.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/cip/search.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/logo/generate.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/logo/core.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/logo/search.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design/scripts/icon/generate.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design-system/scripts/slide_search_core.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design-system/scripts/fetch-background.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design-system/scripts/search-slides.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design-system/scripts/html-token-validator.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design-system/scripts/slide-token-validator.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-design-system/scripts/generate-slide.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-ui-styling/scripts/tailwind_config_gen.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-ui-styling/scripts/shadcn_add.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-ui-styling/scripts/tests/test_shadcn_add.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ckm-ui-styling/scripts/tests/test_tailwind_config_gen.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/deploy-to-vercel/resources/deploy.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/deploy-to-vercel/resources/deploy-codex.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-community-evals/scripts/inspect_vllm_uv.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-community-evals/scripts/inspect_eval_uv.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-community-evals/scripts/lighteval_vllm_uv.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/unsloth_sft_example.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/convert_to_gguf.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/dataset_inspector.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/train_sft_example.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/estimate_cost.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/train_grpo_example.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/hf_benchmarks.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-llm-trainer/scripts/train_dpo_example.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-tool-builder/references/hf_enrich_models.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-tool-builder/references/find_models_by_paper.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-tool-builder/references/baseline_hf_api.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-tool-builder/references/hf_model_card_frontmatter.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-tool-builder/references/hf_model_papers_auth.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-tool-builder/references/baseline_hf_api.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-vision-trainer/scripts/sam_segmentation_training.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-vision-trainer/scripts/dataset_inspector.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-vision-trainer/scripts/image_classification_training.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-vision-trainer/scripts/estimate_cost.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/huggingface-vision-trainer/scripts/object_detection_training.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/impeccable/scripts/cleanup-deprecated.mjs",
+      "method": "node --check",
+      "error": null
+    },
+    {
+      "file": "skills/product/railway/scripts/railway-api.sh",
+      "method": "bash -n",
+      "error": null
+    },
+    {
+      "file": "skills/product/ui-ux-pro-max/scripts/design_system.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ui-ux-pro-max/scripts/core.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ui-ux-pro-max/scripts/search.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/ui-ux-pro-max/data/_sync_all.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    },
+    {
+      "file": "skills/product/user-story/scripts/user-story-template.py",
+      "method": "ast.parse (no execution)",
+      "error": null
+    }
+  ],
+  "exact_duplicate_files": [
+    [
+      "skills/investments/3-statement-model/scripts/recalc.py",
+      "skills/investments/dcf-model/scripts/recalc.py"
+    ],
+    [
+      "skills/investments/funding-digest/LICENSE",
+      "skills/investments/tear-sheet/LICENSE"
+    ],
+    [
+      "skills/product/vercel-react-best-practices/rules/_template.md",
+      "skills/product/vercel-react-native-skills/rules/_template.md"
+    ]
+  ],
+  "exact_duplicate_skill_bodies": []
+}

@@ -94,6 +94,8 @@ export interface MyTaskSpec {
 
 ```
 
+The `SafePathSchema` above is only a minimal string-refinement example. It is not a filesystem sandbox: it neither restricts absolute paths to an allowed root nor resolves symlinks. When containment matters, validate resolved paths against the intended root and apply the application's filesystem boundary.
+
 ### Step 2: Implement the Handler (`handler.ts`)
 
 Follow this template to implement the logic.
@@ -177,7 +179,10 @@ Test the *Chef*. Mock external dependencies (fs, network) and assert the Result 
 ```typescript
 // handler.test.ts
 import { MyTaskHandler } from './handler';
-import { vi } from 'vitest'; // or jest
+import * as fs from 'fs';
+import { test, expect, vi } from 'vitest';
+
+vi.mock('fs', () => ({ existsSync: vi.fn() }));
 
 test('returns FILE_NOT_FOUND if path missing', async () => {
   // MOCK

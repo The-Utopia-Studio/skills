@@ -80,7 +80,7 @@ Only now compute a top-down number, a different way (industry figure × penetrat
 | Bottom-up ÷ top-down | Band | Read |
 |---|---|---|
 | 0.3× – 3× | Triangulated | Two independent methods agree within an order of magnitude. Strongest signal you have. |
-| 3× – 10× | Divergent | Off by up to an order of magnitude. Find the rung or the TAM assumption that explains it before trusting either. |
+| 0.1× – <0.3× or >3× – 10× | Divergent | Off by up to an order of magnitude. Find the rung or the TAM assumption that explains it before trusting either. |
 | > 10× or < 0.1× | Broken | The methods disagree by more than ten times. One is fabricated. Do not report a total until reconciled. |
 
 When Divergent or Broken, hunt the broken rung. Do not split the difference between a built number and an invented one.

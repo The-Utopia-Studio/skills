@@ -133,8 +133,7 @@ auto-proceeds. It is derived, not chosen:
 > Set τ = the lowest score whose calibration bucket (and every bucket above it) shows a
 > measured failure rate ≤ acceptable_rate(mode).
 
-You need a calibration curve: bucket golden-case outputs by score, measure the actual pass
-rate in each bucket. Without that curve, τ is `[Hypothesis]`; the safe interim is to route
+You need a calibration curve from representative held-out outcomes: bucket outputs by score and measure failure rates with sample counts and uncertainty. A curated golden set checks known cases; its bucket point rates cannot certify deployment failure rates. Select the threshold on calibration data and validate it on an independent representative holdout; for rare/high-cost failures compare an appropriate upper confidence bound to the acceptable rate. Without that curve, τ is `[Hypothesis]`; the safe interim is to route
 the whole mode to human sign-off until the curve exists. A raw "the model says 90%" is
 opinion (0.1 on the ladder) — the Confidently-wrong mode is exactly the model being sure
 and wrong, so its self-report cannot be the guard against it.

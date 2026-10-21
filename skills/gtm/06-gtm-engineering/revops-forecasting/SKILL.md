@@ -70,7 +70,7 @@ Optimistic forecast   = (Commit × 90%) + (Best Case × 50%) + (Upside × 20%)
 
 Present all three to leadership. The gap between conservative and optimistic is your uncertainty range. A wide gap means you need better deal qualification, not better math.
 
-**Validation rules for Commit:** the buyer has explicitly confirmed intent this period, the economic buyer is engaged, commercial terms are agreed, a close plan is documented, procurement/legal is initiated, and the close date is within the period. If any box is unchecked, it's Best Case, not Commit. For the full 7-point checklist, see `references/forecasting-methods-detailed-mechanics.md`.
+**Validation rules for Commit:** the buyer has explicitly confirmed intent this period, the economic buyer is engaged, commercial terms are agreed, a close plan is documented, procurement/legal is initiated, and the close date is within the period. If any box is unchecked, it's Best Case, not Commit. For the full checklist, see `references/forecasting-methods-detailed-mechanics.md`.
 
 ### Methods 2-4 (summary)
 
@@ -116,7 +116,7 @@ The direction of the miss points to the root cause: consistent over-forecasting 
 
 ### Slippage Benchmarks (Ebsta/Pavilion 2025)
 
-In the current market, **36% of pipeline deals slip**; apply a slippage haircut to Best Case and Upside (e.g., if 36% slip, multiply Best Case by 0.64). For the full diagnostic, slippage predictors, and adjustment formula, see `references/slippage-benchmarks-ebsta-pavilion-2025.md`.
+Estimate slippage from a comparable historical cohort for the same forecast horizon. Apply a timing adjustment only if the base probability does not already include in-period slippage; do not multiply an in-period conversion rate by another slip haircut. External benchmarks are context, not automatic model inputs. For the diagnostic and adjustment conditions, see `references/slippage-benchmarks-ebsta-pavilion-2025.md`.
 
 ## Pipeline Coverage Analysis
 
@@ -127,7 +127,7 @@ Pipeline Coverage = Total Active Pipeline Value ÷ Revenue Target
 
 Coverage thresholds (2026 data):
   The flat 3x rule is outdated. Correct coverage = 1 ÷ historical win rate.
-  Examples: 25% win rate requires 4x coverage; 15% enterprise requires 5-6x.
+  Examples: 25% win rate requires 4x coverage; 15% enterprise requires about 6.67x.
   Reps starting a quarter at 3.2x+ weighted coverage hit quota 89% of the time;
   below 2.8x, quota attainment drops to 52% (Clari; Gradient Works; Fullcast, 2026).
 
@@ -240,7 +240,7 @@ These connect forecasting to the Operating Cadence; when a forecast signal fires
 | `references/forecasting-methods-detailed-mechanics.md` | Building or validating a forecast with Methods 2-4 | Full Commit checklist; stage-weighted, run-rate/trend, and bottoms-up capacity mechanics, formulas, limitations |
 | `references/forecast-cadence-and-process.md` | Setting up the forecast rhythm or running a forecast call | Weekly Mon-Thu rhythm; 5-step call structure; manager red flags |
 | `references/diagnosing-forecast-misses.md` | Diagnosing why the forecast is off | Over-/under-forecasting and high-variance patterns with fixes |
-| `references/slippage-benchmarks-ebsta-pavilion-2025.md` | Applying a slippage haircut or diagnosing slip rate | Ebsta/Pavilion 2025 rates, predictors, adjustment formula |
+| `references/slippage-benchmarks-ebsta-pavilion-2025.md` | Diagnosing slip rate or modeling timing | Cohort definitions, inspection signals, no double-counting, benchmark verification |
 | `references/pipeline-coverage-model-thresholds-and-contingency.md` | Coverage analysis and contingency planning | Coverage by category, by time-in-period, contingency playbook |
 | `references/pipeline-analytics-views-that-feed-forecast-accuracy.md` | Building forecast-accuracy dashboards/views | Waterfall, forecast-vs-actuals, at-risk, health-snapshot schemas |
 | `references/forecasting-for-different-revenue-types.md` | Forecasting new business / expansion / renewal | Method, coverage, and signals per revenue type |

@@ -77,8 +77,10 @@ Read `package.json` or equivalent to understand dependencies and scripts.
 | **Git hygiene** | Check `.gitignore` exists and covers common patterns |
 
 ### Step 6: Check Security
+
+Return filenames only from credential detection. Never print matching source lines or values; verify candidates with redaction before declaring a leak.
 ```bash
-grep -rn "sk-\|api_key\s*=\s*['\"].\+['\"]" --include="*.ts" --include="*.js" --include="*.py" --include="*.env" . 2>/dev/null | grep -v node_modules | grep -v '.env.example' | head -20
+grep -rl "sk-\|api_key\s*=\s*['\"].\+['\"]" --include="*.ts" --include="*.js" --include="*.py" --include="*.env" . 2>/dev/null | grep -v node_modules | grep -v '.env.example' | head -20
 ```
 
 ## MANDATORY Output Format

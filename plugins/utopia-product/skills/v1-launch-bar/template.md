@@ -8,7 +8,8 @@ Product / v1: _[name]_ · Version / commit tested: _[exact ref]_ · Date: _[date
 
 ## Step 0 — Preconditions (all must be `[Fact]`)
 
-| Precondition | Present? | Evidence | If missing |
+| Precondition | Present? | Same strangers pass BOTH checks | ≥ 2 of 3 | _[n/3]_ |
+| Evidence | If missing |
 |---|---|---|---|
 | Built, running v1 a stranger can touch | _[Y/N]_ | _[cite]_ | Not a launch question — back to build |
 | The one **outcome unit** the v1 promises (from `eval-first-spec` job line) | _[Y/N]_ | _[state it]_ | No target for the stranger — get the job line |
@@ -83,3 +84,5 @@ Score readiness now; commit the delta to week 4. B1–B4 must all be present and
 - The B5 delta is `refine-flywheel`'s first checkpoint at week 4.
 
 Owner of the pilot from here: _[name]_ · Week-4 review date: _[date]_
+
+Gate A requires at least 2 of the same 3 strangers to pass both checks; separate marginal totals cannot substitute.

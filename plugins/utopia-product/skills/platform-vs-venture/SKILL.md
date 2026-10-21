@@ -152,3 +152,7 @@ Gold-plating every box as venture-moat. The mirror image of the rebuild error: m
 `agent-design` / `workflow-design` — spec the agent's tools and memory and the multi-agent fleet. This decides which parts of those specs are inherited from the platform and which are built in-venture, especially the memory layer, which `agent-design` already flags as the only part the fellow owns.
 
 Supersedes: none. This is a new skill. It beats the generic build-vs-buy TCO analysis not by adding cost columns but by changing the axis: from cheapest-to-own to where-the-venture-time-compounds, and by drawing the line through each component (substrate versus signal) rather than treating whole components as atomic build-or-buy decisions.
+
+## Boundary cases
+
+Ownership of the moat asset is separate from where code runs. Exclusive licensed data or contractual rights may preserve differentiation even with outsourced implementation; verify rights, portability and continuity. Buying can create switching costs and data/security dependencies. A commodity component may justify a local implementation for verified availability, compliance or performance needs without becoming a moat. Record that operational rationale instead of forcing a false moat claim.

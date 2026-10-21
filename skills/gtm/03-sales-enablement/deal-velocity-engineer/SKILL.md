@@ -38,7 +38,7 @@ Pipeline Velocity = (# Opportunities × Win Rate × Avg Deal Size) ÷ Sales Cycl
 
 **SaaS & Technology benchmark:** EUR1,847 daily velocity average at 22% win rate, EUR12,400 avg deal size, 67-day cycle (Source: KPI Depot composite benchmark span 2024-2025).
 
-**The compounding effect:** A 10% improvement in each of the four velocity elements produces a **49% improvement** in overall pipeline velocity (Source: Factors.ai, 2024). This is why velocity engineering is a system discipline; small improvements across four levers compound dramatically.
+**The compounding effect:** A 10% improvement in each of the four velocity elements produces a **47.9% improvement** (1.1³ ÷ 0.9 − 1; three numerator factors increase 10%, cycle length decreases 10%) in overall pipeline velocity (Source: Factors.ai, 2024). This is why velocity engineering is a system discipline; small improvements across four levers compound dramatically.
 
 **Velocity monitoring matters:** Companies that track pipeline velocity weekly achieve **34% annual growth** vs. 11% for companies that track ad-hoc (Source: Factors.ai, 2024 enterprise SaaS study).
 
@@ -162,7 +162,7 @@ Stage gates only work if they're enforced. Three enforcement mechanisms:
 
 - **Workflow (Zombie detection):** Create workflow triggered when Deal last_activity_date is older than 14 days AND Deal stage is not Closed-Won or Closed-Lost. Workflow sends manager alert in Slack or creates task. Re-evaluate weekly.
 
-- **Deal health dashboard tile:** Create custom dashboard with calculation: IF(engagement_recency = 0 OR multithreading_count < 2 OR days_in_stage > avg_stage_days * 2, "AT_RISK", "HEALTHY"). Surface >60 deals in weekly view.
+- **Deal health dashboard tile:** Create custom dashboard with calculation: IF(engagement_recency = 0 OR multithreading_count < 2 OR days_in_stage > avg_stage_days * 2, "AT_RISK", "HEALTHY"). Surface <60 deals in weekly view.
 
 - **Automation:** Use HubSpot's Breeze Prospecting Agent to auto-flag low-health deals (score <60) and recommend triage actions to the manager's Slack channel daily.
 
@@ -170,7 +170,7 @@ Stage gates only work if they're enforced. Three enforcement mechanisms:
 
 - **Flow validation (Stage 3 entry):** Salesforce Flow (successor to Process Builder; Workflow Rules deprecated December 2025): before opportunity status changes to "Proposal Sent," flow checks that StageName is not null AND EconomicBuyerContact__c contains a value. If missing, flow prevents advance and sends notification to rep.
 
-- **Zombie detection automation:** Flow triggered daily by scheduled action runs query: "Opportunities where LastModifiedDate < TODAY()-14 AND StageName != 'Closed-Won' AND StageName != 'Closed-Lost' AND IsClosed = FALSE." Creates task for manager review or auto-closes with reason "No activity."
+- **Zombie detection automation:** Flow triggered daily by scheduled action runs query: "Opportunities where LastModifiedDate < TODAY()-14 AND StageName != 'Closed-Won' AND StageName != 'Closed-Lost' AND IsClosed = FALSE." Creates a task for manager review; never auto-close from inactivity alone. Check planned buyer milestones and actual buyer activity (LastModifiedDate is not a reliable substitute).
 
 - **Deal health score field (Roll-up Summary):** Calculate composite score from engagement recency (Days Since Activity), contact count (# of Contacts with activity in past 30 days), days in stage, and exit criteria met. Store in custom field Deal_Health_Score__c. Refresh nightly.
 
@@ -186,12 +186,14 @@ Not all deals in the same stage are equally healthy. Score deal health to priori
 
 | Dimension | Weight | What It Measures | Scoring |
 |-----------|--------|-----------------|---------|
-| **Engagement recency** | 20% | Days since last buyer activity | <7d = 10, 7-14d = 6, 14-21d = 3, >21d = 0 |
+| **Engagement recency** | 20% | Days since last buyer activity | <7d = 10, 7–<14d = 6, 14–21d = 3, >21d = 0 |
 | **Multi-threading** | 20% | # of buyer contacts engaged | 4+ = 10, 3 = 7, 2 = 4, 1 = 1 |
 | **Stage velocity** | 20% | Days in current stage vs. average | Below avg = 10, 1-1.5x = 6, 1.5-2x = 3, >2x = 0 |
 | **Methodology adherence** | 15% | Exit criteria met for current stage | All = 10, Most = 7, Some = 4, Few = 0 |
 | **Next step quality** | 15% | Specific next step with date exists | Scheduled + confirmed = 10, Scheduled = 6, Vague = 3, None = 0 |
 | **Economic buyer access** | 10% | EB identified and engaged | Met + engaged = 10, Identified = 5, Unknown = 0 |
+
+**Aggregation:** Each dimension is 0–10. Compute `health = 10 × sum(dimension_score × weight_fraction)` to produce a 0–100 score. Missing evidence stays unknown and is flagged for review rather than silently scored healthy. Use these same ranges in automation.
 
 **Score bands:**
 
@@ -267,7 +269,7 @@ Ranked by evidence strength:
 
 ### Tactic 1: Early Economic Buyer Engagement
 
-**Evidence:** Early EB engagement boosts win rates by **55%**. Delayed EB engagement reduces win rates by **113%** (Ebsta/Pavilion 2024). Top performers are **241% more likely** to have EB engaged before solution presentation.
+**Evidence:** Early EB engagement boosts win rates by **55%**. The previous claim of a 113% win-rate reduction is mathematically invalid and is withdrawn; verify the source and its actual comparison before quoting a replacement. Top performers are **241% more likely** to have EB engaged before solution presentation.
 
 **How to implement:**
 - Stage 2 exit criteria requires EB identified (name + role)
@@ -370,14 +372,14 @@ Automated zombie detection runs nightly:
 
 Nightly calculation:
 
-- **Engagement recency:** Query CRM activity log; if last logged activity >14 days, score 0; <7 days, score 10
+- **Engagement recency:** Query CRM activity log; use buyer activity: <7 days = 10; 7–<14 = 6; 14–21 = 3; >21 = 0; missing = unknown
 - **Multi-threading:** Count distinct buyer contacts with activity in last 30 days; score 1, 4, 7, or 10 per contact count
 - **Stage velocity:** Compare days-in-stage to historical average; days >2x average floor the score to 0
 - **Methodology adherence:** Validate required fields per stage exit criteria; missing fields reduce score proportionally
 - **Next step quality:** If next_meeting_date field exists and is populated within 14 days, score 10; vague next steps score 3-6
 - **Economic buyer access:** Query EB contact field; if blank or no activity in last 30 days, score 0
 
-Aggregated daily and surfaced in pipeline dashboard with >60 deals highlighted for that week's inspection. This is the primary input to manager pipeline reviews.
+Aggregated daily and surfaced in pipeline dashboard with <60 deals highlighted for that week's inspection. This is the primary input to manager pipeline reviews.
 
 ---
 

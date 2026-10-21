@@ -24,7 +24,7 @@ Each macrostructure also implies a **nav archetype** (N1–N9) and a **footer ar
 
 ## The 21 macrostructures — index
 
-**Pick one. Then read ONLY that one file** from `references/macrostructures/`. Do not load the whole catalogue. Slugs are stable; the diversification rule reads the `<name>` from the `/* Hallmark · macrostructure: <name> · ... */` stamp.
+**Pick one. Then read ONLY that one file** from `macrostructures/`. Do not load the whole catalogue. Slugs are stable; the diversification rule reads the `<name>` from the `/* Hallmark · macrostructure: <name> · ... */` stamp.
 
 - **01 · Bento Grid** — Modular blocks of varying sizes laid out as an irregular grid. Each block is a feature, a quote, an image, a stat. Visual rhythm comes from size variation, not card uniformity. [`macrostructures/01-bento-grid.md`](macrostructures/01-bento-grid.md)
 - **02 · Long Document** — Reads like a memo, a letter, or a journal entry. No marketing structure. Continuous prose with inline section heads. The page is *literature* about the product. [`macrostructures/02-long-document.md`](macrostructures/02-long-document.md)

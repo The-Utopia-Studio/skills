@@ -1,5 +1,7 @@
 # Skill consolidation and routing evaluation
 
+Historical snapshot. The subsequent [21 October Codex review](../2026-10-21-codex-review/README.md) refines the catalog to 251 skills and records independent review plus offline tests. The Claude routing results below remain historical and incomplete.
+
 Date: 20 October 2026. Status: consolidation implemented; routing evaluation incomplete because Claude usage is exhausted. This is not a certification of functional reliability.
 
 ## Marketplace result

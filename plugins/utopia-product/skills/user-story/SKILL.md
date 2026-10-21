@@ -3,10 +3,10 @@ name: user-story
 description: >-
   Write development-ready user stories: a single story in Mike Cohn format (As a / I want to / so
   that) with Gherkin Given/When/Then acceptance criteria, or a full set of backlog stories for a
-  feature using the 3 C's (Card, Conversation, Confirmation) and INVEST with 4-6 numbered acceptance
-  criteria and design links. Use when writing a user story, breaking a feature into backlog items,
-  converting a PRD requirement into stories, or defining acceptance criteria. Not for situation-first
-  'When..., I want to..., so I can...' stories (use job-stories), splitting an oversized story or epic
+  feature using the 3 C's (Card, Conversation, Confirmation) and INVEST with numbered acceptance
+  criteria and supplied design links. Use when writing a user story, breaking a feature into backlog items,
+  converting a PRD requirement into stories, defining acceptance criteria, or writing situation-first
+  job stories (When / I want to / so I can). Not for splitting an oversized story or epic
   (use user-story-splitting), or laying out the whole journey and release slices (use
   user-story-mapping).
 intent: >-
@@ -80,7 +80,7 @@ Before writing a story, ensure you have:
 - **Desired outcome:** What does success look like?
 - **Constraints:** Technical, time, or scope limitations
 
-**If missing context:** Run discovery interviews or problem validation work first.
+**If missing context:** Use the facts already supplied and label assumptions or open questions. Ask only for missing information that blocks a useful story; do not require a new discovery cycle to draft one.
 
 ---
 
@@ -142,11 +142,11 @@ Fill in the template:
 **Quality checks:**
 - **Multiple Givens are okay:** Preconditions stack up (e.g., "Given I'm logged in" + "Given I have items in my cart")
 - **Only one When:** If you need multiple "When" statements, you likely have multiple stories—split them
-- **Only one Then:** If you need multiple "Then" statements, you likely have multiple stories—split them
+- **Related outcomes may share a scenario:** Use `Then` plus `And` for consequences of the same action. Split only independently valuable behaviors, not every assertion.
 - **Alignment:** Does "When" match "I want to"? Does "Then" match "so that"?
 
 **Red flags:**
-- **Multiple Whens/Thens:** Sign of scope creep—split the story (reference `user-story-splitting`)
+- **Unrelated actions or outcomes:** May indicate scope creep; consider splitting independently valuable behaviors (reference `user-story-splitting`). Multiple assertions alone do not require splitting.
 - **Vague Thens:** "Then I see improved performance" (unmeasurable—make it specific)
 
 ---
@@ -184,10 +184,10 @@ Use this when the user hands you a whole feature (plus optional design link and 
 3. **Apply the 3 C's** to every story:
    - **Card:** a simple title and one-liner ("As a [role], I want to [action], so that [benefit].")
    - **Conversation:** a short note on intent and open questions for the team
-   - **Confirmation:** 4-6 plain, numbered, testable acceptance criteria
+   - **Confirmation:** Plain, numbered, testable acceptance criteria grounded in supplied requirements; do not invent criteria to reach a fixed count
 4. **Check INVEST:** Independent, Negotiable, Valuable, Estimable, Small (fits one sprint), Testable. Stories should be buildable in any order.
 5. **Use plain language** a primary-school graduate can understand.
-6. **Link the design file** (Figma, Miro) on each story.
+6. **Link a supplied design file** (Figma, Miro) on each story; otherwise mark it not provided.
 
 Story-set format:
 
@@ -207,6 +207,22 @@ Story-set format:
 Example: **Recently Viewed Section.** As an online shopper, I want to see a "Recently viewed" section on the product page so I can easily revisit items I considered. Criteria: shown at the bottom of the product page for anyone who has viewed at least one product; hidden on the first product page of a session; the current product is excluded; cards show image, title and price; each card says when it was viewed ("Viewed 5 minutes ago"); clicking a card opens that product page.
 
 Plain numbered criteria are fine in this mode; convert to Gherkin (Step 3) when the team needs QA-ready scenarios.
+
+---
+
+### Mode C: Situation-First Job Stories (JTBD)
+
+Use for job stories, JTBD-style backlog items, or the requested **When / I want to / so I can** format. Preserve the triggering situation rather than replacing it with a persona. The former `job-stories` method and example are preserved in [references/job-stories.md](references/job-stories.md).
+
+1. Identify the situation that triggers the need, the motivation, and the desired outcome.
+2. Write: **When [situation], I want to [motivation], so I can [outcome].**
+3. Add observable acceptance criteria covering supplied requirements and relevant edge cases. Label proposed additions; never invent a quota of 6–8 requirements, notifications, thresholds, or integrations.
+4. Include a supplied design link; otherwise write “Design: not provided” rather than fabricating one.
+5. Use numbered criteria or Gherkin as requested. Keep related consequences of one action together.
+
+Example: **Offline inspection submission.** When coverage drops while I submit an inspection, I want my report retained and submitted once connectivity returns, so I can finish the visit without losing work or creating duplicates. Criteria: retain the report on device; show pending status; retry after reconnection; do not create duplicate reports.
+
+Role-first requests still use Mode A; full feature backlog requests use Mode B. Splitting an oversized story and planning release slices remain separate skills.
 
 ---
 
@@ -265,12 +281,12 @@ Mini example excerpt:
 
 ---
 
-### Pitfall 4: Multiple When/Then Statements
-**Symptom:** Acceptance criteria with 5 "When" statements and 5 "Then" statements
+### Pitfall 4: Unrelated Behaviors in One Scenario
+**Symptom:** One scenario combines separate user goals or independent workflows.
 
-**Consequence:** Story is too big. Likely multiple features bundled together.
+**Consequence:** Scope and verification become difficult to understand.
 
-**Fix:** Split the story using `user-story-splitting`. Each When/Then pair should be its own story (or at least evaluated for splitting).
+**Fix:** Split independently valuable behaviors using `user-story-splitting`. Keep related assertions for one action together; multiple scenarios or Then/And checks do not by themselves make a story too large.
 
 ---
 

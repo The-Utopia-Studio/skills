@@ -48,7 +48,7 @@ Pull from `eval-first-spec`, or estimate.
 |---|---|---|
 | cost_per_outcome | _[$ to the cent — from `eval-first-spec`]_ | _[Fact/Assumption]_ |
 
-**Floor check:** PRICE will be set in Part 5; it must clear this. Stated margin = PRICE ÷ cost_per_outcome = _[fill after Part 5]_. If < ~2×, the wedge is thin on cost — flag it.
+**Floor check:** PRICE will be set in Part 5; it must clear this. Price-to-cost multiple = PRICE ÷ cost_per_outcome = _[fill after Part 5]_. If < ~2×, the wedge is thin on cost — flag it.
 
 ---
 
@@ -79,7 +79,7 @@ Auto-fail if the chosen metric is a seat or a tier while the value is per-outcom
 
 **Band position:**
 
-| Pull toward 10% (buyer keeps ~10×) | Pull toward 20% (buyer keeps ~5×) | This case |
+| Pull toward 10% (gross benefit/price ~10×; net ROI ~9×) | Pull toward 20% (gross benefit/price ~5×; net ROI ~4×) | This case |
 |---|---|---|
 | contested attribution, probabilistic outcome, budget-constrained, early | clean attribution, no substitute, high switching cost, large value | _[chosen capture_rate + the reason]_ |
 
@@ -90,8 +90,8 @@ Auto-fail if the chosen metric is a seat or a tier while the value is per-outcom
 **The invoice line the customer sees:** _[e.g. "$20,000 per facility per year"]_
 
 **Three sanity checks:**
-- [ ] PRICE > cost_per_outcome — margin = _[×]_
-- [ ] Buyer retained multiple = incremental_value ÷ PRICE = _[×]_ (in the 5–10× band)
+- [ ] PRICE > cost_per_outcome — gross margin = (PRICE − cost) / PRICE = _[%]_
+- [ ] Gross benefit-to-price multiple = incremental_value ÷ PRICE = _[×]_ (in the 5–10× band)
 - [ ] Metric stays coupled as the product improves (revenue rises when value rises)
 
 ---
@@ -101,6 +101,6 @@ Auto-fail if the chosen metric is a seat or a tier while the value is per-outcom
 - [ ] Value anchor scores ≥ 0.7 (not a WTP survey, not a competitor glance)
 - [ ] Price is a % of measured incremental value — not cost-plus, not competitor-anchored
 - [ ] Charged on an outcome / asset / decision metric — not seats or tiers
-- [ ] Cost floor cleared; buyer keeps 5–10×; metric improvement-proof
+- [ ] Cost floor cleared; gross benefit/price 5–10× (net ROI 4–9×); metric improvement-proof
 
 Any box unchecked = not a value-priced model. State exactly which, and the smallest next step to fill it. If the value anchor is the gap, the next step is to measure it — do not publish a price on top of a guess.

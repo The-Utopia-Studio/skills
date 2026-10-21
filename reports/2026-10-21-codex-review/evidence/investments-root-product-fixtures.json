@@ -1,0 +1,152 @@
+{
+  "method": "Deterministic numerical counterexamples to literal documented formulas; not agent routing or live integration tests.",
+  "cases": [
+    {
+      "case": "ARPA/ARPU reconciliation",
+      "input": [
+        2000000,
+        200,
+        20000
+      ],
+      "ARPA": 10000.0,
+      "ARPU": 100.0,
+      "seats": 100.0
+    },
+    {
+      "case": "ARPA/ARPU reconciliation",
+      "input": [
+        100000,
+        200,
+        2000
+      ],
+      "ARPA": 500.0,
+      "ARPU": 50.0,
+      "seats": 10.0
+    },
+    {
+      "case": "ARPA/ARPU reconciliation",
+      "input": [
+        500000,
+        2000,
+        10000
+      ],
+      "ARPA": 250.0,
+      "ARPU": 50.0,
+      "seats": 5.0
+    },
+    {
+      "case": "NRR requires net expansion",
+      "input": [
+        100,
+        0,
+        0,
+        0
+      ],
+      "NRR": 1.0
+    },
+    {
+      "case": "NRR requires net expansion",
+      "input": [
+        100,
+        0,
+        2,
+        1
+      ],
+      "NRR": 0.97
+    },
+    {
+      "case": "NRR requires net expansion",
+      "input": [
+        100,
+        8,
+        2,
+        1
+      ],
+      "NRR": 1.05
+    },
+    {
+      "case": "cash runway vs revenue",
+      "input": [
+        600,
+        80,
+        40,
+        40
+      ],
+      "old_revenue_based_runway": 15.0,
+      "cash_runway": 15.0
+    },
+    {
+      "case": "cash runway vs revenue",
+      "input": [
+        600,
+        80,
+        120,
+        10
+      ],
+      "old_revenue_based_runway": 8.571428571428571,
+      "cash_runway": null
+    },
+    {
+      "case": "cash runway vs revenue",
+      "input": [
+        600,
+        80,
+        0,
+        40
+      ],
+      "old_revenue_based_runway": 15.0,
+      "cash_runway": 7.5
+    },
+    {
+      "case": "operating profit with 20 percent COGS",
+      "revenue": 1000000,
+      "opex": 800000,
+      "profit": 0.0
+    },
+    {
+      "case": "operating profit with 20 percent COGS",
+      "revenue": 1300000,
+      "opex": 1200000,
+      "profit": -160000.0
+    },
+    {
+      "case": "operating profit with 20 percent COGS",
+      "revenue": 1600000,
+      "opex": 1800000,
+      "profit": -520000.0
+    },
+    {
+      "case": "floor boundary has single band",
+      "ratio": 10,
+      "band": "thin"
+    },
+    {
+      "case": "floor boundary has single band",
+      "ratio": 20,
+      "band": "real prize"
+    },
+    {
+      "case": "floor boundary has single band",
+      "ratio": 100,
+      "band": "real prize"
+    },
+    {
+      "case": "compression denominator",
+      "before": 6,
+      "after": 0.5,
+      "ratio": 12.0
+    },
+    {
+      "case": "compression denominator",
+      "before": 10,
+      "after": 1,
+      "ratio": 10.0
+    },
+    {
+      "case": "compression denominator",
+      "before": 10,
+      "after": 0,
+      "ratio": null
+    }
+  ]
+}

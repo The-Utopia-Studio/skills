@@ -19,7 +19,7 @@ A framework for designing internal AI agents with distinct, persistent personali
 
 - Building a new AI agent for a Utopia workflow or portco (e.g., a DD analyst, a deck builder, a customer support bot)
 - Formalizing a recurring "Claude do X" pattern into a named, persistent agent
-- Designing portco agents as part of M6 Product or M9 Ops in the Cobuild curriculum
+- Designing portfolio-company agents for Product or Founder Productivity workflows
 - The user says any of: "build an agent for…", "design an AI persona", "help me create [name]", "turn this workflow into an agent"
 
 ## What this skill produces
@@ -35,6 +35,8 @@ For each agent, four core files in `agents/<name>/`:
 | `references/` | Optional workflow procedures (one .md per major workflow) |
 
 Plus a `SKILL.md` so the agent is invokable from the marketplace.
+
+Use the interview as a gap checklist: reuse information the user already provided and ask only unresolved questions that materially change the persona or permissions.
 
 ## Core principles (don't skip these)
 
@@ -150,7 +152,7 @@ agents/<agent-name>/
 
 And add a marketplace-invocable wrapper:
 ```
-skills/agents/<agent-name>/
+skills/founder-productivity/<agent-name>/
 ├── SKILL.md         # Trigger conditions + load instructions
 └── (symlinks or includes to SOUL/AGENTS/MEMORY)
 ```

@@ -1,0 +1,142 @@
+{
+  "pricing": [
+    {
+      "value": 100,
+      "price": 10,
+      "cost": 4,
+      "gross_benefit_multiple": 10.0,
+      "net_roi": 9.0,
+      "gross_margin": 0.6,
+      "price_cost_multiple": 2.5
+    },
+    {
+      "value": 100,
+      "price": 20,
+      "cost": 5,
+      "gross_benefit_multiple": 5.0,
+      "net_roi": 4.0,
+      "gross_margin": 0.75,
+      "price_cost_multiple": 4.0
+    },
+    {
+      "value": 200,
+      "price": 30,
+      "cost": 0,
+      "gross_benefit_multiple": 6.666666666666667,
+      "net_roi": 5.666666666666667,
+      "gross_margin": 1.0,
+      "price_cost_multiple": null
+    }
+  ],
+  "launch_joint": [
+    {
+      "comprehension": [
+        1,
+        1,
+        0
+      ],
+      "value": [
+        0,
+        1,
+        1
+      ],
+      "old_pass": true,
+      "joint_pass": false
+    },
+    {
+      "comprehension": [
+        1,
+        1,
+        0
+      ],
+      "value": [
+        1,
+        1,
+        0
+      ],
+      "old_pass": true,
+      "joint_pass": true
+    },
+    {
+      "comprehension": [
+        1,
+        0,
+        0
+      ],
+      "value": [
+        1,
+        1,
+        1
+      ],
+      "old_pass": false,
+      "joint_pass": false
+    }
+  ],
+  "launch_b": [
+    {
+      "present": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "passes": true
+    },
+    {
+      "present": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "passes": false
+    },
+    {
+      "present": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "passes": false
+    }
+  ],
+  "buying_roles": [
+    {
+      "input": "Enterprise department head uses reporting and has documented $20k software budget; CFO approves above $50k.",
+      "output": "Same head is user and buyer for a $5k purchase; verify whether delegated authority also makes them decision-maker. No invented second buyer.",
+      "check": "Counterexample to enterprise roles always distinct"
+    },
+    {
+      "input": "Operator likes demo, HSE manager owns budget, procurement signs.",
+      "output": "Keep operator user, HSE buyer, procurement decision-maker; champion unknown until observed.",
+      "check": "Do not infer authority from enthusiasm"
+    },
+    {
+      "input": "Solo consultant buys own app.",
+      "output": "One person user/buyer/decider; champion role unnecessary; no invented opposition.",
+      "check": "Preserve genuine overlap"
+    }
+  ],
+  "synthetic_negative": [
+    {
+      "input": "Model panel says confusing; three actual target users complete task unaided.",
+      "output": "Real observations outweigh synthetic confusion; record false negative, do not kill concept.",
+      "check": "Synthetic negative is not validation"
+    },
+    {
+      "input": "Model cites cheaper workaround but named source says it costs more.",
+      "output": "Check source, reject unsupported workaround claim, retain issue as unresolved hypothesis.",
+      "check": "Grounding must be checked"
+    },
+    {
+      "input": "Model repeats actual logged workflow break with exact source.",
+      "output": "Cite source as evidence of that recorded event; model adds no independent replication or prevalence evidence.",
+      "check": "Evidence comes from corpus, not generated panel"
+    }
+  ],
+  "method": "Arithmetic executed by Python; buying-role and synthetic outputs are this Codex reviewer's authored offline cases, not external user studies or independent stochastic runs."
+}

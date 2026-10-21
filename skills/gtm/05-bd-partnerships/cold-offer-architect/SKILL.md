@@ -1,18 +1,18 @@
 ---
 name: cold-offer-architect
-description: "Use this skill when the thing being sold to strangers isn't landing, or before writing a single line of cold copy \u2014 to build a new cold-traffic offer, audit an existing one against a hard bar, or diagnose why one that reads fine gets no replies. Covers cold email, cold DM, cold ads, and cold mail: any audience with zero trust and no reason to believe you. Produces an architected offer plus a pass/fail score against eight binary criteria. Trigger phrasings: 'my offer isn't converting', 'low reply rate', 'nobody's booking', 'fix my offer', 'what should I offer', 'score this offer', 'is this offer any good', 'we changed the copy and nothing happened'."
+description: "Use this skill when the thing being sold to strangers isn't landing, or before writing a single line of cold copy \u2014 to build a new cold-traffic offer, audit an existing one against a hard bar, or diagnose why one that reads fine gets no replies. Covers cold email, cold DM, cold ads, and cold mail: any audience with zero trust and no reason to believe you. Produces an architected offer plus an evidence-aware review against eight criteria. Trigger phrasings: 'my offer isn't converting', 'low reply rate', 'nobody's booking', 'fix my offer', 'what should I offer', 'score this offer', 'is this offer any good', 'we changed the copy and nothing happened'."
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/tanyo-gochev/cold-offer-architect
 ---
 
-Applies before copy, not after. Produces an offer architected as a deal, plus a pass/fail score against the eight-criterion gate below.
+Applies before copy, not after. Produces an offer architected as a deal, plus an evidence-aware score against the eight criteria below.
 
 ## Fix in this order, or you'll rewrite copy forever
 
 **Market → offer → copy → list → volume.** When something isn't working, work down that list and stop at the first thing that's broken. Almost every "our cold email isn't working" problem is an offer problem being treated as a copy problem, which is why the rewrite never helps.
 
-On cold traffic the offer moves more than copy, personalization, and volume combined. A strong offer with plain copy beats a weak offer with brilliant copy, every time.
+Evaluate the offer alongside audience fit, delivery evidence and copy. Treat relative impact as a hypothesis to test in the campaign, not a universal ranking.
 
 ## An offer is not an opener
 
@@ -20,9 +20,9 @@ On cold traffic the offer moves more than copy, personalization, and volume comb
 
 An **offer** is a complete value-for-value deal: a specific outcome they already want, a mechanism that makes it believable, the risk moved off them, and the terms. **Architect the deal first. The message is only the vehicle that delivers it.** Write the email before the deal exists and you will produce a polite opener every single time.
 
-## The gate — eight binary criteria, all must pass
+## The review — eight criteria with evidence status
 
-Any "no" means not shippable. Score honestly; do not average.
+Score each criterion pass, fail, or unknown with supporting evidence. Do not average away a material gap. Separate a useful draft from a verified offer ready for use; criteria are design prompts, not a license to fabricate proof or guarantees.
 
 | # | Criterion | A "no" looks like |
 |---|---|---|
@@ -33,7 +33,7 @@ Any "no" means not shippable. Score honestly; do not average.
 | 5 | A reason why it's this good | Generosity with no explanation reads as a trick |
 | 6 | Proof embedded, not deferred | "Happy to send a case study" — deferring the one thing that earns belief |
 | 7 | Leads with them | The first line contains "we are / we do / we help" |
-| 8 | Uncomfortable to make | If you're perfectly comfortable offering it, it's too small |
+| 8 | Meaningful value within delivery capacity | A trivial offer, or a promise the seller cannot sustainably fulfill |
 
 A soft "want it?" opener typically fails 1, 3, and 8 at once. That's why it feels weak even when the writing is clean.
 
@@ -41,7 +41,7 @@ When a criterion fails, pull its lever and re-score — the ladders for risk, pr
 
 ## The forcing loop
 
-Architect the deal → score all eight → fix the lowest one → re-score. Repeat until every criterion passes. Never present an offer that hasn't cleared the gate; a 6/8 shipped is a month of sending burned to learn something the gate already told you.
+Architect the deal → score the evidence → make one justified refinement → re-score. If proof, authority, capacity or other inputs are missing, stop the loop and present a clearly labeled provisional draft, unresolved criteria and a bounded validation plan. Do not claim it is ready to send. A pre-revenue team can propose a pilot or diagnostic deliverable without inventing a past result. A quantified delivery commitment is not a guaranteed business outcome; use only commitments the seller can defend and is authorized to make.
 
 ## What good looks like
 
@@ -54,9 +54,9 @@ Good output makes a *fitting stranger* think one of: "this is a no-brainer", "I'
 ## Rules
 
 - MUST architect the deal before writing any message.
-- MUST embed a specific proof point inside the offer — a real number, and a named comparable where naming is permitted.
+- Embed verified proof when available, with permission for named comparables. If proof is missing, state the gap and propose a validation step; never invent a number or testimonial.
 - MUST deliver value before asking for a meeting, never the reverse.
-- NEVER present an offer that fails any of the eight criteria.
+- Present incomplete offers only as provisional drafts with explicit failed or unknown criteria and the evidence needed to resolve them.
 - NEVER promise an outcome you can't defend, and never invent a number to pass criterion 1.
 
 ---

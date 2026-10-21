@@ -86,6 +86,8 @@ For each mode, set the acceptable rate by **derivation, not vibes**:
 
 A Miss in gas safety has a near-infinite cost-of-one-failure, so its acceptable rate collapses toward zero; a Wrong-format case costs a shrug, so its rate can be loose. Higher autonomy raises cost_of_one_failure (the human backstop is gone), which tightens every rate — that is why you do not start at L4. State the **gate to earn the next level**: the measured golden-case pass rate over N real cycles that must hold before autonomy goes up.
 
+**Coverage is not population-rate certification.** This deliberately curated golden set is a regression and failure-mode coverage suite, not a representative random sample of production traffic. Passing 20 cases does not establish a rare failure rate or certify an autonomy level. Define the population, representative sampling plan, number of independent outcomes, confidence interval and stopping rule before claiming a measured production failure rate. Report insufficient evidence when the sample cannot support the required threshold; never convert “20/20 passed” into a claim of zero production risk.
+
 ### Part 4 — Cost-per-outcome budget
 
 Define the outcome as one completed unit of the job line — not one API call, not one token. Then fill to the cent:

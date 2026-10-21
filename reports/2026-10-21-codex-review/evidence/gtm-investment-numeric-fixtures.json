@@ -1,0 +1,55 @@
+{
+  "method": "Executed Python on synthetic inputs; arithmetic/unit/dependence counterexamples, not live financial analysis or legal validation",
+  "results": {
+    "failure_union": {
+      "duplicate_30pct": 0.3,
+      "independent_30pct": 0.51,
+      "disjoint_30pct": 0.6
+    },
+    "conditional_paths": {
+      "failure": 0.25,
+      "conditional_internal_share": 0.4,
+      "joint": 0.1
+    },
+    "wacc": [
+      {
+        "equity": 100,
+        "debt": 0,
+        "cash": 30,
+        "wacc": 0.1
+      },
+      {
+        "equity": 100,
+        "debt": 20,
+        "cash": 50,
+        "wacc": 0.09
+      },
+      {
+        "equity": 100,
+        "debt": 20,
+        "cash": 0,
+        "wacc": 0.09
+      }
+    ],
+    "country_risk": {
+      "beta": 0.932,
+      "cost_equity": 0.1631,
+      "wacc": 0.14302
+    },
+    "peg": 1.0,
+    "continue_vs_restart": {
+      "remaining_value": 99,
+      "restart_value": -20
+    },
+    "segment_reconciliation": {
+      "segments": [
+        60,
+        50
+      ],
+      "elimination": -10,
+      "consolidated": 100,
+      "sum_pct": 1.0
+    },
+    "funding_width": 10.1
+  }
+}

@@ -54,6 +54,10 @@ Do not use it for these — hand off instead:
 This skill scores one problem on eight axes and gates it. It is not a risk map
 and not a single-axis deep dive.
 
+## Calibration limits
+
+Scores, weights and gate thresholds are house prioritization heuristics, not empirically calibrated success probabilities. Preserve evidence provenance and distinguish commitments from completed payments.
+
 ## Method
 
 Fill in `template.md`. Five steps.
@@ -76,7 +80,9 @@ score, regardless of how strong the pain feels:
 
 | Best evidence you hold | Ladder weight | Max score this dimension can earn |
 |---|---|---|
-| Money moved (invoice, PO, spend, headcount redirected) | 1.0 | 5 |
+| Verified paid spend | 1.0 | 5 |
+| Unpaid invoice or purchase order (document/commitment, not paid spend) | 0.5 | 3 |
+| Observed headcount reassignment (behaviour) | 0.7 | 4 |
 | Behaviour observed (logs, usage, a repeated action) | 0.7 | 4 |
 | Artefact shown (a doc, a spreadsheet, a workaround they built) | 0.5 | 3 |
 | Verbal commitment ("yes, I'd pay / I'd switch") | 0.3 | 2 |

@@ -21,8 +21,8 @@ jobs:
       - name: Validate marketplace
         run: node scripts/validate-marketplace.mjs
 
-      - name: Test routing harness offline
-        run: node --test scripts/trigger-test.test.mjs
+      - name: Test skill helpers and routing harness offline
+        run: node --test scripts/trigger-test.test.mjs scripts/skill-behavior.test.mjs
 
       - name: Build packs
         run: ./build-packs.sh

@@ -10,7 +10,7 @@ Performs comprehensive EPO-focused analysis:
    - Clarity: identifies unclear or ambiguous terms
    - Conciseness: detects redundant or overlapping claims
    - Support: verifies all claims are supported by description
-   - Two-part form (Rule 43(1) EPC): checks preamble + "characterised in that"
+   - Two-part form (Rule 43(1) EPC): assesses applicability before checking preamble and characterising portion
    - Claim categories: product, process, apparatus, use
    - Excluded subject matter: Art. 52(2) and Art. 53 EPC
 
@@ -24,11 +24,11 @@ Performs comprehensive EPO-focused analysis:
    - Description format (Rule 42): required sections in correct order
    - Claims form (Rule 43): two-part form, numbering, references
    - Drawings (Rule 46): margins, no text, reference signs
-   - Abstract (Rule 47): max 150 words, figure designation
+   - Abstract (Rule 47): length recommendation and figure designation; verify current text
    - Physical requirements: A4, margins, fonts
 
 4. **Issue Categorization**:
-   - **Critical**: Will cause objection under EPC
+   - **Critical**: Material issue supported by an applicable provision; do not predict an inevitable objection
    - **Important**: May cause objection or limit scope
    - **Minor**: Best practice per EPO Guidelines
 
@@ -54,9 +54,9 @@ Performs comprehensive EPO-focused analysis:
 
 4. **Formality Issues (Rules 42-49 EPC)**:
    - Missing required description sections
-   - Abstract exceeding 150 words
+   - Abstract length outside the applicable recommendation (review, not automatic failure)
    - Text in drawings
-   - Claims not in two-part form
+   - Claims not in two-part form where that form is appropriate
 
 ## Report format
 
@@ -87,7 +87,7 @@ CLAIMS ANALYSIS (Art. 84 EPC):
     Fix: Limit to disclosed protocols (Bluetooth, Wi-Fi, NFC)
 
   Two-Part Form:
-  [Claim 1] IMPORTANT - Not in two-part form
+  [Claim 1] REVIEW - Assess whether two-part form is appropriate
     Rule 43(1) EPC / EPO Guidelines F-IV, 3.2
     Fix: Identify closest prior art, split into known + novel features
 
@@ -101,22 +101,11 @@ SUFFICIENCY ANALYSIS (Art. 83 EPC):
 FORMALITIES (Rules 42-49 EPC):
 
   [PASS] Description sections in correct order (Rule 42)
-  [FAIL] Abstract: 167 words (max 150) (Rule 47)
+  [REVIEW] Abstract: 167 words; assess concision against Rule 47 recommendation, not a hard maximum
   [PASS] Drawings: no text, proper margins (Rule 46)
   [FAIL] No figure designated for abstract (Rule 47(2)(b))
 ```
 
-## Key EPO vs USPTO Differences
+## Cross-jurisdiction comparisons
 
-| Aspect | USPTO (35 USC) | EPO (EPC) |
-|--------|----------------|-----------|
-| Claim clarity | Reasonable certainty (112(b)) | Strict objective clarity (Art. 84) |
-| Claim form | Open format | Two-part form preferred (Rule 43) |
-| Support | Written description (112(a)) | Supported by description (Art. 84) |
-| Enablement | Enable POSITA (112(a)) | Sufficiency of disclosure (Art. 83) |
-| Best mode | Required (112(a)) | Not required |
-| Terms of degree | Allowed with spec support | Must have objective reference |
-| Software | Patent-eligible if technical | Must show "further technical effect" |
-| Medical methods | Allowed | Excluded (Art. 53(c)) |
-| Novelty | 102 (1-year grace period) | Art. 54 (absolute novelty, no grace period) |
-| Obviousness | 103 (obvious to POSITA) | Art. 56 (inventive step, problem-solution) |
+Build comparisons from current official texts for the actual issue. Do not generalize software eligibility, medical-method protection, novelty exceptions, or claim-form rules from a one-line country table. Cite each jurisdiction separately and identify material exceptions.

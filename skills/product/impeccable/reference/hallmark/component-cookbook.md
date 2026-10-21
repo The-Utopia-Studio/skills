@@ -13,7 +13,7 @@ The same macrostructure (e.g., Bento Grid) can be built from many different comb
 
 ## Archetype index — load ONLY the picks you need
 
-**Pick your archetype names here, then read ONLY those individual files** from `references/components/`. Do not load the whole cookbook. A typical build needs 5–7 files: 1 hero + 1 section head + 1–2 features + 1 CTA + 1 footer + 1 nav.
+**Pick your archetype names here, then read ONLY those individual files** from `components/`. Do not load the whole cookbook. A typical build needs 5–7 files: 1 hero + 1 section head + 1–2 features + 1 CTA + 1 footer + 1 nav.
 
 ### Heroes
 

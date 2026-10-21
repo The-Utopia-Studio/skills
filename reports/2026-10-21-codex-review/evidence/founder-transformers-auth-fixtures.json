@@ -1,0 +1,38 @@
+[
+  {
+    "input": "https://huggingface.co/org/model",
+    "actual": {
+      "url": "https://huggingface.co/org/model",
+      "authorization": "Bearer synthetic-test-token",
+      "redirect": "error"
+    },
+    "pass": true
+  },
+  {
+    "input": "https://huggingface.co.evil.example/model",
+    "actual": {
+      "url": "https://huggingface.co.evil.example/model",
+      "authorization": null,
+      "redirect": "follow"
+    },
+    "pass": true
+  },
+  {
+    "input": "http://huggingface.co/model",
+    "actual": {
+      "url": "http://huggingface.co/model",
+      "authorization": null,
+      "redirect": "follow"
+    },
+    "pass": true
+  },
+  {
+    "input": "https://other.example/model",
+    "actual": {
+      "url": "https://other.example/model",
+      "authorization": null,
+      "redirect": "follow"
+    },
+    "pass": true
+  }
+]

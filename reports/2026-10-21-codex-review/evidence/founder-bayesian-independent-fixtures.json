@@ -1,0 +1,50 @@
+[
+  {
+    "id": "equal-selection",
+    "input": {
+      "prior": 0.8,
+      "likelihood_beneficial": 0.5,
+      "likelihood_not": 0.5
+    },
+    "output": {
+      "numerator": 0.4,
+      "evidence_probability": 0.5,
+      "posterior": 0.8,
+      "likelihood_ratio": 1.0
+    },
+    "bayesian_skill_assessment": "Formula gives supported posterior; equal-selection valid even though rubric asks LR != 1.",
+    "adverse_selection_skill_assessment": "Cannot validly calculate from supplied evidence under its required fixed .40 unsolicited base and invented score adjustments; required below-.50 premise and .70 clip contradict result."
+  },
+  {
+    "id": "negative-selection",
+    "input": {
+      "prior": 0.6,
+      "likelihood_beneficial": 0.2,
+      "likelihood_not": 0.8
+    },
+    "output": {
+      "numerator": 0.12,
+      "evidence_probability": 0.44000000000000006,
+      "posterior": 0.2727272727272727,
+      "likelihood_ratio": 0.25
+    },
+    "bayesian_skill_assessment": "Formula gives supported posterior from supplied inputs.",
+    "adverse_selection_skill_assessment": "Numerical result could coincidentally overlap its score range, but required fixed .40 base ignores supplied .60 prior and supplied likelihoods. Its haircut is not derivable from these probabilities without payoffs."
+  },
+  {
+    "id": "positive-selection",
+    "input": {
+      "prior": 0.2,
+      "likelihood_beneficial": 0.9,
+      "likelihood_not": 0.1
+    },
+    "output": {
+      "numerator": 0.18000000000000002,
+      "evidence_probability": 0.26,
+      "posterior": 0.6923076923076924,
+      "likelihood_ratio": 9.0
+    },
+    "bayesian_skill_assessment": "Formula gives supported posterior from supplied inputs.",
+    "adverse_selection_skill_assessment": "Cannot validly calculate from supplied evidence under its required fixed .40 unsolicited base and invented score adjustments; required below-.50 premise and .70 clip contradict result."
+  }
+]

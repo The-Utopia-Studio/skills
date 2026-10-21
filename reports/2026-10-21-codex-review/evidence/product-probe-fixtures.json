@@ -1,0 +1,21 @@
+{
+  "method": "Authored evidence-classification boundary walkthrough; not a live customer probe.",
+  "cases": [
+    {
+      "input": "Human-delivered result behind interface, customer pays invoice",
+      "expected": "WoZ payment is money1.0 for delivered service; no automated cost or scale claim"
+    },
+    {
+      "input": "Founder delivers free result and customer uses it in a real workflow",
+      "expected": "Observed use is behavior0.7; paid WTP untested"
+    },
+    {
+      "input": "Customer says I would pay but neither uses nor pays",
+      "expected": "Verbal commitment0.3, not money or behavior"
+    }
+  ],
+  "paper_boundary": {
+    "decision_panels": 2,
+    "expected": "review needed, not silently passed"
+  }
+}
