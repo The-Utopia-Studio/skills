@@ -1,6 +1,6 @@
 ---
 name: mjdesign
-description: Turn a post, moment, note, chart or idea into an MJ Research visual explainer — a 4:5 still image (1080x1350 PNG) and a 9:16 short video (1080x1920 MP4, ~10s) where the diagram draws itself and the headline builds word by word. Drex-style editorial format (line-art diagram, engraved hatching, one emphasised headline word) in MJ Research colours (linen/enamel, oxide/cadmium/cobalt/verdigris) and type (Bricolage Grotesque + Departure Mono). Use when the user says /mjdesign, or asks to "make a visual / graphic / reel / short video / carousel image / post image" for a post, insight, market moment, release or idea, especially for Mario Jude / MJ Research.
+description: Turn a post, moment, note, chart or idea into an MJ Research visual explainer — a 4:5 still image (1080x1350 PNG) and a 9:16 short video (1080x1920 MP4, ~11s, preview frame = final image), optional looping GIF where the diagram draws itself and the headline builds word by word. Drex-style editorial format (line-art diagram, engraved hatching, one emphasised headline word) in MJ Research colours (linen/enamel, oxide/cadmium/cobalt/verdigris) and type (Bricolage Grotesque + Departure Mono). Use when the user says /mjdesign, or asks to "make a visual / graphic / reel / short video / carousel image / post image" for a post, insight, market moment, release or idea, especially for Mario Jude / MJ Research.
 ---
 
 # /mjdesign
@@ -38,12 +38,16 @@ Inspiration is drex.design (visual explainers for writers: diagrams and engraved
    node ~/.claude/skills/mjdesign/render.mjs post.json <outdir>          # both
    node ~/.claude/skills/mjdesign/render.mjs post.json <outdir> --still  # PNG only
    node ~/.claude/skills/mjdesign/render.mjs post.json <outdir> --video  # MP4 only
+   node ~/.claude/skills/mjdesign/render.mjs post.json <outdir> --gif    # add a looping 4:5 GIF (720x900, 12fps)
    ```
+   The MP4 and GIF open on the finished composition for 1s, fade to the empty page, build, then hold. Platforms use the first frame as the preview, so the preview is the final image. Do not remove this intro.
+
+   **Which file for where:** MP4 is the default for LinkedIn, Instagram Reels and X. LinkedIn autoplays native video muted in the feed, and the quality is far better. Use the GIF only for a looping inline image (a LinkedIn *image* post uploaded through the photo button, Slack, email, docs). LinkedIn's GIF limit is reported at 2–5MB, so the renderer warns above 2MB. The GIF has no grain, because noise breaks GIF compression.
    It fails loudly if a font does not load (Bricolage comes from Google Fonts, so it needs network) or the template throws.
-5. **Look at the output before handing it over.** Read the PNG. For the video, tile frames and read that:
-   `ffmpeg -i x.mp4 -vf "select='eq(n\,30)+eq(n\,90)+eq(n\,150)+eq(n\,299)',scale=360:-1,tile=4x1" -frames:v 1 -vsync vfr strip.png`
+5. **Look at the output before handing it over.** Read the PNG. For the video, tile frames and read that (frame 0 must be the finished image):
+   `ffmpeg -i x.mp4 -vf "select='eq(n\,0)+eq(n\,60)+eq(n\,150)+eq(n\,341)',scale=360:-1,tile=4x1" -frames:v 1 -vsync vfr strip.png`
    Check: the figure reads as the idea without the caption, nothing overlaps the headline, the headline fits in ≤ 3 lines, one accent word only. Fix the spec and re-render; do not hand over a first draft you have not seen.
-6. Send both files to the user (SendUserFile) with one line saying what the figure shows.
+6. Send the files to the user (SendUserFile) with one line saying what the figure shows.
 
 ## Do not
 
