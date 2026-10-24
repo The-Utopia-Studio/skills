@@ -1,0 +1,12 @@
+{
+  "slug": "breadth-narrowing",
+  "kicker": "MJ Research · Breadth",
+  "index": "No. 014",
+  "headline": "The index climbs while its *base* thins",
+  "body": "Fewer names carry the tape. Ten stocks now explain most of this year's gain.",
+  "stat": { "value": "27%", "label": "of S&P 500 above their 50-day" },
+  "accent": "oxide",
+  "ground": "linen",
+  "footer": "mjresearch · 24.10.2026",
+  "figure": "<svg viewBox='0 0 900 560' fill='none' stroke='currentColor' stroke-width='2'><line x1='40' y1='520' x2='880' y2='520'/><line x1='40' y1='40' x2='40' y2='520'/><path d='M40 520 L40 300 C160 280 220 330 320 340 S520 400 620 430 S780 470 880 480 L880 520 Z' fill='url(#hatch)' stroke-width='1.5'/><path class='accent' d='M40 420 C140 400 200 360 300 330 S480 250 580 200 S760 110 880 70' stroke-width='5'/><circle class='accent' cx='880' cy='70' r='12' fill='currentColor'/><line x1='620' y1='60' x2='620' y2='520' stroke-dasharray='4 8' stroke-width='1.2'/></svg>"
+}
