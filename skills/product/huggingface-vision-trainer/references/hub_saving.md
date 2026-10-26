@@ -254,7 +254,7 @@ trainer.push_to_hub()
 
 ## Authentication Methods
 
-For a complete guide on token types, `$HF_TOKEN` automatic replacement, `secrets` vs `env` differences, and security best practices, see the `hugging-face-jobs` skill → *Token Usage Guide*.
+For CLI Jobs options, see `hf-cli` and installed `hf jobs run --help`. For token handling and secrets/environment configuration, consult [HF Jobs Configuration](https://huggingface.co/docs/hub/en/jobs-configuration); verify variable-expansion semantics for the actual submission interface.
 
 **Recommended:** Always pass tokens via `secrets` (encrypted server-side):
 

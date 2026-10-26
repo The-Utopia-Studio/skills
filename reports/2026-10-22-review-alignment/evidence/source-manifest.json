@@ -1,0 +1,14 @@
+{
+  "file": "Skills Marketplace Review.xlsx",
+  "sha256": "0ac1206fcb0d4b5dba83c06d9b29083403fa489f80494850a7626070dd44b10d",
+  "source_commit": "16599fd673eda2d46925e364adbaea062dc20b1b",
+  "sheets": {
+    "Summary": "A1:H35",
+    "Human review": "A1:V363",
+    "Skill review": "A1:Q363"
+  },
+  "review_date": "2026-10-22",
+  "current_source_commit": "a3229f2",
+  "source_unchanged": true,
+  "human_decisions": "All Agreed action fields Pending; reviewer score/decision fields blank."
+}

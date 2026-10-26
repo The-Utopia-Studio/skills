@@ -35,7 +35,7 @@ Role Switch Progress:
 
 **Step 1: Frame the decision or situation**
 
-Clarify what's being decided, key constraints (time, budget, scope), and why alignment matters. See [Common Patterns](#common-patterns) for decision framing by type.
+Clarify what's being decided, key constraints (time, budget, scope), and why alignment matters. If the decision or material constraints are missing, ask a targeted question before presenting a case-specific analysis. If the user wants an illustrative analysis or asks you to proceed with assumptions, label the scenario and each invented constraint as hypothetical; do not present them as facts about the user. See [Common Patterns](#common-patterns) for decision framing by type.
 
 **Step 2: Select relevant roles**
 

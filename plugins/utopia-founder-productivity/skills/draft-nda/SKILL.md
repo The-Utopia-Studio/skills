@@ -104,8 +104,8 @@ Explanations of important sections and what may need legal customization.
 - Consider: does the receiving party keep one copy for legal compliance?
 
 ### Remedies
-- [⚠️ LEGAL REVIEW REQUIRED] State that breach may cause irreparable harm and that injunctive relief is available
-- Clarify that remedies are in addition to other legal remedies available
+- [⚠️ LEGAL REVIEW REQUIRED] Present any irreparable-harm acknowledgment and request for injunctive relief as proposed wording subject to review for the governing jurisdiction. Explain that counsel should check enforceability, the required showing, and the court's discretion; never promise that relief is available or will be granted.
+- Have counsel review whether and how the proposed clause preserves other remedies under applicable law.
 
 ### General Provisions
 - **Governing Law and Jurisdiction**: Specify which state or country's laws govern (e.g., California or England)

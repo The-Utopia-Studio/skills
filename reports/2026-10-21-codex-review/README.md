@@ -1,5 +1,7 @@
 # Codex review, replication and consolidation
 
+Follow-up: the [22 October reconciliation](../2026-10-22-review-alignment/README.md) incorporates a coworker’s older 357-skill review, records unresolved behavioral evidence, and repairs two content-preservation gaps. Counts and tests below remain the 21 October snapshot.
+
 Date: 21 October 2026. Baseline: `1d2695d` (254 packaged skills). All 254 entrypoint bodies received a Codex review; 103 surviving skills were refined, 148 retained, and three merged into existing survivors. The rebuilt marketplace contains **251 skills in four packs**. No Claude requests were made for this review.
 
 This completes the catalog review and targeted offline verification. It does **not** certify every referenced resource, external integration, legal/financial application, or end-to-end agent workflow. The earlier Claude routing run remains incomplete; these checks are not a replacement routing-success percentage.

@@ -41,6 +41,8 @@ If the user provides files (org charts, project briefs, team rosters), read them
 
 6. **Flag potential conflicts**: Identify stakeholders with competing interests and suggest alignment strategies.
 
+For feedback programs that also need approvals, decision rights, accountability or follow-up tracking, load [feedback-program operations](references/feedback-program-operations.md). Include the appropriate RACI, approval checkpoints and action tracker alongside the map.
+
 Think step by step. Save the stakeholder map as a markdown document.
 
 ---

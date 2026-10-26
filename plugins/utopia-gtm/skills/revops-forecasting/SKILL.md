@@ -110,6 +110,8 @@ Average:   ±15-20% variance (decent process, some discipline gaps) [Forrester; 
 Weak:      ±25%+ variance (process problem: needs structural fix) [Forrester; Pavilion; Ebsta 2025-26]
 ```
 
+For shared cohort-definition, inclusion/exclusion, deduplication, currency and mix checks, use `saas-revenue-growth-metrics` → `resources/cohort-diagnostics.md`; keep pipeline KPI and forecast decisions in this skill.
+
 ### Diagnosing Forecast Misses
 
 The direction of the miss points to the root cause: consistent over-forecasting (loose Commit criteria, optimistic close dates, weak qualification), consistent under-forecasting (sandbagging, uncaptured expansion, late inbound), or high variance (low deal volume, lumpy deal sizes, inconsistent stage definitions). For the full pattern-by-pattern diagnosis with fixes, see `references/diagnosing-forecast-misses.md`.

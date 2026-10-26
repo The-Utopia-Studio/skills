@@ -392,7 +392,7 @@ Product/Segment % = Product/Segment Revenue / Total Revenue × 100
 ---
 
 #### Cohort Analysis
-Group customers by when they joined and track metrics over time.
+Group customers by when they joined and track metrics over time. For cohort keys, filters, deduplication, comparable maturity, currency and deal-size-mix checks, use [Cohort diagnostics](resources/cohort-diagnostics.md).
 
 **Example:**
 | Cohort | Month 0 | Month 1 | Month 2 | Month 3 | Month 6 |

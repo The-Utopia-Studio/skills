@@ -99,7 +99,7 @@ python3 scripts/market-sizing.py --population 5400000 --arpu 1000 --sam-share 30
 ## Common Pitfalls
 
 - **TAM without citations** ("the market is $50B"): cite reports with URLs.
-- **SOM equals SAM:** SOM should be roughly 1-20% of SAM in years 1-3.
+- **Unjustified SOM share:** A 1–20% share of SAM in years 1–3 is only an illustrative planning heuristic, not an enforced bound or a default estimate. Derive SOM from reachable customers, sales capacity, conversion, competition and timing. Evidence may support a share below or above that range; explain it rather than clipping it.
 - **No population estimates:** always give customer counts as well as dollars; sales plans need volume.
 - **Static assumptions:** reassess annually.
 - **Ignoring GTM constraints:** ground SOM in sales capacity, marketing budget and conversion rates.

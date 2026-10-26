@@ -40,7 +40,7 @@ Use the interview as a gap checklist: reuse information the user already provide
 
 ## Core principles (don't skip these)
 
-1. **Memory is explicit, not implicit.** Until something is written into MEMORY.md, the agent doesn't know it. Document gotchas the moment they're discovered.
+1. **Memory records verified facts.** Record only facts supplied by the user or verified from authorized sources, with provenance where useful. Never invent a job, domain, contact, escalation owner or gotcha to complete the files; keep missing facts explicitly unknown and ask only necessary questions. Examples below are illustrations, not facts about the new agent. A new MEMORY.md may contain no verified facts yet.
 
 2. **Opinionated defaults beat blank templates.** A weak persona drifts toward generic-AI voice. Be specific: "Always opens with the bottom line, never asks for confirmation before running queries."
 
@@ -163,7 +163,7 @@ Before declaring the agent ready, verify:
 
 - [ ] **Voice test:** Read three random outputs the agent would generate. Do they sound like the same character, not like generic Claude?
 - [ ] **Trigger test:** Could a teammate use the trigger phrases naturally without thinking?
-- [ ] **Memory test:** Is there at least one gotcha in MEMORY.md that would actually save time?
+- [ ] **Memory test:** Are recorded facts and gotchas supported by user input or verified sources? If none are known, state that explicitly; an empty verified-memory section is valid. Never manufacture a gotcha to satisfy this checklist.
 - [ ] **Workflow test:** Can someone with no context run the first workflow end-to-end using only the agent's files?
 - [ ] **Anti-pattern test:** Are the anti-patterns specific enough that you could spot a violation in someone else's output?
 

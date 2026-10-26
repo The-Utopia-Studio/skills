@@ -1,0 +1,42 @@
+{
+  "method": "Authored boundary walkthroughs by Codex Product reviewer; not independent stochastic reruns or live Jobs execution",
+  "savings_cases": [
+    {
+      "id": "actually-avoided",
+      "input": "Documented 120-minute interview/synthesis task canceled; trace extraction+triage 30 minutes; no incentive paid.",
+      "output": "Measured net avoided effort:90 minutes. Cash savings not evidenced. Source canceled task and time log.",
+      "check": "Net costs and replacement evidence retained"
+    },
+    {
+      "id": "counterfactual-only",
+      "input": "10 trace patterns, no interviews planned; hypothetical interviews take2hours each.",
+      "output": "Modeled counterfactual only; no realized20-hour savings claim. Do not assume ten independent interviews. Source assumptions and measure trace work.",
+      "check": "No hypothetical total reported as realized"
+    },
+    {
+      "id": "still-needs-interview",
+      "input": "Traces reveal ambiguous acceptance; follow-up interview still needed; two hypothetical interviews each have2-week lead.",
+      "output": "No replacement established. Record trace and follow-up effort; do not claim4weeks calendar savings because windows may overlap.",
+      "check": "Ambiguity and elapsed-time nonadditivity preserved"
+    }
+  ],
+  "resource_checks": {
+    "cohort_exists": true,
+    "cli_jobs_capability": true,
+    "no_missing_jobs_handoff": true
+  },
+  "cohort_cases": [
+    {
+      "input": "January retention age3 vs February age2",
+      "output": "Compare common age2; missing future month3 is not0."
+    },
+    {
+      "input": "Win rate changes with enterprise/SMB mix",
+      "output": "Report raw overall rate plus within-segment/common-weight comparison, eligible opportunity denominator and dedup rule."
+    },
+    {
+      "input": "USD/EUR pipeline periods with changing FX",
+      "output": "Declare conversion date/currency; retain reported totals and constant-currency comparison; do not infer demand change from FX alone."
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "sheet": "Skill review",
+    "row": 28,
+    "skill": "privacy-policy",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Addresses the transfer of EU users' data to the US (AWS us-east-1 and the US vendors) and names a transfer mechanism such as Standard Contractual Clauses or an adequacy decision."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 35,
+    "skill": "swot-analysis",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Includes a cross-reference section explicitly pairing strengths with opportunities and weaknesses with threats (e.g. S-O and W-T pairings)."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 59,
+    "skill": "deal-desk",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "deal-intake.md records the pricing ask, the rationale for it, and an explicit risk level for the account."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 102,
+    "skill": "referral-program",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Distinguishes a customer referral program from an affiliate program and recommends customer referral for this case of existing customers bringing peers."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 107,
+    "skill": "revops-forecasting",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "States that \u00b130% variance indicates a broken forecasting system (versus roughly \u00b110-15% for a normal or strong process)."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 117,
+    "skill": "solo-founder-gtm",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Places Shiftnote in the $1K-10K MRR traction stage based on the $6,200 MRR, with the goal of finding a repeatable acquisition channel."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 123,
+    "skill": "warm-intro-intelligence",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Explains that returned paths will be ranked with evidence-based confidence labels and the weakest edge identified."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 164,
+    "skill": "initiating-coverage",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Offers to start Task 2 (Financial Modeling) or asks for the location of an existing model."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 168,
+    "skill": "investor-fact-ledger",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "drift-check.md flags that docs/memorandum.md never states the $5M round size."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 183,
+    "skill": "research-claim-map",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Rates the billing summary export as primary evidence and the company blog post as tertiary evidence."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 230,
+    "skill": "devops-advisor",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Provides a GitHub Actions YAML workflow triggered on pull_request and on push to main."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 245,
+    "skill": "financial-unit-economics",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Names roughly the end of October 2027 as the month cash runs out, without padding the answer with a per-customer CAC/LTV analysis."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 257,
+    "skill": "huggingface-paper-publisher",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Either asks the user for the arXiv ID or inserts a clearly labelled placeholder (e.g. ARXIV_ID_PENDING) that it flags as needing replacement."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 269,
+    "skill": "interview-script",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Includes a note-taking template with fields for current solution, biggest pain and willingness to pay"
+  },
+  {
+    "sheet": "Skill review",
+    "row": 280,
+    "skill": "moat-design-canvas",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Flags that the draft should be reviewed by legal counsel before use rather than presenting it as final legal advice."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 286,
+    "skill": "opportunity-solution-tree",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Produces backlog items written as user stories (e.g. 'As a ..., I want ..., so that ...') covering the 3, 7 and 14 day reminders and the per-client opt-out."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 335,
+    "skill": "summarize-interview",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Saves an email draft to drafts/ostrava-email.md addressed to team@example.com and leaves sending to the user."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 337,
+    "skill": "tacit-knowledge-interview",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Produces a capture built from the log's real forks, including the 09:18 alert dismissal with the cue of potassium dose at or under 20 mEq and the over-20 exception."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 344,
+    "skill": "ui-ux-pro-max",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "Flags the #9CA3AF helper text on the #FFFFFF background as failing the 4.5:1 minimum contrast ratio for normal text."
+  },
+  {
+    "sheet": "Skill review",
+    "row": 350,
+    "skill": "user-story-mapping",
+    "behavior": "Verified",
+    "test_result": "6 passed / 0 failed / 0 blocked",
+    "first_failed_check": "The backbone contains between 3 and 5 activities ordered left-to-right along the owner's journey."
+  }
+]
