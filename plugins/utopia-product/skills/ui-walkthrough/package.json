@@ -1,0 +1,16 @@
+{
+	"name": "ui-walkthrough",
+	"version": "0.7.1",
+	"description": "Narrated before/after videos of what a merged pull request changed in a web app's UI.",
+	"type": "module",
+	"license": "MIT",
+	"bin": {
+		"ui-walkthrough": "scripts/cli.mjs"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"test": "node --test scripts/test/*.test.mjs"
+	}
+}

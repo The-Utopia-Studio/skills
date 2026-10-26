@@ -5,11 +5,11 @@ All skills in this repo map to **four modules**. Skills that blur modules confus
 | Module | Folder | Pack | Count | Put here when… |
 |--------|--------|------|------|----------------|
 | **GTM** | `skills/gtm/` | `utopia-gtm` | 54 | Sales, marketing, growth, retention, distribution |
-| **Product** | `skills/product/` | `utopia-product` | 128 | Discovery, PRDs, design, build, deploy, product metrics |
+| **Product** | `skills/product/` | `utopia-product` | 130 | Discovery, PRDs, design, build, deploy, product metrics |
 | **Investments** | `skills/investments/` | `utopia-investments` | 42 | DD, modeling, valuation, fundraising, markets, quant |
 | **Founder Productivity** | `skills/founder-productivity/` | `utopia-founder-productivity` | 27 | Doesn't fit the three above |
 
-**Total: 251 skills** (plus `skills/sandbox/` for experiments).
+**Total: 253 skills** (plus `skills/sandbox/` for experiments).
 
 ## GTM
 

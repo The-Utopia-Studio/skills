@@ -1,8 +1,8 @@
 {
-  "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF).",
+  "_comment": "Edit this file to add or modify packs. Then run ./build-packs.sh to regenerate the marketplace. Skill sources: skills/<module>/<skill>/ or skills/gtm/<submodule>/<skill>/. Four modules: utopia-gtm, utopia-product, utopia-investments, utopia-founder-productivity. GTM sub-modules: see utopia-gtm.submodules (fellow reference PDF). externalPlugins: whole plugins kept in their own repos, listed in the marketplace as-is (not copied into plugins/).",
   "marketplace": {
     "name": "skills",
-    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 251 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
+    "description": "The Utopia Studio's skill marketplace. Four modules — GTM, Product, Investments, and Founder Productivity — 253 skills for founders, fellows, and the funds team. Maintained by Karan Pinto.",
     "owner": {
       "name": "The Utopia Studio",
       "email": "karanmjpinto@gmail.com",
@@ -199,7 +199,7 @@
     {
       "name": "utopia-product",
       "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-      "version": "2.2.1",
+      "version": "2.3.1",
       "keywords": [
         "product",
         "discovery",
@@ -321,6 +321,7 @@
         "typed-service-contracts",
         "typeset",
         "ui-ux-pro-max",
+        "ui-walkthrough",
         "unserved-needs-finder",
         "usability-test-protocol",
         "user-buyer-decider-map",
@@ -332,6 +333,7 @@
         "vercel-composition-patterns",
         "vercel-react-best-practices",
         "vercel-react-native-skills",
+        "walkthrough-video",
         "wedge-five-questions",
         "wizard-of-oz-probe",
         "workflow-design",
@@ -434,6 +436,16 @@
         "swot-analysis",
         "workshop-facilitation"
       ]
+    }
+  ],
+  "externalPlugins": [
+    {
+      "name": "prview",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/The-Utopia-Studio/ui-walkthrough.git"
+      },
+      "description": "PR preview videos (ui-walkthrough): a narrated before/after video of what a merged pull request changed in your web app, recorded from the real app and posted on the PR. Lives in its own repo, so it ships its own version."
     }
   ]
 }
