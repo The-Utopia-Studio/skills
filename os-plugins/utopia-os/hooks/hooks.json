@@ -1,0 +1,18 @@
+{
+  "description": "Load work you approved in UtopiaOS when a Claude Code session starts",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/session-start.mjs"],
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
