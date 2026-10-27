@@ -69,37 +69,35 @@ Skills auto-trigger based on what you ask. If Claude picks the wrong one, just s
 
 ## What's in each pack
 
-### 📌 M1 — Fellow Onboarding (13 skills)
+### 📌 M1 — Fellow Onboarding (11 skills)
 
 Frameworks for orientation, market sizing, and stakeholder mapping. **Install this first when you join the program.**
 
 | Skill | What it does |
 |-------|-------------|
 | `workshop-facilitation` | Run structured group sessions and workshops |
-| `executive-onboarding-playbook` | 30-60-90 day plans for senior hires |
 | `alignment-values-north-star` | Build org-wide alignment around a north star |
-| `tam-sam-som-calculator` | Calculate market size (TAM/SAM/SOM) |
+| `market-sizing` | Calculate market size (TAM/SAM/SOM) |
 | `market-segments` | Identify 3-5 customer market segments |
-| `market-sizing` | Estimate market size with frameworks |
 | `pestel-analysis` | Political/Economic/Social/Tech/Environmental/Legal scan |
 | `porters-five-forces` | Industry competitiveness analysis |
 | `swot-analysis` | Strengths/Weaknesses/Opportunities/Threats |
 | `stakeholder-map` | Map who matters and how to manage them |
 | `role-switch` | See decisions from multiple stakeholder perspectives |
-| `prioritization-frameworks` | 9 prioritization methods to pick from |
+| `prioritization` | 9 prioritization methods to pick from |
 | `proof` | Collaborative docs with live presence and provenance |
 
 **Try saying:** *"I'm a new fellow. Help me build a 30-60-90 day plan and identify the 3 stakeholders I should meet first."*
 
 ---
 
-### 🔍 M2 — Discovery & Problem Validation (19 skills)
+### 🔍 M2 — Discovery & Problem Validation (16 skills)
 
 Customer interviews, JTBD, opportunity solution trees, problem framing.
 
 | Skill | What it does |
 |-------|-------------|
-| `opportunity-solution-tree` | Map opportunities to solutions to experiments |
+| `continuous-discovery-engine` | Map opportunities to solutions to experiments |
 | `jobs-to-be-done` | Uncover what customers "hire" your product to do |
 | `discovery-interview-prep` | Plan a customer discovery interview |
 | `discovery-process` | Run a full discovery cycle from problem to insight |
@@ -107,55 +105,45 @@ Customer interviews, JTBD, opportunity solution trees, problem framing.
 | `problem-statement` | Write a sharp user-centered problem statement |
 | `proto-persona` | Quick persona from existing assumptions |
 | `lean-ux-canvas` | Lean UX canvas walkthrough |
-| `interview-script` | Build a structured customer interview script |
-| `startup-canvas` | Combined Lean + Business Model canvas |
+| `business-model` | Combined Lean + Business Model canvas |
 | `beachhead-segment` | Pick your first beachhead market |
 | `ideal-customer-profile` | Define your ICP precisely |
-| `prototyping-pretotyping` | Validate ideas before building |
+| `probe-matrix` | Validate ideas before building |
 | `identify-assumptions-new` | Find risky assumptions in a new idea |
-| `identify-assumptions-existing` | Find risky assumptions in an existing product |
-| `brainstorm-experiments-new` | Design lean startup experiments |
 | `summarize-interview` | Synthesize themes from a customer interview |
 | `job-stories` | "When… I want… So I can…" stories |
-| `user-story-mapping-workshop` | Run a user story mapping workshop |
+| `user-story-mapping` | Run a user story mapping workshop |
 
 **Try saying:** *"I just finished 5 customer interviews about [topic]. Synthesize the JTBD themes and tell me what to test next."*
 
 ---
 
-### 💡 M3 — Concept & Solution Design (21 skills)
+### 💡 M3 — Concept & Solution Design (14 skills)
 
 Turn validated problems into solutions. PRDs, user stories, prototypes.
 
 | Skill | What it does |
 |-------|-------------|
 | `prd-development` | Build a structured full-length PRD |
-| `create-prd` | PRD generator |
-| `one-pager-prd` | One-page decision-ready PRD |
 | `user-story-mapping` | Lay out user stories on a map |
-| `user-stories` | Generate user stories (multiple formats) |
-| `user-story` | Mike Cohn-style stories |
+| `user-story` | Generate user stories (multiple formats) |
 | `user-story-splitting` | Break large stories into smaller ones |
 | `job-stories` | "When/I want/So I can" stories |
 | `recommendation-canvas` | Evaluate an AI product idea |
 | `value-proposition` | Detailed value proposition design |
-| `value-prop-statements` | Generate value prop statements |
-| `monetization-strategy` | 3-5 monetization strategy options |
+| `pricing-strategy` | 3-5 monetization strategy options |
 | `business-model` | Business Model Canvas |
-| `lean-canvas` | Lean Canvas |
-| `sketch-prompt` | Turn text/notes into conceptual sketch images |
 | `interface-craft` | Animated React interfaces (Josh Puckett toolkit) |
 | `shape` | Plan UX/UI before writing code |
 | `critique` | Evaluate a design with quantitative scoring |
-| `architecture-diagram` | Dark-themed system architecture diagrams |
-| `diagram-design` | 13 diagram types as standalone HTML+SVG |
+| `diagram-design` | Dark-themed system architecture diagrams |
 | `ui-ux-pro-max` | UI/UX library — 50+ styles, 161 palettes, 99 UX guidelines |
 
 **Try saying:** *"Help me write a one-page PRD for [product idea] based on the discovery work I did in M2."*
 
 ---
 
-### ⚖️ M4 — Legal & Entity Setup (5 skills)
+### ⚖️ M4 — Legal & Entity Setup (4 skills)
 
 Basics for legal docs and hiring materials.
 
@@ -163,7 +151,6 @@ Basics for legal docs and hiring materials.
 |-------|-------------|
 | `draft-nda` | Draft a non-disclosure agreement |
 | `privacy-policy` | Draft a detailed privacy policy |
-| `review-resume` | Comprehensive resume review |
 | `grammar-check` | Catch grammar/logic/clarity issues |
 | `press-release` | Amazon-style press release |
 
@@ -173,7 +160,7 @@ Basics for legal docs and hiring materials.
 
 ---
 
-### 🎨 M5 — Brand & Identity (16 skills)
+### 🎨 M5 — Brand & Identity (11 skills)
 
 Visual identity, brand narrative, naming, voice. Powered by Efecto, Impeccable, and design philosophy from Emil Kowalski.
 
@@ -182,25 +169,20 @@ Visual identity, brand narrative, naming, voice. Powered by Efecto, Impeccable, 
 | `efecto-web-design` | Design web pages and app UIs (JSX + Tailwind) |
 | `efecto-graphic-design` | Pitch decks, posters, infographics, business cards |
 | `efecto-social-media` | Instagram, X, LinkedIn, TikTok, YouTube assets |
-| `emil-design-eng` | Emil Kowalski's UI polish philosophy |
+| `polish` | Emil Kowalski's UI polish philosophy |
 | `impeccable` | Production-grade frontend with high design quality |
-| `high-end-visual-design` | Design like a high-end agency |
 | `minimalist-ui` | Clean editorial-style interfaces |
 | `industrial-brutalist-ui` | Raw mechanical aesthetic — Swiss + military terminal |
-| `design-taste-frontend` | Senior UI/UX engineer overriding default LLM biases |
 | `stitch-design-taste` | Premium semantic design for Google Stitch |
-| `redesign-existing-projects` | Upgrade existing apps to premium quality |
 | `product-name` | Brainstorm 5 unique memorable product names |
-| `brand-narrative-playbook` | Messaging and storytelling templates |
+| `positioning-workshop` | Messaging and storytelling templates |
 | `business-narrative-builder` | Structured narrative for the business |
-| `positioning-workshop` | Run a positioning workshop |
-| `sketch-prompt` | Turn text into conceptual sketch images |
 
 **Try saying:** *"Help me come up with 5 product names for [idea] and pick the strongest one."*
 
 ---
 
-### 🛠️ M6 — Product & Technology (33 skills)
+### 🛠️ M6 — Product & Technology (28 skills)
 
 Build the actual product. Design polish (Impeccable suite), deployment (Railway, Vercel), production readiness, ML, architecture.
 
@@ -218,13 +200,9 @@ Build the actual product. Design polish (Impeccable suite), deployment (Railway,
 | `clarify` | Improve UX copy, error messages, microcopy |
 | `delight` | Add joy and personality to interfaces |
 | `interface-craft` | Animated React interfaces (Josh Puckett toolkit) |
-| `railway-new` | Create projects/services on Railway |
-| `railway-deploy` | Push code with `railway up` |
-| `railway-environment` | Manage Railway env vars |
+| `railway` | Create projects/services on Railway |
 | `deploy-to-vercel` | Deploy applications to Vercel |
-| `vercel-cli-with-tokens` | Vercel CLI with token auth |
 | `vercel-react-best-practices` | React/Next.js performance patterns |
-| `web-design-guidelines` | Web Interface Guidelines compliance |
 | `repo-scanner` | Audit a repo's tech stack and production readiness |
 | `repo-structurer` | Clean up and structure a repo |
 | `prompt-engineer` | Make a repo AI-native (AGENTS.md, .cursorrules) |
@@ -235,8 +213,7 @@ Build the actual product. Design polish (Impeccable suite), deployment (Railway,
 | `cost-optimizer` | Identify unused cloud resources |
 | `devops-advisor` | Audit DB config, caching, scaling patterns |
 | `transformers-js` | Run ML models in JavaScript/TypeScript |
-| `architecture-diagram` | System architecture diagrams as HTML+SVG |
-| `diagram-design` | 13 diagram types — flowcharts, ER, sequence, etc. |
+| `diagram-design` | System architecture diagrams as HTML+SVG |
 | `tdd-red-green-refactor` | Disciplined TDD workflow in TypeScript |
 | `typed-service-contracts` | Type-safe TS services with Spec+Handler pattern |
 
@@ -244,17 +221,15 @@ Build the actual product. Design polish (Impeccable suite), deployment (Railway,
 
 ---
 
-### 🚀 M7 — Go-to-Market (30 skills)
+### 🚀 M7 — Go-to-Market (25 skills)
 
 Positioning, hook, copywriting, content strategy, BD, sales, distribution.
 
 | Skill | What it does |
 |-------|-------------|
-| `positioning-icp` | Define ICP and product positioning |
-| `positioning` | Structure positioning frameworks |
+| `positioning-workshop` | Define ICP and product positioning |
 | `ideal-customer-profile` | Identify your ICP precisely |
 | `gtm-strategy` | Create a go-to-market strategy |
-| `gtm-motions` | Identify the best GTM motions |
 | `sales-motion-design` | Choose between PLG/SLG/hybrid motions |
 | `launch-strategy` | Plan a product launch |
 | `solo-founder-gtm` | GTM for solo founders |
@@ -267,15 +242,12 @@ Positioning, hook, copywriting, content strategy, BD, sales, distribution.
 | `competitive-battlecard` | Sales-ready competitive battlecards |
 | `ai-sdr` | Deploy an AI sales development rep |
 | `lead-enrichment` | Build data enrichment workflows |
-| `ai-cold-outreach` | AI-powered cold outreach campaigns |
 | `cold-email` | Write B2B cold emails and follow-ups |
 | `email-sequence` | Multi-touch email sequences |
 | `sales-enablement` | Create sales enablement materials |
-| `lead-qualification` | Score leads on ICP fit/budget/intent |
-| `outbound-plays` | Channel-specific outbound plays |
-| `deal-desk` | Manage pricing, packaging, deal terms |
-| `meddic-checklist` | MEDDIC qualification checklist |
-| `discovery-calls` | Plan and run discovery calls |
+| `account-tier-scoring` | Score leads on ICP fit/budget/intent |
+| `expansion-retention` | Manage pricing, packaging, deal terms |
+| `discovery-calls` | MEDDIC qualification checklist |
 | `social-selling` | Engage prospects through social channels |
 | `social-content` | Create social media content |
 | `paid-ads` | Plan and optimize paid ads |
@@ -285,7 +257,7 @@ Positioning, hook, copywriting, content strategy, BD, sales, distribution.
 
 ---
 
-### 💰 M8 — Fundraising Prep (16 skills)
+### 💰 M8 — Fundraising Prep (14 skills)
 
 Investor-ready materials. Decks, financial models, valuations, competitive analysis.
 
@@ -296,13 +268,11 @@ Investor-ready materials. Decks, financial models, valuations, competitive analy
 | `deck-refresh` | Update decks with new numbers |
 | `ib-check-deck` | Quality-check a pitch deck |
 | `3-statement-model` | Income statement, balance sheet, cash flow |
-| `financial-unit-economics` | CAC, LTV, contribution margin analysis |
-| `saas-economics-efficiency-metrics` | SaaS unit economics |
-| `intrinsic-valuation-dcf` | DCF valuation |
-| `relative-valuation-multiples` | Comparable company multiples |
+| `saas-economics-efficiency-metrics` | CAC, LTV, contribution margin analysis |
+| `dcf-model` | DCF valuation |
+| `comps-analysis` | Comparable company multiples |
 | `valuation-reconciler` | Synthesize DCF + comps |
 | `cost-of-capital-estimator` | Cost of equity (CAPM) |
-| `capital-structure-optimizer` | Debt/equity structure analysis |
 | `competitive-analysis` | Competitive landscape decks |
 | `datapack-builder` | IC-ready data packs from CIMs/SEC filings |
 | `business-narrative-builder` | Structured business narrative |
@@ -312,39 +282,29 @@ Investor-ready materials. Decks, financial models, valuations, competitive analy
 
 ---
 
-### 📊 M9 — Operations & Finance (27 skills)
+### 📊 M9 — Operations & Finance (17 skills)
 
 Ongoing ops once the business is running. Metrics, unit economics, retention, churn, pricing.
 
 | Skill | What it does |
 |-------|-------------|
-| `north-star-metric` | Define a North Star Metric |
+| `metrics-that-matter` | Define a North Star Metric |
 | `growth-loops` | Identify growth flywheels |
 | `ab-test-analysis` | Analyze A/B test results with significance |
-| `cohort-analysis` | Slice metrics by user cohort |
-| `sql-queries` | Generate SQL queries from natural language |
 | `metrics-dashboard` | Define and design product metrics dashboards |
 | `saas-revenue-growth-metrics` | SaaS revenue, retention, growth metrics |
-| `retention-ltv-playbook` | Drive retention and LTV |
-| `expansion-playbook` | Upsell/cross-sell/expansion |
-| `expansion-plays` | Adoption-to-expansion plays |
-| `expansion-retention` | Reduce churn, drive expansion |
+| `expansion-retention` | Drive retention and LTV |
 | `churn-prevention` | Reduce churn |
-| `retention-dashboard` | Visualize churn and expansion |
 | `onboarding-cro` | Optimize onboarding conversion |
 | `analytics-tracking` | Set up analytics tracking |
 | `revops` | Revenue operations workflows |
 | `page-cro` | Optimize landing page conversion |
 | `signup-flow-cro` | Optimize signup flow conversion |
-| `voice-of-customer` | VoC research and synthesis |
-| `sentiment-analysis` | Interpret qualitative feedback |
-| `sentiment-feedback-loop` | Capture and act on qualitative feedback |
-| `pql-framework` | Define product-qualified leads |
-| `ai-pricing` | Price AI products |
-| `pricing-strategy` | Design pricing strategy |
+| `customer-research` | VoC research and synthesis |
+| `account-tier-scoring` | Define product-qualified leads |
+| `pricing-strategy` | Price AI products |
 | `roadmap-planning` | Strategic roadmap planning |
-| `finance-metrics-quickref` | SaaS finance metrics reference |
-| `activation-map` | Link segments to insights to activation |
+| `saas-economics-efficiency-metrics` | SaaS finance metrics reference |
 
 **Try saying:** *"Help me define a North Star Metric for [product] and design a metrics dashboard around it."*
 
@@ -374,13 +334,13 @@ The AI uses `summarize-interview` + `jobs-to-be-done` automatically.
 Just say:
 > "Build me a one-page PRD for [product idea]. Include the problem, JTBD, ICP, and three risky assumptions to test."
 
-The AI uses `one-pager-prd` + `identify-assumptions-new` + `ideal-customer-profile`.
+The AI uses `prd-development` + `identify-assumptions-new` + `ideal-customer-profile`.
 
 ### "I need to design a quick prototype."
 Just say:
 > "Sketch a landing page for [idea]. Use Utopia's design taste."
 
-The AI uses `sketch-prompt` + `efecto-web-design` + `high-end-visual-design`.
+The AI uses `efecto-web-design` + `impeccable`.
 
 ### "I need to write a pitch deck for an investor meeting."
 Just say:

@@ -2,9 +2,17 @@
 
 **Time:** ~2 minutes · **Hardest part:** copying and pasting
 
-Four modules · **359 skills** · Claude Code plugin marketplace for The Utopia Studio.
+Four modules · **253 skills** · Claude Code plugin marketplace for The Utopia Studio.
 
 **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills)
+
+**If installed skills do not fire:** our routing evaluation found substantially better
+results on the tested build prompts when Claude Code had a larger skill-description
+budget. Launch a terminal session with `SLASH_COMMAND_TOOL_CHAR_BUDGET=300000 claude`
+to try that setting. This is a per-process diagnostic setting; it does not configure
+the desktop app. Prefer installing only the packs you need. See the
+[evaluation report](reports/2026-10-20-skill-consolidation/README.md) for the partial
+results, limitations, and reproducible test commands.
 
 | Module | Pack | For… |
 |--------|------|------|
@@ -85,7 +93,6 @@ Then open a terminal and run `claude`.
 | Discovery, design, building, deploy | `/plugin install utopia-product@skills` |
 | DD, fundraising, modeling, markets | `/plugin install utopia-investments@skills` |
 | Onboarding, legal, notes, agents | `/plugin install utopia-founder-productivity@skills` |
-| PR preview videos (ui-walkthrough) | `/plugin install prview@skills` |
 
 ### Step 4 — Stay up to date
 

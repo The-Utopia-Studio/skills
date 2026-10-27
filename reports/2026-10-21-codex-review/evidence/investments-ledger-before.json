@@ -1,0 +1,47 @@
+[
+  {
+    "fixture": "empty",
+    "ledger": {},
+    "surface": "<p>No figures present.</p>",
+    "before_exit": 0,
+    "before_stdout": "\n  Required facts\n\n  Retired values\n    pass  0 retired values, none present\n\n  Every surface is in sync.\n\n"
+  },
+  {
+    "fixture": "empty-value",
+    "ledger": {
+      "surfaces": {
+        "memo": "memo.html"
+      },
+      "facts": [
+        {
+          "id": "raise",
+          "value": "",
+          "on": [
+            "memo"
+          ]
+        }
+      ]
+    },
+    "surface": "<p>No figures present.</p>",
+    "before_exit": 0,
+    "before_stdout": "\n  Required facts\n    pass  memo\n\n  Retired values\n    pass  0 retired values, none present\n\n  Every surface is in sync.\n\n"
+  },
+  {
+    "fixture": "no-target",
+    "ledger": {
+      "surfaces": {
+        "memo": "memo.html"
+      },
+      "facts": [
+        {
+          "id": "raise",
+          "value": "$6M",
+          "on": []
+        }
+      ]
+    },
+    "surface": "<p>No figures present.</p>",
+    "before_exit": 0,
+    "before_stdout": "\n  Required facts\n    pass  memo\n\n  Retired values\n    pass  0 retired values, none present\n\n  Every surface is in sync.\n\n"
+  }
+]

@@ -1,17 +1,15 @@
 ---
 name: null-hypothesis-test
 description: >-
-  Falsification pass for the load-bearing beliefs under a chosen plan or wedge.
-  Restates each assumption as a null hypothesis (the belief is FALSE), designs the
-  single cheapest observation whose failure would disprove it, and ranks every
-  assumption by P(wrong) x impact-if-wrong so the fellow shoots at the most-likely-
-  fatal belief first. Fires on "what has to be true", "how would I disprove this",
-  "what's the riskiest assumption", "what could kill this", "which belief do I test
-  first". Output is an Assumption -> Null -> Disproof table with a pre-committed kill
-  signal on every row. NOT the go/no-go on whether the problem is worth building at
-  all (problem-quality-scorecard), NOT bottom-up sizing (bottoms-up-quantification),
-  NOT the priced workflow map (current-state-map), NOT a narrative failure story
-  (pre-mortem).
+  Falsify the few load-bearing beliefs under a chosen plan or wedge. Use when the user lists the
+  beliefs their plan rests on and asks what has to be true, how to disprove each belief cheaply, what
+  could kill the plan, or which belief to test first. Restates each assumption as a null hypothesis
+  (the belief is FALSE), designs the single cheapest observation whose failure would disprove it, and
+  ranks beliefs by P(wrong) x impact-if-wrong. Output: an Assumption -> Null -> Disproof table with a
+  pre-committed kill signal per row. NOT a broad inventory of every risky assumption across 8 risk
+  categories (use identify-assumptions-new), NOT the go/no-go on the problem (use
+  problem-quality-scorecard), NOT bottom-up sizing (use bottoms-up-quantification), NOT the priced
+  workflow map (use current-state-map).
 type: generator
 supersedes: none
 ---
@@ -186,7 +184,7 @@ and rewritten.
 ## Related skills
 
 Absorbs the useful bones of `identify-assumptions-new` and
-`identify-assumptions-existing` — multi-perspective surfacing of beliefs (PM /
+`identify-assumptions-new` — multi-perspective surfacing of beliefs (PM /
 designer / engineer) and a per-item test — and beats them: those skills stop at
 listing assumptions, rating confidence, and "suggesting a test" that is usually a
 confirmation test with no ranking. This skill converts that soft inventory into

@@ -1,6 +1,16 @@
 ---
 name: growth-strategy
-description: "Build or update a growth strategy document for a named Utopia Studio fellow (portfolio company) — covering value proposition, target segments with named example customers, business model, collaboration tiers, growth flywheel, and a 6-month GTM plan (e.g. 'give me a growth strategy for [Fellow]', 'build a v1 growth strategy for X', 'update the GTM plan for Y'). Applies Utopia's real brand system (Special Black / Brick Red, TWK Lausanne, stacked wordmark, /// mark) via the docx skill. Do NOT use for partner-facing decks (use utopia-partnership-deck) or investor/board decks — those follow different templates and different research inputs."
+description: >-
+  Use this skill whenever a Utopia Studio fellow or portfolio company is named
+  and the user wants its growth strategy document: "build a v1 growth strategy
+  for our fellow X", "growth strategy for [Fellow]", "update the GTM plan for
+  [Fellow]". Produces the studio's fixed six-part memo (value proposition, target
+  segments with top 5 named customers in Qatar and globally, business model,
+  collaboration tiers, growth flywheel, 6-month GTM plan) as a branded .docx in
+  the Utopia brand system (Special Black, Brick Red, TWK Lausanne, stacked
+  wordmark). Not for a generic GTM plan or motion selection when no fellow is
+  named (use gtm-strategy), partner-facing decks (use utopia-partnership-deck),
+  or investor and board decks (use pitch-deck).
 license: Proprietary
 ---
 
@@ -23,7 +33,7 @@ Never start writing from the structure below until both halves of the research a
 **External.** Research the fellow's actual market:
 
 - Who the real target customers are in each named market, with a specific, checkable reason each belongs on the list. Never write a placeholder like "a large enterprise" or "a major insurer" — name the company and say why.
-- The regulatory/structural specifics of any market that isn't the fellow's home market, especially Qatar/the Gulf (the studio's home base — see `utopia-partnership-deck`'s "Why Doha" convention for why this lens usually belongs in Utopia work). Don't assume a new market mirrors the primary one; for example, a market may lack the public price/quality data infrastructure the primary market has, which changes what's achievable there in year one.
+- The regulatory/structural specifics of any market that isn't the fellow's home market, especially Qatar/the Gulf (the studio's home base, which is why a Doha/Gulf lens usually belongs in Utopia work). Don't assume a new market mirrors the primary one; for example, a market may lack the public price/quality data infrastructure the primary market has, which changes what's achievable there in year one.
 - Named competitors and comparable companies, with what they actually do and where they fall short, if that context sharpens the value proposition.
 
 If a scope question is genuinely unresolved (which fellow, which markets, what the 6-month window starts from) and someone is available to ask, ask via a clarifying question. If the session is unattended, make the most defensible assumption, state it at the top of the output, and proceed.
@@ -85,9 +95,8 @@ Do **not** try to scrape `utopia-design-system.vercel.app` directly — it's a c
    - No leftover bracketed placeholders anywhere.
    - No em dashes anywhere in the rendered text.
    - Tables aren't overflowing or clipping in any cell.
-5. Deliver with `SendUserFile`. Also try to save it into the attached project via `project_write` — if that fails, say so plainly rather than reporting success. This has failed intermittently with an upstream 400 error; don't assume it's fixed without seeing it succeed.
+5. Save the `.docx` to the working directory (or the path the user names), tell the user the exact path, and attach or upload it only through a file tool this environment actually provides. Never report it as saved or shared without confirming the file exists.
 
 ## Known issues
 
-- `project_write` with `local_path` for `.docx` files has intermittently failed with an upstream 400 error in this environment. Always verify it actually succeeded before telling the user the doc is saved to the project.
 - `utopia-design-system.vercel.app` cannot be scraped by WebFetch (client-rendered SPA, metadata only). Use the npm package instead.

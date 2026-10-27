@@ -29,7 +29,7 @@ Auto-fail this skill if the output:
 
 ## Notes for the judge
 
-- **Absorbs, does not supersede, `prototyping-pretotyping`.** `probe-matrix` already
+- **Absorbs, does not supersede, `probe-matrix`.** `probe-matrix` already
   supersedes that skill on the experiment-selection axis. first-mocks takes the other
   half — the make-craft — and reframes the fidelity ladder around "the least you can
   build and still get a real reaction, under a no-code afternoon ceiling." Check the
@@ -55,7 +55,7 @@ Auto-fail this skill if the output:
 | 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 must-fire hit explicit description trigger strings ("mock it up", "run Crazy 8s", "clickable prototype", "turn this idea into something I can click", "prototype in an afternoon"). All 3 must-not-fire are explicitly negated in the description ("NOT which experiment / NOT running the test / NOT the visual craft") and routed to the named sibling. |
 | 2 Golden | PASS (5/5) | Per-case totals below. No auto_fail triggered on any case (no fabricated numbers — synthetic fixtures tagged; no flattery; no scope-poach; not boilerplate). |
 | 3 Adversarial | PASS (3/3) | Adv01 → asks the ONE question, invents nothing (Step 0 gate). Adv02 → names code-as-credibility trap, refuses "build the real app", reframes to clickable hybrid (kill line + Gotcha 1). Adv03 → declines visual craft, routes to impeccable/shape/design, produces no palette/type/components (Step 5 + When-NOT table). |
-| 4 Head-to-head | n/a | `supersedes: none`. Skill absorbs (not supersedes) prototyping-pretotyping; probe-matrix already supersedes that on the experiment axis. Correctly distinguished. |
+| 4 Head-to-head | n/a | `supersedes: none`. Skill absorbs (not supersedes) probe-matrix; probe-matrix already supersedes that on the experiment axis. Correctly distinguished. |
 | 5 Anti-generic | PASS | Golden-01 output could not come from a generic PM prompt: no-code ceiling ("code converts a disposable question into a defended commitment"), evidence ladder (0.5 artefact-shown vs 0.7 behaviour), and "how little you can build" reframe are Icarus-specific. Guidance is tabular (band table + template form), not prose. |
 | 6 Real-use | pending | Requires 5+ real fellow uses. Not executable here. |
 

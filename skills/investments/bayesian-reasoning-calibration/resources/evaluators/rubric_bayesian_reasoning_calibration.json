@@ -19,7 +19,7 @@
     },
     {
       "name": "Likelihood Justification",
-      "description": "Likelihoods P(E|H) and P(E|¬H) are estimated with clear reasoning",
+      "description": "Likelihoods P(E|H) and P(E|\u00acH) are estimated with clear reasoning",
       "scoring": {
         "1": "No likelihoods or purely guessed",
         "2": "Likelihoods given but no justification",
@@ -30,13 +30,13 @@
     },
     {
       "name": "Evidence Diagnosticity",
-      "description": "Evidence meaningfully distinguishes between hypotheses (LR ≠ 1)",
+      "description": "Interpret direction and strength without rewarding a large likelihood ratio for its own sake.",
       "scoring": {
-        "1": "Evidence is not diagnostic at all (LR ≈ 1)",
-        "2": "Evidence is weakly diagnostic (LR = 1-2)",
-        "3": "Evidence is moderately diagnostic (LR = 2-5)",
-        "4": "Evidence is strongly diagnostic (LR = 5-10)",
-        "5": "Evidence is very strongly diagnostic (LR > 10)"
+        "1": "Forces an update despite LR=1 or reverses the evidence direction.",
+        "2": "Computes LR but overstates its evidential strength.",
+        "3": "Correctly interprets LR below, equal to, or above 1.",
+        "4": "Also distinguishes assumptions from measured likelihoods and checks sensitivity.",
+        "5": "Preserves nondiagnostic evidence unchanged and handles impossible evidence and dependent observations explicitly."
       }
     },
     {
@@ -119,17 +119,17 @@
   ],
   "overall_assessment": {
     "thresholds": {
-      "excellent": "Average score ≥ 4.5 (publication quality)",
-      "very_good": "Average score ≥ 4.0 (most forecasts should aim for this)",
-      "good": "Average score ≥ 3.5 (minimum for important decisions)",
-      "acceptable": "Average score ≥ 3.0 (workable for low-stakes predictions)",
+      "excellent": "Average score \u2265 4.5 (publication quality)",
+      "very_good": "Average score \u2265 4.0 (most forecasts should aim for this)",
+      "good": "Average score \u2265 3.5 (minimum for important decisions)",
+      "acceptable": "Average score \u2265 3.0 (workable for low-stakes predictions)",
       "needs_rework": "Average score < 3.0 (redo before using)"
     },
     "stakes_guidance": {
-      "low_stakes": "Personal predictions, low-cost decisions: aim for ≥ 3.0",
-      "medium_stakes": "Business decisions, moderate cost: aim for ≥ 3.5",
-      "high_stakes": "Major decisions, high cost of error: aim for ≥ 4.0"
+      "low_stakes": "Personal predictions, low-cost decisions: aim for \u2265 3.0",
+      "medium_stakes": "Business decisions, moderate cost: aim for \u2265 3.5",
+      "high_stakes": "Major decisions, high cost of error: aim for \u2265 4.0"
     }
   },
-  "usage_instructions": "Rate each criterion on 1-5 scale. Calculate average. For important forecasts or decisions, minimum score is 3.5. For high-stakes decisions where cost of error is high, aim for ≥4.0. Check especially for base rate neglect, prosecutor's fallacy, and overconfidence - these are the most common errors."
+  "usage_instructions": "Rate each criterion on 1-5 scale. Calculate average. For important forecasts or decisions, minimum score is 3.5. For high-stakes decisions where cost of error is high, aim for \u22654.0. Check especially for base rate neglect, prosecutor's fallacy, and overconfidence - these are the most common errors."
 }

@@ -6,7 +6,6 @@ intent: >-
 type: component
 ---
 
-
 ## Purpose
 Articulate a problem from the user's perspective using an empathy-driven framework that captures who they are, what they're trying to do, what's blocking them, why, and how it makes them feel. Use this to align stakeholders on the problem before jumping to solutions, and to frame product work around user outcomes rather than feature requests.
 
@@ -64,8 +63,8 @@ Use `template.md` for the full fill-in structure.
 ### Step 1: Gather User Context
 Before drafting, ensure you have:
 - **User interviews or research:** Direct quotes, observed behaviors, pain points
-- **Jobs-to-be-Done insights:** What users are "hiring" your product to do (reference `skills/jobs-to-be-done/SKILL.md`)
-- **Persona clarity:** Who specifically experiences this problem (reference `skills/proto-persona/SKILL.md`)
+- **Jobs-to-be-Done insights:** What users are "hiring" your product to do (reference `jobs-to-be-done`)
+- **Persona clarity:** Who specifically experiences this problem (reference `proto-persona`)
 - **Constraints data:** Geographic, tech, time, demographic limitations
 
 **If missing context:** Run discovery interviews, contextual inquiries, or user shadowing. Don't fabricate problems.
@@ -222,25 +221,15 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/jobs-to-be-done/SKILL.md` — Informs the "Trying to" and "But" sections
-- `skills/proto-persona/SKILL.md` — Defines the "I am" persona
-- `skills/positioning-statement/SKILL.md` — Problem statement informs positioning
-- `skills/user-story/SKILL.md` — Problem statement guides story prioritization
+- `jobs-to-be-done` — Informs the "Trying to" and "But" sections
+- `proto-persona` — Defines the "I am" persona
+- `positioning-workshop` — Problem statement informs positioning
+- `user-story` — Problem statement guides story prioritization
 
 ### External Frameworks
 - Clayton Christensen, *Jobs to Be Done* — Origin of outcome-focused problem framing
 - Osterwalder & Pigneur, *Value Proposition Canvas* — Customer pains/gains/jobs
 - Dave Gray, *Empathy Mapping* — Emotional framing techniques
 
-### Dean's Work
-- [Link to relevant Dean Peters' Substack articles if applicable]
-
 ### Provenance
-- Adapted from `prompts/framing-the-problem-statement.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `problem-statement.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/jobs-to-be-done/SKILL.md`, `skills/proto-persona/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

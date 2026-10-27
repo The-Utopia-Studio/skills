@@ -1,6 +1,18 @@
 ---
 name: technical-dd
-description: "Generate investment-grade Technical Due Diligence reports for The Studio (Utopia Capital). Use this skill whenever the user mentions technical due diligence, TDD, tech DD, technical assessment, technical evaluation of a company, or wants to assess whether a startup's technology works, is well-built, can scale, and what the technical risks are. Also trigger when the user uploads company materials (pitch decks, technical docs, corporate profiles) and asks for a due diligence analysis, technical review, or investment assessment focused on technology. This skill produces branded .docx reports suitable for sharing with co-investors or the company itself. Even if the user just says 'run DD on this company' or 'assess this startup' or 'review these materials', use this skill — it's the standard workflow for technical evaluation at The Studio."
+description: >-
+  Investment-grade Technical Due Diligence reports for The Studio (Utopia Capital), as a
+  branded .docx for IC, co-investors or the company. Assesses whether a startup's technology
+  works, is well built, can scale, and what the technical risks are: architecture, AI/ML
+  claims, code quality, security and compliance, scalability, tech debt, team, moat and IP,
+  roadmap feasibility, an evidence-rated claims audit, a risk register, what must be true and
+  dispositive questions. Works from pitch decks, technical docs and corporate profiles, and,
+  when a repository is available, from a 5-phase repo audit. Use when the user mentions
+  technical due diligence, TDD, tech DD, a technical assessment of a company, "run DD on this
+  company", "assess this startup" or "review these materials" for an investment.
+  Not for commercial or financial DD, valuation or the investment memo; not for a security
+  audit or repo scan on its own (use security-auditor or repo-scanner); when the user
+  addresses Ada by name, use ada.
 ---
 
 # Technical Due Diligence Report Generator
@@ -63,6 +75,20 @@ This analysis phase is critical. The value of the TDD is in the gap between clai
 
 ---
 
+### When a repository is available: 5-phase repo audit
+
+If the user gives a GitHub URL or local repo, run these before writing, and cite file paths and commits as evidence (rated SUPPORTED when observed directly):
+
+1. **Scope** — `repo-scanner`: stack, hosting, CI/CD, monitoring, production readiness.
+2. **Security** — `security-auditor`: hardcoded secrets, vulnerable dependencies, env handling, auth patterns.
+3. **Infrastructure** — `devops-advisor`: database config, caching, scaling, observability, backups.
+4. **Cost** — `cost-optimizer`: cloud spend, unused resources, vendor lock-in and billing risk.
+5. **Integrations** — `integration-linker`: third-party services and dependencies.
+
+Rate every finding P0 (blocks investment) / P1 / P2 / P3 in the Risk Register, say what was observed vs inferred, and state what would change the assessment. Read-only: never modify the portco's code. Recurring red flags worth checking: hardcoded API keys, no backup strategy for customer data, AI-API lock-in with no abstraction layer, a single committer (key-person risk), an MVP that is not actually deployed, open Supabase RLS.
+
+---
+
 ## Step 3: Generate the Report
 
 Read `references/report-structure.md` for the detailed section-by-section specification. The report follows this architecture:
@@ -106,7 +132,7 @@ Read `references/report-structure.md` for the detailed section-by-section specif
 
 Read `references/formatting-guide.md` for the full formatting specification. Read `assets/utopia-branding.md` for default branding.
 
-Use the docx skill (`/mnt/skills/public/docx/SKILL.md`) to generate the final document. Key formatting requirements:
+Use the installed `docx` skill to generate the final document, and save it to the current working folder unless the user names another. Key formatting requirements:
 
 - Branded cover page with The Studio logo and company name
 - Headers: "CONFIDENTIAL | [Company] Technical DD | [Date]"

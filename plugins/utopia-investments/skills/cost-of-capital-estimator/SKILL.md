@@ -1,6 +1,14 @@
 ---
 name: cost-of-capital-estimator
-description: Computes cost of equity (CAPM), cost of debt (synthetic rating), and weighted average cost of capital (WACC) for any company in any currency. Handles emerging market risk premiums, bottom-up beta estimation, and multi-country operations. Use when estimating discount rates, computing WACC, determining hurdle rates, analyzing cost of equity or debt, or when user mentions cost of capital, WACC, beta, equity risk premium, country risk premium, or discount rate.
+description: >-
+  Work out the discount rate for a company: cost of equity (CAPM with bottom-up beta), cost of
+  debt (synthetic rating) and WACC, in any currency, including country risk premiums for
+  emerging markets (GCC, MENA, LatAm, Asia) weighted by where revenue is earned. Use this
+  skill whenever the user asks "what discount rate should we use", "what's the WACC", "what
+  hurdle rate", "what's the cost of equity for X", "how much country risk premium for
+  Saudi/Qatar/Egypt", or gives a company's markets, beta or leverage and wants a rate. Also
+  for equity risk premium, levering or unlevering beta, and the riskfree rate in a local
+  currency. Not for a full DCF valuation (use dcf-model).
 ---
 # Cost of Capital Estimator
 
@@ -50,13 +58,13 @@ Levered Beta = 0.80 x (1 + (1 - 0.34) x 0.25) = 0.80 x 1.165 = 0.93.
 
 **Step 4 -- Cost of equity**
 
-Cost of Equity = 8.5% + 0.93 x 8.15% = 8.5% + 7.58% = **16.08%**.
+Using operation-weighted CRP with lambda = 1: Cost of Equity = 8.5% + 0.932 x 5.0% + 3.15% = **16.31%**. Retain unrounded beta in calculations. Multiplying the whole ERP by beta would instead assume lambda = beta; do not switch approaches silently.
 
 **Step 5 -- Cost of debt (synthetic rating)**
 
 EBIT: R$20B, Interest expense: R$2.5B. Interest coverage = 8.0x.
 
-Lookup: Coverage of 8.0x maps to A rating for large firms, default spread = 1.00%.
+Illustrative assumption: pre-tax debt spread = 1.00%, to be replaced with a dated source appropriate to this borrower. Do not infer it from an outdated synthetic-rating table.
 
 Pre-tax cost of debt = 8.5% + 1.00% = 9.50%.
 
@@ -66,7 +74,7 @@ After-tax cost of debt = 9.50% x (1 - 0.34) = 6.27%.
 
 Capital structure weights (market values): E/(D+E) = 80%, D/(D+E) = 20%.
 
-WACC = 16.08% x 0.80 + 6.27% x 0.20 = 12.86% + 1.25% = **14.12%**.
+WACC = 16.31% x 0.80 + 6.27% x 0.20 = **14.302%** (14.30% rounded).
 
 **Interpretation**: This is a BRL-denominated WACC. Use it to discount BRL-denominated cash flows. For USD-denominated analysis, rebuild using USD riskfree rate and adjust the ERP accordingly.
 

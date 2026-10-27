@@ -309,16 +309,14 @@ COOKIE_DOMAINS: dict[str, dict[str, Any]] = {
 def extract_browser_credentials(config: dict[str, Any]) -> dict[str, str]:
     """Extract auth cookies from local browsers.
 
-    Default behavior (FROM_BROWSER unset): tries Firefox and Safari only.
-    These read local files silently with no system dialogs.  Chrome is
-    skipped because ``security find-generic-password`` triggers a macOS
-    Keychain prompt that cannot be reliably suppressed.
-
-    Set ``FROM_BROWSER=auto`` to also try Chrome (accepts the dialog),
-    or ``FROM_BROWSER=off`` to disable extraction entirely.
+    Opt-in only: reads local browser cookie stores, so nothing happens unless
+    the user explicitly agreed and FROM_BROWSER is set (unset or ``off`` =
+    no extraction). ``FROM_BROWSER=auto`` tries Firefox, Safari and Chrome
+    (Chrome triggers a macOS Keychain prompt); ``firefox``/``safari``/``chrome``
+    tries just that browser.
     """
     from_browser = (config.get("FROM_BROWSER") or "").strip().lower()
-    if from_browser == "off":
+    if from_browser in ("", "off"):
         return {}
     try:
         from . import cookie_extract

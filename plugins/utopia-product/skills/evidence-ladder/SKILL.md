@@ -1,17 +1,14 @@
 ---
 name: evidence-ladder
 description: >-
-  Weights a pile of "validation" by what people DID, not what they said. Takes
-  interview quotes, sign-ups, LOIs, pilots, payments and places each on one
-  ladder — money moved 1.0, behaviour observed 0.7, artefact shown 0.5, verbal
-  commitment 0.3, opinion 0.1 — then returns a weighted evidence table, the
-  weight of the load-bearing claim, and for every low signal the cheapest probe
-  that raises it a rung. Fires on "how strong is this signal", "score the
-  interview", "did they actually validate", "weight this evidence", "is this
-  real validation". NOT a build gate on a problem (use problem-quality-scorecard),
-  NOT a picker for which test to run next (use probe-matrix), NOT a transcript
-  summary (use summarize-interview). This is the reference skill the rest of the
-  module cites for the ladder.
+  Score how strong a pile of validation really is, by what people DID rather than said. Use when the
+  user lists signals (interview quotes, 'they said they'd love it', waitlist sign-ups, LOIs, pilots,
+  shared data, payments) and asks how strong the validation is, whether it's real, or what the
+  evidence is worth. Places each signal on one ladder (money moved 1.0, behaviour observed 0.7,
+  artefact shown 0.5, verbal commitment 0.3, opinion 0.1) and returns a weighted evidence table, the
+  weight of the load-bearing claim, and the cheapest probe to raise each low signal a rung. NOT a
+  build gate on a problem (use problem-quality-scorecard), NOT choosing the next test (use
+  probe-matrix), NOT a transcript summary (use summarize-interview).
 type: generator
 supersedes: none
 ---

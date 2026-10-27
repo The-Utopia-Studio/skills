@@ -28,7 +28,7 @@ When NOT to fire:
 - A confirmation or rejection for this bridge-target-contact pair already exists in memory.
 - The Inferred edge involves an employee other than the rep who initiated the play.
 
-Action: Send a single Slack DM to the rep who initiated the play. Intake never messages anyone else - not other employees, not customers, not the prospect.
+Action: Ask once in the current chat when the initiating user is that rep. Draft an external confirmation request only when useful; send a Slack DM only if explicitly requested by the user. Intake never independently messages anyone.
 
 Message format:
 ---
@@ -85,7 +85,7 @@ Store in account memory under the prospect company domain. Each flag is a struct
 - source: intake | inferred | inferred+confirmed
 - date_logged: ISO timestamp
 - expires: 180 days from date_logged
-- confirmed_by: rep name if confirmed via Slack prompt, otherwise null
+- confirmed_by: rep name if confirmed directly by the rep, otherwise null
 
 ---
 
@@ -111,7 +111,7 @@ If a rep responds "No / don't know them well":
 
 ## What Intake Does NOT Do
 
-- Does not send Slack messages to anyone other than the rep who initiated the play.
+- Does not send external messages without explicit user authorization.
 - Does not contact customers, partners, investors, advisors, or prospect contacts.
 - Does not auto-run the intake process outside of the warm intro play (weekly digest is V2).
 - Does not upgrade an edge to Verified based on an unconfirmed flag alone.

@@ -1,6 +1,14 @@
 ---
 name: agent-persona-builder
-description: "Design persistent AI agent personas with distinct voices, durable memory, and clear operating rules. Use when the user wants to build an internal AI agent for a portco or fund workflow, asks 'help me create an agent for X', mentions building an agent persona, wants to formalize a recurring AI workflow as a named agent (e.g. 'Ada the DD analyst'), or asks how to design agents that don't sound generic. Based on Jack & Jill's agent-builder methodology — 25 questions across 5 phases, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md (cross-session knowledge), and BOOTSTRAP.md (first-boot orientation)."
+description: >-
+  Design a persistent, named AI agent persona with a distinct voice, durable memory and clear
+  operating rules, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md
+  (cross-session knowledge) and BOOTSTRAP.md (first boot). Use when the user asks to create or build a
+  named internal agent (e.g. 'Noura who drafts LP letters', 'Ada the DD analyst'), give an agent a
+  personality, voice or memory, or turn a recurring fund, portco or studio workflow into a named
+  agent. Runs a 25-question, 5-phase interview (Jack & Jill agent-builder method). Not for the
+  engineering PRD and work orders of an agent system (use agent-prd) or a fellow's role / tools /
+  memory / eval spec (use agent-design).
 ---
 
 # Agent Persona Builder
@@ -11,7 +19,7 @@ A framework for designing internal AI agents with distinct, persistent personali
 
 - Building a new AI agent for a Utopia workflow or portco (e.g., a DD analyst, a deck builder, a customer support bot)
 - Formalizing a recurring "Claude do X" pattern into a named, persistent agent
-- Designing portco agents as part of M6 Product or M9 Ops in the Cobuild curriculum
+- Designing portfolio-company agents for Product or Founder Productivity workflows
 - The user says any of: "build an agent for…", "design an AI persona", "help me create [name]", "turn this workflow into an agent"
 
 ## What this skill produces
@@ -28,9 +36,11 @@ For each agent, four core files in `agents/<name>/`:
 
 Plus a `SKILL.md` so the agent is invokable from the marketplace.
 
+Use the interview as a gap checklist: reuse information the user already provided and ask only unresolved questions that materially change the persona or permissions.
+
 ## Core principles (don't skip these)
 
-1. **Memory is explicit, not implicit.** Until something is written into MEMORY.md, the agent doesn't know it. Document gotchas the moment they're discovered.
+1. **Memory records verified facts.** Record only facts supplied by the user or verified from authorized sources, with provenance where useful. Never invent a job, domain, contact, escalation owner or gotcha to complete the files; keep missing facts explicitly unknown and ask only necessary questions. Examples below are illustrations, not facts about the new agent. A new MEMORY.md may contain no verified facts yet.
 
 2. **Opinionated defaults beat blank templates.** A weak persona drifts toward generic-AI voice. Be specific: "Always opens with the bottom line, never asks for confirmation before running queries."
 
@@ -142,7 +152,7 @@ agents/<agent-name>/
 
 And add a marketplace-invocable wrapper:
 ```
-skills/agents/<agent-name>/
+skills/founder-productivity/<agent-name>/
 ├── SKILL.md         # Trigger conditions + load instructions
 └── (symlinks or includes to SOUL/AGENTS/MEMORY)
 ```
@@ -153,7 +163,7 @@ Before declaring the agent ready, verify:
 
 - [ ] **Voice test:** Read three random outputs the agent would generate. Do they sound like the same character, not like generic Claude?
 - [ ] **Trigger test:** Could a teammate use the trigger phrases naturally without thinking?
-- [ ] **Memory test:** Is there at least one gotcha in MEMORY.md that would actually save time?
+- [ ] **Memory test:** Are recorded facts and gotchas supported by user input or verified sources? If none are known, state that explicitly; an empty verified-memory section is valid. Never manufacture a gotcha to satisfy this checklist.
 - [ ] **Workflow test:** Can someone with no context run the first workflow end-to-end using only the agent's files?
 - [ ] **Anti-pattern test:** Are the anti-patterns specific enough that you could spot a violation in someone else's output?
 
@@ -167,9 +177,9 @@ Before declaring the agent ready, verify:
 ## Example outputs (real Utopia agents)
 
 See:
-- [Ada](../../agents/ada/) — technical due diligence
-- [Khalil](../../agents/khalil/) — pitch deck builder
-- [Salim](../../agents/salim/) — Studio fellow coach
+- [Ada](https://github.com/The-Utopia-Studio/skills/tree/main/agents/ada) — technical due diligence
+- [Khalil](https://github.com/The-Utopia-Studio/skills/tree/main/agents/khalil) — pitch deck builder
+- [Salim](https://github.com/The-Utopia-Studio/skills/tree/main/agents/salim) — Studio fellow coach
 
 These three are the canonical examples. Read them before designing your own.
 

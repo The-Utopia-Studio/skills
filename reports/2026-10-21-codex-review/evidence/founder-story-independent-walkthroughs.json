@@ -1,0 +1,20 @@
+{
+  "method": "Independent authored Codex reviewer walkthroughs after reading current user-story SKILL.md. Only prompt fields extracted from Product fixtures; other reviewer outputs not read. Not a runtime routing benchmark or stochastic success rate.",
+  "cases": [
+    {
+      "prompt": "Write a job story for a field inspector. When coverage drops while submitting a completed inspection, keep the report on device, show pending status, and retry without duplicating it when the connection returns. We have no mockups yet.",
+      "output": "Title: Submit an inspection through a coverage interruption.\nWhen coverage drops while I submit a completed inspection, I want the report kept and submitted after reconnection, so I can finish the visit without losing my work or creating duplicates.\nDesign: not provided.\nAcceptance criteria:\n1. The completed report remains on the device while offline.\n2. The report shows a pending status while submission is pending.\n3. When connectivity returns, submission is retried.\n4. Retrying does not create a duplicate inspection report.",
+      "checks": {"situation_first": true, "four_requirements_preserved": true, "no_invented_design": true, "no_unsupplied_thresholds": true}
+    },
+    {
+      "prompt": "Create a JTBD job story: at monthly payroll cutoff the finance lead needs to see unapproved timesheets so nobody is accidentally omitted. List employee, period and approval status; filter to unapproved. Do not design reminders or escalation.",
+      "output": "Title: Find unapproved timesheets at payroll cutoff.\nWhen monthly payroll cutoff arrives, I want to see which timesheets are still unapproved, so I can identify people at risk of being accidentally omitted.\nDesign: not provided.\nAcceptance criteria:\n1. Each listed timesheet identifies the employee, period, and approval status.\n2. Filtering to unapproved shows only timesheets whose approval is outstanding.\nScope: reminders and escalation are excluded.",
+      "checks": {"situation_first": true, "required_fields_preserved": true, "unapproved_filter_preserved": true, "no_reminder_or_escalation_design": true}
+    },
+    {
+      "prompt": "Write a role-first user story with Given/When/Then for a workspace admin revoking a member's access. Active sessions must end and future sign-in must be denied.",
+      "output": "Title: Revoke workspace membership access.\nAs a workspace admin, I want to revoke a member's access, so that they can no longer use the workspace.\nScenario: Revocation ends current and future workspace access.\nGiven a member has access to the workspace and active sessions\nWhen the workspace admin revokes that member's access\nThen the member's active workspace sessions end\nAnd subsequent sign-in attempts to that workspace are denied.\nOpen scope question: whether revocation must also disable the person's account outside this workspace; this story assumes workspace access only.",
+      "checks": {"role_first_preserved": true, "gherkin_preserved": true, "active_sessions_end": true, "future_sign_in_denied": true, "related_consequences_kept_together": true}
+    }
+  ]
+}

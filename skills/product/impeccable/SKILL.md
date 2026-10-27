@@ -1,27 +1,22 @@
 ---
 name: impeccable
-description: Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics. Use when the user asks to build web components, pages, artifacts, posters, or applications, or when any design skill requires project context. Call with 'craft' for shape-then-build, 'teach' for design context setup, or 'extract' to pull reusable components and tokens into the design system.
-version: 2.1.1
+description: >-
+  Build, redesign or study frontend interfaces so they look designed, not AI-
+  generated. Use when the user asks to build a landing page, dashboard, app UI
+  or component with a distinctive look; to upgrade or redesign an existing site
+  to premium quality without a rewrite; to make a site feel agency-grade or
+  Awwwards-level (glass pill nav, double-bezel cards, button-in-button CTAs); to
+  set taste dials such as DESIGN_VARIANCE, MOTION_INTENSITY or VISUAL_DENSITY;
+  or to study a reference URL or screenshot and extract its design DNA
+  (macrostructure, type pairing, colour anchor). Modes: craft, teach, extract,
+  study, redesign. Not for choosing a palette from a style database (use ui-ux-
+  pro-max), scoring a UI (use critique or audit), or a final detail pass (use
+  polish).
+version: 2.2.0
 user-invocable: true
-argument-hint: "[craft|teach|extract]"
+argument-hint: "[craft|teach|extract|study|redesign]"
 license: Apache 2.0. Based on Anthropic's frontend-design skill. See NOTICE.md for attribution.
 ---
-
-<post-update-cleanup>
-BEFORE doing any design work, run this one-time maintenance step. Tell the user:
-
-> **Impeccable was updated.** A few skills were renamed or merged in this version (e.g. `/arrange` is now `/layout`, `/normalize` was folded into `/polish`). I'll clean up the old skill files so they don't clutter your project. This only runs once after an update.
-
-Then run:
-
-```bash
-node .agents/skills/impeccable/scripts/cleanup-deprecated.mjs
-```
-
-If the script removed files, briefly confirm what was cleaned up. If it found nothing, skip any output and move on.
-
-After running the script, delete this entire section (from `<post-update-cleanup>` through `</post-update-cleanup>` inclusive) from THIS file so it does not run again until the next update. Save the file.
-</post-update-cleanup>
 
 This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
 
@@ -281,6 +276,38 @@ Match implementation complexity to the aesthetic vision. Maximalist designs need
 Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, different fonts, different aesthetics. NEVER converge on common choices across generations.
 
 Remember: the model is capable of extraordinary creative work. Don't hold back. Show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
+
+---
+
+## Resolved rules (override every reference file)
+
+The references below came from several skills that disagreed. These rules settle each conflict:
+
+1. **Fonts.** Existing project or brand fonts always win. Otherwise follow the font selection procedure above: every font in `reflex_fonts_to_reject` is rejected, plus Inter, Roboto, Arial, Open Sans and system defaults. Fonts named in [taste-dials](reference/taste-dials.md), [premium-archetypes](reference/premium-archetypes.md) or the Hallmark files (Geist, Satoshi, Cabinet Grotesk, Clash Display, Fraunces, Instrument Serif, Plus Jakarta Sans, and others) are examples of a direction, never defaults. If one is on the reject list, it stays rejected. Serif display faces are fine on editorial and marketing pages. Product UIs and dashboards default to sans plus mono unless the brief asks otherwise.
+2. **Motion.** One well-orchestrated moment beats scattered effects. No infinite or perpetual loops by default. Use them only when the user explicitly wants a "living" dashboard or sets MOTION_INTENSITY to 8 or higher, and isolate them in their own client component. Never use bounce or elastic easing on UI state. Always support `prefers-reduced-motion`.
+3. **Glass and blur.** Use only on fixed or sticky surfaces (nav, overlays) with a purpose. Never as decoration on cards or scrolling content.
+4. **Eyebrows and section numbers.** Off by default. Use them only when the content is genuinely ordinal or the user asks. Stack them vertically above the heading, never as a hanging left label.
+5. **Data and copy.** Never invent metrics, logos, testimonials or customer counts. Use real data, a clearly labelled placeholder, or a layout that does not need numbers. "Messy realistic numbers" is allowed only for obviously-fake demo or sample data.
+6. **Chrome.** Do not hand-draw fake browser bars, phone frames or IDE windows. Use real screenshots in a `<figure>`.
+7. **Cards and archetypes.** The double-bezel, button-in-button, Bento 2.0 and vibe archetypes are options to pick from, not mandates. The absolute bans above (side-stripe borders, gradient text) still apply.
+8. **Themes.** The Hallmark catalog theme names have no shipped token values. Always build the palette with OKLCH tokens via [custom-theme](reference/hallmark/custom-theme.md) or the color reference. Catalog names are mood vocabulary only.
+
+---
+
+## Study Mode
+
+If invoked with "study" plus a URL or screenshot, or the user wants to reuse the design DNA of a reference, follow the Hallmark study flow in [hallmark/study.md](reference/hallmark/study.md). The workflow overview is in [hallmark/README.md](reference/hallmark/README.md). Study extracts macrostructure, archetypes, type pairing and colour anchor. It never copies pixels and it refuses template-marketplace URLs.
+
+## Redesign Mode
+
+If invoked with "redesign", or the user wants an existing site or app upgraded to premium quality without a rewrite, scan the stack, then diagnose with [redesign-checklist](reference/redesign-checklist.md) and fix in its priority order (fonts → palette → states → layout → components → loading/empty/error → type polish). For a structural redesign, follow [hallmark/verbs/redesign.md](reference/hallmark/verbs/redesign.md). Never delete routes, components or files without explicit confirmation. Keep the existing stack.
+
+## Structural variety and component scope
+
+- **Page builds:** before styling, pick a named macrostructure from [hallmark/macrostructures.md](reference/hallmark/macrostructures.md) and nav/footer archetypes from [hallmark/component-cookbook.md](reference/hallmark/component-cookbook.md). Load only the files you pick. Consecutive builds in one project must not share a macrostructure.
+- **Single components** (a button, input, card, modal and so on): skip the page apparatus. Ship all 8 states (default, hover, focus-visible, active, disabled, loading, error, success) per [hallmark/interaction-and-states.md](reference/hallmark/interaction-and-states.md).
+- **Before handoff:** run the gates in [hallmark/slop-test.md](reference/hallmark/slop-test.md) as a final check.
+- **Taste dials:** if the user talks in terms of variance, motion or density (1–10), use [taste-dials](reference/taste-dials.md). For "agency-grade / expensive-feeling" briefs, use [premium-archetypes](reference/premium-archetypes.md).
 
 ---
 

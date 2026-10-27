@@ -50,7 +50,7 @@ See `references/unsloth.md` for complete Unsloth documentation and `scripts/unsl
 
 When assisting with training jobs:
 
-1. **ALWAYS use `hf_jobs()` MCP tool** - Submit jobs using `hf_jobs("uv", {...})`, NOT bash `trl-jobs` commands. The `script` parameter accepts Python code directly. Do NOT save to local files unless the user explicitly requests it. Pass the script content as a string to `hf_jobs()`. If user asks to "train a model", "fine-tune", or similar requests, you MUST create the training script AND submit the job immediately using `hf_jobs()`.
+1. **Submit with `hf_jobs()` when the Hugging Face MCP server is connected; otherwise use the `hf` CLI.** With the MCP tool, call `hf_jobs("uv", {...})` and pass the script content as a string; do not save local files unless asked. Without it, write the script to a temporary file and submit it with `hf jobs uv run <script.py> --flavor <hardware> --secrets HF_TOKEN --timeout <duration> --detach` (see the `hf-cli` skill). Then follow it with `hf jobs logs <JOB_ID> --follow`. Never use the legacy `trl-jobs` command. If the user asks to "train a model" or "fine-tune", create the training script AND submit the job.
 
 2. **Always include Trackio** - Every training script should include Trackio for real-time monitoring. Use example scripts in `scripts/` as templates.
 
@@ -72,7 +72,7 @@ Before starting any training job, verify:
 
 ### ✅ **Account & Authentication**
 - Hugging Face Account with [Pro](https://hf.co/pro), [Team](https://hf.co/enterprise), or [Enterprise](https://hf.co/enterprise) plan (Jobs require paid plan)
-- Authenticated login: Check with `hf_whoami()`
+- Authenticated login: check with `hf_whoami()` (MCP) or `hf auth whoami` (CLI)
 - **HF_TOKEN for Hub Push** ⚠️ CRITICAL - Training environment is ephemeral, must push to Hub or ALL training results are lost
 - Token must have write permissions  
 - **MUST pass `secrets={"HF_TOKEN": "$HF_TOKEN"}` in job config** to make token available (the `$HF_TOKEN` syntax

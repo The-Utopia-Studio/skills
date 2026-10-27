@@ -1,11 +1,17 @@
 ---
 name: user-story-mapping
-description: Create a user story map that lays out activities, steps, tasks, and release slices. Use when planning a workflow, backlog, or MVP around the user journey.
+description: >-
+  Create a Jeff Patton user story map: backbone activities, steps and tasks laid out left-to-right as
+  the user's journey, prioritized top-to-bottom, with release slices and a walking-skeleton MVP. Works
+  as a one-shot map or as an interactive story-mapping workshop with adaptive questions and a
+  facilitation agenda. Use when planning an MVP or release around a user workflow, turning a flat
+  backlog into a map, aligning a team on scope, or running a story mapping session. Not for writing
+  individual stories with acceptance criteria (use user-story), splitting one oversized story (use
+  user-story-splitting), or quarter-level initiative sequencing (use roadmap-planning).
 intent: >-
   Visualize the user journey by creating a hierarchical map that breaks down high-level activities into steps and tasks, organized left-to-right as a narrative flow. Use this to build shared understanding across product, design, and engineering, prioritize features based on user workflows, and identify gaps or opportunities in the user experience.
 type: component
 ---
-
 
 ## Purpose
 Visualize the user journey by creating a hierarchical map that breaks down high-level activities into steps and tasks, organized left-to-right as a narrative flow. Use this to build shared understanding across product, design, and engineering, prioritize features based on user workflows, and identify gaps or opportunities in the user experience.
@@ -89,7 +95,7 @@ Who are you building for?
 ---
 
 #### Persona
-Provide details about the persona within this segment (reference `skills/proto-persona/SKILL.md`).
+Provide details about the persona within this segment (reference `proto-persona`).
 
 ```markdown
 ### Persona:
@@ -102,7 +108,7 @@ Provide details about the persona within this segment (reference `skills/proto-p
 ---
 
 ### Step 2: Define the Narrative
-What is the user trying to accomplish? Frame this as a Jobs-to-be-Done statement (reference `skills/jobs-to-be-done/SKILL.md`).
+What is the user trying to accomplish? Frame this as a Jobs-to-be-Done statement (reference `jobs-to-be-done`).
 
 ```markdown
 ### Narrative:
@@ -206,6 +212,33 @@ Review the map and ask:
 
 ---
 
+## Workshop Mode (Interactive)
+
+Use this mode when the user wants to *run* a story-mapping session ("run a story mapping workshop", "facilitate this with my team", "move our flat backlog to a map"). Follow the `workshop-facilitation` skill for pacing (one question per turn, progress labels, numbered options); skip the multi-turn flow if the user asks for a single-shot map. Use `workshop.md` for the 90-120 minute agenda and outputs checklist.
+
+**Vocabulary:**
+- **Backbone:** the activities across the top, in narrative order. They are not prioritized against each other; they are the story of the system.
+- **Walking skeleton:** the highest-priority task under every activity. Together they form the smallest end-to-end release.
+- **Ribs:** supporting tasks hanging under each activity, ordered by priority.
+- **Build left-to-right, top-to-bottom:** ship a thin slice across all activities before deepening any one of them. This avoids "context-free mulch", a flat backlog where stories lose the system narrative.
+
+**Step 0, gather context.** Ask for the product concept, PRD draft or existing backlog, personas or JTBD, and any research. The user can paste it or describe the system briefly.
+
+**Up to 5 adaptive questions, each with 3-4 numbered options plus "Other":**
+1. **Scope:** entire product / major feature area (e.g., onboarding, checkout) / one user journey or job / redesign of an existing flow.
+2. **Users:** single persona / several personas sharing one workflow (e.g., marketplace buyer and seller) / several personas with different workflows (use swim lanes or separate maps) / internal roles.
+3. **Backbone:** generate 5-8 activities left-to-right from the answers (e.g., Browse, Add to Cart, Review Cart, Enter Shipping, Enter Payment, Confirm, Receive Confirmation), then ask the user to add, remove or reorder.
+4. **Tasks:** generate 3-5 tasks per activity, top = must-have (walking skeleton), bottom = nice-to-have, and confirm priorities.
+5. **Release slices:** draw three horizontal lines: Release 1 walking skeleton (simplest version of every activity), Release 2 enhancements, Release 3 polish and edge cases.
+
+**Output:** `# User Story Map: [scope]` with users and date, the backbone line, the full map (each task tagged Must/Should/Nice and its release), the three release slices with stories listed per activity and a one-line "why this is the walking skeleton", and next steps (write stories with `user-story`, estimate, walk the map with stakeholders, keep it visible).
+
+**Bad map to avoid:** a backbone of `UI Layer -> API Layer -> Database Layer -> Deployment`. It follows system layers, not the user's workflow, so no release delivers end-to-end value. Re-map by workflow, e.g. `Sign Up -> Configure Settings -> Invite Team -> Start Project`.
+
+**Workshop pitfalls:** a vertical list with no horizontal narrative; Release 1 = "build Activity 1 fully" (feature-complete waterfall); mapping every edge case up front; the map hidden in a tool instead of displayed.
+
+---
+
 ## Examples
 
 See `examples/sample.md` for a full story map example.
@@ -255,31 +288,23 @@ See `examples/sample.md` for a full story map example.
 
 **Consequence:** No shared ownership or understanding.
 
-**Fix:** Map collaboratively. Run a story mapping workshop with product, design, and engineering.
+**Fix:** Map collaboratively. Use Workshop Mode above with product, design, and engineering.
 
 ---
 
 ## References
 
 ### Related Skills
-- `skills/proto-persona/SKILL.md` — Defines the persona for the story map
-- `skills/jobs-to-be-done/SKILL.md` — Informs the narrative and activities
-- `skills/user-story/SKILL.md` — Tasks from the map become user stories
-- `skills/problem-statement/SKILL.md` — Problem statement frames the narrative
+- `proto-persona` — Defines the persona for the story map
+- `jobs-to-be-done` — Informs the narrative and activities
+- `user-story` — Tasks from the map become user stories
+- `user-story-splitting` — Split map tasks that are too big for a sprint
+- `problem-statement` — Problem statement frames the narrative
 
 ### External Frameworks
 - Jeff Patton, *User Story Mapping* (2014) — Origin of the story mapping technique
 - Teresa Torres, *Continuous Discovery Habits* (2021) — Opportunity solution trees (complementary to story maps)
-
-### Dean's Work
-- User Story Mapping Prompt (adapted from Jeff Patton's methodology)
+- Jeff Patton, "The New User Story Backlog is a Map" (blog) — the backbone concept
 
 ### Provenance
-- Adapted from `prompts/user-story-mapping.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `user-story-mapping.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/proto-persona/SKILL.md`, `skills/jobs-to-be-done/SKILL.md`, `skills/user-story/SKILL.md`, `skills/problem-statement/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

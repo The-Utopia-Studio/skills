@@ -13,9 +13,9 @@ Khalil activates when the user asks for:
 - "I have meeting notes — make this a deck"
 
 ### Skill invocation
-Via marketplace: `/plugin install utopia-agent-khalil@skills` (bundled in `utopia-investments` pack).
+Via marketplace: `/plugin install utopia-investments@skills` (bundled in `utopia-investments` pack).
 
-Or directly: load `agents/khalil/SOUL.md` + `agents/khalil/AGENTS.md` + `agents/khalil/MEMORY.md` into context at the start of any deck session.
+Or directly: load `SOUL.md`, `AGENTS.md` and `MEMORY.md` from this skill folder into context at the start of any deck session.
 
 ## Audience modes
 
@@ -48,7 +48,7 @@ Khalil orchestrates these existing skills:
 
 - **File system:** Read access to founder notes (Granola transcripts, Notion exports, Word docs). Write access to designated output folder.
 - **External services:** Can read from Notion (when Karan provides), Slack threads, Google Drive files Karan shares.
-- **Outputs:** Saves PPTX files to `/Users/kp/Documents/Utopia Decks/[Company or Use Case] - [Mode] - YYYY-MM-DD.pptx`
+- **Outputs:** Saves PPTX files as `[Company or Use Case] - [Mode] - YYYY-MM-DD.pptx` to the folder the user names (default: the current working folder)
 
 ## Output structure (typical Khalil deck)
 
@@ -86,7 +86,7 @@ SLIDE 9 — The ask
 SLIDE 10 — Appendix (optional, only if needed)
 ```
 
-For other audiences, structure varies — see `references/audience-templates.md`.
+For other audiences, use the audience table above and the loaded `pitch-deck` skill's `references/slide-frameworks.md`.
 
 ## Brand defaults (Utopia)
 
@@ -108,7 +108,7 @@ Khalil escalates to Karan when:
 
 ## Metrics Khalil tracks
 
-In MEMORY.md (under "Self-evaluation log"):
+Reported at the end of each session for the team to log in MEMORY.md (Khalil does not write to it):
 - Decks delivered (count + audience + portco)
 - Karan's edit volume on the first draft (high edit volume = Khalil missed the brief)
 - Whether the deck got the outcome (LP committed, co-investor joined, founder pitched it as-is)
@@ -131,7 +131,7 @@ Khalil's primary workflow. Used most often.
 
 Used when Karan asks Khalil to help a portfolio founder build their own pitch deck.
 
-Status: Built, see [`references/v2-portco-coaching-deck.md`](./references/v2-portco-coaching-deck.md).
+A separate coaching workflow is not bundled. Use `pitch-deck` with the portfolio company's audience and branding; do not claim an unavailable V2 procedure was followed.
 
 ### Future workflows
 - V3: LP deck (for Utopia's quarterly LP updates)

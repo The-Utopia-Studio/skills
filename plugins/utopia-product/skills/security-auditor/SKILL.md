@@ -1,6 +1,13 @@
 ---
 name: security-auditor
-description: Audits repository security — hardcoded secrets, dependency vulnerabilities, environment variable management, and authentication patterns. Use when the user asks to "check security", "find secrets", "audit dependencies", or "secure my repo". Don't use for code review, deployment, or monitoring.
+description: >-
+  Audit a whole repository before launch or open-sourcing: hardcoded API keys
+  and secrets (including git history), committed .env files, npm or pip
+  dependency vulnerabilities, unprotected admin or API routes, CORS, rate
+  limiting and input validation, with critical issues and fixes. Use when the
+  user asks to check a repo or codebase for security issues, find leaked secrets
+  or keys, run npm audit, or is about to open-source. Not for reviewing only the
+  current branch's diff or PR changes.
 ---
 
 # Security Auditor
@@ -20,12 +27,12 @@ Finds and fixes common security issues in repositories built by solo founders an
 ### Step 1: Scan for Hardcoded Secrets
 ```bash
 # Check for common secret patterns
-grep -rn --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.py" --include="*.env" \
+grep -rl --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.py" --include="*.env" \
   -E "(sk-[a-zA-Z0-9]{20,}|api_key\s*=\s*['\"][^'\"]+|password\s*=\s*['\"][^'\"]+|secret\s*=\s*['\"][^'\"]+|AWS_ACCESS_KEY|PRIVATE_KEY)" . \
   | grep -v node_modules | grep -v '.env.example' | head -30
 ```
 
-If matches found: **flag as critical** and recommend moving to environment variables.
+The scan prints filenames only, never matching lines or secret values. Inspect candidates locally with values redacted; placeholders and variable names are not confirmed leaks. For a confirmed exposed credential, recommend revocation/rotation and removal from code/history as appropriate, then environment or secret-manager storage.
 
 ### Step 2: Check Environment Variable Management
 - `.env` should be in `.gitignore` (if not: **critical**)

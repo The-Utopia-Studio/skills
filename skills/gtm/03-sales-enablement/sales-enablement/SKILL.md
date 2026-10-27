@@ -1,6 +1,6 @@
 ---
 name: sales-enablement
-description: "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email."
+description: "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. Not for competitive battlecards (use competitive-battlecard), deal inspection (use deal-velocity-engineer), or investor pitch decks (use pitch-deck). For marketing website copy, see copywriting. For cold outreach emails, see cold-email."
 metadata:
   version: 1.1.0
 ---
@@ -341,17 +341,17 @@ If context is missing, ask:
 
 ## Tool Integrations
 
-For partner sales enablement, see the [tools registry](../../tools/REGISTRY.md):
+For partner sales enablement:
 
-| Tool | What It Does | Guide |
-|------|-------------|-------|
-| **Introw** | Partner engagement tracking, deal registration, mutual action plans | [introw.md](../../tools/integrations/introw.md) |
+| Tool | What It Does |
+|------|-------------|
+| **Introw** | Partner engagement tracking, deal registration, mutual action plans |
 
 ---
 
 ## Related Skills
 
-- **competitor-alternatives**: For public-facing comparison and alternative pages
+- **competitive-battlecard**: For public-facing comparison and alternative pages
 - **copywriting**: For marketing website copy
 - **cold-email**: For outbound prospecting emails
 - **revops**: For lead lifecycle, scoring, routing, and pipeline management

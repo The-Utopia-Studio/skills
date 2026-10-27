@@ -6,7 +6,6 @@ intent: >-
 type: component
 ---
 
-
 ## Purpose
 Conduct a systematic analysis of macro-environmental factors—Political, Economic, Social, Technological, Environmental, and Legal—that could impact your product or project. Use this to identify external opportunities and threats, inform strategic planning, assess market entry risks, and make data-driven decisions about product direction in the context of broader forces beyond your control.
 
@@ -50,6 +49,8 @@ Originating from Francis Joseph Aguilar's 1967 PEST analysis, PESTEL extends the
 ---
 
 ## Application
+
+Examples below illustrate categories, not verified current facts or universal legal rules. Verify each legal, tax and regulatory claim against the primary official authority for the specific jurisdiction, activity and date. Cite the source and distinguish applicability questions from confirmed obligations. Do not copy illustrative rates or deadlines into an analysis.
 
 Use `template.md` for the full fill-in structure.
 
@@ -95,7 +96,7 @@ Examine government and regulatory influences:
 
 ### Taxation Policy
 - [Analyze taxation policies and implications]
-- [Example: "Digital services tax in EU (3% on revenue) could impact pricing strategy"]
+- [Example: "Determine whether a digital services tax applies in each target jurisdiction, including thresholds and rates, using that jurisdiction’s official authority"]
 ```
 
 **Quality checks:**
@@ -233,7 +234,7 @@ Examine legal and compliance landscape:
 
 ### Compliance Requirements
 - [Identify legal/compliance requirements]
-- [Example: "GDPR compliance required for EU customers; must implement data residency, right-to-be-forgotten, consent management"]
+- [Example: "Verify privacy-law applicability, lawful bases, rights and international-transfer requirements against official guidance; do not assume blanket data residency or consent requirements"]
 
 ### Intellectual Property Rights
 - [Evaluate IP importance and protection]
@@ -310,7 +311,7 @@ Mini example excerpt:
 
 **Consequence:** No actionable insights.
 
-**Fix:** Be specific: "EU AI Act requires explainable AI → Need transparency features by Q3 2026."
+**Fix:** Be specific: "Verify whether the relevant AI-system category has applicable transparency duties and deadlines in official EU guidance before scheduling work."
 
 ---
 
@@ -353,24 +354,14 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/recommendation-canvas/SKILL.md` — PESTEL factors inform risk assessment in canvas
-- `skills/positioning-statement/SKILL.md` — PESTEL insights shape competitive positioning
-- `skills/problem-statement/SKILL.md` — Social/economic factors influence customer problems
+- `recommendation-canvas` — PESTEL factors inform risk assessment in canvas
+- `positioning-workshop` — PESTEL insights shape competitive positioning
+- `problem-statement` — Social/economic factors influence customer problems
 
 ### External Frameworks
 - Francis Joseph Aguilar, *Scanning the Business Environment* (1967) — Origin of PEST analysis
 - PESTEL (extension of PEST to include Environmental and Legal)
 - Michael Porter, *Competitive Strategy* (1980) — Complements PESTEL with industry-level analysis
 
-### Dean's Work
-- PESTEL Analysis Prompt Template (adapted from Aguilar's framework)
-
 ### Provenance
-- Adapted from `prompts/pestel-analysis-prompt-template.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `pestel-analysis.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/recommendation-canvas/SKILL.md`, `skills/positioning-statement/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

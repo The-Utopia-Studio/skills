@@ -1,8 +1,17 @@
 ---
 name: continuous-discovery-engine
-description: Stands up ONE living opportunity tree fed by three live inputs and keeps it current after launch. Fires when a fellow says "set up discovery", "continuous discovery", "opportunity tree", "keep learning after launch", or "discovery after launch". Returns an opportunity tree (outcome → opportunities → solutions → tests) wired to customer interviews, production traces, and eval telemetry — each feed stamped with its evidence rung, its cadence, and a named synthesis owner. NOT for scoring one signal's rung (use evidence-ladder), picking which probe tests one question (use probe-matrix), or running a single customer interview (use tacit-knowledge-interview).
+description: >-
+  Builds an opportunity solution tree (outcome, opportunities, solutions, tests) and keeps it alive:
+  one living tree fed by customer interviews, production traces and eval telemetry, each feed stamped
+  with its evidence rung, cadence and a named synthesis owner, with solutions ranked by an
+  evidence-weighted POC score. Also turns a one-off stakeholder request into a first tree and
+  proof-of-concept pick. Fires on 'set up discovery', 'continuous discovery', 'opportunity solution
+  tree', 'keep learning after launch', 'a stakeholder wants feature X, what should we actually build'.
+  Not for scoring one signal's rung (use evidence-ladder), picking the probe for one question (use
+  probe-matrix), running a single interview (use tacit-knowledge-interview), or a one-time end-to-end
+  discovery cycle for a new problem (use discovery-process).
 type: interactive
-supersedes: skills/discovery/opportunity-solution-tree
+supersedes: none
 ---
 
 ## What it does
@@ -15,7 +24,7 @@ The generic Opportunity Solution Tree is a poster — drawn once, pinned up, sta
 
 ## When to use / When NOT
 
-Use it when you have a scoped product (shipped, in pilot, or about to ship) and you want discovery to keep running, not end. Use it to stand up the tree, wire the feeds, name the synthesis owner, and set the cadence.
+Use it when you have a scoped product (shipped, in pilot, or about to ship) and you want discovery to keep running, not end. Use it to stand up the tree, wire the feeds, name the synthesis owner, and set the cadence. It also handles the one-off case — a stakeholder request ("sales wants a dashboard") that needs an opportunity solution tree before anyone decides what to build: run Steps 1, 4 and 5 to draw the first tree and pick the proof-of-concept, then wire the feeds (Steps 2-3, 6) as soon as there is anything live to observe.
 
 Do not use it for:
 
@@ -25,7 +34,6 @@ Do not use it for:
 | To pick the cheapest honest test for one question | `probe-matrix` | That routes one question to one probe; this decides which node needs a probe, then hands off to it. |
 | To run or prep a single customer interview | `tacit-knowledge-interview` | That is one interview; this consumes interview output as one of three feeds. |
 | A first-contact teardown of a raw, unscoped idea | `concept-council` | That runs before any product exists; this runs on a scoped or shipped one. |
-| The old static outcome→opportunity→solution→experiment drawing | (this skill supersedes it) | `opportunity-solution-tree` draws once; this keeps it alive. Route here. |
 
 ## Method
 
@@ -40,6 +48,8 @@ One measurable metric, with a current baseline and a target. Not "improve UX." I
 | Outcome metric | [e.g. renewal rate, unplanned-incident count, task-success rate] |
 | Baseline (today) | [number + [Fact]/[Assumption]] |
 | Target | [number + by when] |
+
+If the fellow arrives with a stakeholder request instead of a metric, extract the outcome behind it first. Offer the four usual families as numbered options — **revenue growth** (ARR, expansion, new streams), **retention** (churn, activation, engagement), **acquisition** (sign-ups, trial conversion), **efficiency** (support cost, time-to-value) — and push for a measurable form ("trial-to-paid from 15% to 25%"). Record why it matters, in the requester's words.
 
 ### Step 2 — Inventory the feeds (be honest about what is dark)
 
@@ -112,6 +122,9 @@ Every node's strength equals the highest rung of signal supporting it: money 1.0
 
 ## Gotchas
 
+- **Opportunities disguised as solutions.** "Build a dashboard" is a solution; "managers can't see which deals are stalling" is the opportunity. Rewrite every opportunity as a customer problem before hanging solutions under it.
+- **Skipping divergence.** Generate at least three opportunities, and three solutions under the chosen one, before scoring; one opportunity with one solution is a feature request in a tree costume.
+- **Exploring forever.** Pick the top weighted-POC solution, hand its test to `probe-matrix`, and move; the cadence brings you back.
 - **Poster relapse.** Drawing the tree and never wiring a feed returns the old OST under a new name. If no feed is live and none is scheduled to go live, you have not run this skill — you have drawn a picture. Name it.
 - **Machine-decides drift.** Letting an LLM auto-edit the tree from traces removes the human judgment that makes synthesis worth anything. The machine surfaces candidates; a named person decides. If nobody's name is on synthesis, the tree rots into noise.
 - **Trace worship.** One production trace is not a finding — a spike can be a single power user. Score the trace at behaviour 0.7 but weight it by how many distinct users produced it. A 0.7 signal from one user is weaker than a 0.3 pattern across forty.
@@ -125,7 +138,7 @@ See `examples/sample.md` for a full run on a post-launch Azraq data-centre risk 
 
 ## Related skills
 
-- **Supersedes `opportunity-solution-tree`** and beats it head-to-head: that skill produces a static outcome→opportunity→solution→experiment drawing you make once. This one wires the same tree to three live inputs, stamps every node with provenance and an evidence rung, names a human synthesis owner, and runs on a cadence — so shipping makes discovery cheaper rather than declaring it finished. The three-live-input loop, the human-owned synthesis, and the launch-lowers-cost inversion are why it wins; the old skill has none of them.
+- Replaces the static continuous-discovery-engine drawing (Teresa Torres, *Continuous Discovery Habits*) and beats it head-to-head: a static tree is an outcome→opportunity→solution→experiment drawing you make once. This one wires the same tree to three live inputs, stamps every node with provenance and an evidence rung, names a human synthesis owner, and runs on a cadence — so shipping makes discovery cheaper rather than declaring it finished. The three-live-input loop, the human-owned synthesis, and the launch-lowers-cost inversion are why it wins; the static drawing has none of them.
 - Consumes `tacit-knowledge-interview` output as feed 1 and `evidence-ladder` as the scoring spine for every node and the POC weight.
 - Hands each leaf test to `probe-matrix`, which routes it to the cheapest honest probe; the probe result flows back as a signal on the next cadence.
 - Runs after `concept-council`, `problem-statement`, and `beachhead-segment` have scoped the product — this keeps discovery running once there is something to ship.

@@ -94,7 +94,7 @@ Run it. Check:
 
 ## Step 7 — Self-evaluation (5 min)
 
-Log the deck to MEMORY.md:
+Propose these MEMORY.md entries in your final message (do not edit the file):
 - Time-to-deliver
 - Audience
 - Notable choices (e.g., "expanded moat slide to two pages")

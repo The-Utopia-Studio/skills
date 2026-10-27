@@ -1,0 +1,56 @@
+[
+  {
+    "case": "client.ts",
+    "check": "metadata-only grep emits path and no dummy credential",
+    "passed": true
+  },
+  {
+    "case": "settings.py",
+    "check": "metadata-only grep emits path and no dummy credential",
+    "passed": true
+  },
+  {
+    "case": ".env.local",
+    "check": "metadata-only grep emits path and no dummy credential",
+    "passed": true
+  },
+  {
+    "case": "json-payload",
+    "input_title": "Normal fix",
+    "actual_payload": "{\"text\": \"pull_request: Normal fix\"}",
+    "passed": true
+  },
+  {
+    "case": "json-payload",
+    "input_title": "Title with \"quotes\" and\nnewline",
+    "actual_payload": "{\"text\": \"pull_request: Title with \\\"quotes\\\" and\\nnewline\"}",
+    "passed": true
+  },
+  {
+    "case": "json-payload",
+    "input_title": "$(touch should-not-exist); `echo nope`",
+    "actual_payload": "{\"text\": \"pull_request: $(touch should-not-exist); `echo nope`\"}",
+    "passed": true
+  },
+  {
+    "case": "pr-condition",
+    "action": "opened",
+    "merged": false,
+    "notifies": true,
+    "passed": true
+  },
+  {
+    "case": "pr-condition",
+    "action": "closed",
+    "merged": true,
+    "notifies": true,
+    "passed": true
+  },
+  {
+    "case": "pr-condition",
+    "action": "closed",
+    "merged": false,
+    "notifies": false,
+    "passed": true
+  }
+]

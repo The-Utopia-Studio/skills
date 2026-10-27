@@ -1,6 +1,14 @@
 ---
 name: competitive-analysis
-description: Framework for building competitive landscape decks — market positioning, competitor deep-dives, comparative analysis, strategic synthesis. Use when the user asks for a competitive landscape, competitor analysis, peer comparison, market positioning assessment, strategic review, or investment memo deck. Also triggers on "who are the competitors to X", "benchmark X against peers", "build a market map", or any request to systematically evaluate competitive dynamics across an industry.
+description: >-
+  Framework for building competitive landscape decks — market positioning, competitor
+  deep-dives, comparative analysis, moat assessment and strategic synthesis, with
+  bull/base/bear scenarios for investment contexts. Use when the user asks for a competitive
+  landscape, competitor analysis, peer comparison, market map, market positioning assessment
+  or strategic review of an industry, or says "who are the competitors to X" or "benchmark X
+  against peers". Not for a sales battlecard against one competitor (use
+  competitive-battlecard), a valuation-multiples comps table (use comps-analysis), or a
+  single-company profile (use tear-sheet).
 ---
 
 # Competitive Landscape Mapping
@@ -18,7 +26,7 @@ Everything below applies in both.
 
 ## Phase 1 — Scope the analysis
 
-Competitive analysis means different things to different people. Before any research or slide-building, use `ask_user_question` to pin down what they actually want. Don't guess — a 20-slide peer benchmarking deck and a 5-slide market map are both "competitive analysis" and take completely different shapes.
+Competitive analysis means different things to different people. Before any research or slide-building, use `AskUserQuestion` to pin down what they actually want. Don't guess — a 20-slide peer benchmarking deck and a 5-slide market map are both "competitive analysis" and take completely different shapes.
 
 Gather in one round if you can (the tool takes up to 4 questions):
 
@@ -33,7 +41,7 @@ If they've uploaded an Excel/CSV with competitor data, confirm which columns map
 
 **Do not create slides until the outline is approved.** Propose slide titles and one-line content notes, present them to the user, get a yes. A competitive deck is 10-20 slides of interlocking content — rebuilding because slide 4 was wrong is expensive. The outline is the cheap iteration point.
 
-When proposing the outline, `ask_user_question` works well for the structural decisions: which positioning visualization (2×2 matrix / radar / tier diagram — Step 5 below), how to group competitors (by business model / segment / posture — Step 4). These are taste calls the user likely has an opinion on.
+When proposing the outline, `AskUserQuestion` works well for the structural decisions: which positioning visualization (2×2 matrix / radar / tier diagram — Step 5 below), how to group competitors (by business model / segment / posture — Step 4). These are taste calls the user likely has an opinion on.
 
 ---
 
@@ -162,7 +170,7 @@ Multi-segment companies add a breakdown:
 
 ### Step 4 — Competitor mapping
 
-Group by whichever lens fits (this is a good `ask_user_question` decision if the user hasn't specified):
+Group by whichever lens fits (this is a good `AskUserQuestion` decision if the user hasn't specified):
 - By business model — platform / vertical / horizontal
 - By segment — enterprise / SMB / consumer
 - By posture — direct / adjacent / emerging

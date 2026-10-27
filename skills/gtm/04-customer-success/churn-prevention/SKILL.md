@@ -1,6 +1,15 @@
 ---
 name: churn-prevention
-description: "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see email-sequence. For in-app upgrade paywalls, see paywall-upgrade-cro."
+description: >-
+  Use this skill to stop subscribers from cancelling at the moment they try to
+  leave: cancel-flow design, exit surveys, save offers, pause options, and
+  failed-payment recovery (dunning, smart retries, card updaters). Use when the
+  user mentions cancel flow, offboarding, save offer, dunning, failed payments,
+  involuntary churn, pause subscription, "people keep canceling" or "churn rate
+  is too high". Not for proactive lifecycle or loyalty programs to lift repeat
+  purchase and LTV, renewals, at-risk enterprise accounts and escalations, or
+  retention dashboards (use expansion-retention), post-cancel email copy (use
+  email-sequence), or in-app activation (use onboarding-cro).
 metadata:
   version: 1.1.0
 ---
@@ -252,7 +261,7 @@ Health Score = (
 | Trigger | Intervention |
 |---------|-------------|
 | Usage drop >50% for 2 weeks | "We noticed you haven't used [feature]. Need help?" email |
-| Approaching plan limit | Upgrade nudge (not a wall — paywall-upgrade-cro handles this) |
+| Approaching plan limit | Upgrade nudge (not a wall) |
 | No login for 14 days | Re-engagement email with recent product updates |
 | NPS detractor (0-6) | Personal follow-up within 24 hours |
 | Support ticket unresolved >48h | Escalation + proactive status update |
@@ -360,7 +369,7 @@ Test one variable at a time:
 | Offer presentation (modal vs full page) | Full page gets more attention | Save rate |
 | Copy tone (empathetic vs direct) | Empathetic reduces friction | Save rate |
 
-**How to run cancel flow experiments:** Use the **ab-test-setup** skill to design statistically rigorous tests. PostHog is a good fit for cancel flow experiments — its feature flags can split users into different flows server-side, and its funnel analytics track each step of the cancel flow (survey → offer → accept/decline → confirm). See the [PostHog integration guide](../../tools/integrations/posthog.md) for setup.
+**How to run cancel flow experiments:** Use the **ab-test-analysis** skill (product pack) to design statistically rigorous tests. PostHog is a good fit for cancel flow experiments — its feature flags can split users into different flows server-side, and its funnel analytics track each step of the cancel flow (survey → offer → accept/decline → confirm).
 
 ---
 
@@ -381,8 +390,6 @@ Test one variable at a time:
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md).
-
 ### Retention Platforms
 
 | Tool | Best For | Key Feature |
@@ -402,10 +409,7 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md).
 | **Recurly** | Built-in | Built-in | Built-in |
 | **Braintree** | Manual config | Manual | Via gateway |
 
-### Related CLI Tools
-
-| Tool | Use For |
-|------|---------|
+------|---------|
 | `stripe` | Subscription management, dunning config, payment retries |
 | `customer-io` | Dunning email sequences, retention campaigns |
 | `posthog` | Cancel flow A/B tests via feature flags, funnel analytics |
@@ -417,8 +421,7 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md).
 ## Related Skills
 
 - **email-sequence**: For win-back email sequences after cancellation
-- **paywall-upgrade-cro**: For in-app upgrade moments and trial expiration
 - **pricing-strategy**: For plan structure and annual discount strategy
 - **onboarding-cro**: For activation to prevent early churn
 - **analytics-tracking**: For setting up churn signal events
-- **ab-test-setup**: For testing cancel flow variations with statistical rigor
+- **ab-test-analysis**: For testing cancel flow variations with statistical rigor

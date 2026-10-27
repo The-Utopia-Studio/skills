@@ -1,0 +1,79 @@
+{
+  "method": "One Codex reviewer produces actual short task outputs for three different inputs; these are coverage counterexamples, not independent stochastic replications.",
+  "fixtures": [
+    {
+      "id": "stakeholders-migration",
+      "input": "CFO controls budget but wants quarterly updates; engineers own migration and meet daily. Map engagement for database migration.",
+      "actual_output": {
+        "skill": "stakeholder-map",
+        "rows": [
+          {
+            "who": "CFO",
+            "power": "high",
+            "interest": "low",
+            "strategy": "keep satisfied",
+            "frequency": "quarterly",
+            "channel": "budget summary"
+          },
+          {
+            "who": "Engineering lead",
+            "power": "high",
+            "interest": "high",
+            "strategy": "manage closely",
+            "frequency": "daily",
+            "channel": "migration stand-up"
+          }
+        ]
+      },
+      "substitution_check": "Role-switch synthesizes competing interests but does not by itself promise required power-interest communications table; retain both."
+    },
+    {
+      "id": "stakeholders-build-buy",
+      "input": "Engineering wants control, Finance wants lower TCO, Product needs launch in four weeks. Resolve build versus buy without inventing costs.",
+      "actual_output": {
+        "skill": "role-switch",
+        "interests": {
+          "Engineering": "Control and maintainability",
+          "Finance": "Lifecycle cost confidence",
+          "Product": "Four-week launch"
+        },
+        "resolution": "Time-box a vendor feasibility pilot with explicit export and integration checks; retain build option if core requirements fail. Compare measured TCO before final commitment.",
+        "unknowns": [
+          "Vendor integration time",
+          "Build cost",
+          "Export capability"
+        ]
+      },
+      "substitution_check": "Power-interest map cannot supply interest-level compromise or reveal missing decision evidence; retain both."
+    },
+    {
+      "id": "stakeholders-launch",
+      "input": "Legal can veto a release and is deeply involved; customers cannot veto but need weekly updates; CEO wants only material risks. Prepare engagement and address Legal versus Sales timing conflict.",
+      "actual_output": {
+        "skills": [
+          "stakeholder-map",
+          "role-switch"
+        ],
+        "engagement": [
+          {
+            "who": "Legal",
+            "strategy": "manage closely",
+            "cadence": "pre-release review"
+          },
+          {
+            "who": "Customers",
+            "strategy": "keep informed",
+            "cadence": "weekly"
+          },
+          {
+            "who": "CEO",
+            "strategy": "keep satisfied",
+            "cadence": "material risk escalation"
+          }
+        ],
+        "resolution": "Ask Legal for specific release-blocking conditions; stage Sales commitments around verified clearance, not assumed approval."
+      },
+      "substitution_check": "Mixed request uses complementary outputs, not duplicate passes. Merge not supported."
+    }
+  ]
+}

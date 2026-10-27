@@ -1,6 +1,16 @@
 ---
 name: diagram-design
-description: Create technical and product diagrams — architecture, flowchart, sequence, state machine, ER / data model, timeline, swimlane, quadrant, nested, tree, layer stack, venn, pyramid — as standalone HTML files with inline SVG. Ships with a neutral editorial skin and a first-run gate that prompts users to customize the style guide (colors, fonts) from their own website before generating. Includes annotation-callout primitive and optional sketchy variant.
+description: >-
+  Create technical and product diagrams as standalone HTML files with inline SVG:
+  system / cloud / infrastructure / security architecture, flowchart, sequence,
+  state machine, ER / data model, timeline, swimlane, quadrant, nested, tree,
+  layer stack, venn, pyramid. Ships an editorial light skin, dark variants, a
+  dark technical skin for cloud and infrastructure diagrams, a brand
+  style-guide onboarding gate, annotation callouts and an optional sketchy look.
+  Use when the user asks for an architecture diagram, infra or network topology
+  diagram, flowchart, sequence or ER diagram, or any diagram as HTML/SVG. Not
+  for data charts or metric dashboards or for deciding what the AI system
+  architecture should be (use compound-system-architecture).
 license: MIT
 metadata:
   version: "1.0"
@@ -18,7 +28,9 @@ Thirteen diagram types. One shared design system, complexity budget, and taste g
 
 **Before generating your first diagram in a new project, verify the style guide has been customized.**
 
-Open [`references/style-guide.md`](references/style-guide.md) and check the default tokens. If they're still the shipped defaults (paper `#faf7f2`, ink `#1c1917`, accent `#b5523a` rust), **pause and ask the user**:
+Use the project's own style guide if one exists at `.diagram-design/style-guide.md` in the project root. Otherwise read the shipped default [`references/style-guide.md`](references/style-guide.md). **Never edit the shipped file:** write customised tokens to `.diagram-design/style-guide.md` in the project instead. Wherever this skill or [`references/onboarding.md`](references/onboarding.md) says "write `style-guide.md`", it means that project copy.
+
+Check the default tokens. If they're still the shipped defaults (paper `#faf7f2`, ink `#1c1917`, accent `#b5523a` rust), **pause and ask the user**:
 
 > *"This is your first diagram in this project. The style guide is still at the default (neutral stone + rust). Do you want to customize it to match your brand first? Options: (a) run onboarding — I'll pull colors and fonts from your website, (b) paste your tokens manually, (c) proceed with the default for now."*
 
@@ -27,7 +39,7 @@ Then branch:
 - **(b)** → accept the user's tokens and write them into `style-guide.md` under a new "Custom tokens" section.
 - **(c)** → proceed; optionally remind the user they can run onboarding later.
 
-**Once the style guide has been customized** (or the user explicitly opted for default), skip this gate on subsequent runs. A simple way to detect customization: if the `accent` value in `style-guide.md` differs from `#b5523a`, assume custom.
+**Once the style guide has been customized** (or the user explicitly opted for default), skip this gate on subsequent runs. A simple way to detect customization: `.diagram-design/style-guide.md` exists in the project, or its `accent` differs from `#b5523a`.
 
 Don't silently ship default-skinned diagrams into a branded project — that's the failure mode this gate exists to prevent.
 
@@ -367,6 +379,8 @@ Every diagram ships in three variants (see `assets/`):
 | **Minimal light** (default) | `template.html`, `example-<type>.html` | Screenshot-ready. Diagram + title. Warm paper. |
 | **Minimal dark** | `template-dark.html`, `example-<type>-dark.html` | Dark mode sites, slides, high-contrast posts. |
 | **Full editorial** | `template-full.html`, `example-<type>-full.html` | Long-form posts where the diagram is the hero. |
+
+**Dark technical skin** (cloud / infra / security architecture): use `assets/template-dark-technical.html` and follow [skin-dark-technical.md](references/skin-dark-technical.md). It uses a slate-950 grid background, colour-coded component types, dashed security groups and region boundaries, message-bus connectors, a legend outside all boundaries, and three summary cards.
 
 **Sketchy variant** (optional, applied to any of the above) — see [primitive-sketchy.md](references/primitive-sketchy.md). SVG turbulence filter wobbles strokes for a hand-drawn feel. Good for essays, not for technical docs.
 

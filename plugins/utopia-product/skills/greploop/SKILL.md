@@ -1,10 +1,12 @@
 ---
 name: greploop
-description: >
-  Iteratively improves a PR (GitHub) or MR (GitLab) until Greptile gives it a 5/5 confidence
-  score with zero unresolved comments. Triggers Greptile review, fixes all actionable comments,
-  pushes, re-triggers review, and repeats. Use when the user wants to fully optimize a PR/MR
-  against Greptile's code review standards.
+description: >-
+  Loop on a pull request until Greptile gives it 5/5 confidence with zero
+  unresolved comments: trigger a Greptile review, fix every actionable comment,
+  push, re-trigger and repeat (GitHub or GitLab). Use whenever the user mentions
+  Greptile, a Greptile confidence score, or wants Greptile's review comments
+  fixed until it passes. Not for general CI babysitting or human reviewer
+  feedback on a PR.
 license: MIT
 compatibility: Requires git, gh (GitHub CLI) or glab (GitLab CLI) authenticated, and Greptile installed on the repo.
 metadata:

@@ -1,6 +1,6 @@
 # Technical DD — Formatting Guide
 
-This document specifies the .docx formatting standards for Technical DD reports. Read the docx skill (`/mnt/skills/public/docx/SKILL.md`) for implementation details.
+This document specifies the .docx formatting standards for Technical DD reports. Read the installed `docx` skill for implementation details.
 
 ---
 

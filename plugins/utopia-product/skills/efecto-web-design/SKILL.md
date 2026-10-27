@@ -1,6 +1,13 @@
 ---
 name: efecto-web-design
-description: Design web pages and app UIs with Efecto — create sessions, build layouts with JSX and Tailwind CSS, manage artboards, and push real-time design changes via MCP tools. Use when asked to "design a page", "build a landing page", "create a website", "design a dashboard", "make a UI", or any visual design task. Requires Efecto MCP server.
+description: >-
+  Design web pages and app UIs live in the Efecto design tool through the Efecto
+  MCP server: create sessions, build layouts with JSX and Tailwind, manage
+  artboards and push real-time changes the user watches in their browser. Use
+  only when the user mentions Efecto or the Efecto MCP tools (create_session,
+  add_section, get_document) are available. Not for building UI code in the
+  user's repo (use impeccable) or graphic assets like posters and decks (use
+  efecto-graphic-design).
 metadata:
   mcp-server: efecto
   author: pablostanley
@@ -13,6 +20,11 @@ metadata:
 Efecto is a real-time web design tool that AI agents control programmatically. You create a **session**, the user opens a URL in their browser, and you push design commands that render instantly. Every node maps to a real HTML element styled with Tailwind CSS — web-native, semantic, and pixel-accurate.
 
 ---
+
+## Content accuracy
+
+Use user-provided or verified content for real deliverables. Templates below are fictional layout examples, not evidence: replace sample metrics, certifications, testimonials, customer logos, dates, venues and prices with supported content or clearly labeled placeholders. Never invent a person's employment, achievements, qualifications, or endorsements. Keep fictional mockup content visibly labeled as fictional and separate from production content.
+
 
 ## Setup
 

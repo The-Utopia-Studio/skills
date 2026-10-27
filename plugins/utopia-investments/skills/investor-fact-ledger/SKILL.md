@@ -59,6 +59,8 @@ node scripts/fact-check.mjs            # report drift
 node scripts/fact-check.mjs --check    # same, exit 1 (wire into CI and the build)
 ```
 
+The ledger must declare at least one surface and one fact, with nonempty value forms and target surfaces. Invalid ledgers exit 2; drift exits 1 with `--check`. Only literal paths, `dir/*.ext` and `dir/*/name.ext` scan patterns are supported; recursive globs are rejected.
+
 Wire `--check` into the build, not a pre-commit hook. You want it to fail the thing that publishes, and you want to be able to commit a half-finished edit.
 
 ## The discipline
@@ -83,7 +85,7 @@ Never edit a document first. The ledger is the source of truth or it is decorati
 
 - **Rounding is the commonest false negative.** The model says 38.47%, the deck says 38.5%, the memo says "about 38%". All three are fine; they are three `value` forms of one fact. Add them all, or the checker trains people to ignore it.
 - **Currency and thousands separators.** `$1.4M`, `$1,400,000`, `USD 1.4m` are different strings. List the forms you actually use.
-- **A retired value that is a substring.** Retiring `$2M` will match `$28M` and `$2M` alike. Retire the longest unambiguous form, or include the surrounding characters.
+- **A retired value that is a substring.** Retiring `20` also matches `2026`; `$2M` does not match `$28M`. Matching is literal text, not numeric interpretation. Retire the longest unambiguous form, or include the surrounding characters.
 - **`unless` is not a blanket exemption.** It excuses the value only where it follows that phrase. If you find yourself wanting a blanket exemption, the value is not really retired — reword the document instead.
 - **Dates drift silently and are not in the ledger by default.** "As of Q3 2026" in six documents will be wrong in January. Add the as-of phrasing as a fact.
 - **Do not put the ledger in the published directory.** It contains your retired numbers and your source-file names. Keep it in source, publish the rendered documents.

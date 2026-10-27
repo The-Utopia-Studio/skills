@@ -1,15 +1,14 @@
 ---
 name: compound-system-architecture
 description: >-
-  Fires when a fellow is ready to design how the AI product is actually built —
-  "architect the product", "how do we build the AI system", "design the AI system",
-  "what's the system architecture", "what does the stack look like". Returns a
-  compound-system architecture (input → router → retrieve/reason/act → validate &
-  guardrails → output over a data layer), a 40/20/30/10 effort-allocation plan, and
-  named model-swap points, then kills any monolithic one-big-prompt design. Do NOT
-  fire to write the pass/fail scope (use eval-first-spec), to render the HTML/SVG
-  picture (use design/architecture-diagram), or to argue defensibility (use
-  moat-design-canvas).
+  Design how an AI product is actually built as a compound system: input ->
+  router -> retrieve / reason / act -> validate and guardrails -> output over a
+  data layer, a Data 40 / Model 20 / Orchestration 30 / Interface 10 effort
+  split, and named model-swap points, and kill one-big-prompt designs. Use when
+  the user or a fellow asks how to architect or build an AI product, copilot or
+  assistant, what the system or stack should look like, or plans to dump data
+  into one big prompt. Not for the pass/fail spec (use eval-first-spec), drawing
+  the diagram (use diagram-design), or one agent's internals (use agent-design).
 type: generator
 supersedes: none
 ---
@@ -44,7 +43,7 @@ exists and needs to be decomposed into components with swap points.
 | Not this skill | Use instead | Why |
 |---|---|---|
 | "Write the pass/fail spec — golden cases, failure rate, cost budget" | `eval-first-spec` | That defines the scoreable contract for the build; this lays out the components and effort split. The two compose: the swap-point evals here ARE that skill's golden cases. |
-| "Draw me the diagram / give me the HTML architecture picture" | `design/architecture-diagram` | That renders the dark-themed HTML/SVG. This decides the components and allocation; route the picture there once the pipeline is filled. |
+| "Draw me the diagram / give me the HTML architecture picture" | `diagram-design` | That renders the dark-themed HTML/SVG. This decides the components and allocation; route the picture there once the pipeline is filled. |
 | "Is this defensible / where's the moat" | `moat-design-canvas` | That sequences the moat gates. The data layer here feeds the moat, but this skill is a build plan, not a defensibility argument. |
 | "Structure the pilot deal / price it" | `pilot-six-term-sheet` | That is the commercial term sheet. This is the technical architecture. |
 
@@ -162,7 +161,7 @@ shift tool as the 10%, with three named swap points each gated by golden cases.
 - `eval-first-spec` — the scoreable contract for this build. Run it alongside; its golden
   cases are the evals that gate every swap point named here. Architecture without a spec
   is untestable; a spec without an architecture has nothing to test.
-- `design/architecture-diagram` — renders the filled pipeline as a dark-themed HTML/SVG
+- `diagram-design` — renders the filled pipeline as a dark-themed HTML/SVG
   diagram. This skill decides the components; that one draws them. Do not restate its
   design system here.
 - `yoda-data-sourcing` — how to find the workflow exhaust that becomes the data layer.

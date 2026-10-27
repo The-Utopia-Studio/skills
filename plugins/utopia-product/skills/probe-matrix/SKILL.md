@@ -1,21 +1,18 @@
 ---
 name: probe-matrix
 description: >-
-  Routes the ONE question a fellow needs answered to the cheapest probe that is
-  HONEST about that question, using the probe honesty contract (paper/sketch,
-  Wizard-of-Oz, concierge, agent-concierge — each honest about some things and
-  lying about others). Fires on "how do I test this cheaply", "which experiment",
-  "what's the cheapest way to learn X", "which probe", "how do I validate this".
-  Output is a probe selection + plan: the question, the chosen probe, why it is
-  honest about this question, what it will still lie about, cost, and a
-  pre-registered pass/fail read-out — and it REFUSES a probe that lies about the
-  very thing being tested, naming the honest one instead. NOT the how-to for
-  running a probe (use the runbooks paper-sketch-probe / wizard-of-oz-probe /
-  concierge-probe / agent-concierge-probe), NOT the build/no-build gate on the
-  problem itself (problem-quality-scorecard), NOT how to score a signal you
-  already hold (evidence-ladder).
+  Design the cheapest honest experiment to validate an idea before building. Use when the user asks
+  how to test or validate an idea cheaply, to design lean startup experiments, pretotypes, a fake
+  door, landing page, concierge or Wizard of Oz test, for an XYZ hypothesis, or which experiment or
+  probe to run. Picks one question, writes it as an XYZ hypothesis ('at least X% of Y will Z'), routes
+  it to the cheapest probe that is HONEST about it (paper sketch, Wizard-of-Oz, concierge,
+  agent-concierge, or a fake-door pretotype for raw demand), states what that probe still lies about,
+  its cost, and a pre-registered pass/fail; it refuses a probe that lies about the thing being tested.
+  Not for the how-to of running one probe (use paper-sketch-probe, wizard-of-oz-probe, concierge-probe
+  or agent-concierge-probe), building a clickable mock (use first-mocks), or scoring a signal already
+  in hand (use evidence-ladder).
 type: interactive
-supersedes: skills/discovery/prototyping-pretotyping
+supersedes: none
 ---
 
 ## What it does
@@ -58,6 +55,7 @@ Do not use it for these — hand off instead:
 | To score a signal already in hand (an interview quote, a click, a payment) | `evidence-ladder` |
 | To reframe a solution-in-disguise back into a problem | `problem-statement`, then return here |
 | Every risky assumption mapped across value / GTM / strategy / team | `identify-assumptions-new` |
+| A clickable mock or Crazy 8s artefact to provoke a reaction | `first-mocks` |
 
 This skill selects the probe and pre-registers the read-out. It does not run the
 probe, does not gate the problem, and does not score signals you already have.
@@ -112,13 +110,25 @@ Do not fake it with a probe that will lie. Name the smallest real build track
 instead, or narrow the question to a sub-part a probe *can* answer honestly (e.g.
 per-task cost via agent-concierge).
 
+For target B on a brand-new product where the only question is raw click-demand
+for a promise (not trust, not use), a fake-door / landing page / waitlist / pre-order
+pretotype is an acceptable cheap read: a pre-order or deposit is skin-in-the-game
+(money, 1.0); a sign-up or click is behaviour toward a promise but tops out below
+use (treat as 0.5). It lies about use, trust, feasibility and cost — say so.
+
 **Step 4 — Kill check.** If the fellow already named a probe, look it up in the
 "lies about" column for their target. If it lies about the target, KILL it: name
 exactly what it lies about, name the rung the question needs vs the rung that
 probe tops out at, and reroute to the cheapest honest probe. This is the kill line —
 recommending or endorsing a probe that lies about the thing being tested is a fail.
 
-**Step 5 — Pre-register the pass/fail read-out.** Write the threshold before you
+**Step 5 — Pre-register the pass/fail read-out.** Write the claim as an XYZ
+hypothesis (Alberto Savoia, *The Right It*): "At least **X%** of **Y** [a specific
+target segment] will **Z** [a concrete behaviour]" — e.g. "at least 30% of the 10
+shift supervisors will act on the alert within 15 minutes on a live shift." X is the
+threshold, Y is who you recruit, Z must be behaviour or money, never stated interest.
+Use your own data (YODA), not others' market reports, to set and judge X.
+Then write the threshold before you
 run, and state which evidence rung a pass moves the claim to. The read-out must land
 on behaviour or money. "Operators said they trust it" is verbal (0.3) and is not a
 valid trust read-out; "operators acted on the alert within N minutes, unprompted,
@@ -176,17 +186,16 @@ UX).
 
 ## Related skills
 
-Supersedes `prototyping-pretotyping`. That skill ranks probes on a fidelity ladder
-(L0 pretotype → L4 MVP) keyed to how much you build, and lists methods by
-assumption type — but it never says what a method *cannot honestly tell you*. It
-will happily point a paper prototype at demand or a landing page at a value prop,
-and its behaviour-over-opinion guardrail is a reminder, not a refusal. probe-matrix
-absorbs its useful bones — riskiest-assumption-first (Step 1), set-the-criteria-
-before-testing (Step 5), behaviour over opinion (throughout) — and beats it with the
-honesty contract and the kill line: it names what each probe lies about and refuses
-the dishonest one. On "test whether operators trust the alert," the old skill routes
-to a paper or clickable prototype (workflow fidelity) or a fake-door (demand), both
-of which lie about trust; this skill kills those and routes to concierge/field.
+This skill replaces the generic fidelity-ladder approach to experiments (L0
+pretotype → L4 MVP, keyed to how much you build, listing methods by assumption
+type), which never says what a method *cannot honestly tell you* and will happily
+point a paper prototype at demand or a landing page at a value prop. probe-matrix
+keeps its useful bones — riskiest-assumption-first (Step 1), set-the-criteria-
+before-testing (Step 5), behaviour over opinion (throughout), the XYZ hypothesis
+and the skin-in-the-game rule — and beats it with the honesty contract and the
+kill line. On "test whether operators trust the alert," the fidelity ladder routes
+to a paper or clickable prototype or a fake-door, all of which lie about trust;
+this skill kills those and routes to concierge/field.
 
 Composes with: `evidence-ladder` (defines the rungs this router matches against;
 run it to score the signal a probe returns), `problem-quality-scorecard` (gates the

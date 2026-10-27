@@ -1,0 +1,43 @@
+[
+  {
+    "input": {
+      "value": 100,
+      "total_bidders": 2,
+      "reserve": 0
+    },
+    "stdout": "{\"benchmark_bid\": 50.0, \"participate\": true, \"model\": \"symmetric risk-neutral independent uniform private values\"}\n",
+    "exit": 0,
+    "independent_integral_evaluation": 50.0,
+    "check": true
+  },
+  {
+    "input": {
+      "value": 100,
+      "total_bidders": 20,
+      "reserve": 0
+    },
+    "stdout": "{\"benchmark_bid\": 95.0, \"participate\": true, \"model\": \"symmetric risk-neutral independent uniform private values\"}\n",
+    "exit": 0,
+    "independent_integral_evaluation": 95.0,
+    "check": true
+  },
+  {
+    "input": {
+      "value": 100,
+      "total_bidders": 2,
+      "reserve": 80
+    },
+    "stdout": "{\"benchmark_bid\": 82.0, \"participate\": true, \"model\": \"symmetric risk-neutral independent uniform private values\"}\n",
+    "exit": 0,
+    "independent_integral_evaluation": 82.0,
+    "check": true
+  },
+  {
+    "input": {
+      "common_value_known_with_certainty": 100,
+      "total_bidders": 5
+    },
+    "actual_output": "The conditional value given winning remains 100 because the shared value is certain. Information-driven winner\u2019s-curse haircut is zero. This does not establish a bid of 80: the IID private-uniform formula is inapplicable to a known common value. Bid strategy still depends on auction mechanism, rival behavior and increments.",
+    "check": "No inference haircut is justified."
+  }
+]

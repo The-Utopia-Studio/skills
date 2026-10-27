@@ -12,13 +12,13 @@ Start with these queries. Break apart and follow up if results are incomplete.
 **Query 1 — Profile + identification:**
 "[Company] business description headquarters founded employees sector industry ownership structure major shareholders"
 → Header, Business Overview
-→ **Immediately write** to `/tmp/tear-sheet/company-profile.txt`
+→ **Immediately write** to `./tear-sheet-data/company-profile.txt`
 
 **Query 2 — Segments + financials:**
 "[Company] revenue by segment business unit last 2 fiscal years AND annual income statement revenue gross profit EBITDA operating income net income capex free cash flow total debt cash and equivalents last 4 fiscal years"
 → Segment Breakdown (need 2 years to compute YoY growth), Financial Summary (pull 4 years; display 3; use the earliest year only for YoY growth computation)
-→ **Immediately write** raw financials to `/tmp/tear-sheet/financials.csv`
-→ **Immediately write** segment data to `/tmp/tear-sheet/segments.csv` (skip if no segment data returned)
+→ **Immediately write** raw financials to `./tear-sheet-data/financials.csv`
+→ **Immediately write** segment data to `./tear-sheet-data/segments.csv` (skip if no segment data returned)
 
 **Query 3 — Valuation + comps:**
 If the user provided specific comparable companies, query each:
@@ -27,23 +27,23 @@ Otherwise:
 Use the competitors tool to identify 3-5 public peers, then pull EV/Revenue (NTM), EV/EBITDA (NTM), revenue growth %, and EBITDA margin % for each.
 Also: "[Company] enterprise value market capitalization EV/Revenue EV/EBITDA valuation multiples"
 → Header (EV/market cap), Trading Comps
-→ **Immediately write** company multiples to `/tmp/tear-sheet/valuation.csv`
-→ **Immediately write** peer data to `/tmp/tear-sheet/peer-comps.csv`
+→ **Immediately write** company multiples to `./tear-sheet-data/valuation.csv`
+→ **Immediately write** peer data to `./tear-sheet-data/peer-comps.csv`
 
 **Query 4 — M&A activity:**
 "[Company] acquisitions divestitures completed transactions last 5 years deal value"
 → Company's own deals
-→ **Immediately write** to `/tmp/tear-sheet/ma-activity.csv`
+→ **Immediately write** to `./tear-sheet-data/ma-activity.csv`
 
 **Query 5 — Comparable transactions (data permitting):**
 Use the specific industry from Query 1 results (e.g., "cloud observability software M&A transactions" not "technology M&A"). If the user specified comps, also try: "[comp company] acquisition deal multiples."
 → Comparable Transactions
-→ **Append** comparable transactions to `/tmp/tear-sheet/ma-activity.csv` (add `type=precedent` to distinguish from company's own deals)
+→ **Append** comparable transactions to `./tear-sheet-data/ma-activity.csv` (add `type=precedent` to distinguish from company's own deals)
 
 **Query 6 — Relationships + ownership:**
 "[Company] key customers suppliers partners business relationships institutional ownership insider ownership"
 → Business Relationships, Ownership (data permitting)
-→ **Immediately write** to `/tmp/tear-sheet/relationships.txt`
+→ **Immediately write** to `./tear-sheet-data/relationships.txt`
 
 ## Sections
 

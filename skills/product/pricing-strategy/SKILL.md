@@ -1,6 +1,15 @@
 ---
 name: pricing-strategy
-description: "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro."
+description: >-
+  Pricing and monetization strategy: brainstorm and compare 3-5 monetization strategies or revenue
+  models (freemium, subscription, usage, seat, marketplace, ads) with audience fit, risks and a
+  validation experiment each; design SaaS packaging, tiers, value metric and price points; research
+  willingness to pay (Van Westendorp, MaxDiff); plan price increases and pricing pages; and price
+  AI-native products (per resolution vs per conversation vs per seat vs credits, BYOK, AI margins).
+  Use when the user asks to brainstorm monetization strategies, how to monetize or make money from a
+  product, what to charge, pricing tiers, freemium or free trial, or AI pricing. Not for committing
+  one value-anchored price once value is measured (use value-based-pricing) or a paid pilot's six
+  terms (use pilot-six-term-sheet).
 metadata:
   version: 1.1.0
 ---
@@ -38,6 +47,18 @@ Gather this context (ask if not provided):
 
 ---
 
+## Pick the Right Mode
+
+| The user is asking… | Do this |
+|---|---|
+| "How should we monetize / which revenue model?" (freemium vs subscription vs usage vs marketplace vs ads) | Brainstorm 3-5 models with `references/revenue-models.md`: audience fit, unit economics, risks, competitive position and one validation experiment each; recommend 1-2 to test first. |
+| "How do we price/package our SaaS?" (tiers, value metric, price points, raises, pricing page) | The main workflow in this file. |
+| Pricing an **AI-native** product (copilot, agent, AI service, API): charge metric (consumption vs workflow vs outcome), credits, BYOK, hybrid models, AI margins and model routing, migrating off per-seat | Read `references/ai-pricing.md` and follow its decision framework; still use this file's research and tier sections. |
+
+Most products end up hybrid (freemium + upgrade, subscription + usage). Pricing can change; customer trust is harder to rebuild, so test early and don't race to the bottom on price.
+
+---
+
 ## Pricing Fundamentals
 
 ### The Three Pricing Axes
@@ -59,11 +80,11 @@ Gather this context (ask if not provided):
 Price should be based on value delivered, not cost to serve:
 
 - **Customer's perceived value** — The ceiling
-- **Your price** — Between alternatives and perceived value
-- **Next best alternative** — The floor for differentiation
+- **Your price** — Test willingness to pay, differentiation, costs and margin constraints
+- **Next best alternative** — A reference price, not a mandatory price floor
 - **Your cost to serve** — Only a baseline, not the basis
 
-**Key insight:** Price between the next best alternative and perceived value.
+**Key insight:** The next best alternative anchors comparison; a lower price can be deliberate. Validate willingness to pay and sustainable delivery economics rather than imposing that anchor as a floor.
 
 ---
 
@@ -222,10 +243,13 @@ Identifies which features customers value most:
 
 ## Related Skills
 
+- **value-based-pricing**: Commit ONE value-anchored price on ONE outcome metric once value is measured (Icarus)
+- **pilot-six-term-sheet**: Structure a paid pilot's price and conversion terms
+
 - **churn-prevention**: For cancel flows, save offers, and reducing revenue churn
 - **page-cro**: For optimizing pricing page conversion
 - **copywriting**: For pricing page copy
 - **marketing-psychology**: For pricing psychology principles
-- **ab-test-setup**: For testing pricing changes
+- **ab-test-analysis**: For reading the results of a pricing test
 - **revops**: For deal desk processes and pipeline pricing
 - **sales-enablement**: For proposal templates and pricing presentations

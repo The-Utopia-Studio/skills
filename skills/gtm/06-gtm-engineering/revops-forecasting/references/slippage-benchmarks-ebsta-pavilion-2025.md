@@ -1,31 +1,22 @@
 ---
-title: Slippage benchmarks (Ebsta/Pavilion 2025)
+title: Slippage diagnostics and benchmark use
 description: (reference)
 ---
 
-# Slippage Benchmarks (Ebsta/Pavilion 2025)
+# Slippage diagnostics and benchmark use
 
-On-demand reference for the revops-forecasting skill.
+Use your comparable historical cohort first. Record source dates, segment, forecast horizon, sample size, and whether the rate is deal-count-weighted or revenue-weighted. A count-based slip rate may not be appropriate for a value forecast dominated by a few large deals.
 
-```
-MARKET SLIPPAGE RATES:
-  36% of pipeline deals slip (improved from 44% prior year)
-  Top performers are 217% less likely to experience material slippage
-  76% of B-player deals lack critical milestone events (root cause of slippage)
+The inherited reference attributed a 36% market slip rate and “217% less likely” to Ebsta/Pavilion 2025 without a verifiable passage. Do not repeat those as verified claims or use them as defaults. A probability cannot decrease by more than 100%; verify the original denominator and comparison before using any replacement statistic.
 
-SLIPPAGE DIAGNOSTIC:
-  If slippage >40%: Process problem — stage exit criteria not enforced
-  If slippage 30-40%: Normal range — focus on the deals that slip repeatedly
-  If slippage <25%: Strong discipline — maintain and coach to sustain
+## Diagnostic
 
-WHAT PREDICTS SLIPPAGE:
-  No critical event identified → 3x more likely to slip
-  Single-threaded (one contact) → 2.5x more likely to slip
-  No activity in 14+ days → deal is already dead, just not marked yet
-  Close date unchanged for 3+ weeks → likely to slip
+Compare the current cohort against its own history. Missing critical events, single-threading, overdue next steps and inactivity are prompts for deal inspection, not proof a deal is dead. A documented 21-day legal review can explain 14 days without activity; check the owner, next agreed event and buyer evidence.
 
-FORECASTING ADJUSTMENT:
-  Apply slippage haircut to Best Case and Upside categories:
-  Best Case adjusted = Best Case × (1 - your historical slip rate)
-  If 36% of Best Case deals slip, multiply Best Case by 0.64 for realistic forecast
-```
+## Timing adjustment
+
+If the base estimate is eventual-win value and does not model timing, a separately estimated conditional on-time-close probability may be needed. Show that dependency and avoid treating eventual win and slip as independent without evidence.
+
+If the base model already uses historical **in-period** win rates, timing risk is included: do not apply another generic haircut. Example: $100,000 at a calibrated 50% in-period conversion rate gives $50,000. Applying another 36% slip haircut would reduce it to $32,000 and double count timing risk.
+
+When timing evidence is insufficient, show a labeled sensitivity range rather than a precise unsupported adjustment.

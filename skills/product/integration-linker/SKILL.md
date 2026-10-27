@@ -1,6 +1,13 @@
 ---
 name: integration-linker
-description: Detects and connects development tools — Slack with GitHub, Linear with Git, error tracking with notifications. Provides step-by-step setup procedures for each integration. Use when the user asks to "connect tools", "link Slack", "set up notifications", "integrate Linear", or "connect my tools". Don't use for monitoring setup (use monitoring-setup), deployment (use deployment-engineer), or security (use security-auditor).
+description: >-
+  Connect a startup's dev tools so they talk to each other: GitHub and Vercel
+  notifications into Slack, Linear issues linked to branches and PRs, Sentry
+  error alerts into Slack, with step-by-step setup and a connectivity map. Use
+  when the user asks to connect or integrate GitHub, Slack, Linear, Jira, Sentry
+  or Vercel, set up PR, deploy or error notifications, or says their tools do
+  not talk to each other. Not for setting up Sentry itself (use monitoring-
+  setup) or CI/CD (use deployment-engineer).
 ---
 
 # Integration Linker
@@ -17,21 +24,23 @@ Detects which development tools are in use and connects them together with step-
 ## Step-by-Step Procedure
 
 ### Step 1: Detect Current Tools
+
+Detection prints filenames only, especially for .env files. Never expose token, webhook or other secret values.
 ```bash
 # Detect Slack
-grep -rn "SLACK_\|slack-sdk\|@slack/\|slack-webhook" --include="*.ts" --include="*.js" --include="*.py" --include="*.env*" . 2>/dev/null | head -5
+grep -rl "SLACK_\|slack-sdk\|@slack/\|slack-webhook" --include="*.ts" --include="*.js" --include="*.py" --include="*.env*" . 2>/dev/null | head -5
 
 # Detect Linear
-grep -rn "LINEAR_\|linear-sdk\|@linear/sdk" --include="*.ts" --include="*.js" --include="*.env*" . 2>/dev/null | head -5
+grep -rl "LINEAR_\|linear-sdk\|@linear/sdk" --include="*.ts" --include="*.js" --include="*.env*" . 2>/dev/null | head -5
 
 # Detect project management (Jira, Asana, Notion)
-grep -rn "JIRA_\|ASANA_\|NOTION_\|jira\|asana\|@notionhq" --include="*.ts" --include="*.js" --include="*.env*" . 2>/dev/null | head -5
+grep -rl "JIRA_\|ASANA_\|NOTION_\|jira\|asana\|@notionhq" --include="*.ts" --include="*.js" --include="*.env*" . 2>/dev/null | head -5
 
 # Detect CI/CD (already linked?)
 ls .github/workflows/ 2>/dev/null
 
 # Detect error tracking (Sentry, PostHog)
-grep -rn "SENTRY_DSN\|POSTHOG_\|sentry\|posthog" --include="*.ts" --include="*.js" --include="*.env*" . 2>/dev/null | head -5
+grep -rl "SENTRY_DSN\|POSTHOG_\|sentry\|posthog" --include="*.ts" --include="*.js" --include="*.env*" . 2>/dev/null | head -5
 
 # Detect hosting platform
 ls vercel.json railway.toml fly.toml render.yaml 2>/dev/null
@@ -59,17 +68,32 @@ on:
   push:
     branches: [main]
   pull_request:
-    types: [opened, merged]
-
+    types: [opened, closed]
+permissions:
+  contents: read
 jobs:
   notify:
+    if: github.event_name == 'push' || github.event.action == 'opened' || (github.event.action == 'closed' && github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
-      - uses: slackapi/slack-github-action@v2
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          payload: |
-            {"text": "${{ github.event_name }}: ${{ github.event.pull_request.title || github.event.head_commit.message }}"}
+      - name: Encode notification as JSON
+        run: |
+          python3 - <<'PYTHON'
+          import json, os
+          from pathlib import Path
+          event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
+          title = event.get('pull_request', {}).get('title') or (event.get('head_commit') or {}).get('message', '')
+          Path('payload.json').write_text(json.dumps({'text': os.environ['GITHUB_EVENT_NAME'] + ': ' + title}))
+          PYTHON
+      - name: Send notification
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            curl --fail --silent --show-error -H 'Content-type: application/json' --data-binary @payload.json "$SLACK_WEBHOOK_URL"
+          else
+            echo "Notification skipped: webhook secret unavailable for this event."
+          fi
 ```
 
 ### Step 3: Set Up Linear → GitHub Sync

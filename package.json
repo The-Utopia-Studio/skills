@@ -13,7 +13,9 @@
     "check": "npm run validate && npm run build:packs",
     "ceramic": "utopia-ds",
     "ceramic:doctor": "utopia-ds doctor --json",
-    "test": "npm run validate"
+    "test": "npm run validate",
+    "test:triggers": "node scripts/trigger-test.mjs",
+    "test:skills": "node --test scripts/skill-behavior.test.mjs"
   },
   "repository": {
     "type": "git",

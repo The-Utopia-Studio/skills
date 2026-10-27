@@ -1,6 +1,14 @@
 ---
 name: colorize
-description: Add strategic color to features that are too monochromatic or lack visual interest, making interfaces more engaging and expressive. Use when the user mentions the design looking gray, dull, lacking warmth, needing more color, or wanting a more vibrant or expressive palette.
+description: >-
+  Add strategic color to an existing interface that is too gray, monochrome or
+  dull: semantic good/bad/warning color, accent placement, tinted surfaces,
+  chart colors, keeping contrast accessible and the brand color in charge. Use
+  when the user says their UI or dashboard is grayscale, dull, lifeless, lacks
+  color or warmth, or that users cannot tell good numbers from bad ones, and
+  gives a brand color to work with. Not for choosing a whole new style, palette
+  and font system from scratch (use ui-ux-pro-max) or design tokens (use ckm-
+  design-system).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"

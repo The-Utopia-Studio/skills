@@ -1,6 +1,14 @@
 ---
 name: animate
-description: Review a feature and enhance it with purposeful animations, micro-interactions, and motion effects that improve usability and delight. Use when the user mentions adding animation, transitions, micro-interactions, motion design, hover effects, or making the UI feel more alive.
+description: >-
+  Add purposeful animation, transitions and micro-interactions to an existing
+  feature: entrances, drag-and-drop moves, list add/remove, state changes, hover
+  and press feedback, with timing, easing and reduced-motion handling. Use when
+  the user says the UI feels dead, static or janky, items teleport or jump, or
+  asks to add animation, transitions, motion or micro-interactions. Not for
+  tuning an existing sequence with storyboards or sliders (use interface-craft),
+  a pre-ship detail pass (use polish), or showpiece WebGL/scroll effects (use
+  overdrive).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"

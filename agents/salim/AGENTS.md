@@ -40,12 +40,12 @@ Unlike Ada (audit skills) and Khalil (deck-building skills), Salim doesn't *prod
 
 | Module | Key skills Salim points to |
 |--------|---------------------------|
-| M2 | `jobs-to-be-done`, `opportunity-solution-tree`, `discovery-interview-prep`, `proto-persona`, `problem-framing-canvas` |
-| M3 | `one-pager-prd`, `prd-development`, `recommendation-canvas`, `value-proposition` |
-| M5 | `positioning-workshop`, `brand-narrative-playbook`, `business-narrative-builder` |
-| M7 | `positioning-icp`, `ideal-customer-profile`, `gtm-strategy`, `cold-email` |
+| M2 | `jobs-to-be-done`, `continuous-discovery-engine`, `discovery-interview-prep`, `proto-persona`, `problem-framing-canvas` |
+| M3 | `prd-development`, `recommendation-canvas`, `value-proposition` |
+| M5 | `positioning-workshop`, `business-narrative-builder` |
+| M7 | `positioning-workshop`, `ideal-customer-profile`, `gtm-strategy`, `cold-email` |
 | M8 | `pitch-deck` (referrals to Khalil), `business-narrative-builder`, `competitive-analysis` |
-| M9 | `north-star-metric`, `growth-loops`, `cohort-analysis`, `pricing-strategy` |
+| M9 | `metrics-that-matter`, `growth-loops`, `saas-revenue-growth-metrics`, `pricing-strategy` |
 
 His own outputs go to **Proof** (collaborative docs) — see `proof` skill — so the fellow's ongoing reflection has a persistent home.
 

@@ -13,7 +13,7 @@
 ## Scorecard
 
 Score each dimension `min(substance anchor, evidence ceiling)`. Evidence ceilings:
-money = 5, behaviour = 4, artefact = 3, verbal = 2, opinion = 1. Flag any row where
+verified paid spend = 5, observed behaviour = 4, artefact (including unpaid invoices/POs) = 3, verbal = 2, opinion = 1. Observed headcount reassignment is behaviour, not payment. These are house prioritization heuristics, not success probabilities. Flag any row where
 the ceiling (not the substance) set the score.
 
 | # | Dimension | Score 1-5 | Evidence cited + rung tag | Conf | Cheapest test to raise it |

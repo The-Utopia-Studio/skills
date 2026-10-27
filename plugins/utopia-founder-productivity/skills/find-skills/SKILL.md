@@ -1,6 +1,6 @@
 ---
 name: find-skills
-description: Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.
+description: Helps users discover and install agent skills when they explicitly seek reusable capabilities, ask "find a skill for X" or "is there a skill that can...", or want to extend their agent. This skill should be used when the user is looking for functionality that might exist as an installable skill.
 ---
 
 # Find Skills
@@ -43,7 +43,7 @@ When a user asks for help with something, identify:
 
 ### Step 2: Check the Leaderboard First
 
-Before running a CLI search, check the [skills.sh leaderboard](https://skills.sh/) to see if a well-known skill already exists for the domain. The leaderboard ranks skills by total installs, surfacing the most popular and battle-tested options.
+Before running a CLI search, check the [skills.sh leaderboard](https://skills.sh/) to see if a well-known skill already exists for the domain. The leaderboard ranks skills by total installs, surfacing the popular options; install counts do not establish quality or task fit.
 
 For example, top skills for web development include:
 - `vercel-labs/agent-skills` — React, Next.js, web design (100K+ installs each)
@@ -67,7 +67,7 @@ For example:
 
 **Do not recommend a skill based solely on search results.** Always verify:
 
-1. **Install count** — Prefer skills with 1K+ installs. Be cautious with anything under 100.
+1. **Task fit and evidence** — Inspect the actual instructions, license, dependencies and executable examples. Install counts are a discovery signal, not a quality gate; do not reject a well-tested niche skill solely for low popularity.
 2. **Source reputation** — Official sources (`vercel-labs`, `anthropics`, `microsoft`) are more trustworthy than unknown authors.
 3. **GitHub stars** — Check the source repository. A skill from a repo with <100 stars should be treated with skepticism.
 

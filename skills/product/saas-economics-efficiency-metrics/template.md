@@ -107,9 +107,9 @@ Monthly Expenses:
   - COGS: $__________
 Total Monthly Expenses (Gross Burn): $__________
 
-Monthly Revenue: $__________
+Monthly Cash Collected: $__________
 
-Net Burn Rate = Total Expenses - Revenue = $__________/month
+Net Burn Rate = Total Cash Outflows - Cash Collections = $__________/month
 ```
 
 ### Runway
@@ -147,7 +147,8 @@ Revenue: $__________
 - COGS: $__________
 - OpEx: $__________
 
-Net Income = Revenue - COGS - OpEx = $__________
+Operating Income = Revenue - COGS - OpEx = $__________
+Net Income = Operating Income + Net Nonoperating Income - Income Tax Expense = $__________
 Profit Margin % = (Net Income / Revenue) × 100 = __________%
 ```
 

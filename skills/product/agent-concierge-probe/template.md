@@ -41,6 +41,8 @@ Successful outcomes: __
 | Human-fix minutes | | | $ |
 | **Total across runs** | | | **$** |
 
+Token costs = tokens ÷ 1,000,000 × the corresponding per-million rate. Include failed runs and human verification/correction time. If no outcomes succeed, report total spend and CPO undefined.
+
 CPO = total cost ÷ successful outcomes = **$__.__ / outcome** [Fact]
 
 Sanity check vs concierge price paid: __  (flag if CPO > price)

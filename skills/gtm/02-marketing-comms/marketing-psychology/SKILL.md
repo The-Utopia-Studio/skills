@@ -1,6 +1,14 @@
 ---
 name: marketing-psychology
-description: "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context."
+description: >-
+  Use this skill to apply behavioral science and psychology to a marketing
+  asset: "which psychological principles should we use on our pricing page",
+  "how do we push people to the middle plan", "use anchoring / decoy / social
+  proof / scarcity / loss aversion here", "why do people buy", "nudge users
+  toward X". It picks the relevant mental models and cognitive biases and says
+  exactly how each would show up on the page, email or offer. Not for setting
+  the price levels or packaging (use pricing-strategy), a page conversion audit
+  (use page-cro), or writing the copy (use copywriting).
 metadata:
   version: 1.1.0
 ---
@@ -450,6 +458,5 @@ When facing a marketing challenge, consider:
 
 - **page-cro**: Apply psychology to page optimization
 - **copywriting**: Write copy using psychological principles
-- **popup-cro**: Use triggers and psychology in popups
 - **pricing-page optimization**: See page-cro for pricing psychology
-- **ab-test-setup**: Test psychological hypotheses
+- **ab-test-analysis**: Test psychological hypotheses

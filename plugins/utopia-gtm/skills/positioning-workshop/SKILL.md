@@ -1,17 +1,34 @@
 ---
 name: positioning-workshop
-description: Run a positioning workshop that surfaces target customer, unmet need, category, benefits, and differentiation. Use when your product messaging feels fuzzy, generic, or misaligned.
-intent: >-
-  Guide product managers through discovering and articulating product positioning by asking adaptive questions about target customers, unmet needs, product category, benefits, and competitive differentiation. Use this to align stakeholders on strategic positioning before writing PRDs, launch plans, or marketing materials—ensuring you've made deliberate choices about who you serve, what need you address, and how you differ from alternatives.
-type: interactive
-best_for:
-  - "Running a workshop to sharpen product positioning"
-  - "Clarifying target customer, category, and differentiation"
-  - "Fixing fuzzy or generic messaging before launch"
-scenarios:
-  - "Help me run a positioning workshop for our B2B analytics product"
-  - "Our messaging feels generic. Facilitate a positioning session."
-  - "We need to define who we serve and why we're different"
+description: >-
+  Use this skill to create or fix positioning, messaging and brand narrative: run
+  a positioning workshop (target customer, unmet need, category, key benefit,
+  differentiation) to a Geoffrey Moore positioning statement, then build a
+  positioning stack, message house, proof library, messaging pillars, three-tier
+  messaging and a brand narrative arc that keeps the story consistent across
+  exec, practitioner and developer audiences. Use when messaging feels fuzzy or
+  generic, when repositioning, when positioning an AI product, or when the user
+  asks for positioning statements, a message house, messaging pillars or a brand
+  narrative. Not for valuation or story-to-numbers narratives (use
+  business-narrative-builder), defining the ICP (use ideal-customer-profile), the
+  full value proposition (use value-proposition), choosing a first market (use
+  beachhead-segment), website copy (use copywriting), or a manifesto (use
+  manifesto).
+metadata:
+  type: interactive
+  intent: >-
+    Guide product managers through discovering and articulating product
+    positioning by asking adaptive questions about target customers, unmet needs,
+    product category, benefits, and competitive differentiation.
+  best_for:
+    - "Running a workshop to sharpen product positioning"
+    - "Clarifying target customer, category, and differentiation"
+    - "Fixing fuzzy or generic messaging before launch"
+    - "Building a message house and brand narrative from the positioning"
+  scenarios:
+    - "Help me run a positioning workshop for our B2B analytics product"
+    - "Our messaging feels generic. Facilitate a positioning session."
+    - "We need to define who we serve and why we're different"
 ---
 
 
@@ -29,7 +46,7 @@ An interactive discovery process that:
 3. Uncovers underserved needs via Jobs-to-be-Done lens
 4. Defines product category and benefits
 5. Establishes competitive differentiation
-6. Outputs a complete positioning statement (uses `positioning-statement.md`)
+6. Outputs a complete positioning statement (format in the Output section below)
 
 ### Why This Works
 - **Structured discovery:** Prevents "positioning by committee" (too vague)
@@ -58,7 +75,7 @@ An interactive discovery process that:
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use the `workshop-facilitation` skill (founder-productivity pack) as the default interaction protocol for this skill when it is installed.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -74,7 +91,7 @@ This file defines the domain-specific assessment content. If there is a conflict
 
 This interactive skill asks **up to 5 adaptive questions**, offering **3-4 enumerated context-aware options** at each step.
 
-Interaction pattern: Pair with `skills/workshop-facilitation/SKILL.md` when you want a one-step-at-a-time flow with numbered recommendations at decision points and quick-select options for regular questions. If the user asks for a single-shot output, skip the multi-turn facilitation.
+Interaction pattern: Pair with the `workshop-facilitation` skill when you want a one-step-at-a-time flow with numbered recommendations at decision points and quick-select options for regular questions. If the user asks for a single-shot output, skip the multi-turn facilitation.
 
 ---
 
@@ -210,7 +227,7 @@ Before we begin, let's gather product context to ground our positioning work:
 
 ### Output: Generate Positioning Statement
 
-After collecting responses, the agent generates a positioning statement using the `positioning-statement.md` format:
+After collecting responses, the agent generates a positioning statement in this format:
 
 ```markdown
 # Positioning Statement
@@ -260,7 +277,9 @@ After collecting responses, the agent generates a positioning statement using th
 3. **Apply to artifacts:**
    - Update website homepage and product pages
    - Revise sales deck and pitch materials
-   - Use in PRD, press release, or roadmap planning (reference `press-release.md`, `positioning-statement.md`)
+   - Use in PRD, press release, or roadmap planning (see the `press-release` skill)
+
+4. **Build the messaging layer:** turn the statement into a positioning stack, message house, proof library and three-tier messaging (`references/positioning-and-messaging.md`), then a narrative arc per audience (`references/brand-narrative-framework.md`).
 
 ---
 
@@ -402,23 +421,16 @@ Acme Workflows is a no-code automation platform for small business owners that r
 
 ## References
 
+### Reference Files
+- `references/positioning-and-messaging.md` — Four-layer positioning stack, competitor-alternative pages, capability-to-outcome translation, three-tier messaging architecture, messaging validation checks, message house and proof library, the AI buyer shift, and April Dunford's 10 steps adapted for AI products
+- `references/brand-narrative-framework.md` — Narrative arc (context, tension, resolution, proof, CTA) and audience adaptations
+
 ### Related Skills
-- `positioning-statement.md` — The output format this workshop generates
-- `proto-persona.md` — Defines the "For [target]" segment
-- `jobs-to-be-done.md` — Informs the "that need" statement
-- `problem-statement.md` — Problem framing supports positioning
-- `press-release.md` — Positioning informs press release messaging
+- `ideal-customer-profile` — Defines and scores the "For [target]" segment
+- `proto-persona` and `jobs-to-be-done` (product pack) — Inform the target and the "that need" statement
+- `value-proposition` — The fuller value proposition behind the statement
+- `press-release` — Positioning informs press release messaging
 
 ### External Frameworks
 - Geoffrey Moore, *Crossing the Chasm* (1991) — Origin of positioning statement format
 - April Dunford, *Obviously Awesome* (2019) — Modern positioning methodology
-
-### Dean's Work
-- Positioning Statement Prompt Template
-
----
-
-**Skill type:** Interactive
-**Suggested filename:** `positioning-workshop.md`
-**Suggested placement:** `/skills/interactive/`
-**Dependencies:** Uses `positioning-statement.md`, references `proto-persona.md`, `jobs-to-be-done.md`, `problem-statement.md`

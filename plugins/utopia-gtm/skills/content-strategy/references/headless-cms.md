@@ -157,7 +157,7 @@ Exact permission models vary by platform. Sanity uses role-based access. Content
 
 ### Programmatic SEO
 
-Use CMS as the data source for programmatic pages. Store structured data (FAQs, comparisons, city pages) as content types and generate pages from queries. See **programmatic-seo** skill.
+Use CMS as the data source for programmatic pages. Store structured data (FAQs, comparisons, city pages) as content types and generate pages from queries.
 
 ### Copywriting
 
@@ -189,6 +189,6 @@ Pull CMS content into email templates for consistent messaging across web and em
 
 ## Relevant Integration Guides
 
-- [Sanity](../../../tools/integrations/sanity.md) — GROQ queries, mutations, CLI
-- [Contentful](../../../tools/integrations/contentful.md) — Delivery/Management APIs, publishing
-- [Strapi](../../../tools/integrations/strapi.md) — REST CRUD, filters, document API
+- Sanity — GROQ queries, mutations, CLI
+- Contentful — Delivery/Management APIs, publishing
+- Strapi — REST CRUD, filters, document API

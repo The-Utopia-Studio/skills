@@ -1,6 +1,14 @@
 ---
 name: company-moc
-description: Build a Map of Content (MOC) for a company in an Obsidian vault — an ideas-first knowledge graph built from primary sources (decks, transcripts, standards, reports), with a hub note and linked child notes. Use when asked to "build a MOC", "map this company", "create a knowledge graph on X", or to update an existing company MOC after a new call or document drop.
+description: >-
+  Use this skill when the user wants an Obsidian Map of Content (MOC) or
+  knowledge graph built from a company's primary sources: pitch decks, call
+  transcripts, pilot reports, standards. It produces an ideas-first hub note plus
+  one-idea-per-note child notes, with source and date on every claim and
+  contradictions between sources surfaced. Use when asked to "build a MOC", "map
+  this company in Obsidian", "turn these docs into a knowledge graph", or to
+  update a company MOC after a new call or document. Not for a plain summary of the
+  documents.
 ---
 
 # Company MOC

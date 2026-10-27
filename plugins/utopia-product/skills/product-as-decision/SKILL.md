@@ -46,7 +46,7 @@ Fill the sheet in [template.md](template.md). Do not narrate; fill the lines. Ta
 State it with a judgment verb the human performs: *decides whether, picks which, approves, prioritises, sizes, diagnoses, releases.* Strike any product noun — dashboard, copilot, platform, tool, app, assistant, system, "AI". A copilot is not a decision; ask which decision the copilot would change. If the fellow cannot name the decision, stop and ask. Invent none.
 
 **Step 2 — Name the one owner.**
-One title, who makes this call today and stakes something on being wrong (budget, a safety sign-off, an SLA, their name). Not the user of the software — the owner of the call. Two owners means two products.
+One title, who makes this call today and stakes something on being wrong (budget, a safety sign-off, an SLA, their name). Not the user of the software — the owner of the call. Name the primary accountable owner and other approval participants; a committee or joint sign-off does not automatically imply multiple products.
 
 **Step 3 — Pick the single moving axis.**
 Exactly one. Time (same decision, faster), effort (same decision, less human work to reach it), or autonomy (the call moves up the ladder). If two axes seem to move, the dominant one is the product; note the other and drop it from the statement.
@@ -68,11 +68,13 @@ Name before-L and after-L. State any liability or regulatory reason the after ca
 
 **Step 6 — Compression band.**
 
+For time/effort, require finite before ≥ 0 and after > 0; compare equal outcome quality. Zero after is undefined, not infinite proven compression. Autonomy levels are ordinal: report L0→L2 as a two-rung move, never divide level numbers. The bands are house screening heuristics, not a universal product-validity test.
+
 | Ratio on the moving axis / ladder jump | Band | Read |
 |---|---|---|
 | = 1×, or interface-only change | No compression | Not a product. You renamed a feature. Reframe or kill. |
 | < 2× | Marginal | A nicer way to make the same call. Weak as a standalone wedge. |
-| 2–10× | Step change | Real compression. A wedge if the decision recurs and the outcome is paid for. |
+| 2 ≤ ratio < 10× | Step change | Real compression. A wedge if the decision recurs and the outcome is paid for. |
 | ≥ 10×, or a ladder jump of ≥ 2 rungs | Order of magnitude | The Icarus target. The decision's economics change, not just its speed. |
 
 **Step 7 — Downstream.** One line: what money moves or what behaviour changes once this decision is compressed. If nothing downstream moves, a fast decision is a party trick.
@@ -86,7 +88,8 @@ The before number is where fellows flatter themselves. It must sit on behaviour 
 
 | Signal for the "before" cost | Ladder weight |
 |---|---|
-| An invoice / rate card / price paid for the decision (money moved) | 1.0 |
+| Verified price paid for the decision (money moved) | 1.0 |
+| Unpaid invoice or rate card (document only) | 0.5 |
 | The decision step timed directly in a real workflow (behaviour observed) | 0.7 |
 | A priced artefact the decision produces, shown but not transacted | 0.5 |
 | "It takes about six minutes" (verbal commitment) | 0.3 |

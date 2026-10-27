@@ -168,7 +168,6 @@ Breakeven Sensitivity:
 
 - **Intrinsic value** (from DCF model, per share)
 - **Relative valuation estimates** (from peer comparison and/or sector regression, per share)
-- **Special-situation adjustments** (if applicable, per share)
 - **Current market price** (per share)
 - **Key assumption ranges** (growth rate, discount rate, margin, for sensitivity analysis)
 - **Business narrative** (from business-narrative-builder, for thesis framing)
@@ -179,7 +178,6 @@ Breakeven Sensitivity:
 
 **Cross-references to other skills:**
 
-- `intrinsic-valuation-dcf` provides the DCF per-share value and sensitivity grid
-- `relative-valuation-multiples` provides peer comparison and regression-implied values
-- `special-situations-valuation` provides adjusted values for high-growth, distressed, private, or financial services firms
+- `dcf-model` provides the DCF per-share value and sensitivity grid
+- `comps-analysis` provides peer comparison and regression-implied values
 - `business-narrative-builder` provides the qualitative story that anchors the thesis

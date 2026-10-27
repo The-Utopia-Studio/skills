@@ -33,13 +33,13 @@ Read production traces as interviews that already happened. One card per **behav
 |---|---|
 | **Observed behaviour** (what the trace literally shows) | [e.g. "re-ran the same permit check 3×, rewording inputs, before it passed"]  `[Fact]` |
 | **Behaviour rung** | 0.7 behaviour / 1.0 if the trace is a spend event |
-| **Distinct users producing it** | [N of M active = __%] → anecdote (1) / candidate (2–4 or <5%) / pattern (≥5 and ≥~15%) |
+| **Distinct users producing it** | [N of M active = __%] → observed case, prevalence unknown (1) / candidate (2–4 or <5%) / pattern (≥5 and ≥~15%) |
 | **Discovery question it answers** | [the recovered question — this is the finding] |
 | **Inferred JTBD / desired outcome** | [the job behind the behaviour]  `[Hypothesis]` |
 | **Satisfaction signal the trace implies** | [dissatisfied / partially served / served — and on which sub-job] |
 | **The other honest reading (if ambiguous)** | [second interpretation, or "none — behaviour is unambiguous"] |
 | **Confirm-the-why probe** | [smallest observation that moves the why from `[Hypothesis]` toward 0.7 — inject a known error / watch 3 sessions / interview 5 who did it] → hand to `probe-matrix` |
-| **Interview it replaced** | scheduled version ≈ [recruit + incentive + 45-min session + synthesis, ~£__ + ~[1–2] wk lead], returns verbal 0.3 · this trace: already happened, 0.7, cost = triage minutes |
+| **Cost comparison** | [measured avoided work / modeled counterfactual / no replacement]; source and task canceled or reduced (if any); interview effort/cash/lead time; trace extraction + triage + follow-up cost; net avoided cost only if evidenced |
 | **Proposed tree edit** | [new opportunity / new solution / raise-lower a rung / kill a node] → route to `continuous-discovery-engine` feed 2 |
 
 _(duplicate the card block for each pattern)_
@@ -56,14 +56,14 @@ _(duplicate the card block for each pattern)_
 
 - **Cards that are findings (pattern-strength met, question recovered):** ____
 - **Cards held as candidates (N too low or why unconfirmed):** ____ → probes queued
-- **Anecdotes named and parked (N=1):** ____
-- **Total scheduled-interview cost these traces replaced:** ≈ £____ and ~__ weeks of lead time — the flywheel number.
+- **Single observed cases (N=1), with severity/action recorded:** ____
+- **Cost summary:** measured avoided effort/cash: ____ (evidence: ____); modeled alternatives: ____ (assumptions: ____); trace and follow-up costs: ____. Do not sum overlapping calendar lead times or count the same avoided task twice.
 
 ## Self-check before handing off
 - [ ] Every card recovers a discovery question, not just a metric.
 - [ ] Behaviour rung and why-rung are separate on every card; no interpretation stamped at 0.7.
 - [ ] Every ambiguous signature names both readings and a probe.
-- [ ] Every card states distinct-user count; no N=1 promoted to a finding.
+- [ ] Every card states distinct-user count; no N=1 generalized to population prevalence; severe verified failures triaged promptly.
 - [ ] Active-segment denominator is stated, or explicitly flagged "unknown" — no % computed on a missing denominator.
 - [ ] Each finding routed to `continuous-discovery-engine`; each unconfirmed why routed to `probe-matrix`.
 - [ ] Nothing invented — no pattern claimed that the pasted traces do not show.

@@ -28,9 +28,9 @@ Auto-fail this skill if the output:
 - launders target F (feasibility/scale) into a cheap probe instead of stating that no
   cheap probe is honest about it.
 
-## Head-to-head vs prototyping-pretotyping
+## Head-to-head vs probe-matrix
 
-This skill is scored against `prototyping-pretotyping` on the same inputs. It must
+This skill is scored against `probe-matrix` on the same inputs. It must
 win on **proprietary_edge** and **challenge**.
 
 Why it wins:
@@ -45,7 +45,7 @@ Why it wins:
   prototype at demand (its Demand-assumption row lists fake-door/paper) or a landing
   page at a value prop, with no warning that those lie about trust.
 - **Concrete divergence — the trust case (Golden 01).** On "test whether operators
-  trust the alert," prototyping-pretotyping routes to a paper/clickable prototype
+  trust the alert," probe-matrix routes to a paper/clickable prototype
   (workflow fidelity) or a fake-door (demand), both of which lie about trust.
   probe-matrix kills those, reroutes to concierge/field, and pre-registers a
   behaviour read-out. Expect proprietary_edge and challenge to come back markedly
@@ -67,7 +67,7 @@ way to warn the probe lies about the target.
 
 ## Judge run — run 1
 
-Judge did not author this skill. Gate 4 REQUIRED (supersedes prototyping-pretotyping).
+Judge did not author this skill. Gate 4 REQUIRED (supersedes probe-matrix).
 
 | Gate | Result | Evidence |
 |---|---|---|
@@ -94,7 +94,7 @@ No auto_fail triggered on any case (no invented findings; pre-registered thresho
 
 PASS. On G01 the fellow proposes a paper probe for "do operators trust the alert." Step 4 kills it (paper tops out at comprehension 0.5 / verbal 0.3; trust needs behaviour-under-stakes 0.7), names exactly what it lies about, and reroutes to concierge/field with a behaviour read-out that explicitly rejects "operators said they trust it" (0.3). The kill line ("recommends a probe that lies about the thing being tested") is NOT triggered — the skill does the opposite. No golden endorses a lying probe.
 
-### Gate 4 — head-to-head vs prototyping-pretotyping (scored on probe-matrix's rubric)
+### Gate 4 — head-to-head vs probe-matrix (scored on probe-matrix's rubric)
 
 | Input | probe-matrix total | old total | proprietary_edge (new vs old) | challenge (new vs old) |
 |---|---|---|---|---|

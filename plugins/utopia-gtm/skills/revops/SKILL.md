@@ -1,6 +1,17 @@
 ---
 name: revops
-description: "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy."
+description: >-
+  Use this skill for revenue operations plumbing: lead lifecycle stages, MQL and
+  SQL definitions, lead routing rules, speed-to-lead and the marketing-to-sales
+  handoff SLA, pipeline stage definitions, CRM automation, data hygiene, and the
+  new-business deal desk. Use when the user mentions RevOps, revenue operations,
+  MQL, SQL, lead routing, pipeline stages, CRM automation, "leads aren't getting
+  to sales" or "when should marketing hand off to sales". Not for designing a
+  lead, intent or PQL scoring model, qualifying a specific list of leads, or
+  do-not-touch suppression rules (use account-tier-scoring); renewal discounts or
+  a renewal deal desk (use expansion-retention); forecasting (use
+  revops-forecasting); cold emails (use cold-email); or pricing (use
+  pricing-strategy).
 metadata:
   version: 1.1.0
 ---
@@ -78,44 +89,9 @@ Define response times and document them:
 
 ---
 
-## Lead Scoring
+## Scoring Model Integration
 
-### Scoring Dimensions
-
-**Explicit scoring (fit)** — Who they are:
-- Company size, industry, revenue
-- Job title, seniority, department
-- Tech stack, geography
-
-**Implicit scoring (engagement)** — What they do:
-- Page visits (especially pricing, demo, case studies)
-- Content downloads, webinar attendance
-- Email engagement (opens, clicks)
-- Product usage (for PLG)
-
-**Negative scoring** — Disqualifying signals:
-- Competitor email domains
-- Student/personal email
-- Unsubscribes, spam complaints
-- Job title mismatches (intern, student)
-
-### Building a Scoring Model
-
-1. Define your ICP attributes and weight them
-2. Identify high-intent behavioral signals from closed-won data
-3. Set point values for each attribute and behavior
-4. Set MQL threshold (typically 50-80 points on a 100-point scale)
-5. Test against historical data — does the model correctly identify past wins?
-6. Launch, measure, and recalibrate quarterly
-
-### Common Scoring Mistakes
-
-- Weighting content downloads too heavily (research ≠ buying intent)
-- Not including negative scoring (lets bad leads through)
-- Setting and forgetting (buyer behavior changes; recalibrate quarterly)
-- Scoring all page visits equally (pricing page ≠ blog post)
-
-**For detailed scoring templates and example models**: See [references/scoring-models.md](references/scoring-models.md)
+Use `account-tier-scoring` for model design, qualification and suppression. RevOps consumes that model's versioned fit/intent/PQL results, applies owner assignment and tracks the handoff SLA. Do not invent another score or treat unsubscribes as points that positive activity can offset. Suppression precedes routing. If the model is missing, hand off the design task; document required fields and integration contracts here.
 
 ---
 
@@ -297,7 +273,7 @@ Build three views:
 When delivering RevOps recommendations, provide:
 
 1. **Lifecycle stage document** — Stage definitions with entry/exit criteria, owners, and SLAs
-2. **Scoring specification** — Fit and engagement attributes with point values and MQL threshold
+2. **Scoring integration contract** — Configured model/version, input fields, suppression status and routing outputs
 3. **Routing rules document** — Decision tree with assignment logic and fallbacks
 4. **Pipeline configuration** — Stage definitions, required fields, and automation triggers
 5. **Metrics dashboard spec** — Key metrics, data sources, and target benchmarks
@@ -318,20 +294,20 @@ Format each as a standalone document the user can implement directly. Include pl
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key RevOps tools:
+Key RevOps tools:
 
-| Tool | What It Does | Guide |
-|------|-------------|-------|
-| **HubSpot** | CRM, marketing automation, lead scoring, workflows | [hubspot.md](../../tools/integrations/hubspot.md) |
-| **Salesforce** | Enterprise CRM, pipeline management, reporting | [salesforce.md](../../tools/integrations/salesforce.md) |
-| **Calendly** | Meeting scheduling, round-robin routing | [calendly.md](../../tools/integrations/calendly.md) |
-| **SavvyCal** | Scheduling with priority-based availability | [savvycal.md](../../tools/integrations/savvycal.md) |
-| **Clearbit** | Real-time lead enrichment and scoring | [clearbit.md](../../tools/integrations/clearbit.md) |
-| **Apollo** | Contact data, enrichment, and outbound sequences | [apollo.md](../../tools/integrations/apollo.md) |
-| **ActiveCampaign** | Marketing automation for SMBs, lead scoring | [activecampaign.md](../../tools/integrations/activecampaign.md) |
-| **Zapier** | Cross-tool automation and workflow glue | [zapier.md](../../tools/integrations/zapier.md) |
-| **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs | [introw.md](../../tools/integrations/introw.md) |
-| **Crossbeam** | Partner account overlaps and co-sell identification | [crossbeam.md](../../tools/integrations/crossbeam.md) |
+| Tool | What It Does |
+|------|-------------|
+| **HubSpot** | CRM, marketing automation, lead scoring, workflows |
+| **Salesforce** | Enterprise CRM, pipeline management, reporting |
+| **Calendly** | Meeting scheduling, round-robin routing |
+| **SavvyCal** | Scheduling with priority-based availability |
+| **Clearbit** | Real-time lead enrichment and scoring |
+| **Apollo** | Contact data, enrichment, and outbound sequences |
+| **ActiveCampaign** | Marketing automation for SMBs, lead scoring |
+| **Zapier** | Cross-tool automation and workflow glue |
+| **Introw** | Partner-sourced pipeline, commissions, deal registration, QBRs |
+| **Crossbeam** | Partner account overlaps and co-sell identification |
 
 ---
 

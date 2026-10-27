@@ -1,6 +1,13 @@
 ---
 name: analytics-tracking
-description: When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions "set up tracking," "GA4," "Google Analytics," "conversion tracking," "event tracking," "UTM parameters," "tag manager," "GTM," "analytics implementation," "tracking plan," "how do I measure this," "track conversions," "attribution," "Mixpanel," "Segment," "are my events firing," or "analytics isn't working." Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.
+description: >-
+  Set up, improve or audit analytics tracking: write a tracking plan with event names, properties and
+  naming conventions, UTM parameters, conversion and funnel events, and choose or implement GA4,
+  Google Tag Manager, Mixpanel, Amplitude, PostHog or Segment. Use when the user asks to draft a
+  tracking plan, set up tracking or event tracking for a new app or launch, track conversions or
+  attribution, define UTMs, or says events aren't firing or analytics isn't working. Not for analysing
+  a finished A/B test (use ab-test-analysis) or designing the metrics dashboard and alert thresholds
+  (use metrics-dashboard).
 metadata:
   version: 1.1.0
 ---
@@ -289,21 +296,20 @@ dataLayer.push({
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key analytics tools:
+Key analytics tools (check each vendor's current docs when implementing):
 
 | Tool | Best For | MCP | Guide |
 |------|----------|:---:|-------|
-| **GA4** | Web analytics, Google ecosystem | ✓ | [ga4.md](../../tools/integrations/ga4.md) |
-| **Mixpanel** | Product analytics, event tracking | - | [mixpanel.md](../../tools/integrations/mixpanel.md) |
-| **Amplitude** | Product analytics, cohort analysis | - | [amplitude.md](../../tools/integrations/amplitude.md) |
-| **PostHog** | Open-source analytics, session replay | - | [posthog.md](../../tools/integrations/posthog.md) |
-| **Segment** | Customer data platform, routing | - | [segment.md](../../tools/integrations/segment.md) |
+| **GA4** | Web analytics, Google ecosystem | ✓ | [GA4 docs](https://developers.google.com/analytics) |
+| **Mixpanel** | Product analytics, event tracking | - | [Mixpanel docs](https://docs.mixpanel.com) |
+| **Amplitude** | Product analytics, cohort analysis | - | [Amplitude docs](https://amplitude.com/docs) |
+| **PostHog** | Open-source analytics, session replay | - | [PostHog docs](https://posthog.com/docs) |
+| **Segment** | Customer data platform, routing | - | [Segment docs](https://segment.com/docs) |
 
 ---
 
 ## Related Skills
 
-- **ab-test-setup**: For experiment tracking
-- **seo-audit**: For organic traffic analysis
+- **ab-test-analysis**: For reading experiment results
 - **page-cro**: For conversion optimization (uses this data)
 - **revops**: For pipeline metrics, CRM tracking, and revenue attribution

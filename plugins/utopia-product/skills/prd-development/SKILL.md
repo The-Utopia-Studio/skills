@@ -1,6 +1,14 @@
 ---
 name: prd-development
-description: Build a structured PRD that connects problem, users, solution, and success criteria. Use when turning discovery notes into an engineering-ready document for a major initiative.
+description: >-
+  Write a PRD for a product feature at the right weight: a one-page PRD or brief for quick approval, a
+  lean 1-2 page spec, or a full engineering-ready PRD (problem and evidence, personas, strategic
+  context, solution, success and guardrail metrics, user stories, out of scope, dependencies, risks,
+  open questions). Use when the user asks to write or review a PRD, one-page PRD, one-pager, product
+  spec, feature proposal or product brief for a product feature, or to turn discovery notes into
+  requirements. Includes a one-pager rubric and templates. Not for an AI agent's planning PRD and work
+  orders (use agent-prd), framing the problem before a solution exists (use problem-statement), or
+  writing individual stories (use user-story).
 intent: >-
   Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
 type: workflow
@@ -14,7 +22,6 @@ scenarios:
   - "I've completed a discovery sprint and need to turn the findings into a PRD my engineers can act on"
 estimated_time: "60-120 min"
 ---
-
 
 ## Purpose
 Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
@@ -113,7 +120,7 @@ A PRD (Product Requirements Document) is a structured document that answers:
 
 ### Facilitation Source of Truth
 
-When running this workflow as a guided conversation, use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the interaction protocol.
+When running this workflow as a guided conversation, use the `workshop-facilitation` skill as the interaction protocol.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -124,6 +131,35 @@ It defines:
 - quick-select numbered response options for regular questions (include `Other (specify)` when useful)
 
 This file defines the workflow sequence and domain-specific outputs. If there is a conflict, follow this file's workflow logic.
+
+## Choose the Format First
+
+Not every initiative needs the full 10-section PRD. Pick the format before drafting:
+
+| Situation | Format | Resource |
+|---|---|---|
+| Simple feature, quick approval (weeks) | **One-pager**: problem, one-sentence solution, metrics, constraints, open questions; 1 page of bullets | `resources/one-pager-template.md` |
+| Medium feature (months), detailed handoff | **Lean PRD**: one-pager plus flows, edge cases, MVP vs v2; 1-2 pages | `resources/one-pager-template.md` (full PRD format) |
+| Major initiative or new product | **Full PRD**: the 8-phase workflow below | `template.md` |
+| Multi-phase initiative | One one-pager per phase, expand later | — |
+
+**One-pager workflow:** (1) gather problem (user pain + data + why now), solution, users, success criteria, constraints; (2) draft the one-pager (save it as one-pager-prd.md) with problem, solution overview, personas and use cases, quantified goals, in-scope flows and explicit out-of-scope, constraints and assumptions, open questions; (3) self-score with `resources/evaluators/rubric_one_pager_prd.json` (average ≥ 3.5); (4) share for sign-off before detailed design. See `resources/one-pager-methodology.md` for problem framing, metric trees and scoping techniques.
+
+**One-pager guardrails:** specific, data-backed problem ("users abandon search after 3 failed queries, 30% of sessions", not "users want better search"); solution says what, not how ("filter panel", not "dropdown with checkbox multi-select"); metrics with baseline + target + timeframe, leading and lagging; crisp in/out boundaries; trade-offs named. Red flags: solution looking for a problem, vague metrics, everything is must-have, no constraints, no open questions. Brevity forces clarity: if you can't explain it in 1-2 pages, you haven't thought it through.
+
+**Common problem types to frame:** user pain (validate with interviews, tickets, workaround analytics); competitive gap (churn or win/loss evidence); strategic opportunity (market shift + early interest); technical debt or scalability (capacity metrics).
+
+**Adapt to the audience:** execs want business impact, metrics and resource needs; engineering wants constraints, dependencies and phasing; design wants flows, personas and success criteria; sales/marketing want positioning, customer value and launch timing. B2B emphasizes ROI, admin, security and integrations; B2C emphasizes ease, delight and retention; internal tools emphasize time saved and adoption.
+
+**Extra sections worth adding to a full PRD when relevant:**
+- **Contacts:** name, role and comment for key stakeholders.
+- **Value proposition:** which jobs and pains it addresses, what customers gain, and which problems it solves better than competitors (a Value Curve against alternatives helps).
+- **Release:** what goes in v1 vs later versions, in relative timeframes rather than exact dates.
+- **Why now:** has something changed, or only recently become possible?
+
+Write in plain language a primary-school graduate could follow. Save substantial PRDs as `PRD-[product-name].md`. If the user shares files, research or URLs, read them (and research the market) before drafting.
+
+---
 
 ## Application
 
@@ -159,8 +195,8 @@ This workflow orchestrates **8 phases** over **2-4 days**, using multiple compon
 ### Activities
 
 **1. Write Problem Statement**
-- **Use:** `skills/problem-statement/SKILL.md` (component)
-- **Input:** Discovery insights from `skills/discovery-process/SKILL.md` or `skills/problem-framing-canvas/SKILL.md`
+- **Use:** `problem-statement` (component)
+- **Input:** Discovery insights from `discovery-process` or `problem-framing-canvas`
 - **Participants:** PM
 - **Duration:** 30 minutes
 - **Output:** Structured problem statement
@@ -188,10 +224,9 @@ Non-technical small business owners (solopreneurs, 1-10 employees) who sign up f
 ```
 
 **2. Add Supporting Context (Optional)**
-- **Customer journey map:** If problem spans multiple touchpoints
-- **Use:** `skills/customer-journey-mapping-workshop/SKILL.md` output
+- **Customer journey map:** If the problem spans multiple touchpoints, sketch the journey stages and where the drop-off happens
 - **Jobs-to-be-done:** If motivations are key
-- **Use:** `skills/jobs-to-be-done/SKILL.md` output
+- **Use:** `jobs-to-be-done` output
 
 ### Outputs from Phase 2
 
@@ -207,7 +242,7 @@ Non-technical small business owners (solopreneurs, 1-10 employees) who sign up f
 ### Activities
 
 **1. Document Personas**
-- **Use:** `skills/proto-persona/SKILL.md` (component) output
+- **Use:** `proto-persona` (component) output
 - **Participants:** PM
 - **Duration:** 30 minutes
 - **Format:** Include persona name, role, goals, pain points, behaviors
@@ -251,7 +286,7 @@ Non-technical small business owners (solopreneurs, 1-10 employees) who sign up f
   > "This initiative supports our Q1 OKR: Reduce churn from 15% to 8%. Improving onboarding activation directly impacts retention."
 
 **2. Size Market Opportunity (Optional)**
-- **Use:** `skills/tam-sam-som-calculator/SKILL.md` (interactive) output
+- **Use:** `market-sizing` output
 - **When:** For major initiatives, new products, exec presentations
 - **Example:**
   > "TAM: 50M small businesses globally. SAM: 5M using SaaS tools. SOM: 500K solopreneurs in our target segments. Improving onboarding could unlock 30% of SAM (1.5M potential customers)."
@@ -313,7 +348,7 @@ We're building a **guided onboarding checklist** that walks new users through co
 - **Output:** Embedded in PRD or linked
 
 **3. Reference Story Map (Optional)**
-- **Use:** `skills/user-story-mapping-workshop/SKILL.md` output
+- **Use:** `user-story-mapping` output
 - **When:** For complex features with multiple release slices
 - **Output:** Link to story map
 
@@ -382,7 +417,7 @@ We're building a **guided onboarding checklist** that walks new users through co
 ### Activities
 
 **1. Write Epic Hypothesis**
-- **Use:** `skills/epic-hypothesis/SKILL.md` (component)
+- **Format:** "We believe that [capability] for [persona] will achieve [measurable outcome] because [evidence]. We'll know we're right when [metric] moves by [amount] within [timeframe]."
 - **Participants:** PM
 - **Duration:** 30 minutes
 - **Output:** Epic hypothesis statement
@@ -391,13 +426,13 @@ We're building a **guided onboarding checklist** that walks new users through co
 > "We believe that adding a guided onboarding checklist for non-technical users will increase activation rate from 40% to 60% because users currently drop off due to lack of guidance. We'll measure success by activation rate 30 days post-launch."
 
 **2. Break Down Epic into User Stories**
-- **Use:** `skills/epic-breakdown-advisor/SKILL.md` (interactive - with Richard Lawrence's 9 patterns)
+- **Use:** `user-story-splitting` (workflow steps, business rules, data variations, acceptance-criteria complexity and the other split patterns)
 - **Participants:** PM, design, engineering
 - **Duration:** 90 minutes
 - **Output:** User stories split by patterns (workflow, CRUD, business rules, etc.)
 
 **3. Write User Stories**
-- **Use:** `skills/user-story/SKILL.md` (component)
+- **Use:** `user-story` (component)
 - **Participants:** PM
 - **Duration:** 30 minutes per story
 - **Format:** User story + acceptance criteria
@@ -523,20 +558,20 @@ As a new user, I want to receive positive feedback when I complete the checklist
 Day 1:
 ├─ Phase 1: Executive Summary (30 min)
 ├─ Phase 2: Problem Statement (60 min)
-│  └─ Use: skills/problem-statement/SKILL.md
+│  └─ Use: problem-statement
 ├─ Phase 3: Target Users & Personas (30 min)
-│  └─ Use: skills/proto-persona/SKILL.md
+│  └─ Use: proto-persona
 └─ Phase 4: Strategic Context (45 min)
-   └─ Use: skills/tam-sam-som-calculator/SKILL.md (optional)
+   └─ Use: market-sizing (optional)
 
 Day 2:
 ├─ Phase 5: Solution Overview (60 min)
-│  └─ Use: skills/user-story-mapping-workshop/SKILL.md (optional)
+│  └─ Use: user-story-mapping (optional)
 ├─ Phase 6: Success Metrics (30 min)
 └─ Phase 7: User Stories & Requirements (90-120 min)
-   ├─ Use: skills/epic-hypothesis/SKILL.md
-   ├─ Use: skills/epic-breakdown-advisor/SKILL.md
-   └─ Use: skills/user-story/SKILL.md
+   ├─ Write the epic hypothesis (format above)
+   ├─ Use: user-story-splitting
+   └─ Use: user-story
 
 Day 3:
 ├─ Phase 8: Out of Scope & Dependencies (30 min)
@@ -584,7 +619,7 @@ Mini example excerpt:
 
 **Consequence:** Team questions whether problem is real
 
-**Fix:** Use discovery insights from `skills/discovery-process/SKILL.md`; include customer quotes, analytics, support tickets
+**Fix:** Use discovery insights from `discovery-process`; include customer quotes, analytics, support tickets
 
 ---
 
@@ -620,36 +655,24 @@ Mini example excerpt:
 ### Related Skills (Orchestrated by This Workflow)
 
 **Phase 2:**
-- `skills/problem-statement/SKILL.md` (component)
-- `skills/problem-framing-canvas/SKILL.md` (interactive, for context)
-- `skills/customer-journey-mapping-workshop/SKILL.md` (interactive, optional)
+- `problem-statement` (component)
+- `problem-framing-canvas` (interactive, for context)
 
 **Phase 3:**
-- `skills/proto-persona/SKILL.md` (component)
-- `skills/jobs-to-be-done/SKILL.md` (component, optional)
+- `proto-persona` (component)
+- `jobs-to-be-done` (component, optional)
 
 **Phase 4:**
-- `skills/tam-sam-som-calculator/SKILL.md` (interactive, optional)
+- `market-sizing` (optional)
 
 **Phase 5:**
-- `skills/user-story-mapping-workshop/SKILL.md` (interactive, optional)
+- `user-story-mapping` (optional)
 
 **Phase 7:**
-- `skills/epic-hypothesis/SKILL.md` (component)
-- `skills/epic-breakdown-advisor/SKILL.md` (interactive)
-- `skills/user-story/SKILL.md` (component)
+- `user-story-splitting` (break the epic into stories)
+- `user-story` (component)
 
 ### External Frameworks
 - Martin Eriksson, "How to Write a Good PRD" (2012) — PRD structure
 - Marty Cagan, *Inspired* (2017) — Product spec principles
 - Amazon, "Working Backwards" (PR/FAQ format) — Alternative to PRD
-
-### Dean's Work
-- [If Dean has PRD templates, link here]
-
----
-
-**Skill type:** Workflow
-**Suggested filename:** `prd-development.md`
-**Suggested placement:** `/skills/workflows/`
-**Dependencies:** Orchestrates 8+ component and interactive skills across 8 phases

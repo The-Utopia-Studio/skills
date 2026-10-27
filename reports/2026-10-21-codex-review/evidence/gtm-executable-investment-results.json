@@ -1,0 +1,30 @@
+{
+  "duplicate_union": 0.3,
+  "independent_union": 0.51,
+  "disjoint_union": 0.6,
+  "conditional_joint": 0.1,
+  "wacc": [
+    {
+      "debt": 0,
+      "cash": 30,
+      "value": 0.1
+    },
+    {
+      "debt": 20,
+      "cash": 50,
+      "value": 0.09
+    },
+    {
+      "debt": 20,
+      "cash": 0,
+      "value": 0.09
+    }
+  ],
+  "ebitda": [
+    25,
+    -5,
+    0
+  ],
+  "segment_total": 100,
+  "peg": 1
+}

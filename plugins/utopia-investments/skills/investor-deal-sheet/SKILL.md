@@ -18,7 +18,7 @@ The deal sheet is also the discipline document. If the offer does not fit on one
 In this order, on one A4 page. Roughly 350–500 words of actual prose; the rest is figures.
 
 1. **The one-liner** (1 sentence). What the company is, in words a generalist partner can repeat. No category invention, no "AI-powered platform for". If it needs a comma splice and three adjectives, it is not ready.
-2. **The round** (a table, 5–7 rows). Instrument, amount, pre-money, minimum cheque, amount already committed, close date, entity and jurisdiction. State the instrument precisely — "SAFE, post-money, no discount, MFN" not "equity round".
+2. **The round** (a table, 5–7 rows). Instrument, amount, applicable price/cap/discount (or explicitly unpriced), minimum cheque, amount already committed, close date, entity and jurisdiction. State the instrument precisely — "SAFE, post-money, no discount, MFN" not "equity round".
 3. **Traction** (3–4 stat tiles). The strongest verifiable facts, with an as-of date. Contracted revenue beats pipeline. Signed beats LOI. A named customer beats a count.
 4. **Why now** (2–3 sentences). The change in the world that makes this the moment. Must be external to you — a regulation, a cost curve, a supply shift. "We just launched" is not a why-now.
 5. **Business model** (2–3 sentences or a 3-row table). What you charge, who pays, and the unit. One number for gross margin.
@@ -47,7 +47,7 @@ Score a draft out of 6. Below 5, it is not ready to send.
 | # | Test |
 |---|------|
 | 1 | A partner can restate the business in one sentence after 30 seconds |
-| 2 | Instrument, amount and pre-money are all explicitly stated |
+| 2 | Instrument, amount and applicable pricing terms are explicitly stated: pre/post-money for priced equity; cap/discount and cap basis for a SAFE; or explicitly unpriced |
 | 3 | Every traction figure is verifiable and carries an as-of date |
 | 4 | Every use-of-funds line names what it proves |
 | 5 | The why-now is external to the company |

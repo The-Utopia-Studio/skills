@@ -1,6 +1,14 @@
 ---
 name: interface-craft
-description: "Interface Craft by Josh Puckett — a toolkit for building polished, animated interfaces in React. Includes Storyboard Animation (human-readable animation DSL with stage-driven sequencing), DialKit (live control panels for tuning animation values), and Design Critique (systematic UI review based on Josh Puckett's methodology). Triggers on: animate, animation, transition, storyboard, entrance, motion, spring, easing, timing, dialkit, sliders, controls, tune, tweak, critique, review, feedback, audit, improve, polish, refine, redesign."
+description: >-
+  Refactor React animations into a readable storyboard (named TIMING constants,
+  config objects, one stage integer driving the sequence instead of scattered
+  setTimeout booleans) and add DialKit live slider panels to tune springs,
+  stagger, scale and blur. Use when the user asks to turn setTimeout or
+  useEffect animation chains into a storyboard, mentions storyboard or DialKit,
+  or wants sliders or dials to tweak animation values live. Not for adding
+  animation to a feature from scratch (use animate) or a polish pass (use
+  polish).
 argument-hint: "[description, file path, or sub-skill name]"
 ---
 

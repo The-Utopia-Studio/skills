@@ -100,8 +100,8 @@ Incremental value = **$125,000/facility/yr**.
 **Invoice line:** **$20,000 per facility, per year.**
 
 **Sanity checks:**
-- [x] PRICE $20,000 > cost floor $1,700 → margin ≈ **12×**.
-- [x] Buyer retained multiple = $125,000 ÷ $20,000 = **6.25×** (in the 5–10× band).
+- [x] PRICE $20,000 > cost floor $1,700 → gross margin = ($20,000 − $1,700) / $20,000 = **91.5%** (price/cost ≈ 11.76×).
+- [x] Gross benefit-to-price multiple = $125,000 ÷ $20,000 = **6.25×** (in the 5–10× band).
 - [x] Improvement-proof: as recall climbs toward 1.0 via the flywheel, incremental breaches avoided rise, and per-facility pricing lets Azraq re-anchor upward at renewal on the shared breach log. A per-seat price would have captured none of that.
 
 ---
@@ -111,7 +111,7 @@ Incremental value = **$125,000/facility/yr**.
 - [x] Anchor scores 1.0 (paid penalty), not a WTP survey or competitor glance
 - [x] Price is 16% of measured incremental value — not cost-plus, not competitor-anchored
 - [x] Charged per-facility (asset the outcome attaches to) — not per-seat
-- [x] Cost floor cleared 12×; buyer keeps 6.25×; metric improvement-proof
+- [x] Cost floor cleared 12×; gross benefit/price 6.25× (net ROI 5.25×); metric improvement-proof
 
 Model ships. Carry $20,000/facility/yr into `pilot-six-term-sheet` as term 2's price and the per-facility basis as term 6's conversion metric.
 

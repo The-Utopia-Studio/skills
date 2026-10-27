@@ -1,6 +1,13 @@
 ---
 name: delight
-description: Add moments of joy, personality, and unexpected touches that make interfaces memorable and enjoyable to use. Elevates functional to delightful. Use when the user asks to add polish, personality, animations, micro-interactions, delight, or make an interface feel fun or memorable.
+description: >-
+  Add moments of joy, personality and unexpected touches that make interfaces
+  memorable: celebration moments, personality in copy, illustrations, playful
+  empty and loading states, satisfying interactions, easter eggs, sound. Use
+  when the user wants an interface to feel fun, charming, memorable or less
+  joyless. Not for a pre-ship detail pass (use polish), adding functional
+  transitions and micro-interactions (use animate), or technically ambitious
+  effects (use overdrive).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"

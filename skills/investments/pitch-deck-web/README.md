@@ -1,4 +1,4 @@
-# pitch-deck
+# pitch-deck-web
 
 A Claude Code skill that takes a founder or team from nothing to a deployed,
 responsive, interactive pitch-deck site. Sibling to the
@@ -10,7 +10,7 @@ brand book exists yet) and ships a section-scroll deck site in the
 ## What ships
 
 ```
-pitch-deck/
+pitch-deck-web/
 ├── SKILL.md                          # 5-phase flow: scope → brand → brief → scaffold → QA/deploy
 ├── references/
 │   ├── section-map.md                # 12 canonical slides + investor/sales defaults

@@ -1,6 +1,14 @@
 ---
 name: user-story
-description: Create user stories with Mike Cohn format and Gherkin acceptance criteria. Use when turning user needs into development-ready work with clear outcomes and testable conditions.
+description: >-
+  Write development-ready user stories: a single story in Mike Cohn format (As a / I want to / so
+  that) with Gherkin Given/When/Then acceptance criteria, or a full set of backlog stories for a
+  feature using the 3 C's (Card, Conversation, Confirmation) and INVEST with numbered acceptance
+  criteria and supplied design links. Use when writing a user story, breaking a feature into backlog items,
+  converting a PRD requirement into stories, defining acceptance criteria, or writing situation-first
+  job stories (When / I want to / so I can). Not for splitting an oversized story or epic
+  (use user-story-splitting), or laying out the whole journey and release slices (use
+  user-story-mapping).
 intent: >-
   Create clear, concise user stories that combine Mike Cohn's user story format with Gherkin-style acceptance criteria. Use this to translate user needs into actionable development work that focuses on outcomes, ensures shared understanding between product and engineering, and provides testable success criteria.
 type: component
@@ -14,7 +22,6 @@ scenarios:
   - "Convert this PRD requirement into a properly formatted user story with Gherkin acceptance criteria"
 estimated_time: "5-10 min"
 ---
-
 
 ## Purpose
 Create clear, concise user stories that combine Mike Cohn's user story format with Gherkin-style acceptance criteria. Use this to translate user needs into actionable development work that focuses on outcomes, ensures shared understanding between product and engineering, and provides testable success criteria.
@@ -59,7 +66,7 @@ A user story combines:
 
 ### When NOT to Use This
 - For pure technical debt or refactoring (use engineering tasks instead)
-- When stories are too large (split first—see `skills/user-story-splitting/SKILL.md`)
+- When stories are too large (split first—see `user-story-splitting`)
 - Before understanding the user problem (write a problem statement first)
 
 ---
@@ -68,12 +75,12 @@ A user story combines:
 
 ### Step 1: Gather Context
 Before writing a story, ensure you have:
-- **User persona:** Who is this for? (reference `skills/proto-persona/SKILL.md`)
-- **Problem understanding:** What need does this address? (reference `skills/problem-statement/SKILL.md`)
+- **User persona:** Who is this for? (reference `proto-persona`)
+- **Problem understanding:** What need does this address? (reference `problem-statement`)
 - **Desired outcome:** What does success look like?
 - **Constraints:** Technical, time, or scope limitations
 
-**If missing context:** Run discovery interviews or problem validation work first.
+**If missing context:** Use the facts already supplied and label assumptions or open questions. Ask only for missing information that blocks a useful story; do not require a new discovery cycle to draft one.
 
 ---
 
@@ -135,11 +142,11 @@ Fill in the template:
 **Quality checks:**
 - **Multiple Givens are okay:** Preconditions stack up (e.g., "Given I'm logged in" + "Given I have items in my cart")
 - **Only one When:** If you need multiple "When" statements, you likely have multiple stories—split them
-- **Only one Then:** If you need multiple "Then" statements, you likely have multiple stories—split them
+- **Related outcomes may share a scenario:** Use `Then` plus `And` for consequences of the same action. Split only independently valuable behaviors, not every assertion.
 - **Alignment:** Does "When" match "I want to"? Does "Then" match "so that"?
 
 **Red flags:**
-- **Multiple Whens/Thens:** Sign of scope creep—split the story (reference `skills/user-story-splitting/SKILL.md`)
+- **Unrelated actions or outcomes:** May indicate scope creep; consider splitting independently valuable behaviors (reference `user-story-splitting`). Multiple assertions alone do not require splitting.
 - **Vague Thens:** "Then I see improved performance" (unmeasurable—make it specific)
 
 ---
@@ -163,8 +170,59 @@ Write a short, memorable summary that captures the story's value:
 
 - **Read aloud to the team:** Does everyone understand who, what, why?
 - **Test acceptance criteria:** Can QA write test cases from this?
-- **Check for splitting:** If the story feels too big, use `skills/user-story-splitting/SKILL.md`
+- **Check for splitting:** If the story feels too big, use `user-story-splitting`
 - **Ensure testability:** Can you prove "Then" happened?
+
+---
+
+### Mode B: Break a Feature into a Full Story Set (3 C's + INVEST)
+
+Use this when the user hands you a whole feature (plus optional design link and assumptions) and wants the backlog items, not one polished story.
+
+1. **Analyze the feature** from the design and context provided.
+2. **Identify user roles** and the distinct journeys through the feature; one story per journey slice.
+3. **Apply the 3 C's** to every story:
+   - **Card:** a simple title and one-liner ("As a [role], I want to [action], so that [benefit].")
+   - **Conversation:** a short note on intent and open questions for the team
+   - **Confirmation:** Plain, numbered, testable acceptance criteria grounded in supplied requirements; do not invent criteria to reach a fixed count
+4. **Check INVEST:** Independent, Negotiable, Valuable, Estimable, Small (fits one sprint), Testable. Stories should be buildable in any order.
+5. **Use plain language** a primary-school graduate can understand.
+6. **Link a supplied design file** (Figma, Miro) on each story; otherwise mark it not provided.
+
+Story-set format:
+
+```markdown
+**Title:** [Feature slice name]
+**Description:** As a [user role], I want to [action], so that [benefit].
+**Design:** [Link to design files]
+**Acceptance Criteria:**
+1. [Clear, testable criterion]
+2. [Observable behavior]
+3. [System validates correctly]
+4. [Edge case handling]
+5. [Performance or accessibility consideration]
+6. [Integration point]
+```
+
+Example: **Recently Viewed Section.** As an online shopper, I want to see a "Recently viewed" section on the product page so I can easily revisit items I considered. Criteria: shown at the bottom of the product page for anyone who has viewed at least one product; hidden on the first product page of a session; the current product is excluded; cards show image, title and price; each card says when it was viewed ("Viewed 5 minutes ago"); clicking a card opens that product page.
+
+Plain numbered criteria are fine in this mode; convert to Gherkin (Step 3) when the team needs QA-ready scenarios.
+
+---
+
+### Mode C: Situation-First Job Stories (JTBD)
+
+Use for job stories, JTBD-style backlog items, or the requested **When / I want to / so I can** format. Preserve the triggering situation rather than replacing it with a persona. The former `job-stories` method and example are preserved in [references/job-stories.md](references/job-stories.md).
+
+1. Identify the situation that triggers the need, the motivation, and the desired outcome.
+2. Write: **When [situation], I want to [motivation], so I can [outcome].**
+3. Add observable acceptance criteria covering supplied requirements and relevant edge cases. Label proposed additions; never invent a quota of 6–8 requirements, notifications, thresholds, or integrations.
+4. Include a supplied design link; otherwise write “Design: not provided” rather than fabricating one.
+5. Use numbered criteria or Gherkin as requested. Keep related consequences of one action together.
+
+Example: **Offline inspection submission.** When coverage drops while I submit an inspection, I want my report retained and submitted once connectivity returns, so I can finish the visit without losing work or creating duplicates. Criteria: retain the report on device; show pending status; retry after reconnection; do not create duplicate reports.
+
+Role-first requests still use Mode A; full feature backlog requests use Mode B. Splitting an oversized story and planning release slices remain separate skills.
 
 ---
 
@@ -210,7 +268,7 @@ Mini example excerpt:
 
 **Consequence:** No persona clarity. Different users have different needs.
 
-**Fix:** Use specific personas: "As a trial user," "As a paid subscriber," "As an admin," etc. (reference `skills/proto-persona/SKILL.md`)
+**Fix:** Use specific personas: "As a trial user," "As a paid subscriber," "As an admin," etc. (reference `proto-persona`)
 
 ---
 
@@ -223,12 +281,12 @@ Mini example excerpt:
 
 ---
 
-### Pitfall 4: Multiple When/Then Statements
-**Symptom:** Acceptance criteria with 5 "When" statements and 5 "Then" statements
+### Pitfall 4: Unrelated Behaviors in One Scenario
+**Symptom:** One scenario combines separate user goals or independent workflows.
 
-**Consequence:** Story is too big. Likely multiple features bundled together.
+**Consequence:** Scope and verification become difficult to understand.
 
-**Fix:** Split the story using `skills/user-story-splitting/SKILL.md`. Each When/Then pair should be its own story (or at least evaluated for splitting).
+**Fix:** Split independently valuable behaviors using `user-story-splitting`. Keep related assertions for one action together; multiple scenarios or Then/And checks do not by themselves make a story too large.
 
 ---
 
@@ -244,29 +302,17 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/user-story-splitting/SKILL.md` — How to break large stories into smaller ones
-- `skills/proto-persona/SKILL.md` — Defines the "As a [persona]" section
-- `skills/problem-statement/SKILL.md` — Stories should address validated problems
-- `skills/epic-hypothesis/SKILL.md` — Epics decompose into user stories
+- `user-story-splitting` — How to break large stories into smaller ones
+- `proto-persona` — Defines the "As a [persona]" section
+- `problem-statement` — Stories should address validated problems
 
 ### Optional Helpers
-- `skills/user-story/scripts/user-story-template.py` — Deterministic Markdown stub generator (no network access)
+- `scripts/user-story-template.py` — Deterministic Markdown stub generator (no network access)
 
 ### External Frameworks
 - Mike Cohn, *User Stories Applied* (2004) — Origin of the "As a / I want / so that" format
 - Gherkin (Cucumber) — "Given/When/Then" acceptance criteria format
 - INVEST criteria (Independent, Negotiable, Valuable, Estimable, Small, Testable)
 
-### Dean's Work
-- [Link to relevant Dean Peters' Substack articles if applicable]
-
 ### Provenance
-- Adapted from `prompts/user-story-prompt-template.md` in the `https://github.com/deanpeters/product-manager-prompts` repo.
-
----
-
-**Skill type:** Component
-**Suggested filename:** `user-story.md`
-**Suggested placement:** `/skills/components/`
-**Dependencies:** References `skills/proto-persona/SKILL.md`, `skills/problem-statement/SKILL.md`
-**Used by:** `skills/user-story-splitting/SKILL.md`, `skills/epic-hypothesis/SKILL.md`
+- Adapted from Dean Peters' product-manager-prompts repo (https://github.com/deanpeters/product-manager-prompts).

@@ -1,6 +1,14 @@
 ---
 name: devops-advisor
-description: Audits infrastructure setup — database config, caching, performance, and scaling patterns. Provides concrete detection commands and improvement steps. Use when the user asks about "infrastructure", "database setup", "caching", "scaling", "performance", or "architecture". Don't use for CI/CD setup (use deployment-engineer), monitoring (use monitoring-setup), or security (use security-auditor).
+description: >-
+  Assess infrastructure readiness to scale: database connection pooling,
+  indexes, migrations and backups, caching and CDN, background job queues,
+  statelessness and horizontal scaling, with detection commands and fixes ranked
+  by impact. Use when the user asks if their stack will survive growth (for
+  example 1k to 50k users), wants an infrastructure or scaling review, or
+  mentions no connection pooling, no Redis, no queue or untested backups. Not
+  for CI/CD setup (use deployment-engineer), cloud bills (use cost-optimizer),
+  or security (use security-auditor).
 ---
 
 # DevOps Advisor

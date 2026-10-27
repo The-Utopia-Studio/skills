@@ -61,7 +61,7 @@ Plus the two the fellow brought: the public standards corpus and the incident-ne
 
 - Rows 3 and 6 go to `data-rights-clause` (section 06): the shadow threads need a consent basis, the telemetry needs a vendor clause. Do not draft either here.
 - The supervisors' unwritten "safe to proceed?" judgment (seam 5) is only partly in the threads. To capture the rest, run `tacit-knowledge-interview`.
-- Field logs (row 4) are both the moat seed and the eval set: a model cannot narrate Barrier's own crews' calls from training, so they are the only data that can measure whether Barrier's alerts match what experienced crews actually decide.
+- Field logs (row 4) are both the moat seed and the eval set: a model cannot narrate Barrier's own crews' calls from training, so they can supply task-representative evaluation cases if held out from training/tuning. Proprietary status does not itself establish validity; public or synthetic cases may complement coverage with explicit provenance and limitations.
 
 ## The correction this skill forced
 

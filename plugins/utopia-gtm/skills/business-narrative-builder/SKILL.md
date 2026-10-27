@@ -1,6 +1,15 @@
 ---
 name: business-narrative-builder
-description: Constructs a structured narrative linking a company's qualitative business story to quantitative valuation drivers (revenue growth, target margin, reinvestment efficiency, cost of capital, failure risk). Classifies the company within a 6-stage corporate life cycle and sizes the total addressable market. Use when starting a company analysis, building a valuation narrative, assessing competitive position, sizing TAM, or when user mentions business narrative, story to numbers, life cycle stage, or company analysis.
+description: >-
+  Use this skill to build a story-to-numbers valuation narrative for a company
+  (Damodaran style): classify its corporate life-cycle stage, size its TAM, and
+  turn the business story into the five value drivers (revenue growth, target
+  operating margin, sales-to-capital, cost of capital, failure probability), with
+  an alternative narrative. Use when the user asks for a story-to-numbers or
+  valuation narrative, life-cycle stage, "what has to be true for this company's
+  valuation", or narrative inputs for a DCF. Not for brand narratives, messaging
+  pillars or positioning (use positioning-workshop), building the DCF itself (use
+  dcf-model), or a manifesto (use manifesto).
 ---
 # Business Narrative Builder
 
@@ -136,7 +145,7 @@ Sales-to-Capital Ratio = Revenue / Invested Capital
 Reinvestment = Change in Revenue / Sales-to-Capital Ratio
 
 Value of Firm = Sum of [FCFF_t / (1 + WACC)^t] + Terminal Value / (1 + WACC)^n
-  (preview: detailed DCF mechanics are in intrinsic-valuation-dcf)
+  (preview: detailed DCF mechanics are in dcf-model)
 ```
 
 **Life cycle stages (summary):**
@@ -165,4 +174,4 @@ Value of Firm = Sum of [FCFF_t / (1 + WACC)^t] + Terminal Value / (1 + WACC)^n
 
 **Outputs produced:**
 
-- `business-narrative.md`: Narrative document linking story to numbers, life cycle classification, TAM estimate, value driver table, alternative narratives
+- A narrative document (save it as business-narrative.md) linking story to numbers, life cycle classification, TAM estimate, value driver table, alternative narratives

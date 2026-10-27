@@ -1,0 +1,22 @@
+[
+  {
+    "layout": "source/skills/founder-productivity/last30days",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "layout": "claude/cache/utopia-founder-productivity/2.0.0/skills/last30days",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "layout": "codex/cache/utopia-founder-productivity/2.0.0/skills/last30days",
+    "exit": 0,
+    "stderr": ""
+  },
+  {
+    "layout": "unset",
+    "exit": 1,
+    "stderr": "ERROR: Set SKILL_ROOT to the loaded skill directory containing SKILL.md and scripts/last30days.py\n"
+  }
+]

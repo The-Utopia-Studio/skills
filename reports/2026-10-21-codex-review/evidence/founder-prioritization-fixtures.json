@@ -1,0 +1,44 @@
+[
+  {
+    "id": "broad-mild",
+    "input": {
+      "reach": 1000,
+      "importance": 0.5,
+      "satisfaction": 0.8,
+      "confidence": 0.8,
+      "effort": 2
+    },
+    "per_customer_impact": 0.09999999999999998,
+    "correct_rice": 39.99999999999999,
+    "old_double_reach": 39999.99999999999,
+    "units": "reach persons \u00d7 per-person impact \u00d7 dimensionless confidence / person-month effort"
+  },
+  {
+    "id": "small-acute",
+    "input": {
+      "reach": 100,
+      "importance": 1,
+      "satisfaction": 0.1,
+      "confidence": 1,
+      "effort": 0.5
+    },
+    "per_customer_impact": 0.9,
+    "correct_rice": 180.0,
+    "old_double_reach": 18000.0,
+    "units": "reach persons \u00d7 per-person impact \u00d7 dimensionless confidence / person-month effort"
+  },
+  {
+    "id": "zero-opportunity",
+    "input": {
+      "reach": 10000,
+      "importance": 1,
+      "satisfaction": 1,
+      "confidence": 1,
+      "effort": 1
+    },
+    "per_customer_impact": 0,
+    "correct_rice": 0.0,
+    "old_double_reach": 0.0,
+    "units": "reach persons \u00d7 per-person impact \u00d7 dimensionless confidence / person-month effort"
+  }
+]

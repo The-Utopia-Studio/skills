@@ -96,8 +96,8 @@ Monthly Expenses:
   - COGS: $300,000
 Gross Burn: $1,150,000/month
 
-Monthly Revenue: $2,000,000
-Net Burn: -$850,000/month (profitable! ✅)
+Monthly Cash Collected (assumed equal to recognized revenue in this simplified example): $2,000,000
+Net Burn: -$850,000/month (cash-generative in this period; not proof of net income)
 
 Cash Balance: $25,000,000
 Runway: Infinite (profitable)

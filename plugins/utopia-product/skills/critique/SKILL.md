@@ -1,6 +1,6 @@
 ---
 name: critique
-description: Evaluate design from a UX perspective, assessing visual hierarchy, information architecture, emotional resonance, cognitive load, and overall quality with quantitative scoring, persona-based testing, automated anti-pattern detection, and actionable feedback. Use when the user asks to review, critique, evaluate, or give feedback on a design or component.
+description: "Evaluate a design from a UX perspective: visual hierarchy, information architecture, cognitive load, emotional resonance, brand-system compliance and business-goal fit, with Nielsen heuristic scoring, persona testing, automated AI-slop detection, two sharp questions and a prioritized action plan. Use when the user asks to review, critique, evaluate or give feedback on a design, screenshot, URL, component or wireframe, or to check it against their brand guidelines. Not for a technical accessibility/performance/standards audit (use audit) or for building or redesigning (use impeccable)."
 version: 2.1.1
 user-invocable: true
 argument-hint: "[area (feature, page, component...)]"
@@ -144,7 +144,7 @@ For each issue, tag with **P0-P3 severity** (consult [heuristics-scoring](refere
 - **[P?] What**: Name the problem clearly
 - **Why it matters**: How this hurts users or undermines goals
 - **Fix**: What to do about it (be concrete)
-- **Suggested command**: Which command could address this (from: /animate, /quieter, /shape, /optimize, /adapt, /clarify, /layout, /distill, /delight, /audit, /harden, /polish, /bolder, /typeset, /critique, /colorize, /overdrive)
+- **Suggested command**: Which command could address this (from: /animate, /quieter, /shape, /optimize, /adapt, /clarify, /layout, /distill, /delight, /audit, /polish, /bolder, /typeset, /critique, /colorize, /overdrive)
 
 #### Persona Red Flags
 > *Consult [personas](reference/personas.md)*
@@ -158,6 +158,9 @@ For each selected persona, walk through the primary user action and list specifi
 **Jordan (First-Timer)**: Icon-only nav in sidebar. Technical jargon in error messages ("404 Not Found"). No visible help. Will abandon at step 2.
 
 Be specific. Name the exact elements and interactions that fail each persona. Don't write generic persona descriptions; write what broke for them.
+
+#### Brand-system deviations and business fit
+If the user supplied a brand design system, or the screen has a clear business goal, add the brand-deviation table and the business-goal check from [brand-and-business-review](reference/brand-and-business-review.md). Close the findings with exactly two sharp, non-yes/no questions tied to specific findings, as defined there.
 
 #### Minor Observations
 Quick notes on smaller issues worth addressing.
@@ -202,6 +205,9 @@ Ask questions along these lines (adapt to the specific findings; do NOT ask gene
 
 #### Action Summary
 
+Group the plan into the three tiers (Now / This sprint / Next sprint) defined in [brand-and-business-review](reference/brand-and-business-review.md).
+
+
 List recommended commands in priority order, based on the user's answers:
 
 1. **`/command-name`**: Brief description of what to fix (specific context from critique findings)
@@ -209,7 +215,7 @@ List recommended commands in priority order, based on the user's answers:
 ...
 
 **Rules for recommendations**:
-- Only recommend commands from: /animate, /quieter, /shape, /optimize, /adapt, /clarify, /layout, /distill, /delight, /audit, /harden, /polish, /bolder, /typeset, /critique, /colorize, /overdrive
+- Only recommend commands from: /animate, /quieter, /shape, /optimize, /adapt, /clarify, /layout, /distill, /delight, /audit, /polish, /bolder, /typeset, /critique, /colorize, /overdrive
 - Order by the user's stated priorities first, then by impact
 - Each item's description should carry enough context that the command knows what to focus on
 - Map each Priority Issue to the appropriate command

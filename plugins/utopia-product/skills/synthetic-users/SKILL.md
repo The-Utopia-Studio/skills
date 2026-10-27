@@ -1,6 +1,16 @@
 ---
 name: synthetic-users
-description: Build a synthetic user panel grounded in your YODA corpus and pre-test a concept, message, or flow against it — cheaply, before you spend real interview time. Returns a Synthetic Panel + Pre-Test Transcript carrying a lie ledger (what synthetic users systematically get wrong: they never pay, never no-show, over-rationalise, over-agree) and a kill / revise / promote-to-real-interview verdict. Fires on "test this before real interviews", "simulate a user", "dry-run the pitch", "pre-test the message/flow", "which of these should I even bother interviewing about". NOT for running the real interview that captures an expert's judgment (use tacit-knowledge-interview), scripting a Mom-Test discovery interview (use interview-script) or planning one (use discovery-interview-prep), or sourcing the corpus the panel is built from (use yoda-data-sourcing). Never treats a synthetic response as validation.
+description: >-
+  Build a synthetic user panel grounded in your YODA corpus and pre-test a concept, message, or flow
+  against it — cheaply, before you spend real interview time. Returns a Synthetic Panel + Pre-Test
+  Transcript carrying a lie ledger (what synthetic users systematically get wrong: they never pay,
+  never no-show, over-rationalise, over-agree) and a kill / revise / promote-to-real-interview
+  verdict. Fires on "test this before real interviews", "simulate a user", "dry-run the pitch",
+  "pre-test the message/flow", "which of these should I even bother interviewing about". NOT for
+  running the real interview that captures an expert's judgment (use tacit-knowledge-interview),
+  scripting a Mom-Test discovery interview (use discovery-interview-prep) or planning one (use
+  discovery-interview-prep), or sourcing the corpus the panel is built from (use yoda-data-sourcing).
+  Never treats a synthetic response as validation.
 type: interactive
 supersedes: none
 ---
@@ -11,7 +21,7 @@ Takes a concept, a message, or a flow you are about to take to real customers, a
 
 ## The Icarus reframe
 
-The generic move is to prompt an LLM to role-play a persona and ask it whether it likes your idea. It will say yes, because a base model agrees, never pays, and never no-shows. That is not a test; it is a machine built to flatter you. The Icarus version fixes two things. First, ground every panellist in your proprietary corpus, not the model's prior — a persona a generic prompt could invent only tells you what every competitor's model already believes about your market. Second, run it as a kill screen, never a validation: positive signal is null, only negative signal (confusion, an existing workaround, a flow that breaks) may transfer to a real user, and even then it caps at [Hypothesis]. Synthetic output sits below opinion on the evidence ladder. Its whole value is spending a real interview well, not replacing it.
+The generic move is to prompt an LLM to role-play a persona and ask it whether it likes your idea. It will say yes, because a base model agrees, never pays, and never no-shows. That is not a test; it is a machine built to flatter you. The Icarus version fixes two things. First, ground every panellist in your proprietary corpus, not the model's prior — a persona a generic prompt could invent only tells you what every competitor's model already believes about your market. Second, run it as a kill screen, never a validation: positive signal is null, negative signal (confusion, an existing workaround, a flow that breaks) also requires a real-user check before it can be generalized, and even then it caps at [Hypothesis]. Synthetic output sits below opinion on the evidence ladder. Its whole value is spending a real interview well, not replacing it.
 
 ## When to use / When NOT
 
@@ -22,7 +32,7 @@ Do not use it for:
 | If the fellow wants… | Use instead | Why not this skill |
 |---|---|---|
 | To watch a real expert do a real task and capture their judgment | `tacit-knowledge-interview` | That creates real behaviour signal (0.7); this simulates and caps at [Hypothesis]. This runs *before* it to decide whether that interview is worth booking. |
-| A Mom-Test script for a real discovery interview | `interview-script` | That prepares questions for a real person; this poses a concept to a simulation. |
+| A Mom-Test script for a real discovery interview | `discovery-interview-prep` | That prepares questions for a real person; this poses a concept to a simulation. |
 | To plan/prep real discovery interviews (goal, segment, method) | `discovery-interview-prep` | That plans the real round; this pre-screens what the round should even cover. |
 | To source the proprietary data the panel is built from | `yoda-data-sourcing` | That finds the corpus; this consumes it. No corpus, no grounded panel — see Step 0. |
 | To find the unmet need, or map who the buyer is | `unserved-needs-finder`, `user-buyer-decider-map` | Those define what to build for and who buys; this pre-tests a concept once you have one. |
@@ -66,8 +76,8 @@ Pose the concept, message, or flow to each grounded panellist and capture the tr
 
 | Synthetic response | Read it as | Action |
 |---|---|---|
-| Confusion — can't parse the message / value | Kill signal, likely transfers | Log it; it is the highest-value output here |
-| Names an existing workaround from the corpus | Kill signal, likely transfers (the corpus is talking) | Log it; the concept may be competing with a free habit |
+| Confusion — can't parse the message / value | Candidate issue, transfer unverified | Log it; it is the highest-value output here |
+| Names an existing workaround from the corpus | Candidate issue, transfer unverified (the corpus is talking) | Log it; the concept may be competing with a free habit |
 | Stalls at a specific flow step | Kill/revise signal | Log the exact step |
 | Flat "no / I wouldn't" | Weak kill signal | Log, but a real check is cheap; do not over-weight |
 | "Yes / I'd use this / great idea" | **Null** | Discard. Acquiescence + never-pay. Reading this as a win is the whole trap. |
@@ -94,9 +104,9 @@ Three outcomes. There is no fourth.
 
 | Verdict | When | Next |
 |---|---|---|
-| **KILL** | A corpus-grounded panellist could not grasp the concept, or named a cheaper existing path | Drop or rethink before spending a real interview. One real confirmation is still worth it before you fully bury it. |
+| **KILL** | A corpus-grounded panellist could not grasp the concept, or named a cheaper existing path | Pause or revise the concept for the next real check. Do not permanently reject it on synthetic output alone; confirm the alleged failure with a real target user or direct corpus evidence. |
 | **REVISE** | The message or flow broke at a specific, nameable point | Fix that point and re-run the panel — it is cheap |
-| **PROMOTE** | It survived the synthetic kill screen | It has *earned a real interview* — `tacit-knowledge-interview` / `interview-script`. Surviving synthetic is a ticket to spend the real interview, not validation. |
+| **PROMOTE** | It survived the synthetic kill screen | It has *earned a real interview* — `tacit-knowledge-interview` / `discovery-interview-prep`. Surviving synthetic is a ticket to spend the real interview, not validation. |
 
 **Kill line.** The output must never say "validated", and must carry the lie ledger. If it presents a synthetic response as real validation, or omits the what-they-lie-about caveat, it is auto-failed — that is the exact failure this skill exists to prevent.
 
@@ -108,9 +118,9 @@ Which synthetic signals transfer to a real user:
 
 | Synthetic signal | Transfers? | Why |
 |---|---|---|
-| Confusion / can't parse the message | Often | Comprehension rides on language, where the lies bite least. A message a grounded synthetic can't parse, a real user probably can't either. |
+| Confusion / can't parse the message | Unknown until tested | Model confusion can be a false negative. Test the specific wording with real target users; it does not establish human confusion. |
 | Names a workaround already in the corpus | Often | It is echoing recorded behaviour, not the model's prior |
-| Relative ranking of two framings | Direction only | Trust which one wins, never by how much — magnitude is a lie |
+| Relative ranking of two framings | Direction only | Use the ranking only to propose a real comparison; neither its direction nor magnitude is validated |
 | "I would use this" / enthusiasm | No | Over-agree + never-pay + never-no-show, stacked |
 | "I would pay $X" | Never | Never-pay. WTP is money-moved, and this is a simulation. |
 | A tidy reason "why" they'd choose | No | Over-rationalise |
@@ -134,8 +144,8 @@ See `examples/sample.md` for a full run on Mentix: a four-panellist panel built 
 
 - `yoda-data-sourcing` (section 03) — sources the corpus this skill consumes. Run it first; a panel with no corpus is Step 0's stop.
 - `tacit-knowledge-interview` (section 02) — the real interview this skill pre-tests *before*. A captured judgment is also excellent grounding for a panellist. Promote survivors here; never let this skill stand in for it.
-- `interview-script`, `discovery-interview-prep` (section 02) — the real Mom-Test round. This skill decides what that round is even worth covering.
+- `discovery-interview-prep` (section 02) — the real Mom-Test round. This skill decides what that round is even worth covering.
 - `unserved-needs-finder`, `user-buyer-decider-map` (section 02) — define the need and the buyer; this pre-tests a concept once you have one.
-- `prototyping-pretotyping` (discovery) — the next rung up: a cheap test with real people. Synthetic pre-test comes below it, run first to decide what to pretotype.
+- `probe-matrix` (discovery) — the next rung up: a cheap test with real people. Synthetic pre-test comes below it, run first to decide what to pretotype.
 
 Supersedes: none. Fully proprietary — there is no prior synthetic-user skill in the pack, and the generic "role-play a persona" pattern is the exact anti-pattern this skill is built to correct.

@@ -1,6 +1,13 @@
 ---
 name: concept-council
-description: First-contact teardown of a raw product idea. Fires when a fellow says "here's my idea", "tear this apart", "rip this concept apart", "what am I missing", or "what should I build first". Convenes five adversarial lenses, names the one load-bearing gap, and returns a Gap Map plus one First-Probe Brief costing under a week. NOT for an already-scoped concept you want stress-tested against the five so-whats (use so-what-stress-test) or scored numerically across eight dimensions (use problem-quality-scorecard).
+description: >-
+  First-contact teardown of a raw product idea. Use when a founder or fellow pitches a new idea in a
+  line or two ('here's my idea', 'tear this apart', 'rip this concept apart', 'what am I missing',
+  'what should I build first') and wants it attacked before anything is built. Convenes five
+  adversarial lenses, names the one load-bearing gap, and returns a Gap Map plus one First-Probe Brief
+  costing under a week. NOT for an already-scoped concept stress-tested on the five so-whats (use
+  so-what-stress-test), a numeric 8-dimension problem score (use problem-quality-scorecard), or
+  weighing an internal company decision from stakeholder perspectives (use role-switch).
 type: interactive
 supersedes: none
 ---
@@ -24,7 +31,7 @@ Do not use it for:
 | The five so-what questions run on an already-formed concept | `so-what-stress-test` | That interrogates a stated concept; this tears down a raw one and ends in a probe. |
 | A numeric score across eight problem dimensions | `problem-quality-scorecard` | That grades; this does not score the idea, it finds the one gap and tests it. |
 | The unit-cost physics floor of a claim | `physics-floor-gap` | That is a cost-teardown, not a five-lens attack. |
-| A written PRD or spec | `prd-development`, `one-pager-prd`, `create-prd` | This runs upstream of any spec. Decline and point there. |
+| A written PRD or spec | `prd-development` (full, lean or one-pager) | This runs upstream of any spec. Decline and point there. |
 
 ## Method
 
@@ -92,5 +99,5 @@ See `examples/sample.md` for a full run on Mentix ("an AI copilot for factory ma
 ## Related skills
 
 - Runs **before** `problem-statement`, `so-what-stress-test`, and `problem-quality-scorecard`. It turns a sentence into one tested assumption; those refine an already-scoped problem.
-- Absorbs the experiment-framing bones of `brainstorm-experiments-new` (skin-in-the-game, your-own-data, behaviour over opinion) but inverts the flow: that skill generates several pretotypes for a concept assumed worth testing; this one first proves which single assumption is worth a pretotype at all. It does not supersede it — use `brainstorm-experiments-new` once the load-bearing gap survives its first probe and you need a fuller experiment set.
+- Absorbs the experiment-framing bones of generic lean-startup experiment brainstorming (skin-in-the-game, your-own-data, behaviour over opinion) but inverts the flow: brainstorming generates several pretotypes for a concept assumed worth testing; this one first proves which single assumption is worth a pretotype at all. Use `probe-matrix` once the load-bearing gap survives its first probe and you need a fuller experiment set.
 - Feeds `beachhead-segment` and the wedge skills: the surviving gap and its probe result are the raw input for choosing where to aim.

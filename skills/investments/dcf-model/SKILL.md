@@ -1,6 +1,15 @@
 ---
 name: dcf-model
-description: Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper WACC calculations, performs sensitivity analysis, and outputs professional Excel models with executive summaries. Use when users need to value a company using DCF methodology, request intrinsic value analysis, or ask for detailed financial modeling with growth projections and terminal value calculations.
+description: >-
+  Discounted cash flow (DCF) valuation of a company. Two modes: (1) a full Excel DCF model
+  with WACC tab, bear/base/bull cases, terminal value and fully formula-driven sensitivity
+  tables; (2) a quick markdown DCF with no spreadsheet. Picks the right variant (FCFF at WACC,
+  FCFE or dividend discount at cost of equity, two- or three-stage growth), builds the equity
+  bridge (debt, cash, options, minorities) and a per-share intrinsic value. Use when the user
+  asks for a DCF, discounted cash flow, intrinsic value, fair value, terminal value, free cash
+  flow valuation, FCFF/FCFE/DDM, or an implied share price.
+  Not for peer multiples or trading comps (use comps-analysis), WACC on its own
+  (use cost-of-capital-estimator), or reconciling several valuations into a call (use valuation-reconciler).
 ---
 
 # DCF Model Builder
@@ -8,6 +17,33 @@ description: Real DCF (Discounted Cash Flow) model creation for equity valuation
 ## Overview
 
 This skill creates institutional-quality DCF models for equity valuation following investment banking standards. Each analysis produces a detailed Excel model (with sensitivity analysis included at the bottom of the DCF sheet).
+
+## Choose the mode first
+
+- **Excel model (default when the user wants a model, a file, or a public ticker):** follow the full workflow below.
+- **Quick markdown DCF (user wants a fast answer, a private company, or says "no spreadsheet"):** skip Excel. Produce one markdown write-up using `references/markdown-dcf-template.md` (base-year inputs, year-by-year projection table, terminal value, equity bridge, sensitivity grid). Score it with `references/rubric_dcf.json` (average >= 3.5).
+
+### Pick the model variant (both modes)
+
+See `references/intrinsic-methodology.md` for the full decision tree, growth estimation, terminal value, option adjustment and three-stage mechanics.
+
+| Situation | Model | Discount rate |
+|---|---|---|
+| Most companies, changing capital structure | FCFF | WACC (bridge to equity) |
+| Stable, predictable debt ratio; financial firms | FCFE | Cost of equity |
+| Mature dividend payers (utilities, REITs, banks) | DDM | Cost of equity |
+| Long runway needing a transition | Three-stage (high growth, linear fade, stable) | WACC or ke |
+
+**Guardrails (both modes):**
+1. Match cash flows to rates: FCFF at WACC, FCFE and dividends at cost of equity.
+2. Stable growth must not exceed the risk-free rate / nominal GDP growth.
+3. Flag terminal value above ~85-90% of total value: the high-growth period is probably too short.
+4. Stable-period reinvestment rate = g / ROC; growth without reinvestment is value from thin air.
+5. Equity bridge: subtract market value of debt, add cash and non-operating assets, subtract minority interests and account for employee awards once: either deduct their value and divide by corresponding basic shares, or use a consistent dilution/proceeds method without also deducting the same awards.
+6. In the stable period, beta converges toward 1 and WACC toward mature-company levels.
+7. Report value as a range (sensitivity on growth x discount rate), not a point.
+
+For the discount rate itself, use `cost-of-capital-estimator` when the user wants the WACC derivation in depth.
 
 ## Tools
 
@@ -19,7 +55,7 @@ These constraints apply throughout all DCF model building. Review before startin
 
 **Environment: Office JS vs Python/openpyxl:**
 - **If running inside Excel (Office Add-in / Office JS environment):** Use Office JS directly — do NOT use Python/openpyxl. Write formulas via `range.formulas = [["=D19*(1+$B$8)"]]`. No separate recalc step needed; Excel calculates natively. Use `range.format.*` for styling. The same formulas-over-hardcodes rule applies: set `.formulas`, never `.values` for derived cells.
-- **If generating a standalone .xlsx file (no live Excel session):** Use Python/openpyxl as described below, then run `recalc.py` before delivery.
+- **If generating a standalone .xlsx file (no live Excel session):** Use Python/openpyxl as described below, then run `python scripts/recalc.py model.xlsx 30` (bundled, uses headless LibreOffice) before delivery.
 - The rest of this skill uses openpyxl examples — translate to Office JS API calls when in that environment, but all principles (formula strings, cell comments, section checkpoints, sensitivity table loops) apply identically.
 
 **⚠️ Office JS merged cell pitfall:** When building section headers with merged cells, do NOT call `.merge()` then set `.values` on the merged range — Office JS still reports the range's original dimensions and will throw `InvalidArgument: The number of rows or columns in the input array doesn't match the size or dimensions of the range`. Instead, write the value to the top-left cell alone, then merge and format the full range:
@@ -78,7 +114,7 @@ This applies to every merged section header in the DCF (market data, scenario bl
 - Test formulas immediately after creation
 
 **Formula Recalculation:**
-- Run `python recalc.py model.xlsx 30` before delivery
+- Run `python scripts/recalc.py model.xlsx 30` before delivery
 - Fix ALL errors until status is "success"
 - Zero formula errors required (#REF!, #DIV/0!, #VALUE!, etc.)
 
@@ -228,16 +264,16 @@ Market Value Equity = Current Stock Price × Shares Outstanding
 Net Debt = Total Debt - Cash & Equivalents
 Enterprise Value = Market Cap + Net Debt
 
-Equity Weight = Market Cap / Enterprise Value
-Debt Weight = Net Debt / Enterprise Value
+Equity Weight = Market Cap / (Market Cap + Market Value of Gross Debt)
+Debt Weight = Market Value of Gross Debt / (Market Cap + Market Value of Gross Debt)
 
 WACC = (Cost of Equity × Equity Weight) + (After-Tax Cost of Debt × Debt Weight)
 ```
 
 **Special Cases:**
 - **Net Cash Position**: If Cash > Debt, Net Debt is NEGATIVE
-  - Debt Weight may be negative
-  - WACC calculation adjusts accordingly
+  - WACC debt weight remains nonnegative; use gross market debt, not net debt
+  - Cash enters the enterprise-to-equity bridge separately; do not use negative debt weights
 - **No Debt**: WACC = Cost of Equity
 
 **Typical WACC Ranges:**
@@ -396,12 +432,12 @@ EBIT Margin (%),50%,51%,52%,53%,54%
 
 **How to reference assumptions - Create a consolidation column:**
 1. Case selector cell (e.g., B6) contains 1=Bear, 2=Base, or 3=Bull
-2. Create a consolidation column with INDEX or OFFSET formulas to pull from the correct scenario block
+2. Create a consolidation column with CHOOSE formulas to pull from the correct scenario block
 3. Projection formulas reference the consolidation column (clean cell references)
 4. Each scenario block contains full set of DCF assumptions across projection years
 
-**Recommended consolidation column pattern (using INDEX):**
-`=INDEX(B10:D10, 1, $B$6)`
+**Recommended consolidation column pattern (using CHOOSE):**
+`=CHOOSE($B$6,B10,B30,B50)`
 
 **NOT this - scattered IF statements throughout:**
 `=IF($B$6=1,[Bear block cell],IF($B$6=2,[Base block cell],[Bull block cell]))`
@@ -410,24 +446,24 @@ The consolidation column approach centralizes logic and makes the model easier t
 
 ### Correct Revenue Projection Pattern
 
-**Create a consolidation column with INDEX formulas, then reference it in projections:**
+**Create a consolidation column with CHOOSE formulas, then reference it in projections:**
 
 **Step 1 - Consolidation column for FY1 growth:**
-`=INDEX([Bear FY1 growth]:[Bull FY1 growth], 1, $B$6)`
+`=CHOOSE($B$6,[Bear FY1 growth],[Base FY1 growth],[Bull FY1 growth])`
 
 **Step 2 - Revenue projection references the consolidation column:**
 `Revenue Year 1: =D29*(1+$E$10)`
 
 Where:
 - D29 = Prior year revenue
-- $E$10 = Consolidation column cell for FY1 growth (contains INDEX formula)
+- $E$10 = Consolidation column cell for FY1 growth (contains CHOOSE formula)
 - $B$6 = Case selector (1=Bear, 2=Base, 3=Bull)
 
 **This approach is cleaner than embedding IF statements in every projection formula** and makes it much easier to audit which scenario assumptions are being used.
 
 ### Correct FCF Formula Pattern
 
-**Use consolidation columns with INDEX formulas, then reference them in FCF calculations:**
+**Use consolidation columns with CHOOSE formulas, then reference them in FCF calculations:**
 
 **Consolidation column approach:**
 ```csv
@@ -438,7 +474,7 @@ CapEx,=E29*$E$22,$E$22 = consolidation column for CapEx %
 Unlevered FCF,=E57+E58-E60-E62,E57=NOPAT E58=D&A E60=CapEx E62=Δ NWC
 ```
 
-**Each consolidation column cell contains an INDEX formula** that pulls from the appropriate scenario block based on case selector. This keeps projection formulas clean and auditable.
+**Each consolidation column cell contains an CHOOSE formula** that pulls from the appropriate scenario block based on case selector. This keeps projection formulas clean and auditable.
 
 Before writing formulas, confirm scenario block row locations and set up consolidation columns.
 
@@ -492,7 +528,7 @@ WACC,X%,,,,
 
 **WITHOUT the column header row showing projection years (FY2025E, FY2026E, etc.), users cannot tell which assumption value corresponds to which year. This row is MANDATORY.**
 
-**Then create a consolidation column** (typically the next column to the right) that uses INDEX formulas to pull from the selected scenario block based on the case selector. This consolidation column is what your projection formulas reference.
+**Then create a consolidation column** (typically the next column to the right) that uses CHOOSE formulas to pull from the selected scenario block based on the case selector. This consolidation column is what your projection formulas reference.
 
 ### Correct Row Planning Process
 
@@ -760,7 +796,7 @@ In addition, be aware of these errors:
 **This skill uses the `xlsx` skill for all spreadsheet operations.** The xlsx skill provides:
 - Standardized formula construction rules
 - Number formatting conventions
-- Automated formula recalculation via `recalc.py` script
+- Formula recalculation via the bundled `scripts/recalc.py`
 - Comprehensive error checking and validation
 
 All Excel files created by this skill must follow xlsx skill requirements, including zero formula errors and proper recalculation.
@@ -799,15 +835,15 @@ Create **two sheets**:
 
 ### Formula Recalculation (MANDATORY)
 
-After creating or modifying the Excel model, **recalculate all formulas** using the recalc.py script from the xlsx skill:
+After creating or modifying the Excel model, **recalculate all formulas** using the bundled `scripts/recalc.py` (headless LibreOffice; if LibreOffice is not installed it says so — then deliver with a note that the user should open in Excel to calculate, and still run the validator):
 
 ```bash
-python recalc.py [path_to_excel_file] [timeout_seconds]
+python scripts/recalc.py [path_to_excel_file] [timeout_seconds]
 ```
 
 Example:
 ```bash
-python recalc.py AAPL_DCF_Model_2025-10-12.xlsx 30
+python scripts/recalc.py AAPL_DCF_Model_2025-10-12.xlsx 30
 ```
 
 The script will:
@@ -840,7 +876,7 @@ The script will:
 }
 ```
 
-**Fix all errors** and re-run recalc.py until status is "success" before delivering the model.
+**Fix all errors** and re-run scripts/recalc.py until status is "success" before delivering the model.
 
 ### Formatting Standards
 
@@ -917,7 +953,7 @@ Row,Content
 2,Ticker: [XXX] | Date: [Date] | Year End: [FYE]
 3,Blank
 4,Case Selector Cell (1=Bear 2=Base 3=Bull)
-5,Case Name Display (formula: =IF([Selector]=1"Bear"IF([Selector]=2"Base""Bull")))
+5,Case Name Display (formula: =CHOOSE([Selector],"Bear","Base","Bull"))
 ```
 
 **Section 2: Market Data (NOT case dependent)**
@@ -1055,8 +1091,8 @@ WEIGHTED AVERAGE COST OF CAPITAL,X.XX%,[Green output]
 Market Cap = Price × Shares
 Net Debt = Total Debt - Cash
 Enterprise Value = Market Cap + Net Debt
-Equity Weight = Market Cap / EV
-Debt Weight = Net Debt / EV
+Equity Weight = Market Cap / (Market Cap + Market Value of Gross Debt)
+Debt Weight = Market Value of Gross Debt / (Market Cap + Market Value of Gross Debt)
 WACC = (Cost of Equity × Equity Weight) + (After-tax Cost of Debt × Debt Weight)
 ```
 
@@ -1117,10 +1153,10 @@ WACC = (Cost of Equity × Equity Weight) + (After-tax Cost of Debt × Debt Weigh
 
 **Formula Implementation:**
 
-**DO NOT use nested IF formulas scattered throughout.** Instead, create a consolidation column that uses INDEX or OFFSET formulas to pull from the appropriate scenario block.
+**DO NOT use nested IF formulas scattered throughout.** Instead, create a consolidation column that uses CHOOSE formulas to pull from the appropriate scenario block.
 
-**Recommended pattern (using INDEX):**
-`=INDEX(B10:D10, 1, $B$6)` where `B10:D10` = Bear/Base/Bull values, `1` = row offset, `$B$6` = case selector cell (1, 2, or 3)
+**Recommended pattern (using CHOOSE):**
+`=CHOOSE($B$6,B10,B30,B50)` where B10, B30 and B50 are the corresponding FY1 cells in the three vertical scenario blocks, `$B$6` = case selector cell (1, 2, or 3)
 
 **Then reference the consolidation column** in all projections:
 `Revenue Year 1: =D29*(1+$E$10)` where $E$10 is the consolidation column value for Year 1 growth.
@@ -1135,7 +1171,7 @@ This approach centralizes scenario logic, making the model easier to audit and m
 1. **DCF** - Complete model with Bear/Base/Bull cases + three sensitivity tables at bottom (WACC vs Terminal Growth, Revenue Growth vs EBIT Margin, Beta vs Risk-Free Rate)
 2. **WACC** - Cost of capital calculation
 
-**Key features**: Case selector (1/2/3), consolidation column with INDEX/OFFSET formulas, color-coded cells, cell comments on all inputs, professional borders
+**Key features**: Case selector (1/2/3), consolidation column with CHOOSE formulas, color-coded cells, cell comments on all inputs, professional borders
 
 ## Best Practices
 
@@ -1222,13 +1258,15 @@ This approach centralizes scenario logic, making the model easier to audit and m
    - Cell comments on ALL hardcoded inputs
    - Professional borders around major sections
 
-2. **Recalculate formulas**: Run `python recalc.py model.xlsx 30`
+2. **Recalculate formulas**: Run `python scripts/recalc.py model.xlsx 30`
 
 3. **Check output**:
    - If `status` is `"success"` → Continue to step 4
    - If `status` is `"errors_found"` → Check `error_summary` and read [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for debugging guidance
 
-4. **Fix errors and re-run recalc.py** until status is "success"
+4. **Fix errors and re-run scripts/recalc.py** until status is "success"
+
+4b. **Run the DCF validator**: `python scripts/validate_dcf.py model.xlsx` (needs `pip install -r requirements.txt`; run it after recalc.py so cached values exist). It checks formula errors plus DCF-specific mistakes (terminal growth vs WACC, terminal value share, sheet structure). Fix every error it reports; review its warnings (ignore "Recommended sheet missing: Sensitivity" — in this skill the sensitivity tables live at the bottom of the DCF sheet).
 
 5. **Spot-check formulas**:
    - Test one FCF formula - does it reference the correct assumption rows?
@@ -1249,7 +1287,8 @@ This approach centralizes scenario logic, making the model easier to audit and m
 Before delivering DCF model:
 
 **Required:**
-- Run `python recalc.py model.xlsx 30` until status is "success" (zero formula errors)
+- Run `python scripts/recalc.py model.xlsx 30` until status is "success" (zero formula errors)
+- Run `python scripts/validate_dcf.py model.xlsx` and clear its errors
 - Two sheets: DCF (with sensitivity at bottom), WACC
 - Font colors: Blue=inputs, Black=formulas, Green=sheet links
 - Cell comments on ALL hardcoded inputs

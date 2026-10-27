@@ -1,6 +1,15 @@
 ---
 name: ib-check-deck
-description: Investment banking presentation quality checker. Reviews a pitch deck or client-ready presentation for (1) number consistency across slides, (2) data-narrative alignment, (3) language polish against IB standards, (4) visual and formatting QC. Use whenever the user asks to review, check, QC, proof, or do a final pass on a deck, pitch, or client materials — including requests like "check my numbers", "reconcile figures across slides", "is this client-ready", or "what am I missing before I send this out".
+description: >-
+  QC a finished deck before it goes out: checks that numbers are consistent across slides
+  (with a script that normalises $M/$MM and flags conflicting values), that charts and the
+  narrative agree, that the language is client-ready or board-ready, and that sources, labels
+  and formatting are clean; reports issues by severity (critical / important / minor) with
+  slide numbers. Read-only. Use this skill whenever the user asks to "QC", "check", "proof",
+  "review" or do a "final pass" on a deck or slides, says "check my numbers", "the ARR on
+  slide 3 doesn't match slide 11", "reconcile figures across slides", "is this client-ready /
+  board-ready" or "what am I missing before I send this". Not for updating figures (use
+  deck-refresh) or building a deck (use pitch-deck).
 ---
 
 # IB Deck Checker
@@ -53,7 +62,7 @@ Map claims to the data that's supposed to support them. This is where decks go w
 
 - Trend statements ("declining margins") → does the chart actually go that direction?
 - Market position claims ("#1 player") → revenue and share data support it?
-- Plausibility — "#1 in a $100B market" with $200M revenue is 0.2% share; that's not #1
+- Plausibility — "#1 in a $100B market" with $200M revenue is 0.2% share; verify competitor shares and market definition before accepting or rejecting the rank. A fragmented market can have a small-share leader
 
 ### 3. Language polish
 

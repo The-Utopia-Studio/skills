@@ -1,6 +1,12 @@
 ---
 name: layout
-description: Improve layout, spacing, and visual rhythm. Fixes monotonous grids, inconsistent spacing, and weak visual hierarchy. Use when the user mentions layout feeling off, spacing issues, visual hierarchy, crowded UI, alignment problems, or wanting better composition.
+description: >-
+  Fix layout, spacing and visual rhythm in an existing UI: a spacing scale,
+  varied section padding, grid monotony, sidebar crowding, alignment, depth and
+  heading hierarchy. Use when the user says spacing feels off, everything has
+  the same padding, cards look identical, a column feels crowded, alignment is
+  broken, or headings do not stand out. Not for typography-only fixes (use
+  typeset) or building a new page (use impeccable).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"
@@ -47,7 +53,7 @@ Analyze what's weak about the current spatial design:
 
 ## Plan Layout Improvements
 
-Consult the [spatial design reference](reference/spatial-design.md) from the impeccable skill for detailed guidance on grids, rhythm, and container queries.
+Consult the [spatial design reference](../impeccable/reference/spatial-design.md) from the impeccable skill for detailed guidance on grids, rhythm, and container queries.
 
 Create a systematic plan:
 

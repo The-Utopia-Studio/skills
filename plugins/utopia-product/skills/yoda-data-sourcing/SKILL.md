@@ -1,17 +1,26 @@
 ---
 name: yoda-data-sourcing
-description: Assemble a sourced proprietary-data corpus map — sort every candidate data source by one test (can a foundation model already reach it?) and keep only the workflow-trapped, permission-gated signal (shadow AI threads, operational logs, permits, vendor-locked sensor feeds, workflow exhaust) as the moat seed. Fires on "get our own data", "what data do we own", "where's our proprietary data", "build the moat's seed", "what data can't a competitor get". Not for drafting the contract that unlocks a gated source (use data-rights-clause, section 06), not for scoring whether one signal counts as real evidence (use evidence-ladder), not for running the interview that captures tacit judgment (use tacit-knowledge-interview).
+description: >-
+  Find the proprietary data a product can own that a competitor or foundation model can't get. Use
+  when the user lists candidate data sources (manuals, logs, work orders, WhatsApp threads, sensor
+  feeds, public videos) or asks what data they actually own, where their proprietary data is, what
+  data a competitor can't get, or how to build the moat's data seed. Sorts every source by one test,
+  can a foundation model already reach it, and keeps only workflow-trapped, permission-gated signal
+  (shadow AI threads, operational logs, permits, vendor-locked sensor feeds, workflow exhaust) as the
+  moat seed, in a sourced corpus map. Not for drafting the contract that unlocks a gated source (use
+  data-rights-clause), scoring one signal as evidence (use evidence-ladder), or capturing tacit
+  judgment (use tacit-knowledge-interview).
 type: interactive
 supersedes: none
 ---
 
 ## What it does
 
-Takes a fellow's list of candidate data sources and returns a sourced proprietary corpus map: every source scored on one axis first — can a foundation model already reach it? — then on access, compounding, and whether the source is even real. Reachable data is thrown out of the moat column, because a model that can reach it can hand the same corpus to a competitor for free. What survives the test is the workflow-trapped, permission-gated signal: the shadow ChatGPT threads, the operational logs, the permits behind a records request, the vendor-locked sensor feed, the exhaust of the real work. Only those rows are the moat seed. The map is also the honest eval set: the data a model cannot narrate from training is the only data that can tell you whether your product actually works.
+Takes a fellow's list of candidate data sources and returns a sourced proprietary corpus map: every source scored on one axis first — can a foundation model already reach it? — then on access, compounding, and whether the source is even real. Reachable data is thrown out of the moat column, because a model that can reach it can hand the same corpus to a competitor for free. What survives the test is the workflow-trapped, permission-gated signal: the shadow ChatGPT threads, the operational logs, the permits behind a records request, the vendor-locked sensor feed, the exhaust of the real work. Only those rows are the moat seed. The map can supply task-representative held-out evaluation cases. Proprietary status alone does not make an eval valid or uncontaminated: check separation from training/tuning, task coverage, labels and leakage. Public or synthetic tests can also be useful when their provenance and limitations are explicit.
 
 ## The Icarus reframe
 
-An idea built on data a foundation model can already reach is an idea the model can hand your competitor for free. YODA sorts every candidate source by one test — can a model already reach it? — and discards everything that passes, because reachable data is not a moat, it is a commodity the model narrates on demand. What is left is the workflow-trapped signal: shadow AI threads, operational logs, permits behind a records request, the vendor-locked sensor feed, the exhaust of the actual workflow — data a model cannot get, which is exactly why it seeds both the moat and the only honest eval set.
+An idea built on data a foundation model can already reach is an idea the model can hand your competitor for free. YODA sorts every candidate source by one test — can a model already reach it? — and discards everything that passes, because reachable data is not a moat, it is a commodity the model narrates on demand. What is left is the workflow-trapped signal: shadow AI threads, operational logs, permits behind a records request, the vendor-locked sensor feed, the exhaust of the actual workflow — data a model cannot get, which may seed a differentiated corpus and held-out eval cases; validate the eval design separately from source exclusivity.
 
 ## When to use / When NOT
 

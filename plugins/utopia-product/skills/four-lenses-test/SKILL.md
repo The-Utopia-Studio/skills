@@ -1,19 +1,16 @@
 ---
 name: four-lenses-test
 description: >-
-  Scores a specific concept across the four build-risk lenses — Desirability,
-  Usability, Feasibility, Viability — where each lens is graded ONLY by its named
-  tool (onion+JTBD+Kano for Desirability, a watched usability observation for
-  Usability, a dev spike for Feasibility, ICE anchored to measured value for
-  Viability) and run by its dual-track owner (Product/Design discovery beside
-  Engineering delivery). Fires on "is this desirable / usable / feasible / viable",
-  "should we build it", "run the four lenses", "go or no-go on this concept",
-  "is this worth building". Output is a filled Four-Lens Scorecard: per-lens tool,
-  owner, evidence + ladder weight, score, and an AND gate that KILLS the go if any
-  single lens fails, every claim tagged [Fact]/[Assumption]/[Hypothesis]. NOT for
-  the full problem→vision→strategy→roadmap spine (use product-frame-stack), NOT for
-  scoring the PROBLEM on 8 dimensions (use problem-quality-scorecard), NOT for the
-  five-question so-what gut check on the whole idea (use so-what-stress-test).
+  Scores one already-shaped concept or solution across the four build-risk lenses (Desirability,
+  Usability, Feasibility, Viability), each graded ONLY by its named tool (onion + JTBD + Kano, a
+  watched usability observation, a dev spike, ICE anchored to measured value) and run by its
+  dual-track owner. Fires on 'is this concept desirable / usable / feasible / viable', 'run the four
+  lenses', 'go or no-go on this solution', 'should we build this design'. Output: a Four-Lens
+  Scorecard with per-lens tool, owner, evidence and ladder weight, score, and an AND gate that KILLS
+  the go if any lens fails, every claim tagged [Fact]/[Assumption]/[Hypothesis]. NOT for scoring
+  whether the underlying PROBLEM is worth building (use problem-quality-scorecard), the five-question
+  so-what gut check on a whole idea (use so-what-stress-test), or the problem-to-roadmap spine (use
+  product-frame-stack).
 type: generator
 supersedes: none
 ---

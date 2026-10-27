@@ -1,6 +1,12 @@
 ---
 name: clarify
-description: Improve unclear UX copy, error messages, microcopy, labels, and instructions to make interfaces easier to understand. Use when the user mentions confusing text, unclear labels, bad error messages, hard-to-follow instructions, or wanting better UX writing.
+description: >-
+  Rewrite UX copy so users understand it: error messages, empty states, button
+  and CTA labels, confirmation dialogs, form labels and hints, tooltips, loading
+  and success messages. Use when the user pastes interface text and asks to
+  rewrite or improve it, mentions confusing errors, vague buttons like Submit or
+  OK, unclear labels or microcopy, or writing for non-technical users. Not for
+  marketing or landing-page copy (use copywriting).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"

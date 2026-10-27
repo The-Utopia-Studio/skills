@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-22",
+  "offline_tests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "marketplace_validation": "passed;251 packed skills",
+  "canonical_plugin_comparison": {
+    "files": 1829,
+    "mismatches": 0
+  },
+  "syntax_checks": {
+    "helpers": 129,
+    "errors": 0
+  },
+  "static_link_candidates": "12 Markdown examples/math tokens;2 explicit cross-skill references (Khalil pitch-deck and Revops SaaS cohort diagnostics); no confirmed local missing target among candidates.",
+  "ceramic_doctor": "passed",
+  "git_diff_check": "passed",
+  "workbook": {
+    "rows": 357,
+    "source_fields_preserved": true,
+    "formula_counts_verified": true,
+    "changed_input_recalculation_verified": true,
+    "formula_errors": 0,
+    "visual_review": "Overview and representative Alignment ranges reviewed",
+    "export_reopened_and_values_verified": true
+  },
+  "original_workbook_unchanged": true,
+  "coworker_original_cases_replayed": 0
+}

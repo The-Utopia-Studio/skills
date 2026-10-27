@@ -1,0 +1,39 @@
+{
+  "method": "Authored specification walkthroughs against quoted mandatory source rules; no browser/runtime or independent stochastic run claimed. Root approved correction after review.",
+  "before_rules": [
+    "Every active component should have an infinite loop state (Pulse, Typewriter, Float, Shimmer)",
+    "Never mount lists instantly \u2014 use cascade delays for waterfall reveals"
+  ],
+  "cases": [
+    {
+      "id": "motion-reduce",
+      "input": "Write Stitch DESIGN.md for a dashboard whose user enables prefers-reduced-motion: reduce; preserve live job status.",
+      "before_contract_problem": "Mandatory perpetual motion has no reduced-motion exception.",
+      "candidate_output": "Remove nonessential movement and stagger; show static job-state text; content remains available.",
+      "assertions": [
+        "reduced preference respected",
+        "job status remains legible"
+      ]
+    },
+    {
+      "id": "motion-long-list",
+      "input": "Describe a 2,000-row work-order list. Keyboard user must select the first row as soon as data arrives.",
+      "before_contract_problem": "Never mount lists instantly requires stagger regardless of interaction cost.",
+      "candidate_output": "Render available rows immediately with keyboard access; no mandatory entrance cascade or animation-dependent readiness.",
+      "assertions": [
+        "no animation-gated interaction",
+        "no mandatory cascade"
+      ]
+    },
+    {
+      "id": "motion-button",
+      "input": "Describe a Save button in an existing Ceramic theme. It is enabled but idle.",
+      "before_contract_problem": "Every active component requires infinite looping without a meaningful ongoing state.",
+      "candidate_output": "Use inspected semantic component and motion contracts for finite press/focus feedback. Enabled idle state remains still.",
+      "assertions": [
+        "no invented runtime or token",
+        "no infinite idle animation"
+      ]
+    }
+  ]
+}

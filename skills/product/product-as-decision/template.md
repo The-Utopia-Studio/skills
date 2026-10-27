@@ -11,10 +11,10 @@ Two auto-fails: (a) a feature named where a decision belongs; (b) no quantified 
 - Feature-ban check — strike any of these if they crept into the line above: dashboard · copilot · platform · tool · app · portal · assistant · system · "AI". A decision has a verb, not a product noun.
 - If two decisions appear (an "and"), pick the wedge one and park the other: [parked: __________]
 
-## 2. The decision-owner (exactly one)
+## 2. Primary accountable decision-owner and other approvers
 - **Title:** [one role that makes this call today]
 - **Stakes on being wrong:** [budget / safety sign-off / SLA / their name]
-- Note: the owner of the call, not the user of the software.
+- Note: name the primary accountable owner and any joint approval participants; a committee does not automatically imply multiple products.
 
 ## 3. The moving axis (pick ONE)
 - [ ] Time — same decision, faster
@@ -40,7 +40,7 @@ L0 human decides unaided · L1 machine surfaces inputs, human decides · L2 mach
 |---|---|---|
 | = 1× or interface-only | No compression | Not a product. Reframe or kill. |
 | < 2× | Marginal | A nicer way to make the same call. |
-| 2–10× | Step change | Real wedge if the decision recurs and the outcome is paid for. |
+| 2 ≤ ratio < 10× | Step change | Real wedge if the decision recurs and the outcome is paid for. |
 | ≥ 10× or ladder jump ≥ 2 | Order of magnitude | Economics change, not just speed. |
 
 - **This decision: ____× / L_→L_ → band: __________**
@@ -53,3 +53,7 @@ L0 human decides unaided · L1 machine surfaces inputs, human decides · L2 mach
 
 ## 9. What would change this framing
 - [the probe that would confirm or kill the after-claim / a timed workflow that revises the before / a liability finding that caps the after-rung]
+
+## Calculation validation
+Require finite nonnegative inputs and a strictly positive denominator. Zero denominator is undefined, not infinite proven opportunity. Bands are studio screening heuristics, not calibrated success probabilities. Unpaid invoices, POs, quotes and rate cards are documents (0.5), not money moved; verified payment is 1.0.
+Autonomy levels are ordinal: report a rung change, never divide L-level numbers. Compare time/effort at equal outcome quality.

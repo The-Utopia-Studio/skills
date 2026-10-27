@@ -12,7 +12,7 @@ MUST fire (5):
 5. "Are we charging on the right thing / the right metric?"
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Brainstorm 3–5 revenue models and test which one to bet on" → belongs to `monetization-strategy`
+1. "Brainstorm 3–5 revenue models and test which one to bet on" → belongs to `pricing-strategy`
 2. "Structure the whole pilot deal — scope, data-rights, success metrics, kill criteria, conversion" → belongs to `pilot-six-term-sheet`
 3. "How is this done today / what does the status quo cost us" → belongs to `current-state-map`
 
@@ -27,7 +27,7 @@ Judge did NOT author this skill. Gates run by applying the Method to each input 
 
 | Gate | Result | Evidence |
 |---|---|---|
-| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 must-fire phrasings are literal or near-literal matches to the `Fires on` list ("how should we price this", "what do we charge", "per seat or per outcome", "set the price"); #5 (right metric) covered by the charging-metric thesis. All 3 must-not are explicitly excluded in the description with the sibling named (monetization-strategy, pilot-six-term-sheet, current-state-map). |
+| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 must-fire phrasings are literal or near-literal matches to the `Fires on` list ("how should we price this", "what do we charge", "per seat or per outcome", "set the price"); #5 (right metric) covered by the charging-metric thesis. All 3 must-not are explicitly excluded in the description with the sibling named (pricing-strategy, pilot-six-term-sheet, current-state-map). |
 | 2 Golden | PASS (5/5) | see per-case table below |
 | 3 Adversarial | PASS (3/3) | 01 vague → asks the ONE question (what is one outcome worth + how known), invents nothing. 02 tiers-in-disguise → refuses, names tier as a LEVEL not a value, reframes to outcome/metric, emits no tier numbers. 03 structure-the-deal → declines, names `pilot-six-term-sheet`, draws the term-2/term-6 boundary, does not draft the other five terms. |
 | 4 Head-to-head | n/a | `supersedes: none` |
@@ -47,7 +47,7 @@ Judge did NOT author this skill. Gates run by applying the Method to each input 
 ### Gotchas surfaced (for the author to fold into SKILL.md ## Gotchas / template.md)
 
 - **Missing conversion factor between the outcome unit and a per-asset metric.** When Part 2 measures `incremental_value_per_outcome` but Part 4 charges on a per-asset/per-period metric (per-line-month, per-store-week), Part 5 silently needs the *outcome frequency per asset-period* to convert value into a price. The template has no slot for it. The Azraq example hides this because base rate ≈ 1 breach/facility/yr (per-outcome ≈ per-facility-year). Mentix (many shifts) and Durian (~30 stockouts/store/month) cannot produce a hard invoice line without it. Recommend adding an explicit "outcome frequency per asset-period [Fact/Assumption]" line to Part 4/5 so the per-asset price is derived, not eyeballed.
-- **Routing targets not yet in the pack.** The skill routes to `current-state-map`, `eval-first-spec`, `monetization-strategy`, `pilot-six-term-sheet`, `data-rights-clause` — none of these currently exist under `product-icarus/` (only `refine-flywheel` does). Routing logic is correct, but a fellow following the routes today hits dangling references. Not a skill defect; a pack-sequencing note for the orchestrator.
+- **Routing targets not yet in the pack.** The skill routes to `current-state-map`, `eval-first-spec`, `pricing-strategy`, `pilot-six-term-sheet`, `data-rights-clause` — none of these currently exist under `product-icarus/` (only `refine-flywheel` does). Routing logic is correct, but a fellow following the routes today hits dangling references. Not a skill defect; a pack-sequencing note for the orchestrator.
 - **Premium-reduction proxy ladder score (golden 03).** A written insurance-premium *reduction* is a forward commitment, not a paid loss — cleanest scored 0.7–1.0 but should be tagged as a quoted commitment, not conflated with a 1.0 already-paid loss. Worth a one-line clarification in the "priceless outcome" gotcha.
 
 ## Refine run 2 — applied judge fixes: added a Part 5 outcome-frequency-per-asset-period conversion slot so a per-asset/period price is derived from the per-outcome value, not eyeballed.

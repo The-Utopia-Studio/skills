@@ -1,8 +1,19 @@
 ---
 name: cold-email
-description: Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions "cold outreach," "prospecting email," "outbound email," "email to leads," "reach out to prospects," "sales email," "follow-up email sequence," "nobody's replying to my emails," or "how do I write a cold email." Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.
+description: >-
+  Write, personalize and score B2B cold emails, first-touch LinkedIn messages and
+  follow-up sequences that get replies. Use for cold outreach, prospecting or SDR
+  emails, personalizing openers from prospect research, writing outreach off a
+  trigger ("write the message for this signal", funding, hire, launch, post),
+  scoring a draft before sending, or "nobody's replying to my emails." Covers
+  research signals, subject lines, openers, body, CTA, a 0-100 quality gate and
+  multi-touch follow-ups. Not for staging sequences with sender assignment and
+  approval rails (use outreach-execution), fixing a weak offer before copy (use
+  cold-offer-architect), building the outbound system end to end (domains,
+  mailboxes, Clay, Instantly, volume and cost per meeting; use ai-sdr), lifecycle
+  or nurture emails (use email-sequence), or sales collateral (use sales-enablement).
 metadata:
-  version: 1.1.0
+  version: 1.2.0
 ---
 
 # Cold Email Writing
@@ -23,6 +34,52 @@ Understand the situation (ask if not provided):
 5. **Any research signals?** — Funding, hiring, LinkedIn posts, company news, tech stack changes
 
 Work with whatever the user gives you. If they have a strong signal and a clear value prop, that's enough to write. Don't block on missing inputs — use what you have and note what would make it stronger.
+
+---
+
+## Two Hard Rules (shared with outreach-execution)
+
+These two rules are identical in `cold-email` and `outreach-execution`. If they ever disagree, this wording wins.
+
+1. **Signal rule: name public changes, never private behavior.** A public, self-published change (funding round, press release, job posting, product launch, the prospect's own post, a leadership move) may be named in the opener, and should be: the opener should only make sense because that change happened. A private or behavioral signal (website or pricing-page visits, intent-data surges, email opens or clicks, profile views, enrichment data) is never mentioned or hinted at. Use it only to choose the angle ("teams at your stage usually hit X"). Never reveal how you found the person.
+2. **LinkedIn connection requests go out blank.** No note, ever. The signal-anchored first line goes in the first DM after they accept.
+
+## Quality Gate
+
+- **Length:** first-touch emails are 50-90 words. Follow-ups can be shorter, never longer.
+- **Score:** score every draft 0-100 with [scoring-rubric.md](references/scoring-rubric.md). **Ship at 80+.** 65-79 gets one more pass. Below 65, start over.
+- Run [qa-checklist.md](references/qa-checklist.md) before scoring.
+
+---
+
+## Personalization Workflow (research-heavy campaigns)
+
+When the user wants research-backed personalization at scale rather than a single email:
+
+1. **Map the ICP and objections:** complete [icp-objection-mapping.md](references/icp-objection-mapping.md). Gate: persona, top 3 objections and the desired next step are defined.
+2. **Research signals:** follow [research-playbook.md](references/research-playbook.md) for signals from the last 90 days. Gate: at least 2 verified signals per prospect. Never fabricate facts.
+3. **Choose a campaign path:** Custom Signal, Creative Idea, Whole Offer or Fallback, from [campaign-types.md](references/campaign-types.md). For Path B (whole-offer) tactics see [creative-ideas.md](references/creative-ideas.md).
+4. **Draft:** apply [email-structure.md](references/email-structure.md) (plain text, one CTA) and the merge fields in [variable-schema.md](references/variable-schema.md).
+5. **QA and score:** checklist, then rubric. Gate: 80+ and a 3:1 recipient-to-sender ratio ("you/your" over "I/we").
+6. **Sequence:** add follow-ups per [follow-up-strategy.md](references/follow-up-strategy.md), rotating the value prop each touch.
+
+Full campaign examples: [examples.md](references/examples.md).
+
+---
+
+## Signal-Triggered Mode
+
+Use when a lead surfaced from a specific trigger and the user says "write the message for this signal" or "personalize off the signal, not the profile."
+
+**Input:** `contact` {name, title}, `company` {name, what_they_do}, `signal` {type, what_happened, when}, `allowed_context` (only public or two-way-consented facts).
+
+**Output:** `{ connection_request: blank, opener_dm (or first email), follow_up_1, follow_up_2 }`, short and human.
+
+- **The opener dies without the trigger.** If the first line would work on anyone, it isn't anchored. Rewrite it.
+- Apply the Signal rule above: name the public change ("saw the news"), never how you found them ("saw you did X").
+- Each follow-up adds a new angle. Never "just following up."
+- Strip the AI tells: "I hope this finds you well," "I noticed you're the {title} at {company}," empty flattery, three-adjective stacks, "excited to connect," stiff transitional filler.
+- Good output reads like a note a thoughtful human wrote in ninety seconds.
 
 ---
 
@@ -144,6 +201,8 @@ The references contain performance data if you need to make informed choices:
 - [subject-lines.md](references/subject-lines.md) — Subject line data and optimization
 - [follow-up-sequences.md](references/follow-up-sequences.md) — Cadence, angles, breakup emails
 - [frameworks.md](references/frameworks.md) — All copywriting frameworks with examples
+- [three-line-framework.md](references/three-line-framework.md) — Pain/Proof/CTA three-line email, anatomy rules and the 5-minute audit
+- [research-playbook.md](references/research-playbook.md), [variable-schema.md](references/variable-schema.md), [campaign-types.md](references/campaign-types.md), [creative-ideas.md](references/creative-ideas.md), [email-structure.md](references/email-structure.md), [follow-up-strategy.md](references/follow-up-strategy.md), [icp-objection-mapping.md](references/icp-objection-mapping.md), [qa-checklist.md](references/qa-checklist.md), [scoring-rubric.md](references/scoring-rubric.md), [examples.md](references/examples.md) — research-backed personalization workflow and 0-100 gate
 
 Use this data to inform your writing — not as a checklist to satisfy.
 
@@ -156,3 +215,5 @@ Use this data to inform your writing — not as a checklist to satisfy.
 - **social-content**: For LinkedIn and social posts
 - **product-marketing-context**: For establishing foundational positioning
 - **revops**: For lead scoring, routing, and pipeline management
+- **outreach-execution**: For staging sequences with sender assignment and human approval
+- **cold-offer-architect**: When the offer, not the copy, is the problem

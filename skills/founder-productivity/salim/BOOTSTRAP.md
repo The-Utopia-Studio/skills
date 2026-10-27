@@ -18,7 +18,7 @@ For the primary coaching workflow: **`references/v1-first-response-coaching.md`*
 
 ## Setup (one-time)
 
-1. **Read the Cobuild module structure.** Make sure you know what each of M1-M9 covers — see [`FELLOWS.md`](../../FELLOWS.md).
+1. **Read the Cobuild module structure.** Make sure you know what each of M1-M9 covers — see the module table in [AGENTS.md](AGENTS.md).
 2. **Familiarize with key skills per module.** AGENTS.md lists which skills Salim points to per module.
 3. **Verify Proof is installed.** Salim's outputs to fellow cobuild logs go to Proof.
    ```
@@ -60,4 +60,4 @@ When all checked: `mv BOOTSTRAP.md BOOTSTRAP.archived.md` and you're live.
 
 ---
 
-*Built via [agent-persona-builder](../../skills/meta/agent-persona-builder/SKILL.md). Methodology from [Jack & Jill](https://github.com/Jack-and-Jill-AI/Jack_and_Jill_AI_Guides).*
+*Built via [agent-persona-builder](../agent-persona-builder/SKILL.md). Methodology from [Jack & Jill](https://github.com/Jack-and-Jill-AI/Jack_and_Jill_AI_Guides).*

@@ -106,10 +106,7 @@ Once we find the base rate, that becomes your **starting probability**.
 > Treat this base rate as your starting point. Adjust only when you have specific,
 > evidence-based reasons from your "inside view" analysis.
 
-**Default anchors if no data found:**
-- Novel innovation: 10-20% (most innovations fail)
-- Established industry: 50% (uncertain)
-- Regulated/proven process: 70-80% (systems work)
+**If no data is found:** report the base rate as unavailable. Use explicitly subjective sensitivity priors only if useful, with rationale and a range; do not present generic default percentages as historical evidence.
 
 **Next:** Return to [menu](#interactive-menu) or proceed to inside view analysis.
 
@@ -160,7 +157,7 @@ I'll tell you:
 ### When to Use
 - No direct statistic exists (e.g., "success rate of X")
 - Event requires multiple sequential steps
-- Each stage has independent probabilities
+- Each stage has a probability conditional on all prior stages being reached
 
 ### The Funnel Method
 
@@ -179,7 +176,7 @@ No direct data on "Bill X success rate," but we can model the funnel:
 
 **Final Base Rate:**
 ```
-P(law) = P(committee) × P(floor) × P(pass)
+P(law | introduced) = P(committee | introduced) × P(floor | committee, introduced) × P(pass | floor, committee, introduced)
 ```
 
 ### Process
@@ -188,7 +185,7 @@ I'll help you:
 1. **Decompose** the event into sequential stages
 2. **Search** for statistics on each stage
 3. **Multiply** probabilities using the product rule
-4. **Validate** the model (are stages truly independent?)
+4. **Validate** the model (are rates conditioned on the same prior-stage cohort and time horizon? Independence is not required for the chain rule)
 
 ### Common Funnels
 - Startup success: Seed → Series A → Profitability → Exit

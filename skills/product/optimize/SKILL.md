@@ -1,6 +1,13 @@
 ---
 name: optimize
-description: Diagnoses and fixes UI performance across loading speed, rendering, animations, images, and bundle size. Use when the user mentions slow, laggy, janky, performance, bundle size, load time, or wants a faster, smoother experience.
+description: >-
+  Diagnose and fix frontend performance: LCP, INP and CLS (Core Web Vitals),
+  bundle size, code splitting, image formats and sizing, font loading, janky
+  scrolling and animations, re-renders. Use when the user reports a slow or
+  janky page, gives Lighthouse or Web Vitals numbers like LCP or CLS, a large JS
+  bundle or huge images, or asks to make the UI faster. Not for React/Next.js
+  code-pattern review (use vercel-react-best-practices) or server scaling (use
+  devops-advisor).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"
@@ -43,13 +50,15 @@ Create systematic improvement plan:
 
 ```html
 <img 
-  src="hero.webp"
-  srcset="hero-400.webp 400w, hero-800.webp 800w, hero-1200.webp 1200w"
+  src="below-fold.webp"
+  srcset="below-fold-400.webp 400w, below-fold-800.webp 800w, below-fold-1200.webp 1200w"
   sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 1200px"
   loading="lazy"
-  alt="Hero image"
+  alt="Below-fold illustration"
 />
 ```
+
+For the above-fold LCP/hero image, load eagerly; do not copy `loading="lazy"` from the below-fold example.
 
 **Reduce JavaScript Bundle**:
 - Code splitting (route-based, component-based)
@@ -99,13 +108,13 @@ const HeavyChart = lazy(() => import('./HeavyChart'));
 // ❌ Bad: Alternating reads and writes (causes reflows)
 elements.forEach(el => {
   const height = el.offsetHeight; // Read (forces layout)
-  el.style.height = height * 2; // Write
+  el.style.height = `${height * 2}px`; // Write
 });
 
 // ✅ Good: Batch reads, then batch writes
 const heights = elements.map(el => el.offsetHeight); // All reads
 elements.forEach((el, i) => {
-  el.style.height = heights[i] * 2; // All writes
+  el.style.height = `${heights[i] * 2}px`; // All writes
 });
 ```
 

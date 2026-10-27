@@ -26,7 +26,7 @@ Skills are flat in this folder; the intended sequence is:
 | 09 | **Build craft** | `agent-design`, `workflow-design` |
 | 10 | **Fellow progression** | `fellow-level-ladder`, `platform-vs-venture` |
 
-Three skills supersede a weaker generic incumbent (and beat it head-to-head): `problem-quality-scorecard` → `identify-assumptions-new`; `continuous-discovery-engine` → `opportunity-solution-tree`; `probe-matrix` → `prototyping-pretotyping`. The build-craft section (09) and the UI/deploy steps route to the existing Product-module skills (Impeccable, Railway, Vercel) rather than restating them.
+Three skills supersede a weaker generic incumbent (and beat it head-to-head): `problem-quality-scorecard` → `identify-assumptions-new`; `continuous-discovery-engine` → `continuous-discovery-engine`; `probe-matrix` → `probe-matrix`. The build-craft section (09) and the UI/deploy steps route to the existing Product-module skills (Impeccable, Railway, Vercel) rather than restating them.
 
 ## How each skill is built and gated
 

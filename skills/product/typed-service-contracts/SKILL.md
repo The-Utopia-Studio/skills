@@ -1,6 +1,13 @@
 ---
 name: typed-service-contracts
-description: Architecture standard for building robust, type-safe TypeScript services using the "Spec and Handler" pattern. Use when building CLIs, libraries, or complex business logic.
+description: >-
+  Structure TypeScript commands and services with the spec-and-handler pattern:
+  a spec.ts with Zod input, output and exhaustive error-code schemas and a
+  Result type, a handler.ts that never throws, and separate contract (schema)
+  tests from handler logic tests. Use when the user mentions spec and handler,
+  parse-don't-validate, Result types instead of exceptions, Zod contracts, or
+  wants a type-safe CLI command or service structured this way. Not for
+  extracting duplicated logic into a service layer (use code-structure).
 ---
 
 # Typed Service Contracts (Spec & Handler Pattern)
@@ -87,6 +94,8 @@ export interface MyTaskSpec {
 
 ```
 
+The `SafePathSchema` above is only a minimal string-refinement example. It is not a filesystem sandbox: it neither restricts absolute paths to an allowed root nor resolves symlinks. When containment matters, validate resolved paths against the intended root and apply the application's filesystem boundary.
+
 ### Step 2: Implement the Handler (`handler.ts`)
 
 Follow this template to implement the logic.
@@ -170,7 +179,10 @@ Test the *Chef*. Mock external dependencies (fs, network) and assert the Result 
 ```typescript
 // handler.test.ts
 import { MyTaskHandler } from './handler';
-import { vi } from 'vitest'; // or jest
+import * as fs from 'fs';
+import { test, expect, vi } from 'vitest';
+
+vi.mock('fs', () => ({ existsSync: vi.fn() }));
 
 test('returns FILE_NOT_FOUND if path missing', async () => {
   // MOCK

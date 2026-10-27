@@ -13,7 +13,7 @@ Cash Flow:            ΔCash = CFO + CFI + CFF
 Cash Tie-Out:         Ending Cash (CF) = Cash (BS Asset)
 Cash Monthly/Annual:  Closing Cash (Monthly) = Closing Cash (Annual)
 Retained Earnings:    Prior RE + Net Income - Dividends = Ending RE
-Equity Raise:         ΔCommon Stock/APIC (BS) = Equity Issuance (CFF)
+Equity Raise:         ΔCommon Stock/APIC (BS) = Equity Issuance (CFF) + Noncash Equity Changes
 Year 0 Equity:        Equity Raised (Year 0) = Beginning Equity (Year 1)
 ```
 
@@ -128,53 +128,22 @@ Interest Expense = Avg Debt Balance × Interest Rate
 ```
 Beginning Retained Earnings
 + Net Income (from IS)
-+ Stock-Based Compensation (SBC) (from IS)
 - Dividends
 = Ending Retained Earnings
 ```
 
 ## NOL (Net Operating Loss) Schedule Formulas
 
+Use a jurisdiction- and tax-year-specific schedule. Obtain supported opening tax-loss balances (by vintage where needed), taxable income before losses, permitted utilization, expiry and ownership-change restrictions. Do not substitute book EBT for taxable income without a book-to-tax bridge.
+
 ```
-NOL CARRYFORWARD SCHEDULE
-
-Beginning NOL Balance (Year 1 / Formation = 0)
-+ NOL Generated (if EBT < 0, then ABS(EBT), else 0)
-- NOL Utilized (limited by taxable income and utilization cap)
-= Ending NOL Balance
-
-STARTING BALANCE RULE
-
-For a new business or first modeled period:
-  Beginning NOL Balance = 0
-  NOL can only increase through realized losses (EBT < 0)
-  NOL cannot be created from thin air or assumed
-
-NOL UTILIZATION CALCULATION
-
-Pre-Tax Income (EBT)
-  If EBT > 0:
-    NOL Available = Beginning NOL Balance
-    Utilization Limit = EBT × 80%  (post-2017 federal limit)
-    NOL Utilized = MIN(NOL Available, Utilization Limit)
-    Taxable Income = EBT - NOL Utilized
-  If EBT ≤ 0:
-    NOL Utilized = 0
-    Taxable Income = 0
-    NOL Generated = ABS(EBT)
-
-TAX CALCULATION WITH NOL
-
-Taxes Payable = MAX(0, Taxable Income × Tax Rate)
-  (Taxes cannot be negative; losses create NOL asset instead)
-
-DEFERRED TAX ASSET (DTA) FOR NOL
-
-DTA - NOL Carryforward = Ending NOL Balance × Tax Rate
-ΔDTA = Current DTA - Prior DTA
-  (Increase in DTA = non-cash benefit on CF)
-  (Decrease in DTA = non-cash expense on CF)
+Ending NOL = Supported Beginning NOL + Eligible Tax Losses - NOL Used - Expirations/Other Adjustments
+NOL Used = MIN(Eligible Available NOL, Applicable Utilization Limit)
+Current Tax = Tax on Taxable Income After Permitted Deductions
+Net NOL DTA = Eligible Deductible Losses × Applicable Tax Rate - Valuation Allowance
 ```
+
+Zero opening NOL is appropriate only where there are no prior eligible losses, not whenever a forecast starts at Year 1. Deferred tax recognition and valuation allowances need separate support; current cash taxes and total tax expense are not interchangeable. Verify current rules with the relevant tax authority before applying any percentage cap.
 
 ## Balance Sheet Structure
 
@@ -280,13 +249,15 @@ Net Income
 ```
 BS Balance Check:       = Assets - Liabilities - Equity  (must = 0)
 Cash Tie-Out:           = BS Cash - CF Ending Cash       (must = 0)
-RE Roll-Forward:        = Prior RE + NI + SBC - Div - BS RE  (must = 0)
+RE Roll-Forward:        = Prior RE + NI - Div - BS RE  (must = 0)
 DTA Tie-Out:            = NOL Schedule DTA - BS DTA      (must = 0)
-Equity Raise Tie-Out:   = ΔCommon Stock/APIC (BS) - Equity Issuance (CFF)  (must = 0)
+Equity Raise Tie-Out:   = ΔCommon Stock/APIC (BS) - Equity Issuance (CFF) - Noncash Equity Changes  (must = 0)
 Year 0 Equity Tie-Out:  = Equity Raised (Year 0) - Beginning Equity (Year 1)  (must = 0)
 Cash Monthly vs Annual: = Closing Cash (Monthly) - Closing Cash (Annual)  (must = 0)
-NOL Utilization Cap:    = NOL Utilized ≤ EBT × 80%       (must be TRUE for post-2017)
+NOL Utilization Cap:    = NOL Utilized ≤ Verified Applicable Limit
 NOL Non-Negative:       = Ending NOL Balance ≥ 0         (must be TRUE)
-NOL Starting Balance:   = Beginning NOL (Year 1) = 0     (must be TRUE for new business)
-NOL Accumulation:       = NOL increases only when EBT < 0 (losses generate NOL)
+NOL Starting Balance:   = Beginning NOL matches supported tax records
+NOL Accumulation:       = New eligible tax losses reconcile to the tax schedule
 ```
+
+Equity-settled SBC expense is already included in net income. Its noncash equity credit belongs in APIC, not an additional credit to retained earnings. See the [SEC share-based compensation guidance](https://www.sec.gov/rules-regulations/staff-guidance/staff-accounting-bulletins/staff-accounting-bulletin-no-107) and reconcile the actual company equity schedule.

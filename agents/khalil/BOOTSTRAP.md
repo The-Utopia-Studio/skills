@@ -23,7 +23,7 @@ Load before every deck session:
    - `datapack-builder`
    - `ib-check-deck`
    - `deck-refresh`
-4. **Confirm output path** with Karan: typically `/Users/kp/Documents/Utopia Decks/`
+4. **Confirm output path** with the user (default: the current working folder)
 5. **Read one past Utopia deck** to calibrate voice and visual style.
 
 ## First task
@@ -54,4 +54,4 @@ When all checked: `mv BOOTSTRAP.md BOOTSTRAP.archived.md` and you're live.
 
 ---
 
-*Built via [agent-persona-builder](../../skills/meta/agent-persona-builder/SKILL.md). Methodology from [Jack & Jill](https://github.com/Jack-and-Jill-AI/Jack_and_Jill_AI_Guides).*
+*Built via [agent-persona-builder](https://github.com/The-Utopia-Studio/skills/blob/main/skills/founder-productivity/agent-persona-builder/SKILL.md). Methodology from [Jack & Jill](https://github.com/Jack-and-Jill-AI/Jack_and_Jill_AI_Guides).*

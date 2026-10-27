@@ -172,11 +172,11 @@ logged at 0.5; the read-out is where 0.7 is made.
 
 ## Related skills
 
-Absorbs `discovery/prototyping-pretotyping` — it keeps the useful bones (match
+Absorbs the generic prototyping fidelity ladder — it keeps the useful bones (match
 fidelity to the question, throw the prototype away, behaviour over opinion) and
-reframes them around one axis the old skill never names: the least you can build and
-still get a real reaction, under a no-code afternoon ceiling. It does not supersede
-it; `probe-matrix` already does, on the experiment-selection axis. first-mocks takes
+reframes them around one axis the ladder never names: the least you can build and
+still get a real reaction, under a no-code afternoon ceiling. `probe-matrix` replaced the ladder
+on the experiment-selection axis. first-mocks takes
 the other half — the make-craft — and stays disciplined about not being the test.
 
 Composes with: `probe-matrix` (selects the experiment; run it first if the question

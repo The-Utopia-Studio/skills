@@ -1,6 +1,15 @@
 ---
 name: polish
-description: Performs a final quality pass fixing alignment, spacing, consistency, and micro-detail issues before shipping. Use when the user mentions polish, finishing touches, pre-launch review, something looks off, or wants to go from good to great.
+description: >-
+  Final pre-ship detail pass on an existing UI: alignment, spacing consistency,
+  interaction and pressed states, concentric border radius, optical icon
+  alignment, layered shadows, tabular numbers, text wrapping, and animation feel
+  (easing, duration, transform origin, springs, tooltip delays). Use when the
+  user says we ship tomorrow, asks for a polish or finishing pass, says it feels
+  off, wants a Before/After review of UI details, or asks how a dropdown,
+  popover, tooltip or button press should animate. Not for adding new animation
+  to a feature (use animate), a scored UX critique (use critique), or an
+  accessibility/performance audit (use audit).
 version: 2.1.1
 user-invocable: true
 argument-hint: "[target]"
@@ -201,6 +210,27 @@ Go through systematically:
 - Perfect one thing while leaving others rough (consistent quality level)
 - Create new one-off components when design system equivalents exist
 - Hard-code values that should use design tokens
+
+## Detail and motion references
+
+Load these when the pass touches the area:
+
+- [detail-principles](reference/detail-principles.md): 16 detail principles plus a checklist (radius, optical alignment, shadows, stagger, icon swaps, font smoothing, tabular numbers, text-wrap, image outlines, press scale, hit areas). Split by topic in [detail-typography](reference/detail-typography.md), [detail-surfaces](reference/detail-surfaces.md), [detail-animations](reference/detail-animations.md) and [detail-performance](reference/detail-performance.md).
+- [motion-craft](reference/motion-craft.md): the animation decision framework (should it animate, purpose, easing, duration), springs, origin-aware popovers, `@starting-style`, clip-path, gestures and drag, the Sonner principles, and debugging animations.
+
+### Resolved detail rules (override the references)
+
+1. **Press scale:** 0.96–0.98 on `:active`, default `0.97`, never below `0.95`. Provide a way to opt out where motion distracts.
+2. **Entrances:** never animate from `scale(0)`. Start at 0.9–0.95 with opacity.
+3. **Easing:** ease-out (or a custom ease-out curve) for UI response. No bounce or elastic on UI state. Springs use `bounce: 0` unless the interaction is a drag release.
+4. **Transitions:** never `transition: all`; name the properties. Animate only transform, opacity and filter.
+5. **Image outlines:** a 1px `rgba(0,0,0,.1)` outline in light mode and `rgba(255,255,255,.1)` in dark is allowed. It is a translucent overlay, not a pure-black surface.
+6. **Hit areas:** at least 40×40px (44×44 on touch-first UIs).
+7. **Reduced motion:** every spatial animation needs a `prefers-reduced-motion` fallback.
+
+### Review output format
+
+When reviewing code, present every change as Before | After | Why markdown tables grouped by principle, one diff per row. Never use separate "Before:"/"After:" lines.
 
 ## Final Verification
 

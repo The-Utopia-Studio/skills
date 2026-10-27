@@ -1,6 +1,13 @@
 ---
 name: product-name
-description: "Brainstorm 5 unique, memorable product names with rationale aligned to brand values and target audience. Use when naming a new product, rebranding, or exploring product name ideas."
+description: >-
+  Use this skill whenever the user wants names for a product, feature, company or
+  tool: "suggest names", "what should we call it", "name ideas", "rebrand",
+  "brainstorm a product name". Returns five distinct, memorable candidates, each
+  with rationale, brand fit, memorability and trademark or domain notes, shaped
+  to the brand tone, audience, markets and languages the user gives. Not for
+  taglines or website copy (use copywriting) or positioning (use
+  positioning-workshop).
 ---
 # Product Name
 

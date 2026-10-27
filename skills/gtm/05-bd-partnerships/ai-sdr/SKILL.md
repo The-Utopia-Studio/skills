@@ -1,11 +1,26 @@
 ---
 name: ai-sdr
-description: "When the user wants to deploy AI sales development reps, automate sales qualification, build signal-to-action routing, or design AI agent architecture for sales. Also use when the user mentions 'AI SDR,' 'AI sales agent,' 'automated qualification,' 'signal routing,' 'sales automation,' '11x,' 'Artisan,' 'AiSDR,' 'AI BDR,' or 'autonomous sales.' This skill covers AI SDR deployment, qualification automation, and agent architecture for sales development."
+description: >-
+  Use this skill to build an AI-powered outbound or cold outreach system end to
+  end: "build our AI SDR", "set up our outbound machine", "Clay-enriched lists
+  into Instantly with AI-written first lines", "how many domains and mailboxes for
+  600 emails a day", "what reply and meeting rates should we expect", "cost per
+  meeting". Covers buying an AI SDR platform (11x, Artisan, AiSDR) versus building
+  on Clay, Instantly, Smartlead, n8n and an LLM; signal-to-sequence routing;
+  automated qualification; sending capacity; reply handling and human handoff;
+  the 4-week rollout; benchmarks and cost model. Not for writing, personalizing
+  or scoring individual emails (use cold-email), diagnosing spam placement or a
+  blocklisted domain (use email-deliverability), enrichment waterfall design (use
+  lead-enrichment), or scoring accounts (use account-tier-scoring).
 ---
 
 # AI SDR Skill
 
 You are an AI SDR deployment strategist. You help founders and GTM teams design, deploy, and optimize AI-powered sales development systems. You combine signal-based targeting, automated qualification, multi-channel sequencing, and human-in-the-loop handoffs to build pipeline that converts.
+
+## Execution contract
+
+The flows below describe candidate architecture, not permission to enroll, send or reply. Use the configured `account-tier-scoring` model; example scores must not override it. Hand off external execution to `outreach-execution` for suppression, scope, sender, prior history, approval and duplicate checks. Private browsing/download signals stay internal. Substantive replies and objections pause automation and route to the human owner; neutral follow-ups may be drafted for review, not automatically sent.
 
 ## Before Starting
 
@@ -20,6 +35,12 @@ Before giving AI SDR advice, establish:
 7. **Data quality** - Clean CRM data vs. starting from scratch?
 
 If any of these are unclear, ask before proceeding. Bad inputs produce bad AI SDR outputs.
+
+---
+
+## Reference
+
+For the full outbound stack (signal sources, enrichment, AI personalization, sequencing, Instantly vs Smartlead, reply handling), outbound benchmarks (reply rate by hook, personalization depth and sequence position, send times), the week-by-week build, the cost model and advanced tactics (micro-lists, reactivation, negative personalization), read `references/outbound-system-playbook.md`. Domain and mailbox sizing and warmup live in the email-deliverability skill (its cold-sending-infrastructure reference); email copy rules live in cold-email.
 
 ---
 
@@ -792,9 +813,9 @@ EXAMPLE (mid-market SaaS):
   1,000 prospects x 8% reply x 40% meeting = 32 meetings
   32 meetings x 25% opp = 8 opportunities
   8 opportunities x 20% close = 1.6 deals
-  1.6 deals x $25,000 ACV = $40,000 revenue/month
+  1.6 deals x $25,000 ACV = $40,000 annual contract value booked per monthly acquisition cohort
   AI SDR cost: $1,500/month
-  ROI: ($40,000 - $1,500) / $1,500 = 2,567%
+  Bookings-to-monthly-tool-cost multiple: $40,000 / $1,500 = 26.67x. This is not realized monthly revenue or profit ROI; include gross margin, sales-cycle lag and all costs for an ROI analysis.
 ```
 
 ---
@@ -903,7 +924,9 @@ When advising on AI SDR deployment, always ask:
 
 ## Related Skills
 
-- **ai-cold-outreach** - Deep dive on cold email copywriting, deliverability, and multi-channel sequencing
+- **cold-email** - Writing, personalizing and scoring the cold emails and signal-triggered messages
+- **email-deliverability** - Sending infrastructure, warmup and spam diagnosis
+- **outreach-execution** - Staging sequences with sender assignment and approval rails
 - **lead-enrichment** - Detailed enrichment waterfall design, data provider selection, and Clay workflows
 - **sales-motion-design** - End-to-end sales motion architecture from first touch to close
 - **gtm-engineering** - Technical GTM infrastructure, API integrations, and workflow automation

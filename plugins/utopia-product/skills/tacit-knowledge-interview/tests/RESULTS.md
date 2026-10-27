@@ -10,7 +10,7 @@ MUST fire (5):
 4. "Shadow the safety officer while they sign off permits and capture why they sometimes say no."
 5. "Encode when the shift lead overrides the runbook — the real judgment behind the procedure."
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Write me a Mom-Test customer interview script to validate this problem." → belongs to `interview-script`
+1. "Write me a Mom-Test customer interview script to validate this problem." → belongs to `discovery-interview-prep`
 2. "Help me plan discovery interviews to find out why customers churned last quarter." → belongs to `discovery-interview-prep`
 3. "Summarize this interview transcript into key insights." → belongs to `summarize-interview`
 
@@ -29,9 +29,9 @@ MUST NOT fire (3, name the sibling each belongs to):
 
 | Gate | Result | Evidence |
 |---|---|---|
-| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire match explicit trigger phrases ("interview an expert", "capture how they decide", "watch them work", "shadow an operator", "encode when they override the rule"). All 3 MUST-NOT are covered by the description's explicit NOT clause routing to interview-script / discovery-interview-prep / summarize-interview. |
+| 1 Trigger | PASS (5/5 fire, 0/3 misfire) | All 5 MUST-fire match explicit trigger phrases ("interview an expert", "capture how they decide", "watch them work", "shadow an operator", "encode when they override the rule"). All 3 MUST-NOT are covered by the description's explicit NOT clause routing to discovery-interview-prep / discovery-interview-prep / summarize-interview. |
 | 2 Golden | PASS (5/5) | Per-case table below. |
-| 3 Adversarial | PASS (3/3) | 01 vague → asks the one unblocking question, invents nothing; 02 "write the SOP" → names documentation-is-the-explicit-half trap + reframes to the lost judgment call; 03 Mom-Test → declines, names interview-script (and discovery-interview-prep), explains watch-a-task vs script-a-question, offers shadow follow-on. No fabrication, no flattery, no scope-poaching. |
+| 3 Adversarial | PASS (3/3) | 01 vague → asks the one unblocking question, invents nothing; 02 "write the SOP" → names documentation-is-the-explicit-half trap + reframes to the lost judgment call; 03 Mom-Test → declines, names discovery-interview-prep (and discovery-interview-prep), explains watch-a-task vs script-a-question, offers shadow follow-on. No fabrication, no flattery, no scope-poaching. |
 | 4 Head-to-head | n/a | supersedes: none. |
 | 5 Anti-generic | PASS | Golden-1 output could not come from a generic PM prompt: strike-the-SOP test, behaviour-0.7-over-narration-0.3 evidence ladder, rise-rate-not-level cue, exception "no mute within 1h of a bearing change", and holding a narrated fork at [Hypothesis]. A generic prompt returns a tidier SOP — the exact kill line this skill refuses. Taxonomy/ledger/scoring/strike-SOP are rendered as tables in template.md (not prose). Minor: the evidence ladder itself is stated inline as prose. |
 | 6 Real-use | pending | Requires 5+ real fellow uses. |

@@ -1,0 +1,36 @@
+[
+  {
+    "status": "unresolved",
+    "evidence": [
+      {
+        "provider": "a",
+        "result": {
+          "verified": false
+        }
+      }
+    ],
+    "errors": []
+  },
+  {
+    "status": "verified",
+    "evidence": [
+      {
+        "provider": "b",
+        "result": {
+          "verified": true
+        }
+      }
+    ],
+    "errors": [
+      {
+        "provider": "a",
+        "error_type": "TimeoutError"
+      }
+    ]
+  },
+  {
+    "status": "unresolved",
+    "evidence": [],
+    "errors": []
+  }
+]

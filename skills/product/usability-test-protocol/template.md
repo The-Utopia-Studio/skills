@@ -67,14 +67,14 @@ Recovery script (the ONLY things the Runner says when they're stuck):
 3. Fully blocked → "Let's stop there and move on." → log a Fail. Do NOT nudge to success.
 
 ## 5. Findings — attributed and ranked
-One row per defect, tied to the step it happened on. A wall hit by ≥2 of 5 = `[Fact]`; hit by 1 = `[Hypothesis]` (flag).
+One row per defect, tied to the step it happened on. Each observed event is `[Fact]` for that session; inferred cause and population prevalence remain uncertain, including at2 of5.
 
 | Finding (what broke) | Step / screen | Users hit (/5) | Task-blocking? | Severity | Basis |
 |---|---|---|---|---|---|
 | | | | y / n | | [Fact] / [Hypothesis] |
 | | | | | | |
 
-Severity map: 3+ & blocking = **Critical** · 3+ not blocking or 2 & blocking = **Major** · 2 not blocking = **Minor** · 1 & blocking = **Flag** · 1 not blocking = **Note**.
+Severity map: 3+ & blocking = **Critical** · 3+ not blocking or 2 & blocking = **Major** · 2 not blocking = **Minor** · 1 & blocking = **Investigate impact now** · 1 not blocking = **Note**.
 
 ## 6. Opinion quarantine (0.1 — not findings)
 Everything the users *said* about liking / disliking / wanting. Capped at 0.1. Do not promote to §5.
@@ -88,7 +88,7 @@ Everything the users *said* about liking / disliking / wanting. Capped at 0.1. D
 **Task success:** Task 1 — [x] unaided / [y] aided / [z] fail of [N]. Task 2 — … (repeat per task)
 **Critical findings:** [step → what broke → users hit] `[Fact]`
 **Major findings:** [step → what broke → users hit]
-**Flags (1 hit, watch):** [step → what broke] `[Hypothesis]` — needs a 2nd user to become a fact
+**Single observed failures:** [step → what broke] `[Fact]` for the session; prevalence unknown; triage serious failures immediately
 
 **What this does NOT tell you** (mandatory):
 - Demand — a user can complete every task and still never want the product. Not observable here. Route to `wizard-of-oz-probe` / `concierge-probe`.

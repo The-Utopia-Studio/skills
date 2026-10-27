@@ -1,15 +1,14 @@
 ---
 name: fellow-path-router
 description: >-
-  Routes a fellow through the Icarus module by situation type, not by tearing down one
-  idea. Fires on "where do I start", "I already have a product / traction — which stages
-  apply to me", "onboard me to Icarus", "which stages should I skip", "I have a mature
-  product, what's my path". Classifies the fellow as Type A (blank page), B (traction, no
-  moat), or C (mature product) on the evidence ladder, then returns a keep / trim /
-  subtract / leap stage ledger and a think:build:test ratio tied to that type's dominant
-  risk. Do NOT fire to tear down or grade one idea (use concept-council or
-  so-what-stress-test), to assess the fellow's own skill level (use fellow-level-ladder),
-  or to draw the platform build-vs-buy line (use platform-vs-venture).
+  Route a fellow through the Icarus module by their situation type when they start: where do I start,
+  I already have a product or traction which stages apply, onboard me to Icarus, which stages should I
+  skip, I have a mature product what's my path. Classifies the fellow as Type A (blank page), B
+  (traction, no moat) or C (mature product) on the evidence ladder and returns a keep / trim /
+  subtract / leap stage ledger with a think:build:test ratio tied to that type's dominant risk. Do NOT
+  use for a fellow already in a Cobuild module who is stuck and asks what to do next or wants coaching
+  (use salim), tearing down or grading one idea (use concept-council or so-what-stress-test), or
+  assessing the fellow's level (use fellow-level-ladder).
 type: interactive
 supersedes: none
 ---
@@ -92,7 +91,7 @@ The type is the highest rung the fellow can **evidence**, not the one they claim
 Round the claim down, never up:
 
 - Claims C, cannot show flattening retention or a compounding asset → regrade **B**.
-- Claims B, product usage is free or opinion only (≤0.5) → regrade **A**.
+- Claims B, but usage is only asserted or shown as an unused artefact (≤0.5) → regrade **A**. Free usage directly observed in the real workflow is behaviour (0.7), so it can qualify for **B**; payment is stronger evidence but is not a prerequisite for B.
 - Claims A but already has paying users → up-grade **B**; do not waste them on a front funnel they have earned past.
 
 State the down-grade or up-grade out loud, with the rung that forced it. The most common

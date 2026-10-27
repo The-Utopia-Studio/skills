@@ -228,9 +228,7 @@ Instead of one story, create multiple:
 - Path 3 (Regulatory): 20%
 - Path 4 (Black Swan): 10%
 
-**Total failure probability:** 100% (since we assumed failure)
-
-**Insight:** But in reality, your prediction gives 25% failure. This means you're underestimating by 75 percentage points, OR these paths are not independent.
+**These percentages partition stories conditional on failure.** Their sum100% says nothing about the unconditional chance of failure. A forecast with25% failure is compatible with this partition. Multiply each conditional path share by P(failure) to obtain its joint probability (for example25%×40%=10%), assuming the paths are exclusive and exhaustive. Independently estimate unconditional risks before revising the forecast.
 
 **Adjustment:**
 If paths are partially overlapping (e.g., internal failure AND market shift), use:

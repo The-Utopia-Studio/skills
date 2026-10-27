@@ -1,6 +1,11 @@
 ---
 name: investor-memorandum
-description: Use when a founder needs the long investor document — "investment memo", "investment memorandum", "information memorandum", "IM", "business plan", "the document behind the deck", "something the partner can take to their IC". Handles both modes: the investor memorandum (8–20pp, VC/angel) and the operating business plan (15–40pp, banks, DFIs, grant committees). Not the deck (pitch-deck) and not the one-pager (investor-deal-sheet).
+description: >-
+  Use when a founder needs the long investor document — "investment memo", "investment
+  memorandum", "information memorandum", "IM", "business plan", "the document behind the
+  deck", "something the partner can take to their IC". Handles both modes: the investor
+  memorandum (8–20pp, VC/angel) and the operating business plan (15–40pp, banks, DFIs, grant
+  committees). Not the deck (pitch-deck) and not the one-pager (investor-deal-sheet).
 ---
 
 # Investment Memorandum

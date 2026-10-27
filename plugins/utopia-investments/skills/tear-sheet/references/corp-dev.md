@@ -12,22 +12,22 @@ Start with these queries. Break apart and follow up if results are incomplete.
 **Query 1 — Target profile:**
 "[Company] business description products services technology platform headquarters founded employees sector industry"
 → Header, Business & Product Overview
-→ **Immediately write** to `/tmp/tear-sheet/company-profile.txt`
+→ **Immediately write** to `./tear-sheet-data/company-profile.txt`
 
 **Query 2 — Financials:**
 "[Company] annual income statement revenue gross profit EBITDA operating income net income capex free cash flow R&D expense total debt cash and equivalents last 4 fiscal years"
 → Financial Summary (pull 4 years; display 3; use the earliest year only for YoY growth computation. R&D is especially important for Corp Dev — they want to understand the target's investment in IP)
-→ **Immediately write** raw values to `/tmp/tear-sheet/financials.csv`
+→ **Immediately write** raw values to `./tear-sheet-data/financials.csv`
 
 **Query 3 — Segments + customers:**
 "[Company] revenue by segment business unit last 2 fiscal years key customers end markets customer concentration"
 → Revenue Mix (need 2 years for YoY growth), Customer Analysis
-→ **Immediately write** segment data to `/tmp/tear-sheet/segments.csv` (skip if no segment data returned)
+→ **Immediately write** segment data to `./tear-sheet-data/segments.csv` (skip if no segment data returned)
 
 **Query 4 — Relationships + competitive landscape:**
 "[Company] key customers suppliers partners competitors business relationships technology vendors"
 → Strategic Fit Analysis, Ecosystem Map
-→ **Immediately write** to `/tmp/tear-sheet/relationships.txt`
+→ **Immediately write** to `./tear-sheet-data/relationships.txt`
 
 **Query 5 — Valuation + peers:**
 If user provided specific comps:
@@ -36,8 +36,8 @@ Otherwise:
 Use the competitors tool to identify 3-5 public peers, then pull EV/Revenue (NTM), EV/EBITDA (NTM), revenue growth %, and EBITDA margin % for each.
 Also: "[Company] enterprise value market capitalization valuation multiples"
 → Valuation Context
-→ **Immediately write** company multiples to `/tmp/tear-sheet/valuation.csv`
-→ **Immediately write** peer data to `/tmp/tear-sheet/peer-comps.csv`
+→ **Immediately write** company multiples to `./tear-sheet-data/valuation.csv`
+→ **Immediately write** peer data to `./tear-sheet-data/peer-comps.csv`
 
 **Query 6 — Ownership (data permitting):**
 "[Company] ownership structure investors institutional ownership insider ownership"

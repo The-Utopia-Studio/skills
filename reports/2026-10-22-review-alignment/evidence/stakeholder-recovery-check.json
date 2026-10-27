@@ -1,0 +1,50 @@
+{
+  "method": "Independent static content-preservation comparison of git show16599fd old entrypoint and current successor entrypoint/reference; no behavioral replay or external actions.",
+  "old": "16599fd:skills/gtm/06-gtm-engineering/stakeholder-ops/SKILL.md",
+  "successor": "skills/founder-productivity/stakeholder-map/SKILL.md",
+  "reference": "skills/founder-productivity/stakeholder-map/references/feedback-program-operations.md",
+  "framework_coverage": [
+    {
+      "original": "Stakeholder Map: teams, decision rights, expectations per stage",
+      "current": "Operating plan1 plus Power\u00d7Interest entrypoint",
+      "assessment": "preserved"
+    },
+    {
+      "original": "Approval Workflow: brief sign-off, launch approval, readout review and timelines",
+      "current": "Operating plan2 and checkpoint table with artifacts, approver, due date, status",
+      "assessment": "preserved"
+    },
+    {
+      "original": "Communication Plan: audiences, channels, frequency, owners",
+      "current": "Operating plan3 plus entrypoint communications table",
+      "assessment": "preserved"
+    },
+    {
+      "original": "Action Tracking: shared tracker status, blockers, success metrics",
+      "current": "Operating plan4 and action table with success criterion/status/blocker",
+      "assessment": "preserved as draftable tracker; external creation not implied"
+    },
+    {
+      "original": "Governance Rituals: cadence and escalation paths",
+      "current": "Operating plan5 and review agenda",
+      "assessment": "preserved"
+    }
+  ],
+  "template_coverage": {
+    "RACI": "Explicit Responsible/Accountable/Consulted/Informed and Backup columns",
+    "approval_checklist": "Brief, QA results, communications plan preserved; status starts Not assessed",
+    "meeting_agenda_notes": "Review agenda preserved; no separate notes template, actionable owners/dates tracker captures follow-through"
+  },
+  "authority_checks": {
+    "invented_people": "Unknown ownersTBD; explicit prohibition on invented names or authority",
+    "invented_approval": "Not assessed statuses; explicit prohibition on marking approved because template exists",
+    "reminder_action": "Authorization required before automation/external mutation",
+    "sends": "Draft only absent user authorization"
+  },
+  "limitations": [
+    "No workflow execution tests; this establishes content preservation only.",
+    "Original optional insight-synthesis pairing not expressly carried over; not one of five framework elements.",
+    "Old shared-tracker tooling/reminder tip now bounded by authorization rather than automatically executed."
+  ],
+  "conclusion": "All five original framework elements covered; successor links resource. No invented approval/reminder actions prescribed."
+}

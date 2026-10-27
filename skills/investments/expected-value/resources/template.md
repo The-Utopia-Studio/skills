@@ -142,7 +142,7 @@ Calculate expected value for each alternative.
 
 **Standard Deviation**: σ = √Var = [σ]
 
-**Coefficient of Variation**: CV = σ / EV = [CV] (lower = better risk-adjusted return)
+**Coefficient of Variation**: CV = σ / EV = [CV], only for suitable positive ratio-scale outcomes with EV > 0; otherwise report N/A and use downside measures.
 
 ### Comparison Across Alternatives
 

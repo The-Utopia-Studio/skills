@@ -93,28 +93,11 @@ For each failure mode: (1) What happened, (2) Why it caused failure, (3) How lik
 
 ### Step 5: Assess plausibility and adjust
 
-**The Plausibility Test:**
+Narrative ease and the number of imagined risks identify questions to investigate; neither measures probability. Deduplicate causes, distinguish scenarios conditioned on failure from unconditional event risks, and look for evidence before changing the forecast.
 
-Ask yourself:
-- **How easy was it to write the failure narrative?**
-  - Very easy → Drop confidence by 15-30%
-  - Very hard, felt absurd → Confidence was appropriate
-- **How many plausible failure modes did you identify?**
-  - 5+ modes each >5% likely → Too much uncertainty for high confidence
-  - 1-2 modes, low likelihood → Confidence can stay high
-- **Did you discover any "unknown unknowns"?**
-  - Yes, multiple → Widen confidence intervals by 20%
-  - No, all known risks → Confidence appropriate
+For events that each suffice to cause failure, aggregate their union. For two events, `P(A or B)=P(A)+P(B)-P(A and B)`. Sum only mutually exclusive events; use `1-product(1-p)` only with justified independence. Without dependence information, report bounds `max(p_i) <= P(any) <= min(1,sum(p_i))`, not a forced point adjustment. A risk event that does not always cause failure also needs its conditional impact.
 
-**Quantitative Method:** Sum the probabilities of failure modes:
-```
-P(failure) = P(mode_1) + P(mode_2) + ... + P(mode_n)
-```
-
-If this sum is greater than `1 - your_current_probability`, your probability is too high.
-
-**Example:** Current success: 75% (implied failure: 25%), Sum of failure modes: 40%
-**Conclusion:** Underestimating failure risk by 15%, **Adjusted:** 60% success
+Example: two labels describe the same 30% event; failure remains30%, not60%. Two independent30% sufficient causes produce51%. Two mutually exclusive30% causes produce60%. These are synthetic probability checks, not empirical estimates.
 
 **Next:** Return to [menu](#interactive-menu) or document findings
 
@@ -161,7 +144,7 @@ Success Premortem Progress:
 
 ### Step 5: Assess and adjust upward if needed
 
-If success narrative was surprisingly plausible, increase probability.
+Use a plausible success narrative to identify evidence to seek; change probability only when the evidence warrants it.
 
 **Next:** Return to [menu](#interactive-menu)
 
@@ -342,31 +325,13 @@ Confidence Interval Adjustment Progress:
 
 **Total score:** __ / 20
 
-### Step 3: Calculate width adjustment
+### Step 3: Reassess uncertainty from evidence
 
-**Adjustment formula:**
+Do not translate a narrative score into an interval-width multiplier. Determine whether the target is a quantity, a binary event probability, or a model parameter, and label the interval accordingly (prediction, confidence, credible or subjective sensitivity range). Use a calibrated model or explicitly justified sensitivity analysis. Lack of calibration is a limitation, not a reason to invent precision.
 
-```
-Width multiplier = 1 + (Score / 20)
-```
+### Step 4: Set justified bounds
 
-**Examples:**
-- Score = 4/20 → Multiplier = 1.2 → Widen CI by 20%
-- Score = 10/20 → Multiplier = 1.5 → Widen CI by 50%
-- Score = 16/20 → Multiplier = 1.8 → Widen CI by 80%
-
-**Current width:** ___ points, **Adjusted width:** Current × Multiplier = ___ points
-
-### Step 4: Set new bounds
-
-**Method: Symmetric widening around current estimate**
-
-```
-New lower = Current estimate - (Adjusted width / 2)
-New upper = Current estimate + (Adjusted width / 2)
-```
-
-**Example:** Current: 70%, CI: 60-80% (width = 20), Score: 12/20, Multiplier: 1.6, New width: 32, **New CI: 54-86%**
+Document the method and assumptions. Probability bounds must stay within0–100%; asymmetric uncertainty need not be forced around the old estimate. Recompute from evidence and dependence assumptions; retaining the estimate is valid when no new evidence appears.
 
 ### Step 5: Document reasoning
 
@@ -402,7 +367,7 @@ New upper = Current estimate + (Adjusted width / 2)
 4. **Quantify failure modes** - Estimate probability of each
 5. **Set kill criteria** - Know what would change your mind
 6. **Monitor signposts** - Track early warning signals
-7. **Widen CIs** - If premortem was too easy, you're overconfident
+7. **Audit uncertainty** - Narrative ease is not calibration evidence
 
 ### One-Sentence Summary
 

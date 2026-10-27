@@ -13,22 +13,16 @@ Install the full GTM pack (all seven sub-modules):
 Skills in this sub-module:
 
 - `beachhead-segment`
-- `brand-narrative-playbook`
 - `business-narrative-builder`
 - `company-moc`
 - `customer-research`
 - `growth-loops`
 - `growth-strategy`
-- `gtm-motions`
 - `gtm-strategy`
 - `ideal-customer-profile`
 - `manifesto`
-- `positioning`
-- `positioning-icp`
 - `positioning-workshop`
 - `product-marketing-context`
 - `sales-motion-design`
 - `solo-founder-gtm`
-- `value-prop-statements`
 - `value-proposition`
-- `voice-of-customer`

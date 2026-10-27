@@ -287,16 +287,16 @@ What to measure and benchmarks
 
 ## Tool Integrations
 
-For implementation, see the [tools registry](../../tools/REGISTRY.md). Key email tools:
+Key email tools:
 
-| Tool | Best For | MCP | Guide |
-|------|----------|:---:|-------|
-| **Customer.io** | Behavior-based automation | - | [customer-io.md](../../tools/integrations/customer-io.md) |
-| **Mailchimp** | SMB email marketing | ✓ | [mailchimp.md](../../tools/integrations/mailchimp.md) |
-| **Nitrosend** | AI-native email (sequences via prompts) | ✓ | [nitrosend.md](../../tools/integrations/nitrosend.md) |
-| **Resend** | Developer-friendly transactional | ✓ | [resend.md](../../tools/integrations/resend.md) |
-| **SendGrid** | Transactional email at scale | - | [sendgrid.md](../../tools/integrations/sendgrid.md) |
-| **Kit** | Creator/newsletter focused | - | [kit.md](../../tools/integrations/kit.md) |
+| Tool | Best For | MCP |
+|------|----------|:---:|
+| **Customer.io** | Behavior-based automation | - |
+| **Mailchimp** | SMB email marketing | ✓ |
+| **Nitrosend** | AI-native email (sequences via prompts) | ✓ |
+| **Resend** | Developer-friendly transactional | ✓ |
+| **SendGrid** | Transactional email at scale | - |
+| **Kit** | Creator/newsletter focused | - |
 
 ---
 
@@ -306,6 +306,5 @@ For implementation, see the [tools registry](../../tools/REGISTRY.md). Key email
 - **churn-prevention**: For cancel flows, save offers, and dunning strategy (email supports this)
 - **onboarding-cro**: For in-app onboarding (email supports this)
 - **copywriting**: For landing pages emails link to
-- **ab-test-setup**: For testing email elements
-- **popup-cro**: For email capture popups
+- **ab-test-analysis**: For testing email elements
 - **revops**: For lifecycle stages that trigger email sequences

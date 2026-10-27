@@ -52,7 +52,7 @@ Tie-break: the Skeptic attack is cheaper to test in a week (watch behaviour) tha
 | Ladder rung it reaches | Behaviour (0.7) — we watch what the manager actually does, not what they say about the idea. |
 | Pass looks like | Manager acts on ≥ 1 suggestion per shift that they confirm they would not have taken on their own. |
 | Fail looks like | Manager acknowledges suggestions politely but changes no action, or only acts on things they were already about to do. |
-| Decision on pass | Re-score the Engineer and Incumbent attacks; those become the next gaps. Now a pretotype set is worth designing (`brainstorm-experiments-new`). |
+| Decision on pass | Re-score the Engineer and Incumbent attacks; those become the next gaps. Now a pretotype set is worth designing (`probe-matrix`). |
 | Decision on fail | Pivot away from "copilot that tells managers what to do." The value, if any, is elsewhere (e.g. informing the maintenance crew, not the manager). |
 
 ---

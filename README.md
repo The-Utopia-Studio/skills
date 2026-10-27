@@ -5,7 +5,7 @@
 
 **The best GTM skill pack for AI agents** — plus Product, Investments, and Founder Productivity.
 
-359 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
+253 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
 
 > **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills) · **Install:** [INSTALL.md](./INSTALL.md) (~2 minutes)
 
@@ -49,14 +49,6 @@ Already installed? Refresh:
 /plugin marketplace update skills
 ```
 
-## Standalone plugins
-
-Plugins that live in their own repo and are listed here so one marketplace covers everything:
-
-| Plugin | What it does | Install |
-|--------|--------------|---------|
-| `prview` | PR preview videos ([ui-walkthrough](https://github.com/The-Utopia-Studio/ui-walkthrough)): a narrated before/after video of what a merged PR changed in your web app, recorded from the real app. The repo is private, so you need access to The-Utopia-Studio on GitHub. Its `ui-walkthrough` skill is also in `utopia-product` for everyone. | `/plugin install prview@skills` |
-
 ## Single-skill installs (share these)
 
 ```bash
@@ -78,19 +70,22 @@ npx skills add The-Utopia-Studio/skills
 
 | Module | Pack | Skills | Covers |
 |--------|------|--------|--------|
-| **GTM** | `utopia-gtm` `v2.2.0` | 86 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
-| **Product** | `utopia-product` `v2.3.0` | 176 | Discovery, PRDs, design, build, deploy, product metrics |
-| **Investments** | `utopia-investments` `v2.1.0` | 66 | DD, modeling, valuation, capital markets, fundraising decks |
-| **Founder Productivity** | `utopia-founder-productivity` `v2.0.0` | 31 | Onboarding, legal, Obsidian, agents, meta tools |
+| **GTM** | `utopia-gtm` `v2.3.1` | 54 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
+| **Product** | `utopia-product` `v2.3.1` | 130 | Discovery, PRDs, design, build, deploy, product metrics |
+| **Investments** | `utopia-investments` `v2.2.0` | 42 | DD, modeling, valuation, capital markets, fundraising decks |
+| **Founder Productivity** | `utopia-founder-productivity` `v2.0.2` | 27 | Onboarding, legal, Obsidian, agents, meta tools |
 
 Exact lists: [`packs.config.json`](./packs.config.json).
+
+Consolidation changes, measured routing results, and remaining test work:
+[`Skill consolidation report`](./reports/2026-10-20-skill-consolidation/README.md).
 
 ### GTM highlights
 
 | Skill | Use when… |
 |-------|-----------|
 | `cold-email` / `outreach-execution` | Outbound with peer tone + approval rails |
-| `signal-anchored-message` / `account-tier-scoring` | Intent → prioritized outreach |
+| `cold-email` / `account-tier-scoring` | Intent → prioritized outreach |
 | `warm-intro-intelligence` | Warm paths into target accounts |
 | `deal-velocity-engineer` / `revops-forecasting` | Stalled deals + forecast accuracy |
 | `call-scorecards` / `earned-autonomy` | Call coaching + agent autonomy levels |

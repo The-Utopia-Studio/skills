@@ -1,0 +1,53 @@
+{
+  "method": "Authored before/after counterexamples evaluating current instruction contracts; not historical model outputs, not replayed coworker tests, not runtime routing or legal validation.",
+  "edited_skills": [
+    "agent-persona-builder",
+    "market-sizing",
+    "draft-nda",
+    "role-switch"
+  ],
+  "examples": [
+    {
+      "skill": "agent-persona-builder",
+      "input": "Build a named assistant. No role, contacts or prior incidents supplied.",
+      "before_counterexample": "Memory: Escalate to Maya, operations lead. Gotcha: CRM sync fails nightly.",
+      "after_authored_output": "Role and escalation owner: unknown. Verified memory: no facts supplied yet. What job should this assistant perform?",
+      "check": "No fabricated identity, contact or incident; empty verified-memory allowed."
+    },
+    {
+      "skill": "market-sizing",
+      "input": "SAM100000 customers; reachable1000, conversion50%; equal annual revenue per customer.",
+      "before_counterexample": "Raise SOM to1% because the recommended range starts at1%.",
+      "after_authored_output": "SOM500 customers,0.5% ofSAM. Preserve the capacity-derived estimate; do not clip to1%.",
+      "check": "1000*.5/100000=.005."
+    },
+    {
+      "skill": "market-sizing",
+      "input": "SAM1000 customers; reachable800, conversion50%; equal annual revenue per customer.",
+      "before_counterexample": "Cap SOM at20% despite400 capacity-supported customers.",
+      "after_authored_output": "SOM400 customers,40% ofSAM. State assumptions and validation needs; the illustrative20% bound does not override supplied capacity.",
+      "check": "800*.5/1000=.4."
+    },
+    {
+      "skill": "draft-nda",
+      "input": "Draft remedies language; governing jurisdiction not yet selected.",
+      "before_counterexample": "Injunctive relief is available for any breach.",
+      "after_authored_output": "[LEGAL REVIEW REQUIRED] Proposed wording may request injunctive relief. Governing jurisdiction is unresolved. Counsel should review enforceability of any irreparable-harm acknowledgment, the required showing and court discretion; no remedy is promised.",
+      "check": "No legal availability conclusion; proposed clause plus concrete review questions."
+    },
+    {
+      "skill": "role-switch",
+      "input": "Look at this from different stakeholder perspectives.",
+      "before_counterexample": "Your six-week migration has a$50000 budget; engineering objects.",
+      "after_authored_output": "What decision are you considering, and which time, budget or scope constraints matter?",
+      "check": "Targeted missing-input question; no fabricated scenario."
+    },
+    {
+      "skill": "role-switch",
+      "input": "Show a hypothetical product versus engineering disagreement; make reasonable assumptions.",
+      "before_counterexample": "Your team has committed to a Friday launch.",
+      "after_authored_output": "Hypothetical scenario: a Friday launch is proposed, with an unresolved reliability issue. Assumed constraints: one engineering day and a movable date. Product may prioritize launch timing; engineering may prioritize resolving the reliability risk. These are illustrative perspectives, not observed stakeholder views.",
+      "check": "User-authorized assumptions explicitly labeled."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"verification":"Static snippet review only: fs import and actual Vitest mock added before vi.mocked use. Vitest/Zod runtime suite not executed; dependencies not installed in repo.","status":"syntax-reviewed-not-runtime-tested"}

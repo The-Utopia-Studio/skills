@@ -1,10 +1,12 @@
 ---
 name: evidence-driven-testing
-description: >
-  Records visual proof while testing UI behavior — screen recording with structured
-  test/assertion annotations — then posts the video and a results summary to the PR
-  and tracker issue. Use whenever a UI change needs verifiable evidence that it works,
-  instead of prose claims.
+description: >-
+  Record annotated screen-recording proof that a UI fix or feature works (setup,
+  test_start and assertion annotations, pass/fail/untested), then post the video
+  and a results summary on the pull request and the Linear or Jira ticket. Use
+  when the user asks to record proof, a video or visual evidence of a UI flow,
+  show that a bug fix works on a PR, or attach test evidence to a ticket. Not
+  for writing automated tests (use tdd-red-green-refactor).
 compatibility: Requires a GUI environment with screen recording, an authenticated browser session for the app under test, and gh (GitHub CLI) or equivalent for posting evidence.
 metadata:
   version: "1.0"

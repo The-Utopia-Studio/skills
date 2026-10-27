@@ -28,7 +28,7 @@ The instinct was a funnel — alert open-rate, dwell, report accept-rate. That r
 | **Satisfaction signal** | Dissatisfied on the cooling-alert sub-job — the alert costs attention and returns nothing. |
 | **Other honest reading** | Could be alert-fatigue from *volume* rather than *class* — operators tuning out everything. Tested below. |
 | **Confirm-the-why probe** | Pull the 5 cooling alerts that were *not* dismissed fast; if those coincide with real thermal events, the class is mostly noise (a threshold problem), not blanket fatigue. Cheap, from existing logs. → `probe-matrix` |
-| **Interview it replaced** | A scheduled "why do you ignore cooling alerts?" session ≈ recruit 3 operators + £120 incentive + 45-min call + synthesis, ~1.5 wk lead, returns verbal 0.3. The trace already answered it at 0.7 for the triage minutes. |
+| **Cost comparison** | [Assumption — illustrative modeled counterfactual] A scheduled session could involve recruiting 3 operators, £120 incentives, a 45-min call and synthesis, with ~1.5 wk lead. No canceled session or measured savings is evidenced. Trace triage and a why-probe still have costs. |
 | **Proposed tree edit** | New opportunity: "cooling-alert precision" under the "operators act on our alerts" outcome, rung 0.7. |
 
 ### Card 2 — Power-feed alerts always opened, then exported
@@ -43,7 +43,7 @@ The instinct was a funnel — alert open-rate, dwell, report accept-rate. That r
 | **Satisfaction signal** | Served on detection, unfinished on escalation — they leave our product to act. |
 | **Other honest reading** | Export could be archival/compliance, not escalation. Distinguished by the probe. |
 | **Confirm-the-why probe** | Watch 3 exports end-to-end (screen-share) or check whether an incident ticket follows each export within an hour. → `probe-matrix` |
-| **Interview it replaced** | "Walk me through what happens after a power-feed alert" ≈ 2 hr effort + incentive + 1–2 wk lead, verbal 0.3. Trace: 0.7, free. |
+| **Cost comparison** | [Assumption — illustrative modeled counterfactual] A walkthrough interview could take 2 hr effort plus an incentive and 1–2 wk lead. No replacement is established; measure trace triage and follow-up cost. |
 | **Proposed tree edit** | New solution under "reduce time-to-escalation": one-click escalation to the incident bridge, seeded by the export behaviour. Rung 0.7. |
 
 ### Card 3 — Risk report accepted unedited at 94% (the trap)
@@ -58,7 +58,7 @@ The instinct was a funnel — alert open-rate, dwell, report accept-rate. That r
 | **Satisfaction signal** | Unknown until disambiguated. **The flattering read ("they trust it") is refused.** |
 | **Other honest reading** | 40s dwell on 6 pages is too fast to have *read* it. Equally consistent with rubber-stamping / compliance theatre / stakes feeling low. Accept-unedited is the ambiguous row in the decoder. |
 | **Confirm-the-why probe** | Inject one known material error into a small sample of reports and measure catch-rate; and check whether any accepted report was silently corrected downstream. If errors sail through, acceptance ≠ trust. → `probe-matrix` |
-| **Interview it replaced** | Doesn't replace one — it *generates* the probe that a survey ("do you trust the report?") could never answer honestly, because people over-report trust. |
+| **Cost comparison** | Doesn't replace one — it *generates* the probe that a survey ("do you trust the report?") could never answer honestly, because people over-report trust. |
 | **Proposed tree edit** | No tree edit yet. Held as **candidate**: the why-rung is 0.1 until the error-injection probe lands. Promoting it now would be the accept-as-trust lie. |
 
 ---
@@ -74,6 +74,6 @@ The instinct was a funnel — alert open-rate, dwell, report accept-rate. That r
 - **Findings routed:** Cards 1 and 2 → `continuous-discovery-engine` feed 2 at behaviour 0.7. This is the same loop turn that skill's example consumes: the trace evidence (dismiss cooling in <5s; always open + export power-feed) kills a planned "unified alert digest" solution and promotes "cooling-alert precision" + "one-click escalation."
 - **Candidate held:** Card 3 — accept-unedited pending the error-injection probe. Not promoted; the ambiguity is named, not resolved by flattery.
 - **Anecdotes parked (N=1):** none this window.
-- **Scheduled-interview cost replaced:** ≈ £240 in incentives + ~3 weeks of lead time for Cards 1–2 alone — and at a *higher* rung (0.7 vs 0.3) than the interviews would have returned. That is discovery getting cheaper and truer as usage accrues.
+- **Cost summary:** Cards 1–2 show illustrative interview alternatives, not realized savings. No canceled work is documented. Lead times may overlap and are not additive; trace analysis and confirm-the-why probes still require effort.
 
 **Hand-off:** two feed-2 signals to `continuous-discovery-engine` (rung 0.7, weighted by distinct operators); three probes to `probe-matrix`; one candidate (Card 3) explicitly un-promoted until its why is confirmed.

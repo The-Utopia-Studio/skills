@@ -103,7 +103,7 @@ If BS doesn't balance, **quantify the gap per period and trace where it breaks**
 - Discount rate applied to wrong period (mid-year vs end-of-year)
 - Terminal value not discounted back
 - WACC uses book values instead of market values
-- FCF includes interest expense (should be unlevered)
+- FCFF discounted at WACC must exclude financing cash flows; FCFE discounted at cost of equity follows equity cash flows. Verify the selected model before flagging interest.
 - Tax shield double-counted
 
 **LBO:**

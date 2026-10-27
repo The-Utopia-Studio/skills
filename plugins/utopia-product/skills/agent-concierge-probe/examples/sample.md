@@ -40,18 +40,18 @@ Successful outcomes: 9 (run 8 failed; its tokens still count).
 
 CPO = $16.73 ÷ 9 = **$1.86 / triaged order** [Fact]
 
-Read: model tokens are cheap ($0.05/order); the cost lives in human-fix minutes ($1.73/order, 93% of the total). Sanity check (both in USD so "flag if CPO > price" is unambiguous): the concierge customer paid ~$4/order — CPO ($1.86) sits under it, but only because failures were caught for free by the founder.
+Read: model tokens are cheap ($0.05/order); the cost lives in human-fix minutes ($1.73/order, 93% of the total). Sanity check (both in USD so "flag if CPO > price" is unambiguous): the concierge customer paid ~$4/order — CPO ($1.86) sits under it, but any unlogged founder verification time must be added before treating this as a complete economic result.
 
 ## 3. Frontier map
 
 | Step | Green | Amber | Red | Note |
 |---|---|---|---|---|
 | 1 read order + log | ✓ | | | reliable except null reads |
-| 2 classify fault | | ✓ | | reprompt needed on odd codes |
+| 2 classify fault | | | ✓ | human classified no-code and split dual-fault orders (runs 3 and 5) |
 | 3 set priority | | | ✓ | null reads → wrong priority; human takeover |
 | 4 route to crew | ✓ | | | reliable |
 
-Red step on the critical path: **priority-setting when sensor data is null or missing**. That is the frontier.
+Red step on the critical path: **classification of no-code/dual-fault orders and priority-setting when sensor data is null or missing**. That is the frontier.
 
 ## 4. Read-out (honesty contract)
 
@@ -64,4 +64,4 @@ Must NOT claim:
 - Trust / adoption: [Hypothesis, not tested] whether the plant manager would trust agent-set priorities is a concierge/field question.
 
 ## 5. Decision
-CPO ($1.86) is under the concierge price, but the human-fix share means it is not truly automated. Frontier verdict: automatable after the null-read priority step is solved (better sensor validation, or route those orders to a human by rule). Next move: fix the red step, re-run, and re-price; send the trust question to a field probe.
+CPO ($1.86) is under the concierge price, but the human-fix share means it is not truly automated. Frontier verdict: automatable after the classification and null-read priority steps are solved (better sensor validation, or route those orders to a human by rule). Next move: fix the red step, re-run, and re-price; send the trust question to a field probe.

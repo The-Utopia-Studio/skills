@@ -49,6 +49,7 @@ Bands:
 | Panels followed unprompted | ≥ 80% | Legible enough to build the flow |
 | Panels followed unprompted | < 80% | Redraw; do not advance |
 | Panels carrying the decision | 1 | Workflow is decomposed |
+| Panels carrying the decision | 2 | Review needed: clarify whether these are two independent decisions or one decision split across panels; do not declare decomposed yet |
 | Panels carrying the decision | > 2 | Not decomposed yet; the job is still fuzzy |
 
 Legibility % = (panels not blocked by a legibility gap) / N. A decision-point pause does NOT count against legibility — the operator followed the panel and reached for off-page judgment, which is the finding, not a failure.
@@ -73,4 +74,4 @@ Kill line (auto-fail): the read-out claims the sketch proved demand, willingness
 - `wizard-of-oz-probe` — the next rung when the claim is "would they use it if it worked."
 - `concierge-probe` — when the claim is trust or willingness to pay under real stakes.
 - `evidence-ladder` — the scoring ladder this read-out uses.
-Supersedes nothing. It absorbs the paper/L1 rung of `skills/discovery/prototyping-pretotyping` and sharpens it: that skill tests "workflow"; this one tests legibility and decision location, and refuses to let a sketch speak about demand. It **narrows** that one rung — it does not replace the whole skill. `probe-matrix` is what supersedes `prototyping-pretotyping`, so this skill's `supersedes: none` is correct.
+Supersedes nothing. It absorbs the paper/L1 rung of the generic prototyping fidelity ladder and sharpens it: the ladder tests "workflow"; this one tests legibility and decision location, and refuses to let a sketch speak about demand. It **narrows** that one rung — it does not replace the whole ladder. `probe-matrix` is what replaced it, so this skill's `supersedes: none` is correct.

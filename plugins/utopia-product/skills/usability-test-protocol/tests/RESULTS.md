@@ -1,3 +1,5 @@
+> HISTORICAL / SUPERSEDED: Predates the 2026-10-21 Codex evidence-contract corrections; retained scores are not current validation. No rerun claimed.
+
 # Eval log — usability-test-protocol
 
 Author agent seeds the trigger phrasings; the judge agent (separate) runs and scores.

@@ -72,7 +72,7 @@ Nothing a synthetic user says is ever [Fact].
 | **REVISE** — broke at a specific, nameable point | ☐ | |
 | **PROMOTE** — survived the screen; earns a real interview | ☐ | |
 
-**If PROMOTE:** the real interview to book next → `tacit-knowledge-interview` / `interview-script`. Surviving synthetic is a ticket to spend the real interview, not validation.
+**If PROMOTE:** the real interview to book next → `tacit-knowledge-interview` / `discovery-interview-prep`. Surviving synthetic is a ticket to spend the real interview, not validation.
 
 **If REVISE:** the exact fix, then re-run this panel (cheap) → _[the change]_
 

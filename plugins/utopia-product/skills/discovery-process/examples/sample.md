@@ -23,7 +23,7 @@
 - Pain point: "Lack of onboarding guidance" (frequency: 8/10, intensity: HIGH)
 
 **Phase 5 - Generate Solutions:**
-- Ran `opportunity-solution-tree.md`: 3 solutions (guided checklist, tooltips, human onboarding)
+- Ran `continuous-discovery-engine` (first opportunity solution tree): 3 solutions (guided checklist, tooltips, human onboarding)
 - Experiment: Figma prototype of guided checklist, tested with 10 new signups
 - Result: 9/10 completed first action with checklist (vs. 4/10 without)
 

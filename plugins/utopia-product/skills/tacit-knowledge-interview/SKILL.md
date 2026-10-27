@@ -1,6 +1,13 @@
 ---
 name: tacit-knowledge-interview
-description: Shadow an expert doing real work and extract the judgment calls they make without noticing. Fires when a fellow says "interview an expert", "capture how they decide", "watch them work", "shadow an operator", "capture the judgment", or "encode when they override the rule". Runs a watch-30 / replay-20 / edge-cases-10 session and returns a Tacit-Knowledge Capture: the explicit procedure split from the tacit judgment, each fork tagged with the cue read and the exception that overrides it. NOT for scripting a Mom-Test customer discovery interview (use interview-script), planning discovery interviews about a problem or churn (use discovery-interview-prep), or condensing a transcript you already have (use summarize-interview).
+description: >-
+  Shadow an expert doing real work and extract the judgment calls they make without noticing. Fires
+  when a fellow says "interview an expert", "capture how they decide", "watch them work", "shadow an
+  operator", "capture the judgment", or "encode when they override the rule". Runs a watch-30 /
+  replay-20 / edge-cases-10 session and returns a Tacit-Knowledge Capture: the explicit procedure
+  split from the tacit judgment, each fork tagged with the cue read and the exception that overrides
+  it. NOT for planning or scripting a Mom-Test customer discovery interview about a problem or churn (use discovery-interview-prep), or condensing
+  a transcript you already have (use summarize-interview).
 type: interactive
 supersedes: none
 ---
@@ -21,7 +28,7 @@ Do not use it for:
 
 | If the fellow wants… | Use instead | Why not this skill |
 |---|---|---|
-| A Mom-Test script to learn a customer's problem or JTBD | `interview-script` | That prepares questions to validate a problem; this shadows an expert doing work to extract judgment. |
+| A Mom-Test script to learn a customer's problem or JTBD | `discovery-interview-prep` | That prepares questions to validate a problem; this shadows an expert doing work to extract judgment. |
 | To plan/prep discovery interviews about churn or a new idea | `discovery-interview-prep` | That picks a goal, segment, and methodology for problem discovery; this needs live observation of a task, not a plan. |
 | To condense an interview transcript already recorded | `summarize-interview` | That extracts signal from words you have; this creates new signal by watching behaviour you have not yet observed. |
 | To score a single signal on the evidence ladder | `evidence-ladder` | That grades one claim; this produces the capture (and uses the ladder to weigh each fork). |
@@ -120,4 +127,4 @@ See `examples/sample.md` for a full run on a Mentix plant supervisor: 30 minutes
 - Uses `evidence-ladder` to weigh each fork (observed 0.7 vs recited 0.3); it does not replace it.
 - Feeds `concept-council` and the probe skills: a captured judgment is often the load-bearing assumption a probe then tests at scale, and the "when they override" fork is exactly what a Mentix-style copilot must get right.
 - Distinct from `yoda-data-sourcing`: that finds proprietary data a model cannot reach; this creates judgment data that exists nowhere until you observe it.
-- Absorbs the bones of `interview-script` and `discovery-interview-prep` — Mom-Test discipline (past behaviour over hypotheticals, anchor to specific instances, never pitch) — but inverts the method: those ask a customer about a problem; this watches an expert do a task and treats the words as secondary to the behaviour. It supersedes neither; use them for problem discovery, use this for judgment capture.
+- Absorbs the bones of `discovery-interview-prep` (planning and Mom-Test scripting) — Mom-Test discipline (past behaviour over hypotheticals, anchor to specific instances, never pitch) — but inverts the method: those ask a customer about a problem; this watches an expert do a task and treats the words as secondary to the behaviour. It does not supersede it; use it for problem discovery, use this for judgment capture.

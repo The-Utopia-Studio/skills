@@ -14,7 +14,6 @@ scenarios:
   - "We need a clearer problem statement for onboarding drop-off"
 ---
 
-
 ## Purpose
 Guide product managers through the MITRE Problem Framing Canvas process by asking structured questions across three phases: Look Inward (examine your own assumptions and biases), Look Outward (understand who experiences the problem and who doesn't), and Reframe (synthesize insights into an actionable problem statement and "How Might We" question). Use this to ensure you're solving the right problem before jumping to solutions—avoiding confirmation bias, overlooked stakeholders, and solution-first thinking.
 
@@ -81,7 +80,7 @@ The Problem Framing Canvas (MITRE Innovation Toolkit, v3) is a structured framew
 
 ### Facilitation Source of Truth
 
-Use [`workshop-facilitation`](../workshop-facilitation/SKILL.md) as the default interaction protocol for this skill.
+Use the `workshop-facilitation` skill as the default interaction protocol for this skill.
 
 It defines:
 - session heads-up + entry mode (Guided, Context dump, Best guess)
@@ -373,9 +372,9 @@ After completing the flow, the agent outputs:
 
 ## Next Steps
 
-1. **Validate with users:** Use `skills/discovery-interview-prep/SKILL.md` to test reframed problem with customers
-2. **Generate solutions:** Use `skills/opportunity-solution-tree/SKILL.md` to explore solution space
-3. **Create problem statement:** Use `skills/problem-statement/SKILL.md` to formalize for PRD/roadmap
+1. **Validate with users:** Use `discovery-interview-prep` to test reframed problem with customers
+2. **Generate solutions:** Use `continuous-discovery-engine` to explore solution space
+3. **Create problem statement:** Use `problem-statement` to formalize for PRD/roadmap
 4. **Identify opportunities:** Use HMW statement to brainstorm solution ideas
 
 ---
@@ -447,20 +446,10 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `skills/problem-statement/SKILL.md` — Converts reframed problem into formal problem statement
-- `skills/opportunity-solution-tree/SKILL.md` — Uses HMW statement to generate solution options
-- `skills/discovery-interview-prep/SKILL.md` — Validates reframed problem with customers
+- `problem-statement` — Converts reframed problem into formal problem statement
+- `continuous-discovery-engine` — Uses HMW statement to generate solution options
+- `discovery-interview-prep` — Validates reframed problem with customers
 
 ### External Frameworks
 - MITRE Innovation Toolkit, "Problem Framing Canvas v3" (2021) — Origin of canvas, equity-driven design thinking
 - Stanford d.school, "How Might We" statements — Actionable problem framing
-
-### Dean's Work
-- [If Dean has problem framing resources, link here]
-
----
-
-**Skill type:** Interactive
-**Suggested filename:** `problem-framing-canvas.md`
-**Suggested placement:** `/skills/interactive/`
-**Dependencies:** Uses `skills/problem-statement/SKILL.md`
