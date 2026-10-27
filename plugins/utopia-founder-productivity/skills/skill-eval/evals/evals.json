@@ -1,0 +1,46 @@
+{
+  "skill_name": "skill-eval",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I just rewrote the description of our cold-email skill (skills/gtm/05-bd-partnerships/cold-email). Check whether it still triggers on the right requests and doesn't steal requests that belong to ai-sdr or outreach-execution.",
+      "expected_output": "Runs Gate 1 on the skill, writes a trigger set of 8-10 should-trigger and 8-10 near-miss requests (near misses naming ai-sdr and outreach-execution as the expected winners), runs it at least 3 times with the full description budget, scores it with score_triggers.py, and reports recall, false fires and which skills stole requests against the bars.",
+      "assertions": [
+        "Runs or proposes the static checker before trigger tests",
+        "Trigger set has both should-trigger and near-miss should-not-trigger requests",
+        "Near misses name the neighbouring skill that should win instead of using only 'none'",
+        "Each request is run at least 3 times",
+        "Reports recall and false fires against the 0.8 / 1 bars",
+        "Does not claim a pass for anything it did not run"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Is our dcf-model skill actually worth keeping, or does Claude do DCFs just as well without it?",
+      "expected_output": "Sets up 3-5 realistic DCF tasks with fixture financials and success criteria, runs each with and without the skill under identical settings over several trials, grades outcomes with code checks first (recalculation, terminal value share, sensitivity table) and a rubric judge for the rest, computes lift, and gives a Ship/Fix/Merge/Retire verdict with evidence.",
+      "assertions": [
+        "Compares with-skill against a no-skill baseline under the same model and tools",
+        "Uses fixture inputs and explicit success criteria per task",
+        "Prefers code-based graders for numeric checks",
+        "Computes lift as with-skill minus baseline pass rate",
+        "Treats zero lift as a retire or merge signal",
+        "Ends with a verdict from the defined set"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We have 253 skills across four packs. Plan and start an audit so we know which ones are broken, which never fire and which are flaky. We'll be limited by usage caps.",
+      "expected_output": "Uses batch mode: static checks on every skill first, routing for every skill using the existing prompt set, then a ranked sample for output and stability gates; keeps runs resumable with checkpoints and stops cleanly on usage limits; saves results under reports/<date>-skill-eval/ with raw JSON.",
+      "assertions": [
+        "Runs Gate 1 across all skills before anything expensive",
+        "Uses the existing trigger harness and prompt set rather than inventing a new one",
+        "Ranks skills for output evals by usage and risk instead of testing all equally",
+        "Uses checkpoints/resume and treats usage-limit errors as unscored, not failures",
+        "Writes the report and raw results to a dated reports folder"
+      ],
+      "files": []
+    }
+  ]
+}

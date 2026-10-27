@@ -337,3 +337,6 @@ pct-application	investments	Review these draft claims for EPO compliance before 
 tear-sheet	investments	Make a 2-slide IB-style strip profile of Americana Restaurants for our pitch book: a quadrant layout covering business overview, key financials with margins, valuation multiples and top shareholders, as a PowerPoint.
 none	negative	What is 17 times 23?
 none	negative	Rename the variable foo to bar in this line: const foo = 1
+skill-eval	founder	I just rewrote the description of our cold-email skill. Can you check it still fires on the right requests and doesn't steal ones meant for ai-sdr? Run it a few times so we know it's stable.
+skill-eval	founder	We have about 250 skills in four packs. Audit them: which are broken, which never get picked, and which give flaky results. Give each one a keep, fix, merge or retire verdict.
+skill-eval	founder	Is our dcf-model skill actually worth keeping? Compare what Claude produces with and without it on a few real DCF tasks.
