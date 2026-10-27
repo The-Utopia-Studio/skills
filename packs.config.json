@@ -584,6 +584,16 @@
         "url": "https://github.com/The-Utopia-Studio/ui-walkthrough.git"
       },
       "description": "PR preview videos (ui-walkthrough): a narrated before/after video of what a merged pull request changed in your web app, recorded from the real app and posted on the PR. Lives in its own repo, so it ships its own version."
+    },
+    {
+      "name": "utopia-os",
+      "source": "./os-plugins/utopia-os",
+      "description": "UtopiaOS for Claude Code: when a session starts, Claude sees the work you approved with Cobi (installing a skill, a setup check) and does it on your first message, with no check-in to type. Needs UtopiaOS connected to Claude Code from the AI tools page."
+    },
+    {
+      "name": "utopia-os-channel",
+      "source": "./os-plugins/utopia-os-channel",
+      "description": "Pilot: work you approve with Cobi in UtopiaOS arrives in your open Claude Code session by itself. Uses Claude Code channels (research preview): start Claude with claude --dangerously-load-development-channels plugin:utopia-os-channel@skills. Install utopia-os too."
     }
   ]
 }

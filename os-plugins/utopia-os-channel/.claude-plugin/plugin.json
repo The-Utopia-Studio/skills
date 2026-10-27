@@ -1,0 +1,6 @@
+{
+  "name": "utopia-os-channel",
+  "version": "0.1.0",
+  "description": "Pilot: work you approve with Cobi in UtopiaOS arrives in your open Claude Code session by itself, with nothing to type. Uses Claude Code channels (research preview): start Claude with `claude --dangerously-load-development-channels plugin:utopia-os-channel@skills`. Install utopia-os too, for work that was waiting before the session started.",
+  "author": { "name": "The Utopia Studio" }
+}
