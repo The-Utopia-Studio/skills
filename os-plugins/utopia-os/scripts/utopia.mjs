@@ -40,7 +40,8 @@ export function configPaths(env = process.env, home = homedir()) {
  * @returns {{ url: string; authorization: string } | null}
  */
 export function findConnection({ env = process.env, home = homedir(), read = (path) => readFileSync(path, "utf8") } = {}) {
-  if (env.UTOPIA_MCP_URL && env.UTOPIA_TOKEN) return { url: env.UTOPIA_MCP_URL, authorization: `Bearer ${env.UTOPIA_TOKEN}` };
+  // The override is held to the same rule as the saved connection: the token only goes to https, or to a local address.
+  if (env.UTOPIA_MCP_URL && env.UTOPIA_TOKEN) return isAllowedUrl(env.UTOPIA_MCP_URL) ? { url: env.UTOPIA_MCP_URL, authorization: `Bearer ${env.UTOPIA_TOKEN}` } : null;
   for (const path of configPaths(env, home)) {
     let config;
     try {
