@@ -93,6 +93,31 @@ export async function pendingActions(connection, options) {
 }
 
 /**
+ * The waiting actions this session may show Claude: every one no other session
+ * holds, each claimed for this session first (claim_action), so two open
+ * sessions never both do it. One another session claimed is left until its
+ * claim runs out; one this session can't claim (a race lost) is left too.
+ * @param {{ url: string; authorization: string }} connection
+ * @param {Array<{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean; claimedUntil?: number | null }>} actions
+ * @param {string} claimant
+ * @param {{ now?: number; fetchImpl?: typeof fetch; timeoutMs?: number }} [options]
+ */
+export async function takeActions(connection, actions, claimant, { now = Date.now(), ...options } = {}) {
+  const taken = [];
+  for (const action of actions) {
+    if (typeof action.claimedUntil === "number" && action.claimedUntil > now) continue;
+    try {
+      const result = await callTool(connection, "claim_action", { actionId: action.id, claimant }, options);
+      if (result?.claimed === true) taken.push(action);
+    } catch (error) {
+      if (error?.unauthorized) throw error;
+      // Couldn't claim it this time: leave it for the next look rather than risk doing it twice.
+    }
+  }
+  return taken;
+}
+
+/**
  * How waiting actions reach Claude: what each is, whether the person already
  * approved it in UtopiaOS, and the exact steps UtopiaOS wrote for it. The steps
  * come from UtopiaOS's fixed set of kinds (convex/lib/queuedActions.ts), never

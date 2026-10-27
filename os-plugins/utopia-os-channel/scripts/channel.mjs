@@ -10,9 +10,11 @@
  * with the connection the fellow already gave Claude Code (./utopia.mjs), and
  * sends Claude each action it hasn't sent before.
  *
- * Actions already waiting when the session starts are left to the utopia-os
- * plugin's session-start hook, so nothing arrives twice; only ones that appear
- * later are pushed. Channels are a research preview: the session has to be
+ * Before sending an action it claims it for this session (claim_action), and
+ * it leaves alone any action another session holds: the session-start hook's,
+ * or another open window's. So nothing is done twice, and an action the hook
+ * didn't show (it failed, or the action came just after) still arrives.
+ * Channels are a research preview: the session has to be
  * started with --dangerously-load-development-channels plugin:utopia-os-channel@skills,
  * and Claude Code drops the events silently otherwise.
  *
@@ -22,7 +24,8 @@
 
 /* global process, setTimeout */
 import { createInterface } from "node:readline";
-import { describeActions, findConnection, pendingActions } from "./utopia.mjs";
+import { randomUUID } from "node:crypto";
+import { describeActions, findConnection, pendingActions, takeActions } from "./utopia.mjs";
 
 export const POLL_MS = 30_000;
 const MAX_BACKOFF_MS = 10 * 60_000;
@@ -38,11 +41,11 @@ export const INSTRUCTIONS =
  * answers to each JSON-RPC message, and what it sends after each poll.
  */
 /**
- * @param {{ send: (message: Record<string, unknown>) => void; poll: () => Promise<Array<{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean }>>; log?: (text: string) => void; now?: () => number }} options
+ * @typedef {{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean; claimedUntil?: number | null }} PendingAction
+ * @param {{ send: (message: Record<string, unknown>) => void; poll: () => Promise<PendingAction[]>; take: (actions: PendingAction[]) => Promise<PendingAction[]>; log?: (text: string) => void; now?: () => number }} options
  */
-export function createChannel({ send, poll, log = () => {}, now = Date.now }) {
+export function createChannel({ send, poll, take, log = () => {}, now = Date.now }) {
   const sent = new Set();
-  let baselined = false;
   let failures = 0;
   let stopped = false;
 
@@ -76,14 +79,10 @@ export function createChannel({ send, poll, log = () => {}, now = Date.now }) {
     if (stopped) return null;
     try {
       const actions = await poll();
+      // Claimed for this session first; anything another session holds stays where it is.
+      const fresh = await take(actions.filter((action) => !sent.has(action.id)));
       failures = 0;
-      const fresh = actions.filter((action) => !sent.has(action.id));
-      for (const action of actions) sent.add(action.id);
-      if (!baselined) {
-        // What was waiting at the start is the session-start hook's to show.
-        baselined = true;
-        return POLL_MS;
-      }
+      for (const action of fresh) sent.add(action.id);
       if (fresh.length > 0) {
         send({
           jsonrpc: "2.0",
@@ -112,7 +111,13 @@ async function main() {
   const log = (text) => process.stderr.write(`utopia-os-channel: ${text}\n`);
   const connection = findConnection();
   if (!connection) log("UtopiaOS isn't connected to Claude Code (no \"utopia\" MCP server at user scope), so nothing will arrive.");
-  const channel = createChannel({ send: write, log, poll: () => (connection ? pendingActions(connection) : Promise.resolve([])) });
+  const claimant = `channel:${randomUUID()}`;
+  const channel = createChannel({
+    send: write,
+    log,
+    poll: () => (connection ? pendingActions(connection) : Promise.resolve([])),
+    take: (actions) => (connection && actions.length > 0 ? takeActions(connection, actions, claimant) : Promise.resolve([])),
+  });
 
   let started = false;
   const loop = async () => {
