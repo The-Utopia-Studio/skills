@@ -41,7 +41,7 @@ export const INSTRUCTIONS =
  * answers to each JSON-RPC message, and what it sends after each poll.
  */
 /**
- * @typedef {{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean; claimedUntil?: number | null }} PendingAction
+ * @typedef {{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean; claimedUntil?: number | null; claimedBy?: string | null }} PendingAction
  * @param {{ send: (message: Record<string, unknown>) => void; poll: () => Promise<PendingAction[]>; take: (actions: PendingAction[]) => Promise<PendingAction[]>; log?: (text: string) => void; now?: () => number }} options
  */
 export function createChannel({ send, poll, take, log = () => {}, now = Date.now }) {

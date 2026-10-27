@@ -21,6 +21,8 @@ import { join } from "node:path";
 
 export const SERVER_NAME = "utopia";
 const REQUEST_TIMEOUT_MS = 8_000;
+/** Below this much time left, a request isn't worth starting. */
+const MIN_REQUEST_MS = 500;
 
 /** @typedef {Record<string, string | undefined>} Env */
 
@@ -98,16 +100,21 @@ export async function pendingActions(connection, options) {
  * sessions never both do it. One another session claimed is left until its
  * claim runs out; one this session can't claim (a race lost) is left too.
  * @param {{ url: string; authorization: string }} connection
- * @param {Array<{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean; claimedUntil?: number | null }>} actions
+ * Stops claiming when `deadline` is near, keeping what it already claimed, so a
+ * slow connection can't leave work claimed but never shown.
+ * @param {Array<{ id: string; title: string; instructions: string; approvedInUtopiaOS?: boolean; claimedUntil?: number | null; claimedBy?: string | null }>} actions
  * @param {string} claimant
- * @param {{ now?: number; fetchImpl?: typeof fetch; timeoutMs?: number }} [options]
+ * @param {{ now?: () => number; deadline?: number; fetchImpl?: typeof fetch }} [options]
  */
-export async function takeActions(connection, actions, claimant, { now = Date.now(), ...options } = {}) {
+export async function takeActions(connection, actions, claimant, { now = Date.now, deadline = Infinity, fetchImpl } = {}) {
   const taken = [];
   for (const action of actions) {
-    if (typeof action.claimedUntil === "number" && action.claimedUntil > now) continue;
+    // Held by another session: leave it. This session's own claim (a resumed or cleared chat) is taken again.
+    if (typeof action.claimedUntil === "number" && action.claimedUntil > now() && action.claimedBy !== claimant) continue;
+    const left = deadline - now();
+    if (left < MIN_REQUEST_MS) break;
     try {
-      const result = await callTool(connection, "claim_action", { actionId: action.id, claimant }, options);
+      const result = await callTool(connection, "claim_action", { actionId: action.id, claimant }, { fetchImpl, timeoutMs: Math.min(REQUEST_TIMEOUT_MS, left) });
       if (result?.claimed === true) taken.push(action);
     } catch (error) {
       if (error?.unauthorized) throw error;

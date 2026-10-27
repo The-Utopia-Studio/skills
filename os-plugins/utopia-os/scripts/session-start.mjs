@@ -26,12 +26,17 @@ async function sessionClaimant() {
   return `hook:${randomUUID()}`;
 }
 
+/** All of this hook's requests share this budget, well inside the hook's 15-second timeout, so claimed work is always printed. */
+const BUDGET_MS = 10_000;
+
 async function main() {
+  const deadline = Date.now() + BUDGET_MS;
   const claimant = await sessionClaimant();
   const connection = findConnection();
   if (!connection) return;
+  const waiting = await pendingActions(connection, { timeoutMs: Math.max(1, Math.min(8_000, deadline - Date.now())) });
   // Only what this session claimed: work another open session is doing isn't shown twice.
-  const actions = await takeActions(connection, await pendingActions(connection), claimant);
+  const actions = await takeActions(connection, waiting, claimant, { deadline });
   if (actions.length === 0) return;
   process.stdout.write(
     JSON.stringify({ hookSpecificOutput: { hookEventName: "SessionStart", additionalContext: describeActions(actions, { when: "start" }) } }),
