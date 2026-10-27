@@ -1,0 +1,85 @@
+PASS  1/1   build          want cli-agent-dx-score  got utopia-product:cli-agent-dx-score
+FAIL  0/1   build          want ui-responsive  got none
+PASS  1/1   build          want asd-ste100  got utopia-product:asd-ste100
+PASS  1/1   build          want brand-guidelines  got utopia-product:brand-guidelines
+PASS  1/1   build          want brand-graphics  got utopia-product:brand-graphics
+PASS  1/1   build          want design-tokens  got utopia-product:design-tokens
+ERROR 0/0   build          want ui-animation  got error: timeout
+FAIL  0/1   build          want ui-microcopy  got none
+FAIL  0/1   build          want cloud-cost-optimizer  got none
+PASS  1/1   build          want ui-delight  got utopia-product:ui-delight
+ERROR 0/0   build          want dataset-builder  got error: timeout
+FAIL  0/1   build          want deployment-engineer  got none
+PASS  1/1   build          want efecto-graphic-design  got utopia-product:efecto-graphic-design
+PASS  1/1   build          want efecto-web-design  got utopia-product:efecto-web-design
+PASS  1/1   build          want pr-test-evidence-video  got utopia-product:pr-test-evidence-video
+ERROR 0/0   build          want diagram-design  got error: timeout
+PASS  1/1   build          want hf-cli  got utopia-product:hf-cli
+FAIL  0/1   build          want guardrail-design  got none
+FAIL  0/1   build          want huggingface-datasets  got none
+PASS  1/1   build          want huggingface-llm-trainer  got utopia-product:huggingface-llm-trainer
+FAIL  0/1   build          want huggingface-papers  got deep-research
+FAIL  0/1   build          want huggingface-community-evals  got none
+PASS  1/1   build          want huggingface-trackio  got utopia-product:huggingface-trackio
+FAIL  0/1   build          want huggingface-tool-builder  got none
+PASS  1/1   build          want industrial-brutalist-ui  got utopia-product:industrial-brutalist-ui
+ERROR 0/0   build          want impeccable  got error: timeout
+FAIL  0/1   build          want dev-tool-integrations  got none
+FAIL  0/1   build          want ui-layout-spacing  got none
+PASS  1/1   build          want minimalist-ui  got utopia-product:minimalist-ui
+PASS  1/1   build          want monitoring-setup  got utopia-product:monitoring-setup
+PASS  1/1   build          want ui-advanced-effects  got utopia-product:ui-advanced-effects
+ERROR 0/0   build          want ui-animation-storyboard  got error: timeout
+PASS  1/1   build          want ui-quieter  got utopia-product:ui-quieter
+PASS  1/1   build          want railway  got ponytail:railway
+FAIL  0/1   build          want agents-md-writer  got none
+PASS  1/1   build          want repo-readiness-scan  got utopia-product:repo-readiness-scan
+FAIL  0/1   build          want security-auditor  got security-review
+PASS  1/1   build          want ui-design-brief  got utopia-product:ui-design-brief
+FAIL  0/1   build          want repo-structurer  got none
+PASS  1/1   build          want tdd-red-green-refactor  got utopia-product:tdd-red-green-refactor
+PASS  1/1   build          want transformers-js  got utopia-product:transformers-js
+FAIL  0/1   build          want ui-ux-pro-max  got utopia-product:brand-guidelines
+FAIL  0/1   build          want vercel-composition-patterns  got none
+FAIL  0/1   build          want vercel-react-best-practices  got none
+FAIL  0/1   build          want typed-service-contracts  got none
+FAIL  0/1   build          want vercel-react-native-skills  got none
+FAIL  0/1   build          want workflow-design  got none
+PASS  1/1   build          want brand-graphics  got utopia-product:brand-graphics
+PASS  1/1   build          want ui-critique  got utopia-product:ui-critique
+FAIL  0/1   build          want ui-polish  got none
+ERROR 0/0   build          want brand-graphics  got error: timeout
+PASS  1/1   build          want deploy-to-vercel  got utopia-product:deploy-to-vercel
+FAIL  0/1   build          want ui-polish  got none
+FAIL  0/1   build          want railway  got none
+PASS  1/1   build          want railway  got utopia-product:railway
+PASS  1/1   build          want railway  got utopia-product:railway
+FAIL  0/1   build          want railway  got deep-research
+PASS  1/1   build          want railway  got utopia-product:railway
+PASS  1/1   build          want railway  got utopia-product:railway
+FAIL  0/1   build          want railway  got deep-research
+ERROR 0/0   build          want diagram-design  got error: timeout
+FAIL  0/1   build          want impeccable  got utopia-founder-productivity:defuddle-web-extract
+FAIL  0/1   build          want impeccable  got utopia-product:shadcn-tailwind-ui
+FAIL  0/1   build          want impeccable  got utopia-product:ui-ux-pro-max
+FAIL  0/1   build          want impeccable  got utopia-product:ui-audit
+FAIL  0/1   build          want ui-audit  got utopia-product:vercel-react-best-practices
+FAIL  0/1   discovery      want ab-test-analysis  got none
+FAIL  0/1   discovery      want agent-concierge-probe  got none
+FAIL  0/1   discovery      want bottoms-up-market-sizing  got none
+PASS  1/1   discovery      want concierge-probe  got utopia-product:concierge-probe
+PASS  1/1   discovery      want continuous-discovery-engine  got utopia-product:continuous-discovery-engine
+PASS  1/1   discovery      want discovery-interview-prep  got utopia-product:discovery-interview-prep
+PASS  1/1   discovery      want data-rights-clause  got utopia-product:data-rights-clause
+PASS  1/1   discovery      want concept-four-lenses-test  got utopia-product:concept-four-lenses-test
+PASS  1/1   discovery      want jobs-to-be-done  got utopia-product:jobs-to-be-done
+PASS  1/1   discovery      want lean-ux-canvas  got utopia-product:lean-ux-canvas
+PASS  1/1   discovery      want discovery-process  got utopia-product:discovery-process
+PASS  1/1   discovery      want moat-design-canvas  got utopia-product:moat-design-canvas
+FAIL  0/1   discovery      want market-segments  got none
+FAIL  0/1   discovery      want falsify-plan-assumptions  got none
+ERROR 0/0   discovery      want problem-quality-scorecard  got error: You've hit your session limit · resets 2:40pm (Africa/Cairo)
+FAIL  0/1   discovery      want probe-matrix  got utopia-product:wizard-of-oz-probe
+Stopped early: usage or authentication blocked the run. Resume unfinished prompts later.
+
+120/337 prompts always hit, 65 miss, 8 error, 144 pending, 0 incomplete · hit rate 120/185

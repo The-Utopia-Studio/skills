@@ -93,42 +93,46 @@ How the renames were chosen:
 
 **Breaking change for installed users:** renamed skills are called by their new name (for example `/utopia-product:ui-audit` instead of `/utopia-product:audit`). Moved skills change prefix (for example `prioritization` moves from Founder Productivity to Product). All four packs move to version 3.0.0 to signal the breaking change; `/plugin marketplace update skills` picks it up.
 
-## Routing evaluation (Gate 2), incomplete
+## Routing evaluation (Gate 2)
 
-Every prompt in `scripts/trigger-prompts.tsv` (337 rows, one per skill plus rows for merged skills' original intents) was run once through headless `claude -p` at the **default** description budget. The "before" run used the build from before this change. The "after" run used the new build and the prompts with renamed skills' expected names updated.
+Updated 27 October 2026. All 337 prompts were run once through headless `claude -p` at the **default** description budget, sequentially with `-j 2`, against two builds:
+- **Before:** the build at commit `325292b`.
+- **After:** the renamed and re-described build, with the prompts' expected skill names migrated to match.
 
-| Run | Scored | Correct | Hit rate | Timeouts | Not reached |
-|---|---:|---:|---:|---:|---:|
-| Before | 138 | 89 | 64.5% | 155 | 40 |
-| After | 111 | 82 | 73.9% | 134 | 88 |
-| Prompts scored in both runs | 55 | 39 → 39 | no change | | |
+| Run | Scored | Correct | Hit rate | Errors (timeouts) |
+|---|---:|---:|---:|---:|
+| Before | 328 | 193 | 58.8% | 9 |
+| After | 327 | 215 | 65.7% | 10 |
+| **Same 324 prompts scored in both** | 324 | 193 → 213 | **59.6% → 65.7% (+6.1 pts)** | |
 
-**Read this carefully:**
-- **The totals are not comparable.** Each run scored a different subset of prompts.
-- **The fair comparison shows no change.** On the 55 prompts scored in both runs, results were identical: 6 fixed and 6 broken. That is within single-run noise, so this evaluation shows neither a gain nor a loss yet.
-- **Why most prompts are unscored.** Both runs went in parallel (8 Claude sessions at once), which pushed many sessions past the harness's 120-second limit. Then the usage limit stopped both runs. Results are checkpointed.
-- **Not run:** Gates 3–4 (output quality against a no-skill baseline, and pass^k stability). These need fixtures per skill and are the next step for a ranked sample.
+**Paired result:** 41 prompts changed from miss to hit and 21 changed from hit to miss, for a net gain of 20 correct routes. The other 262 were unchanged. Misses where Claude picked no skill at all fell from 81 to 69, which fits the idea that clearer names make skills recognisable even when their descriptions are dropped from the listing. Rows are matched by exact prompt text, because skill names changed between the two builds.
 
-Finish both runs, one at a time and with lower concurrency, using the same settings:
+**Limits:**
+- **One observation per prompt per build.** The 21 regressions show that single runs are noisy, so treat +6 points as a direction, not a precise effect size. Re-run the misses 3–5 times (`--runs 3`) before tuning individual skills.
+- **Not a held-out test.** These prompts were used during the routing work.
+- **Machine-specific.** Both runs had this machine's other plugins and personal skills installed, so results reflect that listing budget.
+- **Gates 3–4 not run.** Output quality against a no-skill baseline, and repeated-run stability, remain open.
+
+### Saved scoring and comparison
+
+- [routing-before.json](routing-before.json) and [routing-after.json](routing-after.json): raw harness checkpoints.
+- [scores-before.json](scores-before.json) and [scores-after.json](scores-after.json): per-skill recall, false fires and "stolen by" counts from `score_triggers.py --json`.
+- [COMBINED.md](COMBINED.md), [combined-routing-prompts.csv](combined-routing-prompts.csv) and [combined-routing-summary.json](combined-routing-summary.json): prompt-level comparison across both builds and the separate Codex evaluation. Regenerate with `python3 scripts/compare-routing-evals.py`.
+
+To re-run the misses for stability:
 
 ```sh
-node scripts/trigger-test.mjs --file reports/2026-10-26-skill-routing/prompts-before.tsv \
-  --plugins <checkout-of-the-previous-commit>/plugins --runs 1 -j 2 \
-  --resume reports/2026-10-26-skill-routing/routing-before.json --output reports/2026-10-26-skill-routing/routing-before.json
-node scripts/trigger-test.mjs --file reports/2026-10-26-skill-routing/prompts-after.tsv \
-  --plugins plugins --runs 1 -j 2 \
-  --resume reports/2026-10-26-skill-routing/routing-after.json --output reports/2026-10-26-skill-routing/routing-after.json
 python3 skills/founder-productivity/skill-eval/scripts/score_triggers.py reports/2026-10-26-skill-routing/routing-after.json
+node scripts/trigger-test.mjs --file <misses.tsv> --plugins plugins --runs 3 -j 2 --output /tmp/misses-3x.json
 ```
 
 ## Separate Codex evaluation
 
-
 The Codex before-and-after run is complete: **337/337 correct before (100%) and 335/337 after (99.4%)**, with two regressions, no fixes and no infrastructure errors. Both regressions are GTM near-neighbor selections: an `expansion-retention` request selected `gtm-strategy`, and a `customer-research` request selected `market-segments`. This single-observation, full-catalog selection test is at a baseline ceiling; it does not establish a repeatable degradation or measure native skill invocation.
 
-Download the [Codex handoff ZIP](codex-routing-evaluation.zip), or read [the handoff and changed prompts](codex/HANDOFF.md). The archive includes raw JSON results, scores, paired CSV/JSON, catalogs, prompt files, metadata, reproduction scripts and verified checksums. Claude was not resumed; its results can be synced later as requested.
+Download the [Codex handoff ZIP](codex-routing-evaluation.zip), or read [the handoff and changed prompts](codex/HANDOFF.md). The archive includes raw JSON results, scores, paired CSV/JSON, catalogs, prompt files, metadata, reproduction scripts and verified checksums. The Claude runs have since been completed (see above).
 
-The protocol is documented in [codex/README.md](codex/README.md). Run `python3 scripts/compare-routing-evals.py` after syncing the Claude checkpoints to generate a prompt-aligned comparison. Keep provider rates separate because the protocols differ.
+The protocol is documented in [codex/README.md](codex/README.md). The [combined report](COMBINED.md) and [prompt-level CSV](combined-routing-prompts.csv) align the available provider results by prompt. Provider rates remain separate because Codex uses full-catalog selection while Claude measures native skill invocation under its default description budget. Refresh with `python3 scripts/compare-routing-evals.py` after any new run.
 
 ## Remaining static errors
 
