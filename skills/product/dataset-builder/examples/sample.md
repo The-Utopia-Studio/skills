@@ -1,6 +1,6 @@
 # Worked example — Mentix's operator-correction dataset
 
-Mentix builds an AI copilot for factory managers. `yoda-data-sourcing` already ran and named the operator-correction stream as the compounding moat seed: every time the copilot suggests a first action, the operator accepts, edits, or overrides it, and Mentix logs it. This is a test fixture — numbers are illustrative, not real client data.
+Mentix builds an AI copilot for factory managers. `proprietary-data-sourcing` already ran and named the operator-correction stream as the compounding moat seed: every time the copilot suggests a first action, the operator accepts, edits, or overrides it, and Mentix logs it. This is a test fixture — numbers are illustrative, not real client data.
 
 ## Input the fellow brought
 

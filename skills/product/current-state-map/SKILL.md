@@ -1,22 +1,18 @@
 ---
 name: current-state-map
 description: >-
-  Map a workflow exactly as it is done today and price every step: touch time, handoffs, delay,
-  failure and rework, totalled into the current cost per unit. Use when the user lists the steps of an
-  as-is process (with times, delays or hourly rates) and asks how it's done today, to map the
-  workflow, what one unit really costs now, or where the time and money go. Outputs a priced step
-  ledger with a cited source and evidence weight per step, the four hidden-cost lines, the grand total
-  per unit and the most expensive step, every number tagged [Fact]/[Assumption]/[Hypothesis]. NOT the
-  theoretical floor or build/walk gap (use physics-floor-gap, which divides against this), NOT the
-  primitive job with tool names stripped (use job-in-primitives), NOT total market size (use
-  bottoms-up-quantification), NOT qualitative problem framing (use problem-framing-canvas).
+  Maps a workflow exactly as it is done today and prices every step: touch time, handoffs, delay,
+  failure and rework, totalled into cost per unit with sources and the most expensive step. Use
+  when the user lists an as-is process with times or rates and asks how it is done today, what one
+  unit really costs, or where the time and money go. Not for the theoretical floor and build gap
+  (use unit-cost-floor-gap).
 type: generator
 supersedes: none
 ---
 # Current State Map
 
 ## What it does
-Turns "how is this done today?" into an invoice. It walks the workflow as it actually happens — one row per step — and puts a sourced price on each: touch labour, the handoff tax between steps, the cost of delay, and the cost of failure and rework. The lines total into the current priced practice per unit ([template.md](template.md)), and the map names the single step that holds the most money. That total is the number `physics-floor-gap` divides against the theoretical floor. This is not a swim-lane diagram and not a problem-space frame. It is a priced ledger of today's work, sourced to artefacts, tagged on the evidence ladder.
+Turns "how is this done today?" into an invoice. It walks the workflow as it actually happens — one row per step — and puts a sourced price on each: touch labour, the handoff tax between steps, the cost of delay, and the cost of failure and rework. The lines total into the current priced practice per unit ([template.md](template.md)), and the map names the single step that holds the most money. That total is the number `unit-cost-floor-gap` divides against the theoretical floor. This is not a swim-lane diagram and not a problem-space frame. It is a priced ledger of today's work, sourced to artefacts, tagged on the evidence ladder.
 
 ## The Icarus reframe
 A generic workflow map is a swim-lane: boxes and arrows that show what happens and price nothing. When it does price, it prices only the touch labour you can see — the minutes a person spends hands-on — and misses the three costs that usually dominate: the handoff tax in the seams, the delay while the clock runs, and the failure tail when a bad output escapes. Icarus refuses an unpriced box. Every step carries a number, and every number cites the artefact it came from — a timesheet, an invoice, a ticket log, one timed run — or it is marked an opinion and the map is declared not ready. The reframe of MITRE's "who benefits when the problem exists?" is blunt here: the beneficiary of the status quo is the priced line item automation deletes, and the map shows you exactly which one.
@@ -29,9 +25,9 @@ Use it when you have a real workflow that happens today and you want to know wha
 | "How is this done today? Map it and price every step." | Yes | current-state-map |
 | "What does one pass through this workflow cost us now?" | Yes | current-state-map |
 | "Where does the time and money go in this process?" | Yes | current-state-map |
-| "What should this cost / is the gap big enough to build?" | No | `physics-floor-gap` (feed it this map's total) |
+| "What should this cost / is the gap big enough to build?" | No | `unit-cost-floor-gap` (feed it this map's total) |
 | "Strip this job to its primitive — information, decisions, liability." | No | `job-in-primitives` |
-| "What's the TAM / total market for this?" | No | `bottoms-up-quantification` |
+| "What's the TAM / total market for this?" | No | `bottoms-up-market-sizing` |
 | "Frame the problem space — biases, who's affected, How Might We." | No | `problem-framing-canvas` |
 
 This skill prices today's workflow and stops. It does not compute a floor, a gap, or a market. If the fellow wants those, name the sibling and hand off.
@@ -51,7 +47,7 @@ Work the ledger in [template.md](template.md). Do not narrate the process; fill 
 
 **Step 6 — Price failure and rework.** Two lines. (a) Rework loop = P(bounce) × cost of redo. (b) Escaped failure = P(bad output reaches the customer) × cost of that failure. A rare, expensive tail can dominate the whole map. If you cannot source it, tag it `[Hypothesis]` and flag it. Do not drop it to keep the map tidy, and do not invent a number to fill it.
 
-**Step 7 — Total = touch + handoff + delay + failure.** This is the current priced practice per unit. It is the number `physics-floor-gap` divides against the floor.
+**Step 7 — Total = touch + handoff + delay + failure.** This is the current priced practice per unit. It is the number `unit-cost-floor-gap` divides against the floor.
 
 **Step 8 — Cost concentration.** Rank the steps by cost. Name the single step that holds the most. That is where the product must bite first, and it foreshadows the automatable part (floor part A) and the irreducible judgment (floor part B) the next skill will separate.
 
@@ -59,7 +55,7 @@ Work the ledger in [template.md](template.md). Do not narrate the process; fill 
 
 | Condition | Verdict |
 |---|---|
-| Every step priced; the dominant cost line sits at ladder ≥ 0.7 | READY — the total is trustworthy; hand to `physics-floor-gap` |
+| Every step priced; the dominant cost line sits at ladder ≥ 0.7 | READY — the total is trustworthy; hand to `unit-cost-floor-gap` |
 | The dominant cost line (> 40% of total) sits at ladder ≤ 0.3 | NOT READY — source that line first; name the cheapest artefact, then re-total |
 | Any step has a blank cost | AUTO-FAIL — an unpriced step is not a map |
 | Any price cites no artefact | that cell is an opinion (0.1); if it is the dominant line → NOT READY |
@@ -89,11 +85,11 @@ A confident aggregate — "it takes two weeks and costs a fortune" — is a 0.1 
 - **A tidy total hiding a guessed dominant line.** A per-unit number feels solid the moment it has a decimal point. If its largest term rests on a 0.1 opinion, the concentration gate must catch it and hold the verdict at NOT READY.
 
 ## Examples
-- [examples/sample.md](examples/sample.md) — Azraq's static site risk report, decomposed and priced: five touch steps + rework loop + handoff tax reconcile to the £960 analyst-day, delay priced at £0 (and why), the failure tail flagged `[Hypothesis]`, drafting named as the dominant £300 line. Feeds `physics-floor-gap` directly.
+- [examples/sample.md](examples/sample.md) — Azraq's static site risk report, decomposed and priced: five touch steps + rework loop + handoff tax reconcile to the £960 analyst-day, delay priced at £0 (and why), the failure tail flagged `[Hypothesis]`, drafting named as the dominant £300 line. Feeds `unit-cost-floor-gap` directly.
 
 ## Related skills
-- `physics-floor-gap` — divides this map's total (the current cost) against the theoretical floor to return the build/walk gap verdict. Run this first; it produces the number that skill needs. This skill never computes a floor or a gap.
+- `unit-cost-floor-gap` — divides this map's total (the current cost) against the theoretical floor to return the build/walk gap verdict. Run this first; it produces the number that skill needs. This skill never computes a floor or a gap.
 - `job-in-primitives` — strips the same job to information moved / decisions made / liability transferred, with tool and role names deleted. The opposite move: this map keeps every tool, role, and handoff visible because that is where the cost sits.
 - `product-as-decision` — names the one decision the workflow exists to make easier; this prices the whole workflow around it.
-- `bottoms-up-quantification` — multiplies the per-unit cost across units to size the market; this builds the per-unit cost it multiplies.
+- `bottoms-up-market-sizing` — multiplies the per-unit cost across units to size the market; this builds the per-unit cost it multiplies.
 - `problem-framing-canvas` — the qualitative problem-space frame (biases, who is affected, How Might We). Supersedes nothing: this absorbs its "map how it actually happens" and "who benefits from the status quo" moves and reforges them as a priced ledger, where the beneficiary of the status quo is the line item automation deletes.

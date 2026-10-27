@@ -1,6 +1,11 @@
 ---
 name: gtm-metrics
-description: "When the user wants to define GTM metrics, build a metrics dashboard, measure pipeline efficiency, or track AI product performance. Also use when the user mentions 'GTM metrics,' 'revenue latency,' 'pipeline metrics,' 'TTFV,' 'time-to-first-value,' 'data health,' 'attribution,' 'conversion rate,' 'CAC,' 'LTV,' 'NRR,' 'GTM dashboard,' 'magic number,' 'pipeline velocity,' or 'funnel metrics.' This skill covers GTM measurement from metric selection through dashboard design, including AI-specific cost metrics, attribution models, and weekly review cadences."
+description: >-
+  Defines GTM metrics and designs metrics dashboards: revenue, efficiency, pipeline and retention
+  metrics, CAC, LTV, NRR, magic number, attribution, time-to-first-value and AI cost-of-revenue,
+  with benchmarks and a weekly review cadence. Use when picking GTM metrics, building a GTM
+  dashboard, or measuring funnel or pipeline efficiency. Not for forecasting the quarter (use
+  revops-forecasting).
 ---
 
 # GTM Metrics, Dashboards & Measurement for AI Products

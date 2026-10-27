@@ -1,6 +1,11 @@
 ---
 name: stakeholder-map
-description: "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement."
+description: >-
+  Builds a stakeholder map on a power/interest grid and a communication plan per quadrant, with
+  frequency, format and owner for each group. Use when the user is managing stakeholders,
+  preparing a launch, aligning cross-functional teams or planning stakeholder engagement and
+  updates. Not for working through one conflict from each stakeholder's point of view (use role-
+  switch).
 ---
 
 ## Stakeholder Mapping & Communication Plan

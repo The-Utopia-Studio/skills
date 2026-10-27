@@ -1,14 +1,11 @@
 ---
 name: user-story
 description: >-
-  Write development-ready user stories: a single story in Mike Cohn format (As a / I want to / so
-  that) with Gherkin Given/When/Then acceptance criteria, or a full set of backlog stories for a
-  feature using the 3 C's (Card, Conversation, Confirmation) and INVEST with numbered acceptance
-  criteria and supplied design links. Use when writing a user story, breaking a feature into backlog items,
-  converting a PRD requirement into stories, defining acceptance criteria, or writing situation-first
-  job stories (When / I want to / so I can). Not for splitting an oversized story or epic
-  (use user-story-splitting), or laying out the whole journey and release slices (use
-  user-story-mapping).
+  Writes development-ready user stories in Mike Cohn format (As a, I want to, so that) with
+  Gherkin acceptance criteria, singly or as a backlog set for a feature, plus situation-first job
+  stories. Use when the user asks to write a user story, break a feature into backlog items,
+  convert a PRD requirement into stories, or define acceptance criteria. Not for splitting an
+  oversized story or epic (use user-story-splitting).
 intent: >-
   Create clear, concise user stories that combine Mike Cohn's user story format with Gherkin-style acceptance criteria. Use this to translate user needs into actionable development work that focuses on outcomes, ensures shared understanding between product and engineering, and provides testable success criteria.
 type: component

@@ -1,6 +1,10 @@
 ---
 name: causal-inference-root-cause
-description: Systematically investigates causal relationships to identify true root causes rather than correlations or symptoms. Distinguishes genuine causation from spurious associations, tests competing explanations, and designs interventions addressing underlying drivers. Use when investigating why something happened, debugging systems, analyzing failures, evaluating policy impacts, or when user mentions root cause, causal chain, confounding, spurious correlation, or asks "why did this really happen?"
+description: >-
+  Finds the true root cause of an outcome by testing competing explanations and separating
+  causation from correlation and confounding, then proposes interventions on the real drivers. Use
+  when asking "why did this really happen", a metric dropped, analysing a failure or policy
+  impact, or the user mentions root cause, causal chain, confounding or spurious correlation.
 ---
 
 # Causal Inference & Root Cause Analysis

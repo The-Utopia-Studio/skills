@@ -177,7 +177,7 @@ Add the optional [skill-usage logging hook](./hooks/README.md) to see which skil
 
 1. **Legal** — no MENA/GCC jurisdiction-aware cap table or entity setup skill
 2. **Customer ops** — no agentic NPS / customer ops skill
-3. **Product verification** — thin coverage beyond `evidence-driven-testing`
+3. **Product verification** — thin coverage beyond `pr-test-evidence-video`
 
 ---
 

@@ -26,7 +26,7 @@ If audience isn't confirmed, **stop and ask** before doing anything else.
 
 ## Step 2 — Identify the thesis (5 min)
 
-**Tool:** `business-narrative-builder`
+**Tool:** `valuation-narrative`
 
 The thesis is the one sentence that explains why this is investable. Examples:
 

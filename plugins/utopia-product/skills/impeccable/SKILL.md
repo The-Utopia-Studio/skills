@@ -1,16 +1,11 @@
 ---
 name: impeccable
 description: >-
-  Build, redesign or study frontend interfaces so they look designed, not AI-
-  generated. Use when the user asks to build a landing page, dashboard, app UI
-  or component with a distinctive look; to upgrade or redesign an existing site
-  to premium quality without a rewrite; to make a site feel agency-grade or
-  Awwwards-level (glass pill nav, double-bezel cards, button-in-button CTAs); to
-  set taste dials such as DESIGN_VARIANCE, MOTION_INTENSITY or VISUAL_DENSITY;
-  or to study a reference URL or screenshot and extract its design DNA
-  (macrostructure, type pairing, colour anchor). Modes: craft, teach, extract,
-  study, redesign. Not for choosing a palette from a style database (use ui-ux-
-  pro-max), scoring a UI (use critique or audit), or a final detail pass (use
+  Builds, redesigns or studies frontend interfaces so they look designed, not AI-generated, and
+  holds the shared design context the ui-* skills load first. Use when the user asks for a landing
+  page, dashboard, app UI or component with a distinctive look, to upgrade a site to premium or
+  agency-grade quality, to set taste dials, or to extract design DNA from a reference URL or
+  screenshot. Modes: craft, teach, extract, study, redesign. Not for a final detail pass (use ui-
   polish).
 version: 2.2.0
 user-invocable: true

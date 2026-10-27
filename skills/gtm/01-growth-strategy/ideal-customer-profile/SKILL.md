@@ -1,16 +1,11 @@
 ---
 name: ideal-customer-profile
 description: >-
-  Identify and score the Ideal Customer Profile (ICP) from research and customer
-  data: firmographics, behaviors, JTBD, pains, disqualifiers, a separate fit and
-  intent scoring model with an activate/nurture/monitor/disqualify matrix, and a
-  quarterly ICP and PMF revalidation (Sean Ellis bands, decay signals). Use when
-  defining or refreshing your ICP, analyzing PMF survey data, building an ICP
-  scoring model, or understanding who your best customers are. Not for picking
-  the first market to enter (use beachhead-segment), tiering individual live
-  accounts (use account-tier-scoring), enrichment waterfalls (use
-  lead-enrichment), building personas from interviews (use customer-research),
-  or positioning statements and messaging (use positioning-workshop).
+  Defines and scores the Ideal Customer Profile (ICP) from research and customer data:
+  firmographics, behaviors, JTBD, pains, disqualifiers, a fit and intent scoring model, and
+  quarterly ICP and PMF revalidation. Use when defining or refreshing the ICP, analyzing PMF
+  survey data, building an ICP scoring model, or finding who the best customers are. Not for
+  tiering live accounts (use account-tier-scoring).
 ---
 # Ideal Customer Profile
 

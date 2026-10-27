@@ -1,13 +1,11 @@
 ---
 name: data-rights-clause
 description: >-
-  Draft the data-rights clause for a fellow's first paid pilot. Runs the three-part test (workflow exhaust,
-  compounds with use, locked by a clause signed at pilot #1), then writes the clause language: data covered,
-  retention, derived-data rights, training rights, survival on termination, with GCC/MENA points (residency,
-  government-entity data, worker/sponsor consent) marked [Assumption] for counsel. Fires on "data rights",
-  "who owns the data", "what to sign at the pilot", "can we keep and train on the pilot data". Not for judging
-  whether a source is a moat seed (use yoda-data-sourcing), structuring the whole pilot (use
-  pilot-six-term-sheet) or scoring evidence (use evidence-ladder). Not a substitute for counsel.
+  Drafts the data-rights clause for a first paid pilot: tests whether the data is worth a clause,
+  then writes language on data covered, retention, derived data, training rights and survival,
+  with GCC/MENA points flagged for counsel. Use when the user asks who owns the data, what to sign
+  at the pilot, data rights, or whether they can keep and train on pilot data. Not for structuring
+  the whole pilot deal (use pilot-six-term-sheet).
 type: generator
 supersedes: none
 ---
@@ -28,7 +26,7 @@ Do not use when:
 
 | Request | Belongs to |
 |---|---|
-| "Is the operator's telemetry even a moat seed, or can a model already reach it? Band our sources." | `yoda-data-sourcing` (section 03). That skill finds and bands the data and flags which rows are clause-gated. This skill drafts the clause for a row it already flagged. |
+| "Is the operator's telemetry even a moat seed, or can a model already reach it? Band our sources." | `proprietary-data-sourcing` (section 03). That skill finds and bands the data and flags which rows are clause-gated. This skill drafts the clause for a row it already flagged. |
 | "Structure the whole pilot — scope, price, success metrics, kill criteria, conversion." | `pilot-six-term-sheet` (section 07). The data-rights clause is one of its six terms. This skill drafts that one term in depth; the term sheet carries it. |
 | "Design our moat — how it compounds and why the incumbent won't copy it." | `moat-design-canvas` (section 06). That sequences the moat's dated gates. This skill secures the legal right the data-advantage gate depends on. |
 | "Is their verbal 'sure, keep the data' strong enough to count on? Score it." | `evidence-ladder` (section 02). This skill uses the ladder to weigh whether the right is held; scoring a lone signal is that skill's job. |
@@ -55,7 +53,7 @@ A clause is only worth signing on data that is a moat. Score all three legs. Leg
 
 Decision rule:
 
-- Fail leg 1 or leg 2 → this data is not a moat worth a clause. A clause on a static, non-compounding dataset locks up an asset that erodes. Send the fellow back to `yoda-data-sourcing` to find the exhaust that actually compounds. Do not draft.
+- Fail leg 1 or leg 2 → this data is not a moat worth a clause. A clause on a static, non-compounding dataset locks up an asset that erodes. Send the fellow back to `proprietary-data-sourcing` to find the exhaust that actually compounds. Do not draft.
 - Pass 1 and 2 but the fellow wants to defer leg 3 ("we'll sort rights after the pilot proves out") → that is the bolt-on trap and the kill line. Name it (see Step 6) and fix the timing before drafting.
 - All three pass → draft (Steps 3–6).
 
@@ -131,7 +129,7 @@ Fabricated legal certainty. Asserting "under [law] you must host in-country" as 
 
 ## Related skills
 
-`yoda-data-sourcing` (section 03) — upstream. It finds and bands the data and flags the clause-gated rows that come here. This skill drafts the clause for a row YODA already qualified; it does not decide whether a source is a moat seed.
+`proprietary-data-sourcing` (section 03) — upstream. It finds and bands the data and flags the clause-gated rows that come here. This skill drafts the clause for a row YODA already qualified; it does not decide whether a source is a moat seed.
 
 `pilot-six-term-sheet` (section 07) — carries this clause as one of its six terms. That skill structures the whole pilot; this drafts the data-rights term in depth. Run this to write the term, that to assemble the deal.
 

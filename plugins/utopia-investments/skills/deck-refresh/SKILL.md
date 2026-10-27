@@ -1,14 +1,11 @@
 ---
 name: deck-refresh
 description: >-
-  Roll an existing presentation forward with new numbers without rebuilding it: finds every
-  instance of each old figure (text, tables, chart data, axis labels, footnotes, in all its
-  formats such as $41.2M / 41.2 / $41.2 million), shows the full change list and the derived
-  numbers that might now be stale, waits for approval, then edits in place with the formatting
-  kept. Use this skill whenever the user says "update the deck with Q4 numbers", "roll this
-  deck forward", "refresh the LP update / board deck / comps", "swap in the new figures", "NAV
-  went from X to Y, update the slides" or "change all the $485M to $512M". Not for building a
-  new deck (use pitch-deck) or QC of a finished deck (use ib-check-deck).
+  Rolls an existing deck forward with new numbers: finds every instance of each old figure across
+  text, tables, charts and footnotes, flags derived numbers that may be stale, gets approval, then
+  edits in place keeping formatting. Use when the user says "update the deck with Q4 numbers",
+  "roll this deck forward", "refresh the LP update / board deck" or "change all the $485M to
+  $512M". Not for QC of a finished deck (use ib-check-deck).
 ---
 
 # Deck Refresh

@@ -1,6 +1,10 @@
 ---
 name: ui-walkthrough
-description: Make a narrated video of what a merged pull request changed in a web app's UI — recordings of the real running app, before and after, with voiceover and captions — instead of reading code. Use when asked for a PR video, UI walkthrough, "what changed" video, release demo or before/after recording of a merged PR.
+description: >-
+  Makes a narrated before/after video of what a merged pull request changed in a web app's UI,
+  recorded from the real running app with voiceover and captions. Use when asked for a PR video, a
+  what-changed video, a release demo, a UI walkthrough or a before/after recording of a merged PR.
+  Not for product tours or onboarding videos of a flow (use walkthrough-video).
 model: sonnet
 ---
 

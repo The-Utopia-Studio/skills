@@ -1,12 +1,11 @@
 ---
 name: repo-structurer
 description: >-
-  Clean up and structure a messy repository for production: add READMEs to every
-  directory, find dead files and duplicates (api-old, v2-final), split oversized
-  files and functions, and suggest modularisation, asking before deleting
-  anything. Use when the user says their repo is a mess, asks to clean up,
-  reorganise or restructure it, add directory READMEs, or remove dead code. Not
-  for writing AGENTS.md or .cursorrules (use prompt-engineer).
+  Cleans up and restructures a messy repository for production: adds READMEs to every directory,
+  finds dead files and duplicates (api-old, v2-final), splits oversized files and functions and
+  suggests modules, asking before deleting anything. Use when the user says the repo is a mess,
+  asks to clean up, reorganise or restructure it, add directory READMEs or remove dead code. Not
+  for AGENTS.md or .cursorrules (use agents-md-writer).
 ---
 
 # Repo Structurer
@@ -20,7 +19,7 @@ Makes any repository clean, documented, and agent-friendly by adding READMEs, im
 3. Generate context-aware READMEs for each directory
 4. Identify dead code and unused files
 5. Suggest modularization improvements
-6. Route agent configuration work to `prompt-engineer` when requested
+6. Route agent configuration work to `agents-md-writer` when requested
 
 ## Step-by-Step Procedure
 
@@ -86,7 +85,7 @@ Look for:
 
 ### Step 6: Agent Configuration Handoff
 
-For writing or updating AGENTS.md, CLAUDE.md, .cursorrules or scoped agent rules, use `prompt-engineer`. Preserve existing instructions during cleanup; do not maintain a competing agent-config template here. Report whether configuration exists and whether a handoff is needed.
+For writing or updating AGENTS.md, CLAUDE.md, .cursorrules or scoped agent rules, use `agents-md-writer`. Preserve existing instructions during cleanup; do not maintain a competing agent-config template here. Report whether configuration exists and whether a handoff is needed.
 
 ## Output Format
 

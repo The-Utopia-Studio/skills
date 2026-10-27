@@ -1,6 +1,11 @@
 ---
 name: product-marketing-context
-description: "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'describe my product,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context. Not for creating the positioning itself (use positioning-workshop) or defining the ICP (use ideal-customer-profile)."
+description: >-
+  Creates and maintains the product marketing context file (.agents/product-marketing-context.md)
+  with product, audience, positioning and customer language that other marketing skills read. Use
+  at the start of a new marketing project, when asked to set up or update product or marketing
+  context, describe my product, or stop repeating basics. Not for creating the positioning itself
+  (use positioning-workshop).
 metadata:
   version: 1.1.0
 ---

@@ -1,13 +1,11 @@
 ---
 name: vercel-react-best-practices
 description: >-
-  Review and fix React and Next.js code for performance using Vercel's rules:
-  request waterfalls and sequential awaits, server vs client components, data
-  fetching, bundle size (heavy imports like lodash or moment), re-renders,
-  memoization and caching. Use when the user asks to review or optimise a React
-  or Next.js page or component for performance, mentions useEffect fetching,
-  waterfalls or bundle bloat. Not for Vercel Web Interface Guidelines reviews
-  (use audit) or component API design (use vercel-composition-patterns).
+  Reviews and fixes React and Next.js performance using Vercel's rules: request waterfalls and
+  sequential awaits, server vs client components, data fetching, bundle size from heavy imports,
+  re-renders, memoization and caching. Use when the user asks to review or optimise a React or
+  Next.js page or component, or mentions useEffect fetching, waterfalls or bundle bloat. Not for
+  component API design (use vercel-composition-patterns).
 license: MIT
 metadata:
   author: vercel

@@ -1,16 +1,11 @@
 ---
 name: diagram-design
 description: >-
-  Create technical and product diagrams as standalone HTML files with inline SVG:
-  system / cloud / infrastructure / security architecture, flowchart, sequence,
-  state machine, ER / data model, timeline, swimlane, quadrant, nested, tree,
-  layer stack, venn, pyramid. Ships an editorial light skin, dark variants, a
-  dark technical skin for cloud and infrastructure diagrams, a brand
-  style-guide onboarding gate, annotation callouts and an optional sketchy look.
-  Use when the user asks for an architecture diagram, infra or network topology
-  diagram, flowchart, sequence or ER diagram, or any diagram as HTML/SVG. Not
-  for data charts or metric dashboards or for deciding what the AI system
-  architecture should be (use compound-system-architecture).
+  Creates technical and product diagrams as standalone HTML with inline SVG: architecture, cloud
+  and network topology, flowchart, sequence, state machine, ER, timeline, swimlane, quadrant,
+  tree, layer stack, venn and pyramid, in light, dark or sketchy styles. Use when the user asks
+  for an architecture diagram, flowchart, sequence or ER diagram, or any diagram as HTML/SVG. Not
+  for deciding the AI system design itself (use compound-system-architecture).
 license: MIT
 metadata:
   version: "1.0"

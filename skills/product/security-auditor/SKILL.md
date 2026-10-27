@@ -1,13 +1,11 @@
 ---
 name: security-auditor
 description: >-
-  Audit a whole repository before launch or open-sourcing: hardcoded API keys
-  and secrets (including git history), committed .env files, npm or pip
-  dependency vulnerabilities, unprotected admin or API routes, CORS, rate
-  limiting and input validation, with critical issues and fixes. Use when the
-  user asks to check a repo or codebase for security issues, find leaked secrets
-  or keys, run npm audit, or is about to open-source. Not for reviewing only the
-  current branch's diff or PR changes.
+  Audits a whole repository for security before launch or open-sourcing: hardcoded keys and
+  secrets (including git history), committed .env files, npm or pip vulnerabilities, unprotected
+  admin or API routes, CORS, rate limiting and input validation, with critical issues and fixes.
+  Use when the user asks to check a codebase for security issues or leaked secrets, run npm audit,
+  or is about to open-source. Not for reviewing only a branch diff or PR.
 ---
 
 # Security Auditor

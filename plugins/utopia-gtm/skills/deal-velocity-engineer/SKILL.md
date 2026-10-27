@@ -1,17 +1,11 @@
 ---
 name: deal-velocity-engineer
 description: >-
-  Diagnose and fix deal velocity problems and run structured deal reviews: sales
-  cycle diagnostics, stage exit criteria, deal health scoring, opportunity
-  inspection (qualification pulse, stakeholder map, competitive story, committed
-  next steps), zombie-deal triage and pipeline deflation, multi-threading, mutual
-  action plans, AI deal scoring and compression tactics, with sourced benchmarks.
-  Use for "sales cycle too long", "deals stalling", "zombie deals", "pipeline is
-  bloated but nothing closes", "review this deal", "deal inspection", "stage exit
-  criteria" or "mutual action plan". Not for forecast methodology or the forecast
-  call (use revops-forecasting), metrics dashboards (use gtm-metrics), MEDDICC
-  qualification on a discovery call (use discovery-calls), or sales collateral
-  (use sales-enablement).
+  Diagnoses slow and stalled B2B deals and runs deal reviews: sales cycle diagnostics, stage exit
+  criteria, deal health scoring, zombie-deal triage, multi-threading and mutual action plans, with
+  benchmarks. Use when the sales cycle is too long, deals are stalling, the pipeline is bloated
+  but nothing closes, or asked to review a deal. Not for the forecast or forecast call (use
+  revops-forecasting).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/rutger-katz/deal-velocity-engineer

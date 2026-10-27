@@ -43,7 +43,7 @@ Fellow: **Azraq** (data-centre / infrastructure risk). All numbers are illustrat
 ## 7. Total — current priced practice per unit
 - **Total = touch £730 + handoff £140 + delay £0 + rework £90 + escaped-failure (unpriced, flagged) = £960 per report**
 - Reconciles to the observed analyst-day: 365 + 70 + 45 (expected rework) = 480 min = 8 hr × £120 = £960. Now itemised and sourced.
-- This £960 is the number `physics-floor-gap` divides against the floor.
+- This £960 is the number `unit-cost-floor-gap` divides against the floor.
 
 ## 8. Cost concentration
 - Ranked: 1) Drafting **£300 (31%)**  2) Reconcile data-rights £160  3) Format/QA £120.
@@ -55,4 +55,4 @@ Fellow: **Azraq** (data-centre / infrastructure risk). All numbers are illustrat
 - The only weak item is the escaped-failure tail, tagged `[Hypothesis]` — it sits *outside* the £960 priced total, so the total holds. It is an upside-risk number to price before betting the product on the current-cost figure being complete.
 - What would change the total: timing the senior sign-off on a real report (it drives floor B downstream); pricing the failure tail; removing the operator-data chase (handoff £140) with a direct feed.
 
-**Hand-off:** current cost = **£960/report**, dominant automatable line = drafting (£300), irreducible judgment = senior sign-off (£40, 20 min). Run `physics-floor-gap` next.
+**Hand-off:** current cost = **£960/report**, dominant automatable line = drafting (£300), irreducible judgment = senior sign-off (£40, 20 min). Run `unit-cost-floor-gap` next.

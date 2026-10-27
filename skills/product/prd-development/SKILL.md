@@ -1,14 +1,11 @@
 ---
 name: prd-development
 description: >-
-  Write a PRD for a product feature at the right weight: a one-page PRD or brief for quick approval, a
-  lean 1-2 page spec, or a full engineering-ready PRD (problem and evidence, personas, strategic
-  context, solution, success and guardrail metrics, user stories, out of scope, dependencies, risks,
-  open questions). Use when the user asks to write or review a PRD, one-page PRD, one-pager, product
-  spec, feature proposal or product brief for a product feature, or to turn discovery notes into
-  requirements. Includes a one-pager rubric and templates. Not for an AI agent's planning PRD and work
-  orders (use agent-prd), framing the problem before a solution exists (use problem-statement), or
-  writing individual stories (use user-story).
+  Writes a product PRD at the right weight: a one-pager, a lean 1-2 page spec, or a full
+  engineering-ready PRD with problem, evidence, personas, solution, metrics, stories, scope and
+  risks. Use when the user asks to write or review a PRD, one-pager, product spec, feature
+  proposal or product brief, or to turn discovery notes into requirements. Not for an AI agent's
+  planning PRD and work orders (use agent-prd).
 intent: >-
   Guide product managers through structured PRD (Product Requirements Document) creation by orchestrating problem framing, user research synthesis, solution definition, and success criteria into a cohesive document. Use this to move from scattered notes and Slack threads to a clear, comprehensive PRD that aligns stakeholders, provides engineering context, and serves as a source of truth—avoiding ambiguity, scope creep, and the "build what's in my head" trap.
 type: workflow

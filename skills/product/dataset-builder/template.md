@@ -4,7 +4,7 @@ Fill every field. The golden column is not for cases a model could reproduce or 
 
 ## 1. Source — where the artefacts come from
 
-> Do not re-source. Start from the moat-seed rows `yoda-data-sourcing` already produced.
+> Do not re-source. Start from the moat-seed rows `proprietary-data-sourcing` already produced.
 
 **yoda P rows feeding this dataset:** _[which proprietary sources — field logs, correction stream, incident timelines]_
 **Field artefacts on hand:** _[what you actually hold — count and shape, e.g. "260 copilot suggestions + operator responses"]_
@@ -45,7 +45,7 @@ Route on gate failure:
 
 **If N < 20:** This is the finding, not a rounding error. You have _[N]_ real golden cases. Go get _[20 − N]_ more from _[named next probe / yoda row / artefact batch]_. Do not label synthetic rows to reach 20 — a case the model wrote is a mirror, not a test.
 
-**If N = 0 (whole input model-reachable):** nothing is golden and there is no dataset to ship — every artefact failed Gate 3 (reproducible). The finding is that there is nothing to test against yet. Route the whole set back to `yoda-data-sourcing` for workflow-trapped data; do not manufacture cases to fill the ledger.
+**If N = 0 (whole input model-reachable):** nothing is golden and there is no dataset to ship — every artefact failed Gate 3 (reproducible). The finding is that there is nothing to test against yet. Route the whole set back to `proprietary-data-sourcing` for workflow-trapped data; do not manufacture cases to fill the ledger.
 
 ## 7. Verdict and handoff
 

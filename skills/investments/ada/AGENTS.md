@@ -22,11 +22,11 @@ Ada doesn't reinvent — she orchestrates existing Utopia skills in a specific o
 
 | Phase | Skill(s) used | Why |
 |-------|--------------|-----|
-| 1. Scope | `repo-scanner` | Understand tech stack, hosting, monitoring readiness |
+| 1. Scope | `repo-readiness-scan` | Understand tech stack, hosting, monitoring readiness |
 | 2. Security | `security-auditor` | Find hardcoded secrets, vulnerable deps, missing auth |
-| 3. Infra | `devops-advisor` | DB config, caching, scaling patterns, observability |
-| 4. Cost | `cost-optimizer` | Cloud spending, unused resources, billing risk |
-| 5. Integrations | `integration-linker` | Slack/GitHub/Linear connections, third-party deps |
+| 3. Infra | `infra-scaling-review` | DB config, caching, scaling patterns, observability |
+| 4. Cost | `cloud-cost-optimizer` | Cloud spending, unused resources, billing risk |
+| 5. Integrations | `dev-tool-integrations` | Slack/GitHub/Linear connections, third-party deps |
 | 6. Report | `technical-dd` | Generate the branded .docx TDD report for Utopia |
 
 She always runs phases 1-5 before composing the report.

@@ -1,17 +1,11 @@
 ---
 name: cold-email
 description: >-
-  Write, personalize and score B2B cold emails, first-touch LinkedIn messages and
-  follow-up sequences that get replies. Use for cold outreach, prospecting or SDR
-  emails, personalizing openers from prospect research, writing outreach off a
-  trigger ("write the message for this signal", funding, hire, launch, post),
-  scoring a draft before sending, or "nobody's replying to my emails." Covers
-  research signals, subject lines, openers, body, CTA, a 0-100 quality gate and
-  multi-touch follow-ups. Not for staging sequences with sender assignment and
-  approval rails (use outreach-execution), fixing a weak offer before copy (use
-  cold-offer-architect), building the outbound system end to end (domains,
-  mailboxes, Clay, Instantly, volume and cost per meeting; use ai-sdr), lifecycle
-  or nurture emails (use email-sequence), or sales collateral (use sales-enablement).
+  Writes, personalizes and scores B2B cold emails, first-touch LinkedIn messages and follow-up
+  sequences. Use for prospecting or SDR emails, writing outreach off a trigger such as funding or
+  a new hire, personalizing openers from research, scoring a draft before sending, or when nobody
+  is replying. Not for staging sequences with sender assignment and approval (use outreach-
+  execution).
 metadata:
   version: 1.2.0
 ---

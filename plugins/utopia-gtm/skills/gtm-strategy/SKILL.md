@@ -1,18 +1,11 @@
 ---
 name: gtm-strategy
 description: >-
-  Use this skill to create a go-to-market plan for a product or a new market or
-  geography: score the seven GTM motions (inbound, outbound, paid digital,
-  community, partners, ABM, PLG) with their tools, pick a 2-4 motion stack, then
-  define messaging, success metrics, budget and a 90-day roadmap. Use when
-  creating a GTM plan from scratch, entering a new market, choosing between
-  inbound and outbound, or selecting marketing channels and motions. Not for a
-  growth strategy document for a named Utopia fellow or portfolio company (use
-  growth-strategy), mapping existing customer segments to CS and expansion plays
-  (use expansion-retention), launch-day planning, Product Hunt or waitlists (use
-  launch-strategy), choosing PLG vs sales-led (use sales-motion-design), a list of
-  marketing ideas (use marketing-ideas), or a solo founder's playbook (use
-  solo-founder-gtm).
+  Creates a go-to-market plan for a product or new market: scores seven GTM motions, picks a 2-4
+  motion stack, then sets messaging, success metrics, budget and a 90-day roadmap. Use when
+  building a GTM plan from scratch, entering a new market or geography, choosing inbound vs
+  outbound, or selecting channels. Not for launch-day planning or Product Hunt (use launch-
+  strategy).
 ---
 # GTM Strategy
 

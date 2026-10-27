@@ -1,6 +1,11 @@
 ---
 name: roadmap-planning
-description: Plan a strategic roadmap across prioritization, epic definition, stakeholder alignment, and sequencing. Use when turning strategy into a release plan that teams can execute.
+description: >-
+  Plans a strategic product roadmap: gathers inputs, defines epics with hypotheses and metrics,
+  prioritizes, sequences into Now/Next/Later or quarters, and frames it for stakeholders. Use when
+  the user asks to build a quarterly or half-year roadmap, sequence work across teams, or turn
+  competing initiatives into a plan execs will approve. Not for ranking a single backlog list (use
+  prioritization).
 intent: >-
   Guide product managers through strategic roadmap planning by orchestrating prioritization, epic definition, stakeholder alignment, and release sequencing skills into a structured process. Use this to move from disconnected feature requests to a cohesive, outcome-driven roadmap that aligns stakeholders, sequences work logically, and communicates strategic intent—avoiding "feature factory" roadmaps that lack strategic narrative or customer-centric framing.
 type: workflow
@@ -483,7 +488,7 @@ Later: Mobile workflows (DAU lift)
 - (Presentation created manually, no specific skill)
 
 **Optional/Related:**
-- `product-frame-stack` — Run before roadmap planning to establish vision, strategy, North Star and OKRs
+- `product-strategy-stack` — Run before roadmap planning to establish vision, strategy, North Star and OKRs
 - `discovery-process` (workflow) — Provides customer problem inputs for Phase 1
 - `user-story-mapping` — For complex epics requiring release planning
 

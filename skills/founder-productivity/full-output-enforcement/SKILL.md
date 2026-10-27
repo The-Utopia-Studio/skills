@@ -1,12 +1,11 @@
 ---
 name: full-output-enforcement
 description: >-
-  Force complete, unabridged output: every requested file, function or section written in full, with
-  no placeholders ('// ...', '// rest of code', 'similar for the other routes', 'for brevity'), and a
-  clean pause-and-continue marker if the length limit is hit. Use when the user asks for all N files
-  or a whole codebase or document in full, says no placeholders, no truncation, don't skip anything,
-  or complains that earlier output was cut short or summarized. Not for normal short answers or for
-  reviewing existing code.
+  Forces complete, unabridged output: every requested file, function or section written in full
+  with no placeholders, skipped middles or for-brevity summaries, and a clean continue marker if
+  the length limit is hit. Use when the user asks for all N files or a whole document in full,
+  says no placeholders or no truncation, or complains earlier output was cut short. Not for normal
+  short answers.
 ---
 
 # Full-Output Enforcement

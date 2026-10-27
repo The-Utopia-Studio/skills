@@ -1,6 +1,10 @@
 ---
 name: monitoring-setup
-description: Configures error tracking (Sentry), product analytics (PostHog), health monitoring, and alerting. Provides verification commands and concrete output templates. Use when the user asks to "set up monitoring", "add error tracking", "configure Sentry", "add analytics", or "set up alerts". Don't use for deployment (use deployment-engineer), security (use security-auditor), or integration linking (use integration-linker).
+description: >-
+  Sets up production monitoring: Sentry error tracking, PostHog product analytics, health checks
+  and alerting, with verification commands and output templates. Use when the user asks to set up
+  monitoring, add error tracking, configure Sentry or PostHog, add analytics or set up alerts. Not
+  for wiring GitHub or Sentry alerts into Slack (use dev-tool-integrations).
 ---
 
 # Monitoring Setup

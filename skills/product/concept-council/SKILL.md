@@ -1,13 +1,11 @@
 ---
 name: concept-council
 description: >-
-  First-contact teardown of a raw product idea. Use when a founder or fellow pitches a new idea in a
-  line or two ('here's my idea', 'tear this apart', 'rip this concept apart', 'what am I missing',
-  'what should I build first') and wants it attacked before anything is built. Convenes five
-  adversarial lenses, names the one load-bearing gap, and returns a Gap Map plus one First-Probe Brief
-  costing under a week. NOT for an already-scoped concept stress-tested on the five so-whats (use
-  so-what-stress-test), a numeric 8-dimension problem score (use problem-quality-scorecard), or
-  weighing an internal company decision from stakeholder perspectives (use role-switch).
+  Adversarial teardown of a raw one-line product idea by five lenses (Skeptic, Buyer, Incumbent,
+  Engineer, Regulator), returning a Gap Map with the one load-bearing gap and a first probe that
+  costs under a week. Use when someone pitches a new idea and says tear this apart, rip it apart,
+  what am I missing, or what should I test first. Not for a five-question pass/kill verdict on a
+  formed concept (use so-what-stress-test).
 type: interactive
 supersedes: none
 ---
@@ -30,7 +28,7 @@ Do not use it for:
 |---|---|---|
 | The five so-what questions run on an already-formed concept | `so-what-stress-test` | That interrogates a stated concept; this tears down a raw one and ends in a probe. |
 | A numeric score across eight problem dimensions | `problem-quality-scorecard` | That grades; this does not score the idea, it finds the one gap and tests it. |
-| The unit-cost physics floor of a claim | `physics-floor-gap` | That is a cost-teardown, not a five-lens attack. |
+| The unit-cost physics floor of a claim | `unit-cost-floor-gap` | That is a cost-teardown, not a five-lens attack. |
 | A written PRD or spec | `prd-development` (full, lean or one-pager) | This runs upstream of any spec. Decline and point there. |
 
 ## Method

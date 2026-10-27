@@ -1,13 +1,11 @@
 ---
 name: saas-revenue-growth-metrics
 description: >-
-  Calculate and interpret SaaS revenue and retention metrics from the user's numbers: MRR and ARR
-  growth, ARPU, ARPA, ACV, logo and revenue churn, gross and net revenue retention (GRR, NRR),
-  expansion, quick ratio, revenue mix and cohort trends. Use whenever the user gives starting MRR plus
-  new, expansion, contraction and churned MRR, or asks to compute churn, NRR or quick ratio for a
-  board deck, or to diagnose momentum and product-market-fit signals. Not for CAC, LTV, payback, burn
-  and efficiency ratios (use saas-economics-efficiency-metrics) or choosing a North Star (use
-  metrics-that-matter).
+  Calculates and interprets SaaS revenue and retention metrics from the user's numbers: MRR and
+  ARR growth, ARPU, ACV, logo and revenue churn, GRR, NRR, expansion, quick ratio and cohort
+  trends. Use when the user gives MRR movements or asks to compute churn, NRR or quick ratio for a
+  board deck, or to read growth momentum. Not for CAC, LTV, payback and burn (use saas-economics-
+  efficiency-metrics).
 intent: >-
   Master revenue and retention metrics to understand SaaS business momentum, evaluate product-market fit, and make data-driven decisions about growth investments. Use this to calculate key metrics, interpret trends, identify problems early, and communicate business health to stakeholders.
 type: component

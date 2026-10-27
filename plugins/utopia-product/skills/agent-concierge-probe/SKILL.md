@@ -1,15 +1,11 @@
 ---
 name: agent-concierge-probe
 description: >-
-  Have an AI agent run a real, already-mapped task end to end on several real cases, to measure the
-  automation frontier (which steps it does unaided vs needs a human) and cost-per-outcome to the cent
-  (input and output tokens, tool calls and human-fix minutes, all priced). Use when the user wants an
-  agent to do the real task before automating a service, asks what one outcome costs, wants it priced
-  to the cent, or asks what the agent can't do unaided. Output: a cost-per-outcome breakdown plus a
-  green/amber/red frontier map. Not for choosing the probe (use probe-matrix), the founder delivering
-  by hand to test willingness to pay (use concierge-probe), faking the interface (use
-  wizard-of-oz-probe), or testing a workflow on paper (use paper-sketch-probe). Honest about cost and
-  frontier; says nothing about self-serve UX, trust or adoption.
+  Runbook for having an AI agent run a real, mapped task end to end on several cases, producing
+  cost per outcome priced to the cent and a frontier map of steps it does unaided vs needs a
+  human. Use when the user wants to know what one outcome costs, whether a service can be
+  automated, or what the agent cannot do alone. Not for the founder delivering by hand to test
+  willingness to pay (use concierge-probe).
 type: generator
 supersedes: none
 ---

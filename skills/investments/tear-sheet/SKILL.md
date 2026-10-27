@@ -1,16 +1,11 @@
 ---
 name: tear-sheet
 description: >-
-  Company tear sheets and strip profiles: a concise single-company profile as a Word
-  one-pager (four audiences: equity research, IB/M&A, corp dev, sales/BD) or as 1-4
-  information-dense PowerPoint "strip profile" slides for a pitch book or IC pack. Pulls
-  financials, segments, valuation, peers, M&A and relationships from a connected financial-data
-  MCP server when available, otherwise from SEC/exchange filings, company IR pages and web
-  search, with every figure cited. Works for public and private companies. Use when the user
-  asks for a tear sheet, company one-pager, company profile, strip profile, fact sheet, company
-  snapshot, target profile or meeting-prep summary of a company.
-  Not for a multi-company competitive landscape deck (use competitive-analysis), a peer
-  multiples table (use comps-analysis), or technical diligence (use technical-dd).
+  Produces a company tear sheet: a one-page Word profile (equity research, IB/M&A, corp dev or BD)
+  or 1-4 PowerPoint strip-profile slides, with financials, segments, valuation, peers and M&A,
+  every figure cited. Use when the user asks for a tear sheet, company one-pager, company profile,
+  strip profile, target profile or meeting-prep summary. Not for a multi-company landscape (use
+  competitive-analysis).
 ---
 
 # Financial Tear Sheet Generator

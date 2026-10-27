@@ -1,6 +1,11 @@
 ---
 name: walkthrough-video
-description: Use when asked to make, redo or update a narrated demo, tutorial, onboarding or help video that tours a flow of a running web app, e.g. "record a video of signup through to the first project" or "make a help video for onboarding". Drives real Chrome with Playwright and outputs a 1080p MP4 with a smooth cursor, real typing and scrolling, eased zooms on form fields, title cards, an AI voiceover (Deepgram) and WebVTT captions. Not for videos of what a pull request changed or before/after comparisons; use ui-walkthrough for those.
+description: >-
+  Makes a narrated 1080p MP4 demo, tutorial, onboarding or help video touring a flow of a running
+  web app, driving real Chrome with Playwright: smooth cursor, real typing, zooms, title cards, AI
+  voiceover (Deepgram) and WebVTT captions. Use when asked to make, redo or update a demo or help
+  video, e.g. record signup through to the first project. Not for what a pull request changed (use
+  ui-walkthrough).
 ---
 
 # Walkthrough video

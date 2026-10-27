@@ -1,6 +1,11 @@
 ---
 name: investor-fact-ledger
-description: Use whenever investor-facing numbers appear in more than one place — a deck plus a memo, a data room, a website with traction figures, a one-pager. Trigger on "keep my numbers consistent", "our deck and memo disagree", "we changed the valuation, what else needs updating", "check the data room for stale figures", before any investor send, or as the first step of investor-reading-room. Ships a fact-checker script that fails CI when a surface drifts or a retired number survives anywhere.
+description: >-
+  Keeps investor-facing numbers consistent across deck, memo, data room, website and one-pager
+  with a single fact ledger and a checker script that fails when a surface drifts or a retired
+  number survives. Use when the user says "our deck and memo disagree", "keep my numbers
+  consistent", "we changed the valuation, what else needs updating", "check the data room for
+  stale figures", or before any investor send.
 ---
 
 # Investor Fact Ledger

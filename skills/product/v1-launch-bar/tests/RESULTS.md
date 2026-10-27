@@ -12,7 +12,7 @@ MUST fire (5):
 5. "Should we ship this pilot?"
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "How do we keep improving the product month over month / what's the cadence / run the loop" → belongs to `refine-flywheel` (08)
+1. "How do we keep improving the product month over month / what's the cadence / run the loop" → belongs to `post-launch-refine-loop` (08)
 2. "How should we price the pilot / what are the terms / set the commercial success metric" → belongs to `pilot-six-term-sheet` (07)
 3. "Define what working means / write the golden set / what's the cost-per-outcome" → belongs to `eval-first-spec` (07)
 
@@ -47,11 +47,11 @@ Notes on the hard cases:
 - **02**: The one soft spot. The autonomy-safety trap (confirmations must NOT auto-tighten thresholds / silently raise autonomy on an L0 safety product) is *catchable* from Step 4 ("promotes autonomy by eval result") but is not spotlighted as an in-Method rule or Gotcha, and `guardrail-design` (a real 07 sibling) is never named in the routing. Challenge scored 4, not 5, on that reliance on applier inference. Still passes.
 - **04 / 05**: Step 3's explicit "Do not average… both are hard" and the Gotchas ("friendly stranger", "static tool that demos beautifully") produce the NO-GO cleanly; the ≤60s hard bar rejects the 90s run and disqualifies briefed viewers as opinion (0.1).
 
-Kill-line check: NOT tripped. Both gates are hard (Gate A recorded ≥2/3 strangers ≤60s unaided; Gate B kill-rule = B1–B4 present + B5 numeric or NO-GO, with B3 proven-once on tape — a proven mechanism, not a promise). No pass on opinion (0.7 floor), no averaging. Does not poach `refine-flywheel`: Step 4 hands the *running* of the mechanism over; this skill wires + proves it once.
+Kill-line check: NOT tripped. Both gates are hard (Gate A recorded ≥2/3 strangers ≤60s unaided; Gate B kill-rule = B1–B4 present + B5 numeric or NO-GO, with B3 proven-once on tape — a proven mechanism, not a promise). No pass on opinion (0.7 floor), no averaging. Does not poach `post-launch-refine-loop`: Step 4 hands the *running* of the mechanism over; this skill wires + proves it once.
 
 ### Gotchas surfaced (for the author to fold into SKILL.md ## Gotchas)
-- **Corrections must not raise autonomy (safety).** The skill has no explicit Method rule or Gotcha that learning-from-corrections must NOT silently promote autonomy — critical for L0 safety products (Golden 02). It is only inferable from Step 4. Add a one-line rule/gotcha and name `guardrail-design` (07 sibling, exists, currently unreferenced) alongside `refine-flywheel` for autonomy promotion.
+- **Corrections must not raise autonomy (safety).** The skill has no explicit Method rule or Gotcha that learning-from-corrections must NOT silently promote autonomy — critical for L0 safety products (Golden 02). It is only inferable from Step 4. Add a one-line rule/gotcha and name `guardrail-design` (07 sibling, exists, currently unreferenced) alongside `post-launch-refine-loop` for autonomy promotion.
 - **Adversarial-01 "one question" risk.** Step 0 lists three preconditions; nothing tells the applier to LEAD with the single unblocking ask (point me at the running v1 + the one outcome a stranger must reach). A lazy applier could dump all three at once — the exact adversarial-01 fail condition. Consider flagging the single lead question in-Method.
-- **Sandbox/non-sandbox split (orchestrator sanity-check, not a scoring defect).** This skill lives under `skills/sandbox/product-icarus/…` and routes to `eval-first-spec` / `pilot-six-term-sheet` / `usability-test-protocol` that live in the NON-sandbox `skills/product-icarus/…` tree, while `refine-flywheel` is under `skills/sandbox/…/08-…`. All referenced skills exist by name, so routing is not broken, but confirm the intended home tree before graduation.
+- **Sandbox/non-sandbox split (orchestrator sanity-check, not a scoring defect).** This skill lives under `skills/sandbox/product-icarus/…` and routes to `eval-first-spec` / `pilot-six-term-sheet` / `usability-test-protocol` that live in the NON-sandbox `skills/product-icarus/…` tree, while `post-launch-refine-loop` is under `skills/sandbox/…/08-…`. All referenced skills exist by name, so routing is not broken, but confirm the intended home tree before graduation.
 
 ## Refine run 2 — applied judge fixes: added a Gotcha that the corrections loop must not silently raise autonomy (route to guardrail-design/refine-flywheel, no auto-promote), and a Step 0 rule to lead vague inputs with the single unblocking question.

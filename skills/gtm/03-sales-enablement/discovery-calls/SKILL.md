@@ -1,15 +1,11 @@
 ---
 name: discovery-calls
 description: >-
-  Use this skill for discovery calls and qualification checks: plan or run a
-  first call, write a call plan and question bank, summarize call notes, and
-  check MEDDIC/MEDDICC or BANT coverage on an opportunity ("check MEDDIC for this
-  deal", "what's missing from my call notes", "is this deal qualified"). Produces
-  a call plan, persona questions, notes template, a red/yellow/green MEDDICC
-  scorecard and the next question for each gap. Not for grading or scoring a call
-  transcript against a coaching scorecard (use call-scorecards), full deal
-  inspection or stalled deals (use deal-velocity-engineer), or forecast commits
-  (use revops-forecasting).
+  Plans and checks sales discovery calls: call plan, persona question bank, notes template, and a
+  red/yellow/green MEDDICC or BANT coverage scorecard with the next question for each gap. Use
+  when preparing a first call, summarizing call notes, checking MEDDIC on a deal, or asking if a
+  deal is qualified. Not for grading a call transcript against a coaching scorecard (use call-
+  scorecards).
 ---
 
 # Discovery Calls Skill

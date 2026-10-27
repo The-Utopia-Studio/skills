@@ -1,6 +1,11 @@
 ---
 name: proto-persona
-description: Create a proto-persona from current research, market signals, and team knowledge. Use when you need a working customer profile before deeper validation.
+description: >-
+  Creates a proto-persona: an assumption-based profile of the target user built from available
+  research, market signals and team knowledge, with goals, pains, behaviours and the gaps to
+  validate. Use when the user needs a working persona or customer profile early, before deep
+  research, or to align a team on who they are building for. Not for mapping who buys, signs and
+  champions a deal (use user-buyer-decider-map).
 intent: >-
   Create an initial, assumption-based persona profile that synthesizes available user research, market data, and stakeholder knowledge into a working hypothesis about your target user. Use this to align teams early in product development, guide initial design decisions, and identify gaps in understanding that require validation through research.
 type: component

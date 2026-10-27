@@ -1,15 +1,10 @@
 ---
 name: hf-cli
 description: >-
-  Hugging Face Hub CLI (`hf`, replaces the deprecated `huggingface-cli`):
-  authentication, local cache, downloading and uploading models, datasets and
-  Spaces, repos, buckets, discussions and PRs, collections, webhooks, running or
-  scheduling Jobs on HF infrastructure, and Inference Endpoints. Use when the
-  user mentions `hf`, huggingface-cli, or wants to do a Hub operation from the
-  terminal. Not for training scripts (use huggingface-llm-trainer or
-  huggingface-vision-trainer), Dataset Viewer row queries (use
-  huggingface-datasets), or reading and summarising papers (use
-  huggingface-papers).
+  Runs Hugging Face Hub operations with the hf CLI (replaces huggingface-cli): login, cache,
+  download and upload of models, datasets and Spaces, repos, buckets, PRs, collections, webhooks,
+  HF Jobs and Inference Endpoints. Use when the user mentions hf or huggingface-cli or wants a Hub
+  operation from the terminal. Not for training scripts (use huggingface-llm-trainer).
 ---
 
 Install: `curl -LsSf https://hf.co/cli/install.sh | bash -s`.

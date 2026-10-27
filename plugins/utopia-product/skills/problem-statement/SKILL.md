@@ -1,6 +1,11 @@
 ---
 name: problem-statement
-description: Write a user-centered problem statement with who is blocked, what they are trying to do, why it matters, and how it feels. Use when framing discovery, prioritization, or a PRD.
+description: >-
+  Writes a user-centred problem statement: I am, trying to, but, because, which makes me feel,
+  plus context and a one-line final statement. Use when the user needs to frame a problem for
+  discovery, a PRD or prioritization, align stakeholders on the problem, or turn a feature request
+  back into a user problem. Not for the full MITRE workshop with bias and stakeholder checks (use
+  problem-framing-canvas).
 intent: >-
   Articulate a problem from the user's perspective using an empathy-driven framework that captures who they are, what they're trying to do, what's blocking them, why, and how it makes them feel. Use this to align stakeholders on the problem before jumping to solutions, and to frame product work around user outcomes rather than feature requests.
 type: component

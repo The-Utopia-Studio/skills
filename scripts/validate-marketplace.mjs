@@ -241,6 +241,19 @@ function validateEvalAssets(skillPathMap) {
       } else {
         validateRubricFile(rubricPath);
       }
+      // A renamed skill must not keep its old name inside its own eval files.
+      const folder = path.basename(skillPath);
+      const field = rubricPath.endsWith("/evals/evals.json") ? "skill_name" : rubricPath.endsWith("/tests/rubric.json") ? "skill" : null;
+      if (field) {
+        try {
+          const declared = JSON.parse(fs.readFileSync(rubricPath, "utf8"))[field];
+          if (typeof declared === "string" && declared !== folder) {
+            error(`${rubricPath}: ${field} "${declared}" does not match skill folder "${folder}"`);
+          }
+        } catch {
+          // invalid JSON is already reported above
+        }
+      }
     }
   }
 }

@@ -1,0 +1,2923 @@
+{
+  "summary": {
+    "paired_prompts": 182,
+    "correct_before": 102,
+    "correct_after": 118,
+    "fixed": 26,
+    "regressed": 10
+  },
+  "pairs": [
+    {
+      "prompt": "Our pricing page was designed desktop-only: a 4-column comparison table (Free / Pro / Team / Enterprise, 14 feature rows), hover tooltips on every feature name, and a sticky header. Make it work properly on phones and tablets: breakpoints, what the table becomes on a 375px screen, how the tooltips work on touch, and the CSS changes.",
+      "expected_before": "adapt",
+      "expected_after": "ui-responsive",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I'm a fellow building an agent that reviews supplier invoices for a mid-size Saudi construction firm and flags ones that don't match the purchase order. It runs after the AP clerk uploads a PDF; the clerk approves every flag. Spec this one agent: its role, the minimum tools, and especially the memory layer so it stops repeating the same mistakes the clerk keeps correcting.",
+      "expected_before": "agent-design",
+      "expected_after": "agent-design",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:agent-design": 1
+      },
+      "fired_after": {
+        "utopia-product:agent-design": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Score our CLI for how usable it is by AI agents. Facts: `acme deploy` prints a colored table only; there's `--json` on `list` and `get` but not on `deploy` or `logs`; all mutations take bespoke flags only; `--help` is plain text; `logs` dumps the full stream with no limit flag; destructive commands ask for an interactive y/N prompt with no `--yes` flag. Give me per-axis scores and a total.",
+      "expected_before": "agent-dx-cli-scale",
+      "expected_after": "cli-agent-dx-score",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:cli-agent-dx-score": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Rewrite this maintenance step in ASD-STE100 Simplified Technical English and list which rules you applied: \"Prior to the commencement of the removal procedure, it is imperative that the technician ensures that the hydraulic system has been fully depressurized, as failure to do so could potentially result in serious injury.\"",
+      "expected_before": "asd-ste100",
+      "expected_after": "asd-ste100",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:asd-ste100": 1
+      },
+      "fired_after": {
+        "utopia-product:asd-ste100": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run a technical quality audit of this component and give me a scored report with P0-P3 severities: <div onclick=\"go()\" style=\"color:#999;background:#fff\"><img src=\"hero.png\"><span style=\"font-size:11px\">Click here</span></div> plus a CSS file that hardcodes 40 hex colors, has no dark-mode tokens, animates width on hover, and has no media queries.",
+      "expected_before": "audit",
+      "expected_after": "ui-audit",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:audit": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-audit": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our fintech landing page looks too safe: centered hero, gray #f5f5f5 background, Inter everywhere at 16-32px, one blue button, three equal feature cards with icons. Stakeholders say it's bland and forgettable. Make it bolder with more visual impact without wrecking usability, and show me the concrete type, color and layout changes.",
+      "expected_before": "bolder",
+      "expected_after": "ui-bolder",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:bolder": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-bolder": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Set up brand guidelines for our startup \"Nakhla\" (date-palm agritech, Riyadh): voice should be warm, expert, plain-spoken; colors are palm green #2F5D3A and sand #E8D8B8. Create the brand voice and messaging framework, then sync it to design tokens and give me a checklist to validate new marketing assets against the brand.",
+      "expected_before": "ckm-brand",
+      "expected_after": "brand-guidelines",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:ckm-brand": 1
+      },
+      "fired_after": {
+        "utopia-product:brand-guidelines": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Design a logo for \"Qafla\", a logistics startup moving freight across GCC borders. I want 3 logo directions (minimalist mark, wordmark, badge) generated with AI, then the corporate identity mockups: business card, letterhead and a truck livery.",
+      "expected_before": "ckm-design",
+      "expected_after": "brand-graphics",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:efecto-graphic-design": 1
+      },
+      "fired_after": {
+        "utopia-product:brand-graphics": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Using shadcn/ui and Tailwind, build an accessible settings page for our Next.js app: a profile form (name, email, avatar upload), a dark-mode toggle, a danger-zone dialog to delete the account, and a data table of active sessions. Give me the shadcn add commands and the component code.",
+      "expected_before": "ckm-ui-styling",
+      "expected_after": "shadcn-tailwind-ui",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:ui-ux-pro-max": 1
+      },
+      "fired_after": {
+        "utopia-product:shadcn-tailwind-ui": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Rewrite the copy in these screens so users understand what's going on: error \"Error 4012: Operation failed\", empty state \"No data\", button \"Submit\", a delete confirm \"Are you sure? OK / Cancel\", and a password hint \"Password must meet requirements\". The users are non-technical clinic receptionists.",
+      "expected_before": "clarify",
+      "expected_after": "ui-microcopy",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Three of our server actions (createWorkspace, importRepo, retryBuild) each copy-paste about 60 lines that spin up a sandbox, clone the repo, detect the package manager and run install. A bug fix in one didn't reach the others. How should I split this into actions vs a shared service layer, and in what order should I migrate?",
+      "expected_before": "code-structure",
+      "expected_after": "service-layer-refactor",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We're building an AI copilot that answers clinic managers' questions about appointment no-shows using their booking system data. The fellow's plan is to dump the whole database export into one big GPT prompt. Architect how this AI system should actually be built: components, effort split, and where we can swap models.",
+      "expected_before": "compound-system-architecture",
+      "expected_after": "compound-system-architecture",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "compound-engineering:ce-pov": 1
+      },
+      "fired_after": {
+        "compound-engineering:ce-strategy": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our AWS bill jumped to $2,400/month for a pre-revenue app with 300 users. We run two always-on m5.large EC2 instances, an RDS Postgres with multi-AZ, a NAT gateway, CloudWatch logs with no retention, and an S3 bucket of user uploads with no lifecycle rules. Where is the money going and what are the quick wins?",
+      "expected_before": "cost-optimizer",
+      "expected_after": "cloud-cost-optimizer",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Critique this signup screen from a UX perspective and score it: hero headline \"Welcome to the future of work\", a purple-to-blue gradient background, 3 equal glassmorphism cards (Fast, Secure, Smart), a form with email, password, confirm password, company size, role, and phone all required, and two equal-weight buttons \"Sign up\" and \"Learn more\". Our target is busy HR managers.",
+      "expected_before": "critique",
+      "expected_after": "ui-critique",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:critique": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Our habit-tracking app works fine but feels joyless. Add moments of personality and delight: what happens when a user completes a 7-day streak, the empty state on day one, the loading state while syncing, and some copy with character. Audience is young professionals; brand is playful but not childish.",
+      "expected_before": "delight",
+      "expected_after": "ui-delight",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-delight": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Deploy this Next.js app to Vercel and give me the live link. The repo has a GitHub remote, there's no .vercel folder yet, and VERCEL_TOKEN is set in my .env.local because I can't do interactive login on this machine.",
+      "expected_before": "deploy-to-vercel",
+      "expected_after": "deploy-to-vercel",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:deploy-to-vercel": 1
+      },
+      "fired_after": {
+        "utopia-product:deploy-to-vercel": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Set up CI/CD for our Node/Express + Postgres API: GitHub Actions that run lint and tests on PRs, a Dockerfile for production, and separate dev/staging/production environments with the right env vars. We currently deploy by SSHing into a box and running git pull.",
+      "expected_before": "deployment-engineer",
+      "expected_after": "deployment-engineer",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Assess our infrastructure before we scale from 1k to 50k users: Next.js on Vercel, Prisma with Postgres on a single Supabase instance, no connection pooling configured, no Redis, no background job queue (emails are sent inline in API routes), and we've never tested a database backup restore. What should we fix first?",
+      "expected_before": "devops-advisor",
+      "expected_after": "infra-scaling-review",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our project settings screen has 9 tabs, 47 toggles, three nested accordions, two sidebars, a tips panel and a floating help button. Users say it's overwhelming. Strip it down to its essence: what to remove, merge or hide, and what the simplified layout looks like.",
+      "expected_before": "distill",
+      "expected_after": "ui-simplify",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:quieter": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-simplify": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Using Efecto, design an event poster for our Demo Day: \"Utopia Studio Demo Day, 12 November 2026, Riyadh\", 8 startups presenting, RSVP via QR code. Bold editorial style, A3 portrait.",
+      "expected_before": "efecto-graphic-design",
+      "expected_after": "efecto-graphic-design",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:efecto-graphic-design": 1
+      },
+      "fired_after": {
+        "utopia-product:efecto-graphic-design": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Open an Efecto session and design a landing page artboard for our B2B invoicing product: hero with headline and CTA, a logo strip, three benefit sections and a pricing block, built with JSX and Tailwind so I can watch it live in the browser.",
+      "expected_before": "efecto-web-design",
+      "expected_after": "efecto-web-design",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:efecto-web-design": 1
+      },
+      "fired_after": {
+        "utopia-product:efecto-web-design": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We validated the wedge: an AI that drafts responses to tenders for small Saudi contractors. Before we build v1, spec it so we can score it: the one-sentence job, 20 pass/fail golden cases from real tenders we have, the autonomy level and acceptable failure rate per failure mode, and a cost-per-outcome budget.",
+      "expected_before": "eval-first-spec",
+      "expected_after": "eval-first-spec",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:eval-first-spec": 1
+      },
+      "fired_after": {
+        "utopia-product:eval-first-spec": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I just fixed the bug where the 'Invite teammate' modal didn't close after a successful invite (PR #482, branch fix/invite-modal). Record annotated screen-recording proof of the invite flow working, with test and assertion annotations, and post the video plus a pass/fail summary on the PR and the Linear ticket.",
+      "expected_before": "evidence-driven-testing",
+      "expected_after": "pr-test-evidence-video",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:pr-test-evidence-video": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Greptile gave my PR #215 a 3/5 confidence score with 7 unresolved comments. Keep fixing the actionable comments, pushing, and re-triggering Greptile until it reaches 5/5 with zero unresolved comments.",
+      "expected_before": "greploop",
+      "expected_after": "greptile-review-loop",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "compound-engineering:ce-babysit-pr": 1
+      },
+      "fired_after": {
+        "utopia-product:greptile-review-loop": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Our AI auto-approves expense claims for a 2,000-employee company. Failure modes: approving a fraudulent claim (costly, rare), rejecting a valid claim (annoying, frequent), and miscategorising the cost centre (cheap, frequent). Design the guardrails: where rules in code go, what confidence threshold to auto-approve at, and when a human must sign off.",
+      "expected_before": "guardrail-design",
+      "expected_after": "guardrail-design",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Using the hf CLI, log in, download only the safetensors files of meta-llama/Llama-3.2-1B to ./models, then create a private model repo under my account and upload my fine-tuned checkpoint folder ./out/checkpoint-500 to it.",
+      "expected_before": "hf-cli",
+      "expected_after": "hf-cli",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:hf-cli": 1
+      },
+      "fired_after": {
+        "utopia-product:hf-cli": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I want to evaluate Qwen/Qwen2.5-1.5B-Instruct on GSM8K and HellaSwag on my local RTX 4090 using lighteval or inspect-ai. Which backend should I use (vLLM vs Transformers vs accelerate) and give me the exact commands.",
+      "expected_before": "huggingface-community-evals",
+      "expected_after": "huggingface-community-evals",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Using the Hugging Face Dataset Viewer API, tell me the subsets and splits of the dataset \"HuggingFaceFW/fineweb-edu\", fetch the first 20 rows of the train split, search for rows mentioning \"photosynthesis\", and give me the parquet URLs.",
+      "expected_before": "huggingface-datasets",
+      "expected_after": "huggingface-datasets",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:huggingface-datasets": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Build me a Gradio app in Python that takes a PDF upload, shows the extracted text in one tab, and has a chatbot in a second tab that answers questions about the PDF with streaming responses. Include the layout with Blocks and the event listeners.",
+      "expected_before": "huggingface-gradio",
+      "expected_after": "huggingface-gradio",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "claude-api": 1
+      },
+      "fired_after": {
+        "claude-api": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Fine-tune Qwen2.5-0.5B with SFT on my dataset \"nakhla/agri-support-chats\" (messages format, 8k rows) using TRL on Hugging Face Jobs, push the result to the Hub, and estimate the GPU cost before submitting. Then convert it to GGUF for local use.",
+      "expected_before": "huggingface-llm-trainer",
+      "expected_after": "huggingface-llm-trainer",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:huggingface-llm-trainer": 1
+      },
+      "fired_after": {
+        "utopia-product:huggingface-llm-trainer": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Summarize the key contributions and results of arXiv paper 2501.12948, and list the models, datasets and Spaces on Hugging Face that are linked to it, plus its GitHub repo.",
+      "expected_before": "huggingface-papers",
+      "expected_after": "huggingface-papers",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "deep-research": 1
+      },
+      "fired_after": {
+        "deep-research": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write me a reusable script that pulls the top 50 most-downloaded text-classification models on the Hugging Face Hub this month, enriches each with its license, base model and linked papers, and outputs a CSV I can rerun weekly.",
+      "expected_before": "huggingface-tool-builder",
+      "expected_after": "huggingface-tool-builder",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Add Trackio experiment tracking to my PyTorch training loop: log loss and learning rate every step, eval accuracy every epoch, fire an alert if loss goes NaN, sync the dashboard to a HF Space, and show me how to pull the logged metrics as JSON from the CLI afterwards.",
+      "expected_before": "huggingface-trackio",
+      "expected_after": "huggingface-trackio",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:huggingface-trackio": 1
+      },
+      "fired_after": {
+        "utopia-product:huggingface-trackio": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Fine-tune an RT-DETR v2 object detector on my COCO-format dataset of 3,000 drone images of date palms (classes: healthy, infested, dead) on Hugging Face Jobs GPUs, with Albumentations augmentation and mAP evaluation.",
+      "expected_before": "huggingface-vision-trainer",
+      "expected_after": "huggingface-vision-trainer",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:huggingface-vision-trainer": 1
+      },
+      "fired_after": {
+        "utopia-product:huggingface-vision-trainer": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Design a dashboard for our grid-operations monitoring tool in an industrial brutalist style: Swiss typographic grid, military-terminal feel, extreme type scale contrast, utilitarian colors, CRT scanline and halftone effects. It shows 12 substation statuses and a live load chart.",
+      "expected_before": "industrial-brutalist-ui",
+      "expected_after": "industrial-brutalist-ui",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:industrial-brutalist-ui": 1
+      },
+      "fired_after": {
+        "utopia-product:industrial-brutalist-ui": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Using @json-render/ink, build a terminal UI from a JSON spec: a catalog with a custom StatusBadge component, a list of deployments bound to data, and an action that redeploys the selected item when I press Enter.",
+      "expected_before": "ink",
+      "expected_after": "ink-terminal-ui",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:ink": 1
+      },
+      "fired_after": {
+        "utopia-product:ink-terminal-ui": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Connect our dev tools: we use GitHub, Slack, Linear, Sentry and Vercel but none of them talk to each other. I want PR and deploy notifications in #eng, Linear issues auto-linked to branches and PRs, and Sentry errors alerting into #alerts. Give me the setup steps.",
+      "expected_before": "integration-linker",
+      "expected_after": "dev-tool-integrations",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "The spacing on our blog index feels off: every section uses the same 24px padding, cards in the grid are all identical, the sidebar crowds the main column, and the headings don't stand out from the body. Fix the layout, spacing system and visual rhythm.",
+      "expected_before": "layout",
+      "expected_after": "ui-layout-spacing",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Build a features page for our note-taking app in a clean, editorial, Notion-like minimalist style: warm off-white background, serif headlines, flat bento grid with 1px borders, muted pastel tags, no gradients and no heavy shadows.",
+      "expected_before": "minimalist-ui",
+      "expected_after": "minimalist-ui",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:minimalist-ui": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Set up monitoring for our Next.js app before launch: Sentry for error tracking with source maps, PostHog for product analytics with signup and checkout events, a /api/health endpoint, structured logging instead of console.log, and alerts when error rate spikes.",
+      "expected_before": "monitoring-setup",
+      "expected_after": "monitoring-setup",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:monitoring-setup": 1
+      },
+      "fired_after": {
+        "utopia-product:monitoring-setup": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our React product page is slow: LCP is 4.8s, there's a 1.2MB JS bundle, hero images are 3MB PNGs, the carousel janks while scrolling, and CLS is 0.31 because fonts and ads load late. Diagnose and fix the UI performance.",
+      "expected_before": "optimize",
+      "expected_after": "ui-performance",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "compound-engineering:ce-optimize": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-performance": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Go all-out on the hero for our AI music startup launch: I want something extraordinary, like a WebGL shader background that reacts to the audio waveform, scroll-driven reveals, and spring-physics interactions at 60fps, with graceful fallbacks for low-end phones.",
+      "expected_before": "overdrive",
+      "expected_after": "ui-advanced-effects",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:ui-ux-pro-max": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-advanced-effects": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "We ship tomorrow. Do a final polish pass on our checkout flow: nested cards use the same border radius, icons look slightly off-center in buttons, the price counter shifts layout when it updates, buttons have no pressed state, and spacing is inconsistent between steps. Go from good to great.",
+      "expected_before": "polish",
+      "expected_after": "ui-polish",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:polish": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Make this repo AI-native: write an AGENTS.md and .cursorrules so Claude Code, Cursor and Codex understand it. Stack: Next.js 15 app router, Drizzle ORM with Postgres, Clerk auth, Tailwind, pnpm; scripts are dev, build, test (vitest), lint, db:migrate.",
+      "expected_before": "prompt-engineer",
+      "expected_after": "agents-md-writer",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our wellness app's home screen is too loud: neon pink and electric blue on black, three different gradient buttons, bouncing icons, every heading in bold caps, and an auto-playing confetti animation. Users call it overwhelming. Tone it down to feel calmer and more refined.",
+      "expected_before": "quieter",
+      "expected_after": "ui-quieter",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:quieter": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-quieter": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I have a FastAPI app in a GitHub repo and want it running on Railway: create the project, create the service from the repo, add a Postgres database and wire DATABASE_URL into the service, deploy it, generate a public domain, and then show me the deploy logs if it fails.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "ponytail:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Scan this repository and tell me how production-ready it is with a score out of 10: tech stack, hosting, CI/CD, error tracking, documentation, security, and the top 3 issues to fix first.",
+      "expected_before": "repo-scanner",
+      "expected_after": "repo-readiness-scan",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:repo-readiness-scan": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Our repo is a mess after six months of hacking: 40 directories with no READMEs, a 1,400-line utils.ts, old experiment folders nobody uses, and duplicate files like api-old.ts and api-v2-final.ts. Clean it up and structure it for production. Ask before deleting anything.",
+      "expected_before": "repo-structurer",
+      "expected_after": "repo-structurer",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Check this repo for security issues before we open-source it: I suspect API keys were hardcoded at some point, .env might have been committed, npm audit shows warnings, and some /api/admin routes might not check auth. Give me critical issues and fixes.",
+      "expected_before": "security-auditor",
+      "expected_after": "security-auditor",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "security-review": 1
+      },
+      "fired_after": {
+        "security-review": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Before we write any code, help me plan the UX and UI for a new \"split the bill\" feature in our expense app. Run a short discovery interview with me, then produce a design brief covering purpose, content, design goals, constraints and anti-goals.",
+      "expected_before": "shape",
+      "expected_after": "ui-design-brief",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:discovery-process": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-design-brief": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Generate a DESIGN.md for Google Stitch for our fintech dashboard so Stitch generates premium, non-generic screens: atmosphere, color palette with hex codes and roles, typography rules, component stylings, layout, motion and banned anti-patterns.",
+      "expected_before": "stitch-design-taste",
+      "expected_after": "stitch-design-taste",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:stitch-design-taste": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Implement a TypeScript function calculateVat(amount, country) for KSA (15%) and UAE (5%), rounding to 2 decimals and throwing on unknown countries, using strict red-green-refactor TDD with Vitest: one failing test at a time, minimal code to pass, then refactor.",
+      "expected_before": "tdd-red-green-refactor",
+      "expected_after": "tdd-red-green-refactor",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:tdd-red-green-refactor": 1
+      },
+      "fired_after": {
+        "utopia-product:tdd-red-green-refactor": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run sentiment analysis and Whisper speech-to-text entirely in the browser with Transformers.js, using WebGPU when available and falling back to WASM. Show me the pipeline setup, model loading with a progress bar, and running it in a Web Worker so the UI doesn't freeze.",
+      "expected_before": "transformers-js",
+      "expected_after": "transformers-js",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:transformers-js": 1
+      },
+      "fired_after": {
+        "utopia-product:transformers-js": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I'm building a TypeScript CLI command `sync-invoices --from 2026-01-01 --dry-run`. Structure it with the spec and handler pattern: Zod input schema that parses the date, exhaustive error codes, a Result type instead of throwing, and separate contract tests from handler logic tests.",
+      "expected_before": "typed-service-contracts",
+      "expected_after": "typed-service-contracts",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "The typography on our docs site feels unintentional: body text is 14px Arial at 120 characters per line, H1 to H4 are 22/20/18/16px all in bold, line-height is 1.2 everywhere, and code blocks use the same font as body. Fix the font choices, hierarchy, sizing and readability.",
+      "expected_before": "typeset",
+      "expected_after": "ui-typography",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-typography": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "I'm starting a booking app for a luxury spa in Dubai. Search your style database and recommend a complete design system: UI style, color palette, font pairing, and the UX guidelines that matter most for a mobile booking flow, then persist it as a master design system file for the project.",
+      "expected_before": "ui-ux-pro-max",
+      "expected_after": "ui-ux-pro-max",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:ckm-design-system": 1
+      },
+      "fired_after": {
+        "utopia-product:brand-guidelines": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our <Modal> component has grown 14 boolean props (showHeader, showFooter, isDanger, hasCloseButton, isFullscreen, ...) and every new use case adds another. Refactor it using React composition patterns, compound components and context, so it scales without boolean prop proliferation.",
+      "expected_before": "vercel-composition-patterns",
+      "expected_after": "vercel-composition-patterns",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Review this Next.js App Router page for performance: it fetches user, orders and recommendations sequentially with await in a client component using useEffect, imports all of lodash and moment, and re-renders the whole list on every keystroke in a search box. What should change, in priority order?",
+      "expected_before": "vercel-react-best-practices",
+      "expected_after": "vercel-react-best-practices",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our Expo React Native app's feed of 2,000 posts with images stutters while scrolling and the like-button animation drops frames on Android. How should we fix list virtualization, image handling and the animation using React Native best practices?",
+      "expected_before": "vercel-react-native-skills",
+      "expected_after": "vercel-react-native-skills",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I'm a solo fellow and want a fleet of agents to do my weekly market research: one that gathers new competitor launches, one that analyses pricing changes, one that drafts a briefing, and one that critiques the draft. Design the workflow: which agents, when each spawns, how they hand off, and which runs in Claude.ai vs Claude Code vs Cowork.",
+      "expected_before": "workflow-design",
+      "expected_after": "workflow-design",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:agent-design": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Design 3 banner options for our product launch: a Twitter/X header (1500x500), a LinkedIn cover (1584x396) and an Instagram story (1080x1920). Headline \"Payroll for the Gulf, finally simple\", CTA \"Join the waitlist\", brand navy #12355B. Give me different art directions and export them as PNGs.",
+      "expected_before": "ckm-design",
+      "expected_after": "brand-graphics",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:ad-creative": 1
+      },
+      "fired_after": {
+        "utopia-product:brand-graphics": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "\ube44\ud3c9\ud574\uc918: our mobile checkout screen has the total price in 12px gray (#9ca3af) on white, the \"Pay now\" and \"Edit cart\" buttons look identical, there is no error state for a declined card, and our brand guide says primary is #1a56db but the button uses #2563f0. Check it against the brand system too, and reply in English.",
+      "expected_before": "critique",
+      "expected_after": "ui-critique",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-critique": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Review this React component for interface detail polish and give me a Before/After table: a card with rounded-xl wrapping a button with rounded-xl and p-2, an animated counter without tabular numbers, `transition: all 300ms`, an icon swap that just toggles display, and a button that scales to 0.9 on press.",
+      "expected_before": "polish",
+      "expected_after": "ui-polish",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Help me decide how this dropdown should animate, in the spirit of Emil Kowalski's design engineering: it currently scales from 0 with ease-in over 400ms from the center, and the tooltip waits 700ms on every hover even when moving between adjacent buttons. What easing, duration, origin and spring settings should it use?",
+      "expected_before": "polish",
+      "expected_after": "ui-polish",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Deploy my project to Vercel using my access token. VERCEL_TOKEN is stored in .env under the name VERCEL_API_KEY, the project ID is prj_abc123, and I also need to add STRIPE_SECRET to the preview environment. I can't run vercel login here.",
+      "expected_before": "deploy-to-vercel",
+      "expected_after": "deploy-to-vercel",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:deploy-to-vercel": 1
+      },
+      "fired_after": {
+        "utopia-product:deploy-to-vercel": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "My Railway deploy failed with \"Error: Cannot find module 'dist/index.js'\". Show me the build and deploy logs for the latest deployment of my api service and tell me why it failed, then redeploy once it's fixed.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Add a Redis database to my Railway project and connect it to my web service so it gets REDIS_URL.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I already linked this directory to Railway. Just push my latest code: railway up for the api service.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Generate a railway.app domain for my frontend service on Railway and tell me the URL; also add my custom domain app.nakhla.sa to it.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "On Railway, show me what variables are set on my api service in production, set NODE_ENV=production, change the start command to \"node dist/server.js\", and scale it to 2 replicas.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "How much CPU and memory has my Railway worker service used over the last 24 hours? It feels slow.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "List all my Railway projects, switch to the one called nakhla-staging, and enable PR deploys on it.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "How do Railway private networking and volumes work? Explain from the current Railway docs.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "deep-research": 1
+      },
+      "fired_after": {
+        "deep-research": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Rename my Railway service \"web-1\" to \"frontend\", change its icon, and create a new service from the Docker image n8nio/n8n.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "railway status: is my app running, and what's currently deployed in production?",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Deploy n8n on my Railway project from a template, and suggest a template for self-hosted uptime monitoring.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:railway": 1
+      },
+      "fired_after": {
+        "utopia-product:railway": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Search Railway Central Station for recent support threads about builds failing with Railpack on Python 3.12.",
+      "expected_before": "railway",
+      "expected_after": "railway",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "deep-research": 1
+      },
+      "fired_after": {
+        "deep-research": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Study this reference site and extract its design DNA so we can reuse the structure for our own content: https://linear.app. Give me the macrostructure, type pairing, colour anchor and anti-patterns not to copy.",
+      "expected_before": "impeccable",
+      "expected_after": "impeccable",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:defuddle-web-extract": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Build our dashboard with taste dials set to DESIGN_VARIANCE 3, MOTION_INTENSITY 2, VISUAL_DENSITY 9: a cockpit-dense ops view for a logistics startup with 8 KPIs, a shipments table and an alerts feed, in Next.js and Tailwind.",
+      "expected_before": "impeccable",
+      "expected_after": "impeccable",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:stitch-design-taste": 1
+      },
+      "fired_after": {
+        "utopia-product:shadcn-tailwind-ui": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Upgrade our existing Tailwind v3 marketing site to premium quality without rewriting it: it uses Inter everywhere, a purple-to-blue gradient hero, three equal feature cards, Lucide icons, h-screen sections, \"John Doe\" testimonials and buttons with no hover states. Audit it and fix it in priority order.",
+      "expected_before": "impeccable",
+      "expected_after": "impeccable",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:ui-audit": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Review app/components/Header.tsx and app/components/Pricing.tsx against the Vercel Web Interface Guidelines and give me terse file:line findings.",
+      "expected_before": "audit",
+      "expected_after": "ui-audit",
+      "group_before": "build",
+      "group_after": "build",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:vercel-react-best-practices": 1
+      },
+      "fired_after": {
+        "utopia-product:vercel-react-best-practices": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our pricing-page test just ended after 14 days. Control: 12,040 visitors, 482 trial starts. Variant (annual toggle default): 11,980 visitors, 551 trial starts. Guardrail: paid conversion 2.1% vs 2.0%. Is the lift significant and should we ship it?",
+      "expected_before": "ab-test-analysis",
+      "expected_after": "ab-test-analysis",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Before we automate our invoice-matching service, I want an agent to run the real task on 6 vendor invoices end to end and tell me exactly what one matched invoice costs us in tokens, tool calls and human-fix minutes, and which steps it can't do unaided. Rates: $3/M input, $15/M output, $0.002 per tool call, my time at $60/hour. Set up the run sheet.",
+      "expected_before": "agent-concierge-probe",
+      "expected_after": "agent-concierge-probe",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We're launching a self-serve B2B scheduling app on Next.js next month and have no analytics yet. Draft a tracking plan with event names, properties and UTM conventions for signup, workspace created, first booking, invite sent and upgrade, and tell me whether to start with GA4 or PostHog.",
+      "expected_before": "analytics-tracking",
+      "expected_after": "analytics-tracking",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:analytics-tracking": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Don't give me a TAM. Build the market size for our AI permit-review tool from the units up: about 420 licensed electrical contractors in Dubai on the DEWA register, each files roughly 35 permits a year, we'd charge AED 90 per permit reviewed, and I think we can win 15% in 3 years. Show every rung and how confident each one is.",
+      "expected_before": "bottoms-up-quantification",
+      "expected_after": "bottoms-up-market-sizing",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-gtm:market-sizing": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Here's my idea: an AI copilot that reads WhatsApp groups of construction site foremen and turns them into daily progress reports for the project owner. Tear it apart and tell me what I'm missing.",
+      "expected_before": "concept-council",
+      "expected_after": "concept-council",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I want to do it by hand first: deliver our weekly competitor-pricing digest manually to one real customer, Al Noor Pharmacies, before we automate anything. Help me set up the concierge run, the price and how money moves, and how I'll score whether they'll actually pay.",
+      "expected_before": "concierge-probe",
+      "expected_after": "concierge-probe",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:concierge-probe": 1
+      },
+      "fired_after": {
+        "utopia-product:concierge-probe": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We launched our AI bookkeeping assistant to 60 SMB customers last month. Set up continuous discovery so we keep learning after launch: one living opportunity tree fed by our weekly customer calls, the usage logs and our eval telemetry, with cadence and an owner for each feed.",
+      "expected_before": "continuous-discovery-engine",
+      "expected_after": "continuous-discovery-engine",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:continuous-discovery-engine": 1
+      },
+      "fired_after": {
+        "utopia-product:continuous-discovery-engine": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Map how a freight forwarder clears one import shipment at Jebel Ali today and put a price on every step: broker prepares docs (45 min), ops manager reviews (15 min), customs query loop (avg 1.5 days delay, 30% of shipments), re-submission (20 min). Ops staff cost about AED 120/hour. What does one shipment really cost now?",
+      "expected_before": "current-state-map",
+      "expected_after": "current-state-map",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We're signing our first paid pilot with a Saudi logistics company next week. Draft the data-rights clause so we can keep and train on the dispatch logs and the derived routing data, including what survives if they terminate, and flag the KSA residency points for counsel.",
+      "expected_before": "data-rights-clause",
+      "expected_after": "data-rights-clause",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:data-rights-clause": 1
+      },
+      "fired_after": {
+        "utopia-product:data-rights-clause": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I need to interview 6 SME owners in Cairo who stopped using our invoicing app within 60 days. I only have cold WhatsApp outreach and two weeks. Plan the interviews: goal, who to recruit, which method to use, the question flow and the biases to avoid.",
+      "expected_before": "discovery-interview-prep",
+      "expected_after": "discovery-interview-prep",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:discovery-interview-prep": 1
+      },
+      "fired_after": {
+        "utopia-product:discovery-interview-prep": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We have a hunch that independent clinics struggle with insurance claim rejections. Walk my team through a full discovery cycle from this hypothesis to a validated solution over the next 4 weeks: framing, interviews, synthesis and experiments, with what to produce each week.",
+      "expected_before": "discovery-process",
+      "expected_after": "discovery-process",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:discovery-process": 1
+      },
+      "fired_after": {
+        "utopia-product:discovery-process": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "How strong is this validation really? 14 clinic managers said they'd love it, 3 signed LOIs, 1 shared their rejection spreadsheet with us, 22 joined the waitlist, and 0 have paid. Weight each signal and tell me what the load-bearing claim is worth.",
+      "expected_before": "evidence-ladder",
+      "expected_after": "evidence-ladder",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our co-founder has 15 years of experience underwriting SME trade-finance loans. Split his know-how into what a stranger could execute from a written procedure versus the judgment that only lives in his head, and tell me which part is the defensible product.",
+      "expected_before": "explicit-vs-tacit-capture",
+      "expected_after": "explicit-vs-tacit-capture",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:explicit-vs-tacit-capture": 1
+      },
+      "fired_after": {
+        "utopia-product:explicit-vs-tacit-capture": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Assess this fellow: she has shipped a Crazy 8s mock, ran 9 customer interviews with notes, has a signed paid pilot at AED 15k, but no eval golden set or launch-bar evidence yet. What level is she at on the ladder and what's the single next exit artefact?",
+      "expected_before": "fellow-level-ladder",
+      "expected_after": "fellow-level-ladder",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:fellow-level-ladder": 1
+      },
+      "fired_after": {
+        "utopia-product:fellow-level-ladder": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I'm joining the studio with an existing product: 40 paying customers and AED 60k MRR for our fleet-maintenance SaaS, but no real moat. Which Icarus stages apply to me and which should I skip?",
+      "expected_before": "fellow-path-router",
+      "expected_after": "fellow-path-router",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "hivemind:hivemind-memory": 1
+      },
+      "fired_after": {
+        "utopia-product:fellow-path-router": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Turn our idea, a mobile app where landlords approve maintenance quotes in one tap, into something a landlord can click this afternoon. I can't code. Run Crazy 8s and get me to a clickable prototype plan.",
+      "expected_before": "first-mocks",
+      "expected_after": "first-mocks",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:first-mocks": 1
+      },
+      "fired_after": {
+        "utopia-product:first-mocks": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run the four lenses on this concept: an AI agent that auto-reconciles Shopify payouts against bank statements for small merchants. We have 5 merchant interviews, a Figma mock tested with 3 users, no dev spike yet, and an ICE guess. Score desirability, usability, feasibility and viability.",
+      "expected_before": "four-lenses-test",
+      "expected_after": "concept-four-lenses-test",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:four-lenses-test": 1
+      },
+      "fired_after": {
+        "utopia-product:concept-four-lenses-test": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Everyone in our space is building 'ChatGPT for HR policies'. We have 3 years of anonymised employee-query tickets from 40 GCC companies. Help me invent a concept a competitor couldn't get by typing the obvious prompt.",
+      "expected_before": "invent-by-hand",
+      "expected_after": "invent-product-concept",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:invent-product-concept": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Strip this down to the primitive job: 'Our ops team uses Salesforce and a Zapier flow to pull Jira tickets into a Notion board so the VP of Customer Success can approve SLA credits in Slack.' Remove the tool and role names and tell me what's really being moved, decided and liable.",
+      "expected_before": "job-in-primitives",
+      "expected_after": "job-in-primitives",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write job stories in the 'When..., I want to..., so I can...' format with acceptance criteria for our expense app feature that lets field sales reps snap a receipt while still at a client's site.",
+      "expected_before": "user-story",
+      "expected_after": "user-story",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:user-story": 1
+      },
+      "fired_after": {
+        "utopia-product:user-story": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "From these interview notes, map the jobs to be done, pains and gains: 'I spend Sunday nights rebuilding the rota in Excel', 'My owner thinks I'm disorganised when shifts go uncovered', 'I tried Deputy but staff wouldn't install it', 'I just want to stop getting 6am calls'. Customer: restaurant shift managers.",
+      "expected_before": "jobs-to-be-done",
+      "expected_after": "jobs-to-be-done",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:jobs-to-be-done": 1
+      },
+      "fired_after": {
+        "utopia-product:jobs-to-be-done": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run a Lean UX Canvas session with me for our onboarding drop-off: 58% of new workspace admins never invite a teammate in week one. Frame the business problem, outcomes, hypotheses, what to learn first and the least work to learn it.",
+      "expected_before": "lean-ux-canvas",
+      "expected_after": "lean-ux-canvas",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:lean-ux-canvas": 1
+      },
+      "fired_after": {
+        "utopia-product:lean-ux-canvas": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Identify 3-5 distinct customer segments for an AI tool that drafts Arabic and English tender responses, with each segment's job to be done, pains, product fit and current workarounds.",
+      "expected_before": "market-segments",
+      "expected_after": "market-segments",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:jobs-to-be-done": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our AI contract-review product launched 4 months ago. MAU is up 30% month over month and the board loves it, but is that real? Weekly cohort retention: week1 62%, week4 41%, week8 33%, week12 31%. What should our North Star be and what should we actually track, including cost per reviewed contract?",
+      "expected_before": "metrics-that-matter",
+      "expected_after": "metrics-that-matter",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our wedge (AI shift-handover notes for hospital nurses) passed adoption at 2 hospitals. How is this defensible once Epic and Oracle notice? Design the moat as dated gates with the 'X won't copy this because...' sentence and monthly falsifiers.",
+      "expected_before": "moat-design-canvas",
+      "expected_after": "moat-design-canvas",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:moat-design-canvas": 1
+      },
+      "fired_after": {
+        "utopia-product:moat-design-canvas": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our plan rests on these beliefs: clinics will share claims data, rejection reasons are predictable from the claim form, and practice managers own the budget. What has to be true, how would I disprove each one cheaply, and which belief do I test first?",
+      "expected_before": "null-hypothesis-test",
+      "expected_after": "falsify-plan-assumptions",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:identify-assumptions-new": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I want to paper-test our new returns-approval workflow before building it: 7 steps from customer photo upload to refund decision. Help me sketch the panels and run a silent 30-minute session with one warehouse supervisor to see if it reads and where the decision lives.",
+      "expected_before": "paper-sketch-probe",
+      "expected_after": "paper-sketch-probe",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:paper-sketch-probe": 1
+      },
+      "fired_after": {
+        "utopia-product:paper-sketch-probe": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Is this a big enough problem? A compliance analyst spends 50 minutes reviewing one supplier onboarding pack at AED 150/hour loaded cost. With AI doing extraction and checks, maybe 6 minutes of human judgment and about 40k tokens remain. What's the physics floor and is the gap worth building for?",
+      "expected_before": "physics-floor-gap",
+      "expected_after": "unit-cost-floor-gap",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:physics-floor-gap": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "A Riyadh hospital group wants to 'try our scheduling agent for free for 3 months'. Structure this as a proper paid pilot term sheet so it isn't a free trial: scope, price, data rights, success metrics, kill criteria and conversion terms.",
+      "expected_before": "pilot-six-term-sheet",
+      "expected_after": "pilot-six-term-sheet",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:pilot-six-term-sheet": 1
+      },
+      "fired_after": {
+        "utopia-product:pilot-six-term-sheet": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "For our legal-research agent, should we build our own eval harness, RAG pipeline, model router and fine-tuned model, or use what Daedalus gives us? Draw the build-vs-buy line for each component.",
+      "expected_before": "platform-vs-venture",
+      "expected_after": "build-vs-buy-boundary",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:build-vs-buy-boundary": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "What's the cheapest honest way to test whether plant operators will trust an AI alert enough to halt a production line? My co-founder wants to show them a paper mock-up. Pick the probe and pre-register the pass/fail.",
+      "expected_before": "probe-matrix",
+      "expected_after": "probe-matrix",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-product:wizard-of-oz-probe": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a user-centred problem statement (I am / trying to / but / because / which makes me feel) for freelance translators in Amman who lose 4-6 hours a week chasing late payments from agencies.",
+      "expected_before": "problem-statement",
+      "expected_after": "problem-statement",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:problem-statement": 1
+      },
+      "fired_after": {
+        "utopia-product:problem-statement": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I need to pitch our exec team on adding an AI claims-triage feature to our insurance portal. Build a recommendation canvas: business and customer outcomes, problem, solution hypothesis, positioning, assumptions, PESTEL risks, value justification and success metrics.",
+      "expected_before": "recommendation-canvas",
+      "expected_after": "ai-solution-proposal-canvas",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:recommendation-canvas": 1
+      },
+      "fired_after": {
+        "utopia-product:ai-solution-proposal-canvas": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I have 12 competing initiatives across 2 squads (SSO, usage-based billing, Arabic UI, mobile app, AI summaries, audit log and 6 more) and need a Now/Next/Later roadmap for H1 that our board will approve. Walk me through building it.",
+      "expected_before": "roadmap-planning",
+      "expected_after": "roadmap-planning",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:roadmap-planning": 1
+      },
+      "fired_after": {
+        "utopia-product:roadmap-planning": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Before I spend real interview time, dry-run our pitch message for an AI tender-writing tool against a synthetic panel of procurement managers built from our corpus of 30 past tender RFPs and 8 interview notes. Which angles are even worth testing with real people?",
+      "expected_before": "synthetic-users",
+      "expected_after": "synthetic-users",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:synthetic-users": 1
+      },
+      "fired_after": {
+        "utopia-product:synthetic-users": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We have a working prototype of our tenant-onboarding flow. Run a moderated usability test plan: can a first-time property manager add a unit and invite a tenant without help? I'll have 5 users; the engineer will watch.",
+      "expected_before": "usability-test-protocol",
+      "expected_after": "usability-test-protocol",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:usability-test-protocol": 1
+      },
+      "fired_after": {
+        "utopia-product:usability-test-protocol": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "The nurses love our handover tool but the deal is stuck. Who's the actual buyer, who decides, who can veto, and who's our champion at a 400-bed private hospital in Abu Dhabi? Map the buying committee.",
+      "expected_before": "user-buyer-decider-map",
+      "expected_after": "user-buyer-decider-map",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:user-buyer-decider-map": 1
+      },
+      "fired_after": {
+        "utopia-gtm:user-buyer-decider-map": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a user story with Gherkin acceptance criteria for this requirement: trial users should be able to sign up with their Microsoft work account so they don't need a new password.",
+      "expected_before": "user-story",
+      "expected_after": "user-story",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:user-story": 1
+      },
+      "fired_after": {
+        "utopia-product:user-story": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "This story is too big for a sprint: 'As a team admin, I want to manage team members, roles, SSO and billing seats so I can control access.' Split it into smaller deliverable stories using the right split patterns.",
+      "expected_before": "user-story-splitting",
+      "expected_after": "user-story-splitting",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:user-story-splitting": 1
+      },
+      "fired_after": {
+        "utopia-product:user-story-splitting": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Are we ready to launch v1 of our AI expense-categorisation pilot? A stranger reached a correct categorisation in 85 seconds in our last test, and corrections are logged but not yet fed back into the model. Go or no-go?",
+      "expected_before": "v1-launch-bar",
+      "expected_after": "v1-launch-bar",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:v1-launch-bar": 1
+      },
+      "fired_after": {
+        "utopia-product:v1-launch-bar": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Set the price for our AI claims-appeal service. Measured result from our pilot: each successful appeal recovers an average of AED 3,200 for the clinic, about 40% of appeals succeed, and our cost per appeal is AED 45. Per seat or per outcome, and what's the number?",
+      "expected_before": "value-based-pricing",
+      "expected_after": "value-based-pricing",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I want a human behind the curtain for a day: procurement officers email us a vendor quote and get back a structured purchase order as if an AI made it. Set up the Wizard-of-Oz test to see if they actually act on the output.",
+      "expected_before": "wizard-of-oz-probe",
+      "expected_after": "wizard-of-oz-probe",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:wizard-of-oz-probe": 1
+      },
+      "fired_after": {
+        "utopia-product:wizard-of-oz-probe": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Design the product metrics dashboard for our B2B scheduling SaaS: North Star, input metrics, health and business metrics, each with exact definition, data source, visualization and alert threshold, plus a review cadence. We use PostHog and Stripe.",
+      "expected_before": "metrics-dashboard",
+      "expected_after": "metrics-dashboard",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:metrics-dashboard": 1
+      },
+      "fired_after": {
+        "utopia-product:metrics-dashboard": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Estimate TAM, SAM and SOM for an AI bookkeeping tool for SMEs in Saudi Arabia, top-down and bottom-up. We'd price at SAR 299/month and target companies with 5-50 employees. Show the assumptions and a 3-year projection.",
+      "expected_before": "market-sizing",
+      "expected_after": "market-sizing",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:market-sizing": 1
+      },
+      "fired_after": {
+        "utopia-gtm:market-sizing": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Turn these discovery notes into a PRD my engineers can act on: 60% of new clinic admins abandon setup on day 1; 8 of 10 churned users said they didn't know what to do first; we plan a guided setup checklist. Include problem, personas, metrics, user stories, out of scope and risks.",
+      "expected_before": "prd-development",
+      "expected_after": "prd-development",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:prd-development": 1
+      },
+      "fired_after": {
+        "utopia-product:prd-development": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "How should we package and price our AI meeting-notes product? Today it's $15/user/month flat, LLM cost averages $2.40/user/month, and enterprise buyers ask for usage limits and SSO. Should we do good-better-best tiers, a credit system or per-seat, and what about a free plan?",
+      "expected_before": "pricing-strategy",
+      "expected_after": "pricing-strategy",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:pricing-strategy": 1
+      },
+      "fired_after": {
+        "utopia-product:pricing-strategy": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Build a Lean Canvas for our idea: a B2B marketplace connecting UAE construction contractors with certified scaffolding rental suppliers, with same-day delivery and a 7% take rate.",
+      "expected_before": "business-model",
+      "expected_after": "business-model",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:lean-ux-canvas": 1
+      },
+      "fired_after": {
+        "utopia-product:lean-ux-canvas": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our 12-person studio team keeps making inconsistent calls on which founders to back. Create an alignment framework: a North Star statement, 4-5 values as guardrails and concrete decision tenets with observable behaviours.",
+      "expected_before": "alignment-values-north-star",
+      "expected_after": "alignment-values-north-star",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-founder-productivity:alignment-values-north-star": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:alignment-values-north-star": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Read this article and pull out the clean text without the nav and ads so we can quote it in our market memo: https://a16z.com/ai-agents-enterprise/",
+      "expected_before": "defuddle",
+      "expected_after": "defuddle-web-extract",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:defuddle-web-extract": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Draft a mutual NDA between Utopia Studio FZ-LLC (Dubai) and Nile Robotics LLC (Cairo) for sharing technical specs, customer lists and pricing during partnership talks, governed by DIFC law, 2-year term. Flag the clauses that need a lawyer's review.",
+      "expected_before": "draft-nda",
+      "expected_after": "draft-nda",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-founder-productivity:draft-nda": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:draft-nda": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Is there an installable skill that can turn a Figma file into a working React Native screen? Search the open skills ecosystem and tell me what to install.",
+      "expected_before": "find-skills",
+      "expected_after": "find-skills",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "deep-research": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:find-skills": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "I found a public skill on skills.sh called 'saas-pricing-calculator' with 340 installs. Should we bring it into our studio skills repo? Vet it and decide whether to fold it into an existing skill, supersede one, reject it, or add it new.",
+      "expected_before": "market-skill-ingestion",
+      "expected_after": "market-skill-ingestion",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-founder-productivity:skill-eval": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:skill-eval": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run a PESTEL analysis for launching a digital health insurance product in Egypt in 2026, and tell me which factors could most change our roadmap.",
+      "expected_before": "pestel-analysis",
+      "expected_after": "pestel-analysis",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-founder-productivity:pestel-analysis": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:pestel-analysis": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Create a new collaborative Proof doc for our Q3 portfolio review memo and draft the outline in it, so the partners can edit it with me.",
+      "expected_before": "proof",
+      "expected_after": "proofeditor-docs",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:proof": 1
+      },
+      "fired_after": {
+        "compound-engineering:ce-proof": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Our CTO wants to rebuild the platform in Rust, sales wants the enterprise features promised to two prospects first, and finance wants to cut burn 20%. Look at this decision from engineering, sales, finance, legal and customer perspectives and find a path everyone can live with.",
+      "expected_before": "role-switch",
+      "expected_after": "role-switch",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-investments:deliberation-debate-red-teaming": 1
+      },
+      "fired_after": {
+        "utopia-product:concept-council": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run skillshare to sync my global skills to Claude Code and Cursor, but exclude anything under the sandbox folder, and show me a dry run first.",
+      "expected_before": "skillshare",
+      "expected_after": "skillshare",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-founder-productivity:skillshare": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:skillshare": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Do a SWOT analysis for our studio's B2B AI venture 'Kayan', a procurement copilot for GCC government entities: we have 2 ex-procurement founders and 3 pilot LOIs but only 4 engineers and no ISO certification; SAP and Oracle are adding AI features.",
+      "expected_before": "swot-analysis",
+      "expected_after": "swot-analysis",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:swot-analysis": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:swot-analysis": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Facilitate a 30-minute kickoff workshop with me for picking our next venture theme: one question at a time, show progress like Q2/6, give numbered options at decision points, and let me pick a guided or best-guess mode.",
+      "expected_before": "workshop-facilitation",
+      "expected_after": "workshop-facilitation",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-founder-productivity:workshop-facilitation": 1
+      },
+      "fired_after": {
+        "utopia-founder-productivity:workshop-facilitation": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Run a story mapping workshop with me for our clinic appointment-booking app: ask me the scoping questions one at a time, then build the backbone, tasks and three release slices with a walking skeleton.",
+      "expected_before": "user-story-mapping",
+      "expected_after": "user-story-mapping",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:user-story-mapping": 1
+      },
+      "fired_after": {
+        "utopia-product:user-story-mapping": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "RICE vs ICE vs Kano vs MoSCoW: which prioritization framework should I use for ranking 6 customer problems we found in interviews, and how does Opportunity Score work?",
+      "expected_before": "prioritization",
+      "expected_after": "prioritization",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a PRD for our new 'bulk invoice export' feature using an 8-section template: summary, contacts, background and why now, objective with SMART key results, market segment, value proposition, solution (UX, key features, assumptions), and release plan in relative timeframes.",
+      "expected_before": "prd-development",
+      "expected_after": "prd-development",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:prd-development": 1
+      },
+      "fired_after": {
+        "utopia-product:prd-development": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a one-page PRD for adding Arabic RTL support to our web dashboard so leadership can approve it this week: problem, solution, users, metrics with baseline and target, in and out of scope, constraints and open questions.",
+      "expected_before": "prd-development",
+      "expected_after": "prd-development",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:prd-development": 1
+      },
+      "fired_after": {
+        "utopia-product:prd-development": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Play devil's advocate on a feature for our existing project-management app: adding an AI that auto-assigns tasks to teammates. What are the riskiest value, usability, viability and feasibility assumptions, and how would we test each?",
+      "expected_before": "identify-assumptions-new",
+      "expected_after": "identify-risky-assumptions",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:identify-assumptions-new": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Design lean startup experiments for our new product idea, an app that matches home cooks with office lunch orders. Give me an XYZ hypothesis and 2-3 pretotype experiments with metrics and success thresholds.",
+      "expected_before": "probe-matrix",
+      "expected_after": "probe-matrix",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:probe-matrix": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Brainstorm 3-5 monetization strategies for our free Arabic language-learning app with 50k monthly users: how each would work, audience fit, risks and a validation experiment for each.",
+      "expected_before": "pricing-strategy",
+      "expected_after": "pricing-strategy",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write me a Mom Test interview script with warm-up, core JTBD questions and wrap-up, plus a note-taking template, for interviewing HR managers about how they handle employee visa renewals today.",
+      "expected_before": "discovery-interview-prep",
+      "expected_after": "discovery-interview-prep",
+      "group_before": "discovery",
+      "group_after": "discovery",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-product:jobs-to-be-done": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We're a 4-person B2B SaaS team (ACV $12K, HubSpot CRM, $2K/month budget) and want an AI-assisted outbound machine that books 25 meetings a month. Should we buy 11x or Artisan or build on Clay + Instantly + Claude, and what does the architecture, handoff-to-human and 4-week rollout look like?",
+      "expected_before": "ai-sdr",
+      "expected_after": "ai-sdr",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:ai-sdr": 1
+      },
+      "fired_after": {
+        "utopia-gtm:ai-sdr": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We built a scheduling tool for clinics. Candidate first markets: dental practices in the UK, physiotherapy chains in the Gulf, veterinary clinics in the US, and private hospitals in Qatar. Score them on pain, willingness to pay, winnability and referral potential and tell me which one to win first.",
+      "expected_before": "beachhead-segment",
+      "expected_after": "beachhead-segment",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:beachhead-segment": 1
+      },
+      "fired_after": {
+        "utopia-gtm:beachhead-segment": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Build a story-to-numbers narrative for Careem as of 2019: classify its life-cycle stage, size the TAM for ride-hailing plus delivery in MENA, and translate the story into revenue growth, target margin, sales-to-capital, cost of capital and failure probability, with one alternative narrative.",
+      "expected_before": "business-narrative-builder",
+      "expected_after": "valuation-narrative",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-investments:investor-memorandum": 1
+      },
+      "fired_after": {
+        "utopia-investments:valuation-narrative": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Score this discovery call transcript against a behavior-based scorecard and tell me the weakest chunk plus one drill: \"Rep: Thanks for joining, how's your week? Prospect: Busy. Rep: Let me show you our dashboard first... [12 min demo] ...Rep: So does Thursday work for a proposal? Prospect: I need to check with my CFO, she owns the budget.\"",
+      "expected_before": "call-scorecards",
+      "expected_after": "call-scorecards",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-gtm:discovery-calls": 1
+      },
+      "fired_after": {
+        "utopia-gtm:discovery-calls": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our $29/month SaaS loses 7% of subscribers monthly and about a third of that is failed card payments on Stripe. Design a cancel flow with exit survey and save offers, plus a dunning sequence and retry schedule for the involuntary churn.",
+      "expected_before": "churn-prevention",
+      "expected_after": "churn-prevention",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:churn-prevention": 1
+      },
+      "fired_after": {
+        "utopia-gtm:churn-prevention": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a cold email plus a 3-step follow-up sequence to Priya Shah, VP Sales at Brightwave (Series B fintech, just posted 4 AE roles). We sell a sales-ramp coaching tool; proof: Acme cut AE ramp from 90 to 45 days. Keep it under 90 words and score it before you hand it over.",
+      "expected_before": "cold-email",
+      "expected_after": "cold-email",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:cold-email": 1
+      },
+      "fired_after": {
+        "utopia-gtm:cold-email": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our cold emails get 0.4% replies. The offer is \"Want a 30-minute demo of our AI bookkeeping tool?\" sent to agency owners. Score this offer against a pass/fail bar and rebuild it into something a stranger would find hard to ignore, before we touch the copy.",
+      "expected_before": "cold-offer-architect",
+      "expected_after": "cold-offer-architect",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:cold-offer-architect": 1
+      },
+      "fired_after": {
+        "utopia-gtm:cold-offer-architect": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I've dropped the Falcon Grid pitch deck text, two call transcripts and their pilot report into this chat (pasted below). Build an Obsidian Map of Content for the company: a hub note plus idea-per-note child notes, with sources and dates on every claim and contradictions between the deck and transcript surfaced. [Deck: \"Falcon Grid cuts substation downtime 40%\"... Call 1, 17 Jul: \"we've only measured 22% so far\"...]",
+      "expected_before": "company-moc",
+      "expected_after": "obsidian-company-map",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Make a sales battlecard for our reps against Pipedrive. We're Attio-style CRM for agencies; we win on custom objects and agency billing, lose on price and mobile app. Include quick comparison, objection responses, landmine questions and win/loss patterns, scannable for live calls.",
+      "expected_before": "competitive-battlecard",
+      "expected_after": "competitive-battlecard",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:competitive-battlecard": 1
+      },
+      "fired_after": {
+        "utopia-gtm:competitive-battlecard": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Tighten and edit this existing homepage copy, don't rewrite it from scratch: \"Our innovative, best-in-class platform leverages cutting-edge AI to empower teams to unlock unprecedented productivity and drive synergies across workflows in today's fast-paced landscape.\"",
+      "expected_before": "copy-editing",
+      "expected_after": "copy-editing",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write the homepage hero, subheadline, 3 benefit sections and CTA copy for Tallyo, a tool that reconciles Shopify payouts with Xero automatically for e-commerce founders who currently spend 6 hours a month in spreadsheets.",
+      "expected_before": "copywriting",
+      "expected_after": "copywriting",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:copywriting": 1
+      },
+      "fired_after": {
+        "utopia-gtm:copywriting": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Synthesize these 6 interview snippets into themes with frequency, confidence levels and money quotes: (1) \"We were drowning in spreadsheets every month-end\" (2) \"Our accountant kept asking for the same CSVs\" (3) \"I tried QuickBooks rules, they broke constantly\" (4) \"Month-end takes my whole weekend\" (5) \"Honestly the reconciling isn't the pain, explaining variances to my CFO is\" (6) \"We'd pay if it saved one day a month\".",
+      "expected_before": "customer-research",
+      "expected_after": "customer-research",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 0,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "none": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our mid-market sales cycle went from 45 to 82 days in two quarters, 40% of open deals haven't had activity in 30+ days, and deals keep dying in negotiation. Diagnose the velocity problem and design stage exit criteria, a zombie-deal triage and a mutual action plan template.",
+      "expected_before": "deal-velocity-engineer",
+      "expected_after": "deal-velocity-engineer",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:deal-velocity-engineer": 1
+      },
+      "fired_after": {
+        "utopia-gtm:deal-velocity-engineer": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I have a first discovery call tomorrow with the Head of Operations at a 300-person logistics company that booked from our cold sequence. Give me a 30-minute call plan, persona-specific questions, a notes template and how to map answers to MEDDICC for handoff.",
+      "expected_before": "discovery-calls",
+      "expected_after": "discovery-calls",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:discovery-calls": 1
+      },
+      "fired_after": {
+        "utopia-gtm:discovery-calls": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our agent has drafted 45 LinkedIn follow-ups this month; I edited 3 of them and it flagged one prospect as a competitor on its own. Can I stop reviewing every draft and let it send? Give me the autonomy level, the evidence needed to move up and what automatically pulls it back.",
+      "expected_before": "earned-autonomy",
+      "expected_after": "agent-autonomy-levels",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-gtm:agent-autonomy-levels": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Design a 5-slide Instagram carousel in Efecto (1080x1350) titled \"5 signs your SaaS onboarding leaks users\", bold type, dark background, numbered slides and a save-this CTA on the last slide.",
+      "expected_before": "efecto-social-media",
+      "expected_after": "efecto-social-media",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-product:efecto-graphic-design": 1
+      },
+      "fired_after": {
+        "utopia-product:efecto-social-media": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Our open rates dropped from 38% to 9% at Gmail last week while Outlook is steady at 30%. We migrated from Mailchimp to Customer.io the week before and send 40K marketing emails a week. Diagnose the root cause and give me a dated recovery plan with per-provider ceilings.",
+      "expected_before": "email-deliverability",
+      "expected_after": "email-deliverability",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:email-deliverability": 1
+      },
+      "fired_after": {
+        "utopia-gtm:email-deliverability": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a 6-email welcome/onboarding sequence for new free-trial users of our project-management app, triggered on signup, goal is converting to the $12/seat plan by day 14. Include timing, subject lines, preview text, body and exit conditions.",
+      "expected_before": "email-sequence",
+      "expected_after": "email-sequence",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:email-sequence": 1
+      },
+      "fired_after": {
+        "utopia-gtm:email-sequence": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our B2B SaaS has 96% gross retention but NRR is stuck at 101%. We price per seat and most accounts never add seats after month 3. Design an expansion system: health score, usage-based expansion triggers, PQA scoring and a renewal timeline to get NRR to 115%.",
+      "expected_before": "expansion-retention",
+      "expected_after": "expansion-retention",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:expansion-retention": 1
+      },
+      "fired_after": {
+        "utopia-gtm:expansion-retention": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We run a design-feedback tool where clients leave comments on mockups via a share link. Which growth loops (viral, usage, collaboration, UGC, referral) fit us best, how would we design the primary loop and what's the loop coefficient math?",
+      "expected_before": "growth-loops",
+      "expected_after": "growth-loops",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:growth-loops": 1
+      },
+      "fired_after": {
+        "utopia-gtm:growth-loops": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Build a v1 growth strategy document for our fellow Pocket Health, the price-transparency layer for diagnostic imaging, covering value proposition, top 5 target customers in Qatar and globally, business model, collaboration tiers, flywheel and a 6-month GTM plan, in the Utopia Studio brand.",
+      "expected_before": "growth-strategy",
+      "expected_after": "fellow-growth-strategy",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-gtm:growth-strategy": 1
+      },
+      "fired_after": {
+        "utopia-gtm:gtm-strategy": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "I want to wire our GTM stack with code: new HubSpot signups should be enriched, scored and routed to Slack, with an LLM drafting a first-touch email. Should I use n8n, Make or Zapier, and what does the event-driven architecture, monitoring and testing look like?",
+      "expected_before": "gtm-engineering",
+      "expected_after": "gtm-engineering",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:gtm-engineering": 1
+      },
+      "fired_after": {
+        "utopia-gtm:gtm-engineering": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Design a weekly GTM metrics dashboard for our AI SaaS ($1.8M ARR, hybrid PLG plus sales): which revenue, efficiency, pipeline and retention metrics, leading vs lagging indicators, AI inference cost metrics, and the agenda for a 30-minute weekly review.",
+      "expected_before": "gtm-metrics",
+      "expected_after": "gtm-metrics",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:gtm-metrics": 1
+      },
+      "fired_after": {
+        "utopia-gtm:gtm-metrics": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We're taking our B2B contract-review tool to Saudi Arabia for the first time. Build the go-to-market plan: score the inbound, outbound, paid, community, partner, ABM and PLG motions for us, pick the motion stack, messaging, KPIs and a 90-day roadmap. ACV is $15K, team of 3.",
+      "expected_before": "gtm-strategy",
+      "expected_after": "gtm-strategy",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:gtm-strategy": 1
+      },
+      "fired_after": {
+        "utopia-gtm:gtm-strategy": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "We're launching our AI meeting-notes app publicly in 6 weeks: 900-person waitlist, no budget for ads. Plan the launch phases, the Product Hunt and Show HN days, directory submissions and whether AppSumo makes sense, with a launch-day hour-by-hour plan.",
+      "expected_before": "launch-strategy",
+      "expected_after": "launch-strategy",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:launch-strategy": 1
+      },
+      "fired_after": {
+        "utopia-gtm:launch-strategy": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Design a Clay waterfall to enrich 2,000 leads a month (we have Apollo and $600/month), get verified emails above 85% coverage, handle catch-all domains, and compute an ICP score column that routes hot leads to SDRs.",
+      "expected_before": "lead-enrichment",
+      "expected_after": "lead-enrichment",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-gtm:lead-enrichment": 1
+      },
+      "fired_after": {
+        "utopia-gtm:gtm-engineering": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "Our audience is Shopify store owners doing $20K-200K/month. What lead magnet should we create to capture emails for our inventory-forecasting tool, what format, and how do we distribute it?",
+      "expected_before": "lead-magnets",
+      "expected_after": "lead-magnets",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:lead-magnets": 1
+      },
+      "fired_after": {
+        "utopia-gtm:lead-magnets": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Write a 600-word manifesto for our startup Ardh, which believes farmers in the Gulf should own their soil data instead of the agritech vendors who collect it. We gave up selling data to input suppliers, which was 30% of projected revenue. Interview me first if you need to.",
+      "expected_before": "manifesto",
+      "expected_after": "manifesto",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:manifesto": 1
+      },
+      "fired_after": {
+        "utopia-gtm:manifesto": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "I'm stuck on how to market my $49/month Notion-to-website tool beyond posting on X. Give me a prioritized list of marketing ideas I can try in the next 60 days with no ad budget.",
+      "expected_before": "marketing-ideas",
+      "expected_after": "marketing-ideas",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 0,
+      "hit_after": 1,
+      "fired_before": {
+        "none": 1
+      },
+      "fired_after": {
+        "utopia-gtm:marketing-ideas": 1
+      },
+      "outcome": "fixed"
+    },
+    {
+      "prompt": "Which behavioral science principles should we apply to our pricing page (three tiers at $19, $49 and $149) to push more people to the middle plan, and how exactly would each show up on the page?",
+      "expected_before": "marketing-psychology",
+      "expected_after": "marketing-psychology",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 0,
+      "fired_before": {
+        "utopia-gtm:marketing-psychology": 1
+      },
+      "fired_after": {
+        "utopia-gtm:pricing-strategy": 1
+      },
+      "outcome": "regressed"
+    },
+    {
+      "prompt": "62% of users who sign up for our analytics tool never connect a data source, and only 18% reach a first dashboard in week one. Audit our first-run experience (signup, 5-step setup wizard, empty dashboard) and propose activation experiments.",
+      "expected_before": "onboarding-cro",
+      "expected_after": "onboarding-cro",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:onboarding-cro": 1
+      },
+      "fired_after": {
+        "utopia-gtm:onboarding-cro": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Stage outreach for Liam Chen, CMO at Orbital Freight (1,400 employees, Gold tier). He hit our pricing page; we had a closed-lost deal with them last March. Senders: Sara (founder, LinkedIn connected) and Omar (AE, email). Draft the multichannel sequence, pick senders, add the exec multi-thread and stage it for my approval with a rationale.",
+      "expected_before": "outreach-execution",
+      "expected_after": "outreach-execution",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:outreach-execution": 1
+      },
+      "fired_after": {
+        "utopia-gtm:outreach-execution": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our pricing page gets 4,000 visits a month and converts 0.8% to trial. Hero says \"Pricing that scales with you\", there are four plans, a 14-field comparison table and the CTA is below the fold on mobile. Audit it for conversion and give me prioritized test ideas.",
+      "expected_before": "page-cro",
+      "expected_after": "page-cro",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:page-cro": 1
+      },
+      "fired_after": {
+        "utopia-gtm:page-cro": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Our free-trial signup form has 9 fields including company size, phone and role, plus email verification before access. 64% of people who start it abandon. Optimize the signup flow and tell me what to cut, defer and test.",
+      "expected_before": "signup-flow-cro",
+      "expected_after": "signup-flow-cro",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:signup-flow-cro": 1
+      },
+      "fired_after": {
+        "utopia-gtm:signup-flow-cro": 1
+      },
+      "outcome": "unchanged"
+    },
+    {
+      "prompt": "Turn this blog post summary into a week of social posts: 3 LinkedIn posts, 1 LinkedIn carousel outline and a 7-tweet X thread. Summary: \"Most early SaaS teams over-invest in features and under-invest in onboarding; we cut churn 30% by rewriting our first-run checklist.\"",
+      "expected_before": "social-content",
+      "expected_after": "social-content",
+      "group_before": "gtm",
+      "group_after": "gtm",
+      "hit_before": 1,
+      "hit_after": 1,
+      "fired_before": {
+        "utopia-gtm:social-content": 1
+      },
+      "fired_after": {
+        "utopia-gtm:social-content": 1
+      },
+      "outcome": "unchanged"
+    }
+  ]
+}

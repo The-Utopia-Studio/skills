@@ -15,7 +15,7 @@ RESERVED = ("anthropic", "claude")
 SKIP_PATH = re.compile(r"^(https?:|mailto:|#|/|~|\$|<|\{|output|outputs/|\./output)")
 PATH_HINT = re.compile(r"^(\./|\.\./|references?/|scripts?/|assets?/|resources?/|templates?/|examples?/|evals?/|agents?/)")
 SECRET_RE = re.compile(r"(sk-[A-Za-z0-9]{20,}|sk-ant-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|xox[bpas]-[A-Za-z0-9-]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----)")
-PERSONAL_PATH_RE = re.compile(r"(/Users/(?!<|\{|you|USER|username|name)[A-Za-z0-9._-]+/|/home/(?!<|\{|user\b|USER)[A-Za-z0-9._-]+/|C:\\Users\\[A-Za-z0-9._-]+\\)")
+PERSONAL_PATH_RE = re.compile(r"(/Users/(?!<|\{|(?:you|USER|username|name)/)[A-Za-z0-9._-]+/|/home/(?!<|\{|(?:user|USER)/)[A-Za-z0-9._-]+/|C:\\Users\\[A-Za-z0-9._-]+\\)")
 SANDBOX_PATH_RE = re.compile(r"/mnt/(skills|user-data)/")
 EMAIL_RE = re.compile(r"\b[A-Za-z0-9._%+-]+@(gmail|yahoo|hotmail|outlook|icloud)\.com\b")
 TIME_RE = re.compile(r"\b(before|after|until|as of) (January|February|March|April|May|June|July|August|September|October|November|December) 20\d\d\b")
@@ -226,6 +226,7 @@ def self_test():
         codes = {i["code"] for i in b["issues"]}
         for want in ("name-format", "name-folder", "description-short", "description-voice", "missing-path", "script-syntax", "personal-path"):
             assert want in codes, (want, codes)
+        assert PERSONAL_PATH_RE.search("/Users/" + "youssef/notes") and not PERSONAL_PATH_RE.search("/Users/" + "you/notes")
         fm, _ = parse_frontmatter('---\nname: q\ndescription: "Quoted: with colon"\n---\nbody')
         assert fm["description"] == "Quoted: with colon", fm
     print("self-test passed")

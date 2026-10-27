@@ -12,7 +12,7 @@ MUST fire (5):
 MUST NOT fire (3, name the sibling each belongs to):
 1. "tear this idea apart / what am I missing?" → belongs to `concept-council`
 2. "how good is this fellow — what level are they?" → belongs to `fellow-level-ladder`
-3. "what should we build vs. what does the platform give us?" → belongs to `platform-vs-venture`
+3. "what should we build vs. what does the platform give us?" → belongs to `build-vs-buy-boundary`
 
 ## Runs
 | Date | Gate | Result | Notes |

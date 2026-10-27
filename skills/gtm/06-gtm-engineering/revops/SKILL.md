@@ -1,17 +1,11 @@
 ---
 name: revops
 description: >-
-  Use this skill for revenue operations plumbing: lead lifecycle stages, MQL and
-  SQL definitions, lead routing rules, speed-to-lead and the marketing-to-sales
-  handoff SLA, pipeline stage definitions, CRM automation, data hygiene, and the
-  new-business deal desk. Use when the user mentions RevOps, revenue operations,
-  MQL, SQL, lead routing, pipeline stages, CRM automation, "leads aren't getting
-  to sales" or "when should marketing hand off to sales". Not for designing a
-  lead, intent or PQL scoring model, qualifying a specific list of leads, or
-  do-not-touch suppression rules (use account-tier-scoring); renewal discounts or
-  a renewal deal desk (use expansion-retention); forecasting (use
-  revops-forecasting); cold emails (use cold-email); or pricing (use
-  pricing-strategy).
+  Designs revenue operations plumbing: lead lifecycle stages, MQL and SQL definitions, lead
+  routing, speed-to-lead and handoff SLAs, pipeline stage definitions, CRM automation, data
+  hygiene and the new-business deal desk. Use when leads are not reaching sales, defining MQL and
+  SQL, setting up lead routing or pipeline stages, or automating the CRM. Not for lead or PQL
+  scoring models (use account-tier-scoring).
 metadata:
   version: 1.1.0
 ---

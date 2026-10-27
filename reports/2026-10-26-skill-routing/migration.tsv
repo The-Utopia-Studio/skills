@@ -1,0 +1,60 @@
+old_name	new_name	old_pack	new_pack	new_group
+adapt	ui-responsive			
+agent-dx-cli-scale	cli-agent-dx-score			
+animate	ui-animation			
+auction-first-price-shading	auction-sealed-bid-pricing			
+audit	ui-audit			
+bolder	ui-bolder			
+bottoms-up-quantification	bottoms-up-market-sizing			
+business-narrative-builder	valuation-narrative	utopia-gtm	utopia-investments	Valuation & models
+ckm-brand	brand-guidelines			
+ckm-design	brand-graphics			
+ckm-design-system	design-tokens			
+ckm-ui-styling	shadcn-tailwind-ui			
+clarify	ui-microcopy			
+code-structure	service-layer-refactor			
+colorize	ui-color			
+company-moc	obsidian-company-map	utopia-gtm	utopia-founder-productivity	Writing & notes
+cost-optimizer	cloud-cost-optimizer			
+critique	ui-critique			
+defuddle	defuddle-web-extract			
+delight	ui-delight			
+design-of-experiments	design-of-experiments	utopia-investments	utopia-product	Strategy, specs & metrics
+devops-advisor	infra-scaling-review			
+distill	ui-simplify			
+earned-autonomy	agent-autonomy-levels			
+efecto-social-media	efecto-social-media	utopia-gtm	utopia-product	Design & brand
+email-sequence	email-sequence	utopia-gtm	utopia-gtm	Marketing & Comms
+environmental-scanning-foresight	trend-scanning-foresight			
+evidence-driven-testing	pr-test-evidence-video			
+four-lenses-test	concept-four-lenses-test			
+greploop	greptile-review-loop			
+growth-strategy	fellow-growth-strategy			
+hypotheticals-counterfactuals	what-if-scenario-analysis			
+identify-assumptions-new	identify-risky-assumptions			
+ink	ink-terminal-ui			
+integration-linker	dev-tool-integrations			
+interface-craft	ui-animation-storyboard			
+invent-by-hand	invent-product-concept			
+layout	ui-layout-spacing			
+manifesto	manifesto	utopia-gtm	utopia-gtm	Marketing & Comms
+null-hypothesis-test	falsify-plan-assumptions			
+optimize	ui-performance			
+overdrive	ui-advanced-effects			
+pct-application	patent-pct-application			
+physics-floor-gap	unit-cost-floor-gap			
+platform-vs-venture	build-vs-buy-boundary			
+polish	ui-polish			
+ppt-template-creator	ppt-template-to-skill			
+press-release	working-backwards-press-release	utopia-gtm	utopia-product	Strategy, specs & metrics
+prioritization	prioritization	utopia-founder-productivity	utopia-product	Strategy, specs & metrics
+product-frame-stack	product-strategy-stack			
+prompt-engineer	agents-md-writer			
+proof	proofeditor-docs			
+quieter	ui-quieter			
+recommendation-canvas	ai-solution-proposal-canvas			
+refine-flywheel	post-launch-refine-loop			
+repo-scanner	repo-readiness-scan			
+shape	ui-design-brief			
+typeset	ui-typography			
+yoda-data-sourcing	proprietary-data-sourcing			

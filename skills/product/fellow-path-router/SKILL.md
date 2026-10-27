@@ -1,14 +1,11 @@
 ---
 name: fellow-path-router
 description: >-
-  Route a fellow through the Icarus module by their situation type when they start: where do I start,
-  I already have a product or traction which stages apply, onboard me to Icarus, which stages should I
-  skip, I have a mature product what's my path. Classifies the fellow as Type A (blank page), B
-  (traction, no moat) or C (mature product) on the evidence ladder and returns a keep / trim /
-  subtract / leap stage ledger with a think:build:test ratio tied to that type's dominant risk. Do NOT
-  use for a fellow already in a Cobuild module who is stuck and asks what to do next or wants coaching
-  (use salim), tearing down or grading one idea (use concept-council or so-what-stress-test), or
-  assessing the fellow's level (use fellow-level-ladder).
+  Routes a new fellow through the Icarus stages by situation: classifies them as Type A (blank
+  page), B (traction, no moat) or C (mature product) on evidence, then returns a keep / trim /
+  skip stage plan and a think:build:test ratio. Use when a fellow asks where to start, which
+  stages apply or can be skipped, or to be onboarded to Icarus. Not for coaching a fellow stuck
+  mid-module (use salim).
 type: interactive
 supersedes: none
 ---
@@ -50,7 +47,7 @@ could go to the wrong section.
 | "Tear my idea apart / what am I missing / what should I build first" | `concept-council` | That is a five-lens teardown of one raw idea ending in a probe. This routes the fellow's path across sections; it does not judge the idea. |
 | "Is this idea worth doing / pressure-test it / so what" | `so-what-stress-test` | That gates one idea across five business questions. This sequences stages, it does not grade a concept. |
 | "How is this fellow doing / assess them / level them up" | `fellow-level-ladder` | That grades the person's mastery (Literate→Author). This routes the product's path. A Frontier-level fellow can still be on a Type A product. |
-| "Should we build or use the platform / what does Daedalus give me" | `platform-vs-venture` | That draws the build-vs-buy line for platform primitives. This sequences the fellow's own stages. |
+| "Should we build or use the platform / what does Daedalus give me" | `build-vs-buy-boundary` | That draws the build-vs-buy line for platform primitives. This sequences the fellow's own stages. |
 
 If the fellow gives no product signal and no problem signal, do not fabricate a type. Ask
 the one classifying question (below) and stop.
@@ -148,7 +145,7 @@ The **build** number is a cap, not a target. Effort above it requires a probe re
 |---|---|---|
 | A | 00 `concept-council` | A Gap Map + one probe under a week |
 | B | 03 `yoda-your-own-data`, then 06 `invent-wedge-moat` | An explicit/tacit ledger + a moat-design canvas |
-| C | 08 `refine-flywheel` | A flywheel cadence doc + the re-run-evals-on-model-release schedule |
+| C | 08 `post-launch-refine-loop` | A flywheel cadence doc + the re-run-evals-on-model-release schedule |
 
 ### Step 7 — Kill-line self-check
 
@@ -201,6 +198,6 @@ risk.
 - Feeds every downstream section by naming the entry point and first artefact.
 - Not `fellow-level-ladder` (section 10): that grades the person's mastery; this routes the
   product's path. The two are orthogonal — a fellow of any level can be on any product type.
-- Not `platform-vs-venture`: that draws the build-vs-buy line for platform primitives; this
+- Not `build-vs-buy-boundary`: that draws the build-vs-buy line for platform primitives; this
   sequences the fellow's own stages.
 - Supersedes nothing. It is the module's front door.

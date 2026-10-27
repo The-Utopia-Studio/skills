@@ -1,0 +1,3388 @@
+{
+  "skills": 254,
+  "errors": 11,
+  "warnings": 386,
+  "results": [
+    {
+      "skill": "agent-persona-builder",
+      "path": "plugins/utopia-founder-productivity/skills/agent-persona-builder",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "missing-folder",
+          "message": "SKILL.md mentions folder 'references/', which does not exist (fine if Claude creates it)"
+        }
+      ]
+    },
+    {
+      "skill": "agent-prd",
+      "path": "plugins/utopia-founder-productivity/skills/agent-prd",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 1213 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'evals/research.test.ts', which does not exist"
+        }
+      ]
+    },
+    {
+      "skill": "alignment-values-north-star",
+      "path": "plugins/utopia-founder-productivity/skills/alignment-values-north-star",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/examples/engineering-team.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "defuddle",
+      "path": "plugins/utopia-founder-productivity/skills/defuddle",
+      "issues": []
+    },
+    {
+      "skill": "draft-nda",
+      "path": "plugins/utopia-founder-productivity/skills/draft-nda",
+      "issues": []
+    },
+    {
+      "skill": "find-skills",
+      "path": "plugins/utopia-founder-productivity/skills/find-skills",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "full-output-enforcement",
+      "path": "plugins/utopia-founder-productivity/skills/full-output-enforcement",
+      "issues": []
+    },
+    {
+      "skill": "grammar-check",
+      "path": "plugins/utopia-founder-productivity/skills/grammar-check",
+      "issues": []
+    },
+    {
+      "skill": "json-canvas",
+      "path": "plugins/utopia-founder-productivity/skills/json-canvas",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/EXAMPLES.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "last30days",
+      "path": "plugins/utopia-founder-productivity/skills/last30days",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 1536 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "market-segments",
+      "path": "plugins/utopia-founder-productivity/skills/market-segments",
+      "issues": []
+    },
+    {
+      "skill": "market-sizing",
+      "path": "plugins/utopia-founder-productivity/skills/market-sizing",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "market-skill-ingestion",
+      "path": "plugins/utopia-founder-productivity/skills/market-skill-ingestion",
+      "issues": [
+        {
+          "level": "error",
+          "code": "xml-in-frontmatter",
+          "message": "description contains an XML/HTML tag"
+        }
+      ]
+    },
+    {
+      "skill": "obsidian-bases",
+      "path": "plugins/utopia-founder-productivity/skills/obsidian-bases",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/FUNCTIONS_REFERENCE.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "obsidian-cli",
+      "path": "plugins/utopia-founder-productivity/skills/obsidian-cli",
+      "issues": []
+    },
+    {
+      "skill": "obsidian-markdown",
+      "path": "plugins/utopia-founder-productivity/skills/obsidian-markdown",
+      "issues": []
+    },
+    {
+      "skill": "pestel-analysis",
+      "path": "plugins/utopia-founder-productivity/skills/pestel-analysis",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 173 chars; add 'Use when ...' triggers"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "porters-five-forces",
+      "path": "plugins/utopia-founder-productivity/skills/porters-five-forces",
+      "issues": []
+    },
+    {
+      "skill": "prioritization",
+      "path": "plugins/utopia-founder-productivity/skills/prioritization",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "privacy-policy",
+      "path": "plugins/utopia-founder-productivity/skills/privacy-policy",
+      "issues": []
+    },
+    {
+      "skill": "proof",
+      "path": "plugins/utopia-founder-productivity/skills/proof",
+      "issues": []
+    },
+    {
+      "skill": "role-switch",
+      "path": "plugins/utopia-founder-productivity/skills/role-switch",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "salim",
+      "path": "plugins/utopia-founder-productivity/skills/salim",
+      "issues": [
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'agents/README.md', which does not exist"
+        },
+        {
+          "level": "warning",
+          "code": "personal-email",
+          "message": "MEMORY.md: personal email address"
+        }
+      ]
+    },
+    {
+      "skill": "skill-eval",
+      "path": "plugins/utopia-founder-productivity/skills/skill-eval",
+      "issues": []
+    },
+    {
+      "skill": "skillshare",
+      "path": "plugins/utopia-founder-productivity/skills/skillshare",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/audit.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/extras.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/install.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/sync.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/targets.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "stakeholder-map",
+      "path": "plugins/utopia-founder-productivity/skills/stakeholder-map",
+      "issues": []
+    },
+    {
+      "skill": "swot-analysis",
+      "path": "plugins/utopia-founder-productivity/skills/swot-analysis",
+      "issues": []
+    },
+    {
+      "skill": "workshop-facilitation",
+      "path": "plugins/utopia-founder-productivity/skills/workshop-facilitation",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 147 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "account-tier-scoring",
+      "path": "plugins/utopia-gtm/skills/account-tier-scoring",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "ad-creative",
+      "path": "plugins/utopia-gtm/skills/ad-creative",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/generative-tools.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/platform-specs.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ai-sdr",
+      "path": "plugins/utopia-gtm/skills/ai-sdr",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 919 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/outbound-system-playbook.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "beachhead-segment",
+      "path": "plugins/utopia-gtm/skills/beachhead-segment",
+      "issues": []
+    },
+    {
+      "skill": "business-narrative-builder",
+      "path": "plugins/utopia-gtm/skills/business-narrative-builder",
+      "issues": []
+    },
+    {
+      "skill": "call-scorecards",
+      "path": "plugins/utopia-gtm/skills/call-scorecards",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "churn-prevention",
+      "path": "plugins/utopia-gtm/skills/churn-prevention",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/cancel-flow-patterns.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/dunning-playbook.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "cold-email",
+      "path": "plugins/utopia-gtm/skills/cold-email",
+      "issues": []
+    },
+    {
+      "skill": "cold-offer-architect",
+      "path": "plugins/utopia-gtm/skills/cold-offer-architect",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "company-moc",
+      "path": "plugins/utopia-gtm/skills/company-moc",
+      "issues": []
+    },
+    {
+      "skill": "competitive-battlecard",
+      "path": "plugins/utopia-gtm/skills/competitive-battlecard",
+      "issues": []
+    },
+    {
+      "skill": "content-strategy",
+      "path": "plugins/utopia-gtm/skills/content-strategy",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/headless-cms.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "content-to-pipeline",
+      "path": "plugins/utopia-gtm/skills/content-to-pipeline",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 523 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "copy-editing",
+      "path": "plugins/utopia-gtm/skills/copy-editing",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 502 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "copywriting",
+      "path": "plugins/utopia-gtm/skills/copywriting",
+      "issues": []
+    },
+    {
+      "skill": "customer-research",
+      "path": "plugins/utopia-gtm/skills/customer-research",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/source-guides.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "deal-velocity-engineer",
+      "path": "plugins/utopia-gtm/skills/deal-velocity-engineer",
+      "issues": []
+    },
+    {
+      "skill": "discovery-calls",
+      "path": "plugins/utopia-gtm/skills/discovery-calls",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "earned-autonomy",
+      "path": "plugins/utopia-gtm/skills/earned-autonomy",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "efecto-social-media",
+      "path": "plugins/utopia-gtm/skills/efecto-social-media",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 563 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "email-deliverability",
+      "path": "plugins/utopia-gtm/skills/email-deliverability",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "email-sequence",
+      "path": "plugins/utopia-gtm/skills/email-sequence",
+      "issues": []
+    },
+    {
+      "skill": "expansion-retention",
+      "path": "plugins/utopia-gtm/skills/expansion-retention",
+      "issues": []
+    },
+    {
+      "skill": "growth-loops",
+      "path": "plugins/utopia-gtm/skills/growth-loops",
+      "issues": []
+    },
+    {
+      "skill": "growth-strategy",
+      "path": "plugins/utopia-gtm/skills/growth-strategy",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "gtm-engineering",
+      "path": "plugins/utopia-gtm/skills/gtm-engineering",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 840 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "gtm-metrics",
+      "path": "plugins/utopia-gtm/skills/gtm-metrics",
+      "issues": []
+    },
+    {
+      "skill": "gtm-strategy",
+      "path": "plugins/utopia-gtm/skills/gtm-strategy",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/gtm-motions.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ideal-customer-profile",
+      "path": "plugins/utopia-gtm/skills/ideal-customer-profile",
+      "issues": []
+    },
+    {
+      "skill": "launch-strategy",
+      "path": "plugins/utopia-gtm/skills/launch-strategy",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/platform-playbooks.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "lead-enrichment",
+      "path": "plugins/utopia-gtm/skills/lead-enrichment",
+      "issues": []
+    },
+    {
+      "skill": "lead-magnets",
+      "path": "plugins/utopia-gtm/skills/lead-magnets",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/benchmarks.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "manifesto",
+      "path": "plugins/utopia-gtm/skills/manifesto",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/archetypes.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/checklist.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/voice.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "marketing-ideas",
+      "path": "plugins/utopia-gtm/skills/marketing-ideas",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "marketing-psychology",
+      "path": "plugins/utopia-gtm/skills/marketing-psychology",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "onboarding-cro",
+      "path": "plugins/utopia-gtm/skills/onboarding-cro",
+      "issues": []
+    },
+    {
+      "skill": "outreach-execution",
+      "path": "plugins/utopia-gtm/skills/outreach-execution",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/email-linkedin-breakup-frameworks.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/objection-handling.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "page-cro",
+      "path": "plugins/utopia-gtm/skills/page-cro",
+      "issues": []
+    },
+    {
+      "skill": "paid-ads",
+      "path": "plugins/utopia-gtm/skills/paid-ads",
+      "issues": []
+    },
+    {
+      "skill": "partner-affiliate",
+      "path": "plugins/utopia-gtm/skills/partner-affiliate",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 598 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "positioning-workshop",
+      "path": "plugins/utopia-gtm/skills/positioning-workshop",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/positioning-and-messaging.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "press-release",
+      "path": "plugins/utopia-gtm/skills/press-release",
+      "issues": []
+    },
+    {
+      "skill": "product-marketing-context",
+      "path": "plugins/utopia-gtm/skills/product-marketing-context",
+      "issues": []
+    },
+    {
+      "skill": "product-name",
+      "path": "plugins/utopia-gtm/skills/product-name",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "referral-program",
+      "path": "plugins/utopia-gtm/skills/referral-program",
+      "issues": []
+    },
+    {
+      "skill": "revops",
+      "path": "plugins/utopia-gtm/skills/revops",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/automation-playbooks.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/lifecycle-definitions.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/routing-rules.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "revops-forecasting",
+      "path": "plugins/utopia-gtm/skills/revops-forecasting",
+      "issues": [
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'resources/cohort-diagnostics.md', which does not exist"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/pipeline-visibility-and-reporting-dashboard-architecture.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "sales-enablement",
+      "path": "plugins/utopia-gtm/skills/sales-enablement",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/deck-frameworks.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/demo-scripts.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/objection-library.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/one-pager-templates.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "sales-motion-design",
+      "path": "plugins/utopia-gtm/skills/sales-motion-design",
+      "issues": []
+    },
+    {
+      "skill": "signup-flow-cro",
+      "path": "plugins/utopia-gtm/skills/signup-flow-cro",
+      "issues": []
+    },
+    {
+      "skill": "social-content",
+      "path": "plugins/utopia-gtm/skills/social-content",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/platform-limits.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "solo-founder-gtm",
+      "path": "plugins/utopia-gtm/skills/solo-founder-gtm",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "value-proposition",
+      "path": "plugins/utopia-gtm/skills/value-proposition",
+      "issues": []
+    },
+    {
+      "skill": "warm-intro-intelligence",
+      "path": "plugins/utopia-gtm/skills/warm-intro-intelligence",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/evidence-rules-and-confidence-scoring.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/node-registry-and-edge-discovery.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/warm-intro-output-card-format.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/warm-relationship-intake.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "3-statement-model",
+      "path": "plugins/utopia-investments/skills/3-statement-model",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/formulas.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/sec-filings.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ada",
+      "path": "plugins/utopia-investments/skills/ada",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'agents/README.md', which does not exist"
+        }
+      ]
+    },
+    {
+      "skill": "auction-first-price-shading",
+      "path": "plugins/utopia-investments/skills/auction-first-price-shading",
+      "issues": []
+    },
+    {
+      "skill": "audit-xls",
+      "path": "plugins/utopia-investments/skills/audit-xls",
+      "issues": []
+    },
+    {
+      "skill": "bayesian-reasoning-calibration",
+      "path": "plugins/utopia-investments/skills/bayesian-reasoning-calibration",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/examples/product-launch.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "causal-inference-root-cause",
+      "path": "plugins/utopia-investments/skills/causal-inference-root-cause",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "resources/template.md links to resources/examples/database-performance-degradation.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "clean-data-xls",
+      "path": "plugins/utopia-investments/skills/clean-data-xls",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "competitive-analysis",
+      "path": "plugins/utopia-investments/skills/competitive-analysis",
+      "issues": []
+    },
+    {
+      "skill": "comps-analysis",
+      "path": "plugins/utopia-investments/skills/comps-analysis",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 666 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "cost-of-capital-estimator",
+      "path": "plugins/utopia-investments/skills/cost-of-capital-estimator",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "datapack-builder",
+      "path": "plugins/utopia-investments/skills/datapack-builder",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 653 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "dcf-model",
+      "path": "plugins/utopia-investments/skills/dcf-model",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 1289 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "decision-matrix",
+      "path": "plugins/utopia-investments/skills/decision-matrix",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "deck-refresh",
+      "path": "plugins/utopia-investments/skills/deck-refresh",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "deliberation-debate-red-teaming",
+      "path": "plugins/utopia-investments/skills/deliberation-debate-red-teaming",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "design-of-experiments",
+      "path": "plugins/utopia-investments/skills/design-of-experiments",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "environmental-scanning-foresight",
+      "path": "plugins/utopia-investments/skills/environmental-scanning-foresight",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "estimation-fermi",
+      "path": "plugins/utopia-investments/skills/estimation-fermi",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "expected-value",
+      "path": "plugins/utopia-investments/skills/expected-value",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "forecast-premortem",
+      "path": "plugins/utopia-investments/skills/forecast-premortem",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/backcasting-method.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/failure-mode-taxonomy.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/premortem-principles.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "funding-digest",
+      "path": "plugins/utopia-investments/skills/funding-digest",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 517 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/sector-seeds.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "hypotheticals-counterfactuals",
+      "path": "plugins/utopia-investments/skills/hypotheticals-counterfactuals",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ib-check-deck",
+      "path": "plugins/utopia-investments/skills/ib-check-deck",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "ib-pitch-deck",
+      "path": "plugins/utopia-investments/skills/ib-pitch-deck",
+      "issues": []
+    },
+    {
+      "skill": "investor-deal-sheet",
+      "path": "plugins/utopia-investments/skills/investor-deal-sheet",
+      "issues": []
+    },
+    {
+      "skill": "investor-doc-system",
+      "path": "plugins/utopia-investments/skills/investor-doc-system",
+      "issues": []
+    },
+    {
+      "skill": "investor-fact-ledger",
+      "path": "plugins/utopia-investments/skills/investor-fact-ledger",
+      "issues": []
+    },
+    {
+      "skill": "investor-faq",
+      "path": "plugins/utopia-investments/skills/investor-faq",
+      "issues": []
+    },
+    {
+      "skill": "investor-memorandum",
+      "path": "plugins/utopia-investments/skills/investor-memorandum",
+      "issues": []
+    },
+    {
+      "skill": "investor-reading-room",
+      "path": "plugins/utopia-investments/skills/investor-reading-room",
+      "issues": []
+    },
+    {
+      "skill": "khalil",
+      "path": "plugins/utopia-investments/skills/khalil",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'agents/README.md', which does not exist"
+        }
+      ]
+    },
+    {
+      "skill": "kill-criteria-exit-ramps",
+      "path": "plugins/utopia-investments/skills/kill-criteria-exit-ramps",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/methodology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "pct-application",
+      "path": "plugins/utopia-investments/skills/pct-application",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/epo-compliance-checklist.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "pitch-deck",
+      "path": "plugins/utopia-investments/skills/pitch-deck",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/scoring-rubric.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/slide-best-practices.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/slide-frameworks.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "pitch-deck-web",
+      "path": "plugins/utopia-investments/skills/pitch-deck-web",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/deck-template-structure.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ppt-template-creator",
+      "path": "plugins/utopia-investments/skills/ppt-template-creator",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'assets/template.pptx', which does not exist"
+        }
+      ]
+    },
+    {
+      "skill": "reference-class-forecasting",
+      "path": "plugins/utopia-investments/skills/reference-class-forecasting",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/common-pitfalls.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/outside-view-principles.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/reference-class-selection.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "research-claim-map",
+      "path": "plugins/utopia-investments/skills/research-claim-map",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "scout-mindset-bias-check",
+      "path": "plugins/utopia-investments/skills/scout-mindset-bias-check",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/cognitive-bias-catalog.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/debiasing-techniques.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/scout-vs-soldier.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "tear-sheet",
+      "path": "plugins/utopia-investments/skills/tear-sheet",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 522 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/corp-dev.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/equity-research.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/ib-ma.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/sales-bd.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/strip-profile-pptx.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "technical-dd",
+      "path": "plugins/utopia-investments/skills/technical-dd",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/formatting-guide.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/report-structure.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "valuation-reconciler",
+      "path": "plugins/utopia-investments/skills/valuation-reconciler",
+      "issues": []
+    },
+    {
+      "skill": "ab-test-analysis",
+      "path": "plugins/utopia-product/skills/ab-test-analysis",
+      "issues": []
+    },
+    {
+      "skill": "adapt",
+      "path": "plugins/utopia-product/skills/adapt",
+      "issues": []
+    },
+    {
+      "skill": "agent-concierge-probe",
+      "path": "plugins/utopia-product/skills/agent-concierge-probe",
+      "issues": []
+    },
+    {
+      "skill": "agent-design",
+      "path": "plugins/utopia-product/skills/agent-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "agent-dx-cli-scale",
+      "path": "plugins/utopia-product/skills/agent-dx-cli-scale",
+      "issues": []
+    },
+    {
+      "skill": "analytics-tracking",
+      "path": "plugins/utopia-product/skills/analytics-tracking",
+      "issues": []
+    },
+    {
+      "skill": "animate",
+      "path": "plugins/utopia-product/skills/animate",
+      "issues": []
+    },
+    {
+      "skill": "asd-ste100",
+      "path": "plugins/utopia-product/skills/asd-ste100",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/replacements.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/writing-rules.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "audit",
+      "path": "plugins/utopia-product/skills/audit",
+      "issues": []
+    },
+    {
+      "skill": "bolder",
+      "path": "plugins/utopia-product/skills/bolder",
+      "issues": []
+    },
+    {
+      "skill": "bottoms-up-quantification",
+      "path": "plugins/utopia-product/skills/bottoms-up-quantification",
+      "issues": []
+    },
+    {
+      "skill": "business-model",
+      "path": "plugins/utopia-product/skills/business-model",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/lean-canvas.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/startup-canvas.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ckm-brand",
+      "path": "plugins/utopia-product/skills/ckm-brand",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 183 chars; add 'Use when ...' triggers"
+        },
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/approval-checklist.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/asset-organization.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/brand-guideline-template.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/color-palette-management.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/logo-usage-rules.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/typography-specifications.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "references/update.md mentions 'assets/design-tokens.css', which does not exist"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "references/update.md mentions 'assets/design-tokens.json', which does not exist"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/update.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "templates/brand-guidelines-starter.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ckm-design",
+      "path": "plugins/utopia-product/skills/ckm-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "missing-folder",
+          "message": "SKILL.md mentions folder 'assets/', which does not exist (fine if Claude creates it)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/banner-sizes-and-styles.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/cip-design.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/design-routing.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/icon-design.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/logo-color-psychology.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/logo-prompt-engineering.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/logo-style-guide.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/slides-html-template.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/slides-layout-patterns.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/social-photos-design.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ckm-design-system",
+      "path": "plugins/utopia-product/skills/ckm-design-system",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/component-specs.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/component-tokens.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/primitive-tokens.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/semantic-tokens.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/states-and-variants.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/tailwind-integration.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/token-architecture.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ckm-ui-styling",
+      "path": "plugins/utopia-product/skills/ckm-ui-styling",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/canvas-design-system.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/shadcn-accessibility.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/shadcn-components.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/shadcn-theming.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/tailwind-customization.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/tailwind-responsive.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/tailwind-utilities.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "personal-email",
+          "message": "canvas-fonts/ArsenalSC-OFL.txt: personal email address"
+        },
+        {
+          "level": "warning",
+          "code": "personal-email",
+          "message": "canvas-fonts/PoiretOne-OFL.txt: personal email address"
+        }
+      ]
+    },
+    {
+      "skill": "clarify",
+      "path": "plugins/utopia-product/skills/clarify",
+      "issues": []
+    },
+    {
+      "skill": "code-structure",
+      "path": "plugins/utopia-product/skills/code-structure",
+      "issues": []
+    },
+    {
+      "skill": "colorize",
+      "path": "plugins/utopia-product/skills/colorize",
+      "issues": []
+    },
+    {
+      "skill": "compound-system-architecture",
+      "path": "plugins/utopia-product/skills/compound-system-architecture",
+      "issues": []
+    },
+    {
+      "skill": "concept-council",
+      "path": "plugins/utopia-product/skills/concept-council",
+      "issues": []
+    },
+    {
+      "skill": "concierge-probe",
+      "path": "plugins/utopia-product/skills/concierge-probe",
+      "issues": []
+    },
+    {
+      "skill": "continuous-discovery-engine",
+      "path": "plugins/utopia-product/skills/continuous-discovery-engine",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "cost-optimizer",
+      "path": "plugins/utopia-product/skills/cost-optimizer",
+      "issues": []
+    },
+    {
+      "skill": "critique",
+      "path": "plugins/utopia-product/skills/critique",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/cognitive-load.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/heuristics-scoring.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/personas.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "current-state-map",
+      "path": "plugins/utopia-product/skills/current-state-map",
+      "issues": []
+    },
+    {
+      "skill": "data-rights-clause",
+      "path": "plugins/utopia-product/skills/data-rights-clause",
+      "issues": []
+    },
+    {
+      "skill": "dataset-builder",
+      "path": "plugins/utopia-product/skills/dataset-builder",
+      "issues": []
+    },
+    {
+      "skill": "delight",
+      "path": "plugins/utopia-product/skills/delight",
+      "issues": []
+    },
+    {
+      "skill": "deploy-to-vercel",
+      "path": "plugins/utopia-product/skills/deploy-to-vercel",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/token-auth.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "sandbox-path",
+          "message": "SKILL.md: claude.ai-only path '/mnt/skills/'"
+        }
+      ]
+    },
+    {
+      "skill": "deployment-engineer",
+      "path": "plugins/utopia-product/skills/deployment-engineer",
+      "issues": []
+    },
+    {
+      "skill": "devops-advisor",
+      "path": "plugins/utopia-product/skills/devops-advisor",
+      "issues": []
+    },
+    {
+      "skill": "diagram-design",
+      "path": "plugins/utopia-product/skills/diagram-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/onboarding.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/skin-dark-technical.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/style-guide.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "discovery-interview-prep",
+      "path": "plugins/utopia-product/skills/discovery-interview-prep",
+      "issues": []
+    },
+    {
+      "skill": "discovery-process",
+      "path": "plugins/utopia-product/skills/discovery-process",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 170 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "distill",
+      "path": "plugins/utopia-product/skills/distill",
+      "issues": []
+    },
+    {
+      "skill": "efecto-graphic-design",
+      "path": "plugins/utopia-product/skills/efecto-graphic-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 1053 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "efecto-web-design",
+      "path": "plugins/utopia-product/skills/efecto-web-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 1365 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "eval-first-spec",
+      "path": "plugins/utopia-product/skills/eval-first-spec",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "evidence-driven-testing",
+      "path": "plugins/utopia-product/skills/evidence-driven-testing",
+      "issues": []
+    },
+    {
+      "skill": "evidence-ladder",
+      "path": "plugins/utopia-product/skills/evidence-ladder",
+      "issues": []
+    },
+    {
+      "skill": "explicit-vs-tacit-capture",
+      "path": "plugins/utopia-product/skills/explicit-vs-tacit-capture",
+      "issues": []
+    },
+    {
+      "skill": "fellow-level-ladder",
+      "path": "plugins/utopia-product/skills/fellow-level-ladder",
+      "issues": []
+    },
+    {
+      "skill": "fellow-path-router",
+      "path": "plugins/utopia-product/skills/fellow-path-router",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "first-mocks",
+      "path": "plugins/utopia-product/skills/first-mocks",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "four-lenses-test",
+      "path": "plugins/utopia-product/skills/four-lenses-test",
+      "issues": []
+    },
+    {
+      "skill": "greploop",
+      "path": "plugins/utopia-product/skills/greploop",
+      "issues": []
+    },
+    {
+      "skill": "guardrail-design",
+      "path": "plugins/utopia-product/skills/guardrail-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "hf-cli",
+      "path": "plugins/utopia-product/skills/hf-cli",
+      "issues": []
+    },
+    {
+      "skill": "huggingface-community-evals",
+      "path": "plugins/utopia-product/skills/huggingface-community-evals",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/USAGE_EXAMPLES.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "huggingface-datasets",
+      "path": "plugins/utopia-product/skills/huggingface-datasets",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 189 chars; add 'Use when ...' triggers"
+        },
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "huggingface-gradio",
+      "path": "plugins/utopia-product/skills/huggingface-gradio",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "huggingface-llm-trainer",
+      "path": "plugins/utopia-product/skills/huggingface-llm-trainer",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 733 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/gguf_conversion.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/hardware_guide.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/hub_saving.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/local_training_macos.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/trackio_guide.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/training_methods.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/training_patterns.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/troubleshooting.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/unsloth.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "huggingface-papers",
+      "path": "plugins/utopia-product/skills/huggingface-papers",
+      "issues": []
+    },
+    {
+      "skill": "huggingface-tool-builder",
+      "path": "plugins/utopia-product/skills/huggingface-tool-builder",
+      "issues": []
+    },
+    {
+      "skill": "huggingface-trackio",
+      "path": "plugins/utopia-product/skills/huggingface-trackio",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/alerts.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/logging_metrics.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/retrieving_metrics.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "huggingface-vision-trainer",
+      "path": "plugins/utopia-product/skills/huggingface-vision-trainer",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 589 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/finetune_sam2_trainer.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "identify-assumptions-new",
+      "path": "plugins/utopia-product/skills/identify-assumptions-new",
+      "issues": []
+    },
+    {
+      "skill": "impeccable",
+      "path": "plugins/utopia-product/skills/impeccable",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/color-and-contrast.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/anti-patterns.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/assets.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/color.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/contract.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/copy.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/custom-craft.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/design-md.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/export-formats.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/genres/atmospheric.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/genres/editorial.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/genres/modern-minimal.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/genres/playful.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/hero-enrichment.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/imagery-kit.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/layout-and-space.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/microinteractions.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/motion.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/preview-examples.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/responsive.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/structure.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/typography.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/README.md links to reference/hallmark/verbs/audit.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/README.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/c1-outlined-chip.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/c2-inline-form-as-cta.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/c3-typographic-link.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/c4-sticky-bottom-bar.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/f1-bento-grid.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/f2-sticky-scroll-stack.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/f3-tabular-spec-sheet.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/f4-step-sequence.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/f5-annotated-screenshot.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/f6-product-card-grid.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft1-mast-headed.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft2-inline-rule-single-line.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft3-index-style-category-list.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft4-dense-typographic.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft5-statement.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft6-letter-close.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft7-newsletter-first.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/ft8-marquee-scroll.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h1-marquee.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h2-split-diptych.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h3-quote-led.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h4-stat-led.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h5-letter-hero.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h6-photographic-fold.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h7-demo-video-clipped-by-viewport-edge.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h8-mockup-split-browser-framed.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/h9-custom-illustration-centerpiece.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n1-wordmark-2-links.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n10-floating-on-scroll-morph.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n2-floating-chip.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n3-side-rail.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n4-hidden-behind-k.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n5-floating-pill.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n6-newspaper-masthead.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n7-brutal-slab.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n8-terminal-command.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/n9-edge-aligned-minimal.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/s1-left-margin-numbered.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/s2-hanging.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/s3-sticky-pinned.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/s4-inline-no-break.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/s5-bottom-anchored.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/t1-pull-quote-with-marginalia.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/t2-logo-wall-hairline.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/t3-single-huge-quote.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/component-cookbook.md links to reference/hallmark/components/t4-numbered-stat-strip.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/component-cookbook.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/custom-theme.md links to reference/hallmark/anti-patterns.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/custom-theme.md links to reference/hallmark/color.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/custom-theme.md links to reference/hallmark/microinteractions.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/custom-theme.md links to reference/hallmark/typography.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/custom-theme.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/interaction-and-states.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/assets.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/hero-enrichment.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/01-bento-grid.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/02-long-document.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/03-marquee-hero.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/04-stat-led.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/05-workbench.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/06-conversational-faq.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/07-manifesto.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/08-photographic.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/09-quote-led.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/10-specimen.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/11-catalogue.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/12-letter.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/13-index-first.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/14-narrative-workflow.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/15-split-studio.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/16-feature-stack.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/17-type-specimen.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/18-portfolio-grid.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/19-map-diagram.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/20-ecosystem-index.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/macrostructures.md links to reference/hallmark/macrostructures/21-component-playground.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/anti-patterns.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/assets.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/hero-enrichment.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/layout-and-space.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/responsive.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/structure.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/slop-test.md links to reference/hallmark/typography.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/slop-test.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/study.md links to reference/hallmark/design-md.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/study.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/verbs/redesign.md links to reference/hallmark/export-formats.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/verbs/redesign.md links to reference/hallmark/structure.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "nested-reference",
+          "message": "reference/hallmark/verbs/redesign.md links to reference/hallmark/typography.md; link it directly from SKILL.md"
+        },
+        {
+          "level": "warning",
+          "code": "missing-folder",
+          "message": "reference/hallmark/verbs/redesign.md mentions folder 'references/', which does not exist (fine if Claude creates it)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/hallmark/verbs/redesign.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/interaction-design.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/redesign-checklist.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/responsive-design.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/taste-dials.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/typography.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/ux-writing.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "industrial-brutalist-ui",
+      "path": "plugins/utopia-product/skills/industrial-brutalist-ui",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        }
+      ]
+    },
+    {
+      "skill": "ink",
+      "path": "plugins/utopia-product/skills/ink",
+      "issues": []
+    },
+    {
+      "skill": "integration-linker",
+      "path": "plugins/utopia-product/skills/integration-linker",
+      "issues": []
+    },
+    {
+      "skill": "interface-craft",
+      "path": "plugins/utopia-product/skills/interface-craft",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "design-critique.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "dialkit.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "storyboard-animation.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "invent-by-hand",
+      "path": "plugins/utopia-product/skills/invent-by-hand",
+      "issues": []
+    },
+    {
+      "skill": "job-in-primitives",
+      "path": "plugins/utopia-product/skills/job-in-primitives",
+      "issues": []
+    },
+    {
+      "skill": "jobs-to-be-done",
+      "path": "plugins/utopia-product/skills/jobs-to-be-done",
+      "issues": []
+    },
+    {
+      "skill": "layout",
+      "path": "plugins/utopia-product/skills/layout",
+      "issues": []
+    },
+    {
+      "skill": "lean-ux-canvas",
+      "path": "plugins/utopia-product/skills/lean-ux-canvas",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 545 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "metrics-dashboard",
+      "path": "plugins/utopia-product/skills/metrics-dashboard",
+      "issues": []
+    },
+    {
+      "skill": "metrics-that-matter",
+      "path": "plugins/utopia-product/skills/metrics-that-matter",
+      "issues": []
+    },
+    {
+      "skill": "minimalist-ui",
+      "path": "plugins/utopia-product/skills/minimalist-ui",
+      "issues": []
+    },
+    {
+      "skill": "moat-design-canvas",
+      "path": "plugins/utopia-product/skills/moat-design-canvas",
+      "issues": []
+    },
+    {
+      "skill": "monitoring-setup",
+      "path": "plugins/utopia-product/skills/monitoring-setup",
+      "issues": []
+    },
+    {
+      "skill": "null-hypothesis-test",
+      "path": "plugins/utopia-product/skills/null-hypothesis-test",
+      "issues": []
+    },
+    {
+      "skill": "optimize",
+      "path": "plugins/utopia-product/skills/optimize",
+      "issues": []
+    },
+    {
+      "skill": "overdrive",
+      "path": "plugins/utopia-product/skills/overdrive",
+      "issues": []
+    },
+    {
+      "skill": "paper-sketch-probe",
+      "path": "plugins/utopia-product/skills/paper-sketch-probe",
+      "issues": []
+    },
+    {
+      "skill": "physics-floor-gap",
+      "path": "plugins/utopia-product/skills/physics-floor-gap",
+      "issues": []
+    },
+    {
+      "skill": "pilot-six-term-sheet",
+      "path": "plugins/utopia-product/skills/pilot-six-term-sheet",
+      "issues": []
+    },
+    {
+      "skill": "platform-vs-venture",
+      "path": "plugins/utopia-product/skills/platform-vs-venture",
+      "issues": []
+    },
+    {
+      "skill": "polish",
+      "path": "plugins/utopia-product/skills/polish",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/detail-animations.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/detail-principles.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/detail-surfaces.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/detail-typography.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "reference/motion-craft.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "prd-development",
+      "path": "plugins/utopia-product/skills/prd-development",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 654 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/one-pager-template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "pricing-strategy",
+      "path": "plugins/utopia-product/skills/pricing-strategy",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/ai-pricing.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/revenue-models.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "probe-matrix",
+      "path": "plugins/utopia-product/skills/probe-matrix",
+      "issues": []
+    },
+    {
+      "skill": "problem-framing-canvas",
+      "path": "plugins/utopia-product/skills/problem-framing-canvas",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 126 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "problem-quality-scorecard",
+      "path": "plugins/utopia-product/skills/problem-quality-scorecard",
+      "issues": []
+    },
+    {
+      "skill": "problem-statement",
+      "path": "plugins/utopia-product/skills/problem-statement",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 176 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "product-as-decision",
+      "path": "plugins/utopia-product/skills/product-as-decision",
+      "issues": []
+    },
+    {
+      "skill": "product-frame-stack",
+      "path": "plugins/utopia-product/skills/product-frame-stack",
+      "issues": []
+    },
+    {
+      "skill": "prompt-engineer",
+      "path": "plugins/utopia-product/skills/prompt-engineer",
+      "issues": []
+    },
+    {
+      "skill": "proto-persona",
+      "path": "plugins/utopia-product/skills/proto-persona",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 152 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "quieter",
+      "path": "plugins/utopia-product/skills/quieter",
+      "issues": []
+    },
+    {
+      "skill": "railway",
+      "path": "plugins/utopia-product/skills/railway",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/central-station.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/database.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/deploy.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/deployment.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/domain.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/environment-config.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/environment.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/metrics.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/monorepo.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/new.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/projects.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/railpack.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/service.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/templates.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/variables.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "recommendation-canvas",
+      "path": "plugins/utopia-product/skills/recommendation-canvas",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 160 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "refine-flywheel",
+      "path": "plugins/utopia-product/skills/refine-flywheel",
+      "issues": []
+    },
+    {
+      "skill": "repo-scanner",
+      "path": "plugins/utopia-product/skills/repo-scanner",
+      "issues": []
+    },
+    {
+      "skill": "repo-structurer",
+      "path": "plugins/utopia-product/skills/repo-structurer",
+      "issues": []
+    },
+    {
+      "skill": "roadmap-planning",
+      "path": "plugins/utopia-product/skills/roadmap-planning",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 173 chars; add 'Use when ...' triggers"
+        }
+      ]
+    },
+    {
+      "skill": "saas-economics-efficiency-metrics",
+      "path": "plugins/utopia-product/skills/saas-economics-efficiency-metrics",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 664 lines (keep under 500; move detail to references/)"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/quickref.md is over 100 lines without a Contents list near the top"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "resources/unit-economics-template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "saas-revenue-growth-metrics",
+      "path": "plugins/utopia-product/skills/saas-revenue-growth-metrics",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 611 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "security-auditor",
+      "path": "plugins/utopia-product/skills/security-auditor",
+      "issues": []
+    },
+    {
+      "skill": "shape",
+      "path": "plugins/utopia-product/skills/shape",
+      "issues": []
+    },
+    {
+      "skill": "so-what-stress-test",
+      "path": "plugins/utopia-product/skills/so-what-stress-test",
+      "issues": []
+    },
+    {
+      "skill": "stitch-design-taste",
+      "path": "plugins/utopia-product/skills/stitch-design-taste",
+      "issues": []
+    },
+    {
+      "skill": "summarize-interview",
+      "path": "plugins/utopia-product/skills/summarize-interview",
+      "issues": []
+    },
+    {
+      "skill": "synthetic-users",
+      "path": "plugins/utopia-product/skills/synthetic-users",
+      "issues": []
+    },
+    {
+      "skill": "tacit-knowledge-interview",
+      "path": "plugins/utopia-product/skills/tacit-knowledge-interview",
+      "issues": []
+    },
+    {
+      "skill": "tdd-red-green-refactor",
+      "path": "plugins/utopia-product/skills/tdd-red-green-refactor",
+      "issues": []
+    },
+    {
+      "skill": "trace-to-interview",
+      "path": "plugins/utopia-product/skills/trace-to-interview",
+      "issues": []
+    },
+    {
+      "skill": "transformers-js",
+      "path": "plugins/utopia-product/skills/transformers-js",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-when",
+          "message": "description has no 'Use when ...' clause"
+        },
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 689 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "typed-service-contracts",
+      "path": "plugins/utopia-product/skills/typed-service-contracts",
+      "issues": []
+    },
+    {
+      "skill": "typeset",
+      "path": "plugins/utopia-product/skills/typeset",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "../impeccable/reference/typography.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "ui-ux-pro-max",
+      "path": "plugins/utopia-product/skills/ui-ux-pro-max",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "body-length",
+          "message": "SKILL.md body is 654 lines (keep under 500; move detail to references/)"
+        }
+      ]
+    },
+    {
+      "skill": "ui-walkthrough",
+      "path": "plugins/utopia-product/skills/ui-walkthrough",
+      "issues": [
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "SKILL.md mentions 'examples/github-action.yml', which does not exist"
+        },
+        {
+          "level": "error",
+          "code": "missing-path",
+          "message": "references/ci.md mentions 'examples/github-action.yml', which does not exist"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "references/tour.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "unserved-needs-finder",
+      "path": "plugins/utopia-product/skills/unserved-needs-finder",
+      "issues": []
+    },
+    {
+      "skill": "usability-test-protocol",
+      "path": "plugins/utopia-product/skills/usability-test-protocol",
+      "issues": []
+    },
+    {
+      "skill": "user-buyer-decider-map",
+      "path": "plugins/utopia-product/skills/user-buyer-decider-map",
+      "issues": []
+    },
+    {
+      "skill": "user-story",
+      "path": "plugins/utopia-product/skills/user-story",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "user-story-mapping",
+      "path": "plugins/utopia-product/skills/user-story-mapping",
+      "issues": []
+    },
+    {
+      "skill": "user-story-splitting",
+      "path": "plugins/utopia-product/skills/user-story-splitting",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "description-short",
+          "message": "description is only 176 chars; add 'Use when ...' triggers"
+        },
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "v1-launch-bar",
+      "path": "plugins/utopia-product/skills/v1-launch-bar",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "value-based-pricing",
+      "path": "plugins/utopia-product/skills/value-based-pricing",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "examples/sample.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "vercel-composition-patterns",
+      "path": "plugins/utopia-product/skills/vercel-composition-patterns",
+      "issues": []
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "path": "plugins/utopia-product/skills/vercel-react-best-practices",
+      "issues": []
+    },
+    {
+      "skill": "vercel-react-native-skills",
+      "path": "plugins/utopia-product/skills/vercel-react-native-skills",
+      "issues": []
+    },
+    {
+      "skill": "walkthrough-video",
+      "path": "plugins/utopia-product/skills/walkthrough-video",
+      "issues": []
+    },
+    {
+      "skill": "wedge-five-questions",
+      "path": "plugins/utopia-product/skills/wedge-five-questions",
+      "issues": []
+    },
+    {
+      "skill": "wizard-of-oz-probe",
+      "path": "plugins/utopia-product/skills/wizard-of-oz-probe",
+      "issues": []
+    },
+    {
+      "skill": "workflow-design",
+      "path": "plugins/utopia-product/skills/workflow-design",
+      "issues": [
+        {
+          "level": "warning",
+          "code": "no-toc",
+          "message": "template.md is over 100 lines without a Contents list near the top"
+        }
+      ]
+    },
+    {
+      "skill": "yoda-data-sourcing",
+      "path": "plugins/utopia-product/skills/yoda-data-sourcing",
+      "issues": []
+    }
+  ]
+}

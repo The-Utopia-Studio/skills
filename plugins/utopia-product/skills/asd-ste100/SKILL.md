@@ -1,6 +1,10 @@
 ---
 name: asd-ste100
-description: "Write, rewrite, or audit technical documentation in ASD-STE100 Simplified Technical English (Issue 9). Use when the user asks for Simplified Technical English or STE, mentions ASD-STE100, S1000D, ATA iSpec 2200, controlled or constrained English, or asks to make maintenance manuals, work instructions, procedures, safety warnings, SOPs, or operator documentation translation-ready, plain, or compliant with a controlled-language standard."
+description: >-
+  Writes, rewrites or audits technical documentation in ASD-STE100 Simplified Technical English
+  (Issue 9). Use when the user asks for STE or Simplified Technical English, mentions ASD-STE100,
+  S1000D or ATA iSpec 2200, or wants maintenance manuals, work instructions, SOPs, safety warnings
+  or procedures made controlled-language compliant and translation-ready.
 ---
 
 # ASD-STE100 Simplified Technical English

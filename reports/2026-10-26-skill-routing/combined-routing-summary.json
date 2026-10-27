@@ -1,0 +1,54 @@
+{
+  "claude": {
+    "before": {
+      "total": 337,
+      "scored": 328,
+      "correct": 193,
+      "errors": 9,
+      "pending": 0
+    },
+    "after": {
+      "total": 337,
+      "scored": 327,
+      "correct": 215,
+      "errors": 10,
+      "pending": 0
+    },
+    "paired": {
+      "scored": 324,
+      "correct_before": 193,
+      "correct_after": 213,
+      "fixed": 41,
+      "regressed": 21
+    }
+  },
+  "codex": {
+    "before": {
+      "total": 337,
+      "scored": 337,
+      "correct": 337,
+      "errors": 0,
+      "pending": 0
+    },
+    "after": {
+      "total": 337,
+      "scored": 337,
+      "correct": 335,
+      "errors": 0,
+      "pending": 0
+    },
+    "paired": {
+      "scored": 337,
+      "correct_before": 337,
+      "correct_after": 335,
+      "fixed": 0,
+      "regressed": 2
+    }
+  },
+  "cross_provider": {
+    "complete_in_all_four_runs": 324,
+    "fixed_in_both": 0,
+    "regressed_in_both": 0,
+    "opposite_changes": 0
+  }
+}

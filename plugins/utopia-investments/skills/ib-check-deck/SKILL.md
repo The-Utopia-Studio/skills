@@ -1,15 +1,11 @@
 ---
 name: ib-check-deck
 description: >-
-  QC a finished deck before it goes out: checks that numbers are consistent across slides
-  (with a script that normalises $M/$MM and flags conflicting values), that charts and the
-  narrative agree, that the language is client-ready or board-ready, and that sources, labels
-  and formatting are clean; reports issues by severity (critical / important / minor) with
-  slide numbers. Read-only. Use this skill whenever the user asks to "QC", "check", "proof",
-  "review" or do a "final pass" on a deck or slides, says "check my numbers", "the ARR on
-  slide 3 doesn't match slide 11", "reconcile figures across slides", "is this client-ready /
-  board-ready" or "what am I missing before I send this". Not for updating figures (use
-  deck-refresh) or building a deck (use pitch-deck).
+  QCs a finished deck before it goes out: checks numbers agree across slides, charts match the
+  narrative, language is client- or board-ready and sources and labels are clean, reporting issues
+  by severity with slide numbers. Read-only. Use when the user asks to QC, proof or do a final
+  pass on a deck, says "check my numbers", "slide 3 doesn't match slide 11" or "is this board-
+  ready". Not for updating figures (use deck-refresh).
 ---
 
 # IB Deck Checker

@@ -70,10 +70,10 @@ npx skills add The-Utopia-Studio/skills
 
 | Module | Pack | Skills | Covers |
 |--------|------|--------|--------|
-| **GTM** | `utopia-gtm` `v2.3.1` | 54 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
-| **Product** | `utopia-product` `v2.3.1` | 130 | Discovery, PRDs, design, build, deploy, product metrics |
-| **Investments** | `utopia-investments` `v2.2.0` | 42 | DD, modeling, valuation, capital markets, fundraising decks |
-| **Founder Productivity** | `utopia-founder-productivity` `v2.1.0` | 28 | Onboarding, legal, Obsidian, agents, meta tools |
+| **GTM** | `utopia-gtm` `v3.0.0` | 50 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
+| **Product** | `utopia-product` `v3.0.0` | 134 | Discovery, PRDs, design, build, deploy, product metrics |
+| **Investments** | `utopia-investments` `v3.0.0` | 42 | DD, modeling, valuation, capital markets, fundraising decks |
+| **Founder Productivity** | `utopia-founder-productivity` `v3.0.0` | 28 | Onboarding, legal, Obsidian, agents, meta tools |
 
 Exact lists: [`packs.config.json`](./packs.config.json).
 
@@ -88,7 +88,7 @@ Consolidation changes, measured routing results, and remaining test work:
 | `cold-email` / `account-tier-scoring` | Intent → prioritized outreach |
 | `warm-intro-intelligence` | Warm paths into target accounts |
 | `deal-velocity-engineer` / `revops-forecasting` | Stalled deals + forecast accuracy |
-| `call-scorecards` / `earned-autonomy` | Call coaching + agent autonomy levels |
+| `call-scorecards` / `agent-autonomy-levels` | Call coaching + agent autonomy levels |
 | `email-deliverability` / `cold-offer-architect` | Inbox placement + offer quality before copy |
 
 ## Submit a skill with your AI

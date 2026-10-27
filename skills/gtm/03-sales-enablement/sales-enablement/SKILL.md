@@ -1,6 +1,10 @@
 ---
 name: sales-enablement
-description: "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. Not for competitive battlecards (use competitive-battlecard), deal inspection (use deal-velocity-engineer), or investor pitch decks (use pitch-deck). For marketing website copy, see copywriting. For cold outreach emails, see cold-email."
+description: >-
+  Creates sales collateral reps actually use: sales decks, one-pagers, leave-behinds, objection
+  handling docs, demo scripts, talk tracks, ROI analyses and sales playbooks. Use when asked for a
+  sales deck, one-pager, demo script, objection handling, or what to give sales reps. Not for
+  investor pitch decks (use pitch-deck).
 metadata:
   version: 1.1.0
 ---

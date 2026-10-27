@@ -1,17 +1,11 @@
 ---
 name: ai-sdr
 description: >-
-  Use this skill to build an AI-powered outbound or cold outreach system end to
-  end: "build our AI SDR", "set up our outbound machine", "Clay-enriched lists
-  into Instantly with AI-written first lines", "how many domains and mailboxes for
-  600 emails a day", "what reply and meeting rates should we expect", "cost per
-  meeting". Covers buying an AI SDR platform (11x, Artisan, AiSDR) versus building
-  on Clay, Instantly, Smartlead, n8n and an LLM; signal-to-sequence routing;
-  automated qualification; sending capacity; reply handling and human handoff;
-  the 4-week rollout; benchmarks and cost model. Not for writing, personalizing
-  or scoring individual emails (use cold-email), diagnosing spam placement or a
-  blocklisted domain (use email-deliverability), enrichment waterfall design (use
-  lead-enrichment), or scoring accounts (use account-tier-scoring).
+  Designs an AI SDR outbound system end to end: buy (11x, Artisan) vs build on Clay, Instantly and
+  an LLM, signal-to-sequence routing, sending capacity, reply handling, rollout plan, benchmarks
+  and cost per meeting. Use when building an outbound machine, sizing domains and mailboxes for
+  daily volume, or estimating reply and meeting rates. Not for writing individual cold emails (use
+  cold-email).
 ---
 
 # AI SDR Skill

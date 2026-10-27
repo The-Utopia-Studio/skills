@@ -1,6 +1,11 @@
 ---
 name: eval-first-spec
-description: Turn a validated wedge into the scope you can SCORE — a one-sentence job, 20 pass/fail golden cases drawn from real artefacts, an L0–L4 autonomy level with a failure taxonomy and a derived acceptable failure rate per mode, and a cost-per-outcome budget to the cent. Fires on "spec the build", "define scope", "scope the v1", "write the spec", "how do we know it works". Not for the component pipeline or effort split (use compound-system-architecture), not for pilot price / terms / commercial success metrics (use pilot-six-term-sheet), not for whether the thing gets adopted at all (use wedge-five-questions).
+description: >-
+  Turns a validated wedge into a scoreable build spec: a one-sentence job, 20 pass/fail golden
+  cases from real artefacts, an L0-L4 autonomy level with failure taxonomy and acceptable failure
+  rate per mode, and a cost-per-outcome budget. Use when a fellow says spec the build, scope the
+  v1, define scope, write the spec, or how do we know it works. Not for the component pipeline
+  (use compound-system-architecture).
 type: generator
 supersedes: none
 ---

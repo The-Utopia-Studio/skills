@@ -1,16 +1,11 @@
 ---
 name: bayesian-reasoning-calibration
 description: >-
-  Update a probability with new evidence using Bayes' rule, and show the maths: prior,
-  likelihoods P(E|H) and P(E|not H), likelihood ratio, posterior, and a calibration and
-  sensitivity check. Use this skill whenever the user says something like "I thought there was
-  a 30% chance, now X happened, what should I believe?", "update my probability", "how much
-  should this evidence move me", "given these hit rates, what are the odds now", or gives a
-  prior plus new data (a pilot result, a signal, a test outcome) and wants a revised estimate.
-  Also for adverse selection in unsolicited offers: assess how the proposer selected the deal
-  using an evidence-based prior and selection likelihoods, not a fixed penalty. Not
-  for finding the starting base rate (use reference-class-forecasting) or for auditing your
-  reasoning for bias (use scout-mindset-bias-check).
+  Updates a probability with new evidence using Bayes' rule and shows the maths: prior,
+  likelihoods, likelihood ratio, posterior, plus a calibration and sensitivity check. Use when the
+  user says "I thought 30%, now X happened", "update my probability", "how much should this move
+  me", gives a prior plus a pilot or test result, or asks how an unsolicited offer was selected.
+  Not for finding the base rate (use reference-class-forecasting).
 ---
 
 # Bayesian Reasoning & Calibration

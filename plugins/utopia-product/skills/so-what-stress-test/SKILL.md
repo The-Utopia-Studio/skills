@@ -1,14 +1,11 @@
 ---
 name: so-what-stress-test
 description: >-
-  Pressure-test a whole business idea fast on five questions: So what? Who pays? What's the wedge?
-  What's the moat? What kills it? Use when the user asks to pressure-test, stress-test or poke holes
-  in an idea, asks 'is this worth doing' or 'so what', or wants a quick pass / redesign / kill verdict
-  on a venture or marketplace idea. Returns a per-question verdict table and an overall Pass /
-  Redesign / Kill, refusing to pass any question answered on opinion. Do NOT use for the numeric
-  8-dimension problem gate (use problem-quality-scorecard), the 5-lens adversarial teardown of a raw
-  idea that ends in one probe (use concept-council), or a wedge-only deep dive (use
-  wedge-five-questions).
+  Pressure-tests a whole business idea on five questions (so what, who pays, what is the wedge,
+  what is the moat, what kills it) and returns a per-question verdict and an overall pass,
+  redesign or kill, failing any answer based on opinion. Use when the user asks to stress-test or
+  poke holes in an idea, asks is this worth doing, or wants a quick verdict on a venture. Not for
+  the numeric 8-dimension problem gate (use problem-quality-scorecard).
 type: interactive
 supersedes: none
 ---

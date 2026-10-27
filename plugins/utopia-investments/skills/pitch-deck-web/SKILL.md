@@ -1,13 +1,11 @@
 ---
 name: pitch-deck-web
 description: >-
-  Builds a pitch deck as a responsive, interactive website (Vite + React + TypeScript +
-  Tailwind + motion, section-scroll pattern) from a brand book plus a PRD or existing deck,
-  then validates and optionally deploys it. Use when the user wants a web deck, deck
-  website, interactive or scrolling pitch site, a deck as a React/Vite app, or a deck
-  deployed to Vercel/Netlify, for investor or sales audiences.
-  Not for a PowerPoint/PPTX deck (use pitch-deck) or for filling a banker's PPT template
-  (use ib-pitch-deck).
+  Builds a pitch deck as a responsive scrolling website (Vite, React, TypeScript, Tailwind,
+  motion) from a brand book plus a PRD or existing deck, then validates and optionally deploys it.
+  Use when the user wants a web deck, deck website, interactive pitch site, a deck as a React app,
+  or a deck deployed to Vercel or Netlify, for investors or sales. Not for a PowerPoint deck (use
+  pitch-deck).
 ---
 
 # Pitch Deck — guided build

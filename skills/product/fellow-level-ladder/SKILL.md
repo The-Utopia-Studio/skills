@@ -1,16 +1,11 @@
 ---
 name: fellow-level-ladder
 description: >-
-  Assess where ONE fellow sits on the Icarus ladder (Literate, Practitioner, Operator, Frontier,
-  Author) by checking which EXIT ARTEFACT each level requires actually EXISTS and can be cited, never
-  by how ready the fellow feels. Fires on 'how's this fellow doing', 'assess a fellow', 'what level am
-  I / is this fellow at', 'am I ready to level up'. Output: the ladder table with a cited artefact and
-  evidence rung per rung, the assigned level (highest with an unbroken artefact chain beneath it), and
-  the single next exit artefact plus the skill that produces it. Self-assessment on feelings or tenure
-  scores 0.1. NOT the build-vs-buy boundary with Daedalus (use platform-vs-venture), NOT where a
-  fellow should start or which stages fit their type (use fellow-path-router), NOT re-running an
-  artefact's own gate (problem-quality-scorecard, pilot-six-term-sheet, evidence-ladder: this cites
-  their verdicts).
+  Assesses which Icarus level one fellow holds (Literate, Practitioner, Operator, Frontier,
+  Author) by checking which required exit artefacts actually exist, never by self-assessment, and
+  names the next artefact and the skill that produces it. Use when the user asks how a fellow is
+  doing, what level they are at, or whether they are ready to level up. Not for where a new fellow
+  should start (use fellow-path-router).
 type: interactive
 supersedes: none
 ---
@@ -53,7 +48,7 @@ Do not use it for these — hand off instead:
 
 | If the fellow wants… | Use instead |
 |---|---|
-| The line between what Daedalus builds once and what the fellow owns (build vs buy, "what does the platform give me") | `platform-vs-venture` (sibling, section 10). This skill *reads* that map only to test the Author rung; it does not draw the boundary. |
+| The line between what Daedalus builds once and what the fellow owns (build vs buy, "what does the platform give me") | `build-vs-buy-boundary` (sibling, section 10). This skill *reads* that map only to test the Author rung; it does not draw the boundary. |
 | Where to START / which Icarus stages apply to their type (blank page vs traction vs mature product) | `fellow-path-router` (section 00). It classifies and routes the flow; this grades progression against exit artefacts. |
 | To score the problem / check the pilot is real / weight a discovery signal | the artefact's own skill: `problem-quality-scorecard`, `pilot-six-term-sheet`, `evidence-ladder`. This skill cites their verdicts; it never re-derives them. |
 
@@ -87,8 +82,8 @@ artefact that only reaches a lower rung, is NOT HELD.
 | **Literate** | a **passed** problem-quality-scorecard (verdict PASS, ≥ 32/40) | `problem-quality-scorecard` (01) | artefact 0.5 | the fellow has framed a problem to first principles and cleared the go/no-go gate |
 | **Practitioner** | an evidence-ladder table whose load-bearing claim sits at **behaviour 0.7 or higher**, produced by a probe the fellow actually ran | `probe-matrix` (04) + `evidence-ladder` (02) | behaviour 0.7 | a real user *did* something; a claim moved up the ladder by observation, not enthusiasm |
 | **Operator** | a **signed** pilot-six-term-sheet, 6/6 terms non-empty, price > 0 that moves | `pilot-six-term-sheet` (07) | money 1.0 | a validated problem converted into a paying customer commitment |
-| **Frontier** | a v1-launch-bar **GO** (both gates green on tape) AND a refine-flywheel cadence doc with ≥ 1 autonomy promotion logged **as a scored eval result** | `v1-launch-bar` (07) + `refine-flywheel` (08) | behaviour 0.7, compounding in production | a shipped product provably learns from corrections and raised its own autonomy by eval, not by feel |
-| **Author** | a moat-design-canvas with the **data-advantage gate cleared** (through-it signal logged) AND a platform-vs-venture map placing a specific **owned, reused** asset on the venture side | `moat-design-canvas` (06) + `platform-vs-venture` (10) | money 1.0, durable | the fellow authored defensible IP that compounds and that others build on |
+| **Frontier** | a v1-launch-bar **GO** (both gates green on tape) AND a refine-flywheel cadence doc with ≥ 1 autonomy promotion logged **as a scored eval result** | `v1-launch-bar` (07) + `post-launch-refine-loop` (08) | behaviour 0.7, compounding in production | a shipped product provably learns from corrections and raised its own autonomy by eval, not by feel |
+| **Author** | a moat-design-canvas with the **data-advantage gate cleared** (through-it signal logged) AND a platform-vs-venture map placing a specific **owned, reused** asset on the venture side | `moat-design-canvas` (06) + `build-vs-buy-boundary` (10) | money 1.0, durable | the fellow authored defensible IP that compounds and that others build on |
 
 Tag every citation `[Fact]` (you can see the artefact), `[Assumption]` (you were
 told it exists but cannot see it), or `[Hypothesis]` (it is planned). Only `[Fact]`
@@ -167,7 +162,7 @@ pilot-six-term-sheet named as the next exit artefact.
 
 ## Related skills
 
-- `platform-vs-venture` (section 10, sibling) — draws the build-vs-buy boundary
+- `build-vs-buy-boundary` (section 10, sibling) — draws the build-vs-buy boundary
   this skill reads to test the Author rung. Compose them: assess the fellow here,
   and when Author is the open question, run platform-vs-venture to check the moat
   asset is actually owned.
@@ -175,7 +170,7 @@ pilot-six-term-sheet named as the next exit artefact.
   type; this grades where they have got to. Path-router at intake, level-ladder at
   review.
 - `problem-quality-scorecard` (01), `probe-matrix` (04) + `evidence-ladder` (02),
-  `pilot-six-term-sheet` (07), `v1-launch-bar` (07) + `refine-flywheel` (08),
+  `pilot-six-term-sheet` (07), `v1-launch-bar` (07) + `post-launch-refine-loop` (08),
   `moat-design-canvas` (06) — the skills that *produce* the five exit artefacts.
   This ladder cites their outputs; it never re-runs their gates.
 - Supersedes nothing. There is no generic "founder maturity model" to beat; the

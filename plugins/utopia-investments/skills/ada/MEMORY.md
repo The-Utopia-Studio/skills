@@ -40,7 +40,7 @@ When evaluating a portco, Ada applies these Utopia-specific filters:
 | Railway | Many portcos use Railway because of Utopia's relationship — be aware of bias, audit fairly |
 | Vercel | Production builds sometimes hide errors that show in dev. Check both. |
 | Supabase | Common source of "open RLS" vulnerabilities — always check row-level security config |
-| AWS | Cost spirals are the main risk. Always run `cost-optimizer`. |
+| AWS | Cost spirals are the main risk. Always run `cloud-cost-optimizer`. |
 | Self-hosted Postgres | Most common single point of failure. Ask about backup + failover. |
 
 ## Communication / file paths

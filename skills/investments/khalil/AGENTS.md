@@ -37,7 +37,7 @@ Khalil orchestrates these existing skills:
 
 | Phase | Skill(s) used | Why |
 |-------|--------------|-----|
-| 1. Narrative | `business-narrative-builder` | Find the through-line in the founder's notes |
+| 1. Narrative | `valuation-narrative` | Find the through-line in the founder's notes |
 | 2. Competitive | `competitive-analysis` | If the deck needs a competitive slide |
 | 3. Data pack | `datapack-builder` | Pull/normalize data from CIMs, SEC filings, etc. |
 | 4. Slide composition | `pitch-deck` | Generate the Utopia-branded PPTX |

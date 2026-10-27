@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Design a distinctive marketing landing page for a climate-fintech dashboard. Avoid generic AI aesthetics.",
-      "expected_output": "Should orchestrate or reference the impeccable pipeline (shape \u2192 layout/typeset/colorize \u2192 critique/audit/polish). Should push past purple-gradient / generic SaaS defaults toward a specific visual direction.",
+      "expected_output": "Should orchestrate or reference the impeccable pipeline (ui-design-brief → ui-layout-spacing/ui-typography/ui-color → ui-critique/ui-audit/ui-polish). Should push past purple-gradient / generic SaaS defaults toward a specific visual direction.",
       "assertions": [
         "Invokes or sequences impeccable design steps",
         "Rejects generic AI aesthetic defaults",

@@ -1,16 +1,11 @@
 ---
 name: synthetic-users
 description: >-
-  Build a synthetic user panel grounded in your YODA corpus and pre-test a concept, message, or flow
-  against it — cheaply, before you spend real interview time. Returns a Synthetic Panel + Pre-Test
-  Transcript carrying a lie ledger (what synthetic users systematically get wrong: they never pay,
-  never no-show, over-rationalise, over-agree) and a kill / revise / promote-to-real-interview
-  verdict. Fires on "test this before real interviews", "simulate a user", "dry-run the pitch",
-  "pre-test the message/flow", "which of these should I even bother interviewing about". NOT for
-  running the real interview that captures an expert's judgment (use tacit-knowledge-interview),
-  scripting a Mom-Test discovery interview (use discovery-interview-prep) or planning one (use
-  discovery-interview-prep), or sourcing the corpus the panel is built from (use yoda-data-sourcing).
-  Never treats a synthetic response as validation.
+  Builds a synthetic user panel grounded in the team's proprietary data and pre-tests a concept,
+  message or flow on it before real interviews, with a ledger of what synthetic users get wrong
+  and a kill / revise / take-to-real-interview verdict. Use when the user wants to simulate a
+  user, dry-run a pitch, or pre-test before booking interviews. Not for planning real interviews
+  (use discovery-interview-prep).
 type: interactive
 supersedes: none
 ---
@@ -34,7 +29,7 @@ Do not use it for:
 | To watch a real expert do a real task and capture their judgment | `tacit-knowledge-interview` | That creates real behaviour signal (0.7); this simulates and caps at [Hypothesis]. This runs *before* it to decide whether that interview is worth booking. |
 | A Mom-Test script for a real discovery interview | `discovery-interview-prep` | That prepares questions for a real person; this poses a concept to a simulation. |
 | To plan/prep real discovery interviews (goal, segment, method) | `discovery-interview-prep` | That plans the real round; this pre-screens what the round should even cover. |
-| To source the proprietary data the panel is built from | `yoda-data-sourcing` | That finds the corpus; this consumes it. No corpus, no grounded panel — see Step 0. |
+| To source the proprietary data the panel is built from | `proprietary-data-sourcing` | That finds the corpus; this consumes it. No corpus, no grounded panel — see Step 0. |
 | To find the unmet need, or map who the buyer is | `unserved-needs-finder`, `user-buyer-decider-map` | Those define what to build for and who buys; this pre-tests a concept once you have one. |
 
 Never use it to produce a "validated" claim. That is the one output it must refuse (see Kill line).
@@ -45,7 +40,7 @@ Fill `template.md` as you go. The watch-out running through every step: a synthe
 
 ### Step 0 — No corpus, no panel
 
-A synthetic user is only worth building from real proprietary data. If the fellow has no YODA corpus — no field logs, no shadow threads, no tacit capture, no transaction record — stop. A persona built from the base model is the model's prior about your market wearing a name tag, and testing your concept against it tells you exactly what every competitor's model would also say: nothing proprietary. Route to `yoda-data-sourcing`. For each panellist you do build, name the corpus slice it is grounded in. A panellist with no named slice is a fiction; delete it.
+A synthetic user is only worth building from real proprietary data. If the fellow has no YODA corpus — no field logs, no shadow threads, no tacit capture, no transaction record — stop. A persona built from the base model is the model's prior about your market wearing a name tag, and testing your concept against it tells you exactly what every competitor's model would also say: nothing proprietary. Route to `proprietary-data-sourcing`. For each panellist you do build, name the corpus slice it is grounded in. A panellist with no named slice is a fiction; delete it.
 
 ### Step 1 — Declare the target and the kill question
 
@@ -130,7 +125,7 @@ Done means: every panellist is grounded in a named corpus slice, every logged re
 ## Gotchas
 
 - **The confirmation machine.** Fellows build panels to hear yes, and a synthetic panel will say yes to almost anything — over-agree plus never-pay. If your run came back mostly positive, you did not test; a machine flattered you. Re-read only the negatives, and if there are none, distrust the run before you trust the concept.
-- **An ungrounded panel is the base model's prior in costume.** If a panellist is not built from a specific corpus slice, you are testing your concept against what the foundation model already believes about your market — the same belief every competitor's model holds. Zero proprietary signal. This is the failure `yoda-data-sourcing` guards against, one level up.
+- **An ungrounded panel is the base model's prior in costume.** If a panellist is not built from a specific corpus slice, you are testing your concept against what the foundation model already believes about your market — the same belief every competitor's model holds. Zero proprietary signal. This is the failure `proprietary-data-sourcing` guards against, one level up.
 - **Panel inflation feels like rigour and isn't.** Fifty synthetic users share one prior; you get one answer with noise dressed as a sample. Signal comes from grounding breadth — different corpus slices — not headcount. Four well-grounded panellists beat fifty clones.
 - **Survival is not validation.** A concept that survives the synthetic screen has earned a real interview, nothing more. The lie ledger exists so no one reads "the synthetic users loved it" as evidence. The moment "validated" sits beside a synthetic result, the skill has failed its own kill line.
 - **Demand characteristics.** The synthetic user infers what you want to hear from how you phrase the concept, and hands it back. Where you can, pose the flow or message neutrally — describe the situation, not the pitch — so a "no" has room to happen.
@@ -142,7 +137,7 @@ See `examples/sample.md` for a full run on Mentix: a four-panellist panel built 
 
 ## Related skills
 
-- `yoda-data-sourcing` (section 03) — sources the corpus this skill consumes. Run it first; a panel with no corpus is Step 0's stop.
+- `proprietary-data-sourcing` (section 03) — sources the corpus this skill consumes. Run it first; a panel with no corpus is Step 0's stop.
 - `tacit-knowledge-interview` (section 02) — the real interview this skill pre-tests *before*. A captured judgment is also excellent grounding for a panellist. Promote survivors here; never let this skill stand in for it.
 - `discovery-interview-prep` (section 02) — the real Mom-Test round. This skill decides what that round is even worth covering.
 - `unserved-needs-finder`, `user-buyer-decider-map` (section 02) — define the need and the buyer; this pre-tests a concept once you have one.

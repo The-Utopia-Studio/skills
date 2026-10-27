@@ -1,6 +1,10 @@
 ---
 name: page-cro
-description: When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says "CRO," "conversion rate optimization," "this page isn't converting," "improve conversions," "why isn't this page working," "my landing page sucks," "nobody's converting," "low conversion rate," "bounce rate is too high," "people leave without signing up," or "this page needs work." Use this even if the user just shares a URL and asks for feedback — they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro.
+description: >-
+  Audits and improves conversion on marketing pages: homepage, landing, pricing, feature and blog
+  pages, covering value proposition clarity, headlines, CTAs, visual hierarchy and trust signals.
+  Use when a page is not converting, bounce rate is high, people leave without signing up, or the
+  user shares a URL for feedback. Not for signup or registration flows (use signup-flow-cro).
 metadata:
   version: 1.1.0
 ---

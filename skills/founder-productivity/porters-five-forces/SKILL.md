@@ -1,6 +1,11 @@
 ---
 name: porters-five-forces
-description: "Perform Porter's Five Forces analysis — competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness."
+description: >-
+  Runs a Porter's Five Forces analysis of an industry: competitive rivalry, supplier power, buyer
+  power, threat of substitutes and threat of new entrants, with an attractiveness verdict and
+  strategic implications. Use when the user asks for Porter's five forces, industry analysis,
+  competitive dynamics or how attractive a market is. Not for macro political, economic or legal
+  factors (use pestel-analysis).
 ---
 # Porter's Five Forces
 

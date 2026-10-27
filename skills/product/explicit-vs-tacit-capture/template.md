@@ -80,6 +80,6 @@ Confirm the moat did not get buried in the commodity.
 
 ## 5. Handoff
 
-- **Captured moat rows** → the seed for `dataset-builder` (build the labelled set around these, not the commodity) and a P-band row in `yoda-data-sourcing`.
+- **Captured moat rows** → the seed for `dataset-builder` (build the labelled set around these, not the commodity) and a P-band row in `proprietary-data-sourcing`.
 - **Placeholders** → `tacit-knowledge-interview` to observe and lift 0.1 → 0.7.
 - **Commodity** → onboarding docs / automation backlog. Not the product's differentiation.

@@ -1,6 +1,11 @@
 ---
 name: problem-framing-canvas
-description: Guide teams through MITRE's Problem Framing Canvas. Use when you need a clearer problem statement before jumping to solutions.
+description: >-
+  Runs the MITRE Problem Framing Canvas: look inward at assumptions and biases, look outward at
+  who has the problem and who is left out, then reframe into a problem statement and How Might We
+  question. Use when the user has a messy problem, wants to reframe a stakeholder request, or
+  needs a clearer problem statement before solutioning. Not for a single persona-centred problem
+  statement (use problem-statement).
 intent: >-
   Guide product managers through the MITRE Problem Framing Canvas process by asking structured questions across three phases: Look Inward (examine your own assumptions and biases), Look Outward (understand who experiences the problem and who doesn't), and Reframe (synthesize insights into an actionable problem statement and "How Might We" question). Use this to ensure you're solving the right problem before jumping to solutions—avoiding confirmation bias, overlooked stakeholders, and solution-first thinking.
 type: interactive

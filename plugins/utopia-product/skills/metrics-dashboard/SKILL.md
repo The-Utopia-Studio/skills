@@ -1,6 +1,11 @@
 ---
 name: metrics-dashboard
-description: "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan."
+description: >-
+  Designs a product metrics dashboard spec: North Star, input, health and business metrics, each
+  with an exact definition, data source, chart type, target and alert threshold. Use when the user
+  asks to build or define a metrics dashboard, set KPIs and alerts, or plan product data
+  monitoring. Not for choosing which few metrics matter or validating a North Star (use metrics-
+  that-matter).
 ---
 
 ## Product Metrics Dashboard

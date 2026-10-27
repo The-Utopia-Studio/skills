@@ -1,6 +1,11 @@
 ---
 name: investor-reading-room
-description: Use when a founder is raising and needs the whole set of investor documents rather than one file — "build my data room", "investor reading room", "what documents do investors need", "set up our diligence pack", "share our materials with investors", or when they have a deck but nothing behind it. Also use to audit an existing room for gaps, contradictions, and documents that should not be in there. This is the entry point; it decides the document set, the build order, and hands off to investor-deal-sheet, investor-memorandum, investor-faq, investor-fact-ledger and investor-doc-system.
+description: >-
+  Plans and builds a founder's full investor data room: decides the document set and build order,
+  then hands off to the deal sheet, memorandum, FAQ, fact ledger and doc system skills; also
+  audits an existing room for gaps and contradictions. Use when a founder says "build my data
+  room", "investor reading room", "what documents do investors need", "set up our diligence pack",
+  or has a deck but nothing behind it.
 ---
 
 # Investor Reading Room

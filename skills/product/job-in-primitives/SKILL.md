@@ -1,15 +1,11 @@
 ---
 name: job-in-primitives
 description: >-
-  Strip a workflow down to the primitive job underneath: delete every tool, vendor, product and
-  job-title name, then state the job in three currencies (information moved, decisions made, liability
-  transferred). Use when the user describes a process full of tool and team names (Salesforce, Zapier,
-  Jira, Slack, 'the VP approves') and asks what job is really being done, to strip it to the
-  primitive, or to take the tools out. Outputs a primitive job spec: the customer's-words version, a
-  kill-list of deleted proper nouns, the three primitive lines, an invariance test and an
-  AI-eats-vs-stays split. NOT naming the single decision and its before-after compression (use
-  product-as-decision), NOT pricing each workflow step (use current-state-map), NOT the
-  problem-framing workshop (use problem-framing-canvas).
+  Strips a workflow to the primitive job underneath: deletes every tool, vendor and job-title
+  name, then states the job as information moved, decisions made and liability transferred, with
+  an invariance test. Use when the user describes a process full of tool and team names and asks
+  what job is really being done, to strip it to the primitive, or to take the tools out. Not for
+  pricing each workflow step (use current-state-map).
 type: generator
 supersedes: none
 ---
@@ -31,7 +27,7 @@ Use it at the very start, on a job you can describe concretely from a real insta
 | "Take the product/team names out — what's the underlying job?" | Yes | job-in-primitives |
 | "State this as the one decision we're changing, and how much faster it gets." | No | `product-as-decision` |
 | "Map how it's done today and price every step." | No | `current-state-map` |
-| "What's the riskiest assumption / how would I disprove it?" | No | `null-hypothesis-test` |
+| "What's the riskiest assumption / how would I disprove it?" | No | `falsify-plan-assumptions` |
 | "Is the whole idea any good?" | No | `so-what-stress-test` |
 
 This skill isolates the job beneath the tools. It does not pick the one decision (that is `product-as-decision`, which reads off the decisions line here), and it does not re-attach tools to price them (that is `current-state-map`). Name the sibling and stop.
@@ -92,5 +88,5 @@ If the whole spec sits on opinion (0.1), the skill declares the input **not read
 ## Related skills
 - Absorbs `discovery/problem-framing-canvas`: it keeps that canvas's one good instinct — look past the stated symptom to the job underneath — and drops the workshop scaffolding and the prose "How Might We" output. Where the canvas ends in a reframed sentence, this ends in a tool-independent spec with an automatable/liability split you can act on. It beats the canvas by being testable (the invariance test and kill-line gate either pass or they do not).
 - Feeds `product-as-decision`, which lifts the one decision from this skill's decisions line and compresses its time; and `current-state-map`, which re-attaches the tools and prices each step. Run this first: primitives, then the decision, then the priced map.
-- Feeds `moat-design-canvas` and `physics-floor-gap`: the liability line is the moat input, the information line is the automation floor input.
+- Feeds `moat-design-canvas` and `unit-cost-floor-gap`: the liability line is the moat input, the information line is the automation floor input.
 - `so-what-stress-test` scores the whole concept; this only isolates the job beneath it. Supersedes nothing — it is the reduction primitive the others read from.

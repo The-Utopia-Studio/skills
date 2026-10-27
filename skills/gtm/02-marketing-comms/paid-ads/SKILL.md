@@ -1,6 +1,10 @@
 ---
 name: paid-ads
-description: "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro."
+description: >-
+  Plans and optimizes paid ad campaigns on Google, Meta, LinkedIn, X and other platforms: platform
+  choice, campaign structure, audience targeting, bidding, budgets, retargeting and ROAS/CPA
+  optimization. Use when asked should I run ads, setting up PPC or paid social, cutting cost per
+  click, or scaling ad spend. Not for writing bulk ad copy variations (use ad-creative).
 metadata:
   version: 1.1.0
 ---

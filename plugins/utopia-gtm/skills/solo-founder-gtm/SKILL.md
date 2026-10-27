@@ -1,15 +1,11 @@
 ---
 name: solo-founder-gtm
 description: >-
-  Use this skill when a solo founder needs their whole go-to-market operating
-  playbook: which motion to run at their MRR stage, the one-person tool stack,
-  which AI agents to set up first, how to split their hours, founder-led sales,
-  building in public, and when to make the first hire. Triggers: "I'm a solo
-  founder at $X MRR", "one-person startup", "solopreneur", "scale without hiring",
-  "AI agents as my team", "when should I hire". Not for a prioritized list of
-  marketing ideas or tactics to try (use marketing-ideas), a single channel's
-  execution (use paid-ads, social-content, cold-email), or choosing PLG vs
-  sales-led for a funded team (use sales-motion-design).
+  Gives a solo founder a full go-to-market operating playbook: motion by MRR stage, one-person
+  tool stack, which AI agents to set up first, time split, founder-led sales, building in public
+  and when to hire. Use when the user is a solo founder or solopreneur, wants to scale without
+  hiring, use AI agents as the team, or asks when to hire. Not for a list of marketing tactics
+  (use marketing-ideas).
 ---
 
 # Solo Founder GTM: The Complete Playbook for Scaling Without Hiring

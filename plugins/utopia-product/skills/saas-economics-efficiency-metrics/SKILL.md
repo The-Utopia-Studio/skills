@@ -1,15 +1,11 @@
 ---
 name: saas-economics-efficiency-metrics
 description: >-
-  Calculate and judge unit economics and capital efficiency from the user's numbers: gross and
-  contribution margin, CAC, LTV, LTV:CAC, CAC payback, burn, runway, Rule of 40, magic number, by
-  segment and channel, for SaaS and for marketplace, e-commerce, freemium or enterprise models. Use
-  whenever the user pastes figures like ARPA, AOV, take rate, churn, CAC, S&M spend or burn and asks
-  to check or analyze unit economics, whether LTV/CAC is healthy, the payback, or whether they can
-  scale paid acquisition; also for quick formula and benchmark lookups ('what's the formula and a good
-  benchmark for CAC payback / magic number / Rule of 40'). Not for MRR, churn, NRR and expansion
-  metrics (use saas-revenue-growth-metrics) or cost per outcome of an AI product (use
-  metrics-that-matter).
+  Calculates and judges unit economics and capital efficiency from the user's numbers: gross and
+  contribution margin, CAC, LTV, LTV:CAC, payback, burn, runway, Rule of 40 and magic number, for
+  SaaS and other models. Use when the user pastes ARPA, churn, CAC, spend or burn figures and asks
+  if unit economics are healthy, the payback, or whether to scale paid acquisition. Not for MRR,
+  churn and NRR (use saas-revenue-growth-metrics).
 intent: >-
   Determine whether your SaaS business model is fundamentally viable and capital-efficient. Use this to calculate unit economics, assess profitability, manage cash runway, and decide when to scale vs. optimize. Essential for fundraising, board reporting, and making smart investment trade-offs.
 type: component

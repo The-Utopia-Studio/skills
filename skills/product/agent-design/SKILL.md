@@ -1,16 +1,10 @@
 ---
 name: agent-design
 description: >-
-  Fires when a fellow is designing ONE production agent and asks what it should be built from: 'design
-  an agent for X', 'what tools and memory does this agent need', 'our agent isn't getting smarter /
-  never remembers corrections, how do we build its memory'. Returns a four-part agent spec (role as
-  one owned decision, tools as the commodity shell, memory layer of CLAUDE.md, skills, lessons.md and
-  trace archive loaded at birth, and eval), where the memory layer is the only part the fellow owns
-  and therefore the only part that compounds. Do NOT fire for the agent's voice or persona (use
-  agent-persona-builder), the full pre-code Agent PRD with interview gates and engineering work orders
-  (use agent-prd), the multi-agent fleet or hand-offs (use workflow-design), its golden cases,
-  autonomy level or cost budget (use eval-first-spec), or the post-launch loop and autonomy-raise (use
-  refine-flywheel).
+  Produces a four-part spec for one production agent: role (one owned decision), tools, memory
+  layer (CLAUDE.md, skills, lessons.md, trace archive) and eval. Use when a fellow says design an
+  agent for X, asks what tools and memory an agent needs, or says the agent never remembers
+  corrections. Not for multi-agent fleets and hand-offs (use workflow-design).
 type: generator
 supersedes: none
 ---
@@ -35,7 +29,7 @@ Use when a fellow has a validated workflow and needs to spec the single agent th
 | "Interview me and write the full Agent PRD and engineering work orders before any code" | `agent-prd` | That is the long pre-code planning document (job, evals, loop, state, memory, tools, guardrails, build order, work orders). This is the four-part spec that teaches what the fellow owns; hand it to `agent-prd` when the build needs work orders. |
 | "Design the fleet / how do the agents hand off / who spawns whom" | `workflow-design` (sibling, 09) | That is the multi-agent orchestration. This specs ONE agent. If the answer needs a researcher, an analyst, and a critic passing work, that is a fleet — route it. |
 | "Write the golden cases / set the autonomy level / what's the cost-per-outcome" | `eval-first-spec` (07) | That IS the agent's eval. This skill points at it and carries its autonomy level and number as constraints; it does not re-derive them. |
-| "What's the post-launch loop / should we raise autonomy / re-run on the new model" | `refine-flywheel` (08) | That runs the ship→observe→learn→refine loop over a live agent. This designs the memory-layer *structure* the loop then turns. Structure here; cadence there. |
+| "What's the post-launch loop / should we raise autonomy / re-run on the new model" | `post-launch-refine-loop` (08) | That runs the ship→observe→learn→refine loop over a live agent. This designs the memory-layer *structure* the loop then turns. Structure here; cadence there. |
 | "How do we build this AI system / the component pipeline / the effort split" | `compound-system-architecture` (07) | That is the system the agent may sit inside (router, retrieve, validate). This is one agent's internals. They compose. |
 
 If the input is a bare "build me an agent" with no workflow, do not invent one. Ask the one question that unblocks it — which single decision does it own? — or return the smallest honest next step.

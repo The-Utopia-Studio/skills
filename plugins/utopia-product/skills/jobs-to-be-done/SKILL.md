@@ -1,11 +1,11 @@
 ---
 name: jobs-to-be-done
 description: >-
-  Map customer jobs to be done (functional, social, emotional), pains and gains in a structured JTBD /
-  Value Proposition Canvas format, from interview notes or research. Use when the user asks for jobs
-  to be done, a JTBD analysis, or customer jobs, pains and gains. Not for ranking the one durable need
-  under a list of feature requests (use unserved-needs-finder), writing or planning an interview
-  script (use discovery-interview-prep), or job stories for a backlog (use user-story situation-first mode).
+  Maps customer jobs to be done (functional, social, emotional), pains and gains in a JTBD / Value
+  Proposition Canvas format from interview notes or research. Use when the user asks for jobs to
+  be done, a JTBD analysis, customer jobs, pains and gains, or why customers hire or fire a
+  product. Not for finding the one durable need under a feature-request list (use unserved-needs-
+  finder).
 intent: >-
   Systematically explore what customers are trying to accomplish (functional, social, emotional jobs), the pains they experience, and the gains they seek. Use this framework to uncover unmet needs, validate product ideas, and ensure your solution addresses real motivations—not just surface-level feature requests.
 type: component

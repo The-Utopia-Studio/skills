@@ -1,16 +1,11 @@
 ---
 name: explicit-vs-tacit-capture
 description: >-
-  Split a body of expertise into the tell-able procedures (explicit) and the show-only judgment
-  (tacit), and flag the tacit half as the defensible product. Fires when a fellow says "what's
-  teachable vs judgment", "codify the expertise", "split explicit from tacit", "which part of our
-  know-how is defensible", "what can we write down vs what's in their head", or "turn our expertise
-  into a product spec". Returns an Explicit/Tacit Ledger: every piece of know-how classified by one
-  test — could a stranger execute it from the words alone? — with the tacit rows scored on the
-  evidence ladder and the moat named. NOT for running the live watch session that observes an
-  unobserved judgment (use tacit-knowledge-interview), NOT for sorting data sources by whether a model
-  can already reach them (use yoda-data-sourcing), NOT for turning captured expertise into a labelled
-  dataset and golden cases (use dataset-builder).
+  Splits a body of expertise (SOPs, manuals, rubrics, expert transcripts) into explicit procedures
+  a stranger could follow and tacit judgment that only an expert can show, and names the tacit
+  half as the defensible product. Use when the user asks to codify expertise, what is teachable vs
+  judgment, or which part of their know-how is defensible. Not for running the live expert-
+  shadowing session (use tacit-knowledge-interview).
 type: generator
 supersedes: none
 ---
@@ -32,7 +27,7 @@ Do not use it for:
 | If the fellow wants… | Use instead | Why not this skill |
 |---|---|---|
 | To sit with an expert and watch the call live to observe an unobserved judgment | `tacit-knowledge-interview` | That runs the watch-30 / replay-20 / edge-cases-10 session to create judgment data by observation; this classifies material you already hold. When this skill marks a tacit row a placeholder (0.1), that skill is how you capture it. |
-| To sort candidate data sources by whether a model can already reach them | `yoda-data-sourcing` | That bands data sources R/G/P by reachability; this bands expertise E/T by tell-ability. Tacit judgment is one YODA seam, but the axis is different. |
+| To sort candidate data sources by whether a model can already reach them | `proprietary-data-sourcing` | That bands data sources R/G/P by reachability; this bands expertise E/T by tell-ability. Tacit judgment is one YODA seam, but the axis is different. |
 | To turn captured expertise into a labelled dataset and 20 golden cases | `dataset-builder` | That builds the eval set from captured material; this runs first and decides which expertise is the defensible tacit half worth building a dataset around. |
 | To separate a customer's job from the solution they asked for | `jobs-to-be-done` | That separates job from solution on the demand side; this separates procedure from judgment on the expertise side. Absorbed, not the same call. |
 
@@ -129,6 +124,6 @@ See `examples/sample.md` for a full run on Azraq's data-centre risk assessor: th
 ## Related skills
 
 - `tacit-knowledge-interview` (section 02, shipped) — the live watch session that observes an unobserved judgment. This skill classifies material you already have and marks which T rows are captured (≥ 0.5) versus placeholders; that skill converts a placeholder into an observed 0.7. Run this to find the moat and the gaps; run that to close the gaps.
-- `yoda-data-sourcing` (section 03, shipped) — sorts data sources by model-reachability. A captured tacit column is a P-band moat seed in YODA's map; this skill produces it, that skill places it among the fellow's other proprietary signal.
+- `proprietary-data-sourcing` (section 03, shipped) — sorts data sources by model-reachability. A captured tacit column is a P-band moat seed in YODA's map; this skill produces it, that skill places it among the fellow's other proprietary signal.
 - `dataset-builder` (section 03) — turns captured expertise into a labelled dataset and golden cases. This runs before it: the tacit column is what a dataset should be built around; the explicit column is not worth labelling.
 - `jobs-to-be-done` (`discovery/jobs-to-be-done`) — absorbed, not superseded. JTBD's core discipline is refusing to confuse the job with the solution; this borrows that separation muscle and JTBD's "ask why until the surface statement breaks" to surface the cue hiding inside a stated rule, then inverts the frame from demand-side (customer's job) to supply-side (expert's judgment). Supersedes: none.

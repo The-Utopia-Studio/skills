@@ -1,6 +1,11 @@
 ---
 name: partner-affiliate
-description: "When the user wants to build a partner program, launch an affiliate program, design integration partnerships, or create distribution partnerships. Also use when the user mentions 'partnerships,' 'affiliate program,' 'partner ecosystem,' 'integration partner,' 'reseller,' 'co-marketing,' 'PartnerStack,' or 'revenue share.' This skill covers partner and affiliate program design from recruitment through performance optimization. Not for customer refer-a-friend programs (use referral-program)."
+description: >-
+  Designs partner and affiliate programs: integration, reseller and co-marketing partnerships,
+  partner tiers, commission and revenue-share structures, recruitment and performance tracking.
+  Use when building a partner program, launching an affiliate program, setting up integration or
+  channel partners, or choosing a tool like PartnerStack. Not for customer refer-a-friend programs
+  (use referral-program).
 ---
 
 # Partner & Affiliate Program Design

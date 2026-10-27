@@ -1,21 +1,18 @@
 ---
 name: dataset-builder
 description: >-
-  Turn real field artefacts (scanned documents, logs, tickets, emails, expert
-  corrections) into a labelled dataset and 20+ golden cases for an eval suite,
-  with a ground-truth label per artefact, evidence scoring and four gates
-  (provenance, ground truth, unreachable by the model, held out). Use when the
-  user has pilot data or corrections and asks to build a dataset, label it,
-  create golden cases or a test set the model has not memorised, or seed evals.
-  Not for finding proprietary data sources (use yoda-data-sourcing) or writing
-  the full scoreable spec (use eval-first-spec).
+  Turns real field artefacts (scanned documents, logs, tickets, emails, expert corrections) into a
+  labelled dataset and 20+ golden eval cases, with ground-truth labels and four gates: provenance,
+  ground truth, unreachable by the model, held out. Use when the user has pilot data or
+  corrections and asks to build or label a dataset, create golden cases or a held-out test set, or
+  seed evals. Not for the full scoreable spec (use eval-first-spec).
 type: generator
 supersedes: none
 ---
 
 ## What it does
 
-Takes the field artefacts a fellow already holds — the moat-seed rows `yoda-data-sourcing` surfaced — and turns them into two things: a labelled dataset (every artefact paired with a ground-truth label and its provenance) and the ≥20 golden cases carved out of it. A case earns "golden" only by clearing four gates: it cites the real artefact it came from, its label is ground truth on the evidence ladder (not a rater's opinion), a foundation model has never seen the input and cannot narrate the label from training, and it is held out from the build so the model cannot be tuned against it. The artefact is the filled `template.md`: the labelling ledger plus the golden seed. That seed is the honest test — the data a model cannot pre-pass — and it is what `eval-first-spec` composes into the scoreable v1 spec. A dataset a model could reproduce is not shipped; it measures nothing.
+Takes the field artefacts a fellow already holds — the moat-seed rows `proprietary-data-sourcing` surfaced — and turns them into two things: a labelled dataset (every artefact paired with a ground-truth label and its provenance) and the ≥20 golden cases carved out of it. A case earns "golden" only by clearing four gates: it cites the real artefact it came from, its label is ground truth on the evidence ladder (not a rater's opinion), a foundation model has never seen the input and cannot narrate the label from training, and it is held out from the build so the model cannot be tuned against it. The artefact is the filled `template.md`: the labelling ledger plus the golden seed. That seed is the honest test — the data a model cannot pre-pass — and it is what `eval-first-spec` composes into the scoreable v1 spec. A dataset a model could reproduce is not shipped; it measures nothing.
 
 ## The Icarus reframe
 
@@ -23,18 +20,18 @@ A dataset a foundation model can already reproduce cannot tell you whether your 
 
 ## When to use / When NOT
 
-Use once a fellow holds real field artefacts (from `yoda-data-sourcing`'s P rows, from probes, from historical records) and needs to turn them into a labelled dataset and the golden cases that will gate the build. Trigger phrases: "make our own dataset", "create golden cases", "label this", "turn our field logs into a test set the model hasn't seen", "seed the eval suite".
+Use once a fellow holds real field artefacts (from `proprietary-data-sourcing`'s P rows, from probes, from historical records) and needs to turn them into a labelled dataset and the golden cases that will gate the build. Trigger phrases: "make our own dataset", "create golden cases", "label this", "turn our field logs into a test set the model hasn't seen", "seed the eval suite".
 
 Do not use when:
 
 | Request | Belongs to |
 |---|---|
-| "Which of our candidate sources are actually proprietary / where is our moat data?" | `yoda-data-sourcing` (section 03). It finds and bands the sources; this labels the artefacts those sources produce. Run it first; this second. |
+| "Which of our candidate sources are actually proprietary / where is our moat data?" | `proprietary-data-sourcing` (section 03). It finds and bands the sources; this labels the artefacts those sources produce. Run it first; this second. |
 | "I have my 20 labelled cases — now compose them into the typical/edge/adversarial spread, pick the autonomy level, and set the cost-per-outcome budget." | `eval-first-spec` (section 07). This skill hands it the labelled seed; that skill writes the job line, the band composition, the pass/fail contract, autonomy, and cost. Do not poach the spec. |
 | "Which of the expert's knowledge is teachable procedure vs show-only judgment?" | `explicit-vs-tacit-capture` (section 03). This skill uses inter-rater disagreement to flag an unsettled label; deciding what is codifiable at all is that skill's job. |
 | "Is this one signal strong enough evidence?" | `evidence-ladder` (section 02). This skill borrows the ladder to score a label; scoring a lone signal is that skill's job. |
 
-Do not use it to invent cases. If there are no real artefacts to label, the input is not ready. Say so, send the fellow back to `yoda-data-sourcing` and the probes, and never pad the count with synthetic rows.
+Do not use it to invent cases. If there are no real artefacts to label, the input is not ready. Say so, send the fellow back to `proprietary-data-sourcing` and the probes, and never pad the count with synthetic rows.
 
 ## Method
 
@@ -42,7 +39,7 @@ Fill in `template.md`. Six steps, then the kill-line check.
 
 ### Step 1 — Pull the source, don't re-source it
 
-Start from the moat-seed rows `yoda-data-sourcing` already produced. Name the field artefacts you will label and which P row each comes from. Do not re-run the sourcing. One hard check: if the only artefacts available are model-reachable (yoda's R rows — public standards, tutorials, a Kaggle set), stop. A model has already memorised that data; a dataset built on it measures nothing. That is the kill line, and the honest output is to route back to the workflow-trapped pile, not to label commodity data.
+Start from the moat-seed rows `proprietary-data-sourcing` already produced. Name the field artefacts you will label and which P row each comes from. Do not re-run the sourcing. One hard check: if the only artefacts available are model-reachable (yoda's R rows — public standards, tutorials, a Kaggle set), stop. A model has already memorised that data; a dataset built on it measures nothing. That is the kill line, and the honest output is to route back to the workflow-trapped pile, not to label commodity data.
 
 ### Step 2 — Fix the label schema before labelling anything
 
@@ -92,7 +89,7 @@ Close with the verdict: the golden count, the rows held or discarded and why, an
 
 ## Evidence standard
 
-Every Icarus skill weights behaviour and money over opinion. Here the ladder scores the **label** — whether the answer key is real — not whether the source exists (that was `yoda-data-sourcing`'s job).
+Every Icarus skill weights behaviour and money over opinion. Here the ladder scores the **label** — whether the answer key is real — not whether the source exists (that was `proprietary-data-sourcing`'s job).
 
 | The label is true because… | Score | Golden? |
 |---|---|---|
@@ -122,7 +119,7 @@ Volume mistaken for a dataset. Ten thousand rows a model labelled in an afternoo
 
 ## Related skills
 
-`yoda-data-sourcing` (section 03) — finds and bands the proprietary sources; this labels the artefacts those P rows produce. Its moat seed is this skill's raw material. Run it first.
+`proprietary-data-sourcing` (section 03) — finds and bands the proprietary sources; this labels the artefacts those P rows produce. Its moat seed is this skill's raw material. Run it first.
 
 `eval-first-spec` (section 07) — consumes this skill's golden seed. It writes the one-sentence job line, composes the cases into the typical/edge/adversarial/must-refuse spread, sets the L0–L4 autonomy level and cost-per-outcome budget. This skill produces the labelled data; that skill turns it into the scoreable spec. Keep the boundary: labelling and hygiene here, composition and scoring there.
 

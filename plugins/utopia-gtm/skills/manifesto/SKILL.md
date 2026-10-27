@@ -1,14 +1,10 @@
 ---
 name: manifesto
 description: >-
-  Use this skill to write or critique a company manifesto, mission page,
-  founding essay, "why we exist" page, vision statement, values page, charter or
-  principles document: "write a manifesto for", "draft our mission page", "what
-  do we believe", "audit our values page". It interviews for a contestable belief
-  and the cost the company accepted, picks one of seven archetypes, drafts to the
-  spine, cuts, and audits against a checklist, grounded in 36 tech manifestos
-  (Tesla, SSI, Mozilla, Obsidian, Linear, Anthropic and others). Not for
-  positioning statements, message houses or brand narrative pillars (use
+  Writes or critiques a company manifesto, mission page, founding essay, vision or values page,
+  built on a contestable belief and the cost the company accepted, using seven archetypes and an
+  audit checklist. Use when asked to write a manifesto, draft a mission page, define what we
+  believe, or audit a values page. Not for positioning statements or messaging pillars (use
   positioning-workshop).
 ---
 

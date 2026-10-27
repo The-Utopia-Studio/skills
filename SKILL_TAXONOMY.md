@@ -4,8 +4,8 @@ All skills in this repo map to **four modules**. Skills that blur modules confus
 
 | Module | Folder | Pack | Count | Put here when… |
 |--------|--------|------|------|----------------|
-| **GTM** | `skills/gtm/` | `utopia-gtm` | 54 | Sales, marketing, growth, retention, distribution |
-| **Product** | `skills/product/` | `utopia-product` | 130 | Discovery, PRDs, design, build, deploy, product metrics |
+| **GTM** | `skills/gtm/` | `utopia-gtm` | 50 | Sales, marketing, growth, retention, distribution |
+| **Product** | `skills/product/` | `utopia-product` | 134 | Discovery, PRDs, design, build, deploy, product metrics |
 | **Investments** | `skills/investments/` | `utopia-investments` | 42 | DD, modeling, valuation, fundraising, markets, quant |
 | **Founder Productivity** | `skills/founder-productivity/` | `utopia-founder-productivity` | 28 | Doesn't fit the three above |
 
@@ -25,13 +25,13 @@ Seven sub-modules inside `skills/gtm/<nn>-<id>/<skill>/`. Pack: `utopia-gtm`.
 | 06 | GTM Engineering | `06-gtm-engineering/` | RevOps, metrics, automation, agent autonomy |
 | 07 | IP Commercialisation | `07-ip-commercialisation/` | Patent / commercial pathways (operator-led today) |
 
-Examples: `growth-strategy`, `cold-email`, `sales-enablement`, `churn-prevention`, `account-tier-scoring`, `earned-autonomy`.
+Examples: `fellow-growth-strategy`, `cold-email`, `sales-enablement`, `churn-prevention`, `account-tier-scoring`, `agent-autonomy-levels`.
 
 ## Product
 
 Discovery → concept → design → build → deploy → measure.
 
-Examples: `jobs-to-be-done`, `prd-development`, `impeccable`, `railway`, `deploy-to-vercel`, `evidence-driven-testing`, `metrics-that-matter`.
+Examples: `jobs-to-be-done`, `prd-development`, `impeccable`, `railway`, `deploy-to-vercel`, `pr-test-evidence-video`, `metrics-that-matter`.
 
 ## Investments
 

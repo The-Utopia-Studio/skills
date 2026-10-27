@@ -1,17 +1,11 @@
 ---
 name: pitch-deck
 description: >-
-  Builds investor-ready pitch decks as branded PPTX files from founder meeting notes,
-  call transcripts (e.g. Granola), uploaded decks, DD reports and strategy docs, and
-  improves existing decks. Scores the input materials and the output on a 15-dimension
-  rubric, marks gaps as [NEEDS INPUT] instead of inventing metrics, and covers co-investor
-  syndication decks and founder coaching decks with Utopia or portfolio-company branding.
-  Use when the user wants a pitch deck, investor deck, investor presentation, syndication
-  or co-investor deck, wants notes turned into slides, or wants help with a portco's deck.
-  Not for a deck website (use pitch-deck-web), filling a banker's PPT template
-  (use ib-pitch-deck), QC of a finished deck (use ib-check-deck), swapping numbers in an
-  existing deck (use deck-refresh), or the written memo or one-pager behind the deck
-  (use investor-memorandum or investor-deal-sheet).
+  Builds investor-ready pitch decks as branded PPTX files from meeting notes, transcripts, old
+  decks and DD reports, or improves an existing deck; scores inputs and output on a 15-dimension
+  rubric and marks gaps as [NEEDS INPUT]. Use when the user wants a pitch deck, investor deck,
+  syndication or co-investor deck, notes turned into slides, or help with a portco's deck. Not for
+  a deck website (use pitch-deck-web).
 ---
 
 # Pitch Deck Skill

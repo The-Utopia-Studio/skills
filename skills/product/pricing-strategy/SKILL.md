@@ -1,15 +1,11 @@
 ---
 name: pricing-strategy
 description: >-
-  Pricing and monetization strategy: brainstorm and compare 3-5 monetization strategies or revenue
-  models (freemium, subscription, usage, seat, marketplace, ads) with audience fit, risks and a
-  validation experiment each; design SaaS packaging, tiers, value metric and price points; research
-  willingness to pay (Van Westendorp, MaxDiff); plan price increases and pricing pages; and price
-  AI-native products (per resolution vs per conversation vs per seat vs credits, BYOK, AI margins).
-  Use when the user asks to brainstorm monetization strategies, how to monetize or make money from a
-  product, what to charge, pricing tiers, freemium or free trial, or AI pricing. Not for committing
-  one value-anchored price once value is measured (use value-based-pricing) or a paid pilot's six
-  terms (use pilot-six-term-sheet).
+  Develops pricing and monetization strategy: compares revenue models (freemium, subscription,
+  usage, seat, marketplace), designs tiers, value metric and price points, researches willingness
+  to pay, and prices AI products. Use when the user asks how to monetize, what to charge, about
+  pricing tiers, freemium or free trial, a price increase, or AI pricing. Not for setting one
+  price from measured pilot value (use value-based-pricing).
 metadata:
   version: 1.1.0
 ---

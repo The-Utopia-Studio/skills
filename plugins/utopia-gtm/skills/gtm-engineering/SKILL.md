@@ -1,6 +1,11 @@
 ---
 name: gtm-engineering
-description: "When the user wants to build GTM automation with code, design workflow architectures, use AI agents for GTM tasks, or implement the 'architecture over tools' principle. Also use when the user mentions 'GTM engineering,' 'GTM automation,' 'n8n,' 'Make,' 'Zapier,' 'workflow automation,' 'Clay API,' 'instruction stacks,' 'AI agents for GTM,' or 'revenue automation.' This skill covers technical GTM infrastructure from workflow design through agent orchestration."
+description: >-
+  Designs GTM automation and workflow architecture in code and no-code tools (n8n, Make, Zapier,
+  Clay API) plus AI agent orchestration for revenue tasks. Use when building GTM automation,
+  wiring enrichment-to-CRM-to-outreach workflows, using AI agents for GTM work, or choosing an
+  event-driven architecture over more tools. Not for designing the end-to-end outbound SDR stack
+  (use ai-sdr).
 ---
 
 # GTM Engineering: Automation, Architecture & Agent Orchestration

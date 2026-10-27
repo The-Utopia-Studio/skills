@@ -12,7 +12,7 @@ Install the full GTM pack (all seven sub-modules):
 
 Skills in this sub-module:
 
-- `earned-autonomy`
+- `agent-autonomy-levels`
 - `gtm-engineering`
 - `gtm-metrics`
 - `revops`

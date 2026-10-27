@@ -24,7 +24,7 @@ Score all three. Legs 1–2 carry over from YODA — confirm, do not re-derive t
 | 3 Signable at pilot #1 | Counterparty can grant it, and the clause goes in the executed pilot agreement (not deferred)? | _[who signs; when]_ | _[Y/N]_ |
 
 **Gate verdict:**
-- Fail leg 1 or 2 → _not a moat worth a clause. Back to `yoda-data-sourcing` (section 03) to find the exhaust that compounds. Do not draft._
+- Fail leg 1 or 2 → _not a moat worth a clause. Back to `proprietary-data-sourcing` (section 03) to find the exhaust that compounds. Do not draft._
 - Defer leg 3 ("sort rights after the pilot") → _bolt-on trap / kill line. Fix timing to pilot #1 before drafting (see §6)._
 - All three pass → _draft §3–§6._
 

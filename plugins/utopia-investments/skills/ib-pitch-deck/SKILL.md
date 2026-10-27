@@ -1,6 +1,10 @@
 ---
 name: ib-pitch-deck
-description: "Populates investment banking pitch deck templates with data from source files. Use when: user provides a PowerPoint template to fill in, user has source data (Excel/CSV) to populate into slides, user mentions populating or filling a pitch deck template, or user needs to transfer data into existing slide layouts. Not for creating presentations from scratch."
+description: >-
+  Populates an existing investment banking PowerPoint template with data from Excel, CSV or other
+  source files, mapping figures into the template's slide layouts. Use when the user provides a
+  PPT template to fill, has source data to drop into slides, or says "populate this pitch book
+  template". Not for building a deck from scratch (use pitch-deck).
 ---
 
 # Populating Investment Banking Pitch Deck Templates

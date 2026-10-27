@@ -15,11 +15,11 @@ If any of these are missing: escalate to Karan with a specific ask. Do not start
 
 ## Step 1 — Scope (10 min)
 
-**Tools:** `repo-scanner`
+**Tools:** `repo-readiness-scan`
 
 **Actions:**
 1. Read the README.md
-2. Run `repo-scanner` to get tech stack, hosting, monitoring status
+2. Run `repo-readiness-scan` to get tech stack, hosting, monitoring status
 3. Identify: primary language, framework, hosting, deployment automation, monitoring
 4. Note any unusual choices (e.g., custom-built ORM, no CI/CD)
 
@@ -49,10 +49,10 @@ If P0 found: continue the audit but flag for immediate escalation.
 
 ## Step 3 — Infrastructure review (20 min)
 
-**Tools:** `devops-advisor`
+**Tools:** `infra-scaling-review`
 
 **Actions:**
-1. Run `devops-advisor`
+1. Run `infra-scaling-review`
 2. Specifically assess:
    - Database backup strategy + cadence
    - Failover / high-availability setup
@@ -67,10 +67,10 @@ If P0 found: continue the audit but flag for immediate escalation.
 
 ## Step 4 — Cost analysis (15 min)
 
-**Tools:** `cost-optimizer`
+**Tools:** `cloud-cost-optimizer`
 
 **Actions:**
-1. Run `cost-optimizer`
+1. Run `cloud-cost-optimizer`
 2. Identify:
    - Cloud spending patterns
    - Per-user cost (if calculable from deployment + DAU)
@@ -84,10 +84,10 @@ If P0 found: continue the audit but flag for immediate escalation.
 
 ## Step 5 — Integration audit (10 min)
 
-**Tools:** `integration-linker`
+**Tools:** `dev-tool-integrations`
 
 **Actions:**
-1. Run `integration-linker`
+1. Run `dev-tool-integrations`
 2. Map external services used (Stripe, SendGrid, etc.)
 3. Identify single points of failure in the integration graph
 

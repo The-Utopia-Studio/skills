@@ -458,7 +458,7 @@ When you ship enrichment, the macrostructure stamp records the choice:
  */
 ```
 
-If no polish pattern is used, omit the `polish:` line — don't fake it. Same for enrichment.
+If no polish pattern is used, omit the `ui-polish:` line — don't fake it. Same for enrichment.
 
 This signals to future Hallmark runs (and to the audit verb) what was chosen and how. It also lets the user see the inferences in one place and redirect if anything's off.
 

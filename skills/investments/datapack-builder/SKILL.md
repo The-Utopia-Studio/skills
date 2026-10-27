@@ -1,6 +1,11 @@
 ---
 name: datapack-builder
-description: Build professional financial services data packs from various sources including CIMs, offering memorandums, SEC filings, web search, or MCP servers. Extract, normalize, and standardize financial data into investment committee-ready Excel workbooks with consistent structure, proper formatting, and documented assumptions. Use for M&A due diligence, private equity analysis, investment committee materials, and standardizing financial reporting across portfolio companies. Do not use for simple financial calculations or working with already-completed data packs.
+description: >-
+  Builds an investment-committee-ready Excel data pack by extracting and normalising financials
+  from CIMs, offering memorandums, filings, web or MCP sources, with documented assumptions. Use
+  for M&A or PE due diligence, IC materials, "build a data pack from this CIM", or standardising
+  financials across portfolio companies. Not for simple calculations or editing a finished data
+  pack.
 ---
 
 # Financial Data Pack Builder

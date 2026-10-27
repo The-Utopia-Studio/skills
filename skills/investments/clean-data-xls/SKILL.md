@@ -1,15 +1,11 @@
 ---
 name: clean-data-xls
 description: >-
-  Clean a messy spreadsheet or table: trim whitespace, unify inconsistent casing and spellings
-  of the same value (e.g. "UAE" / "uae " / "United Arab Emirates"), turn numbers stored as
-  text or with stray "$", "," or "M" into real numbers, standardise mixed date formats, remove
-  exact and near-duplicate rows, and flag mixed-type columns and error cells. Proposes the
-  fixes first and applies them as helper-column formulas. Use this skill whenever the user
-  says "clean this data", "clean up this sheet", "this sheet is a mess", "normalize this
-  column", "fix the formatting", "dedupe", "standardize the dates" or "make these values
-  consistent", for Excel, CSV or pasted tables. Not for auditing formulas in a financial model
-  (use audit-xls).
+  Cleans a messy spreadsheet or table: trims whitespace, unifies spellings and casing, converts
+  text numbers and mixed dates, removes duplicates and flags mixed-type or error cells, proposing
+  fixes before applying them. Use when the user says "clean this data", "this sheet is a mess",
+  "dedupe", "standardize the dates" or "normalize this column", for Excel, CSV or pasted tables.
+  Not for auditing model formulas (use audit-xls).
 ---
 
 # Clean Data

@@ -1,6 +1,11 @@
 ---
 name: reference-class-forecasting
-description: Anchors predictions in historical reality by identifying a class of similar past events and using their statistical frequency as a baseline (outside view) before analyzing case-specific details. Use when starting a forecast, establishing base rates, testing "this time is different" claims, or when user mentions reference classes, outside view, base rates, or starting a new prediction.
+description: >-
+  Anchors a forecast on the outside view: picks a reference class of similar past cases, finds
+  their base rate, then adjusts for case specifics. Use when starting a forecast, asking "how
+  often do deals like this succeed", needing a base rate, testing a "this time is different"
+  claim, or the user mentions reference class or outside view. Not for updating an estimate on new
+  evidence (use bayesian-reasoning-calibration).
 ---
 
 # Reference Class Forecasting

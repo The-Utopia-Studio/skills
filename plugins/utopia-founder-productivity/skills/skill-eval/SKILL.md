@@ -1,14 +1,11 @@
 ---
 name: skill-eval
 description: >-
-  Tests and evaluates Claude skills (SKILL.md folders) to decide whether each one works, fires on
-  the right requests and gives stable results. Runs five gates: static checks, trigger routing,
-  output quality against a no-skill baseline, repeated-run stability and cost, then gives each
-  skill a Ship, Fix, Merge or Retire verdict with evidence. Use when the user asks to test,
-  evaluate, QA, audit, benchmark or certify a skill or a whole skill library, check whether a
-  skill triggers, compare two versions of a skill, or decide which skills to keep. Not for
-  writing a new skill from scratch (use skill-creator), finding a skill to install (use
-  find-skills), or reviewing ordinary application code.
+  Tests and evaluates Claude skills through five gates (static checks, trigger routing, output
+  quality vs a no-skill baseline, run-to-run stability, cost) and gives each a ship, fix, merge or
+  retire verdict with evidence. Use when the user asks to test, QA, audit or benchmark a skill or
+  skill library, check whether a skill triggers, compare two versions, or decide which skills to
+  keep. Not for writing a new skill (use skill-creator).
 ---
 
 # Skill evaluation

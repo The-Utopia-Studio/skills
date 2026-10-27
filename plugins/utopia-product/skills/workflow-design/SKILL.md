@@ -1,13 +1,11 @@
 ---
 name: workflow-design
 description: >-
-  Design a multi-agent workflow: which agents (researcher, analyst, drafter,
-  critic, prototyper), the spawn trigger for each, how work hands off between
-  them, and which surface each runs on (Claude.ai, Claude Code, Cowork). Use
-  when the user or a fellow wants a fleet or team of agents, asks how several
-  agents should work together or hand off, or wants to orchestrate agents for
-  recurring work like weekly research. Not for one agent's role, tools and
-  memory (use agent-design).
+  Designs a multi-agent workflow: which agents (researcher, analyst, drafter, critic, prototyper),
+  each one's spawn trigger, how work hands off between them, and which surface each runs on
+  (Claude.ai, Claude Code, Cowork). Use when the user or a fellow wants a fleet or team of agents,
+  asks how agents should hand off, or wants to orchestrate agents for recurring work like weekly
+  research. Not for one agent's role, tools and memory (use agent-design).
 type: generator
 supersedes: none
 ---

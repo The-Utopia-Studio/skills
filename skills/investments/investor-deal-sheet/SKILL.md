@@ -1,6 +1,10 @@
 ---
 name: investor-deal-sheet
-description: Use when a founder needs the one-page investor summary — "deal sheet", "investor one-pager", "teaser", "summary of the round", "something to forward to an investor", "what are we sending after the meeting". Also use when a deck exists but there is nothing an investor can forward internally. Produces a single A4 page carrying the terms, the traction and the use of funds. Not the deck (use pitch-deck) and not the long memo (use investor-memorandum).
+description: >-
+  Produces the one-page A4 investor deal sheet (teaser) carrying the round terms, traction and use
+  of funds, something an investor can forward internally. Use when a founder asks for a deal
+  sheet, investor one-pager, teaser, "summary of the round" or "what do we send after the
+  meeting", or has a deck but nothing forwardable. Not the long memo (use investor-memorandum).
 ---
 
 # Deal Sheet

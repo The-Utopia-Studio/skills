@@ -1,0 +1,3027 @@
+[
+  {
+    "skill": "ab-test-analysis",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "agent-concierge-probe",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "agents-md-writer",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "bayesian-reasoning-calibration",
+    "prompts": 2,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 1,
+    "pass": false
+  },
+  {
+    "skill": "bottoms-up-market-sizing",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "business-model",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "lean-ux-canvas": 1,
+      "ai-solution-proposal-canvas": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "call-scorecards",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "discovery-calls": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "cloud-cost-optimizer",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "compound-system-architecture",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "ce-strategy": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "concept-council",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "copy-editing",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "cost-of-capital-estimator",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "current-state-map",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "customer-research",
+    "prompts": 5,
+    "runs": 5,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 3,
+      "continuous-discovery-engine": 2
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "deck-refresh",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "deployment-engineer",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "design-of-experiments",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "dev-tool-integrations",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "estimation-fermi",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "evidence-ladder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "falsify-plan-assumptions",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "fellow-growth-strategy",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "gtm-strategy": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "funding-digest",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "deep-research": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "grammar-check",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "guardrail-design",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "huggingface-community-evals",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "huggingface-datasets",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "huggingface-gradio",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "claude-api": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "huggingface-papers",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "deep-research": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "huggingface-tool-builder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ib-check-deck",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ib-pitch-deck",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "ppt-template-to-skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "impeccable",
+    "prompts": 5,
+    "runs": 4,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "defuddle-web-extract": 1,
+      "shadcn-tailwind-ui": 1,
+      "ui-ux-pro-max": 1,
+      "ui-audit": 1
+    },
+    "unscored_prompts": 1,
+    "pass": false
+  },
+  {
+    "skill": "infra-scaling-review",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "investor-doc-system",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "job-in-primitives",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "last30days",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "deep-research": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "lead-enrichment",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "gtm-engineering": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "market-segments",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "market-skill-ingestion",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "skill-eval": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "marketing-psychology",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "pricing-strategy": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "metrics-that-matter",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1,
+      "alignment-values-north-star": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "obsidian-company-map",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "probe-matrix",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 2,
+      "wizard-of-oz-probe": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "product-as-decision",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "product-name",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "proofeditor-docs",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "ce-proof": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "proprietary-data-sourcing",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "reference-class-forecasting",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "deep-research": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "repo-structurer",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "research-claim-map",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "deep-research": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "role-switch",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "concept-council": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "saas-economics-efficiency-metrics",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 3
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "saas-revenue-growth-metrics",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "salim",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "fellow-path-router": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "security-auditor",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "security-review": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "service-layer-refactor",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "so-what-stress-test",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "trace-to-interview",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "typed-service-contracts",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-layout-spacing",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-microcopy",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-polish",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 3
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-responsive",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-ux-pro-max",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {
+      "brand-guidelines": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "unit-cost-floor-gap",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "unserved-needs-finder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "jobs-to-be-done": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "value-based-pricing",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "vercel-composition-patterns",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "vercel-react-best-practices",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "vercel-react-native-skills",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "what-if-scenario-analysis",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "workflow-design",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 0.0,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "account-tier-scoring",
+    "prompts": 6,
+    "runs": 6,
+    "recall": 0.333,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {
+      "revops": 2,
+      "no skill": 1,
+      "ideal-customer-profile": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "patent-pct-application",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.333,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 2
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "expansion-retention",
+    "prompts": 9,
+    "runs": 9,
+    "recall": 0.444,
+    "stable_prompts": 4,
+    "false_fires": 0,
+    "stolen_by": {
+      "churn-prevention": 2,
+      "metrics-dashboard": 1,
+      "revops": 1,
+      "gtm-strategy": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ai-sdr",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {
+      "cold-email": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "discovery-calls",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "discovery-interview-prep",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "identify-risky-assumptions",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "prioritization",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-audit",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {
+      "vercel-react-best-practices": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-critique",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 0.5,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "brand-graphics",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.667,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {
+      "pitch-deck-web": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "pricing-strategy",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.667,
+    "stable_prompts": 2,
+    "false_fires": 1,
+    "stolen_by": {
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "skill-eval",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 0.667,
+    "stable_prompts": 2,
+    "false_fires": 1,
+    "stolen_by": {
+      "dcf-model": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "railway",
+    "prompts": 13,
+    "runs": 13,
+    "recall": 0.769,
+    "stable_prompts": 10,
+    "false_fires": 0,
+    "stolen_by": {
+      "deep-research": 2,
+      "no skill": 1
+    },
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "3-statement-model",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ada",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "agent-autonomy-levels",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "agent-design",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "agent-prd",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ai-solution-proposal-canvas",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "alignment-values-north-star",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "analytics-tracking",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "asd-ste100",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "auction-sealed-bid-pricing",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "audit-xls",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "beachhead-segment",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "brand-guidelines",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "build-vs-buy-boundary",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "causal-inference-root-cause",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "churn-prevention",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 2,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "clean-data-xls",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "cli-agent-dx-score",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "cold-email",
+    "prompts": 4,
+    "runs": 4,
+    "recall": 1.0,
+    "stable_prompts": 4,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "cold-offer-architect",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "competitive-analysis",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "competitive-battlecard",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "comps-analysis",
+    "prompts": 2,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 1,
+    "pass": true
+  },
+  {
+    "skill": "concept-four-lenses-test",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "concierge-probe",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "content-strategy",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "content-to-pipeline",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "continuous-discovery-engine",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 2,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "copywriting",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "data-rights-clause",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "datapack-builder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "dataset-builder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "dcf-model",
+    "prompts": 2,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 1,
+    "pass": true
+  },
+  {
+    "skill": "deal-velocity-engineer",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "decision-matrix",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "defuddle-web-extract",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "deliberation-debate-red-teaming",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "deploy-to-vercel",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "design-tokens",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "discovery-process",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "draft-nda",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "efecto-graphic-design",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "efecto-social-media",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "efecto-web-design",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "email-deliverability",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "email-sequence",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "eval-first-spec",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "expected-value",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "explicit-vs-tacit-capture",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "fellow-level-ladder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "fellow-path-router",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "find-skills",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "first-mocks",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "forecast-premortem",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "greptile-review-loop",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "growth-loops",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "gtm-engineering",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "gtm-metrics",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "gtm-strategy",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 2,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "hf-cli",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "huggingface-llm-trainer",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "huggingface-trackio",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "huggingface-vision-trainer",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ideal-customer-profile",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "industrial-brutalist-ui",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ink-terminal-ui",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "invent-product-concept",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "investor-deal-sheet",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "investor-fact-ledger",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "investor-faq",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "investor-memorandum",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "investor-reading-room",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "jobs-to-be-done",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "json-canvas",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "khalil",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "kill-criteria-exit-ramps",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "launch-strategy",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "lead-magnets",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "lean-ux-canvas",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "manifesto",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "market-sizing",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "marketing-ideas",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "metrics-dashboard",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "minimalist-ui",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "moat-design-canvas",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "monitoring-setup",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "none",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "obsidian-bases",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "obsidian-cli",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "obsidian-markdown",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "onboarding-cro",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "outreach-execution",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "page-cro",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "paid-ads",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "paper-sketch-probe",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "partner-affiliate",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "pestel-analysis",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "pilot-six-term-sheet",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "pitch-deck",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "pitch-deck-web",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "porters-five-forces",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "positioning-workshop",
+    "prompts": 4,
+    "runs": 4,
+    "recall": 1.0,
+    "stable_prompts": 4,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "post-launch-refine-loop",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ppt-template-to-skill",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "pr-test-evidence-video",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "prd-development",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 1.0,
+    "stable_prompts": 3,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "privacy-policy",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "problem-framing-canvas",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "problem-quality-scorecard",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "problem-statement",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "product-marketing-context",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "product-strategy-stack",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "proto-persona",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "referral-program",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "repo-readiness-scan",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "revops",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 3,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "revops-forecasting",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 1.0,
+    "stable_prompts": 3,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "roadmap-planning",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "sales-enablement",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "sales-motion-design",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "scout-mindset-bias-check",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "shadcn-tailwind-ui",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "signup-flow-cro",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "skillshare",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "social-content",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "solo-founder-gtm",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "stakeholder-map",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "stitch-design-taste",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "summarize-interview",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "swot-analysis",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "synthetic-users",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "tacit-knowledge-interview",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "tdd-red-green-refactor",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "tear-sheet",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "technical-dd",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "transformers-js",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "trend-scanning-foresight",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-advanced-effects",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-animation",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-bolder",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-color",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-delight",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-design-brief",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-performance",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-quieter",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-simplify",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ui-typography",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "usability-test-protocol",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "user-buyer-decider-map",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "user-story",
+    "prompts": 3,
+    "runs": 3,
+    "recall": 1.0,
+    "stable_prompts": 3,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "user-story-mapping",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "user-story-splitting",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "v1-launch-bar",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "valuation-narrative",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "valuation-reconciler",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "value-proposition",
+    "prompts": 2,
+    "runs": 2,
+    "recall": 1.0,
+    "stable_prompts": 2,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "warm-intro-intelligence",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "wedge-five-questions",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "wizard-of-oz-probe",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "working-backwards-press-release",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "workshop-facilitation",
+    "prompts": 1,
+    "runs": 1,
+    "recall": 1.0,
+    "stable_prompts": 1,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": true
+  },
+  {
+    "skill": "ad-creative",
+    "prompts": 1,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 1,
+    "pass": false
+  },
+  {
+    "skill": "agent-persona-builder",
+    "prompts": 1,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 1,
+    "pass": false
+  },
+  {
+    "skill": "ce-proof",
+    "prompts": 0,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ce-strategy",
+    "prompts": 0,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "claude-api",
+    "prompts": 0,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "deep-research",
+    "prompts": 0,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 7,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "diagram-design",
+    "prompts": 2,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 2,
+    "pass": false
+  },
+  {
+    "skill": "full-output-enforcement",
+    "prompts": 1,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 1,
+    "pass": false
+  },
+  {
+    "skill": "security-review",
+    "prompts": 0,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 1,
+    "stolen_by": {},
+    "unscored_prompts": 0,
+    "pass": false
+  },
+  {
+    "skill": "ui-animation-storyboard",
+    "prompts": 1,
+    "runs": 0,
+    "recall": null,
+    "stable_prompts": 0,
+    "false_fires": 0,
+    "stolen_by": {},
+    "unscored_prompts": 1,
+    "pass": false
+  }
+]

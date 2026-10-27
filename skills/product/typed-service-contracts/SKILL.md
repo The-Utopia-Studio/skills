@@ -1,13 +1,11 @@
 ---
 name: typed-service-contracts
 description: >-
-  Structure TypeScript commands and services with the spec-and-handler pattern:
-  a spec.ts with Zod input, output and exhaustive error-code schemas and a
-  Result type, a handler.ts that never throws, and separate contract (schema)
-  tests from handler logic tests. Use when the user mentions spec and handler,
-  parse-don't-validate, Result types instead of exceptions, Zod contracts, or
-  wants a type-safe CLI command or service structured this way. Not for
-  extracting duplicated logic into a service layer (use code-structure).
+  Structures TypeScript commands and services with the spec-and-handler pattern: spec.ts with Zod
+  input, output and exhaustive error-code schemas and a Result type, a handler.ts that never
+  throws, and contract tests split from logic tests. Use when the user mentions spec and handler,
+  parse-don't-validate, Result types instead of exceptions, Zod contracts, or wants a type-safe
+  CLI command or service. Not for extracting duplicated logic (use service-layer-refactor).
 ---
 
 # Typed Service Contracts (Spec & Handler Pattern)

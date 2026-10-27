@@ -62,7 +62,7 @@ Tick the top band you actually need. Do not cross the band's ceiling.
 
 > _Do not polish pixels here. Name where the look goes._
 
-**UX/UI plan → :** ☐ `shape` (/impeccable)
+**UX/UI plan → :** ☐ `ui-design-brief` (/impeccable)
 **Distinctive UI build → :** ☐ `impeccable`   **or specific surface → :** ☐ `design/____`
 ☐ This plan contains NO colour / type / layout advice of its own (that would be the kill line).
 

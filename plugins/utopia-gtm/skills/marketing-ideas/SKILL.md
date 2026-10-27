@@ -1,15 +1,10 @@
 ---
 name: marketing-ideas
 description: >-
-  Use this skill when someone is stuck on how to market a product and wants a
-  prioritized list of marketing ideas or tactics to try: "how do I market this",
-  "give me marketing ideas", "what else can I try beyond posting on X", "ways to
-  promote my tool with no ad budget", "brainstorm growth ideas". Draws on a
-  library of 139 SaaS marketing tactics by category and ranks them for the
-  user's stage, budget and audience. Not for a full GTM plan or motion selection
-  (use gtm-strategy), a solo founder's operating playbook and hiring plan (use
-  solo-founder-gtm), or executing one channel (use paid-ads, social-content,
-  email-sequence, etc.).
+  Produces a prioritized list of marketing ideas and tactics from a library of 139 SaaS tactics,
+  ranked for the user's stage, budget and audience. Use when stuck on how to market a product,
+  asking for marketing ideas, wanting ways to promote with no ad budget, or brainstorming growth
+  tactics. Not for a full GTM plan or motion selection (use gtm-strategy).
 metadata:
   version: 1.1.0
 ---

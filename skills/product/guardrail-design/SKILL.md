@@ -1,14 +1,12 @@
 ---
 name: guardrail-design
 description: >-
-  Design how an AI product is stopped from doing the wrong thing: place each
-  failure mode on a cost-of-error x volume matrix, size a three-layer stack
-  (rules in code, confidence threshold, human sign-off), derive the auto-approve
-  confidence threshold and set human sign-off triggers. Use when the user asks
-  to design guardrails, decide when a human must approve, what confidence
-  threshold to auto-approve at, or how to handle bad AI outputs, fraud or false
-  rejections. Not for the acceptable failure rate or autonomy level (use eval-
-  first-spec) or removing a human once accuracy holds (use refine-flywheel).
+  Designs the guardrails that stop an AI product doing the wrong thing: places each failure mode
+  on a cost-of-error by volume matrix, sizes a three-layer stack (code rules, confidence
+  threshold, human sign-off) and sets the auto-approve threshold and sign-off triggers. Use when
+  asked to design guardrails, decide when a human must approve, pick a confidence threshold, or
+  handle bad AI outputs, fraud or false rejections. Not for the autonomy level (use eval-first-
+  spec).
 type: generator
 supersedes: none
 ---
@@ -52,7 +50,7 @@ architecture. Trigger phrases: "design the guardrails", "when does a human sign 
 |---|---|---|
 | "What acceptable failure rate per mode / which autonomy level L0–L4" | `eval-first-spec` | That *derives* the rate and picks the level from cost-of-one-failure. This skill consumes both and builds the mechanism that holds them. Run it first; it hands this the taxonomy and the rates. |
 | "Design the whole AI system / the component pipeline / the effort split" | `compound-system-architecture` | That names component 4 exists. This designs what is inside it. Compose: the architecture says "a guard sits here", this says "here is the guard, layer by layer, sized to cost × volume". |
-| "We've held accuracy for a month — can we drop the human sign-off now" | `refine-flywheel` | That promotes autonomy as an eval result, never by feel. This designs the guard at the *current* level; removing a layer as autonomy climbs is the flywheel's job, gated by a re-run of the eval set. |
+| "We've held accuracy for a month — can we drop the human sign-off now" | `post-launch-refine-loop` | That promotes autonomy as an eval result, never by feel. This designs the guard at the *current* level; removing a layer as autonomy climbs is the flywheel's job, gated by a re-run of the eval set. |
 | "Structure the pilot / price it / what's the commercial success metric" | `pilot-six-term-sheet` | Commercial, not correctness. |
 
 If no eval-first spec exists — no taxonomy, no cost-of-one-failure — do not invent them
@@ -201,7 +199,7 @@ engineer must give before any potential hazard is permanently closed.
 - `compound-system-architecture` (07, sibling) — names component 4 (validate & guardrails) and
   the rule that it must be independent of the reasoning model. This skill is the depth build of
   that one component. The architecture says a guard sits there; this says what it is.
-- `refine-flywheel` (08) — promotes autonomy as an eval result. When accuracy has been earned and
+- `post-launch-refine-loop` (08) — promotes autonomy as an eval result. When accuracy has been earned and
   a guard layer can come off, that decision is the flywheel's, gated by re-running the eval set —
   not this skill's, and never by feel.
 - `pilot-six-term-sheet` (07, sibling) — the commercial contract. Guardrail cost lands in this

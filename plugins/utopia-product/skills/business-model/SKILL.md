@@ -1,14 +1,11 @@
 ---
 name: business-model
 description: >-
-  Build a business model canvas for a product or venture: a Lean Canvas (problem, solution, UVP,
-  unfair advantage, channels, segments, revenue, costs, key metrics), a Startup Canvas (9
-  product-strategy sections plus costs and revenue), or the 9-block Business Model Canvas, with key
-  assumptions and validation experiments. Use when the user asks for a Lean Canvas, startup canvas,
-  BMC or business model canvas, or to model how a new venture or marketplace makes money. Not for Jeff
-  Gothelf's Lean UX Canvas of business problem, hypotheses and experiments for a feature (use
-  lean-ux-canvas), the vision-to-roadmap stack (use product-frame-stack), or choosing a revenue model
-  or price (use pricing-strategy).
+  Builds a business model canvas for a product or venture: Lean Canvas, Startup Canvas or the
+  9-block Business Model Canvas, ending with the riskiest assumptions and cheap validation
+  experiments. Use when the user asks for a Lean Canvas, startup canvas, BMC, business model
+  canvas, or how a new venture or marketplace makes money. Not for Gothelf's Lean UX Canvas for a
+  feature (use lean-ux-canvas).
 ---
 # Business Model Canvases
 

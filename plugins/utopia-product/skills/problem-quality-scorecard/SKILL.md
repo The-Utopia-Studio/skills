@@ -1,16 +1,11 @@
 ---
 name: problem-quality-scorecard
 description: >-
-  Numeric go/no-go gate on the PROBLEM, before any solution: scores ONE product problem 1-5 on eight
-  evidence-backed dimensions (frequency, budgeted pain, severity, data exhaust, structural
-  persistence, buyer clarity, wedge sharpness, founder asymmetry), sums to /40, and returns pass
-  (>=32) / redesign (28-31) / kill (<28). Fires on 'is this problem worth building for', 'score this
-  problem', 'go or no-go on this problem', 'is this problem good enough', 'rate this problem'. Output:
-  a filled 8-row scorecard with a money-or-behaviour citation on every row. NOT the four-lens gate on
-  a specific concept or solution (use four-lenses-test), NOT broad risk mapping across GTM, strategy
-  and team (use identify-assumptions-new), NOT the five whole-idea questions (use
-  so-what-stress-test), NOT the per-unit size ratio (use physics-floor-gap), NOT the wedge-only deep
-  dive (use wedge-five-questions).
+  Go/no-go gate on a product problem before any solution: scores it 1-5 on eight evidence-backed
+  dimensions (frequency, budgeted pain, severity, data exhaust, persistence, buyer clarity, wedge,
+  founder edge), out of 40, with pass, redesign or kill. Use when the user asks if a problem is
+  worth building for, to score or rate a problem, or for a go or no-go on it. Not for scoring a
+  specific concept or solution (use concept-four-lenses-test).
 type: generator
 supersedes: none
 ---
@@ -44,10 +39,10 @@ Do not use it for these — hand off instead:
 
 | If the fellow wants… | Use instead |
 |---|---|
-| A go/no-go on a specific concept or solution (desirable, usable, feasible, viable) | `four-lenses-test` — the concept gate that runs after this problem gate |
-| Every risky assumption mapped across value, GTM, strategy, team | `identify-assumptions-new` — a risk inventory, not a gate |
+| A go/no-go on a specific concept or solution (desirable, usable, feasible, viable) | `concept-four-lenses-test` — the concept gate that runs after this problem gate |
+| Every risky assumption mapped across value, GTM, strategy, team | `identify-risky-assumptions` — a risk inventory, not a gate |
 | The five qualitative whole-idea business questions | `so-what-stress-test` |
-| The per-unit size ratio / does the physics floor leave margin | `physics-floor-gap` |
+| The per-unit size ratio / does the physics floor leave margin | `unit-cost-floor-gap` |
 | A deep dive on the wedge alone | `wedge-five-questions` |
 | To turn a solution back into a problem before scoring | `problem-statement`, then return here |
 
@@ -160,7 +155,7 @@ soft spots named as the two-week priorities.
 
 ## Related skills
 
-Complements `identify-assumptions-new` rather than replacing it. That skill lists risky assumptions across
+Complements `identify-risky-assumptions` rather than replacing it. That skill lists risky assumptions across
 eight categories and asks you to "rate confidence and suggest a test" — a soft
 inventory that never gates and never enforces evidence, so an opinion can sit in
 it unchallenged and the fellow still gets no go/no-go. This skill keeps its two
@@ -168,8 +163,8 @@ useful bones (per-item confidence, per-item cheapest test) and converts them int
 a hard numeric gate with evidence ceilings: opinion caps at 1, a pass is
 impossible on opinion, and the output is a decision, not a list.
 
-Composes with: `physics-floor-gap` (its unit ratio feeds severity and structural
+Composes with: `unit-cost-floor-gap` (its unit ratio feeds severity and structural
 persistence), `wedge-five-questions` (run it when wedge sharpness is the binding
 low score), `so-what-stress-test` (qualitative whole-idea pass before or after
 this gate), `problem-statement` (reframe a solution-in-disguise before scoring).
-Hand broad risk mapping back to `identify-assumptions-new`.
+Hand broad risk mapping back to `identify-risky-assumptions`.

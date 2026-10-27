@@ -1,0 +1,252 @@
+PASS  1/1   build          want agent-design  got utopia-product:agent-design
+ERROR 0/0   build          want ui-responsive  got error: timeout
+ERROR 0/0   build          want cli-agent-dx-score  got error: timeout
+ERROR 0/0   build          want ui-animation  got error: timeout
+PASS  1/1   build          want ui-audit  got utopia-product:ui-audit
+ERROR 0/0   build          want asd-ste100  got error: timeout
+PASS  1/1   build          want ui-bolder  got utopia-product:ui-bolder
+ERROR 0/0   build          want brand-guidelines  got error: timeout
+PASS  1/1   build          want shadcn-tailwind-ui  got utopia-product:shadcn-tailwind-ui
+ERROR 0/0   build          want brand-graphics  got error: timeout
+PASS  1/1   build          want ui-color  got utopia-product:ui-color
+ERROR 0/0   build          want design-tokens  got error: timeout
+ERROR 0/0   build          want ui-microcopy  got error: timeout
+FAIL  0/1   build          want service-layer-refactor  got none
+FAIL  0/1   build          want compound-system-architecture  got compound-engineering:ce-strategy
+ERROR 0/0   build          want cloud-cost-optimizer  got error: timeout
+FAIL  0/1   build          want ui-critique  got none
+PASS  1/1   build          want deploy-to-vercel  got utopia-product:deploy-to-vercel
+ERROR 0/0   build          want dataset-builder  got error: timeout
+ERROR 0/0   build          want ui-delight  got error: timeout
+FAIL  0/1   build          want infra-scaling-review  got none
+ERROR 0/0   build          want deployment-engineer  got error: timeout
+PASS  1/1   build          want ui-simplify  got utopia-product:ui-simplify
+ERROR 0/0   build          want diagram-design  got error: timeout
+PASS  1/1   build          want eval-first-spec  got utopia-product:eval-first-spec
+ERROR 0/0   build          want efecto-graphic-design  got error: timeout
+ERROR 0/0   build          want efecto-web-design  got error: timeout
+PASS  1/1   build          want greptile-review-loop  got utopia-product:greptile-review-loop
+ERROR 0/0   build          want pr-test-evidence-video  got error: timeout
+ERROR 0/0   build          want guardrail-design  got error: timeout
+ERROR 0/0   build          want hf-cli  got error: timeout
+FAIL  0/1   build          want huggingface-gradio  got claude-api
+ERROR 0/0   build          want huggingface-community-evals  got error: timeout
+ERROR 0/0   build          want huggingface-datasets  got error: timeout
+ERROR 0/0   build          want huggingface-llm-trainer  got error: timeout
+ERROR 0/0   build          want huggingface-papers  got error: timeout
+ERROR 0/0   build          want huggingface-tool-builder  got error: timeout
+ERROR 0/0   build          want huggingface-trackio  got error: timeout
+PASS  1/1   build          want huggingface-vision-trainer  got utopia-product:huggingface-vision-trainer
+ERROR 0/0   build          want impeccable  got error: timeout
+PASS  1/1   build          want ink-terminal-ui  got utopia-product:ink-terminal-ui
+ERROR 0/0   build          want industrial-brutalist-ui  got error: timeout
+ERROR 0/0   build          want dev-tool-integrations  got error: timeout
+ERROR 0/0   build          want ui-animation-storyboard  got error: timeout
+ERROR 0/0   build          want ui-layout-spacing  got error: timeout
+ERROR 0/0   build          want minimalist-ui  got error: timeout
+PASS  1/1   build          want ui-performance  got utopia-product:ui-performance
+ERROR 0/0   build          want monitoring-setup  got error: timeout
+FAIL  0/1   build          want ui-polish  got none
+ERROR 0/0   build          want ui-advanced-effects  got error: timeout
+ERROR 0/0   build          want agents-md-writer  got error: timeout
+ERROR 0/0   build          want ui-quieter  got error: timeout
+ERROR 0/0   build          want railway  got error: timeout
+ERROR 0/0   build          want repo-readiness-scan  got error: timeout
+ERROR 0/0   build          want repo-structurer  got error: timeout
+PASS  1/1   build          want stitch-design-taste  got utopia-product:stitch-design-taste
+ERROR 0/0   build          want security-auditor  got error: timeout
+ERROR 0/0   build          want ui-design-brief  got error: timeout
+PASS  1/1   build          want ui-typography  got utopia-product:ui-typography
+ERROR 0/0   build          want tdd-red-green-refactor  got error: timeout
+ERROR 0/0   build          want transformers-js  got error: timeout
+ERROR 0/0   build          want typed-service-contracts  got error: timeout
+ERROR 0/0   build          want ui-ux-pro-max  got error: timeout
+ERROR 0/0   build          want vercel-composition-patterns  got error: timeout
+ERROR 0/0   build          want vercel-react-best-practices  got error: timeout
+ERROR 0/0   build          want vercel-react-native-skills  got error: timeout
+ERROR 0/0   build          want workflow-design  got error: timeout
+ERROR 0/0   build          want brand-graphics  got error: timeout
+ERROR 0/0   build          want brand-graphics  got error: timeout
+ERROR 0/0   build          want ui-critique  got error: timeout
+ERROR 0/0   build          want ui-polish  got error: timeout
+ERROR 0/0   build          want ui-polish  got error: timeout
+PASS  1/1   build          want railway  got utopia-product:railway
+ERROR 0/0   build          want deploy-to-vercel  got error: timeout
+ERROR 0/0   build          want diagram-design  got error: timeout
+PASS  1/1   build          want railway  got utopia-product:railway
+PASS  1/1   build          want railway  got utopia-product:railway
+ERROR 0/0   build          want railway  got error: timeout
+ERROR 0/0   build          want railway  got error: timeout
+PASS  1/1   build          want railway  got utopia-product:railway
+ERROR 0/0   build          want railway  got error: timeout
+PASS  1/1   build          want railway  got utopia-product:railway
+ERROR 0/0   build          want railway  got error: timeout
+ERROR 0/0   build          want railway  got error: timeout
+ERROR 0/0   build          want railway  got error: timeout
+ERROR 0/0   build          want railway  got error: timeout
+ERROR 0/0   build          want impeccable  got error: timeout
+ERROR 0/0   build          want impeccable  got error: timeout
+ERROR 0/0   build          want impeccable  got error: timeout
+ERROR 0/0   build          want impeccable  got error: timeout
+ERROR 0/0   build          want ui-audit  got error: timeout
+ERROR 0/0   discovery      want ab-test-analysis  got error: timeout
+PASS  1/1   discovery      want analytics-tracking  got utopia-product:analytics-tracking
+ERROR 0/0   discovery      want agent-concierge-probe  got error: timeout
+FAIL  0/1   discovery      want concept-council  got none
+ERROR 0/0   discovery      want bottoms-up-market-sizing  got error: timeout
+ERROR 0/0   discovery      want concierge-probe  got error: timeout
+ERROR 0/0   discovery      want continuous-discovery-engine  got error: timeout
+FAIL  0/1   discovery      want current-state-map  got none
+ERROR 0/0   discovery      want data-rights-clause  got error: timeout
+ERROR 0/0   discovery      want discovery-interview-prep  got error: timeout
+FAIL  0/1   discovery      want evidence-ladder  got none
+ERROR 0/0   discovery      want discovery-process  got error: timeout
+PASS  1/1   discovery      want explicit-vs-tacit-capture  got utopia-product:explicit-vs-tacit-capture
+PASS  1/1   discovery      want fellow-path-router  got utopia-product:fellow-path-router
+PASS  1/1   discovery      want fellow-level-ladder  got utopia-product:fellow-level-ladder
+PASS  1/1   discovery      want first-mocks  got utopia-product:first-mocks
+FAIL  0/1   discovery      want job-in-primitives  got none
+ERROR 0/0   discovery      want concept-four-lenses-test  got error: timeout
+PASS  1/1   discovery      want invent-product-concept  got utopia-product:invent-product-concept
+PASS  1/1   discovery      want user-story  got utopia-product:user-story
+FAIL  0/1   discovery      want metrics-that-matter  got none
+ERROR 0/0   discovery      want jobs-to-be-done  got error: timeout
+ERROR 0/0   discovery      want lean-ux-canvas  got error: timeout
+ERROR 0/0   discovery      want market-segments  got error: timeout
+PASS  1/1   discovery      want paper-sketch-probe  got utopia-product:paper-sketch-probe
+ERROR 0/0   discovery      want moat-design-canvas  got error: timeout
+PASS  1/1   discovery      want pilot-six-term-sheet  got utopia-product:pilot-six-term-sheet
+FAIL  0/1   discovery      want unit-cost-floor-gap  got none
+ERROR 0/0   discovery      want falsify-plan-assumptions  got error: timeout
+PASS  1/1   discovery      want build-vs-buy-boundary  got utopia-product:build-vs-buy-boundary
+PASS  1/1   discovery      want problem-statement  got utopia-product:problem-statement
+ERROR 0/0   discovery      want probe-matrix  got error: timeout
+ERROR 0/0   discovery      want problem-quality-scorecard  got error: timeout
+ERROR 0/0   discovery      want problem-framing-canvas  got error: timeout
+PASS  1/1   discovery      want ai-solution-proposal-canvas  got utopia-product:ai-solution-proposal-canvas
+ERROR 0/0   discovery      want product-as-decision  got error: timeout
+ERROR 0/0   discovery      want product-strategy-stack  got error: timeout
+ERROR 0/0   discovery      want proto-persona  got error: timeout
+ERROR 0/0   discovery      want post-launch-refine-loop  got error: timeout
+PASS  1/1   discovery      want roadmap-planning  got utopia-product:roadmap-planning
+ERROR 0/0   discovery      want saas-economics-efficiency-metrics  got error: timeout
+ERROR 0/0   discovery      want saas-revenue-growth-metrics  got error: timeout
+PASS  1/1   discovery      want synthetic-users  got utopia-product:synthetic-users
+ERROR 0/0   discovery      want so-what-stress-test  got error: timeout
+PASS  1/1   discovery      want usability-test-protocol  got utopia-product:usability-test-protocol
+ERROR 0/0   discovery      want tacit-knowledge-interview  got error: timeout
+ERROR 0/0   discovery      want trace-to-interview  got error: timeout
+ERROR 0/0   discovery      want unserved-needs-finder  got error: timeout
+PASS  1/1   discovery      want user-story  got utopia-product:user-story
+PASS  1/1   discovery      want user-buyer-decider-map  got utopia-gtm:user-buyer-decider-map
+PASS  1/1   discovery      want user-story-splitting  got utopia-product:user-story-splitting
+ERROR 0/0   discovery      want user-story-mapping  got error: timeout
+PASS  1/1   discovery      want wizard-of-oz-probe  got utopia-product:wizard-of-oz-probe
+PASS  1/1   discovery      want v1-launch-bar  got utopia-product:v1-launch-bar
+FAIL  0/1   discovery      want value-based-pricing  got none
+ERROR 0/0   discovery      want wedge-five-questions  got error: timeout
+PASS  1/1   discovery      want metrics-dashboard  got utopia-product:metrics-dashboard
+ERROR 0/0   discovery      want proprietary-data-sourcing  got error: timeout
+ERROR 0/0   discovery      want summarize-interview  got error: timeout
+PASS  1/1   discovery      want prd-development  got utopia-product:prd-development
+ERROR 0/0   discovery      want identify-risky-assumptions  got error: timeout
+PASS  1/1   discovery      want market-sizing  got utopia-gtm:market-sizing
+PASS  1/1   discovery      want pricing-strategy  got utopia-product:pricing-strategy
+ERROR 0/0   discovery      want prioritization  got error: timeout
+FAIL  0/1   discovery      want business-model  got utopia-product:lean-ux-canvas
+ERROR 0/0   discovery      want agent-persona-builder  got error: timeout
+ERROR 0/0   discovery      want agent-prd  got error: timeout
+PASS  1/1   discovery      want defuddle-web-extract  got utopia-founder-productivity:defuddle-web-extract
+PASS  1/1   discovery      want alignment-values-north-star  got utopia-founder-productivity:alignment-values-north-star
+PASS  1/1   discovery      want find-skills  got utopia-founder-productivity:find-skills
+PASS  1/1   discovery      want draft-nda  got utopia-founder-productivity:draft-nda
+ERROR 0/0   discovery      want full-output-enforcement  got error: timeout
+ERROR 0/0   discovery      want grammar-check  got error: timeout
+ERROR 0/0   discovery      want json-canvas  got error: timeout
+ERROR 0/0   discovery      want last30days  got error: timeout
+FAIL  0/1   discovery      want market-skill-ingestion  got utopia-founder-productivity:skill-eval
+PASS  1/1   discovery      want pestel-analysis  got utopia-founder-productivity:pestel-analysis
+ERROR 0/0   discovery      want obsidian-bases  got error: timeout
+ERROR 0/0   discovery      want obsidian-cli  got error: timeout
+ERROR 0/0   discovery      want obsidian-markdown  got error: timeout
+FAIL  0/1   discovery      want proofeditor-docs  got compound-engineering:ce-proof
+FAIL  0/1   discovery      want role-switch  got utopia-product:concept-council
+ERROR 0/0   discovery      want porters-five-forces  got error: timeout
+ERROR 0/0   discovery      want privacy-policy  got error: timeout
+PASS  1/1   discovery      want skillshare  got utopia-founder-productivity:skillshare
+ERROR 0/0   discovery      want salim  got error: timeout
+PASS  1/1   discovery      want swot-analysis  got utopia-founder-productivity:swot-analysis
+ERROR 0/0   discovery      want stakeholder-map  got error: timeout
+PASS  1/1   discovery      want user-story-mapping  got utopia-product:user-story-mapping
+PASS  1/1   discovery      want workshop-facilitation  got utopia-founder-productivity:workshop-facilitation
+ERROR 0/0   discovery      want user-story  got error: timeout
+PASS  1/1   discovery      want prd-development  got utopia-product:prd-development
+FAIL  0/1   discovery      want prioritization  got none
+PASS  1/1   discovery      want prd-development  got utopia-product:prd-development
+FAIL  0/1   discovery      want identify-risky-assumptions  got none
+ERROR 0/0   discovery      want market-sizing  got error: timeout
+ERROR 0/0   discovery      want probe-matrix  got error: timeout
+FAIL  0/1   discovery      want probe-matrix  got none
+ERROR 0/0   discovery      want continuous-discovery-engine  got error: timeout
+FAIL  0/1   discovery      want pricing-strategy  got none
+ERROR 0/0   discovery      want pricing-strategy  got error: timeout
+ERROR 0/0   discovery      want metrics-that-matter  got error: timeout
+FAIL  0/1   discovery      want discovery-interview-prep  got none
+ERROR 0/0   discovery      want saas-economics-efficiency-metrics  got error: timeout
+ERROR 0/0   discovery      want saas-economics-efficiency-metrics  got error: timeout
+ERROR 0/0   discovery      want business-model  got error: timeout
+ERROR 0/0   gtm            want account-tier-scoring  got error: timeout
+ERROR 0/0   gtm            want ad-creative  got error: timeout
+PASS  1/1   gtm            want ai-sdr  got utopia-gtm:ai-sdr
+PASS  1/1   gtm            want beachhead-segment  got utopia-gtm:beachhead-segment
+PASS  1/1   gtm            want churn-prevention  got utopia-gtm:churn-prevention
+PASS  1/1   gtm            want valuation-narrative  got utopia-investments:valuation-narrative
+FAIL  0/1   gtm            want call-scorecards  got utopia-gtm:discovery-calls
+PASS  1/1   gtm            want cold-email  got utopia-gtm:cold-email
+PASS  1/1   gtm            want competitive-battlecard  got utopia-gtm:competitive-battlecard
+PASS  1/1   gtm            want cold-offer-architect  got utopia-gtm:cold-offer-architect
+FAIL  0/1   gtm            want obsidian-company-map  got none
+FAIL  0/1   gtm            want copy-editing  got none
+ERROR 0/0   gtm            want content-strategy  got error: timeout
+FAIL  0/1   gtm            want customer-research  got none
+ERROR 0/0   gtm            want content-to-pipeline  got error: timeout
+PASS  1/1   gtm            want deal-velocity-engineer  got utopia-gtm:deal-velocity-engineer
+PASS  1/1   gtm            want copywriting  got utopia-gtm:copywriting
+PASS  1/1   gtm            want email-deliverability  got utopia-gtm:email-deliverability
+PASS  1/1   gtm            want discovery-calls  got utopia-gtm:discovery-calls
+PASS  1/1   gtm            want agent-autonomy-levels  got utopia-gtm:agent-autonomy-levels
+PASS  1/1   gtm            want efecto-social-media  got utopia-product:efecto-social-media
+PASS  1/1   gtm            want email-sequence  got utopia-gtm:email-sequence
+PASS  1/1   gtm            want expansion-retention  got utopia-gtm:expansion-retention
+PASS  1/1   gtm            want growth-loops  got utopia-gtm:growth-loops
+PASS  1/1   gtm            want gtm-metrics  got utopia-gtm:gtm-metrics
+PASS  1/1   gtm            want gtm-strategy  got utopia-gtm:gtm-strategy
+FAIL  0/1   gtm            want fellow-growth-strategy  got utopia-gtm:gtm-strategy
+PASS  1/1   gtm            want gtm-engineering  got utopia-gtm:gtm-engineering
+PASS  1/1   gtm            want lead-magnets  got utopia-gtm:lead-magnets
+PASS  1/1   gtm            want launch-strategy  got utopia-gtm:launch-strategy
+PASS  1/1   gtm            want manifesto  got utopia-gtm:manifesto
+ERROR 0/0   gtm            want ideal-customer-profile  got error: timeout
+FAIL  0/1   gtm            want lead-enrichment  got utopia-gtm:gtm-engineering
+PASS  1/1   gtm            want marketing-ideas  got utopia-gtm:marketing-ideas
+PASS  1/1   gtm            want outreach-execution  got utopia-gtm:outreach-execution
+FAIL  0/1   gtm            want marketing-psychology  got utopia-gtm:pricing-strategy
+PASS  1/1   gtm            want onboarding-cro  got utopia-gtm:onboarding-cro
+PASS  1/1   gtm            want page-cro  got utopia-gtm:page-cro
+ERROR 0/0   gtm            want paid-ads  got error: timeout
+ERROR 0/0   gtm            want partner-affiliate  got error: timeout
+ERROR 0/0   gtm            want positioning-workshop  got error: timeout
+ERROR 0/0   gtm            want working-backwards-press-release  got error: timeout
+ERROR 0/0   gtm            want product-marketing-context  got error: timeout
+ERROR 0/0   gtm            want product-name  got error: timeout
+ERROR 0/0   gtm            want referral-program  got error: timeout
+ERROR 0/0   gtm            want revops  got error: timeout
+PASS  1/1   gtm            want signup-flow-cro  got utopia-gtm:signup-flow-cro
+PASS  1/1   gtm            want social-content  got utopia-gtm:social-content
+ERROR 0/0   gtm            want sales-motion-design  got error: You've hit your session limit · resets 8:30pm (Africa/Cairo)
+ERROR 0/0   gtm            want outreach-execution  got error: You've hit your session limit · resets 8:30pm (Africa/Cairo)
+ERROR 0/0   gtm            want sales-enablement  got error: You've hit your session limit · resets 8:30pm (Africa/Cairo)
+ERROR 0/0   gtm            want revops-forecasting  got error: You've hit your session limit · resets 8:30pm (Africa/Cairo)
+Stopped early: usage or authentication blocked the run. Resume unfinished prompts later.
+
+82/337 prompts always hit, 29 miss, 138 error, 88 pending, 0 incomplete · hit rate 82/111

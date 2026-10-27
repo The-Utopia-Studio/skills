@@ -1,12 +1,11 @@
 ---
 name: tdd-red-green-refactor
 description: >-
-  Strict Red-Green-Refactor TDD loop in TypeScript/Node.js with Vitest or Jest:
-  one failing test, then the minimal code to pass, then a refactor, repeated,
-  never batching tests or editing tests to make code pass. Use when the user
-  asks for TDD, test-first, red-green-refactor, or wants a feature or bug fix
-  built strictly test-first. Not for recording visual UI test evidence (use
-  evidence-driven-testing).
+  Runs a strict Red-Green-Refactor TDD loop in TypeScript/Node.js with Vitest or Jest: one failing
+  test, the minimal code to pass, then refactor, never batching tests or editing tests to make
+  code pass. Use when the user asks for TDD, test-first or red-green-refactor, or wants a feature
+  or bug fix built strictly test-first. Not for recorded UI test evidence (use pr-test-evidence-
+  video).
 ---
 
 # Red-Green-Refactor (TDD) Skill: TypeScript Edition
