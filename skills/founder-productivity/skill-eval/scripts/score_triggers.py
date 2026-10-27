@@ -72,6 +72,9 @@ def main(argv):
     for x in res:
         if x["skill"] == "none":
             x["pass"] = x["recall"] is None or x["recall"] >= min_recall
+        elif x["prompts"] == 0:
+            # A skill seen only as a false fire (e.g. another plugin) has no recall to judge.
+            x["pass"] = x["false_fires"] <= max_false
         else:
             x["pass"] = x["recall"] is not None and x["recall"] >= min_recall and x["false_fires"] <= max_false
         if not x["pass"]:
@@ -108,6 +111,7 @@ def self_test():
     assert by["pricing-strategy"]["recall"] == 1.0 and "value-based-pricing" not in by
     assert by["railway"]["recall"] is None and by["railway"]["unscored_prompts"] == 1
     assert by["none"]["recall"] == 1.0
+    assert by["ai-sdr"]["prompts"] == 1 and "value-based-pricing" not in by
     print("self-test passed")
     return 0
 
