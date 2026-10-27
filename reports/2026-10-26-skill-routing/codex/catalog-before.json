@@ -1,0 +1,1018 @@
+[
+  {
+    "skill": "utopia-founder-productivity:agent-persona-builder",
+    "description": "Design a persistent, named AI agent persona with a distinct voice, durable memory and clear operating rules, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md (cross-session knowledge) and BOOTSTRAP.md (first boot). Use when the user asks to create or build a named internal agent (e.g. 'Noura who drafts LP letters', 'Ada the DD analyst'), give an agent a personality, voice or memory, or turn a recurring fund, portco or studio workflow into a named agent. Runs a 25-question, 5-phase interview (Jack & Jill agent-builder method). Not for the engineering PRD and work orders of an agent system (use agent-prd) or a fellow's role / tools / memory / eval spec (use agent-design)."
+  },
+  {
+    "skill": "utopia-founder-productivity:agent-prd",
+    "description": "Interview the user and produce an Agent PRD plus engineering work orders: the planning documents that must exist before any agent code is written (job, checkable success criteria and first ten eval tasks, loop and stop condition, state and durability, context, memory, tools, guardrails, build order). Use when the user wants to build, scope or plan a new agent, generator, critic, pipeline stage, harness or autonomous system, says 'new agent', 'agent PRD', 'plan this agent', 'I want to build an agent that...', or is rebuilding an agent or adding a pipeline stage. Produces documents only, no implementation code. Not for an Icarus fellow's four-part agent spec of role, tools, memory layer and eval (use agent-design), an agent's persona and voice (use agent-persona-builder), or a product PRD (use prd-development)."
+  },
+  {
+    "skill": "utopia-founder-productivity:alignment-values-north-star",
+    "description": "Create a team or company alignment framework: a North Star mission statement (aspirational direction), 3-5 values as guardrails, decision tenets ('when X vs Y, we...') and observable behaviours, so people can decide autonomously. Use when the user asks to define team values, culture, mission, operating principles or a decision framework, or to fix misalignment in how a team makes calls. Not for choosing a North Star product metric or input metrics (use metrics-that-matter), or product vision, strategy, OKRs and roadmap from a validated problem (use product-frame-stack)."
+  },
+  {
+    "skill": "utopia-founder-productivity:defuddle",
+    "description": "Fetch and extract the clean readable text of a web page or article as markdown with the Defuddle CLI, stripping navigation, ads and clutter. Use whenever the user gives a URL of an article, blog post, documentation page or report and asks to read it, pull out or quote the text, summarize it, or analyze it; prefer it over WebFetch for standard web pages. Do NOT use for URLs ending in .md (already markdown, use WebFetch) or for broad multi-source research on a topic (use last30days)."
+  },
+  {
+    "skill": "utopia-founder-productivity:draft-nda",
+    "description": "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership."
+  },
+  {
+    "skill": "utopia-founder-productivity:find-skills",
+    "description": "Helps users discover and install agent skills when they explicitly seek reusable capabilities, ask \"find a skill for X\" or \"is there a skill that can...\", or want to extend their agent. This skill should be used when the user is looking for functionality that might exist as an installable skill."
+  },
+  {
+    "skill": "utopia-founder-productivity:full-output-enforcement",
+    "description": "Force complete, unabridged output: every requested file, function or section written in full, with no placeholders ('// ...', '// rest of code', 'similar for the other routes', 'for brevity'), and a clean pause-and-continue marker if the length limit is hit. Use when the user asks for all N files or a whole codebase or document in full, says no placeholders, no truncation, don't skip anything, or complains that earlier output was cut short or summarized. Not for normal short answers or for reviewing existing code."
+  },
+  {
+    "skill": "utopia-founder-productivity:grammar-check",
+    "description": "Proofread text for grammar, spelling, punctuation, logic and flow errors and suggest targeted fixes (location, error, fix, rationale) without rewriting the whole text. Use whenever the user pastes a paragraph, memo, email, report, investor update or document and asks to check grammar, proofread, find errors, or fix mistakes while keeping their wording. Not for improving or rewriting marketing copy such as landing pages, ads or campaign emails (use copy-editing) or writing new copy (use copywriting)."
+  },
+  {
+    "skill": "utopia-founder-productivity:json-canvas",
+    "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian."
+  },
+  {
+    "skill": "utopia-founder-productivity:last30days",
+    "description": "Research what real people said about a topic in the last 30 days across Reddit, X/Twitter, YouTube, TikTok, Instagram, Hacker News, Polymarket, GitHub and the web, with engagement and links, using the bundled multi-source engine. Use whenever the user asks what people are saying, recent complaints and praise, sentiment, reactions, trends or 'the last 30 days / this month' about a product, company, tool or topic on social platforms or forums. Not for a general literature or market deep-dive without a recency or social angle, or for reading one known URL (use defuddle)."
+  },
+  {
+    "skill": "utopia-founder-productivity:market-segments",
+    "description": "Identify 3-5 distinct customer segments for a product, each with its job to be done, pains, desired gains, demographics or firmographics, product fit, current workarounds and competitors. Use when the user asks to identify, list or compare customer segments, target audiences or markets for a product or idea (e.g. 'identify 3-5 segments for X'). Not for defining one ideal customer profile from research or PMF data (use ideal-customer-profile), choosing the first beachhead (use beachhead-segment), or sizing the market (use market-sizing)."
+  },
+  {
+    "skill": "utopia-founder-productivity:market-sizing",
+    "description": "Estimate TAM, SAM and SOM top-down and bottom-up with cited sources, explicit assumptions, a 2-3 year projection and validation questions, one-shot or as a guided Q&A with a deterministic sizing script. Use when the user asks for TAM / SAM / SOM, market size, addressable market, the market slide for an investor pitch, or market entry sizing. Not when the user says 'don't give me a TAM' or wants the size built from countable units with every rung's evidence shown (use bottoms-up-quantification), the per-unit prize of one job (use physics-floor-gap), or customer segments (use market-segments)."
+  },
+  {
+    "skill": "utopia-founder-productivity:market-skill-ingestion",
+    "description": "Fires when a fellow proposes bringing an external/market skill into the studio repo \u2014 \"found a skill for X on skills.sh\", \"should we add this market skill\", \"ingest the good parts of <repo/skill>\", \"there's a public skill that does Y\", \"pull this skill in\", \"vet this skill from the ecosystem\". Produces an Ingestion Decision Record plus a FOLD / SUPERSEDE / REJECT / ADD-NEW decision and the concrete diff into an existing studio skill. NOT for authoring a brand-new proprietary skill from scratch (use the CONTRIBUTING sandbox flow) and NOT for installing a skill for one-off personal use (use `find-skills`)."
+  },
+  {
+    "skill": "utopia-founder-productivity:obsidian-bases",
+    "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian."
+  },
+  {
+    "skill": "utopia-founder-productivity:obsidian-cli",
+    "description": "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes."
+  },
+  {
+    "skill": "utopia-founder-productivity:obsidian-markdown",
+    "description": "Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes."
+  },
+  {
+    "skill": "utopia-founder-productivity:pestel-analysis",
+    "description": "Analyze political, economic, social, technological, environmental, and legal forces. Use when external market shifts could materially affect a product, roadmap, or strategy."
+  },
+  {
+    "skill": "utopia-founder-productivity:porters-five-forces",
+    "description": "Perform Porter's Five Forces analysis \u2014 competitive rivalry, supplier power, buyer power, threat of substitutes, and threat of new entrants. Use when analyzing industry dynamics, assessing competitive forces, or evaluating market attractiveness."
+  },
+  {
+    "skill": "utopia-founder-productivity:prioritization",
+    "description": "Rank features, initiatives or customer problems with an evidence-based framework (RICE, ICE, weighted scoring, or Opportunity Score for problems) tied to strategic pillars, then produce a ranked list, sequencing and a cut line. Also answers which framework to use (RICE vs ICE, Kano, MoSCoW, Eisenhower, Impact vs Effort) with formulas and when-to-use guidance. Use on 'prioritize my backlog', 'RICE score', 'rank these initiatives', 'what should we build next', or 'which prioritization framework'. Not for sequencing a quarter or half-year roadmap across teams (use roadmap-planning) or a go/no-go on whether one problem is worth building (use problem-quality-scorecard)."
+  },
+  {
+    "skill": "utopia-founder-productivity:privacy-policy",
+    "description": "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance."
+  },
+  {
+    "skill": "utopia-founder-productivity:proof",
+    "description": "Web-first skill for working with Proof documents via proofeditor.ai. Use when a Proof URL is shared, when creating collaborative docs in Proof, or when an installed Proof preference says new docs should live there."
+  },
+  {
+    "skill": "utopia-founder-productivity:role-switch",
+    "description": "Analyze one decision or conflict from several stakeholder perspectives (engineering, product, sales, finance, legal, customers): what each optimizes for, fears and measures, the tensions between them, and an alignment path with explicit trade-offs. Use when the user describes stakeholders who want different things (e.g. the CTO wants a rewrite, sales wants features, finance wants cuts) and asks to look at it from each perspective, find a path everyone can live with, or asks 'what would X think'. Not for tearing down a new product idea (use concept-council) or mapping stakeholders on a power/interest grid for a comms plan (use stakeholder-map)."
+  },
+  {
+    "skill": "utopia-founder-productivity:salim",
+    "description": "Coach a Studio fellow through the Cobuild curriculum as Salim, Utopia's Socratic fellow coach. Use when a fellow says 'I'm stuck', 'what should I do next?', 'I'm in M2 / M[X] and...', 'review my discovery / PRD / pitch', 'can you check my JTBD / canvas', or wants to skip ahead to building. Salim asks before telling, never produces the artifact the fellow should write, holds Discovery before Build, is module-aware (M1-M9) and points to the right skill for the module. Outputs cobuild logs to Proof. Not for first-day onboarding or deciding which Icarus stages apply to a fellow's situation (use fellow-path-router) or assessing a fellow's level (use fellow-level-ladder)."
+  },
+  {
+    "skill": "utopia-founder-productivity:skill-eval",
+    "description": "Tests and evaluates Claude skills (SKILL.md folders) to decide whether each one works, fires on the right requests and gives stable results. Runs five gates: static checks, trigger routing, output quality against a no-skill baseline, repeated-run stability and cost, then gives each skill a Ship, Fix, Merge or Retire verdict with evidence. Use when the user asks to test, evaluate, QA, audit, benchmark or certify a skill or a whole skill library, check whether a skill triggers, compare two versions of a skill, or decide which skills to keep. Not for writing a new skill from scratch (use skill-creator), finding a skill to install (use find-skills), or reviewing ordinary application code."
+  },
+  {
+    "skill": "utopia-founder-productivity:skillshare",
+    "description": "Manages and syncs AI CLI skills across 50+ tools from a single source.\nUse this skill whenever the user mentions \"skillshare\", runs skillshare commands,\nmanages skills (install, update, uninstall, sync, audit, check, diff, search),\nor troubleshoots skill configuration (orphaned symlinks, broken targets, sync\nissues). Covers both global (~/.config/skillshare/) and project (.skillshare/)\nmodes. Also use when: adding new AI tool targets (Claude, Cursor, Windsurf, etc.),\nsetting target include/exclude filters or copy vs symlink mode, using backup/restore\nor trash recovery, piping skillshare output to scripts (--json), setting up CI/CD\naudit pipelines, or building/sharing skill hubs (hub index, hub add)."
+  },
+  {
+    "skill": "utopia-founder-productivity:stakeholder-map",
+    "description": "Build a stakeholder map using a power/interest grid, identify communication strategies per quadrant, and generate a communication plan. Use when managing stakeholders, preparing for a launch, aligning cross-functional teams, or planning stakeholder engagement."
+  },
+  {
+    "skill": "utopia-founder-productivity:swot-analysis",
+    "description": "Perform a detailed SWOT analysis \u2014 strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position."
+  },
+  {
+    "skill": "utopia-founder-productivity:workshop-facilitation",
+    "description": "Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking."
+  },
+  {
+    "skill": "utopia-gtm:account-tier-scoring",
+    "description": "Use this skill whenever the user wants to qualify or score leads and accounts: \"qualify these leads\", \"which of these go to an AE today\", \"design our intent scoring model\", \"weights and decay for our signals\", \"define our PQL / product qualified lead model\", \"which usage signals count\", or \"define do-not-touch / suppression rules for outreach\". It tiers accounts Bronze/Silver/Gold/Diamond, scoring pre-conversion leads on intent signals plus ACV potential and trials or customers on usage depth (PQL/PQA) and expansion headroom, with a self-serve gate, enterprise persona gate, signal weights and decay windows, anonymous signal caps, prior-relationship floors, never-demote rules, suppression rules with override owners, tier-to-play routing and model governance. Not for defining the ICP (use ideal-customer-profile), MQL/SQL lifecycle stages and CRM routing setup (use revops), enrichment (use lead-enrichment), or writing the outreach (use cold-email or outreach-execution)."
+  },
+  {
+    "skill": "utopia-gtm:ad-creative",
+    "description": "When the user wants to generate, iterate, or scale ad creative \u2014 headlines, descriptions, primary text, or full ad variations \u2014 for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting."
+  },
+  {
+    "skill": "utopia-gtm:ai-sdr",
+    "description": "Use this skill to build an AI-powered outbound or cold outreach system end to end: \"build our AI SDR\", \"set up our outbound machine\", \"Clay-enriched lists into Instantly with AI-written first lines\", \"how many domains and mailboxes for 600 emails a day\", \"what reply and meeting rates should we expect\", \"cost per meeting\". Covers buying an AI SDR platform (11x, Artisan, AiSDR) versus building on Clay, Instantly, Smartlead, n8n and an LLM; signal-to-sequence routing; automated qualification; sending capacity; reply handling and human handoff; the 4-week rollout; benchmarks and cost model. Not for writing, personalizing or scoring individual emails (use cold-email), diagnosing spam placement or a blocklisted domain (use email-deliverability), enrichment waterfall design (use lead-enrichment), or scoring accounts (use account-tier-scoring)."
+  },
+  {
+    "skill": "utopia-gtm:beachhead-segment",
+    "description": "Identify the first beachhead market segment for a product launch. Evaluates segments against burning pain, willingness to pay, winnable market share, and referral potential. Use when choosing a first market, targeting an initial customer segment, or planning market entry strategy."
+  },
+  {
+    "skill": "utopia-gtm:business-narrative-builder",
+    "description": "Use this skill to build a story-to-numbers valuation narrative for a company (Damodaran style): classify its corporate life-cycle stage, size its TAM, and turn the business story into the five value drivers (revenue growth, target operating margin, sales-to-capital, cost of capital, failure probability), with an alternative narrative. Use when the user asks for a story-to-numbers or valuation narrative, life-cycle stage, \"what has to be true for this company's valuation\", or narrative inputs for a DCF. Not for brand narratives, messaging pillars or positioning (use positioning-workshop), building the DCF itself (use dcf-model), or a manifesto (use manifesto)."
+  },
+  {
+    "skill": "utopia-gtm:call-scorecards",
+    "description": "Use this skill to score or grade a sales call transcript, or to build behavior-based call scorecards: \"score this call\", \"grade this discovery call transcript\", \"what's the weakest part of this call and what should the rep drill\", \"build a call scorecard\", \"review my rep's calls\", \"make coaching more consistent\". It builds scorecards per conversation type (prospecting, discovery, demo, pricing, close), scores real calls 1-5 per behavior with quoted evidence, finds the weakest chunk, and prescribes chunked practice. Not for planning an upcoming discovery call or checking MEDDICC coverage from notes (use discovery-calls)."
+  },
+  {
+    "skill": "utopia-gtm:churn-prevention",
+    "description": "Use this skill to stop subscribers from cancelling at the moment they try to leave: cancel-flow design, exit surveys, save offers, pause options, and failed-payment recovery (dunning, smart retries, card updaters). Use when the user mentions cancel flow, offboarding, save offer, dunning, failed payments, involuntary churn, pause subscription, \"people keep canceling\" or \"churn rate is too high\". Not for proactive lifecycle or loyalty programs to lift repeat purchase and LTV, renewals, at-risk enterprise accounts and escalations, or retention dashboards (use expansion-retention), post-cancel email copy (use email-sequence), or in-app activation (use onboarding-cro)."
+  },
+  {
+    "skill": "utopia-gtm:cold-email",
+    "description": "Write, personalize and score B2B cold emails, first-touch LinkedIn messages and follow-up sequences that get replies. Use for cold outreach, prospecting or SDR emails, personalizing openers from prospect research, writing outreach off a trigger (\"write the message for this signal\", funding, hire, launch, post), scoring a draft before sending, or \"nobody's replying to my emails.\" Covers research signals, subject lines, openers, body, CTA, a 0-100 quality gate and multi-touch follow-ups. Not for staging sequences with sender assignment and approval rails (use outreach-execution), fixing a weak offer before copy (use cold-offer-architect), building the outbound system end to end (domains, mailboxes, Clay, Instantly, volume and cost per meeting; use ai-sdr), lifecycle or nurture emails (use email-sequence), or sales collateral (use sales-enablement)."
+  },
+  {
+    "skill": "utopia-gtm:cold-offer-architect",
+    "description": "Use this skill when the thing being sold to strangers isn't landing, or before writing a single line of cold copy \u2014 to build a new cold-traffic offer, audit an existing one against a hard bar, or diagnose why one that reads fine gets no replies. Covers cold email, cold DM, cold ads, and cold mail: any audience with zero trust and no reason to believe you. Produces an architected offer plus an evidence-aware review against eight criteria. Trigger phrasings: 'my offer isn't converting', 'low reply rate', 'nobody's booking', 'fix my offer', 'what should I offer', 'score this offer', 'is this offer any good', 'we changed the copy and nothing happened'."
+  },
+  {
+    "skill": "utopia-gtm:company-moc",
+    "description": "Use this skill when the user wants an Obsidian Map of Content (MOC) or knowledge graph built from a company's primary sources: pitch decks, call transcripts, pilot reports, standards. It produces an ideas-first hub note plus one-idea-per-note child notes, with source and date on every claim and contradictions between sources surfaced. Use when asked to \"build a MOC\", \"map this company in Obsidian\", \"turn these docs into a knowledge graph\", or to update a company MOC after a new call or document. Not for a plain summary of the documents."
+  },
+  {
+    "skill": "utopia-gtm:competitive-battlecard",
+    "description": "Create sales-ready competitive battlecards comparing your product against a specific competitor \u2014 positioning, feature comparison, objection handling, and win/loss patterns. Use when preparing sales teams, creating competitive materials, or responding to 'why not competitor X?'"
+  },
+  {
+    "skill": "utopia-gtm:content-strategy",
+    "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" \"content planning,\" \"editorial calendar,\" \"content marketing,\" \"content roadmap,\" \"what content should I create,\" \"blog topics,\" \"content pillars,\" or \"I don't know what to write.\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. Not for individual social posts (use social-content) or turning content into attributed pipeline, newsletters and DMs (use content-to-pipeline)."
+  },
+  {
+    "skill": "utopia-gtm:content-to-pipeline",
+    "description": "Turn content into revenue: build a content-led GTM motion, reverse engineer distribution, repurpose pillar content across platforms, run a newsletter as a pipeline channel, convert content engagement into DMs and meetings, and attribute pipeline to content including dark social. Use when the user mentions content-led growth, content to pipeline, content flywheel, newsletter growth or monetization, thought leadership that drives deals, or \"our content doesn't turn into revenue.\" Not for deciding topics, pillars or an editorial calendar (use content-strategy), writing individual social posts (use social-content), or a solo founder's overall playbook (use solo-founder-gtm)."
+  },
+  {
+    "skill": "utopia-gtm:copy-editing",
+    "description": "Use this skill when the user pastes existing marketing copy and wants it edited rather than rewritten: \"tighten this\", \"edit this copy\", \"don't rewrite it from scratch\", \"too wordy\", \"cut the jargon\", \"proofread\", \"polish this\", \"this reads awkwardly\", \"sharpen the messaging\", or refresh an outdated page or run a content audit. It runs structured copy sweeps (clarity, jargon and buzzword removal, voice, specificity, proof) and returns tracked edits. Not for writing new copy from scratch (use copywriting) or editing cold emails (use cold-email)."
+  },
+  {
+    "skill": "utopia-gtm:copywriting",
+    "description": "When the user wants to write, rewrite, or improve marketing copy for any page \u2014 including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \"write copy for,\" \"improve this copy,\" \"rewrite this page,\" \"marketing copy,\" \"headline help,\" \"CTA copy,\" \"tagline,\" \"subheadline,\" \"hero section copy,\" \"above the fold,\" \"this copy is weak,\" \"make this more compelling,\" or \"help me describe my product.\" Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. Not for editing existing copy (use copy-editing), designing the value proposition itself (use value-proposition), or positioning statements (use positioning-workshop)."
+  },
+  {
+    "skill": "utopia-gtm:customer-research",
+    "description": "Use this skill whenever the user hands you customer feedback to analyze or wants a feedback program set up: synthesize interview snippets or transcripts into themes with frequency, confidence and money quotes; analyze sentiment in community posts, reviews, NPS or CSAT comments and flag what needs escalation; set up a voice-of-customer program (sources, tagging taxonomy, cadence, routing insights to owners, weekly VOC digest); build a closed feedback loop from CSM and churn-call notes; analyze loyalty or membership program members by tier; mine Reddit, G2 and app reviews; build research-based personas and JTBD maps. Not for an opportunity solution tree or product discovery cadence (use continuous-discovery-engine), defining the ICP (use ideal-customer-profile), writing copy from the research (use copywriting), or planning discovery interviews (use discovery-interview-prep)."
+  },
+  {
+    "skill": "utopia-gtm:deal-velocity-engineer",
+    "description": "Diagnose and fix deal velocity problems and run structured deal reviews: sales cycle diagnostics, stage exit criteria, deal health scoring, opportunity inspection (qualification pulse, stakeholder map, competitive story, committed next steps), zombie-deal triage and pipeline deflation, multi-threading, mutual action plans, AI deal scoring and compression tactics, with sourced benchmarks. Use for \"sales cycle too long\", \"deals stalling\", \"zombie deals\", \"pipeline is bloated but nothing closes\", \"review this deal\", \"deal inspection\", \"stage exit criteria\" or \"mutual action plan\". Not for forecast methodology or the forecast call (use revops-forecasting), metrics dashboards (use gtm-metrics), MEDDICC qualification on a discovery call (use discovery-calls), or sales collateral (use sales-enablement)."
+  },
+  {
+    "skill": "utopia-gtm:discovery-calls",
+    "description": "Use this skill for discovery calls and qualification checks: plan or run a first call, write a call plan and question bank, summarize call notes, and check MEDDIC/MEDDICC or BANT coverage on an opportunity (\"check MEDDIC for this deal\", \"what's missing from my call notes\", \"is this deal qualified\"). Produces a call plan, persona questions, notes template, a red/yellow/green MEDDICC scorecard and the next question for each gap. Not for grading or scoring a call transcript against a coaching scorecard (use call-scorecards), full deal inspection or stalled deals (use deal-velocity-engineer), or forecast commits (use revops-forecasting)."
+  },
+  {
+    "skill": "utopia-gtm:earned-autonomy",
+    "description": "Use this skill when the user asks whether an AI agent can stop being reviewed or run unattended: \"can I let the agent send\", \"can I stop reviewing every draft\", \"how much should I automate\", \"is this workflow ready to run on a schedule\", \"the agent made a mistake, now what\". Given the agent's track record (items reviewed, edit or reject rate, refusals, breaches) it assigns an autonomy level L0-L3 per task, the evidence needed to move up, the triggers that demote it automatically, and the guardrails no level crosses. Not for staging the outreach itself (use outreach-execution) or scoring accounts (use account-tier-scoring)."
+  },
+  {
+    "skill": "utopia-gtm:efecto-social-media",
+    "description": "Use this skill whenever the user wants a social media graphic designed in Efecto: Instagram posts and carousels (1080x1080, 1080x1350), stories and reels covers, YouTube thumbnails, TikTok covers, Twitter/X images, LinkedIn carousel slides, Pinterest pins and Facebook graphics, with platform sizes, safe zones and bold social typography. Use when asked to \"design an Instagram carousel\", \"make a thumbnail\", \"design a social post\" or anything sized for a social platform. Requires the Efecto MCP server. Not for posters, flyers, banners or other non-social graphics (use efecto-graphic-design), web pages (use efecto-web-design), or writing the post text (use social-content)."
+  },
+  {
+    "skill": "utopia-gtm:email-deliverability",
+    "description": "Use this skill when emails hit spam, open rates drop, a domain or IP gets blocklisted, a sender needs a deliverability audit before scaling volume, or a team is setting up cold-sending infrastructure (secondary domains, mailboxes, SPF/DKIM/DMARC, warmup). Triggers: \"why are we going to spam\", \"audit my email setup\", \"open rates dropped\", \"we got blocklisted\", \"warm up this domain\", \"how many domains do I need\". Produces a severity-ranked audit or a root-cause diagnosis with a recovery plan and thresholds to monitor. Not for writing the emails (use cold-email or email-sequence) or choosing the outbound tool stack (use ai-sdr)."
+  },
+  {
+    "skill": "utopia-gtm:email-sequence",
+    "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" \"lifecycle emails,\" \"trigger-based emails,\" \"email funnel,\" \"email workflow,\" \"what emails should I send,\" \"welcome series,\" or \"email cadence.\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro."
+  },
+  {
+    "skill": "utopia-gtm:expansion-retention",
+    "description": "Use this skill for anything about keeping and growing existing customers' revenue: NRR and GRR, upsell and cross-sell play cards, mapping customer segments to CS and expansion plays with owners and KPIs, health scores, renewal playbooks, renewal discount approvals and the renewal deal desk, at-risk account escalations (competitor evaluation, lost exec sponsor) with escalation tiers and who can approve concessions, subscription LTV lifecycle programs (repeat purchase, loyalty, VIP, lapsed-customer win-back plays), and specifying a retention dashboard (GRR, NRR, logo retention, expansion by cohort with alerts). Use it when the user types \"renewal\", \"at-risk account\", \"escalation\", \"expansion plays\", \"QBR\", \"lift LTV\", \"retention dashboard\" or \"who approves this discount\". Not for building cancel flows, save offers or failed-payment dunning (use churn-prevention), new-business lead routing (use revops), or a go-to-market plan for new markets (use gtm-strategy)."
+  },
+  {
+    "skill": "utopia-gtm:growth-loops",
+    "description": "Identify growth loops (flywheels) for sustainable traction. Evaluates 5 loop types: Viral, Usage, Collaboration, User-Generated, and Referral. Use when designing growth mechanisms, building product-led traction, or understanding how growth loops work."
+  },
+  {
+    "skill": "utopia-gtm:growth-strategy",
+    "description": "Use this skill whenever a Utopia Studio fellow or portfolio company is named and the user wants its growth strategy document: \"build a v1 growth strategy for our fellow X\", \"growth strategy for [Fellow]\", \"update the GTM plan for [Fellow]\". Produces the studio's fixed six-part memo (value proposition, target segments with top 5 named customers in Qatar and globally, business model, collaboration tiers, growth flywheel, 6-month GTM plan) as a branded .docx in the Utopia brand system (Special Black, Brick Red, TWK Lausanne, stacked wordmark). Not for a generic GTM plan or motion selection when no fellow is named (use gtm-strategy), partner-facing decks (use utopia-partnership-deck), or investor and board decks (use pitch-deck)."
+  },
+  {
+    "skill": "utopia-gtm:gtm-engineering",
+    "description": "When the user wants to build GTM automation with code, design workflow architectures, use AI agents for GTM tasks, or implement the 'architecture over tools' principle. Also use when the user mentions 'GTM engineering,' 'GTM automation,' 'n8n,' 'Make,' 'Zapier,' 'workflow automation,' 'Clay API,' 'instruction stacks,' 'AI agents for GTM,' or 'revenue automation.' This skill covers technical GTM infrastructure from workflow design through agent orchestration."
+  },
+  {
+    "skill": "utopia-gtm:gtm-metrics",
+    "description": "When the user wants to define GTM metrics, build a metrics dashboard, measure pipeline efficiency, or track AI product performance. Also use when the user mentions 'GTM metrics,' 'revenue latency,' 'pipeline metrics,' 'TTFV,' 'time-to-first-value,' 'data health,' 'attribution,' 'conversion rate,' 'CAC,' 'LTV,' 'NRR,' 'GTM dashboard,' 'magic number,' 'pipeline velocity,' or 'funnel metrics.' This skill covers GTM measurement from metric selection through dashboard design, including AI-specific cost metrics, attribution models, and weekly review cadences."
+  },
+  {
+    "skill": "utopia-gtm:gtm-strategy",
+    "description": "Use this skill to create a go-to-market plan for a product or a new market or geography: score the seven GTM motions (inbound, outbound, paid digital, community, partners, ABM, PLG) with their tools, pick a 2-4 motion stack, then define messaging, success metrics, budget and a 90-day roadmap. Use when creating a GTM plan from scratch, entering a new market, choosing between inbound and outbound, or selecting marketing channels and motions. Not for a growth strategy document for a named Utopia fellow or portfolio company (use growth-strategy), mapping existing customer segments to CS and expansion plays (use expansion-retention), launch-day planning, Product Hunt or waitlists (use launch-strategy), choosing PLG vs sales-led (use sales-motion-design), a list of marketing ideas (use marketing-ideas), or a solo founder's playbook (use solo-founder-gtm)."
+  },
+  {
+    "skill": "utopia-gtm:ideal-customer-profile",
+    "description": "Identify and score the Ideal Customer Profile (ICP) from research and customer data: firmographics, behaviors, JTBD, pains, disqualifiers, a separate fit and intent scoring model with an activate/nurture/monitor/disqualify matrix, and a quarterly ICP and PMF revalidation (Sean Ellis bands, decay signals). Use when defining or refreshing your ICP, analyzing PMF survey data, building an ICP scoring model, or understanding who your best customers are. Not for picking the first market to enter (use beachhead-segment), tiering individual live accounts (use account-tier-scoring), enrichment waterfalls (use lead-enrichment), building personas from interviews (use customer-research), or positioning statements and messaging (use positioning-workshop)."
+  },
+  {
+    "skill": "utopia-gtm:launch-strategy",
+    "description": "Plan and run a product launch, feature announcement or release: the five-phase launch (internal, alpha, beta, early access, full), owned/rented/borrowed channels, waitlists, Product Hunt and Show HN, directory submissions, AppSumo, launch-day hour-by-hour execution and post-launch momentum. Use when the user mentions launch, Product Hunt, Hacker News, BetaList, waitlist, beta or early access, launch day, launch checklist, multi-channel launch or \"we're about to ship.\" Not for the overall go-to-market plan or motion selection (use gtm-strategy), ongoing marketing ideas after launch (use marketing-ideas), the working-backwards planning press release (use press-release), or referral loops (use referral-program)."
+  },
+  {
+    "skill": "utopia-gtm:lead-enrichment",
+    "description": "Build data enrichment workflows, Clay waterfalls and contact verification systems; improve missing, stale or unreliable contact data. Use for enrichment, data quality, provider waterfalls and verified field provenance. Feed separate fit and intent evidence into ideal-customer-profile and account-tier-scoring; do not define a competing lead score or enroll contacts in outreach."
+  },
+  {
+    "skill": "utopia-gtm:lead-magnets",
+    "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \"lead magnet,\" \"gated content,\" \"content upgrade,\" \"downloadable,\" \"ebook,\" \"cheat sheet,\" \"checklist,\" \"template download,\" \"opt-in,\" \"freebie,\" \"PDF download,\" \"resource library,\" \"content offer,\" \"email capture content,\" \"Notion template,\" \"spreadsheet template,\" or \"what should I give away for emails.\" Use this for planning what to create and how to distribute it. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence."
+  },
+  {
+    "skill": "utopia-gtm:manifesto",
+    "description": "Use this skill to write or critique a company manifesto, mission page, founding essay, \"why we exist\" page, vision statement, values page, charter or principles document: \"write a manifesto for\", \"draft our mission page\", \"what do we believe\", \"audit our values page\". It interviews for a contestable belief and the cost the company accepted, picks one of seven archetypes, drafts to the spine, cuts, and audits against a checklist, grounded in 36 tech manifestos (Tesla, SSI, Mozilla, Obsidian, Linear, Anthropic and others). Not for positioning statements, message houses or brand narrative pillars (use positioning-workshop)."
+  },
+  {
+    "skill": "utopia-gtm:marketing-ideas",
+    "description": "Use this skill when someone is stuck on how to market a product and wants a prioritized list of marketing ideas or tactics to try: \"how do I market this\", \"give me marketing ideas\", \"what else can I try beyond posting on X\", \"ways to promote my tool with no ad budget\", \"brainstorm growth ideas\". Draws on a library of 139 SaaS marketing tactics by category and ranks them for the user's stage, budget and audience. Not for a full GTM plan or motion selection (use gtm-strategy), a solo founder's operating playbook and hiring plan (use solo-founder-gtm), or executing one channel (use paid-ads, social-content, email-sequence, etc.)."
+  },
+  {
+    "skill": "utopia-gtm:marketing-psychology",
+    "description": "Use this skill to apply behavioral science and psychology to a marketing asset: \"which psychological principles should we use on our pricing page\", \"how do we push people to the middle plan\", \"use anchoring / decoy / social proof / scarcity / loss aversion here\", \"why do people buy\", \"nudge users toward X\". It picks the relevant mental models and cognitive biases and says exactly how each would show up on the page, email or offer. Not for setting the price levels or packaging (use pricing-strategy), a page conversion audit (use page-cro), or writing the copy (use copywriting)."
+  },
+  {
+    "skill": "utopia-gtm:onboarding-cro",
+    "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" \"new user experience,\" \"users aren't activating,\" \"nobody completes setup,\" \"low activation rate,\" \"users sign up but don't use the product,\" \"time to value,\" or \"first session experience.\" Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence."
+  },
+  {
+    "skill": "utopia-gtm:outreach-execution",
+    "description": "Plan social selling, LinkedIn nurture and community engagement, or use this skill when a signal, account list, or named contact needs outreach staged for sending: it loads sender voice and past approved messages, picks the path, assigns the sender by account tier, evaluates requested executive multi-threading, runs a prior-relationship check, and stages a multi-step email/LinkedIn sequence with a written rationale for human approval. AI-drafted sequences to senior executives are never auto-sent; approved copy feeds the voice library. Includes email/LinkedIn/breakup frameworks and objection handling. Not for writing or scoring a single cold email or signal-triggered message (use cold-email), scoring or tiering accounts (use account-tier-scoring), or deciding how much an agent may send unattended (use earned-autonomy)."
+  },
+  {
+    "skill": "utopia-gtm:page-cro",
+    "description": "When the user wants to optimize, improve, or increase conversions on any marketing page \u2014 including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says \"CRO,\" \"conversion rate optimization,\" \"this page isn't converting,\" \"improve conversions,\" \"why isn't this page working,\" \"my landing page sucks,\" \"nobody's converting,\" \"low conversion rate,\" \"bounce rate is too high,\" \"people leave without signing up,\" or \"this page needs work.\" Use this even if the user just shares a URL and asks for feedback \u2014 they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro."
+  },
+  {
+    "skill": "utopia-gtm:paid-ads",
+    "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro."
+  },
+  {
+    "skill": "utopia-gtm:partner-affiliate",
+    "description": "When the user wants to build a partner program, launch an affiliate program, design integration partnerships, or create distribution partnerships. Also use when the user mentions 'partnerships,' 'affiliate program,' 'partner ecosystem,' 'integration partner,' 'reseller,' 'co-marketing,' 'PartnerStack,' or 'revenue share.' This skill covers partner and affiliate program design from recruitment through performance optimization. Not for customer refer-a-friend programs (use referral-program)."
+  },
+  {
+    "skill": "utopia-gtm:positioning-workshop",
+    "description": "Use this skill to create or fix positioning, messaging and brand narrative: run a positioning workshop (target customer, unmet need, category, key benefit, differentiation) to a Geoffrey Moore positioning statement, then build a positioning stack, message house, proof library, messaging pillars, three-tier messaging and a brand narrative arc that keeps the story consistent across exec, practitioner and developer audiences. Use when messaging feels fuzzy or generic, when repositioning, when positioning an AI product, or when the user asks for positioning statements, a message house, messaging pillars or a brand narrative. Not for valuation or story-to-numbers narratives (use business-narrative-builder), defining the ICP (use ideal-customer-profile), the full value proposition (use value-proposition), choosing a first market (use beachhead-segment), website copy (use copywriting), or a manifesto (use manifesto)."
+  },
+  {
+    "skill": "utopia-gtm:press-release",
+    "description": "Write an Amazon-style working-backwards press release (with FAQ) that defines customer value before building. Use when aligning stakeholders on a new product, feature or strategic bet, or testing whether a product idea is compelling before engineering starts. Not for launch-day announcements or the launch plan (use launch-strategy), website copy (use copywriting), or a positioning statement (use positioning-workshop)."
+  },
+  {
+    "skill": "utopia-gtm:product-marketing-context",
+    "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'describe my product,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills \u2014 it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context. Not for creating the positioning itself (use positioning-workshop) or defining the ICP (use ideal-customer-profile)."
+  },
+  {
+    "skill": "utopia-gtm:product-name",
+    "description": "Use this skill whenever the user wants names for a product, feature, company or tool: \"suggest names\", \"what should we call it\", \"name ideas\", \"rebrand\", \"brainstorm a product name\". Returns five distinct, memorable candidates, each with rationale, brand fit, memorability and trademark or domain notes, shaped to the brand tone, audience, markets and languages the user gives. Not for taglines or website copy (use copywriting) or positioning (use positioning-workshop)."
+  },
+  {
+    "skill": "utopia-gtm:referral-program",
+    "description": "When the user wants to create, optimize, or analyze a customer referral program or word-of-mouth strategy. Also use when the user mentions 'referral,' 'ambassador,' 'word of mouth,' 'refer a friend,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'refer-a-friend payout.' Use this whenever someone wants existing users or partners to bring in new customers. Not for reseller, integration or channel partner programs (use partner-affiliate), product growth loops beyond referrals (use growth-loops), or launch-specific virality (use launch-strategy)."
+  },
+  {
+    "skill": "utopia-gtm:revops",
+    "description": "Use this skill for revenue operations plumbing: lead lifecycle stages, MQL and SQL definitions, lead routing rules, speed-to-lead and the marketing-to-sales handoff SLA, pipeline stage definitions, CRM automation, data hygiene, and the new-business deal desk. Use when the user mentions RevOps, revenue operations, MQL, SQL, lead routing, pipeline stages, CRM automation, \"leads aren't getting to sales\" or \"when should marketing hand off to sales\". Not for designing a lead, intent or PQL scoring model, qualifying a specific list of leads, or do-not-touch suppression rules (use account-tier-scoring); renewal discounts or a renewal deal desk (use expansion-retention); forecasting (use revops-forecasting); cold emails (use cold-email); or pricing (use pricing-strategy)."
+  },
+  {
+    "skill": "utopia-gtm:revops-forecasting",
+    "description": "Revenue forecasting methodology, forecast categories, governance and pipeline visibility for B2B revenue teams: commit, best case and upside rules, stage-weighted and capacity models, scenario planning, forecast accuracy and slippage, pipeline coverage, KPI guardrails, deal inspection questions, the weekly forecast call, and pipeline dashboards and hygiene. Use for \"our forecast is always wrong\", \"how much will we close this quarter\", forecast call, forecast cadence or variance, pipeline coverage, weighted pipeline, quota or capacity planning, stale deals or pipeline health. Not for CRM lifecycle, routing and dashboard implementation (use revops), GTM metric selection and benchmarks (use gtm-metrics), or why individual deals are stalling (use deal-velocity-engineer)."
+  },
+  {
+    "skill": "utopia-gtm:sales-enablement",
+    "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. Not for competitive battlecards (use competitive-battlecard), deal inspection (use deal-velocity-engineer), or investor pitch decks (use pitch-deck). For marketing website copy, see copywriting. For cold outreach emails, see cold-email."
+  },
+  {
+    "skill": "utopia-gtm:sales-motion-design",
+    "description": "When the user wants to choose between PLG and sales-led, design a sales motion, optimize time-to-first-value, or build a value-before-purchase experience. Also use when the user mentions 'PLG,' 'product-led growth,' 'sales-led,' 'sales motion,' 'free trial,' 'freemium,' 'self-serve,' 'demo-first,' 'time-to-first-value,' 'TTFV,' or 'agent-led sales.' This skill covers sales motion selection, value delivery design, and go-to-market motion architecture."
+  },
+  {
+    "skill": "utopia-gtm:signup-flow-cro",
+    "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" \"account creation flow,\" \"people aren't signing up,\" \"signup abandonment,\" \"trial conversion rate,\" \"nobody completes registration,\" \"too many steps to sign up,\" or \"simplify our signup.\" Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro."
+  },
+  {
+    "skill": "utopia-gtm:social-content",
+    "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy."
+  },
+  {
+    "skill": "utopia-gtm:solo-founder-gtm",
+    "description": "Use this skill when a solo founder needs their whole go-to-market operating playbook: which motion to run at their MRR stage, the one-person tool stack, which AI agents to set up first, how to split their hours, founder-led sales, building in public, and when to make the first hire. Triggers: \"I'm a solo founder at $X MRR\", \"one-person startup\", \"solopreneur\", \"scale without hiring\", \"AI agents as my team\", \"when should I hire\". Not for a prioritized list of marketing ideas or tactics to try (use marketing-ideas), a single channel's execution (use paid-ads, social-content, cold-email), or choosing PLG vs sales-led for a funded team (use sales-motion-design)."
+  },
+  {
+    "skill": "utopia-gtm:value-proposition",
+    "description": "Design a value proposition with a 6-part JTBD template (Who, Why, What before, How, What after, Alternatives), then turn it into segment- and channel-specific value proposition statements for marketing, sales and onboarding. Use when creating or sharpening a value proposition, analyzing customer value delivery, articulating why customers should choose you, or generating value prop statements from an existing value proposition. Not for the positioning statement, message house or brand narrative (use positioning-workshop), full website copy (use copywriting), or ICP definition (use ideal-customer-profile)."
+  },
+  {
+    "skill": "utopia-gtm:warm-intro-intelligence",
+    "description": "Use this skill when a rep wants warm intro paths into a target prospect \u2014 'Find warm intro paths for [company]', 'Who do we know at [company]?', 'Can anyone intro me to [role] at [company]?', 'Warm intro - [company]'. Surfaces the strongest available warm intro paths from your company's relationship network \u2014 employees, customers, partners, investors, advisors, call transcripts \u2014 with honest, evidence-based confidence labels. Decision support only: never contacts anyone, never writes to the CRM. The rep always decides."
+  },
+  {
+    "skill": "utopia-investments:3-statement-model",
+    "description": "Complete, populate and fill out 3-statement financial model templates (Income Statement, Balance Sheet, Cash Flow Statement) . Use when asked to fill out model templates, complete existing model frameworks, populate financial models with data, complete a partially filled IS/BS/CF framework, or link integrated financial statements within an existing template structure. Triggers include requests to fill in, complete, or populate a 3-statement model template"
+  },
+  {
+    "skill": "utopia-investments:ada",
+    "description": "Ada, The Utopia Studio's technical due diligence persona. Use only when the user addresses Ada by name (\"Ada, run DD on...\", \"ask Ada\", \"as Ada\") or asks for Ada's repo-based audit of a portco codebase. Ada runs a 5-phase repo audit (repo-scanner, security-auditor, devops-advisor, cost-optimizer, integration-linker) and then the technical-dd report, in her own voice: verdict first, P0-P3 severities, unknowns called out. Not for generic technical due diligence from pitch decks and documents without the persona (use technical-dd)."
+  },
+  {
+    "skill": "utopia-investments:auction-first-price-shading",
+    "description": "Evaluate a first-price sealed-bid auction: establish auction rules and value assumptions, calculate a justified bid benchmark, and assess winner's-curse risk in common-value settings. Use for bid shading, sealed-bid sizing, or conditioning valuation on winning. The uniform private-value formula applies only under its stated assumptions; common-value bids need a signal model. Not for fixed-price funding allocations, reverse procurement without a cost model, or unsolicited-offer selection evidence (use bayesian-reasoning-calibration)."
+  },
+  {
+    "skill": "utopia-investments:audit-xls",
+    "description": "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected range, a single sheet, or the entire model (including financial-model integrity checks like BS balance, cash tie-out, and logic sanity). Triggers on \"audit this sheet\", \"check my formulas\", \"find formula errors\", \"QA this spreadsheet\", \"sanity check this\", \"debug model\", \"model check\", \"model won't balance\", \"something's off in my model\", \"model review\"."
+  },
+  {
+    "skill": "utopia-investments:bayesian-reasoning-calibration",
+    "description": "Update a probability with new evidence using Bayes' rule, and show the maths: prior, likelihoods P(E|H) and P(E|not H), likelihood ratio, posterior, and a calibration and sensitivity check. Use this skill whenever the user says something like \"I thought there was a 30% chance, now X happened, what should I believe?\", \"update my probability\", \"how much should this evidence move me\", \"given these hit rates, what are the odds now\", or gives a prior plus new data (a pilot result, a signal, a test outcome) and wants a revised estimate. Also for adverse selection in unsolicited offers: assess how the proposer selected the deal using an evidence-based prior and selection likelihoods, not a fixed penalty. Not for finding the starting base rate (use reference-class-forecasting) or for auditing your reasoning for bias (use scout-mindset-bias-check)."
+  },
+  {
+    "skill": "utopia-investments:causal-inference-root-cause",
+    "description": "Systematically investigates causal relationships to identify true root causes rather than correlations or symptoms. Distinguishes genuine causation from spurious associations, tests competing explanations, and designs interventions addressing underlying drivers. Use when investigating why something happened, debugging systems, analyzing failures, evaluating policy impacts, or when user mentions root cause, causal chain, confounding, spurious correlation, or asks \"why did this really happen?\""
+  },
+  {
+    "skill": "utopia-investments:clean-data-xls",
+    "description": "Clean a messy spreadsheet or table: trim whitespace, unify inconsistent casing and spellings of the same value (e.g. \"UAE\" / \"uae \" / \"United Arab Emirates\"), turn numbers stored as text or with stray \"$\", \",\" or \"M\" into real numbers, standardise mixed date formats, remove exact and near-duplicate rows, and flag mixed-type columns and error cells. Proposes the fixes first and applies them as helper-column formulas. Use this skill whenever the user says \"clean this data\", \"clean up this sheet\", \"this sheet is a mess\", \"normalize this column\", \"fix the formatting\", \"dedupe\", \"standardize the dates\" or \"make these values consistent\", for Excel, CSV or pasted tables. Not for auditing formulas in a financial model (use audit-xls)."
+  },
+  {
+    "skill": "utopia-investments:competitive-analysis",
+    "description": "Framework for building competitive landscape decks \u2014 market positioning, competitor deep-dives, comparative analysis, moat assessment and strategic synthesis, with bull/base/bear scenarios for investment contexts. Use when the user asks for a competitive landscape, competitor analysis, peer comparison, market map, market positioning assessment or strategic review of an industry, or says \"who are the competitors to X\" or \"benchmark X against peers\". Not for a sales battlecard against one competitor (use competitive-battlecard), a valuation-multiples comps table (use comps-analysis), or a single-company profile (use tear-sheet)."
+  },
+  {
+    "skill": "utopia-investments:comps-analysis",
+    "description": "Comparable company analysis and relative valuation. Builds a trading comps table in Excel (operating metrics, EV/Revenue, EV/EBITDA, P/E, P/B, mean/median/quartiles) and analyses multiples properly: defines each multiple consistently, describes the peer distribution, links each multiple to its fundamental drivers (growth, risk, payout, ROE, margin) and runs a sector regression to get a predicted multiple and implied value. Use when valuing a company against peers, selecting comparables, benchmarking multiples, pricing a round off public comps, or when the user mentions comps, trading multiples, relative valuation, PE ratio, EV/EBITDA, price-to-book or \"is this premium justified\". Not for DCF or intrinsic value (use dcf-model), combining DCF and multiples into a recommendation (use valuation-reconciler), or a competitor strategy landscape deck (use competitive-analysis)."
+  },
+  {
+    "skill": "utopia-investments:cost-of-capital-estimator",
+    "description": "Work out the discount rate for a company: cost of equity (CAPM with bottom-up beta), cost of debt (synthetic rating) and WACC, in any currency, including country risk premiums for emerging markets (GCC, MENA, LatAm, Asia) weighted by where revenue is earned. Use this skill whenever the user asks \"what discount rate should we use\", \"what's the WACC\", \"what hurdle rate\", \"what's the cost of equity for X\", \"how much country risk premium for Saudi/Qatar/Egypt\", or gives a company's markets, beta or leverage and wants a rate. Also for equity risk premium, levering or unlevering beta, and the riskfree rate in a local currency. Not for a full DCF valuation (use dcf-model)."
+  },
+  {
+    "skill": "utopia-investments:datapack-builder",
+    "description": "Build professional financial services data packs from various sources including CIMs, offering memorandums, SEC filings, web search, or MCP servers. Extract, normalize, and standardize financial data into investment committee-ready Excel workbooks with consistent structure, proper formatting, and documented assumptions. Use for M&A due diligence, private equity analysis, investment committee materials, and standardizing financial reporting across portfolio companies. Do not use for simple financial calculations or working with already-completed data packs."
+  },
+  {
+    "skill": "utopia-investments:dcf-model",
+    "description": "Discounted cash flow (DCF) valuation of a company. Two modes: (1) a full Excel DCF model with WACC tab, bear/base/bull cases, terminal value and fully formula-driven sensitivity tables; (2) a quick markdown DCF with no spreadsheet. Picks the right variant (FCFF at WACC, FCFE or dividend discount at cost of equity, two- or three-stage growth), builds the equity bridge (debt, cash, options, minorities) and a per-share intrinsic value. Use when the user asks for a DCF, discounted cash flow, intrinsic value, fair value, terminal value, free cash flow valuation, FCFF/FCFE/DDM, or an implied share price. Not for peer multiples or trading comps (use comps-analysis), WACC on its own (use cost-of-capital-estimator), or reconciling several valuations into a call (use valuation-reconciler)."
+  },
+  {
+    "skill": "utopia-investments:decision-matrix",
+    "description": "Compares multiple named alternatives against weighted criteria to produce transparent, defensible choices with explicit trade-off analysis. Covers criterion identification, weighting approaches (direct allocation, pairwise comparison, stakeholder averaging), scoring calibration, sensitivity analysis, and group decision facilitation. Use when choosing between vendors/tools/strategies, balancing competing priorities (cost vs quality vs speed), or when user mentions \"which option should we choose\", \"compare alternatives\", \"evaluate vendors\", or \"trade-offs\"."
+  },
+  {
+    "skill": "utopia-investments:deck-refresh",
+    "description": "Roll an existing presentation forward with new numbers without rebuilding it: finds every instance of each old figure (text, tables, chart data, axis labels, footnotes, in all its formats such as $41.2M / 41.2 / $41.2 million), shows the full change list and the derived numbers that might now be stale, waits for approval, then edits in place with the formatting kept. Use this skill whenever the user says \"update the deck with Q4 numbers\", \"roll this deck forward\", \"refresh the LP update / board deck / comps\", \"swap in the new figures\", \"NAV went from X to Y, update the slides\" or \"change all the $485M to $512M\". Not for building a new deck (use pitch-deck) or QC of a finished deck (use ib-check-deck)."
+  },
+  {
+    "skill": "utopia-investments:deliberation-debate-red-teaming",
+    "description": "Challenges plans, designs, and decisions from multiple adversarial perspectives to surface blind spots, hidden assumptions, and vulnerabilities before they cause real damage. Use when testing plans or decisions for blind spots, need adversarial review before launch, validating strategy against worst-case scenarios, building consensus through structured debate, identifying attack vectors or vulnerabilities, or when groupthink or confirmation bias may be hiding risks."
+  },
+  {
+    "skill": "utopia-investments:design-of-experiments",
+    "description": "Design a multi-factor experiment so you learn the most from the fewest runs or cohorts: full and fractional factorial, Plackett-Burman screening, response surface and Taguchi designs, with the design matrix, randomisation, blocking, power and an analysis plan. Use this skill whenever the user wants to test several factors or variables at once (\"we want to test 5 onboarding changes but can only run 8 cohorts\", \"which combination of price, trial length and copy\", \"screen these 10 parameters\"), mentions factorial or fractional factorial designs, A/B/n or multivariate tests, interactions between factors, parameter tuning or process optimisation. Not for analysing results of a finished A/B test or for one-variable experiments."
+  },
+  {
+    "skill": "utopia-investments:environmental-scanning-foresight",
+    "description": "Monitors external trends across PESTLE dimensions, detects weak signals of emerging change, develops scenario-based futures, and sets adaptive signposts for early warning. Use when scanning external trends for strategic planning, detecting early indicators of change, planning scenarios for multiple futures, setting signposts and indicators for early warning, or when user mentions environmental scanning, horizon scanning, trend analysis, scenario planning, strategic foresight, or futures thinking."
+  },
+  {
+    "skill": "utopia-investments:estimation-fermi",
+    "description": "Produce a quick back-of-envelope (Fermi) estimate: break the unknown into factors you can estimate, state each assumption, give upper and lower bounds, and cross-check with a second decomposition path. Use this skill whenever the user asks for a ballpark, rough, order-of-magnitude or back-of-envelope number, \"roughly how many...\", \"give me a quick estimate of...\", \"how many X could afford Y\", or wants to sanity-check a figure fast, including quick counts of potential customers. Not for a structured TAM/SAM/SOM market-sizing analysis for a pitch or business case (use market-sizing)."
+  },
+  {
+    "skill": "utopia-investments:expected-value",
+    "description": "Calculate the expected value of a decision under uncertainty: list the outcomes, attach probabilities and payoffs, compute probability-weighted EV for each option, then adjust for risk, time value and option value, with sensitivity and breakeven probabilities. Use this skill whenever the user gives (or wants to set) odds and payoffs and asks \"is this worth it\", \"should we do X or Y\", \"should we exercise our pro-rata / follow on / take this bet\", \"what's the expected return\", or mentions expected value, EV, probability-weighted outcomes, decision trees or risk-adjusted return, for investments, follow-ons, product bets or strategic choices. Not for scoring options against weighted qualitative criteria (use decision-matrix)."
+  },
+  {
+    "skill": "utopia-investments:forecast-premortem",
+    "description": "Stress-tests predictions by assuming failure and working backward to identify blind spots, tail risks, and overconfidence. Applies Gary Klein's premortem technique to probabilistic forecasting. Use when confidence is high (>80% or <20%), need to identify tail risks and unknown unknowns, want to widen overconfident intervals, or when user mentions premortem, backcasting, what could go wrong, stress test, or black swans."
+  },
+  {
+    "skill": "utopia-investments:funding-digest",
+    "description": "Produces a single-slide PowerPoint deal-flow digest: the funding rounds raised in a period across the user's sectors or companies (company, round, amount, valuation, lead investors, dates, deal links) plus three or four key takeaways, as a branded one-page PPTX briefing. Use this skill, rather than general web research, whenever the user asks for \"this week's deal flow digest\", a \"weekly funding recap\", \"deal roundup\", \"what rounds closed in [sector] this week/month\", a \"capital markets update\" or any summary of recent funding rounds as a slide or briefing. Uses S&P Capital IQ MCP data when connected, otherwise web sources with a link per deal. Not for a profile of one company (use tear-sheet) or a multi-slide competitive landscape (use competitive-analysis)."
+  },
+  {
+    "skill": "utopia-investments:hypotheticals-counterfactuals",
+    "description": "Applies \"what if\" thinking to explore alternative scenarios, test assumptions, understand causal relationships, and prepare for uncertainty. Guides through counterfactual reasoning about past decisions, scenario exploration (three scenarios, 2x2 matrices), assumption reversal and stress testing decisions against alternative futures. Use when exploring alternative scenarios, asking \"what would have happened if we had...\", testing assumptions through \"what if\" questions, stress testing a decision, or when user mentions counterfactuals, hypothetical scenarios, thought experiments, alternative futures or what-if analysis. Not for a premortem on a probability forecast (use forecast-premortem) or ongoing PESTLE trend scanning (use environmental-scanning-foresight)."
+  },
+  {
+    "skill": "utopia-investments:ib-check-deck",
+    "description": "QC a finished deck before it goes out: checks that numbers are consistent across slides (with a script that normalises $M/$MM and flags conflicting values), that charts and the narrative agree, that the language is client-ready or board-ready, and that sources, labels and formatting are clean; reports issues by severity (critical / important / minor) with slide numbers. Read-only. Use this skill whenever the user asks to \"QC\", \"check\", \"proof\", \"review\" or do a \"final pass\" on a deck or slides, says \"check my numbers\", \"the ARR on slide 3 doesn't match slide 11\", \"reconcile figures across slides\", \"is this client-ready / board-ready\" or \"what am I missing before I send this\". Not for updating figures (use deck-refresh) or building a deck (use pitch-deck)."
+  },
+  {
+    "skill": "utopia-investments:ib-pitch-deck",
+    "description": "Populates investment banking pitch deck templates with data from source files. Use when: user provides a PowerPoint template to fill in, user has source data (Excel/CSV) to populate into slides, user mentions populating or filling a pitch deck template, or user needs to transfer data into existing slide layouts. Not for creating presentations from scratch."
+  },
+  {
+    "skill": "utopia-investments:investor-deal-sheet",
+    "description": "Use when a founder needs the one-page investor summary \u2014 \"deal sheet\", \"investor one-pager\", \"teaser\", \"summary of the round\", \"something to forward to an investor\", \"what are we sending after the meeting\". Also use when a deck exists but there is nothing an investor can forward internally. Produces a single A4 page carrying the terms, the traction and the use of funds. Not the deck (use pitch-deck) and not the long memo (use investor-memorandum)."
+  },
+  {
+    "skill": "utopia-investments:investor-doc-system",
+    "description": "Use when an investor-facing document has to exist as both a web page and a clean A4 PDF \u2014 \"make this a PDF\", \"our memo looks bad when printed\", \"investor docs that match our brand\", \"build the document template\", page breaks landing mid-table, or as the rendering layer for investor-reading-room, investor-deal-sheet, investor-memorandum and investor-faq. Ships a print-first CSS template and a headless-Chrome render script. Use instead of docx or pptx when the document must be both linkable and printable from one source."
+  },
+  {
+    "skill": "utopia-investments:investor-fact-ledger",
+    "description": "Use whenever investor-facing numbers appear in more than one place \u2014 a deck plus a memo, a data room, a website with traction figures, a one-pager. Trigger on \"keep my numbers consistent\", \"our deck and memo disagree\", \"we changed the valuation, what else needs updating\", \"check the data room for stale figures\", before any investor send, or as the first step of investor-reading-room. Ships a fact-checker script that fails CI when a surface drifts or a retired number survives anywhere."
+  },
+  {
+    "skill": "utopia-investments:investor-faq",
+    "description": "Use when a founder needs their objections answered in writing \u2014 \"investor FAQ\", \"objection handling for the raise\", \"the hard questions\", \"what will investors push back on\", \"we keep getting the same three questions\", or after a memo exists and needs pressure-testing. Also use to pressure-test a plan before writing anything: an objection with no good answer is a business problem, not a writing problem. Investor-side only; for sales objections use competitive-battlecard or sales-enablement."
+  },
+  {
+    "skill": "utopia-investments:investor-memorandum",
+    "description": "Use when a founder needs the long investor document \u2014 \"investment memo\", \"investment memorandum\", \"information memorandum\", \"IM\", \"business plan\", \"the document behind the deck\", \"something the partner can take to their IC\". Handles both modes: the investor memorandum (8\u201320pp, VC/angel) and the operating business plan (15\u201340pp, banks, DFIs, grant committees). Not the deck (pitch-deck) and not the one-pager (investor-deal-sheet)."
+  },
+  {
+    "skill": "utopia-investments:investor-reading-room",
+    "description": "Use when a founder is raising and needs the whole set of investor documents rather than one file \u2014 \"build my data room\", \"investor reading room\", \"what documents do investors need\", \"set up our diligence pack\", \"share our materials with investors\", or when they have a deck but nothing behind it. Also use to audit an existing room for gaps, contradictions, and documents that should not be in there. This is the entry point; it decides the document set, the build order, and hands off to investor-deal-sheet, investor-memorandum, investor-faq, investor-fact-ledger and investor-doc-system."
+  },
+  {
+    "skill": "utopia-investments:khalil",
+    "description": "Khalil, The Utopia Studio's pitch-deck persona. Use only when the user addresses Khalil by name (\"Khalil, build...\", \"ask Khalil\", \"as Khalil\"). Khalil asks who the audience is, then runs the deck workflow (business-narrative-builder, competitive-analysis, datapack-builder, pitch-deck, ib-check-deck, deck-refresh) in his own voice and with Karan's hard brand rules. Not for a deck request that does not name Khalil (use pitch-deck for PPTX decks, pitch-deck-web for a deck website)."
+  },
+  {
+    "skill": "utopia-investments:kill-criteria-exit-ramps",
+    "description": "Establishes pre-defined, objective conditions for stopping projects and specific decision points for continue/pivot/kill evaluations. Guides through defining kill criteria, setting go/no-go gates, avoiding sunk cost fallacy, and executing disciplined stopping decisions. Use when defining stopping rules for projects, avoiding sunk cost fallacy, setting objective exit criteria, deciding whether to continue/pivot/kill initiatives, or when users mention kill criteria, exit ramps, stopping rules, go/no-go decisions, project termination, or sunk costs."
+  },
+  {
+    "skill": "utopia-investments:pct-application",
+    "description": "International and European patent work for portfolio companies: preparing or reviewing a PCT application (PCT Rules 3-13 formalities, unity of invention, claims and abstract), deadline and fee planning from the priority date, national/regional phase strategy, Euro-PCT and EP quality checks (Art. 84 claim clarity and support, Art. 83 sufficiency, Rules 42-49 formalities, converting US-style claims to EPO two-part form), and researching EPC articles, EPO Guidelines or PCT rules with citations. Use when the user mentions PCT, international patent application, priority year, national phase, EPO, EP filing, EPC, Euro-PCT, unity objection, two-part claims or Article 83/84. Not for drafting a US provisional or US prosecution only, freedom-to-operate opinions, or valuing IP in a deal (use technical-dd for the IP section of diligence)."
+  },
+  {
+    "skill": "utopia-investments:pitch-deck",
+    "description": "Builds investor-ready pitch decks as branded PPTX files from founder meeting notes, call transcripts (e.g. Granola), uploaded decks, DD reports and strategy docs, and improves existing decks. Scores the input materials and the output on a 15-dimension rubric, marks gaps as [NEEDS INPUT] instead of inventing metrics, and covers co-investor syndication decks and founder coaching decks with Utopia or portfolio-company branding. Use when the user wants a pitch deck, investor deck, investor presentation, syndication or co-investor deck, wants notes turned into slides, or wants help with a portco's deck. Not for a deck website (use pitch-deck-web), filling a banker's PPT template (use ib-pitch-deck), QC of a finished deck (use ib-check-deck), swapping numbers in an existing deck (use deck-refresh), or the written memo or one-pager behind the deck (use investor-memorandum or investor-deal-sheet)."
+  },
+  {
+    "skill": "utopia-investments:pitch-deck-web",
+    "description": "Builds a pitch deck as a responsive, interactive website (Vite + React + TypeScript + Tailwind + motion, section-scroll pattern) from a brand book plus a PRD or existing deck, then validates and optionally deploys it. Use when the user wants a web deck, deck website, interactive or scrolling pitch site, a deck as a React/Vite app, or a deck deployed to Vercel/Netlify, for investor or sales audiences. Not for a PowerPoint/PPTX deck (use pitch-deck) or for filling a banker's PPT template (use ib-pitch-deck)."
+  },
+  {
+    "skill": "utopia-investments:ppt-template-creator",
+    "description": "Creates self-contained PPT template SKILLS (not presentations) from user-provided PowerPoint templates. Use ONLY when a user wants to create a reusable skill from their template. For creating actual presentations, use the pptx skill instead."
+  },
+  {
+    "skill": "utopia-investments:reference-class-forecasting",
+    "description": "Anchors predictions in historical reality by identifying a class of similar past events and using their statistical frequency as a baseline (outside view) before analyzing case-specific details. Use when starting a forecast, establishing base rates, testing \"this time is different\" claims, or when user mentions reference classes, outside view, base rates, or starting a new prediction."
+  },
+  {
+    "skill": "utopia-investments:research-claim-map",
+    "description": "Systematically evaluates claims by triangulating sources, rating evidence quality (primary/secondary/tertiary), assessing source credibility, and reaching confidence-rated conclusions to prevent confirmation bias and reliance on unreliable sources. Use when verifying claims before decisions, fact-checking statements, conducting due diligence, evaluating conflicting evidence, or when user mentions \"fact-check\", \"verify this\", \"is this true\", \"evaluate sources\", \"conflicting evidence\", or \"due diligence\"."
+  },
+  {
+    "skill": "utopia-investments:scout-mindset-bias-check",
+    "description": "Detects and removes cognitive biases from reasoning using Julia Galef's Scout Mindset framework. Provides reversal tests, scope sensitivity checks, status quo bias tests, confidence interval audits, and full bias audits. Use when a prediction feels emotional, stuck at 50/50, or when validating forecasting process. Use when user mentions scout mindset, soldier mindset, bias check, reversal test, scope sensitivity, or cognitive distortions."
+  },
+  {
+    "skill": "utopia-investments:tear-sheet",
+    "description": "Company tear sheets and strip profiles: a concise single-company profile as a Word one-pager (four audiences: equity research, IB/M&A, corp dev, sales/BD) or as 1-4 information-dense PowerPoint \"strip profile\" slides for a pitch book or IC pack. Pulls financials, segments, valuation, peers, M&A and relationships from a connected financial-data MCP server when available, otherwise from SEC/exchange filings, company IR pages and web search, with every figure cited. Works for public and private companies. Use when the user asks for a tear sheet, company one-pager, company profile, strip profile, fact sheet, company snapshot, target profile or meeting-prep summary of a company. Not for a multi-company competitive landscape deck (use competitive-analysis), a peer multiples table (use comps-analysis), or technical diligence (use technical-dd)."
+  },
+  {
+    "skill": "utopia-investments:technical-dd",
+    "description": "Investment-grade Technical Due Diligence reports for The Studio (Utopia Capital), as a branded .docx for IC, co-investors or the company. Assesses whether a startup's technology works, is well built, can scale, and what the technical risks are: architecture, AI/ML claims, code quality, security and compliance, scalability, tech debt, team, moat and IP, roadmap feasibility, an evidence-rated claims audit, a risk register, what must be true and dispositive questions. Works from pitch decks, technical docs and corporate profiles, and, when a repository is available, from a 5-phase repo audit. Use when the user mentions technical due diligence, TDD, tech DD, a technical assessment of a company, \"run DD on this company\", \"assess this startup\" or \"review these materials\" for an investment. Not for commercial or financial DD, valuation or the investment memo; not for a security audit or repo scan on its own (use security-auditor or repo-scanner); when the user addresses Ada by name, use ada."
+  },
+  {
+    "skill": "utopia-investments:valuation-reconciler",
+    "description": "Synthesizes intrinsic (DCF) and relative (multiples) valuation outputs into a final value estimate and investment recommendation. Reconciles divergent valuations, reverse-engineers what the market is pricing in (implied growth, implied ROIC), computes margin of safety, and produces a buy/sell/hold recommendation with catalysts. Use when combining multiple valuation approaches, making investment recommendations, reconciling DCF with multiples, or when user mentions reconcile valuations, investment recommendation, margin of safety, implied growth rate, or what is the market pricing in."
+  },
+  {
+    "skill": "utopia-product:ab-test-analysis",
+    "description": "Analyze A/B test or split test results: conversion rates, relative lift, p-value, 95% confidence interval, sample size and power, sample ratio mismatch, guardrail metrics, and a ship / extend / stop / investigate call. Use whenever the user pastes control and variant numbers (visitors, conversions, signups, trials) and asks whether a test is significant, whether the lift is real, or whether to ship the variant. Runs a Python calculation when raw data is provided. Not for designing what to test before building (use probe-matrix) or setting up event tracking (use analytics-tracking)."
+  },
+  {
+    "skill": "utopia-product:adapt",
+    "description": "Make an existing UI work on phones, tablets, other screen sizes, print or email: breakpoints, fluid layouts, touch targets, turning wide tables and hover tooltips into mobile-friendly patterns. Use when the user says a page was designed desktop-only, asks to make it responsive or mobile-friendly, mentions breakpoints, a 375px screen, touch, tablet or cross-device support. Not for new page builds (use impeccable) or slow pages (use optimize)."
+  },
+  {
+    "skill": "utopia-product:agent-concierge-probe",
+    "description": "Have an AI agent run a real, already-mapped task end to end on several real cases, to measure the automation frontier (which steps it does unaided vs needs a human) and cost-per-outcome to the cent (input and output tokens, tool calls and human-fix minutes, all priced). Use when the user wants an agent to do the real task before automating a service, asks what one outcome costs, wants it priced to the cent, or asks what the agent can't do unaided. Output: a cost-per-outcome breakdown plus a green/amber/red frontier map. Not for choosing the probe (use probe-matrix), the founder delivering by hand to test willingness to pay (use concierge-probe), faking the interface (use wizard-of-oz-probe), or testing a workflow on paper (use paper-sketch-probe). Honest about cost and frontier; says nothing about self-serve UX, trust or adoption."
+  },
+  {
+    "skill": "utopia-product:agent-design",
+    "description": "Fires when a fellow is designing ONE production agent and asks what it should be built from: 'design an agent for X', 'what tools and memory does this agent need', 'our agent isn't getting smarter / never remembers corrections, how do we build its memory'. Returns a four-part agent spec (role as one owned decision, tools as the commodity shell, memory layer of CLAUDE.md, skills, lessons.md and trace archive loaded at birth, and eval), where the memory layer is the only part the fellow owns and therefore the only part that compounds. Do NOT fire for the agent's voice or persona (use agent-persona-builder), the full pre-code Agent PRD with interview gates and engineering work orders (use agent-prd), the multi-agent fleet or hand-offs (use workflow-design), its golden cases, autonomy level or cost budget (use eval-first-spec), or the post-launch loop and autonomy-raise (use refine-flywheel)."
+  },
+  {
+    "skill": "utopia-product:agent-dx-cli-scale",
+    "description": "Score a CLI 0-3 on seven agent-DX axes (machine-readable output, raw JSON payload input, schema introspection, context-window discipline, input hardening, safety rails, agent knowledge packaging) for a 0-21 total with fixes. Use when the user asks how usable, agent-friendly or AI-ready their CLI is, wants their CLI scored or rated for AI agents, or describes CLI flags, --json output, prompts and help text and asks for an assessment."
+  },
+  {
+    "skill": "utopia-product:analytics-tracking",
+    "description": "Set up, improve or audit analytics tracking: write a tracking plan with event names, properties and naming conventions, UTM parameters, conversion and funnel events, and choose or implement GA4, Google Tag Manager, Mixpanel, Amplitude, PostHog or Segment. Use when the user asks to draft a tracking plan, set up tracking or event tracking for a new app or launch, track conversions or attribution, define UTMs, or says events aren't firing or analytics isn't working. Not for analysing a finished A/B test (use ab-test-analysis) or designing the metrics dashboard and alert thresholds (use metrics-dashboard)."
+  },
+  {
+    "skill": "utopia-product:animate",
+    "description": "Add purposeful animation, transitions and micro-interactions to an existing feature: entrances, drag-and-drop moves, list add/remove, state changes, hover and press feedback, with timing, easing and reduced-motion handling. Use when the user says the UI feels dead, static or janky, items teleport or jump, or asks to add animation, transitions, motion or micro-interactions. Not for tuning an existing sequence with storyboards or sliders (use interface-craft), a pre-ship detail pass (use polish), or showpiece WebGL/scroll effects (use overdrive)."
+  },
+  {
+    "skill": "utopia-product:asd-ste100",
+    "description": "Write, rewrite, or audit technical documentation in ASD-STE100 Simplified Technical English (Issue 9). Use when the user asks for Simplified Technical English or STE, mentions ASD-STE100, S1000D, ATA iSpec 2200, controlled or constrained English, or asks to make maintenance manuals, work instructions, procedures, safety warnings, SOPs, or operator documentation translation-ready, plain, or compliant with a controlled-language standard."
+  },
+  {
+    "skill": "utopia-product:audit",
+    "description": "Technical quality audit of UI code: accessibility (WCAG), performance, theming, responsive design and AI-slop anti-patterns, with a scored P0-P3 report, plus reviews of files against the Vercel Web Interface Guidelines with terse file:line findings. Use when the user asks for an accessibility or quality audit, says review my UI code or check my site against best practices, or mentions the Web Interface Guidelines. Does not fix. Not for React performance patterns (use vercel-react-best-practices) or a subjective UX critique (use critique)."
+  },
+  {
+    "skill": "utopia-product:bolder",
+    "description": "Amplify safe or boring designs to make them more visually interesting and stimulating. Increases impact while maintaining usability. Use when the user says the design looks bland, generic, too safe, lacks personality, or wants more visual impact and character."
+  },
+  {
+    "skill": "utopia-product:bottoms-up-quantification",
+    "description": "Build a market size from the smallest countable units up, never from a TAM: atom x reachable population x frequency x value captured per event x capture fraction, every multiplier sourced and ladder-weighted, the weakest rung capping confidence, and a top-down TAM allowed only at the end as a labelled sanity check. Use when the user says 'don't give me a TAM', 'size this bottom-up', 'build the number from the units', 'show me the arithmetic', or gives counts (registered firms, events per year, price per event, win rate) and wants a total they can defend line by line. NOT a standard TAM/SAM/SOM estimate (use market-sizing), the per-unit prize ratio (use physics-floor-gap, run it first), the 8-dimension problem gate (use problem-quality-scorecard), or scoring the whole idea (use so-what-stress-test)."
+  },
+  {
+    "skill": "utopia-product:business-model",
+    "description": "Build a business model canvas for a product or venture: a Lean Canvas (problem, solution, UVP, unfair advantage, channels, segments, revenue, costs, key metrics), a Startup Canvas (9 product-strategy sections plus costs and revenue), or the 9-block Business Model Canvas, with key assumptions and validation experiments. Use when the user asks for a Lean Canvas, startup canvas, BMC or business model canvas, or to model how a new venture or marketplace makes money. Not for Jeff Gothelf's Lean UX Canvas of business problem, hypotheses and experiments for a feature (use lean-ux-canvas), the vision-to-roadmap stack (use product-frame-stack), or choosing a revenue model or price (use pricing-strategy)."
+  },
+  {
+    "skill": "utopia-product:ckm-brand",
+    "description": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides."
+  },
+  {
+    "skill": "utopia-product:ckm-design",
+    "description": "Brand-identity and graphic design toolkit: logo design and AI logo generation (55 styles), corporate identity mockups (business cards, letterheads, vehicle livery, signage), HTML slide decks with Chart.js, social-media and ad banners at exact platform sizes with PNG export, SVG icon sets and social photos. Use when the user asks to design a logo or logo directions, brand identity or CIP mockups, banners, covers or headers for Twitter/X, LinkedIn, Instagram or ads, HTML slides or a pitch deck in HTML, or icons. Not for app or web UI code (use impeccable or ckm-ui-styling), design tokens (use ckm-design-system), brand voice (use ckm-brand), Google Stitch DESIGN.md files (use stitch-design- taste), or work inside the Efecto app (use efecto-graphic-design)."
+  },
+  {
+    "skill": "utopia-product:ckm-design-system",
+    "description": "Build a design-token architecture: three-layer tokens (primitive -> semantic -> component), token JSON, generated CSS variables, spacing and typography scales, component specs mapping each state to semantic tokens, and validation against hard-coded values (including slides). Use when the user asks for design tokens, a token system or architecture, CSS variables from brand colors, a component spec, or to find hard-coded colors and spacing. Not for picking a style, palette and fonts from a style database (use ui-ux-pro-max), logos or banners (use ckm-design), or shadcn/Tailwind component code (use ckm- ui-styling)."
+  },
+  {
+    "skill": "utopia-product:ckm-ui-styling",
+    "description": "Build accessible UI with shadcn/ui components (Radix + Tailwind) and Tailwind CSS: install components with shadcn add, forms, dialogs, dropdowns, data tables, themes, dark mode, responsive layouts. Use when the user asks to build a page or component with shadcn/ui or Tailwind, add a shadcn dialog, form or table, set up dark mode or theme a shadcn app. Not for distinctive visual direction or anti-generic landing pages (use impeccable) or design tokens (use ckm-design-system)."
+  },
+  {
+    "skill": "utopia-product:clarify",
+    "description": "Rewrite UX copy so users understand it: error messages, empty states, button and CTA labels, confirmation dialogs, form labels and hints, tooltips, loading and success messages. Use when the user pastes interface text and asks to rewrite or improve it, mentions confusing errors, vague buttons like Submit or OK, unclear labels or microcopy, or writing for non-technical users. Not for marketing or landing-page copy (use copywriting)."
+  },
+  {
+    "skill": "utopia-product:code-structure",
+    "description": "Refactor duplicated operational logic into a service layer: decide what stays in actions or server actions (business rules, auth, state transitions) and what moves into shared service functions (sandbox, email, payment, provider or SDK calls), then migrate one caller at a time. Use when the user says several actions, workflows or endpoints copy-paste the same code, a bug fix in one flow did not reach the others, or asks how to split actions vs services. Not for spec-and-handler Zod contracts with Result types (use typed-service- contracts)."
+  },
+  {
+    "skill": "utopia-product:colorize",
+    "description": "Add strategic color to an existing interface that is too gray, monochrome or dull: semantic good/bad/warning color, accent placement, tinted surfaces, chart colors, keeping contrast accessible and the brand color in charge. Use when the user says their UI or dashboard is grayscale, dull, lifeless, lacks color or warmth, or that users cannot tell good numbers from bad ones, and gives a brand color to work with. Not for choosing a whole new style, palette and font system from scratch (use ui-ux-pro-max) or design tokens (use ckm- design-system)."
+  },
+  {
+    "skill": "utopia-product:compound-system-architecture",
+    "description": "Design how an AI product is actually built as a compound system: input -> router -> retrieve / reason / act -> validate and guardrails -> output over a data layer, a Data 40 / Model 20 / Orchestration 30 / Interface 10 effort split, and named model-swap points, and kill one-big-prompt designs. Use when the user or a fellow asks how to architect or build an AI product, copilot or assistant, what the system or stack should look like, or plans to dump data into one big prompt. Not for the pass/fail spec (use eval-first-spec), drawing the diagram (use diagram-design), or one agent's internals (use agent-design)."
+  },
+  {
+    "skill": "utopia-product:concept-council",
+    "description": "First-contact teardown of a raw product idea. Use when a founder or fellow pitches a new idea in a line or two ('here's my idea', 'tear this apart', 'rip this concept apart', 'what am I missing', 'what should I build first') and wants it attacked before anything is built. Convenes five adversarial lenses, names the one load-bearing gap, and returns a Gap Map plus one First-Probe Brief costing under a week. NOT for an already-scoped concept stress-tested on the five so-whats (use so-what-stress-test), a numeric 8-dimension problem score (use problem-quality-scorecard), or weighing an internal company decision from stakeholder perspectives (use role-switch)."
+  },
+  {
+    "skill": "utopia-product:concierge-probe",
+    "description": "Runbook for delivering a product outcome by hand, as the founder, to ONE real customer \u2014 to test willingness to pay and the real workflow including the exceptions that break automation. Fires on \"do it by hand first\", \"concierge test\", \"concierge MVP\", \"deliver it manually\", \"founder-delivered version before we automate\". Output: a concierge log plus a willingness-to-pay signal scored on the evidence ladder (money charged 1.0 beats a verbal yes 0.3). Not probe-matrix (that picks which probe); not agent-concierge-probe (an agent, not the founder, runs the task, and it measures cost not WTP); not wizard-of-oz-probe (hides human delivery behind an interface to test use; real payments can also evidence WTP for that delivered service)."
+  },
+  {
+    "skill": "utopia-product:continuous-discovery-engine",
+    "description": "Builds an opportunity solution tree (outcome, opportunities, solutions, tests) and keeps it alive: one living tree fed by customer interviews, production traces and eval telemetry, each feed stamped with its evidence rung, cadence and a named synthesis owner, with solutions ranked by an evidence-weighted POC score. Also turns a one-off stakeholder request into a first tree and proof-of-concept pick. Fires on 'set up discovery', 'continuous discovery', 'opportunity solution tree', 'keep learning after launch', 'a stakeholder wants feature X, what should we actually build'. Not for scoring one signal's rung (use evidence-ladder), picking the probe for one question (use probe-matrix), running a single interview (use tacit-knowledge-interview), or a one-time end-to-end discovery cycle for a new problem (use discovery-process)."
+  },
+  {
+    "skill": "utopia-product:cost-optimizer",
+    "description": "Cut cloud and hosting costs: find cost traps (always-on EC2, multi-AZ RDS, NAT gateways, log retention, S3 lifecycle, Vercel and Railway tiers), unused or oversized resources, quick wins with estimated monthly savings, and billing alerts. Use when the user mentions a high or rising AWS, GCP, Vercel or cloud bill, asks where the money is going, wants to reduce cloud spend, or lists their infrastructure and asks what to cut."
+  },
+  {
+    "skill": "utopia-product:critique",
+    "description": "Evaluate a design from a UX perspective: visual hierarchy, information architecture, cognitive load, emotional resonance, brand-system compliance and business-goal fit, with Nielsen heuristic scoring, persona testing, automated AI-slop detection, two sharp questions and a prioritized action plan. Use when the user asks to review, critique, evaluate or give feedback on a design, screenshot, URL, component or wireframe, or to check it against their brand guidelines. Not for a technical accessibility/performance/standards audit (use audit) or for building or redesigning (use impeccable)."
+  },
+  {
+    "skill": "utopia-product:current-state-map",
+    "description": "Map a workflow exactly as it is done today and price every step: touch time, handoffs, delay, failure and rework, totalled into the current cost per unit. Use when the user lists the steps of an as-is process (with times, delays or hourly rates) and asks how it's done today, to map the workflow, what one unit really costs now, or where the time and money go. Outputs a priced step ledger with a cited source and evidence weight per step, the four hidden-cost lines, the grand total per unit and the most expensive step, every number tagged [Fact]/[Assumption]/[Hypothesis]. NOT the theoretical floor or build/walk gap (use physics-floor-gap, which divides against this), NOT the primitive job with tool names stripped (use job-in-primitives), NOT total market size (use bottoms-up-quantification), NOT qualitative problem framing (use problem-framing-canvas)."
+  },
+  {
+    "skill": "utopia-product:data-rights-clause",
+    "description": "Draft the data-rights clause for a fellow's first paid pilot. Runs the three-part test (workflow exhaust, compounds with use, locked by a clause signed at pilot #1), then writes the clause language: data covered, retention, derived-data rights, training rights, survival on termination, with GCC/MENA points (residency, government-entity data, worker/sponsor consent) marked [Assumption] for counsel. Fires on \"data rights\", \"who owns the data\", \"what to sign at the pilot\", \"can we keep and train on the pilot data\". Not for judging whether a source is a moat seed (use yoda-data-sourcing), structuring the whole pilot (use pilot-six-term-sheet) or scoring evidence (use evidence-ladder). Not a substitute for counsel."
+  },
+  {
+    "skill": "utopia-product:dataset-builder",
+    "description": "Turn real field artefacts (scanned documents, logs, tickets, emails, expert corrections) into a labelled dataset and 20+ golden cases for an eval suite, with a ground-truth label per artefact, evidence scoring and four gates (provenance, ground truth, unreachable by the model, held out). Use when the user has pilot data or corrections and asks to build a dataset, label it, create golden cases or a test set the model has not memorised, or seed evals. Not for finding proprietary data sources (use yoda-data-sourcing) or writing the full scoreable spec (use eval-first-spec)."
+  },
+  {
+    "skill": "utopia-product:delight",
+    "description": "Add moments of joy, personality and unexpected touches that make interfaces memorable: celebration moments, personality in copy, illustrations, playful empty and loading states, satisfying interactions, easter eggs, sound. Use when the user wants an interface to feel fun, charming, memorable or less joyless. Not for a pre-ship detail pass (use polish), adding functional transitions and micro-interactions (use animate), or technically ambitious effects (use overdrive)."
+  },
+  {
+    "skill": "utopia-product:deploy-to-vercel",
+    "description": "Deploy apps and websites to Vercel and manage the deployment: link the project, deploy previews or production, use a VERCEL_TOKEN when interactive login is impossible, set environment variables, inspect builds and logs, and add domains. Use when the user says \"deploy my app\", \"deploy to vercel\", \"push this live\", \"give me the link\", \"create a preview deployment\", \"add env vars to vercel\", or has a Vercel access token. Not for CI/CD pipelines or Docker (use deployment-engineer) or Railway (use railway)."
+  },
+  {
+    "skill": "utopia-product:deployment-engineer",
+    "description": "Set up CI/CD and deployment infrastructure: GitHub Actions for lint, tests and deploys, a production Dockerfile and docker-compose, dev/staging/production environment separation with env vars, and health checks. Use when the user asks to set up CI/CD, add GitHub Actions, dockerize an app, create staging and production environments, automate deploys, or stop deploying by SSH and git pull. Not for one-off Vercel deploys (use deploy-to-vercel), Railway (use railway), or monitoring (use monitoring-setup)."
+  },
+  {
+    "skill": "utopia-product:devops-advisor",
+    "description": "Assess infrastructure readiness to scale: database connection pooling, indexes, migrations and backups, caching and CDN, background job queues, statelessness and horizontal scaling, with detection commands and fixes ranked by impact. Use when the user asks if their stack will survive growth (for example 1k to 50k users), wants an infrastructure or scaling review, or mentions no connection pooling, no Redis, no queue or untested backups. Not for CI/CD setup (use deployment-engineer), cloud bills (use cost-optimizer), or security (use security-auditor)."
+  },
+  {
+    "skill": "utopia-product:diagram-design",
+    "description": "Create technical and product diagrams as standalone HTML files with inline SVG: system / cloud / infrastructure / security architecture, flowchart, sequence, state machine, ER / data model, timeline, swimlane, quadrant, nested, tree, layer stack, venn, pyramid. Ships an editorial light skin, dark variants, a dark technical skin for cloud and infrastructure diagrams, a brand style-guide onboarding gate, annotation callouts and an optional sketchy look. Use when the user asks for an architecture diagram, infra or network topology diagram, flowchart, sequence or ER diagram, or any diagram as HTML/SVG. Not for data charts or metric dashboards or for deciding what the AI system architecture should be (use compound-system-architecture)."
+  },
+  {
+    "skill": "utopia-product:discovery-interview-prep",
+    "description": "Plan and script customer discovery interviews: pick the research goal (problem validation, JTBD, churn, feature priority), segment, constraints and method, then produce an interview plan or a ready-to-use Mom Test interview script (warm-up, JTBD core questions, probes, willingness-to-pay, wrap-up) with a note-taking template and biases to avoid. Use when the user asks to write an interview script or interview guide, prepare or plan customer or user interviews, or mentions The Mom Test. Not for analysing jobs, pains and gains from notes you already have (use jobs-to-be-done), shadowing an expert to capture tacit judgment (use tacit-knowledge-interview), summarizing a transcript (use summarize-interview), or testing a prototype with users (use usability-test-protocol)."
+  },
+  {
+    "skill": "utopia-product:discovery-process",
+    "description": "Run a full discovery cycle from problem hypothesis to validated solution. Use when a team needs a structured path through framing, interviews, synthesis, and experiments."
+  },
+  {
+    "skill": "utopia-product:distill",
+    "description": "Simplify an overloaded existing UI: remove, merge or hide tabs, toggles, panels, accordions and duplicate controls; reduce choices; apply progressive disclosure; and describe the leaner layout. Use when the user says a screen is overwhelming, cluttered, has too many options, tabs, settings or panels, or asks to declutter, strip down or simplify it. Not for building a page in a minimalist visual style (use minimalist-ui) or toning down loud colors (use quieter)."
+  },
+  {
+    "skill": "utopia-product:efecto-graphic-design",
+    "description": "Design graphic assets inside the Efecto design tool via the Efecto MCP server: decks, posters, email headers, OG cards, business cards, resumes, menus, infographics, invitations, newsletters. Use only when the user mentions Efecto or the Efecto MCP tools (create_session, add_section, get_document) are available. Not for logos, brand identity or banners without Efecto (use ckm- design), HTML decks (use ckm-design), or web pages and app UIs (use efecto- web-design)."
+  },
+  {
+    "skill": "utopia-product:efecto-web-design",
+    "description": "Design web pages and app UIs live in the Efecto design tool through the Efecto MCP server: create sessions, build layouts with JSX and Tailwind, manage artboards and push real-time changes the user watches in their browser. Use only when the user mentions Efecto or the Efecto MCP tools (create_session, add_section, get_document) are available. Not for building UI code in the user's repo (use impeccable) or graphic assets like posters and decks (use efecto-graphic-design)."
+  },
+  {
+    "skill": "utopia-product:eval-first-spec",
+    "description": "Turn a validated wedge into the scope you can SCORE \u2014 a one-sentence job, 20 pass/fail golden cases drawn from real artefacts, an L0\u2013L4 autonomy level with a failure taxonomy and a derived acceptable failure rate per mode, and a cost-per-outcome budget to the cent. Fires on \"spec the build\", \"define scope\", \"scope the v1\", \"write the spec\", \"how do we know it works\". Not for the component pipeline or effort split (use compound-system-architecture), not for pilot price / terms / commercial success metrics (use pilot-six-term-sheet), not for whether the thing gets adopted at all (use wedge-five-questions)."
+  },
+  {
+    "skill": "utopia-product:evidence-driven-testing",
+    "description": "Record annotated screen-recording proof that a UI fix or feature works (setup, test_start and assertion annotations, pass/fail/untested), then post the video and a results summary on the pull request and the Linear or Jira ticket. Use when the user asks to record proof, a video or visual evidence of a UI flow, show that a bug fix works on a PR, or attach test evidence to a ticket. Not for writing automated tests (use tdd-red-green-refactor)."
+  },
+  {
+    "skill": "utopia-product:evidence-ladder",
+    "description": "Score how strong a pile of validation really is, by what people DID rather than said. Use when the user lists signals (interview quotes, 'they said they'd love it', waitlist sign-ups, LOIs, pilots, shared data, payments) and asks how strong the validation is, whether it's real, or what the evidence is worth. Places each signal on one ladder (money moved 1.0, behaviour observed 0.7, artefact shown 0.5, verbal commitment 0.3, opinion 0.1) and returns a weighted evidence table, the weight of the load-bearing claim, and the cheapest probe to raise each low signal a rung. NOT a build gate on a problem (use problem-quality-scorecard), NOT choosing the next test (use probe-matrix), NOT a transcript summary (use summarize-interview)."
+  },
+  {
+    "skill": "utopia-product:explicit-vs-tacit-capture",
+    "description": "Split a body of expertise into the tell-able procedures (explicit) and the show-only judgment (tacit), and flag the tacit half as the defensible product. Fires when a fellow says \"what's teachable vs judgment\", \"codify the expertise\", \"split explicit from tacit\", \"which part of our know-how is defensible\", \"what can we write down vs what's in their head\", or \"turn our expertise into a product spec\". Returns an Explicit/Tacit Ledger: every piece of know-how classified by one test \u2014 could a stranger execute it from the words alone? \u2014 with the tacit rows scored on the evidence ladder and the moat named. NOT for running the live watch session that observes an unobserved judgment (use tacit-knowledge-interview), NOT for sorting data sources by whether a model can already reach them (use yoda-data-sourcing), NOT for turning captured expertise into a labelled dataset and golden cases (use dataset-builder)."
+  },
+  {
+    "skill": "utopia-product:fellow-level-ladder",
+    "description": "Assess where ONE fellow sits on the Icarus ladder (Literate, Practitioner, Operator, Frontier, Author) by checking which EXIT ARTEFACT each level requires actually EXISTS and can be cited, never by how ready the fellow feels. Fires on 'how's this fellow doing', 'assess a fellow', 'what level am I / is this fellow at', 'am I ready to level up'. Output: the ladder table with a cited artefact and evidence rung per rung, the assigned level (highest with an unbroken artefact chain beneath it), and the single next exit artefact plus the skill that produces it. Self-assessment on feelings or tenure scores 0.1. NOT the build-vs-buy boundary with Daedalus (use platform-vs-venture), NOT where a fellow should start or which stages fit their type (use fellow-path-router), NOT re-running an artefact's own gate (problem-quality-scorecard, pilot-six-term-sheet, evidence-ladder: this cites their verdicts)."
+  },
+  {
+    "skill": "utopia-product:fellow-path-router",
+    "description": "Route a fellow through the Icarus module by their situation type when they start: where do I start, I already have a product or traction which stages apply, onboard me to Icarus, which stages should I skip, I have a mature product what's my path. Classifies the fellow as Type A (blank page), B (traction, no moat) or C (mature product) on the evidence ladder and returns a keep / trim / subtract / leap stage ledger with a think:build:test ratio tied to that type's dominant risk. Do NOT use for a fellow already in a Cobuild module who is stuck and asks what to do next or wants coaching (use salim), tearing down or grading one idea (use concept-council or so-what-stress-test), or assessing the fellow's level (use fellow-level-ladder)."
+  },
+  {
+    "skill": "utopia-product:first-mocks",
+    "description": "Turns a concept into the cheapest concrete artefact a human can react to, via the no-code make-sequence: Crazy 8s \u2192 paper/Miro flow \u2192 digital mock \u2192 clickable hybrid in v0 or Figma Make, built in one afternoon. Fires on \"mock it up\", \"run Crazy 8s\", \"clickable prototype\", \"turn this idea into something I can click\", \"get from a rough idea to a prototype in an afternoon\". Output is a Clickable-Prototype Plan: the ONE thing the mock must provoke a reaction to, the fidelity band, the no-code ceiling, and the hand-off to a real reaction. NOT which experiment to run (probe-matrix), NOT running the test session (usability-test-protocol), NOT the visual / UI craft \u2014 colour, type, distinctive components \u2014 which it ROUTES to impeccable / shape / design and never restates. Bans jumping to code."
+  },
+  {
+    "skill": "utopia-product:four-lenses-test",
+    "description": "Scores one already-shaped concept or solution across the four build-risk lenses (Desirability, Usability, Feasibility, Viability), each graded ONLY by its named tool (onion + JTBD + Kano, a watched usability observation, a dev spike, ICE anchored to measured value) and run by its dual-track owner. Fires on 'is this concept desirable / usable / feasible / viable', 'run the four lenses', 'go or no-go on this solution', 'should we build this design'. Output: a Four-Lens Scorecard with per-lens tool, owner, evidence and ladder weight, score, and an AND gate that KILLS the go if any lens fails, every claim tagged [Fact]/[Assumption]/[Hypothesis]. NOT for scoring whether the underlying PROBLEM is worth building (use problem-quality-scorecard), the five-question so-what gut check on a whole idea (use so-what-stress-test), or the problem-to-roadmap spine (use product-frame-stack)."
+  },
+  {
+    "skill": "utopia-product:greploop",
+    "description": "Loop on a pull request until Greptile gives it 5/5 confidence with zero unresolved comments: trigger a Greptile review, fix every actionable comment, push, re-trigger and repeat (GitHub or GitLab). Use whenever the user mentions Greptile, a Greptile confidence score, or wants Greptile's review comments fixed until it passes. Not for general CI babysitting or human reviewer feedback on a PR."
+  },
+  {
+    "skill": "utopia-product:guardrail-design",
+    "description": "Design how an AI product is stopped from doing the wrong thing: place each failure mode on a cost-of-error x volume matrix, size a three-layer stack (rules in code, confidence threshold, human sign-off), derive the auto-approve confidence threshold and set human sign-off triggers. Use when the user asks to design guardrails, decide when a human must approve, what confidence threshold to auto-approve at, or how to handle bad AI outputs, fraud or false rejections. Not for the acceptable failure rate or autonomy level (use eval- first-spec) or removing a human once accuracy holds (use refine-flywheel)."
+  },
+  {
+    "skill": "utopia-product:hf-cli",
+    "description": "Hugging Face Hub CLI (`hf`, replaces the deprecated `huggingface-cli`): authentication, local cache, downloading and uploading models, datasets and Spaces, repos, buckets, discussions and PRs, collections, webhooks, running or scheduling Jobs on HF infrastructure, and Inference Endpoints. Use when the user mentions `hf`, huggingface-cli, or wants to do a Hub operation from the terminal. Not for training scripts (use huggingface-llm-trainer or huggingface-vision-trainer), Dataset Viewer row queries (use huggingface-datasets), or reading and summarising papers (use huggingface-papers)."
+  },
+  {
+    "skill": "utopia-product:huggingface-community-evals",
+    "description": "Run benchmark evaluations of Hugging Face Hub models on local GPUs with lighteval or inspect-ai (GSM8K, HellaSwag, MMLU and similar), and choose the backend: vLLM, Transformers or accelerate, with exact commands. Use when the user asks to evaluate or benchmark an HF model locally, mentions lighteval, inspect-ai, a local GPU like an RTX 4090, or asks which eval backend to use. Not for training (use huggingface-llm-trainer) or HF Jobs orchestration (use hf-cli)."
+  },
+  {
+    "skill": "utopia-product:huggingface-datasets",
+    "description": "Use this skill for Hugging Face Dataset Viewer API workflows that fetch subset/split metadata, paginate rows, search text, apply filters, download parquet URLs, and read size or statistics."
+  },
+  {
+    "skill": "utopia-product:huggingface-gradio",
+    "description": "Build Gradio web apps and demos in Python: Blocks layouts, tabs, file uploads, chatbots with streaming, components and event listeners, and calling Gradio apps on Spaces. Use whenever the user mentions Gradio or wants a quick Python web UI or demo for a model, PDF, chatbot or ML pipeline. Not for Claude API or SDK questions (use claude-api) or React frontends (use impeccable)."
+  },
+  {
+    "skill": "utopia-product:huggingface-llm-trainer",
+    "description": "Train or fine-tune language and vision models using TRL (Transformer Reinforcement Learning) or Unsloth with Hugging Face Jobs infrastructure. Covers SFT, DPO, GRPO and reward modeling training methods, plus GGUF conversion for local deployment. Includes guidance on the TRL Jobs package, UV scripts with PEP 723 format, dataset preparation and validation, hardware selection, cost estimation, Trackio monitoring, Hub authentication, model selection/leaderboards and model persistence. Use for tasks involving cloud GPU training, GGUF conversion, or when users mention training on Hugging Face Jobs without local GPU setup."
+  },
+  {
+    "skill": "utopia-product:huggingface-papers",
+    "description": "Look up a research paper on Hugging Face Papers by arXiv ID or URL: read it as markdown, summarise contributions and results, and list the linked models, datasets, Spaces, GitHub repo and project page via the papers API. Use whenever the user gives an arXiv ID or URL or a huggingface.co/papers link and asks to summarise, explain or analyse the paper or find its linked models and datasets. Not for broad multi-source literature research on a topic."
+  },
+  {
+    "skill": "utopia-product:huggingface-tool-builder",
+    "description": "Write reusable scripts (Python, shell or TypeScript) that fetch, chain, enrich and export data from the Hugging Face Hub API: top or trending models by task, licenses, base models, linked papers, model-card metadata, to CSV or JSON for repeated runs. Use when the user asks for a script or tool that pulls models, datasets or Spaces data from the Hugging Face API, especially one they will rerun weekly or automate. Not for one-off CLI downloads or uploads (use hf- cli)."
+  },
+  {
+    "skill": "utopia-product:huggingface-trackio",
+    "description": "Track and visualize ML training experiments with Trackio. Use when logging metrics during training (Python API), firing alerts for training diagnostics, or retrieving/analyzing logged metrics (CLI). Supports real-time dashboard visualization, alerts with webhooks, HF Space syncing, and JSON output for automation."
+  },
+  {
+    "skill": "utopia-product:huggingface-vision-trainer",
+    "description": "Trains and fine-tunes vision models for object detection (D-FINE, RT-DETR v2, DETR, YOLOS), image classification (timm models \u2014 MobileNetV3, MobileViT, ResNet, ViT/DINOv3 \u2014 plus any Transformers classifier), and SAM/SAM2 segmentation using Hugging Face Transformers on Hugging Face Jobs cloud GPUs. Covers COCO-format dataset preparation, Albumentations augmentation, mAP/mAR evaluation, accuracy metrics, SAM segmentation with bbox/point prompts, DiceCE loss, hardware selection, cost estimation, Trackio monitoring, and Hub persistence. Use when users mention training object detection, image classification, SAM, SAM2, segmentation, image matting, DETR, D-FINE, RT-DETR, ViT, timm, MobileNet, ResNet, bounding box models, or fine-tuning vision models on Hugging Face Jobs."
+  },
+  {
+    "skill": "utopia-product:identify-assumptions-new",
+    "description": "List and rate the risky assumptions behind a product idea or feature. For a new product or venture, cover 8 risk categories (Value, Usability, Viability, Feasibility, Ethics, Go-to-Market, Strategy, Team); for a feature in an existing product, play devil's advocate on the 4 core risks. Uses PM, designer and engineer perspectives and gives each assumption a confidence and a test. Use when the user asks for the riskiest assumptions, a risk assessment or assumption map, to play devil's advocate on a feature, or why an idea might fail. Not for falsifying the few beliefs a chosen plan rests on with kill signals (use null-hypothesis-test), a numeric go/no-go on the problem (use problem-quality-scorecard), or picking the probe for one assumption (use probe-matrix)."
+  },
+  {
+    "skill": "utopia-product:impeccable",
+    "description": "Build, redesign or study frontend interfaces so they look designed, not AI- generated. Use when the user asks to build a landing page, dashboard, app UI or component with a distinctive look; to upgrade or redesign an existing site to premium quality without a rewrite; to make a site feel agency-grade or Awwwards-level (glass pill nav, double-bezel cards, button-in-button CTAs); to set taste dials such as DESIGN_VARIANCE, MOTION_INTENSITY or VISUAL_DENSITY; or to study a reference URL or screenshot and extract its design DNA (macrostructure, type pairing, colour anchor). Modes: craft, teach, extract, study, redesign. Not for choosing a palette from a style database (use ui-ux- pro-max), scoring a UI (use critique or audit), or a final detail pass (use polish)."
+  },
+  {
+    "skill": "utopia-product:industrial-brutalist-ui",
+    "description": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints."
+  },
+  {
+    "skill": "utopia-product:ink",
+    "description": "Ink terminal renderer for json-render that turns JSON specs into interactive terminal UIs. Use when working with @json-render/ink, building terminal UIs from JSON, creating terminal component catalogs, or rendering AI-generated specs in the terminal."
+  },
+  {
+    "skill": "utopia-product:integration-linker",
+    "description": "Connect a startup's dev tools so they talk to each other: GitHub and Vercel notifications into Slack, Linear issues linked to branches and PRs, Sentry error alerts into Slack, with step-by-step setup and a connectivity map. Use when the user asks to connect or integrate GitHub, Slack, Linear, Jira, Sentry or Vercel, set up PR, deploy or error notifications, or says their tools do not talk to each other. Not for setting up Sentry itself (use monitoring- setup) or CI/CD (use deployment-engineer)."
+  },
+  {
+    "skill": "utopia-product:interface-craft",
+    "description": "Refactor React animations into a readable storyboard (named TIMING constants, config objects, one stage integer driving the sequence instead of scattered setTimeout booleans) and add DialKit live slider panels to tune springs, stagger, scale and blur. Use when the user asks to turn setTimeout or useEffect animation chains into a storyboard, mentions storyboard or DialKit, or wants sliders or dials to tweak animation values live. Not for adding animation to a feature from scratch (use animate) or a polish pass (use polish)."
+  },
+  {
+    "skill": "utopia-product:invent-by-hand",
+    "description": "Invent an original, non-obvious product concept instead of the generic one every competitor would prompt for. Use when the user says their space is crowded with the same 'ChatGPT for X' idea, or asks what to actually build, to invent the solution, to make it non-obvious, or for a concept a competitor couldn't just prompt for, especially when they hold proprietary data. Onions the stated idea to its invariant core need, diverges and keeps the strange child, anchors every concept to the proprietary YODA corpus, then runs the generic-prompt test. Returns an invented concept with rationale. Not for carving and adoption-testing the first slice (use wedge-five-questions), finding the proprietary data (use yoda-data-sourcing), or designing an experiment for an already-chosen idea (use probe-matrix)."
+  },
+  {
+    "skill": "utopia-product:job-in-primitives",
+    "description": "Strip a workflow down to the primitive job underneath: delete every tool, vendor, product and job-title name, then state the job in three currencies (information moved, decisions made, liability transferred). Use when the user describes a process full of tool and team names (Salesforce, Zapier, Jira, Slack, 'the VP approves') and asks what job is really being done, to strip it to the primitive, or to take the tools out. Outputs a primitive job spec: the customer's-words version, a kill-list of deleted proper nouns, the three primitive lines, an invariance test and an AI-eats-vs-stays split. NOT naming the single decision and its before-after compression (use product-as-decision), NOT pricing each workflow step (use current-state-map), NOT the problem-framing workshop (use problem-framing-canvas)."
+  },
+  {
+    "skill": "utopia-product:jobs-to-be-done",
+    "description": "Map customer jobs to be done (functional, social, emotional), pains and gains in a structured JTBD / Value Proposition Canvas format, from interview notes or research. Use when the user asks for jobs to be done, a JTBD analysis, or customer jobs, pains and gains. Not for ranking the one durable need under a list of feature requests (use unserved-needs-finder), writing or planning an interview script (use discovery-interview-prep), or job stories for a backlog (use user-story situation-first mode)."
+  },
+  {
+    "skill": "utopia-product:layout",
+    "description": "Fix layout, spacing and visual rhythm in an existing UI: a spacing scale, varied section padding, grid monotony, sidebar crowding, alignment, depth and heading hierarchy. Use when the user says spacing feels off, everything has the same padding, cards look identical, a column feels crowded, alignment is broken, or headings do not stand out. Not for typography-only fixes (use typeset) or building a new page (use impeccable)."
+  },
+  {
+    "skill": "utopia-product:lean-ux-canvas",
+    "description": "Run Jeff Gothelf's Lean UX Canvas (v2) for a feature or initiative: business problem, business and user outcomes, users, solutions, hypotheses, what to learn first and the least work to learn it. Use when the user asks for a Lean UX Canvas session or wants to frame a business problem, surface assumptions and decide what to learn next before building. Not for a Lean Canvas, startup canvas or business model canvas of how a venture makes money (use business-model), or broad risk mapping (use identify-assumptions-new)."
+  },
+  {
+    "skill": "utopia-product:metrics-dashboard",
+    "description": "Define and design a product metrics dashboard with key metrics, data sources, visualization types, and alert thresholds. Use when creating a metrics dashboard, defining KPIs, setting up product analytics, or building a data monitoring plan."
+  },
+  {
+    "skill": "utopia-product:metrics-that-matter",
+    "description": "Pick and validate the few metrics that matter for a product, especially a launched AI product. Use when the user asks what metrics to track, to define or choose a North Star metric and its input metrics, whether growing MAU or a headline number is real or vanity, whether cohort retention is good or the curve flattens, or what one outcome costs. Returns a scorecard: the business game (Attention / Transaction / Productivity), one customer-centric North Star checked against the 7 criteria with 3-5 input metrics, an AARRR one-metric skeleton, the flattening-retention test that GATES the North Star, and cost-per-outcome to the cent. Not for a team's mission or values (use alignment-values-north-star), the post-launch improvement loop (use refine-flywheel), mining traces for discovery (use trace-to-interview), or the dashboard spec and alerts (use metrics-dashboard)."
+  },
+  {
+    "skill": "utopia-product:minimalist-ui",
+    "description": "Build pages in a clean editorial, Notion-like minimalist style: warm off-white canvas, serif headlines with sans body, flat bento grids with 1px borders, muted pastel tags, near-zero shadows, no gradients. Use when the user asks for a minimalist, editorial, Notion-style or document-like UI, a warm monochrome look, or names those visual traits. Not for simplifying an overloaded existing screen (use distill) or general distinctive builds with no named style (use impeccable)."
+  },
+  {
+    "skill": "utopia-product:moat-design-canvas",
+    "description": "Sequence a validated wedge into a defensible moat as four DATED gates (wedge \u2192 usage \u2192 lock-in \u2192 data advantage), forced through an incumbent-veto sentence (\"X won't copy this because ___\") and three monthly falsifiers; returns a filled moat canvas. Fires on \"what's the moat\", \"how is this defensible\", \"will this compound\", \"design the moat\", \"will competitors just copy this / how do we stay defensible as they show up\". Not for whether one wedge gets adopted now (use wedge-five-questions \u2014 run it first), not for drafting the pilot data-rights clause itself (use data-rights-clause), not for scoring the whole idea across dimensions (use problem-quality-scorecard)."
+  },
+  {
+    "skill": "utopia-product:monitoring-setup",
+    "description": "Configures error tracking (Sentry), product analytics (PostHog), health monitoring, and alerting. Provides verification commands and concrete output templates. Use when the user asks to \"set up monitoring\", \"add error tracking\", \"configure Sentry\", \"add analytics\", or \"set up alerts\". Don't use for deployment (use deployment-engineer), security (use security-auditor), or integration linking (use integration-linker)."
+  },
+  {
+    "skill": "utopia-product:null-hypothesis-test",
+    "description": "Falsify the few load-bearing beliefs under a chosen plan or wedge. Use when the user lists the beliefs their plan rests on and asks what has to be true, how to disprove each belief cheaply, what could kill the plan, or which belief to test first. Restates each assumption as a null hypothesis (the belief is FALSE), designs the single cheapest observation whose failure would disprove it, and ranks beliefs by P(wrong) x impact-if-wrong. Output: an Assumption -> Null -> Disproof table with a pre-committed kill signal per row. NOT a broad inventory of every risky assumption across 8 risk categories (use identify-assumptions-new), NOT the go/no-go on the problem (use problem-quality-scorecard), NOT bottom-up sizing (use bottoms-up-quantification), NOT the priced workflow map (use current-state-map)."
+  },
+  {
+    "skill": "utopia-product:optimize",
+    "description": "Diagnose and fix frontend performance: LCP, INP and CLS (Core Web Vitals), bundle size, code splitting, image formats and sizing, font loading, janky scrolling and animations, re-renders. Use when the user reports a slow or janky page, gives Lighthouse or Web Vitals numbers like LCP or CLS, a large JS bundle or huge images, or asks to make the UI faster. Not for React/Next.js code-pattern review (use vercel-react-best-practices) or server scaling (use devops-advisor)."
+  },
+  {
+    "skill": "utopia-product:overdrive",
+    "description": "Pushes interfaces past conventional limits with technically ambitious implementations \u2014 shaders, spring physics, scroll-driven reveals, 60fps animations. Use when the user wants to wow, impress, go all-out, or make something that feels extraordinary."
+  },
+  {
+    "skill": "utopia-product:paper-sketch-probe",
+    "description": "Fires when a fellow wants to test a workflow on paper before building it \u2014 \"paper test\", \"sketch it\", \"paper prototype\", \"sketch probe\", \"draw the flow and check they can follow it\". Output is a hand-drawn workflow sketch plus a structured read-out naming what was legible and where the decision lived. NOT for choosing which probe to run (that is `probe-matrix`), and NOT for testing demand, trust, or willingness to pay \u2014 a sketch lies about all three; route those to `wizard-of-oz-probe` or `concierge-probe`."
+  },
+  {
+    "skill": "utopia-product:physics-floor-gap",
+    "description": "Size the per-unit prize of a piece of work from first principles: today's priced cost per unit versus its theoretical floor once AI does the automatable part (token cost plus remaining human judgment minutes), as a gap ratio with a build/walk verdict. Use when the user gives one unit of work with its current time or cost (e.g. '50 minutes at AED 150/hour per review') and asks if the problem is big enough, how big the prize is, what the physics floor is, or whether the gap is worth building for. Outputs a floor/gap calc sheet, every number tagged [Fact]/[Assumption]/[Hypothesis]. NOT total market size (use bottoms-up-quantification), NOT the 8-dimension problem gate (use problem-quality-scorecard), NOT scoring the whole idea (use so-what-stress-test)."
+  },
+  {
+    "skill": "utopia-product:pilot-six-term-sheet",
+    "description": "Turn a would-be pilot into a six-term paid-pilot sheet \u2014 scope, price (paid or prepaid), the signed data-rights clause, success metrics, kill criteria, and conversion terms priced now \u2014 and refuse to call anything a pilot unless all six terms are non-empty. Fires on \"pilot terms\", \"structure the deal\", \"paid pilot\", \"pilot term sheet\", \"structure the pilot so it isn't a free trial\". Not for brainstorming or validating which revenue model to bet on (that is `pricing-strategy`, exploratory; this commits one basis to price the conversion term now), not for drafting the data-rights legal language (that is `data-rights-clause`, section 06; this carries the clause as term 3 and routes there), not for testing whether the thing will get adopted at all (that is `wedge-five-questions`)."
+  },
+  {
+    "skill": "utopia-product:platform-vs-venture",
+    "description": "Decide build vs buy for each component of an AI product: what the studio platform Daedalus builds once and the fellow inherits, what the fellow must build because it is their moat, and what is a rented commodity. Use when the user asks whether to build their own eval harness, RAG pipeline, model router, guardrails or fine-tuned model, build or use the platform, what Daedalus gives them, or what's ours vs the studio's. Returns a build/buy boundary map splitting platform substrate (inherit) from domain signal (build), and kills two errors: rebuilding a platform primitive, or outsourcing the moat. Not for sequencing the moat into dated gates (use moat-design-canvas), laying out the component pipeline (use compound-system-architecture), or writing guardrail rules (use guardrail-design)."
+  },
+  {
+    "skill": "utopia-product:polish",
+    "description": "Final pre-ship detail pass on an existing UI: alignment, spacing consistency, interaction and pressed states, concentric border radius, optical icon alignment, layered shadows, tabular numbers, text wrapping, and animation feel (easing, duration, transform origin, springs, tooltip delays). Use when the user says we ship tomorrow, asks for a polish or finishing pass, says it feels off, wants a Before/After review of UI details, or asks how a dropdown, popover, tooltip or button press should animate. Not for adding new animation to a feature (use animate), a scored UX critique (use critique), or an accessibility/performance audit (use audit)."
+  },
+  {
+    "skill": "utopia-product:prd-development",
+    "description": "Write a PRD for a product feature at the right weight: a one-page PRD or brief for quick approval, a lean 1-2 page spec, or a full engineering-ready PRD (problem and evidence, personas, strategic context, solution, success and guardrail metrics, user stories, out of scope, dependencies, risks, open questions). Use when the user asks to write or review a PRD, one-page PRD, one-pager, product spec, feature proposal or product brief for a product feature, or to turn discovery notes into requirements. Includes a one-pager rubric and templates. Not for an AI agent's planning PRD and work orders (use agent-prd), framing the problem before a solution exists (use problem-statement), or writing individual stories (use user-story)."
+  },
+  {
+    "skill": "utopia-product:pricing-strategy",
+    "description": "Pricing and monetization strategy: brainstorm and compare 3-5 monetization strategies or revenue models (freemium, subscription, usage, seat, marketplace, ads) with audience fit, risks and a validation experiment each; design SaaS packaging, tiers, value metric and price points; research willingness to pay (Van Westendorp, MaxDiff); plan price increases and pricing pages; and price AI-native products (per resolution vs per conversation vs per seat vs credits, BYOK, AI margins). Use when the user asks to brainstorm monetization strategies, how to monetize or make money from a product, what to charge, pricing tiers, freemium or free trial, or AI pricing. Not for committing one value-anchored price once value is measured (use value-based-pricing) or a paid pilot's six terms (use pilot-six-term-sheet)."
+  },
+  {
+    "skill": "utopia-product:probe-matrix",
+    "description": "Design the cheapest honest experiment to validate an idea before building. Use when the user asks how to test or validate an idea cheaply, to design lean startup experiments, pretotypes, a fake door, landing page, concierge or Wizard of Oz test, for an XYZ hypothesis, or which experiment or probe to run. Picks one question, writes it as an XYZ hypothesis ('at least X% of Y will Z'), routes it to the cheapest probe that is HONEST about it (paper sketch, Wizard-of-Oz, concierge, agent-concierge, or a fake-door pretotype for raw demand), states what that probe still lies about, its cost, and a pre-registered pass/fail; it refuses a probe that lies about the thing being tested. Not for the how-to of running one probe (use paper-sketch-probe, wizard-of-oz-probe, concierge-probe or agent-concierge-probe), building a clickable mock (use first-mocks), or scoring a signal already in hand (use evidence-ladder)."
+  },
+  {
+    "skill": "utopia-product:problem-framing-canvas",
+    "description": "Guide teams through MITRE's Problem Framing Canvas. Use when you need a clearer problem statement before jumping to solutions."
+  },
+  {
+    "skill": "utopia-product:problem-quality-scorecard",
+    "description": "Numeric go/no-go gate on the PROBLEM, before any solution: scores ONE product problem 1-5 on eight evidence-backed dimensions (frequency, budgeted pain, severity, data exhaust, structural persistence, buyer clarity, wedge sharpness, founder asymmetry), sums to /40, and returns pass (>=32) / redesign (28-31) / kill (<28). Fires on 'is this problem worth building for', 'score this problem', 'go or no-go on this problem', 'is this problem good enough', 'rate this problem'. Output: a filled 8-row scorecard with a money-or-behaviour citation on every row. NOT the four-lens gate on a specific concept or solution (use four-lenses-test), NOT broad risk mapping across GTM, strategy and team (use identify-assumptions-new), NOT the five whole-idea questions (use so-what-stress-test), NOT the per-unit size ratio (use physics-floor-gap), NOT the wedge-only deep dive (use wedge-five-questions)."
+  },
+  {
+    "skill": "utopia-product:problem-statement",
+    "description": "Write a user-centered problem statement with who is blocked, what they are trying to do, why it matters, and how it feels. Use when framing discovery, prioritization, or a PRD."
+  },
+  {
+    "skill": "utopia-product:product-as-decision",
+    "description": "Restates a product idea as ONE decision a named human makes, then quantifies how that decision is compressed \u2014 before\u2192after on a single axis of time, effort, or autonomy (e.g. six minutes \u2192 thirty seconds). Fires on \"what's the product here\", \"frame the problem\", \"what decision are we changing\", \"state this as a decision\", \"what are we actually changing for the user\". Output is a filled Compressed-Decision Statement: the decision (never a feature), its one owner, the before\u2192after compression with a source, and the autonomy-ladder move, every claim tagged [Fact]/[Assumption]/[Hypothesis]. NOT for stripping the job to primitives (use job-in-primitives), NOT for mapping and pricing the whole workflow (use current-state-map), NOT for the 8-dimension go/no-go (use problem-quality-scorecard), NOT for the per-unit prize ratio (use physics-floor-gap)."
+  },
+  {
+    "skill": "utopia-product:product-frame-stack",
+    "description": "Turn a validated problem into the strategy stack: vision, strategy, product vision, North Star, OKRs and a dual-track roadmap, where each layer rests on the one below and none may rest on an unvalidated problem. Use when the user has a validated problem (e.g. a passing scorecard) and asks to frame the business, go from vision to roadmap, set strategy, or give the vision, North Star and OKRs. Every layer inherits the problem's evidence rung and every roadmap item ladders to the North Star. NOT the go/no-go that validates the problem (use problem-quality-scorecard or so-what-stress-test), NOT team culture, mission or values (use alignment-values-north-star), NOT the desirable/feasible/viable score (use four-lenses-test), NOT the post-launch metric check (use metrics-that-matter)."
+  },
+  {
+    "skill": "utopia-product:prompt-engineer",
+    "description": "Make a repository AI-native by writing AGENTS.md, CLAUDE.md-style context, .cursorrules and .cursor/rules so coding agents (Claude Code, Cursor, Codex, Copilot) understand the stack, commands, structure, conventions and boundaries. Use when the user asks to write or improve an AGENTS.md, CLAUDE.md or .cursorrules, make a repo AI-native or agent-friendly, or onboard AI coding agents to a codebase. Not for general repo cleanup (use repo-structurer)."
+  },
+  {
+    "skill": "utopia-product:proto-persona",
+    "description": "Create a proto-persona from current research, market signals, and team knowledge. Use when you need a working customer profile before deeper validation."
+  },
+  {
+    "skill": "utopia-product:quieter",
+    "description": "Tones down visually aggressive or overstimulating designs, reducing intensity while preserving quality. Use when the user mentions too bold, too loud, overwhelming, aggressive, garish, or wants a calmer, more refined aesthetic."
+  },
+  {
+    "skill": "utopia-product:railway",
+    "description": "Deploy and operate apps on Railway: create or link projects and services, push code with railway up, add Postgres/Redis/MySQL/MongoDB and wire variables, set variables and build config, domains, deployment logs and failed builds, CPU and memory metrics, PR deploys, templates (n8n, Ghost), and answer questions from Railway docs or Central Station community threads (Railpack, private networking, volumes). Use whenever the user mentions Railway, railway up, Railpack or Central Station, including how-to questions about Railway features. Not for Vercel (use deploy-to-vercel) or generic CI/CD (use deployment-engineer)."
+  },
+  {
+    "skill": "utopia-product:recommendation-canvas",
+    "description": "Evaluate an AI product idea across outcomes, hypotheses, risks, and positioning. Use when deciding whether an AI solution deserves investment or recommendation."
+  },
+  {
+    "skill": "utopia-product:refine-flywheel",
+    "description": "Set up the post-launch improvement loop for a shipped AI product: ship behind human sign-off, observe tweak-time (how much customers edit before accepting), re-run the WHOLE eval set on every new model release, and raise autonomy only on a scored eval result, never by feel. Use when the user asks what to do after launch, whether to upgrade to a newly released model, whether they can drop the human sign-off or raise autonomy, or how to set up the improvement loop. Returns a flywheel cadence doc. NOT which metrics or North Star to track (use metrics-that-matter), NOT turning traces into discovery interviews (use trace-to-interview), NOT writing the eval set or autonomy ladder in the first place (use eval-first-spec)."
+  },
+  {
+    "skill": "utopia-product:repo-scanner",
+    "description": "Scan a repository and score its production readiness out of 10: tech stack, hosting, CI/CD, environments, error tracking, docs, security, cost, integrations, LLM-readiness, code organisation, plus the top 3 issues and which skills fix them. Use when the user asks how production-ready their repo is, wants a repo scan, audit or readiness score, or asks what to fix first before launch. Not for a deep security review (use security-auditor)."
+  },
+  {
+    "skill": "utopia-product:repo-structurer",
+    "description": "Clean up and structure a messy repository for production: add READMEs to every directory, find dead files and duplicates (api-old, v2-final), split oversized files and functions, and suggest modularisation, asking before deleting anything. Use when the user says their repo is a mess, asks to clean up, reorganise or restructure it, add directory READMEs, or remove dead code. Not for writing AGENTS.md or .cursorrules (use prompt-engineer)."
+  },
+  {
+    "skill": "utopia-product:roadmap-planning",
+    "description": "Plan a strategic roadmap across prioritization, epic definition, stakeholder alignment, and sequencing. Use when turning strategy into a release plan that teams can execute."
+  },
+  {
+    "skill": "utopia-product:saas-economics-efficiency-metrics",
+    "description": "Calculate and judge unit economics and capital efficiency from the user's numbers: gross and contribution margin, CAC, LTV, LTV:CAC, CAC payback, burn, runway, Rule of 40, magic number, by segment and channel, for SaaS and for marketplace, e-commerce, freemium or enterprise models. Use whenever the user pastes figures like ARPA, AOV, take rate, churn, CAC, S&M spend or burn and asks to check or analyze unit economics, whether LTV/CAC is healthy, the payback, or whether they can scale paid acquisition; also for quick formula and benchmark lookups ('what's the formula and a good benchmark for CAC payback / magic number / Rule of 40'). Not for MRR, churn, NRR and expansion metrics (use saas-revenue-growth-metrics) or cost per outcome of an AI product (use metrics-that-matter)."
+  },
+  {
+    "skill": "utopia-product:saas-revenue-growth-metrics",
+    "description": "Calculate and interpret SaaS revenue and retention metrics from the user's numbers: MRR and ARR growth, ARPU, ARPA, ACV, logo and revenue churn, gross and net revenue retention (GRR, NRR), expansion, quick ratio, revenue mix and cohort trends. Use whenever the user gives starting MRR plus new, expansion, contraction and churned MRR, or asks to compute churn, NRR or quick ratio for a board deck, or to diagnose momentum and product-market-fit signals. Not for CAC, LTV, payback, burn and efficiency ratios (use saas-economics-efficiency-metrics) or choosing a North Star (use metrics-that-matter)."
+  },
+  {
+    "skill": "utopia-product:security-auditor",
+    "description": "Audit a whole repository before launch or open-sourcing: hardcoded API keys and secrets (including git history), committed .env files, npm or pip dependency vulnerabilities, unprotected admin or API routes, CORS, rate limiting and input validation, with critical issues and fixes. Use when the user asks to check a repo or codebase for security issues, find leaked secrets or keys, run npm audit, or is about to open-source. Not for reviewing only the current branch's diff or PR changes."
+  },
+  {
+    "skill": "utopia-product:shape",
+    "description": "Plan the UX and UI of a feature before any code: run a short discovery interview (purpose, users, content, goals, constraints, anti-goals), then write a design brief to hand to implementation. Use when the user says before we write any code, asks to plan or scope the UX/UI of a new feature or screen, wants a design brief, or asks to be interviewed about a feature. Not for building it (use impeccable) or a product PRD (use create-prd)."
+  },
+  {
+    "skill": "utopia-product:so-what-stress-test",
+    "description": "Pressure-test a whole business idea fast on five questions: So what? Who pays? What's the wedge? What's the moat? What kills it? Use when the user asks to pressure-test, stress-test or poke holes in an idea, asks 'is this worth doing' or 'so what', or wants a quick pass / redesign / kill verdict on a venture or marketplace idea. Returns a per-question verdict table and an overall Pass / Redesign / Kill, refusing to pass any question answered on opinion. Do NOT use for the numeric 8-dimension problem gate (use problem-quality-scorecard), the 5-lens adversarial teardown of a raw idea that ends in one probe (use concept-council), or a wedge-only deep dive (use wedge-five-questions)."
+  },
+  {
+    "skill": "utopia-product:stitch-design-taste",
+    "description": "Write a DESIGN.md for Google Stitch: atmosphere, color palette with hex codes and roles, typography, component stylings, layout and motion rules and banned AI patterns, in Stitch's natural-language format so Stitch generates premium, non-generic screens. Use whenever the user mentions Google Stitch or asks for a DESIGN.md for Stitch. Not for brand logos, banners or decks (use ckm-design) or building UI code directly (use impeccable)."
+  },
+  {
+    "skill": "utopia-product:summarize-interview",
+    "description": "Summarize a customer interview transcript into a structured template with JTBD, satisfaction signals, and action items. Use when processing interview recordings or transcripts, synthesizing discovery interviews, or creating interview summaries."
+  },
+  {
+    "skill": "utopia-product:synthetic-users",
+    "description": "Build a synthetic user panel grounded in your YODA corpus and pre-test a concept, message, or flow against it \u2014 cheaply, before you spend real interview time. Returns a Synthetic Panel + Pre-Test Transcript carrying a lie ledger (what synthetic users systematically get wrong: they never pay, never no-show, over-rationalise, over-agree) and a kill / revise / promote-to-real-interview verdict. Fires on \"test this before real interviews\", \"simulate a user\", \"dry-run the pitch\", \"pre-test the message/flow\", \"which of these should I even bother interviewing about\". NOT for running the real interview that captures an expert's judgment (use tacit-knowledge-interview), scripting a Mom-Test discovery interview (use discovery-interview-prep) or planning one (use discovery-interview-prep), or sourcing the corpus the panel is built from (use yoda-data-sourcing). Never treats a synthetic response as validation."
+  },
+  {
+    "skill": "utopia-product:tacit-knowledge-interview",
+    "description": "Shadow an expert doing real work and extract the judgment calls they make without noticing. Fires when a fellow says \"interview an expert\", \"capture how they decide\", \"watch them work\", \"shadow an operator\", \"capture the judgment\", or \"encode when they override the rule\". Runs a watch-30 / replay-20 / edge-cases-10 session and returns a Tacit-Knowledge Capture: the explicit procedure split from the tacit judgment, each fork tagged with the cue read and the exception that overrides it. NOT for planning or scripting a Mom-Test customer discovery interview about a problem or churn (use discovery-interview-prep), or condensing a transcript you already have (use summarize-interview)."
+  },
+  {
+    "skill": "utopia-product:tdd-red-green-refactor",
+    "description": "Strict Red-Green-Refactor TDD loop in TypeScript/Node.js with Vitest or Jest: one failing test, then the minimal code to pass, then a refactor, repeated, never batching tests or editing tests to make code pass. Use when the user asks for TDD, test-first, red-green-refactor, or wants a feature or bug fix built strictly test-first. Not for recording visual UI test evidence (use evidence-driven-testing)."
+  },
+  {
+    "skill": "utopia-product:trace-to-interview",
+    "description": "Turns production traces into discovery interviews, recovering for each behaviour pattern the discovery question the user answered by acting instead of talking. Fires on 'learn from usage', 'mine the logs', 'what are our production traces telling us', 'turn usage data into discovery'. Outputs a trace-interview log: one card per pattern with the observed behaviour [Fact, 0.7], the question it answers, the inferred JTBD or satisfaction signal [Hypothesis], distinct-user weight, the confirm-the-why probe, and a sourced interview-cost comparison (measured avoided work or modeled counterfactual), routed to continuous-discovery-engine as a feed-2 signal. NOT the AARRR / retention / North Star scorecard (use metrics-that-matter), NOT structuring a recorded interview transcript (use summarize-interview), NOT standing up the whole three-feed discovery loop (use continuous-discovery-engine)."
+  },
+  {
+    "skill": "utopia-product:transformers-js",
+    "description": "Use Transformers.js to run state-of-the-art machine learning models directly in JavaScript/TypeScript. Supports NLP (text classification, translation, summarization), computer vision (image classification, object detection), audio (speech recognition, audio classification), and multimodal tasks. Works in browsers and server-side runtimes (Node.js, Bun, Deno) with WebGPU/WASM using pre-trained models from Hugging Face Hub."
+  },
+  {
+    "skill": "utopia-product:typed-service-contracts",
+    "description": "Structure TypeScript commands and services with the spec-and-handler pattern: a spec.ts with Zod input, output and exhaustive error-code schemas and a Result type, a handler.ts that never throws, and separate contract (schema) tests from handler logic tests. Use when the user mentions spec and handler, parse-don't-validate, Result types instead of exceptions, Zod contracts, or wants a type-safe CLI command or service structured this way. Not for extracting duplicated logic into a service layer (use code-structure)."
+  },
+  {
+    "skill": "utopia-product:typeset",
+    "description": "Improves typography by fixing font choices, hierarchy, sizing, weight, and readability so text feels intentional. Use when the user mentions fonts, type, readability, text hierarchy, sizing looks off, or wants more polished, intentional typography."
+  },
+  {
+    "skill": "utopia-product:ui-ux-pro-max",
+    "description": "Searchable UI/UX style database: recommend a complete design system for a product type (UI style, color palette, font pairing, UX guidelines, chart types) from 50+ styles, 161 palettes and 57 font pairings, and persist it as a master design-system file. Use when the user asks you to recommend or pick a style, palette and fonts for a new app, search a style database, or generate a design system for a product type such as a spa, fintech or e-commerce app. Not for token architecture or CSS variables (use ckm-design-system), adding color to an existing gray UI (use colorize), or agency-grade build directions (use impeccable)."
+  },
+  {
+    "skill": "utopia-product:ui-walkthrough",
+    "description": "Make a narrated video of what a merged pull request changed in a web app's UI \u2014 recordings of the real running app, before and after, with voiceover and captions \u2014 instead of reading code. Use when asked for a PR video, UI walkthrough, \"what changed\" video, release demo or before/after recording of a merged PR."
+  },
+  {
+    "skill": "utopia-product:unserved-needs-finder",
+    "description": "Find the real, durable need under a list of feature requests and rank the one to build for. Use when the user hands over a 'needs' list that is mostly features (integrations, dashboards, AI summaries, voice input) and asks what customers really need, to find the unmet or under-served need, which need to prioritise, or the real need under a feature request. Onions each stated need to a tech-invariant core, sorts survivors with Kano (must / performance / delighter) and returns one durable, under-served wedge need with its evidence, in a prioritised need map. NOT a general jobs, pains and gains map from interviews (use jobs-to-be-done), naming who holds the need or budget (use user-buyer-decider-map), reducing the job to its currencies (use job-in-primitives), or scoring the whole idea (use so-what-stress-test)."
+  },
+  {
+    "skill": "utopia-product:usability-test-protocol",
+    "description": "Run a moderated usability session on a working prototype and return findings tied to the screen, not the user. Fires on 'run a usability test', 'watch a user try it', 'usability protocol', 'can a first-time user complete X', 'see where they get stuck'. Product runs, Engineering watches muted, Design notes; tasks are framed as goals, the user is never led or asked 'do you like it', and every finding is scored on observed task success (behaviour 0.7), never stated preference (opinion 0.1). Output: a Usability Findings sheet with each defect tied to a step, counted across users, severity by frequency x blocking. NOT for building the prototype (use first-mocks), shadowing an expert to capture judgment (use tacit-knowledge-interview), or testing demand or willingness to pay (use wizard-of-oz-probe or concierge-probe)."
+  },
+  {
+    "skill": "utopia-product:user-buyer-decider-map",
+    "description": "Splits a buying situation into four distinct roles (which may share people) \u2014 user (feels the pain, touches the product), buyer (owns the budget line), decision-maker (final signature / veto), champion (spends internal capital to push it) \u2014 each pinned to ONE title, ONE budget (or an explicit none), ONE why-now. Fires on \"who's the actual buyer\", \"who decides\", \"map the stakeholders\", \"map the buying committee\", \"the user loves it but who signs the cheque\", \"who's our champion and who can veto us\". Output is a filled Stakeholder-Role Map that feeds the buyer-clarity row of problem-quality-scorecard. NOT the 8-dimension go/no-go (problem-quality-scorecard), NOT ranking which unmet need to build first (unserved-needs-finder), NOT a demographic day-in-the-life persona (proto-persona), NOT simulating users before interviews (synthetic-users)."
+  },
+  {
+    "skill": "utopia-product:user-story",
+    "description": "Write development-ready user stories: a single story in Mike Cohn format (As a / I want to / so that) with Gherkin Given/When/Then acceptance criteria, or a full set of backlog stories for a feature using the 3 C's (Card, Conversation, Confirmation) and INVEST with numbered acceptance criteria and supplied design links. Use when writing a user story, breaking a feature into backlog items, converting a PRD requirement into stories, defining acceptance criteria, or writing situation-first job stories (When / I want to / so I can). Not for splitting an oversized story or epic (use user-story-splitting), or laying out the whole journey and release slices (use user-story-mapping)."
+  },
+  {
+    "skill": "utopia-product:user-story-mapping",
+    "description": "Create a Jeff Patton user story map: backbone activities, steps and tasks laid out left-to-right as the user's journey, prioritized top-to-bottom, with release slices and a walking-skeleton MVP. Works as a one-shot map or as an interactive story-mapping workshop with adaptive questions and a facilitation agenda. Use when planning an MVP or release around a user workflow, turning a flat backlog into a map, aligning a team on scope, or running a story mapping session. Not for writing individual stories with acceptance criteria (use user-story), splitting one oversized story (use user-story-splitting), or quarter-level initiative sequencing (use roadmap-planning)."
+  },
+  {
+    "skill": "utopia-product:user-story-splitting",
+    "description": "Break a large story or epic into smaller deliverable stories using proven split patterns. Use when backlog items are too big for estimation, sequencing, or independent release."
+  },
+  {
+    "skill": "utopia-product:v1-launch-bar",
+    "description": "Go / no-go gate for launching a built v1 or pilot, on two recorded tests: a true stranger reaches first correct value in 60 seconds or less unaided, AND the learn-from-corrections mechanism is wired and proven to compound. Use when the user asks if they're ready to launch, whether v1 is good enough to ship, for a launch bar or go/no-go on a v1 or pilot, especially with time-to-value or corrections-loop evidence. Output: a recorded-evidence go / no-go checklist. Not the ongoing post-launch loop (use refine-flywheel), not pilot price or commercial terms (use pilot-six-term-sheet), not defining what 'working' means before code (use eval-first-spec)."
+  },
+  {
+    "skill": "utopia-product:value-based-pricing",
+    "description": "Set the price and the charging metric for a validated product from MEASURED value: anchor the number at 10-20% of the measured incremental value per outcome, check it clears the cost per outcome, and charge on the outcome, asset or decision delivered, never on seats or tiers. Use when the user has pilot results or measured value (e.g. money recovered or hours saved per outcome) and asks to set the price, what to charge, what the number is, or per seat vs per outcome. Emits a value-priced model, or refuses and routes to measurement when value is unmeasured. Not for brainstorming revenue models or SaaS tiers and packaging (use pricing-strategy), structuring the whole pilot deal (use pilot-six-term-sheet), or measuring today's cost (use current-state-map)."
+  },
+  {
+    "skill": "utopia-product:vercel-composition-patterns",
+    "description": "Refactor React components with composition patterns: replace boolean-prop explosions with compound components, context providers and slots, design flexible component library APIs, and apply React 19 API changes. Use when the user says a component has too many boolean props or variants, asks to refactor a Modal, Card or Form API, or mentions compound components or render props. Not for performance (use vercel-react-best-practices)."
+  },
+  {
+    "skill": "utopia-product:vercel-react-best-practices",
+    "description": "Review and fix React and Next.js code for performance using Vercel's rules: request waterfalls and sequential awaits, server vs client components, data fetching, bundle size (heavy imports like lodash or moment), re-renders, memoization and caching. Use when the user asks to review or optimise a React or Next.js page or component for performance, mentions useEffect fetching, waterfalls or bundle bloat. Not for Vercel Web Interface Guidelines reviews (use audit) or component API design (use vercel-composition-patterns)."
+  },
+  {
+    "skill": "utopia-product:vercel-react-native-skills",
+    "description": "React Native and Expo performance and best practices: virtualised lists (FlashList), image handling, animations with Reanimated, native modules and platform APIs. Use when the user mentions React Native or Expo, a stuttering feed or list, dropped animation frames on Android or iOS, or mobile app performance. Not for web React (use vercel-react-best-practices)."
+  },
+  {
+    "skill": "utopia-product:walkthrough-video",
+    "description": "Use when asked to make, redo or update a narrated demo, tutorial, onboarding or help video that tours a flow of a running web app, e.g. \"record a video of signup through to the first project\" or \"make a help video for onboarding\". Drives real Chrome with Playwright and outputs a 1080p MP4 with a smooth cursor, real typing and scrolling, eased zooms on form fields, title cards, an AI voiceover (Deepgram) and WebVTT captions. Not for videos of what a pull request changed or before/after comparisons; use ui-walkthrough for those."
+  },
+  {
+    "skill": "utopia-product:wedge-five-questions",
+    "description": "Pressure-test ONE proposed wedge against five pass/fail thresholds (standalone value, forced cadence, travel, structural expansion, scoreable adoption) and return a 5-row verdict that calls it a real wedge only on 5/5. Fires on \"is this a wedge\", \"is my wedge sharp enough\", \"what's my wedge\", \"the smallest thing that forces adoption\", \"will this actually get adopted\". Not for defensibility over years (use moat-design-canvas), not for scoring the whole idea across eight dimensions (use problem-quality-scorecard), not for the one-glance so-what gut check (use so-what-stress-test)."
+  },
+  {
+    "skill": "utopia-product:wizard-of-oz-probe",
+    "description": "Fires when a fellow wants a human to run the machine behind the curtain for a day to test usage \u2014 \"fake the backend\", \"wizard of oz\", \"woz test\", \"human behind the curtain\", \"have a person answer the requests and see if they act on it\". Output is a WoZ setup plus a result read-out that reports usage behaviour and an explicit \"what this does NOT prove\" section for feasibility, unit cost, and scale. NOT for choosing which probe to run (that is `probe-matrix`), NOT for testing whether a workflow reads on paper (that is `paper-sketch-probe`), and NOT for finding real cost-per-task (that is `agent-concierge-probe`)."
+  },
+  {
+    "skill": "utopia-product:workflow-design",
+    "description": "Design a multi-agent workflow: which agents (researcher, analyst, drafter, critic, prototyper), the spawn trigger for each, how work hands off between them, and which surface each runs on (Claude.ai, Claude Code, Cowork). Use when the user or a fellow wants a fleet or team of agents, asks how several agents should work together or hand off, or wants to orchestrate agents for recurring work like weekly research. Not for one agent's role, tools and memory (use agent-design)."
+  },
+  {
+    "skill": "utopia-product:yoda-data-sourcing",
+    "description": "Find the proprietary data a product can own that a competitor or foundation model can't get. Use when the user lists candidate data sources (manuals, logs, work orders, WhatsApp threads, sensor feeds, public videos) or asks what data they actually own, where their proprietary data is, what data a competitor can't get, or how to build the moat's data seed. Sorts every source by one test, can a foundation model already reach it, and keeps only workflow-trapped, permission-gated signal (shadow AI threads, operational logs, permits, vendor-locked sensor feeds, workflow exhaust) as the moat seed, in a sourced corpus map. Not for drafting the contract that unlocks a gated source (use data-rights-clause), scoring one signal as evidence (use evidence-ladder), or capturing tacit judgment (use tacit-knowledge-interview)."
+  }
+]

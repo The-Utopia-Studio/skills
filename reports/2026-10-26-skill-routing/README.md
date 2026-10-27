@@ -121,6 +121,15 @@ node scripts/trigger-test.mjs --file reports/2026-10-26-skill-routing/prompts-af
 python3 skills/founder-productivity/skill-eval/scripts/score_triggers.py reports/2026-10-26-skill-routing/routing-after.json
 ```
 
+## Separate Codex evaluation
+
+
+The Codex before-and-after run is complete: **337/337 correct before (100%) and 335/337 after (99.4%)**, with two regressions, no fixes and no infrastructure errors. Both regressions are GTM near-neighbor selections: an `expansion-retention` request selected `gtm-strategy`, and a `customer-research` request selected `market-segments`. This single-observation, full-catalog selection test is at a baseline ceiling; it does not establish a repeatable degradation or measure native skill invocation.
+
+Download the [Codex handoff ZIP](codex-routing-evaluation.zip), or read [the handoff and changed prompts](codex/HANDOFF.md). The archive includes raw JSON results, scores, paired CSV/JSON, catalogs, prompt files, metadata, reproduction scripts and verified checksums. Claude was not resumed; its results can be synced later as requested.
+
+The protocol is documented in [codex/README.md](codex/README.md). Run `python3 scripts/compare-routing-evals.py` after syncing the Claude checkpoints to generate a prompt-aligned comparison. Keep provider rates separate because the protocols differ.
+
 ## Remaining static errors
 
 All 10 remaining static errors are in skills this change didn't otherwise touch. Fix them separately:
