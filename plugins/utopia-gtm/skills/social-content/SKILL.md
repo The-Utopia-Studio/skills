@@ -1,6 +1,10 @@
 ---
 name: social-content
-description: "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy."
+description: >-
+  Creates, repurposes and schedules social media posts for LinkedIn, X, Instagram, TikTok and
+  Facebook, with content pillars, hooks and a posting calendar. Use when asked to write a LinkedIn
+  post or X thread, what to post, how to grow a following, repurpose content for social, or build
+  a social calendar. Not for designing social graphics (use efecto-social-media).
 metadata:
   version: 1.2.0
 ---

@@ -1,15 +1,11 @@
 ---
 name: ui-ux-pro-max
 description: >-
-  Searchable UI/UX style database: recommend a complete design system for a
-  product type (UI style, color palette, font pairing, UX guidelines, chart
-  types) from 50+ styles, 161 palettes and 57 font pairings, and persist it as a
-  master design-system file. Use when the user asks you to recommend or pick a
-  style, palette and fonts for a new app, search a style database, or generate a
-  design system for a product type such as a spa, fintech or e-commerce app. Not
-  for token architecture or CSS variables (use ckm-design-system), adding color
-  to an existing gray UI (use colorize), or agency-grade build directions (use
-  impeccable).
+  Recommends a complete design system for a product type from a searchable style database (50+
+  styles, 161 palettes, 57 font pairings, UX guidelines, chart types) and saves it as a master
+  design-system file. Use when the user asks to pick a style, palette and fonts for a new app,
+  search a style database, or generate a design system for a product type such as fintech, spa or
+  e-commerce. Not for token architecture (use design-tokens).
 ---
 
 # UI/UX Pro Max - Design Intelligence

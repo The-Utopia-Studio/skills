@@ -1,16 +1,11 @@
 ---
 name: trace-to-interview
 description: >-
-  Turns production traces into discovery interviews, recovering for each behaviour pattern the
-  discovery question the user answered by acting instead of talking. Fires on 'learn from usage',
-  'mine the logs', 'what are our production traces telling us', 'turn usage data into discovery'.
-  Outputs a trace-interview log: one card per pattern with the observed behaviour [Fact, 0.7], the
-  question it answers, the inferred JTBD or satisfaction signal [Hypothesis], distinct-user weight,
-  the confirm-the-why probe, and a sourced interview-cost comparison (measured avoided work or modeled counterfactual), routed to
-  continuous-discovery-engine as a feed-2 signal. NOT the AARRR / retention / North Star scorecard
-  (use metrics-that-matter), NOT structuring a recorded interview transcript (use
-  summarize-interview), NOT standing up the whole three-feed discovery loop (use
-  continuous-discovery-engine).
+  Turns production traces and usage logs into discovery findings: groups behaviour patterns,
+  recovers the question each one answers and the likely job behind it, and lists the follow-up
+  probe to confirm why. Use when the user says learn from usage, mine the logs, what are our
+  traces telling us, or turn usage data into discovery. Not for the North Star, AARRR or retention
+  scorecard (use metrics-that-matter).
 type: generator
 supersedes: none
 ---
@@ -99,4 +94,4 @@ A trace is behaviour observed, so *what happened* sits at 0.7 the moment it is i
 - `summarize-interview` — absorbed and reframed, not superseded. That skill structures a *recorded human interview* (words, verbal 0.3) into JTBD, satisfaction, and action items; this one applies the same JTBD/satisfaction spine to *behaviour* (0.7), reconstructing the interview a trace already is. If the fellow has an actual transcript, route there; if they have logs, use this.
 - `metrics-that-matter` — the complement, not the overlap. That skill keeps the number (AARRR, the retention curve that must flatten, cost-per-outcome); this refuses to stop at the number and recovers the discovery question underneath it. Run both: one guards the scorecard, one mines the meaning.
 - `probe-matrix` — receives any card whose *why* is still `[Hypothesis]`, and routes it to the cheapest honest probe that would confirm the intent.
-- `refine-flywheel` — sets the post-launch cadence (ship behind sign-off → observe → learn → refine); this is the "observe" step's decoder, turning what you observe into questions.
+- `post-launch-refine-loop` — sets the post-launch cadence (ship behind sign-off → observe → learn → refine); this is the "observe" step's decoder, turning what you observe into questions.

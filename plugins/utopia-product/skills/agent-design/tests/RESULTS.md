@@ -16,7 +16,7 @@ MUST NOT fire (3, name the sibling each belongs to):
 2. "Design the fleet / how do the agents hand off / who spawns whom." → belongs to `workflow-design`
 3. "Write the agent's golden cases / set its autonomy level / what's the cost-per-outcome." → belongs to `eval-first-spec`
 
-Boundary note: MUST-fire #4 ("never remembers corrections — how to build its memory layer") is structural and in scope; the post-launch ship→observe→learn→refine cadence and autonomy-raise belong to `refine-flywheel`. The description carries an explicit NOT clause for refine-flywheel to keep that boundary cold.
+Boundary note: MUST-fire #4 ("never remembers corrections — how to build its memory layer") is structural and in scope; the post-launch ship→observe→learn→refine cadence and autonomy-raise belong to `post-launch-refine-loop`. The description carries an explicit NOT clause for refine-flywheel to keep that boundary cold.
 
 ## Runs
 | Date | Gate | Result | Notes |

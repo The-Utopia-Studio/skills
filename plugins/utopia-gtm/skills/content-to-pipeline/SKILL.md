@@ -1,15 +1,11 @@
 ---
 name: content-to-pipeline
 description: >-
-  Turn content into revenue: build a content-led GTM motion, reverse engineer
-  distribution, repurpose pillar content across platforms, run a newsletter as a
-  pipeline channel, convert content engagement into DMs and meetings, and attribute
-  pipeline to content including dark social. Use when the user mentions
-  content-led growth, content to pipeline, content flywheel, newsletter growth or
-  monetization, thought leadership that drives deals, or "our content doesn't
-  turn into revenue." Not for deciding topics, pillars or an editorial calendar
-  (use content-strategy), writing individual social posts (use social-content),
-  or a solo founder's overall playbook (use solo-founder-gtm).
+  Turns content into revenue: a content-led GTM flywheel, distribution reverse engineering, pillar
+  repurposing, newsletter as a pipeline channel, engagement-to-DM conversion and content
+  attribution including dark social. Use when content does not turn into revenue, growing or
+  monetizing a newsletter, or proving thought leadership drives deals. Not for choosing topics or
+  an editorial calendar (use content-strategy).
 ---
 
 # Content-to-Pipeline: Turning Content Into Revenue

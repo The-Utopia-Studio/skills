@@ -1,12 +1,10 @@
 ---
 name: stitch-design-taste
 description: >-
-  Write a DESIGN.md for Google Stitch: atmosphere, color palette with hex codes
-  and roles, typography, component stylings, layout and motion rules and banned
-  AI patterns, in Stitch's natural-language format so Stitch generates premium,
-  non-generic screens. Use whenever the user mentions Google Stitch or asks for
-  a DESIGN.md for Stitch. Not for brand logos, banners or decks (use ckm-design)
-  or building UI code directly (use impeccable).
+  Writes a DESIGN.md for Google Stitch: atmosphere, color palette with hex codes and roles,
+  typography, component styles, layout and motion rules and banned AI patterns, in Stitch's
+  natural-language format so it generates non-generic screens. Use when the user mentions Google
+  Stitch or asks for a DESIGN.md for Stitch. Not for building UI code directly (use impeccable).
 ---
 
 # Stitch Design Taste — Semantic Design System Skill

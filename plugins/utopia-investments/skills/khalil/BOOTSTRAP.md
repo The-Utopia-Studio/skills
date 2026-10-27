@@ -18,7 +18,7 @@ Load before every deck session:
 1. **Locate Utopia brand kit.** It's in the `pitch-deck` skill's `assets/utopia-branding.md`. Read it.
 2. **Verify `pitch-deck` skill is installed.** Required for branded PPTX output.
 3. **Verify supporting skills:**
-   - `business-narrative-builder`
+   - `valuation-narrative`
    - `competitive-analysis`
    - `datapack-builder`
    - `ib-check-deck`

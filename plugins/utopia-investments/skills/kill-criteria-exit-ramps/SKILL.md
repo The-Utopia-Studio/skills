@@ -1,6 +1,10 @@
 ---
 name: kill-criteria-exit-ramps
-description: Establishes pre-defined, objective conditions for stopping projects and specific decision points for continue/pivot/kill evaluations. Guides through defining kill criteria, setting go/no-go gates, avoiding sunk cost fallacy, and executing disciplined stopping decisions. Use when defining stopping rules for projects, avoiding sunk cost fallacy, setting objective exit criteria, deciding whether to continue/pivot/kill initiatives, or when users mention kill criteria, exit ramps, stopping rules, go/no-go decisions, project termination, or sunk costs.
+description: >-
+  Sets pre-agreed, objective kill criteria and go/no-go gates for a project or investment, and
+  runs continue/pivot/kill decisions without sunk-cost bias. Use when defining stopping rules,
+  setting exit criteria or milestone gates before launch, deciding whether to continue, pivot or
+  kill an initiative, or the user mentions kill criteria, exit ramps, go/no-go or sunk costs.
 ---
 
 # Kill Criteria & Exit Ramps

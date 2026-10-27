@@ -1,13 +1,10 @@
 ---
 name: ab-test-analysis
 description: >-
-  Analyze A/B test or split test results: conversion rates, relative lift, p-value, 95% confidence
-  interval, sample size and power, sample ratio mismatch, guardrail metrics, and a ship / extend /
-  stop / investigate call. Use whenever the user pastes control and variant numbers (visitors,
-  conversions, signups, trials) and asks whether a test is significant, whether the lift is real, or
-  whether to ship the variant. Runs a Python calculation when raw data is provided. Not for designing
-  what to test before building (use probe-matrix) or setting up event tracking (use
-  analytics-tracking).
+  Analyzes A/B and split test results: conversion rates, lift, p-value, confidence interval,
+  sample size, sample ratio mismatch and a ship / extend / stop call. Use when the user pastes
+  control and variant numbers, asks if a test is significant, whether the lift is real, or whether
+  to ship the variant. Not for designing what to test (use probe-matrix).
 ---
 
 ## A/B Test Analysis

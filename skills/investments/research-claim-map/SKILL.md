@@ -1,6 +1,11 @@
 ---
 name: research-claim-map
-description: Systematically evaluates claims by triangulating sources, rating evidence quality (primary/secondary/tertiary), assessing source credibility, and reaching confidence-rated conclusions to prevent confirmation bias and reliance on unreliable sources. Use when verifying claims before decisions, fact-checking statements, conducting due diligence, evaluating conflicting evidence, or when user mentions "fact-check", "verify this", "is this true", "evaluate sources", "conflicting evidence", or "due diligence".
+description: >-
+  Fact-checks claims by triangulating sources, rating evidence quality and source credibility, and
+  giving a confidence-rated verdict per claim. Use when verifying a founder's or market claim
+  before a decision, the user says "fact-check", "verify this", "is this true", "evaluate these
+  sources", or evidence conflicts during due diligence. Not for technical DD of a company (use
+  technical-dd).
 ---
 
 # Research Claim Map

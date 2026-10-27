@@ -1,13 +1,11 @@
 ---
 name: alignment-values-north-star
 description: >-
-  Create a team or company alignment framework: a North Star mission statement (aspirational
-  direction), 3-5 values as guardrails, decision tenets ('when X vs Y, we...') and observable
-  behaviours, so people can decide autonomously. Use when the user asks to define team values,
-  culture, mission, operating principles or a decision framework, or to fix misalignment in how a team
-  makes calls. Not for choosing a North Star product metric or input metrics (use
-  metrics-that-matter), or product vision, strategy, OKRs and roadmap from a validated problem (use
-  product-frame-stack).
+  Creates a team or company alignment framework: a North Star mission, 3-5 values as guardrails,
+  decision tenets (when X vs Y, we...) and observable behaviours so people can decide on their
+  own. Use when the user asks to define team values, culture, mission, operating principles or a
+  decision framework, or to fix misalignment in how a team makes calls. Not for a North Star
+  product metric (use metrics-that-matter).
 ---
 
 # Alignment: Values & North Star

@@ -1,0 +1,31 @@
+skills/founder-productivity/skillshare/SKILL.md: | `target`, `audit`, `trash`, `log`, `hub` | ✓ (`-p`) | ✓ (target list, audit, log) |
+skills/founder-productivity/skillshare/SKILL.md: 5. **Output** — `--json` for structured data (12 commands support it, see Quick Lookup). `--no-tui` for plain text on TUI commands (`list`, `log`, `audit`, `dif
+skills/founder-productivity/skillshare/references/audit.md: Audit results are logged to `audit.log` (JSONL). View with:
+skills/founder-productivity/skillshare/references/log.md: | `audit.log` | Security scan results |
+skills/product/diagram-design/README.md: | Primary text color | `ink` token |
+skills/product/diagram-design/README.md: Before writing tokens, the skill verifies WCAG AA contrast on `ink` over `paper`. If your site has a color that fails contrast at diagram sizes (9–12px), it pro
+skills/product/diagram-design/SKILL.md: **The design system is skinnable.** All colors, typography, and tokens live in a single source of truth — [`references/style-guide.md`](references/style-guide.m
+skills/product/diagram-design/SKILL.md: | `ink` | Primary text / stroke |
+skills/product/diagram-design/SKILL.md: **Focal rule:** `accent` goes on 1–2 elements max. Everything else is `ink` / `muted` / `soft`. If you're tempted to accent 4 things, you haven't decided what's
+skills/product/diagram-design/SKILL.md: | **Backend / API / Step** | white | `ink` |
+skills/product/diagram-design/SKILL.md: | **Store / State** | `ink @ 0.05` | `muted` |
+skills/product/diagram-design/SKILL.md: | **External / Cloud** | `ink @ 0.03` | `ink @ 0.30` |
+skills/product/diagram-design/SKILL.md: | **External / Cloud** | `ink @ 0.03` | `ink @ 0.30` |
+skills/product/diagram-design/SKILL.md: | **Optional / Async** | `ink @ 0.02` | `ink @ 0.20` dashed `4,3` |
+skills/product/diagram-design/SKILL.md: | **Optional / Async** | `ink @ 0.02` | `ink @ 0.20` dashed `4,3` |
+skills/product/diagram-design/references/onboarding.md: - **Primary text color** (body text) → `ink`
+skills/product/diagram-design/references/onboarding.md: - **AA contrast**: `ink` on `paper` ≥ 4.5:1. `muted` on `paper` ≥ 4.5:1 for body text.
+skills/product/diagram-design/references/onboarding.md: -| `ink`    | `#0b0d0b` | `#f1efe7` |
+skills/product/diagram-design/references/onboarding.md: +| `ink`    | `#111111` | `#efeee7` |
+skills/product/diagram-design/references/style-guide.md: | `ink` | Primary text, primary stroke | `#1c1917` | `#faf7f2` |
+skills/product/diagram-design/references/style-guide.md: | `backend` | `#ffffff` (white) | `ink` |
+skills/product/diagram-design/references/style-guide.md: | `store` | `ink @ 0.05` | `muted` |
+skills/product/diagram-design/references/style-guide.md: | `external` | `ink @ 0.03` | `ink @ 0.30` |
+skills/product/diagram-design/references/style-guide.md: | `external` | `ink @ 0.03` | `ink @ 0.30` |
+skills/product/diagram-design/references/style-guide.md: | `optional` | `ink @ 0.02` | `ink @ 0.20` dashed `4,3` |
+skills/product/diagram-design/references/style-guide.md: | `optional` | `ink @ 0.02` | `ink @ 0.20` dashed `4,3` |
+skills/product/diagram-design/references/style-guide.md: - **Contrast**: `ink` must hit WCAG AA on `paper`. `muted` must hit AA on `paper` for 11px+ text.
+skills/product/diagram-design/references/style-guide.md: - **Dot pattern survives**: the 22×22 dot pattern on the diagram background needs to sit at ~10% opacity of `ink` on `paper` — verify it's visible but quiet aft
+skills/product/ui-animation-storyboard/SKILL.md: 3. **With `critique` argument, a pasted image, or review-related context** → Load and follow [design-critique.md](design-critique.md)
+skills/product/ui-walkthrough/references/slides.md: | `compare` | `before`, `after`, `title?`, `url?`, `crop?`, `layout?` | Two recordings with Before and After labels above them |
+skills/product/ui-walkthrough/references/slides.md: - `layout` (`compare`): `"side"` or `"stack"` (Before above After). By default, crops wider than about 2:1 stack and everything else sits side by side.

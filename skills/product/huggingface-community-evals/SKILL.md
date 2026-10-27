@@ -1,13 +1,11 @@
 ---
 name: huggingface-community-evals
 description: >-
-  Run benchmark evaluations of Hugging Face Hub models on local GPUs with
-  lighteval or inspect-ai (GSM8K, HellaSwag, MMLU and similar), and choose the
-  backend: vLLM, Transformers or accelerate, with exact commands. Use when the
-  user asks to evaluate or benchmark an HF model locally, mentions lighteval,
-  inspect-ai, a local GPU like an RTX 4090, or asks which eval backend to use.
-  Not for training (use huggingface-llm-trainer) or HF Jobs orchestration (use
-  hf-cli).
+  Runs benchmark evaluations of Hugging Face Hub models on local GPUs with lighteval or inspect-ai
+  (GSM8K, HellaSwag, MMLU and similar) and picks the backend (vLLM, Transformers or accelerate)
+  with exact commands. Use when the user wants to evaluate or benchmark an HF model locally,
+  mentions lighteval or inspect-ai, a local GPU such as an RTX 4090, or asks which eval backend to
+  use.
 ---
 
 # Overview

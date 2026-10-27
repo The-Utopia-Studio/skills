@@ -14,7 +14,7 @@ MUST fire (5):
 MUST NOT fire (3, name the sibling each belongs to):
 1. "Shadow our expert doing the task and capture their judgment" → belongs to `tacit-knowledge-interview`
 2. "Write the Mom-Test script for my discovery interview" → belongs to `discovery-interview-prep` (planning it → `discovery-interview-prep`)
-3. "What data can't a competitor get — build our corpus" → belongs to `yoda-data-sourcing`
+3. "What data can't a competitor get — build our corpus" → belongs to `proprietary-data-sourcing`
 
 ## Runs
 | Date | Gate | Result | Notes |

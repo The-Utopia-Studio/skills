@@ -1,13 +1,11 @@
 ---
 name: user-story-mapping
 description: >-
-  Create a Jeff Patton user story map: backbone activities, steps and tasks laid out left-to-right as
-  the user's journey, prioritized top-to-bottom, with release slices and a walking-skeleton MVP. Works
-  as a one-shot map or as an interactive story-mapping workshop with adaptive questions and a
-  facilitation agenda. Use when planning an MVP or release around a user workflow, turning a flat
-  backlog into a map, aligning a team on scope, or running a story mapping session. Not for writing
-  individual stories with acceptance criteria (use user-story), splitting one oversized story (use
-  user-story-splitting), or quarter-level initiative sequencing (use roadmap-planning).
+  Creates a Jeff Patton user story map: backbone activities, steps and tasks along the user
+  journey, prioritized into release slices and a walking-skeleton MVP, one-shot or as a
+  facilitated workshop. Use when the user is planning an MVP or release around a workflow, turning
+  a flat backlog into a map, or running a story mapping session. Not for writing individual
+  stories (use user-story).
 intent: >-
   Visualize the user journey by creating a hierarchical map that breaks down high-level activities into steps and tasks, organized left-to-right as a narrative flow. Use this to build shared understanding across product, design, and engineering, prioritize features based on user workflows, and identify gaps or opportunities in the user experience.
 type: component

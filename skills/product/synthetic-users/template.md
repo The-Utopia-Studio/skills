@@ -8,7 +8,7 @@ Fill every field. This is a kill screen, not a validation. Positive signal is nu
 
 **YODA corpus available?** _[name the slices: field logs, shadow threads, tacit captures, transaction record — or write "none"]_
 
-If none: stop. A base-model persona tells you what every competitor's model already believes about your market. Go to `yoda-data-sourcing` first.
+If none: stop. A base-model persona tells you what every competitor's model already believes about your market. Go to `proprietary-data-sourcing` first.
 
 ## 1. Target and kill question
 

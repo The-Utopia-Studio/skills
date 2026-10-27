@@ -1,15 +1,11 @@
 ---
 name: unserved-needs-finder
 description: >-
-  Find the real, durable need under a list of feature requests and rank the one to build for. Use when
-  the user hands over a 'needs' list that is mostly features (integrations, dashboards, AI summaries,
-  voice input) and asks what customers really need, to find the unmet or under-served need, which need
-  to prioritise, or the real need under a feature request. Onions each stated need to a tech-invariant
-  core, sorts survivors with Kano (must / performance / delighter) and returns one durable,
-  under-served wedge need with its evidence, in a prioritised need map. NOT a general jobs, pains and
-  gains map from interviews (use jobs-to-be-done), naming who holds the need or budget (use
-  user-buyer-decider-map), reducing the job to its currencies (use job-in-primitives), or scoring the
-  whole idea (use so-what-stress-test).
+  Finds the real, durable need under a list of feature requests and ranks the one to build for:
+  strips solution words, peels each need to a technology-independent core, and sorts survivors
+  with Kano into a prioritized need map. Use when the user hands over a needs list that is mostly
+  features and asks what customers really need or which unmet need to prioritize. Not for a
+  general jobs, pains and gains map (use jobs-to-be-done).
 type: generator
 supersedes: none
 ---
@@ -32,7 +28,7 @@ Use it once you have a segment and a handful of candidate needs (from interviews
 | "Who is the actual buyer / who signs / what's their budget?" | No | `user-buyer-decider-map` |
 | "Reduce the whole job to information / decisions / liability." | No | `job-in-primitives` |
 | "Is the whole idea worth building?" | No | `so-what-stress-test` |
-| "What's the riskiest assumption and how do I disprove it?" | No | `null-hypothesis-test` |
+| "What's the riskiest assumption and how do I disprove it?" | No | `falsify-plan-assumptions` |
 
 This skill ranks WHAT is needed. It does not name WHO needs it (that is `user-buyer-decider-map`, which reads the top need from here into its buyer clarity), it does not reduce the whole job to currencies (that is `job-in-primitives`), and it does not judge the idea (that is `so-what-stress-test`). Name the sibling and stop.
 

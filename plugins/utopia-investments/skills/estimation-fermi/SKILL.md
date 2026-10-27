@@ -1,13 +1,10 @@
 ---
 name: estimation-fermi
 description: >-
-  Produce a quick back-of-envelope (Fermi) estimate: break the unknown into factors you can
-  estimate, state each assumption, give upper and lower bounds, and cross-check with a second
-  decomposition path. Use this skill whenever the user asks for a ballpark, rough,
-  order-of-magnitude or back-of-envelope number, "roughly how many...", "give me a quick
-  estimate of...", "how many X could afford Y", or wants to sanity-check a figure fast,
-  including quick counts of potential customers. Not for a structured TAM/SAM/SOM
-  market-sizing analysis for a pitch or business case (use market-sizing).
+  Produces a quick back-of-envelope (Fermi) estimate: breaks the unknown into estimable factors,
+  states assumptions, gives bounds and cross-checks with a second path. Use when the user asks for
+  a ballpark, rough or order-of-magnitude number, "roughly how many...", "quick estimate of...",
+  or wants to sanity-check a figure fast. Not for a structured TAM/SAM/SOM (use market-sizing).
 ---
 # Fermi Estimation
 

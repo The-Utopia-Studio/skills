@@ -14,9 +14,9 @@ MUST fire (5):
 5. "Rate this problem."
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Map all my risky assumptions across GTM, strategy, and team." → belongs to `identify-assumptions-new` (broad risk inventory, not a gate)
+1. "Map all my risky assumptions across GTM, strategy, and team." → belongs to `identify-risky-assumptions` (broad risk inventory, not a gate)
 2. "Stress-test my whole idea with the big business questions." → belongs to `so-what-stress-test` (five qualitative whole-idea questions)
-3. "What's the per-unit size ratio — does the physics floor leave room?" → belongs to `physics-floor-gap` (single unit-economics ratio)
+3. "What's the per-unit size ratio — does the physics floor leave room?" → belongs to `unit-cost-floor-gap` (single unit-economics ratio)
 
 (A fourth near-miss to watch: "Deep-dive just my wedge" → `wedge-five-questions`. The
 scorecard scores the wedge as one of eight dimensions; it does not deep-dive it.)
@@ -31,7 +31,7 @@ Auto-fail this skill if the output:
 
 ## Head-to-head vs identify-assumptions-new
 
-This skill is scored against `identify-assumptions-new` on the same inputs. It must
+This skill is scored against `identify-risky-assumptions` on the same inputs. It must
 win on **proprietary_edge** and **challenge**.
 
 Why it wins:

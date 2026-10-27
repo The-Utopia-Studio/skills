@@ -1,15 +1,11 @@
 ---
 name: discovery-interview-prep
 description: >-
-  Plan and script customer discovery interviews: pick the research goal (problem validation, JTBD,
-  churn, feature priority), segment, constraints and method, then produce an interview plan or a
-  ready-to-use Mom Test interview script (warm-up, JTBD core questions, probes, willingness-to-pay,
-  wrap-up) with a note-taking template and biases to avoid. Use when the user asks to write an
-  interview script or interview guide, prepare or plan customer or user interviews, or mentions The
-  Mom Test. Not for analysing jobs, pains and gains from notes you already have (use jobs-to-be-done),
-  shadowing an expert to capture tacit judgment (use tacit-knowledge-interview), summarizing a
-  transcript (use summarize-interview), or testing a prototype with users (use
-  usability-test-protocol).
+  Plans and scripts customer discovery interviews: research goal, segment, method, and a ready Mom
+  Test script with JTBD questions, probes, willingness-to-pay and a note-taking template. Use when
+  the user asks for an interview script or guide, to prepare or plan customer or user interviews,
+  or mentions The Mom Test. Not for summarizing a transcript you already have (use summarize-
+  interview).
 intent: >-
   Guide product managers through preparing for customer discovery interviews by asking adaptive questions about research goals, customer segments, constraints, and methodologies. Use this to design effective interview plans, craft targeted questions, avoid common biases, and maximize learning from limited customer access—ensuring discovery interviews yield actionable insights rather than confirmation bias or surface-level feedback.
 type: interactive

@@ -1,13 +1,11 @@
 ---
 name: deploy-to-vercel
 description: >-
-  Deploy apps and websites to Vercel and manage the deployment: link the
-  project, deploy previews or production, use a VERCEL_TOKEN when interactive
-  login is impossible, set environment variables, inspect builds and logs, and
-  add domains. Use when the user says "deploy my app", "deploy to vercel", "push
-  this live", "give me the link", "create a preview deployment", "add env vars
-  to vercel", or has a Vercel access token. Not for CI/CD pipelines or Docker
-  (use deployment-engineer) or Railway (use railway).
+  Deploys apps and websites to Vercel and manages them: link the project, ship preview or
+  production deploys, use a VERCEL_TOKEN when login is impossible, set env vars, inspect builds
+  and logs, add domains. Use when the user says deploy my app, deploy to Vercel, push this live,
+  give me a preview link, or add env vars to Vercel. Not for CI/CD pipelines or Docker (use
+  deployment-engineer).
 metadata:
   author: vercel
   version: "3.0.0"

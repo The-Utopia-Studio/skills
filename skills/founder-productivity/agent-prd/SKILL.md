@@ -1,15 +1,11 @@
 ---
 name: agent-prd
 description: >-
-  Interview the user and produce an Agent PRD plus engineering work orders: the planning documents
-  that must exist before any agent code is written (job, checkable success criteria and first ten eval
-  tasks, loop and stop condition, state and durability, context, memory, tools, guardrails, build
-  order). Use when the user wants to build, scope or plan a new agent, generator, critic, pipeline
-  stage, harness or autonomous system, says 'new agent', 'agent PRD', 'plan this agent', 'I want to
-  build an agent that...', or is rebuilding an agent or adding a pipeline stage. Produces documents
-  only, no implementation code. Not for an Icarus fellow's four-part agent spec of role, tools, memory
-  layer and eval (use agent-design), an agent's persona and voice (use agent-persona-builder), or a
-  product PRD (use prd-development).
+  Interviews the user and writes an Agent PRD plus engineering work orders before any agent code:
+  job, checkable success criteria and first eval tasks, loop and stop condition, state, memory,
+  tools, guardrails and build order. Use when the user wants to build, scope or plan a new agent,
+  pipeline stage or autonomous system, or says agent PRD or plan this agent. Not for a product
+  feature PRD (use prd-development).
 ---
 
 # Agent PRD

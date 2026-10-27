@@ -1,14 +1,11 @@
 ---
 name: marketing-psychology
 description: >-
-  Use this skill to apply behavioral science and psychology to a marketing
-  asset: "which psychological principles should we use on our pricing page",
-  "how do we push people to the middle plan", "use anchoring / decoy / social
-  proof / scarcity / loss aversion here", "why do people buy", "nudge users
-  toward X". It picks the relevant mental models and cognitive biases and says
-  exactly how each would show up on the page, email or offer. Not for setting
-  the price levels or packaging (use pricing-strategy), a page conversion audit
-  (use page-cro), or writing the copy (use copywriting).
+  Applies behavioral science to a marketing asset: picks mental models and cognitive biases such
+  as anchoring, decoy, social proof, scarcity and loss aversion, and shows how each appears on the
+  page, email or offer. Use when asking which psychological principles to use, how to push buyers
+  to a plan, why people buy, or how to nudge users. Not for setting price levels (use pricing-
+  strategy).
 metadata:
   version: 1.1.0
 ---

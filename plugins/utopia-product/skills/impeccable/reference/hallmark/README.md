@@ -22,7 +22,7 @@ Hallmark has one default behaviour and three explicit verbs.
 | `hallmark redesign <target> [--mood <name>]` | Take the target's content and intent, then redesign the visual structure **inside the existing implementation boundaries unless the user explicitly confirms a full rebuild.** New section rhythm, new heading placement, new component voice. Preserve existing routes, component ownership, copy intent, brand, and information architecture; replace only the visual/interaction layer needed for the requested scope. |
 | `hallmark study <screenshot \| URL>` | The user pasted or attached an image of a design they admire, **or** pasted a URL to a live page. Extract the **DNA** — macrostructure, archetypes, type-pairing, colour anchor — and produce a diagnosis report, then optionally rebuild the user's content using the extracted DNA **or** emit a portable `design.md` of the DNA. Detection is automatic: a URL (`http://` / `https://` prefix) routes to URL mode; anything else routes to image mode. **URL mode** reads the page's HTML and CSS via WebFetch — it can name exact fonts and exact colour values, but can't judge rhythm. After the diagnosis, the user has three follow-ups: build with the DNA (handoff to default), lock the DNA into a portable `design.md` (opt-in via "lock the DNA" / "give me a design.md"), or stop at the diagnosis. **Never copies pixels. Refuses template-marketplace URLs. Tighter refusal layer for `design.md` emission than for the diagnosis itself — URL-mode emission requires attestation that the source is the user's own or a public reference for their own brand. Falls back to asking for a screenshot if the URL is auth-walled, a JS-only SPA shell, or otherwise un-readable.** Load [`study.md`](study.md) before this verb runs. |
 
-If the user types anything that does not clearly map to `audit`, `redesign`, or `study`, treat it as default. If the user attaches an image or pastes a URL without a verb prefix, ask: *"Should I `study` this (extract the DNA), or should I treat it as a reference for a fresh build?"*
+If the user types anything that does not clearly map to `ui-audit`, `redesign`, or `study`, treat it as default. If the user attaches an image or pastes a URL without a verb prefix, ask: *"Should I `study` this (extract the DNA), or should I treat it as a reference for a fresh build?"*
 
 **Implementation safety rail.** Hallmark is a design skill, not a license to bulldoze a codebase. In any existing project:
 - Never delete production files, route trees, component directories, or an old website unless the user explicitly asks for deletion or approves a file-level plan that lists the deletions.
@@ -36,7 +36,7 @@ The default Design flow always picks a theme. By default it picks one of the **2
 
 ## Disciplines that hold across every verb
 
-These four disciplines are **not** verb-specific. They apply to default Design, `audit`, `redesign`, `study`, and component-scope alike. They sit alongside the slop test, not inside one branch of it.
+These four disciplines are **not** verb-specific. They apply to default Design, `ui-audit`, `redesign`, `study`, and component-scope alike. They sit alongside the slop test, not inside one branch of it.
 
 1. **Pre-emit self-critique.** Before handing back any output, score it 1–5 on six axes — Philosophy, Hierarchy, Execution, Specificity, Restraint, Variety. Anything **< 3** triggers a revision pass. Stamp the six scores at the top of the artifact (`/* Hallmark · pre-emit critique: P5 H4 E5 S4 R5 V5 */`). See [`slop-test.md`](slop-test.md) § Pre-emit self-critique.
 
@@ -216,7 +216,7 @@ The prompt format:
 Send the prompt **once**, in one message. Bold the three labels (Audience / Use case / Tone) so the user can scan them. Do not ladder follow-ups; if the user answers some fields and skips others, treat the skipped fields as opt-out and infer them. If the user says "go ahead", "you pick", "just build it", "don't ask", or doesn't engage after one prompt, the inference protocol below kicks in.
 
 **One exception** where the gate is silent:
-- The skill is invoked with `audit`, `study`, or `redesign --mood` — those verbs read context from the target, not the user.
+- The skill is invoked with `ui-audit`, `study`, or `redesign --mood` — those verbs read context from the target, not the user.
 
 There is no "the brief looks complete" exception. There is no "the user already named all three" exception. There is no length threshold below which asking is skipped. A long, detailed brief gets the same three-question prompt as a five-word one — the user can wave you through with *"go ahead"* in two seconds. **Default is to ask. The cost of asking is one extra message; the cost of guessing wrong is a whole rebuild.**
 

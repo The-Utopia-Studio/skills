@@ -97,7 +97,7 @@ The fellow built that over four days. Re-scored:
 
 ## Step 4 — Handoff
 
-- The correction loop wired in Gate B is handed to `refine-flywheel` (08): it reads the re-rank instrument (B4), re-runs the golden set on every model release, and only raises Azraq toward L1 (drafting the ranking the operator commits) once the eval earns it.
+- The correction loop wired in Gate B is handed to `post-launch-refine-loop` (08): it reads the re-rank instrument (B4), re-runs the golden set on every model release, and only raises Azraq toward L1 (drafting the ranking the operator commits) once the eval earns it.
 - The B5 delta is the week-4 checkpoint. Owner: the fellow. Week-4 review date set.
 
 ## The lesson this enforces

@@ -1,6 +1,11 @@
 ---
 name: referral-program
-description: "When the user wants to create, optimize, or analyze a customer referral program or word-of-mouth strategy. Also use when the user mentions 'referral,' 'ambassador,' 'word of mouth,' 'refer a friend,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'refer-a-friend payout.' Use this whenever someone wants existing users or partners to bring in new customers. Not for reseller, integration or channel partner programs (use partner-affiliate), product growth loops beyond referrals (use growth-loops), or launch-specific virality (use launch-strategy)."
+description: >-
+  Designs and optimizes customer referral and word-of-mouth programs: refer-a-friend mechanics,
+  referral incentives and payouts, ambassador programs and referral analytics. Use when asking how
+  to get referrals, building a refer-a-friend program, choosing referral rewards, or getting
+  customers to refer customers. Not for reseller or channel partner programs (use partner-
+  affiliate).
 metadata:
   version: 1.1.0
 ---

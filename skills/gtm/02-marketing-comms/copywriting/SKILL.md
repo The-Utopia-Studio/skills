@@ -1,6 +1,10 @@
 ---
 name: copywriting
-description: When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says "write copy for," "improve this copy," "rewrite this page," "marketing copy," "headline help," "CTA copy," "tagline," "subheadline," "hero section copy," "above the fold," "this copy is weak," "make this more compelling," or "help me describe my product." Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. Not for editing existing copy (use copy-editing), designing the value proposition itself (use value-proposition), or positioning statements (use positioning-workshop).
+description: >-
+  Writes or rewrites marketing copy for web pages: homepage, landing, pricing, feature and about
+  pages, including headlines, hero sections, taglines and CTAs. Use when asked to write copy for a
+  page, rewrite this page, help describe the product, fix weak copy, or improve a headline or CTA.
+  Not for editing existing copy line by line (use copy-editing).
 metadata:
   version: 1.1.0
 ---

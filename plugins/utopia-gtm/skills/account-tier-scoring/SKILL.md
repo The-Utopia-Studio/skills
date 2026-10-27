@@ -1,19 +1,11 @@
 ---
 name: account-tier-scoring
 description: >-
-  Use this skill whenever the user wants to qualify or score leads and accounts:
-  "qualify these leads", "which of these go to an AE today", "design our intent
-  scoring model", "weights and decay for our signals", "define our PQL / product
-  qualified lead model", "which usage signals count", or "define do-not-touch /
-  suppression rules for outreach". It tiers accounts Bronze/Silver/Gold/Diamond,
-  scoring pre-conversion leads on intent signals plus ACV potential and trials or
-  customers on usage depth (PQL/PQA) and expansion headroom, with a self-serve
-  gate, enterprise persona gate, signal weights and decay windows, anonymous
-  signal caps, prior-relationship floors, never-demote rules, suppression rules
-  with override owners, tier-to-play routing and model governance. Not for
-  defining the ICP (use ideal-customer-profile), MQL/SQL lifecycle stages and CRM
-  routing setup (use revops), enrichment (use lead-enrichment), or writing the
-  outreach (use cold-email or outreach-execution).
+  Scores and tiers leads and accounts Bronze to Diamond on intent signals, ACV potential and
+  product usage (PQL), with signal weights, decay, suppression rules and tier-to-play routing. Use
+  when qualifying a lead list, deciding which accounts go to an AE today, designing an intent or
+  PQL scoring model, or setting do-not-touch rules. Not for defining the ICP (use ideal-customer-
+  profile).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/amos-bar-joseph/account-tier-scoring

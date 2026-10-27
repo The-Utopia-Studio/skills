@@ -1,13 +1,11 @@
 ---
 name: role-switch
 description: >-
-  Analyze one decision or conflict from several stakeholder perspectives (engineering, product, sales,
-  finance, legal, customers): what each optimizes for, fears and measures, the tensions between them,
-  and an alignment path with explicit trade-offs. Use when the user describes stakeholders who want
-  different things (e.g. the CTO wants a rewrite, sales wants features, finance wants cuts) and asks
-  to look at it from each perspective, find a path everyone can live with, or asks 'what would X
-  think'. Not for tearing down a new product idea (use concept-council) or mapping stakeholders on a
-  power/interest grid for a comms plan (use stakeholder-map).
+  Analyzes one decision or conflict from several stakeholder perspectives (engineering, product,
+  sales, finance, legal, customers): what each wants, fears and measures, the tensions, and an
+  alignment path with trade-offs. Use when stakeholders want different things and the user asks to
+  see it from each side, what would X think, or for a path everyone can accept. Not for a
+  power/interest grid and comms plan (use stakeholder-map).
 ---
 
 # Role Switch

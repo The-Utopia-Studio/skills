@@ -15,18 +15,18 @@ Skills are flat in this folder; the intended sequence is:
 | # | Stage | Skills |
 |---|---|---|
 | 00 | **Concept council** — entry & triage | `fellow-path-router`, `concept-council`, `so-what-stress-test` |
-| 01 | **First-principles problem** | `product-as-decision`, `job-in-primitives`, `current-state-map`, `physics-floor-gap`, `problem-quality-scorecard`, `null-hypothesis-test`, `bottoms-up-quantification` |
+| 01 | **First-principles problem** | `product-as-decision`, `job-in-primitives`, `current-state-map`, `unit-cost-floor-gap`, `problem-quality-scorecard`, `falsify-plan-assumptions`, `bottoms-up-market-sizing` |
 | 02 | **Customer discovery** | `user-buyer-decider-map`, `unserved-needs-finder`, `synthetic-users`, `tacit-knowledge-interview`, `evidence-ladder`, `continuous-discovery-engine` |
-| 03 | **YODA — your own data** | `yoda-data-sourcing`, `explicit-vs-tacit-capture`, `dataset-builder` |
+| 03 | **YODA — your own data** | `proprietary-data-sourcing`, `explicit-vs-tacit-capture`, `dataset-builder` |
 | 04 | **Probes — build to learn** | `probe-matrix`, `paper-sketch-probe`, `wizard-of-oz-probe`, `concierge-probe`, `agent-concierge-probe` |
-| 05 | **Frame the business & product** | `product-frame-stack`, `four-lenses-test`, `first-mocks`, `usability-test-protocol` |
-| 06 | **Invent — wedge & moat** | `invent-by-hand`, `wedge-five-questions`, `moat-design-canvas`, `data-rights-clause` |
+| 05 | **Frame the business & product** | `product-strategy-stack`, `concept-four-lenses-test`, `first-mocks`, `usability-test-protocol` |
+| 06 | **Invent — wedge & moat** | `invent-product-concept`, `wedge-five-questions`, `moat-design-canvas`, `data-rights-clause` |
 | 07 | **Commit — build & sell v1** | `eval-first-spec`, `compound-system-architecture`, `guardrail-design`, `pilot-six-term-sheet`, `value-based-pricing`, `v1-launch-bar` |
-| 08 | **Refine flywheel** | `refine-flywheel`, `trace-to-interview`, `metrics-that-matter` |
+| 08 | **Refine flywheel** | `post-launch-refine-loop`, `trace-to-interview`, `metrics-that-matter` |
 | 09 | **Build craft** | `agent-design`, `workflow-design` |
-| 10 | **Fellow progression** | `fellow-level-ladder`, `platform-vs-venture` |
+| 10 | **Fellow progression** | `fellow-level-ladder`, `build-vs-buy-boundary` |
 
-Three skills supersede a weaker generic incumbent (and beat it head-to-head): `problem-quality-scorecard` → `identify-assumptions-new`; `continuous-discovery-engine` → `continuous-discovery-engine`; `probe-matrix` → `probe-matrix`. The build-craft section (09) and the UI/deploy steps route to the existing Product-module skills (Impeccable, Railway, Vercel) rather than restating them.
+Three skills supersede a weaker generic incumbent (and beat it head-to-head): `problem-quality-scorecard` → `identify-risky-assumptions`; `continuous-discovery-engine` → `continuous-discovery-engine`; `probe-matrix` → `probe-matrix`. The build-craft section (09) and the UI/deploy steps route to the existing Product-module skills (Impeccable, Railway, Vercel) rather than restating them.
 
 ## How each skill is built and gated
 

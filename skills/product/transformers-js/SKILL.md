@@ -1,6 +1,11 @@
 ---
 name: transformers-js
-description: Use Transformers.js to run state-of-the-art machine learning models directly in JavaScript/TypeScript. Supports NLP (text classification, translation, summarization), computer vision (image classification, object detection), audio (speech recognition, audio classification), and multimodal tasks. Works in browsers and server-side runtimes (Node.js, Bun, Deno) with WebGPU/WASM using pre-trained models from Hugging Face Hub.
+description: >-
+  Runs Hugging Face models in JavaScript or TypeScript with Transformers.js, in the browser or
+  Node, Bun and Deno via WebGPU or WASM: text classification, translation, summarisation, image
+  classification, object detection, speech recognition and multimodal tasks. Use when the user
+  wants in-browser or on-device ML, mentions Transformers.js or @huggingface/transformers, or
+  needs a model without a Python backend.
 license: Apache-2.0
 metadata:
   author: huggingface

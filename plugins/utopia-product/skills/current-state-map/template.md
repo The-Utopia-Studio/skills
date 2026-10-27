@@ -42,7 +42,7 @@ Fill every row. Every priced line needs a **cost**, a **cited source**, and a **
 
 ## 7. Total — current priced practice per unit
 - **Total = touch £____ + handoff £____ + delay £____ + failure £____ = £______ per unit**
-- This is the number `physics-floor-gap` divides against the floor.
+- This is the number `unit-cost-floor-gap` divides against the floor.
 
 ## 8. Cost concentration
 - Steps ranked by cost (highest first): 1) ____ £____  2) ____ £____  3) ____ £____
@@ -53,7 +53,7 @@ Fill every row. Every priced line needs a **cost**, a **cited source**, and a **
 
 | Condition | Verdict |
 |---|---|
-| Every step priced; dominant line at ladder ≥ 0.7 | READY — hand to `physics-floor-gap` |
+| Every step priced; dominant line at ladder ≥ 0.7 | READY — hand to `unit-cost-floor-gap` |
 | Dominant line (> 40% of total) at ladder ≤ 0.3 | NOT READY — source it first |
 | Any step blank | AUTO-FAIL |
 | Any price cites no artefact | that cell = opinion (0.1) |

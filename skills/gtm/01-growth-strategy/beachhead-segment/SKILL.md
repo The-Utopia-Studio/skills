@@ -1,6 +1,10 @@
 ---
 name: beachhead-segment
-description: "Identify the first beachhead market segment for a product launch. Evaluates segments against burning pain, willingness to pay, winnable market share, and referral potential. Use when choosing a first market, targeting an initial customer segment, or planning market entry strategy."
+description: >-
+  Picks the first beachhead market segment for a product by scoring candidate segments on burning
+  pain, willingness to pay, winnable share and referral potential. Use when choosing a first
+  market, deciding which customer segment to target first, planning market entry, or narrowing a
+  too-broad target. Not for defining the full ICP (use ideal-customer-profile).
 ---
 # Beachhead Segment
 

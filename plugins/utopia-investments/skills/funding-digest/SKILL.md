@@ -1,15 +1,11 @@
 ---
 name: funding-digest
 description: >-
-  Produces a single-slide PowerPoint deal-flow digest: the funding rounds raised in a period
-  across the user's sectors or companies (company, round, amount, valuation, lead investors,
-  dates, deal links) plus three or four key takeaways, as a branded one-page PPTX briefing.
-  Use this skill, rather than general web research, whenever the user asks for "this week's
-  deal flow digest", a "weekly funding recap", "deal roundup", "what rounds closed in [sector]
-  this week/month", a "capital markets update" or any summary of recent funding rounds as a
-  slide or briefing. Uses S&P Capital IQ MCP data when connected, otherwise web sources with a
-  link per deal. Not for a profile of one company (use tear-sheet) or a multi-slide
-  competitive landscape (use competitive-analysis).
+  Produces a one-slide PPTX deal-flow digest of funding rounds in a period for the user's sectors
+  or companies (company, round, amount, valuation, leads, links) with three or four takeaways. Use
+  when the user asks for "this week's deal flow", a weekly funding recap, deal roundup, "what
+  rounds closed in [sector]" or a capital markets update. Uses Capital IQ MCP when connected, else
+  web sources. Not for one company's profile (use tear-sheet).
 ---
 
 **AI DISCLAIMER (MANDATORY):**

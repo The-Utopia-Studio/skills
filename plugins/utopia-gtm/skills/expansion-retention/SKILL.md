@@ -1,19 +1,11 @@
 ---
 name: expansion-retention
 description: >-
-  Use this skill for anything about keeping and growing existing customers'
-  revenue: NRR and GRR, upsell and cross-sell play cards, mapping customer
-  segments to CS and expansion plays with owners and KPIs, health scores,
-  renewal playbooks, renewal discount approvals and the renewal deal desk, at-risk
-  account escalations (competitor evaluation, lost exec sponsor) with escalation
-  tiers and who can approve concessions, subscription LTV lifecycle programs
-  (repeat purchase, loyalty, VIP, lapsed-customer win-back plays), and specifying
-  a retention dashboard (GRR, NRR, logo retention, expansion by cohort with
-  alerts). Use it when the user types "renewal", "at-risk account", "escalation",
-  "expansion plays", "QBR", "lift LTV", "retention dashboard" or "who approves
-  this discount". Not for building cancel flows, save offers or failed-payment
-  dunning (use churn-prevention), new-business lead routing (use revops), or a
-  go-to-market plan for new markets (use gtm-strategy).
+  Builds systems to keep and grow existing customer revenue: NRR and GRR, health scores, upsell
+  and cross-sell plays, renewal playbooks and deal desk, at-risk account escalations, loyalty and
+  win-back programs, and a retention dashboard. Use for renewals, at-risk accounts, expansion
+  plays, QBRs, lifting LTV, or who approves a renewal discount. Not for cancel flows or dunning
+  (use churn-prevention).
 ---
 
 # Expansion & Retention Systems

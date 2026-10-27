@@ -1,6 +1,11 @@
 ---
 name: market-skill-ingestion
-description: Fires when a fellow proposes bringing an external/market skill into the studio repo — "found a skill for X on skills.sh", "should we add this market skill", "ingest the good parts of <repo/skill>", "there's a public skill that does Y", "pull this skill in", "vet this skill from the ecosystem". Produces an Ingestion Decision Record plus a FOLD / SUPERSEDE / REJECT / ADD-NEW decision and the concrete diff into an existing studio skill. NOT for authoring a brand-new proprietary skill from scratch (use the CONTRIBUTING sandbox flow) and NOT for installing a skill for one-off personal use (use `find-skills`).
+description: >-
+  Decides whether an external or marketplace skill belongs in the shared studio skills repo:
+  qualifies the source, finds the existing studio skill it overlaps, then folds it in, supersedes,
+  rejects or rarely admits it, with a decision record and diff. Use when the user found a skill on
+  skills.sh, asks should we add this skill, or wants to ingest or vet a public skill. Not for
+  installing a skill for personal use (use find-skills).
 type: interactive
 supersedes: none
 ---

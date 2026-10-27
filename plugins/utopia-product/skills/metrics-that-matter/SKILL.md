@@ -1,15 +1,11 @@
 ---
 name: metrics-that-matter
 description: >-
-  Pick and validate the few metrics that matter for a product, especially a launched AI product. Use
-  when the user asks what metrics to track, to define or choose a North Star metric and its input
-  metrics, whether growing MAU or a headline number is real or vanity, whether cohort retention is
-  good or the curve flattens, or what one outcome costs. Returns a scorecard: the business game
-  (Attention / Transaction / Productivity), one customer-centric North Star checked against the 7
-  criteria with 3-5 input metrics, an AARRR one-metric skeleton, the flattening-retention test that
-  GATES the North Star, and cost-per-outcome to the cent. Not for a team's mission or values (use
-  alignment-values-north-star), the post-launch improvement loop (use refine-flywheel), mining traces
-  for discovery (use trace-to-interview), or the dashboard spec and alerts (use metrics-dashboard).
+  Picks and validates the few metrics that matter for a product, especially a launched AI product:
+  one North Star with 3-5 input metrics, an AARRR skeleton, a cohort retention test and cost per
+  outcome. Use when the user asks what metrics to track, to choose a North Star, whether a growing
+  headline number is vanity, or whether retention flattens. Not for the dashboard spec and alerts
+  (use metrics-dashboard).
 type: generator
 supersedes: none
 ---
@@ -32,7 +28,7 @@ been proposed and needs the retention diagnostic and a cost check.
 
 | Not this skill | Use instead | Why |
 |---|---|---|
-| "Design the after-launch loop — ship, observe, promote autonomy by eval" | `refine-flywheel` | That is the improvement cadence. This picks and validates the metrics the loop watches; it does not run the loop. |
+| "Design the after-launch loop — ship, observe, promote autonomy by eval" | `post-launch-refine-loop` | That is the improvement cadence. This picks and validates the metrics the loop watches; it does not run the loop. |
 | "Mine our production traces / turn usage logs into discovery interviews" | `trace-to-interview` | That reads traces as discovery. This scores metrics; a trace is not a metric. |
 | "Build the metrics dashboard, set the alert thresholds, instrument the events" | `metrics-dashboard`, `analytics-tracking` | Those render and instrument. This decides what to render and applies the truth test; route the build there. |
 | "Work out CAC, LTV, payback, contribution margin" | `saas-economics-efficiency-metrics` | That is full unit economics. This needs only cost-per-outcome and margin-per-outcome; route the rest there. |
@@ -161,7 +157,7 @@ volume grows.
 
 ## Related skills
 
-- `refine-flywheel` — the after-launch loop that acts on these metrics (observe → learn →
+- `post-launch-refine-loop` — the after-launch loop that acts on these metrics (observe → learn →
   refine). This skill chooses and validates the numbers the loop watches; it does not run
   the loop.
 - `trace-to-interview` — reads production traces as discovery. Composes with this: the

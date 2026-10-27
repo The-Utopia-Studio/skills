@@ -1,6 +1,11 @@
 ---
 name: lead-enrichment
-description: "Build data enrichment workflows, Clay waterfalls and contact verification systems; improve missing, stale or unreliable contact data. Use for enrichment, data quality, provider waterfalls and verified field provenance. Feed separate fit and intent evidence into ideal-customer-profile and account-tier-scoring; do not define a competing lead score or enroll contacts in outreach."
+description: >-
+  Builds lead and contact data enrichment workflows: Clay waterfalls, provider sequencing, contact
+  verification and field provenance, feeding fit and intent evidence to the scoring models. Use
+  when contact data is missing, stale or unreliable, designing a Clay enrichment waterfall,
+  choosing enrichment providers, or cutting cost per verified lead. Not for scoring or tiering
+  accounts (use account-tier-scoring).
 ---
 
 # Lead Enrichment Skill

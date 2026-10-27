@@ -1,6 +1,11 @@
 ---
 name: industrial-brutalist-ui
-description: Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.
+description: >-
+  Builds web interfaces in an industrial brutalist style: Swiss print grids or dark CRT terminal
+  telemetry, extreme type-scale contrast, monospace data, utilitarian color, halftone and scanline
+  effects. Use when the user asks for a brutalist, industrial, terminal, military HUD or blueprint
+  look, or a data-dense dashboard, portfolio or editorial site in that style. Not for a calm
+  Notion-like look (use minimalist-ui).
 ---
 
 # SKILL: Industrial Brutalism & Tactical Telemetry UI

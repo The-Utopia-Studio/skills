@@ -1,13 +1,10 @@
 ---
 name: product-name
 description: >-
-  Use this skill whenever the user wants names for a product, feature, company or
-  tool: "suggest names", "what should we call it", "name ideas", "rebrand",
-  "brainstorm a product name". Returns five distinct, memorable candidates, each
-  with rationale, brand fit, memorability and trademark or domain notes, shaped
-  to the brand tone, audience, markets and languages the user gives. Not for
-  taglines or website copy (use copywriting) or positioning (use
-  positioning-workshop).
+  Brainstorms five product, feature or company name candidates, each with rationale, brand fit,
+  memorability and trademark or domain notes, shaped to tone, audience and markets. Use when asked
+  to suggest names, what should we call it, name ideas, or a rebrand. Not for taglines or website
+  copy (use copywriting).
 ---
 # Product Name
 

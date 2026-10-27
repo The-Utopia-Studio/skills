@@ -1,6 +1,11 @@
 ---
 name: pilot-six-term-sheet
-description: Turn a would-be pilot into a six-term paid-pilot sheet — scope, price (paid or prepaid), the signed data-rights clause, success metrics, kill criteria, and conversion terms priced now — and refuse to call anything a pilot unless all six terms are non-empty. Fires on "pilot terms", "structure the deal", "paid pilot", "pilot term sheet", "structure the pilot so it isn't a free trial". Not for brainstorming or validating which revenue model to bet on (that is `pricing-strategy`, exploratory; this commits one basis to price the conversion term now), not for drafting the data-rights legal language (that is `data-rights-clause`, section 06; this carries the clause as term 3 and routes there), not for testing whether the thing will get adopted at all (that is `wedge-five-questions`).
+description: >-
+  Structures a paid pilot as a six-term sheet (scope, price, data-rights clause, success metrics,
+  kill criteria, conversion terms priced now) and refuses to call it a pilot unless all six are
+  filled. Use when the user asks for pilot terms, a paid pilot, a pilot term sheet, to structure
+  the deal, or to stop a pilot becoming a free trial. Not for brainstorming revenue models or
+  price tiers (use pricing-strategy).
 type: generator
 supersedes: none
 ---

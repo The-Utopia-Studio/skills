@@ -1,13 +1,11 @@
 ---
 name: minimalist-ui
 description: >-
-  Build pages in a clean editorial, Notion-like minimalist style: warm off-white
-  canvas, serif headlines with sans body, flat bento grids with 1px borders,
-  muted pastel tags, near-zero shadows, no gradients. Use when the user asks for
-  a minimalist, editorial, Notion-style or document-like UI, a warm monochrome
-  look, or names those visual traits. Not for simplifying an overloaded existing
-  screen (use distill) or general distinctive builds with no named style (use
-  impeccable).
+  Builds pages in a clean editorial, Notion-like minimalist style: warm off-white canvas, serif
+  headlines with sans body, flat bento grids with 1px borders, muted pastel tags, near-zero
+  shadows and no gradients. Use when the user asks for a minimalist, editorial, Notion-style or
+  document-like UI or a warm monochrome look. Not for decluttering an existing overloaded screen
+  (use ui-simplify).
 ---
 
 # Protocol: Premium Utilitarian Minimalism UI Architect

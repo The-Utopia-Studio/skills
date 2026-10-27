@@ -6,7 +6,7 @@ import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const factChecker = resolve('skills/investments/investor-fact-ledger/scripts/fact-check.mjs');
-const bidHelper = resolve('skills/investments/auction-first-price-shading/scripts/uniform_bid.py');
+const bidHelper = resolve('skills/investments/auction-sealed-bid-pricing/scripts/uniform_bid.py');
 function ledgerRun(ledger, files = { 'memo.html': '<p>Raise $6M</p>' }) {
   const dir = mkdtempSync(join(tmpdir(), 'skill-ledger-'));
   try {

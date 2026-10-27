@@ -28,13 +28,13 @@ Base-layer skills, not tied to a specific aesthetic. Use these regardless of bra
 | Skill | What it does |
 |-------|--------------|
 | [`ui-ux-pro-max`](./skills/product/ui-ux-pro-max) | UI/UX intelligence — 50+ styles, 161 color palettes, 57 font pairings, 99 UX guidelines, 25 chart types across 10 stacks (React/Next/Vue/Svelte/SwiftUI/RN/Flutter/Tailwind/shadcn/HTML) |
-| [`polish`](./skills/product/polish) | [Emil Kowalski](https://emilkowalski.com/)'s philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great |
+| [`ui-polish`](./skills/product/polish) | [Emil Kowalski](https://emilkowalski.com/)'s philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great |
 | [`impeccable`](./skills/product/impeccable) | Anti-AI-slop design skill from [nutlope/hallmark](https://github.com/nutlope/hallmark), now folded into impeccable — audits, redesigns, design extraction from URLs or screenshots |
 | [`diagram-design`](./skills/product/diagram-design) | 13 diagram types — flowchart, sequence, state machine, ER, timeline, swimlane, quadrant, venn, pyramid, etc. Includes a dark technical skin for architecture diagrams |
-| [`ckm-design`](./skills/product/ckm-design) | Comprehensive — brand identity, design tokens, UI styling, logo generation (55 styles via Gemini), 50-deliverable corporate identity programs, banners and HTML presentations |
-| [`ckm-design-system`](./skills/product/ckm-design-system) | Three-layer token architecture (primitive → semantic → component), CSS variables, spacing/typography scales |
-| [`ckm-ui-styling`](./skills/product/ckm-ui-styling) | shadcn/ui (Radix + Tailwind) + canvas-based visual designs |
-| [`ckm-brand`](./skills/product/ckm-brand) | Brand voice, visual identity, messaging frameworks, asset management |
+| [`brand-graphics`](./skills/product/ckm-design) | Comprehensive — brand identity, design tokens, UI styling, logo generation (55 styles via Gemini), 50-deliverable corporate identity programs, banners and HTML presentations |
+| [`design-tokens`](./skills/product/ckm-design-system) | Three-layer token architecture (primitive → semantic → component), CSS variables, spacing/typography scales |
+| [`shadcn-tailwind-ui`](./skills/product/ckm-ui-styling) | shadcn/ui (Radix + Tailwind) + canvas-based visual designs |
+| [`brand-guidelines`](./skills/product/ckm-brand) | Brand voice, visual identity, messaging frameworks, asset management |
 
 ---
 
@@ -46,23 +46,23 @@ A full production pipeline from [pbakaus/impeccable](https://github.com/pbakaus/
 
 | Stage | Skill | What it does |
 |-------|-------|--------------|
-| **Plan** | [`shape`](./skills/product/shape) | Plan UX/UI before writing code — structured discovery interview + design brief |
+| **Plan** | [`ui-design-brief`](./skills/product/shape) | Plan UX/UI before writing code — structured discovery interview + design brief |
 | **Build** | [`impeccable`](./skills/product/impeccable) | Generate distinctive, production-grade frontend interfaces — avoids generic AI aesthetics |
-| **Refine** | [`layout`](./skills/product/layout) | Fix spacing, visual rhythm, weak hierarchy, monotonous grids, alignment problems |
-| **Refine** | [`typeset`](./skills/product/typeset) | Fix font choices, hierarchy, sizing, weight, readability |
-| **Refine** | [`colorize`](./skills/product/colorize) | Add strategic color to monochromatic designs |
-| **Refine** | [`animate`](./skills/product/animate) | Purposeful animations + micro-interactions + motion |
-| **Refine** | [`adapt`](./skills/product/adapt) | Responsive breakpoints, fluid layouts, touch targets across devices |
-| **Refine** | [`optimize`](./skills/product/optimize) | UI performance — loading speed, rendering, animations, images, bundle size |
-| **Refine** | [`clarify`](./skills/product/clarify) | Fix unclear UX copy, error messages, microcopy, labels, instructions |
-| **Refine** | [`delight`](./skills/product/delight) | Add joy, personality, unexpected touches — elevate functional to memorable |
-| **Refine** | [`distill`](./skills/product/distill) | Strip designs to their essence — declutter, simplify, focus |
-| **Dial** | [`bolder`](./skills/product/bolder) | Amplify safe or boring designs — more visual impact, character |
-| **Dial** | [`quieter`](./skills/product/quieter) | Tone down visually aggressive or overstimulating designs |
-| **Dial** | [`overdrive`](./skills/product/overdrive) | Push past conventional limits — shaders, spring physics, scroll-driven reveals, 60fps |
-| **Review** | [`critique`](./skills/product/critique) | UX evaluation with quantitative scoring, persona-based testing, anti-pattern detection |
-| **Review** | [`audit`](./skills/product/audit) | Technical quality checks — a11y, performance, theming, responsive, anti-patterns (P0–P3 severities) |
-| **Ship** | [`polish`](./skills/product/polish) | Final quality pass — alignment, spacing, consistency, micro-detail issues |
+| **Refine** | [`ui-layout-spacing`](./skills/product/layout) | Fix spacing, visual rhythm, weak hierarchy, monotonous grids, alignment problems |
+| **Refine** | [`ui-typography`](./skills/product/typeset) | Fix font choices, hierarchy, sizing, weight, readability |
+| **Refine** | [`ui-color`](./skills/product/colorize) | Add strategic color to monochromatic designs |
+| **Refine** | [`ui-animation`](./skills/product/animate) | Purposeful animations + micro-interactions + motion |
+| **Refine** | [`ui-responsive`](./skills/product/adapt) | Responsive breakpoints, fluid layouts, touch targets across devices |
+| **Refine** | [`ui-performance`](./skills/product/optimize) | UI performance — loading speed, rendering, animations, images, bundle size |
+| **Refine** | [`ui-microcopy`](./skills/product/clarify) | Fix unclear UX copy, error messages, microcopy, labels, instructions |
+| **Refine** | [`ui-delight`](./skills/product/delight) | Add joy, personality, unexpected touches — elevate functional to memorable |
+| **Refine** | [`ui-simplify`](./skills/product/distill) | Strip designs to their essence — declutter, simplify, focus |
+| **Dial** | [`ui-bolder`](./skills/product/bolder) | Amplify safe or boring designs — more visual impact, character |
+| **Dial** | [`ui-quieter`](./skills/product/quieter) | Tone down visually aggressive or overstimulating designs |
+| **Dial** | [`ui-advanced-effects`](./skills/product/overdrive) | Push past conventional limits — shaders, spring physics, scroll-driven reveals, 60fps |
+| **Review** | [`ui-critique`](./skills/product/critique) | UX evaluation with quantitative scoring, persona-based testing, anti-pattern detection |
+| **Review** | [`ui-audit`](./skills/product/audit) | Technical quality checks — a11y, performance, theming, responsive, anti-patterns (P0–P3 severities) |
+| **Ship** | [`ui-polish`](./skills/product/polish) | Final quality pass — alignment, spacing, consistency, micro-detail issues |
 
 ---
 
@@ -101,7 +101,7 @@ The **story side** of brand work.
 | Skill | What it does |
 |-------|--------------|
 | [`positioning-workshop`](./skills/gtm/01-growth-strategy/positioning-workshop) | Messaging and storytelling templates for brand |
-| [`business-narrative-builder`](./skills/gtm/01-growth-strategy/business-narrative-builder) | Structured narrative for the business — the story behind the work |
+| [`valuation-narrative`](./skills/gtm/01-growth-strategy/business-narrative-builder) | Structured narrative for the business — the story behind the work |
 
 ---
 
@@ -147,16 +147,16 @@ These are **open questions** about the current state of the marketplace. Looking
 
 2. **The 5 Taste skills feel under-defined.** Are aesthetic categories like "industrial brutalist" actually coherent and worth surfacing, or just one founder's preference?
 
-3. **Three review skills** — `impeccable`, `critique`, `audit` — all evaluate designs. Three flavors of the same thing, or do they each pull distinct weight?
+3. **Three review skills** — `impeccable`, `ui-critique`, `ui-audit` — all evaluate designs. Three flavors of the same thing, or do they each pull distinct weight?
 
-4. **No vendor-neutral design system token generator.** Only `ckm-design-system` covers this. Worth adding a more agnostic one?
+4. **No vendor-neutral design system token generator.** Only `design-tokens` covers this. Worth adding a more agnostic one?
 
 5. **Possible missing categories:**
-   - Color theory deep-dive (we have `colorize` but no foundational color skill)
+   - Color theory deep-dive (we have `ui-color` but no foundational color skill)
    - Iconography
-   - Logo systems (beyond `ckm-design`'s 55-style generator)
+   - Logo systems (beyond `brand-graphics`'s 55-style generator)
    - Illustration
-   - Motion design beyond `animate` and `overdrive`
+   - Motion design beyond `ui-animation` and `ui-advanced-effects`
    - Print / packaging
    - 3D / WebGL design
 
@@ -210,7 +210,7 @@ See [`README.md`](./README.md) for the full pack structure.
 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | The full 17-skill Impeccable workflow |
 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | Taste skills (taste dials and premium archetypes now live inside `impeccable`) |
 | [pablostanley/efecto-plugin](https://github.com/pablostanley/efecto-plugin) | All 3 Efecto skills |
-| [emilkowalski/skill](https://github.com/emilkowalski/skill) | `polish` |
+| [emilkowalski/skill](https://github.com/emilkowalski/skill) | `ui-polish` |
 | [nutlope/hallmark](https://github.com/nutlope/hallmark) | `impeccable` (hallmark folded in) |
 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | `diagram-design` |
 | [Cocoon-AI/architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator) | `diagram-design` |

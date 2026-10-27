@@ -1,15 +1,11 @@
 ---
 name: expected-value
 description: >-
-  Calculate the expected value of a decision under uncertainty: list the outcomes, attach
-  probabilities and payoffs, compute probability-weighted EV for each option, then adjust for
-  risk, time value and option value, with sensitivity and breakeven probabilities. Use this
-  skill whenever the user gives (or wants to set) odds and payoffs and asks "is this worth
-  it", "should we do X or Y", "should we exercise our pro-rata / follow on / take this bet",
-  "what's the expected return", or mentions expected value, EV, probability-weighted outcomes,
-  decision trees or risk-adjusted return, for investments, follow-ons, product bets or
-  strategic choices. Not for scoring options against weighted qualitative criteria (use
-  decision-matrix).
+  Calculates the expected value of a decision: outcomes, probabilities and payoffs per option,
+  then adjustments for risk, time value and option value, with sensitivity and breakeven odds. Use
+  when the user asks "is this worth it", "should we do X or Y", "should we exercise our pro-rata /
+  follow on", "what's the expected return", or mentions EV, decision trees or risk-adjusted
+  return. Not for weighted qualitative criteria (use decision-matrix).
 ---
 # Expected Value
 

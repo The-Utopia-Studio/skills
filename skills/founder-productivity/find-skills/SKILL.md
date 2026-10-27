@@ -1,6 +1,10 @@
 ---
 name: find-skills
-description: Helps users discover and install agent skills when they explicitly seek reusable capabilities, ask "find a skill for X" or "is there a skill that can...", or want to extend their agent. This skill should be used when the user is looking for functionality that might exist as an installable skill.
+description: >-
+  Searches the open agent skills ecosystem (skills.sh, npx skills) and installs a matching skill
+  for personal use. Use when the user asks to find a skill for X, is there a skill that can do Y,
+  how to extend the agent with a capability, or to install or update skills. Not for deciding
+  whether an external skill should join the shared studio repo (use market-skill-ingestion).
 ---
 
 # Find Skills

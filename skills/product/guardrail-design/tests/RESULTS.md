@@ -11,7 +11,7 @@ MUST fire (5):
 5. "We can't let it do X wrong unsupervised — where do we put the human in the loop?"
 MUST NOT fire (3, name the sibling each belongs to):
 1. "What acceptable failure rate should we accept per mode / which autonomy level L0–L4?" → belongs to `eval-first-spec`
-2. "We've been accurate for a month — can we drop the human review now?" (autonomy promotion) → belongs to `refine-flywheel`
+2. "We've been accurate for a month — can we drop the human review now?" (autonomy promotion) → belongs to `post-launch-refine-loop`
 3. "How do we build the AI system / what's the component pipeline / effort split?" → belongs to `compound-system-architecture`
 
 ## Runs

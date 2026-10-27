@@ -1,6 +1,10 @@
 ---
 name: scout-mindset-bias-check
-description: Detects and removes cognitive biases from reasoning using Julia Galef's Scout Mindset framework. Provides reversal tests, scope sensitivity checks, status quo bias tests, confidence interval audits, and full bias audits. Use when a prediction feels emotional, stuck at 50/50, or when validating forecasting process. Use when user mentions scout mindset, soldier mindset, bias check, reversal test, scope sensitivity, or cognitive distortions.
+description: >-
+  Checks a judgment or forecast for cognitive bias with reversal tests, scope-sensitivity and
+  status-quo checks, confidence-interval audits or a full bias audit. Use when a prediction feels
+  emotional or stuck at 50/50, the user wants a bias check on an investment view, asks "am I
+  fooling myself", or mentions scout mindset, reversal test or cognitive distortions.
 ---
 
 # Scout Mindset & Bias Check

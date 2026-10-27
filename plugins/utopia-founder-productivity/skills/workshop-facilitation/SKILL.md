@@ -1,6 +1,11 @@
 ---
 name: workshop-facilitation
-description: Facilitate workshop sessions in a one-step, multi-turn flow. Use when an interactive skill needs consistent pacing, options, and progress tracking.
+description: >-
+  Facilitation protocol for interactive sessions and workshop skills: one question per turn, entry
+  modes (guided, context dump, best guess), progress labels, numbered options at decision points
+  and clean handling of interruptions. Use when running a guided workshop or multi-turn session,
+  or when another interactive skill needs consistent pacing and progress tracking. Not a topic
+  workshop in itself.
 intent: >-
   Provide the canonical facilitation pattern for interactive skills: one step at a time, with clear progress, adaptive recommendations at decision points, and predictable interruption handling.
 type: interactive

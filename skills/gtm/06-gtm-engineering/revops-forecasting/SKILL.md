@@ -1,17 +1,11 @@
 ---
 name: revops-forecasting
 description: >-
-  Revenue forecasting methodology, forecast categories, governance and pipeline
-  visibility for B2B revenue teams: commit, best case and upside rules,
-  stage-weighted and capacity models, scenario planning, forecast accuracy and
-  slippage, pipeline coverage, KPI guardrails, deal inspection questions, the
-  weekly forecast call, and pipeline dashboards and hygiene. Use for "our forecast
-  is always wrong", "how much will we close this quarter", forecast call,
-  forecast cadence or variance, pipeline coverage, weighted pipeline, quota or
-  capacity planning, stale deals or pipeline health. Not for CRM lifecycle,
-  routing and dashboard implementation (use revops), GTM metric selection and
-  benchmarks (use gtm-metrics), or why individual deals are stalling (use
-  deal-velocity-engineer).
+  Builds B2B revenue forecasting: commit, best case and upside categories, stage-weighted and
+  capacity models, scenarios, forecast accuracy and slippage, pipeline coverage and the weekly
+  forecast call. Use when the forecast is always wrong, asking how much will close this quarter,
+  running a forecast call, or planning quota and pipeline coverage. Not for why individual deals
+  stall (use deal-velocity-engineer).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/rutger-katz/revops-forecasting

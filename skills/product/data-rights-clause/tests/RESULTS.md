@@ -12,7 +12,7 @@ MUST fire (5):
 5. "The operator wants us on their standard agreement — what do we need to change to protect our data?"
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Is the operator's telemetry even a moat seed, or can a model already reach it? Band our sources." → belongs to `yoda-data-sourcing` (section 03)
+1. "Is the operator's telemetry even a moat seed, or can a model already reach it? Band our sources." → belongs to `proprietary-data-sourcing` (section 03)
 2. "Build the whole pilot term sheet — scope, price, success metrics, kill criteria, conversion." → belongs to `pilot-six-term-sheet` (section 07)
 3. "Is their verbal 'sure, keep it' strong enough to count on? Score that one signal." → belongs to `evidence-ladder` (section 02)
 

@@ -1,18 +1,11 @@
 ---
 name: customer-research
 description: >-
-  Use this skill whenever the user hands you customer feedback to analyze or
-  wants a feedback program set up: synthesize interview snippets or transcripts
-  into themes with frequency, confidence and money quotes; analyze sentiment in
-  community posts, reviews, NPS or CSAT comments and flag what needs escalation;
-  set up a voice-of-customer program (sources, tagging taxonomy, cadence, routing
-  insights to owners, weekly VOC digest); build a closed feedback loop from CSM
-  and churn-call notes; analyze loyalty or membership program members by tier;
-  mine Reddit, G2 and app reviews; build research-based personas and JTBD maps.
-  Not for an opportunity solution tree or product discovery cadence (use
-  continuous-discovery-engine), defining the ICP (use ideal-customer-profile),
-  writing copy from the research (use copywriting), or planning discovery
-  interviews (use discovery-interview-prep).
+  Analyzes customer feedback into themes, sentiment and personas: interview transcripts, reviews,
+  NPS or CSAT comments, Reddit and G2 mining, and voice-of-customer program setup with tagging and
+  routing. Use when synthesizing interviews, analyzing reviews or survey comments, building
+  research-based personas or JTBD maps, or setting up a VOC digest. Not for defining the ICP (use
+  ideal-customer-profile).
 metadata:
   version: 1.0.0
 ---

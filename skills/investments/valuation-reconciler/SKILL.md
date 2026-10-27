@@ -1,6 +1,11 @@
 ---
 name: valuation-reconciler
-description: Synthesizes intrinsic (DCF) and relative (multiples) valuation outputs into a final value estimate and investment recommendation. Reconciles divergent valuations, reverse-engineers what the market is pricing in (implied growth, implied ROIC), computes margin of safety, and produces a buy/sell/hold recommendation with catalysts. Use when combining multiple valuation approaches, making investment recommendations, reconciling DCF with multiples, or when user mentions reconcile valuations, investment recommendation, margin of safety, implied growth rate, or what is the market pricing in.
+description: >-
+  Reconciles DCF and multiples valuations into one value and a buy/sell/hold call: explains
+  divergence, reverse-engineers what the market prices in (implied growth, ROIC), computes margin
+  of safety and names catalysts. Use when combining valuation methods, making an investment
+  recommendation, or the user mentions reconcile valuations, margin of safety, implied growth or
+  "what is the market pricing in".
 ---
 # Valuation Reconciler
 
@@ -180,4 +185,4 @@ Breakeven Sensitivity:
 
 - `dcf-model` provides the DCF per-share value and sensitivity grid
 - `comps-analysis` provides peer comparison and regression-implied values
-- `business-narrative-builder` provides the qualitative story that anchors the thesis
+- `valuation-narrative` provides the qualitative story that anchors the thesis

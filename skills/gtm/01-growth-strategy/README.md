@@ -13,11 +13,11 @@ Install the full GTM pack (all seven sub-modules):
 Skills in this sub-module:
 
 - `beachhead-segment`
-- `business-narrative-builder`
-- `company-moc`
+- `valuation-narrative`
+- `obsidian-company-map`
 - `customer-research`
 - `growth-loops`
-- `growth-strategy`
+- `fellow-growth-strategy`
 - `gtm-strategy`
 - `ideal-customer-profile`
 - `manifesto`

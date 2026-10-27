@@ -13,7 +13,7 @@ MUST fire (5):
 
 MUST NOT fire (3, name the sibling each belongs to):
 1. "Which cheap experiment should I run to learn if they'll pay?" → belongs to `probe-matrix` (selects the experiment / honesty axis, not the make-craft)
-2. "Design the colour system and typography for this screen." → belongs to `impeccable` / `shape` / `design` (the visual craft this skill routes to and must not restate)
+2. "Design the colour system and typography for this screen." → belongs to `impeccable` / `ui-design-brief` / `design` (the visual craft this skill routes to and must not restate)
 3. "Run the usability session and tell me how to watch the user." → belongs to `usability-test-protocol` (runs the session that turns the mock into a behaviour read-out)
 
 ## Skill-specific kill line (judge enforces)
@@ -22,7 +22,7 @@ Auto-fail this skill if the output:
 - writes, or produces a plan whose deliverable is, product code (any "just build a
   quick React/coded version") instead of a no-code clickable hybrid, OR
 - restates a design skill's visual craft — colour, type, layout, component styling —
-  instead of routing it to `impeccable` / `shape` / `design`, OR
+  instead of routing it to `impeccable` / `ui-design-brief` / `design`, OR
 - treats the mock as evidence above 0.5 (claims "validated" / "they want it" from an
   artefact no one used under stakes), OR
 - starts making anything before Step 0 names the ONE moment and its reaction.

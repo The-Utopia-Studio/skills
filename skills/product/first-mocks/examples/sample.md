@@ -76,7 +76,7 @@ synthetic fixture data, not from any plant]
 
 ## Step 5 — Route the visual craft OUT
 
-**UX/UI plan → :** ☑ `shape` — to plan the card's information hierarchy and the
+**UX/UI plan → :** ☑ `ui-design-brief` — to plan the card's information hierarchy and the
 expand interaction properly before any polish.
 **Distinctive UI build → :** ☑ `impeccable` — to build a non-generic card UI (a
 control-room product should not look like a default SaaS dashboard).

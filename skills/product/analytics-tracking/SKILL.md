@@ -1,13 +1,11 @@
 ---
 name: analytics-tracking
 description: >-
-  Set up, improve or audit analytics tracking: write a tracking plan with event names, properties and
-  naming conventions, UTM parameters, conversion and funnel events, and choose or implement GA4,
-  Google Tag Manager, Mixpanel, Amplitude, PostHog or Segment. Use when the user asks to draft a
-  tracking plan, set up tracking or event tracking for a new app or launch, track conversions or
-  attribution, define UTMs, or says events aren't firing or analytics isn't working. Not for analysing
-  a finished A/B test (use ab-test-analysis) or designing the metrics dashboard and alert thresholds
-  (use metrics-dashboard).
+  Writes and audits analytics tracking plans: event names and properties, naming conventions, UTM
+  parameters, conversion and funnel events, and GA4, GTM, Mixpanel, Amplitude, PostHog or Segment
+  setup. Use when the user asks for a tracking plan, event tracking for a launch, conversion or
+  attribution tracking, UTMs, or says events are not firing. Not for the dashboard spec and alert
+  thresholds (use metrics-dashboard).
 metadata:
   version: 1.1.0
 ---

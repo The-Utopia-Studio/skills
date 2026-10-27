@@ -13,7 +13,7 @@ MUST fire (5):
 MUST NOT fire (3, name the sibling each belongs to):
 1. "State this as the one decision we're changing and how much faster it gets." → belongs to `product-as-decision`
 2. "Map how it's done today and price every step." → belongs to `current-state-map`
-3. "What's the riskiest assumption / how would I disprove it?" → belongs to `null-hypothesis-test`
+3. "What's the riskiest assumption / how would I disprove it?" → belongs to `falsify-plan-assumptions`
 
 ## Runs
 | Date | Gate | Result | Notes |

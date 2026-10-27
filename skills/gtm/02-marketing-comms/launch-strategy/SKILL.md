@@ -1,16 +1,11 @@
 ---
 name: launch-strategy
 description: >-
-  Plan and run a product launch, feature announcement or release: the five-phase
-  launch (internal, alpha, beta, early access, full), owned/rented/borrowed
-  channels, waitlists, Product Hunt and Show HN, directory submissions, AppSumo,
-  launch-day hour-by-hour execution and post-launch momentum. Use when the user
-  mentions launch, Product Hunt, Hacker News, BetaList, waitlist, beta or early
-  access, launch day, launch checklist, multi-channel launch or "we're about to
-  ship." Not for the overall go-to-market plan or motion selection (use
-  gtm-strategy), ongoing marketing ideas after launch (use marketing-ideas), the
-  working-backwards planning press release (use press-release), or referral loops
-  (use referral-program).
+  Plans and runs a product or feature launch: five launch phases, owned, rented and borrowed
+  channels, waitlists, Product Hunt and Show HN, directories, launch-day hour-by-hour plan and
+  post-launch momentum. Use when the user mentions a launch, Product Hunt, Hacker News, a
+  waitlist, beta or early access, or a launch checklist. Not for the working-backwards planning
+  doc (use working-backwards-press-release).
 metadata:
   version: 1.1.0
 ---

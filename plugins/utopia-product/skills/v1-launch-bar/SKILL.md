@@ -1,13 +1,11 @@
 ---
 name: v1-launch-bar
 description: >-
-  Go / no-go gate for launching a built v1 or pilot, on two recorded tests: a true stranger reaches
-  first correct value in 60 seconds or less unaided, AND the learn-from-corrections mechanism is wired
-  and proven to compound. Use when the user asks if they're ready to launch, whether v1 is good enough
-  to ship, for a launch bar or go/no-go on a v1 or pilot, especially with time-to-value or
-  corrections-loop evidence. Output: a recorded-evidence go / no-go checklist. Not the ongoing
-  post-launch loop (use refine-flywheel), not pilot price or commercial terms (use
-  pilot-six-term-sheet), not defining what 'working' means before code (use eval-first-spec).
+  Go/no-go gate for launching a built v1 or pilot on two recorded tests: a stranger reaches first
+  correct value in 60 seconds unaided, and the learn-from-corrections loop is wired and proven.
+  Use when the user asks if they are ready to launch, whether v1 is good enough to ship, or for a
+  launch bar or go/no-go on a pilot. Not for the ongoing post-launch loop (use post-launch-refine-
+  loop).
 type: generator
 supersedes: none
 ---
@@ -18,7 +16,7 @@ Turns "I think we're ready" into a go / no-go decision made on recorded evidence
 
 ## The Icarus reframe
 
-A failure mode to check is a static pilot tool: it does the same thing in week 4 as in week 1, and every edit the customer makes vanishes into a log nobody reads. That is the death shape, and it passes most launch reviews because the review scores polish and demos, not learning. This skill absorbs `evidence-driven-testing` — proof over prose, one recorded assertion per state change, show the old failure beside the new success — and points it at the launch decision itself, not at a single UI test. The 60-second test is a recorded session with a real stranger (behaviour observed, 0.7 on the ladder), never the fellow's "it's obvious" (opinion, 0.1). The corrections test reuses that skill's strongest move — the before/after that shows the old wrong output next to the new corrected one — and applies it to the whole product's ability to learn: seed one real correction, show the same input now yields the corrected output, on tape. A launch decision made on the fellow's confidence has measured nothing.
+A failure mode to check is a static pilot tool: it does the same thing in week 4 as in week 1, and every edit the customer makes vanishes into a log nobody reads. That is the death shape, and it passes most launch reviews because the review scores polish and demos, not learning. This skill absorbs `pr-test-evidence-video` — proof over prose, one recorded assertion per state change, show the old failure beside the new success — and points it at the launch decision itself, not at a single UI test. The 60-second test is a recorded session with a real stranger (behaviour observed, 0.7 on the ladder), never the fellow's "it's obvious" (opinion, 0.1). The corrections test reuses that skill's strongest move — the before/after that shows the old wrong output next to the new corrected one — and applies it to the whole product's ability to learn: seed one real correction, show the same input now yields the corrected output, on tape. A launch decision made on the fellow's confidence has measured nothing.
 
 ## When to use / When NOT
 
@@ -28,7 +26,7 @@ Do not use when:
 
 | Request | Belongs to |
 |---|---|
-| "How do we keep improving the product / what's the monthly cadence / run the loop / what happens after launch" | `refine-flywheel` (08). This skill is the one-time gate and wires the mechanism; that skill runs it forever and measures the delta this skill commits to. Hand the pilot over once it is GO. |
+| "How do we keep improving the product / what's the monthly cadence / run the loop / what happens after launch" | `post-launch-refine-loop` (08). This skill is the one-time gate and wires the mechanism; that skill runs it forever and measures the delta this skill commits to. Hand the pilot over once it is GO. |
 | "How do we price the pilot / what are the terms / set the commercial success metric" | `pilot-six-term-sheet` (07, sibling). Its success metric is the business KPI the customer buys; the two launch tests here are the product bar underneath it. |
 | "Define what working means / write the golden set / what's the cost-per-outcome" | `eval-first-spec` (07, sibling). That is the pre-build spec. This skill assumes its pass rate is already an input, and does not re-derive it. |
 | "How should we run the user observation / who watches / how do we avoid leading" | `usability-test-protocol` (05). Route the *how* of the stranger observation there; this skill owns the *gate*, not the protocol. |
@@ -80,7 +78,7 @@ The product must visibly improve from the customer's corrections. At the gate yo
 | B1 | **Capture wired** | A code path logs every correction as a `(system_output → human_final)` diff — the edit the customer made before using the output. | Cite the path / event. Not "we can query the DB later." [Fact] |
 | B2 | **Feedback path named** | A named route by which a captured correction changes future output: into the golden set, a `lessons.md`, retrieval, or a re-prompt — with the trigger that fires it. | Name the path and trigger. "We'll look at the logs" is RED. [Fact] |
 | B3 | **Proven once** | Seed one real correction, then show the same input now produces the corrected output. This proves the feedback path works for that case; separately run held-out cases and the full regression set before claiming general improvement. Recorded before/after — old wrong beside new right. | Recorded diff, cited [Fact]. Behaviour observed, 0.7. |
-| B4 | **Tweak-time instrumented** | The metric "how much the customer edits before accepting" is captured from day 1 (tweak-distance / tweak-time). This is the instrument `refine-flywheel` will read. | Cite the instrument. [Fact] |
+| B4 | **Tweak-time instrumented** | The metric "how much the customer edits before accepting" is captured from day 1 (tweak-distance / tweak-time). This is the instrument `post-launch-refine-loop` will read. | Cite the instrument. [Fact] |
 | B5 | **Delta committed** | A specific, checkable week-1 → week-4 promise on a named metric, e.g. "median tweak-distance on the top-5 recurring input types drops ≥ 30%". | The number and metric, stated now. [Hypothesis] until week 4. |
 
 Kill rule for Gate B: if ANY of B1–B4 is missing OR B5 is not a specific number, the mechanism is not wired and the launch bar is **NO-GO**, however good the output looks. "We'll add the feedback loop after launch" is exactly the static-tool trap; a promise to build the mechanism later is not the mechanism.
@@ -96,7 +94,7 @@ Both GREEN on recorded evidence → **GO**. Either RED → **NO-GO**, and name t
 
 ### Step 4 — Handoff
 
-On GO, the mechanism wired in Gate B is now run continuously by `refine-flywheel` (08): it reads the tweak-time instrument (B4), re-runs the whole eval set on every model release, and promotes autonomy by eval result. The week-1 → week-4 delta committed in B5 is that skill's first checkpoint. This skill's job ends at the gate; do not run the ongoing loop here.
+On GO, the mechanism wired in Gate B is now run continuously by `post-launch-refine-loop` (08): it reads the tweak-time instrument (B4), re-runs the whole eval set on every model release, and promotes autonomy by eval result. The week-1 → week-4 delta committed in B5 is that skill's first checkpoint. This skill's job ends at the gate; do not run the ongoing loop here.
 
 ## Evidence standard
 
@@ -118,11 +116,11 @@ The friendly stranger. The most common cheat is running the "stranger" test on a
 
 The static tool that demos beautifully. A v1 can pass every polish check, win the room, and still be the static-tool failure mode — because nothing in it learns from a correction. Gate B is the only defence, and it is the gate fellows most want to skip because it is invisible in a demo. No B1–B4 wired, no launch, regardless of Gate A.
 
-Delta that cannot be judged. "It'll get better over the pilot" is not a B5 commitment. Without a named metric and a number, week 4 cannot tell success from drift, and `refine-flywheel` inherits a promise it cannot check. Force the number now.
+Delta that cannot be judged. "It'll get better over the pilot" is not a B5 commitment. Without a named metric and a number, week 4 cannot tell success from drift, and `post-launch-refine-loop` inherits a promise it cannot check. Force the number now.
 
 Comprehension smuggled in as value. A stranger who says "oh I see, it's a risk list" has passed comprehension, not value — they have not yet reached the outcome. Scoring the two as one lets a clear-but-useless v1 pass. Keep them separate.
 
-Corrections that quietly raise autonomy. The Gate B loop learns from corrections to improve *output quality* at the current autonomy level — it must never silently promote autonomy (loosen a gate, drop a sign-off, widen a threshold) because the corrections looked good. A correction that implies more autonomy is a decision for `guardrail-design` (re-size the guard) or `refine-flywheel` (promote on a scored eval), never an automatic effect of the week-1 → week-4 loop. Wiring the loop to auto-tighten thresholds is exactly the trap on an L0 safety product: the mechanism that earns trust must not also spend it.
+Corrections that quietly raise autonomy. The Gate B loop learns from corrections to improve *output quality* at the current autonomy level — it must never silently promote autonomy (loosen a gate, drop a sign-off, widen a threshold) because the corrections looked good. A correction that implies more autonomy is a decision for `guardrail-design` (re-size the guard) or `post-launch-refine-loop` (promote on a scored eval), never an automatic effect of the week-1 → week-4 loop. Wiring the loop to auto-tighten thresholds is exactly the trap on an L0 safety product: the mechanism that earns trust must not also spend it.
 
 Launching under the eval gate. This skill sits on top of `eval-first-spec`'s pass rate; it does not replace it. A v1 that is charming to strangers but fails its own golden set is not ready — Gate A does not buy back a failing eval. Confirm the precondition in Step 0.
 
@@ -138,7 +136,7 @@ Launching under the eval gate. This skill sits on top of `eval-first-spec`'s pas
 
 `usability-test-protocol` (05) — the discipline for running the stranger observation (Product runs, Design notes, no leading, observe the artefact not the person). Route the *how* there; this skill owns the *gate* and the 60-second binary.
 
-`refine-flywheel` (08) — the ongoing loop this skill hands off to on GO. It reads the tweak-time instrument (B4), re-runs evals on model release, and measures the week-1 → week-4 delta (B5). This skill wires and proves the mechanism once; that skill runs it forever. They compose; neither restates the other.
+`post-launch-refine-loop` (08) — the ongoing loop this skill hands off to on GO. It reads the tweak-time instrument (B4), re-runs evals on model release, and measures the week-1 → week-4 delta (B5). This skill wires and proves the mechanism once; that skill runs it forever. They compose; neither restates the other.
 
 Absorbs and reframes `skills/product-verification/evidence-driven-testing`. It lifts that skill's bones — proof over prose, one recorded assertion per state change, show the old failure beside the new success, always cite the exact version tested — and points them at the launch decision: the stranger session and the correction before/after are the recordings, and the go/no-go is the annotated result. Use this at the launch gate; use the original when recording proof of a single UI change on a PR.
 

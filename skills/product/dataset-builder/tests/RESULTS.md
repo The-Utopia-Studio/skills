@@ -12,7 +12,7 @@ MUST fire (5):
 5. "Make the seed of our eval suite from our own data."
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Which of our candidate data sources are actually proprietary / where's our moat data?" → belongs to `yoda-data-sourcing` (section 03)
+1. "Which of our candidate data sources are actually proprietary / where's our moat data?" → belongs to `proprietary-data-sourcing` (section 03)
 2. "Compose my 20 cases into the eval bands, pick the autonomy level, and set the cost-per-outcome budget." → belongs to `eval-first-spec` (section 07)
 3. "Which of the expert's knowledge is teachable procedure vs show-only judgment?" → belongs to `explicit-vs-tacit-capture` (section 03)
 

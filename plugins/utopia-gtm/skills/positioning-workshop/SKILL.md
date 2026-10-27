@@ -1,19 +1,11 @@
 ---
 name: positioning-workshop
 description: >-
-  Use this skill to create or fix positioning, messaging and brand narrative: run
-  a positioning workshop (target customer, unmet need, category, key benefit,
-  differentiation) to a Geoffrey Moore positioning statement, then build a
-  positioning stack, message house, proof library, messaging pillars, three-tier
-  messaging and a brand narrative arc that keeps the story consistent across
-  exec, practitioner and developer audiences. Use when messaging feels fuzzy or
-  generic, when repositioning, when positioning an AI product, or when the user
-  asks for positioning statements, a message house, messaging pillars or a brand
-  narrative. Not for valuation or story-to-numbers narratives (use
-  business-narrative-builder), defining the ICP (use ideal-customer-profile), the
-  full value proposition (use value-proposition), choosing a first market (use
-  beachhead-segment), website copy (use copywriting), or a manifesto (use
-  manifesto).
+  Runs a positioning workshop (target customer, unmet need, category, benefit, differentiation) to
+  a Moore positioning statement, then builds a message house, messaging pillars and brand
+  narrative. Use when messaging feels fuzzy or generic, when repositioning, positioning an AI
+  product, or asking for a positioning statement or messaging pillars. Not for the full value
+  proposition (use value-proposition).
 metadata:
   type: interactive
   intent: >-
@@ -277,7 +269,7 @@ After collecting responses, the agent generates a positioning statement in this 
 3. **Apply to artifacts:**
    - Update website homepage and product pages
    - Revise sales deck and pitch materials
-   - Use in PRD, press release, or roadmap planning (see the `press-release` skill)
+   - Use in PRD, press release, or roadmap planning (see the `working-backwards-press-release` skill)
 
 4. **Build the messaging layer:** turn the statement into a positioning stack, message house, proof library and three-tier messaging (`references/positioning-and-messaging.md`), then a narrative arc per audience (`references/brand-narrative-framework.md`).
 
@@ -429,7 +421,7 @@ Acme Workflows is a no-code automation platform for small business owners that r
 - `ideal-customer-profile` — Defines and scores the "For [target]" segment
 - `proto-persona` and `jobs-to-be-done` (product pack) — Inform the target and the "that need" statement
 - `value-proposition` — The fuller value proposition behind the statement
-- `press-release` — Positioning informs press release messaging
+- `working-backwards-press-release` — Positioning informs press release messaging
 
 ### External Frameworks
 - Geoffrey Moore, *Crossing the Chasm* (1991) — Origin of positioning statement format

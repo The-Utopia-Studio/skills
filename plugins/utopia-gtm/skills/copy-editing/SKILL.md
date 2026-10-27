@@ -1,14 +1,10 @@
 ---
 name: copy-editing
 description: >-
-  Use this skill when the user pastes existing marketing copy and wants it
-  edited rather than rewritten: "tighten this", "edit this copy", "don't rewrite
-  it from scratch", "too wordy", "cut the jargon", "proofread", "polish this",
-  "this reads awkwardly", "sharpen the messaging", or refresh an outdated page or
-  run a content audit. It runs structured copy sweeps (clarity, jargon and
-  buzzword removal, voice, specificity, proof) and returns tracked edits. Not for
-  writing new copy from scratch (use copywriting) or editing cold emails (use
-  cold-email).
+  Edits existing marketing copy without rewriting it, using structured sweeps for clarity, jargon,
+  voice, specificity and proof, and returns tracked edits. Use when the user pastes copy and says
+  tighten this, too wordy, cut the jargon, proofread, polish this, or wants a content audit of an
+  outdated page. Not for writing new copy from scratch (use copywriting).
 metadata:
   version: 1.3.0
 ---

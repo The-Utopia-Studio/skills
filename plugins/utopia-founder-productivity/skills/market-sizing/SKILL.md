@@ -1,13 +1,11 @@
 ---
 name: market-sizing
 description: >-
-  Estimate TAM, SAM and SOM top-down and bottom-up with cited sources, explicit assumptions, a 2-3
-  year projection and validation questions, one-shot or as a guided Q&A with a deterministic sizing
-  script. Use when the user asks for TAM / SAM / SOM, market size, addressable market, the market
-  slide for an investor pitch, or market entry sizing. Not when the user says 'don't give me a TAM' or
-  wants the size built from countable units with every rung's evidence shown (use
-  bottoms-up-quantification), the per-unit prize of one job (use physics-floor-gap), or customer
-  segments (use market-segments).
+  Estimates TAM, SAM and SOM top-down and bottom-up with cited sources, explicit assumptions, a
+  2-3 year projection and validation questions, one-shot or as a guided Q&A with a sizing script.
+  Use when the user asks for TAM, SAM, SOM, market size, addressable market, a market slide for a
+  pitch, or market entry sizing. Not for a size built only from countable units with every rung
+  evidenced (use bottoms-up-market-sizing).
 ---
 
 # Estimate Market Size (TAM, SAM, SOM)

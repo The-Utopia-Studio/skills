@@ -59,7 +59,7 @@ Per accepted handover:
 
 Inversion watch: the only line that could climb is inference if drafts get longer or retries
 rise. At current shape it holds. `[Assumption]` — reprice the token line each model release
-via `refine-flywheel`.
+via `post-launch-refine-loop`.
 
 ## E. Vanity audit
 

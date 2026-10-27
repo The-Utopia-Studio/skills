@@ -1,12 +1,11 @@
 ---
 name: lean-ux-canvas
 description: >-
-  Run Jeff Gothelf's Lean UX Canvas (v2) for a feature or initiative: business problem, business and
-  user outcomes, users, solutions, hypotheses, what to learn first and the least work to learn it. Use
-  when the user asks for a Lean UX Canvas session or wants to frame a business problem, surface
-  assumptions and decide what to learn next before building. Not for a Lean Canvas, startup canvas or
-  business model canvas of how a venture makes money (use business-model), or broad risk mapping (use
-  identify-assumptions-new).
+  Runs Jeff Gothelf's Lean UX Canvas (v2) for a feature or initiative: business problem, business
+  and user outcomes, users, solutions, hypotheses, what to learn first and the least work to learn
+  it. Use when the user asks for a Lean UX Canvas session, or wants to frame a business problem,
+  surface assumptions and decide what to learn before building. Not for a Lean Canvas of how a
+  venture makes money (use business-model).
 intent: >-
   Guide product managers through creating **Jeff Gothelf's Lean UX Canvas (v2)**—a one-page facilitation tool that frames work around a **business problem to solve**, not a **solution to implement**. Use this to align cross-functional teams around core assumptions, craft testable hypotheses, and ensure learning happens every sprint by exposing gaps in understanding (problem, users, value, and why the solution should work).
 type: interactive

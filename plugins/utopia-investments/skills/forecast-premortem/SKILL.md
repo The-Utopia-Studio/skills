@@ -1,6 +1,11 @@
 ---
 name: forecast-premortem
-description: Stress-tests predictions by assuming failure and working backward to identify blind spots, tail risks, and overconfidence. Applies Gary Klein's premortem technique to probabilistic forecasting. Use when confidence is high (>80% or <20%), need to identify tail risks and unknown unknowns, want to widen overconfident intervals, or when user mentions premortem, backcasting, what could go wrong, stress test, or black swans.
+description: >-
+  Stress-tests a forecast by assuming it failed and working backward to find blind spots, tail
+  risks and overconfidence, then widens the probability or interval. Use when confidence is very
+  high or very low, the user asks "what could go wrong", wants a premortem, backcasting or a
+  stress test, or mentions black swans. Not for a general what-if on a decision (use what-if-
+  scenario-analysis).
 ---
 
 # Forecast Pre-Mortem

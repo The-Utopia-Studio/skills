@@ -1,13 +1,10 @@
 ---
 name: efecto-web-design
 description: >-
-  Design web pages and app UIs live in the Efecto design tool through the Efecto
-  MCP server: create sessions, build layouts with JSX and Tailwind, manage
-  artboards and push real-time changes the user watches in their browser. Use
-  only when the user mentions Efecto or the Efecto MCP tools (create_session,
-  add_section, get_document) are available. Not for building UI code in the
-  user's repo (use impeccable) or graphic assets like posters and decks (use
-  efecto-graphic-design).
+  Designs web pages and app UIs live in the Efecto design tool via its MCP server: sessions, JSX
+  and Tailwind layouts, artboards and real-time changes the user watches in the browser. Use only
+  when the user mentions Efecto or Efecto MCP tools (create_session, add_section, get_document)
+  are available. Not for UI code in the user's repo (use impeccable).
 metadata:
   mcp-server: efecto
   author: pablostanley

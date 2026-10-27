@@ -1,11 +1,10 @@
 ---
 name: vercel-react-native-skills
 description: >-
-  React Native and Expo performance and best practices: virtualised lists
-  (FlashList), image handling, animations with Reanimated, native modules and
-  platform APIs. Use when the user mentions React Native or Expo, a stuttering
-  feed or list, dropped animation frames on Android or iOS, or mobile app
-  performance. Not for web React (use vercel-react-best-practices).
+  Applies React Native and Expo performance best practices: virtualised lists with FlashList,
+  image handling, Reanimated animations, native modules and platform APIs. Use when the user
+  mentions React Native or Expo, a stuttering feed or list, dropped animation frames on Android or
+  iOS, or mobile app performance. Not for web React (use vercel-react-best-practices).
 license: MIT
 metadata:
   author: vercel

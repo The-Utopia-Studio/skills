@@ -1,6 +1,10 @@
 ---
 name: warm-intro-intelligence
-description: "Use this skill when a rep wants warm intro paths into a target prospect \u2014 'Find warm intro paths for [company]', 'Who do we know at [company]?', 'Can anyone intro me to [role] at [company]?', 'Warm intro - [company]'. Surfaces the strongest available warm intro paths from your company's relationship network \u2014 employees, customers, partners, investors, advisors, call transcripts \u2014 with honest, evidence-based confidence labels. Decision support only: never contacts anyone, never writes to the CRM. The rep always decides."
+description: >-
+  Finds warm intro paths into a target prospect from the company's network (employees, customers,
+  investors, advisors, call transcripts) with evidence-based confidence labels; decision support
+  only, never contacts anyone. Use when a rep asks who do we know at a company, can anyone intro
+  me to a role there, or find warm intro paths. Not for writing the outreach (use cold-email).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/din-arbel/warm-intro-intelligence

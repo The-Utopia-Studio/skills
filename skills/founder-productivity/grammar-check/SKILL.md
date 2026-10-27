@@ -1,12 +1,11 @@
 ---
 name: grammar-check
 description: >-
-  Proofread text for grammar, spelling, punctuation, logic and flow errors and suggest targeted fixes
-  (location, error, fix, rationale) without rewriting the whole text. Use whenever the user pastes a
-  paragraph, memo, email, report, investor update or document and asks to check grammar, proofread,
-  find errors, or fix mistakes while keeping their wording. Not for improving or rewriting marketing
-  copy such as landing pages, ads or campaign emails (use copy-editing) or writing new copy (use
-  copywriting).
+  Proofreads text for grammar, spelling, punctuation, logic and flow errors and lists targeted
+  fixes (location, error, fix, reason) without rewriting the whole piece. Use when the user pastes
+  a memo, email, report, investor update or document and asks to proofread, check grammar, find
+  errors, or fix mistakes while keeping their wording. Not for rewriting marketing copy (use copy-
+  editing).
 ---
 # Grammar and Flow Checking
 

@@ -1,6 +1,11 @@
 ---
 name: draft-nda
-description: "Draft a detailed Non-Disclosure Agreement between two parties covering information types, jurisdiction, and clauses needing legal review. Use when creating confidentiality agreements or preparing an NDA for a partnership."
+description: >-
+  Drafts a non-disclosure agreement between two parties, one-way or mutual, covering information
+  types, term, permitted disclosures, remedies and governing law, with plain-language notes and
+  clauses flagged for legal review. Use when the user asks for an NDA, a confidentiality
+  agreement, or to prepare an NDA before a partnership, pitch or hire. Not a substitute for a
+  lawyer's review.
 ---
 # NDA (Non-Disclosure Agreement) Drafting
 

@@ -1,6 +1,11 @@
 ---
 name: privacy-policy
-description: "Draft a detailed privacy policy covering data types, jurisdiction, GDPR and compliance considerations, and clauses needing legal review. Use when creating a privacy policy, updating data protection documentation, or preparing for compliance."
+description: >-
+  Drafts a privacy policy for a product or service: data collected, purposes, sharing, retention,
+  user rights, GDPR and CCPA considerations, with plain-language notes and clauses flagged for
+  legal review. Use when the user asks for a privacy policy, to update data protection
+  documentation, or to prepare for privacy compliance. Not a substitute for a privacy lawyer's
+  review.
 ---
 # Privacy Policy Generator
 

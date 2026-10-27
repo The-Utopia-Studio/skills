@@ -1,18 +1,11 @@
 ---
 name: technical-dd
 description: >-
-  Investment-grade Technical Due Diligence reports for The Studio (Utopia Capital), as a
-  branded .docx for IC, co-investors or the company. Assesses whether a startup's technology
-  works, is well built, can scale, and what the technical risks are: architecture, AI/ML
-  claims, code quality, security and compliance, scalability, tech debt, team, moat and IP,
-  roadmap feasibility, an evidence-rated claims audit, a risk register, what must be true and
-  dispositive questions. Works from pitch decks, technical docs and corporate profiles, and,
-  when a repository is available, from a 5-phase repo audit. Use when the user mentions
-  technical due diligence, TDD, tech DD, a technical assessment of a company, "run DD on this
-  company", "assess this startup" or "review these materials" for an investment.
-  Not for commercial or financial DD, valuation or the investment memo; not for a security
-  audit or repo scan on its own (use security-auditor or repo-scanner); when the user
-  addresses Ada by name, use ada.
+  Writes an investment-grade technical due diligence report as a branded .docx for IC:
+  architecture, AI/ML claims, code quality, security, scalability, tech debt, team, IP, claims
+  audit and risk register, from decks and docs or a repo audit. Use when the user mentions
+  technical due diligence, tech DD, TDD, "run DD on this company" or "assess this startup's tech".
+  Not for commercial or financial DD; when the user names Ada, use ada.
 ---
 
 # Technical Due Diligence Report Generator
@@ -79,11 +72,11 @@ This analysis phase is critical. The value of the TDD is in the gap between clai
 
 If the user gives a GitHub URL or local repo, run these before writing, and cite file paths and commits as evidence (rated SUPPORTED when observed directly):
 
-1. **Scope** — `repo-scanner`: stack, hosting, CI/CD, monitoring, production readiness.
+1. **Scope** — `repo-readiness-scan`: stack, hosting, CI/CD, monitoring, production readiness.
 2. **Security** — `security-auditor`: hardcoded secrets, vulnerable dependencies, env handling, auth patterns.
-3. **Infrastructure** — `devops-advisor`: database config, caching, scaling, observability, backups.
-4. **Cost** — `cost-optimizer`: cloud spend, unused resources, vendor lock-in and billing risk.
-5. **Integrations** — `integration-linker`: third-party services and dependencies.
+3. **Infrastructure** — `infra-scaling-review`: database config, caching, scaling, observability, backups.
+4. **Cost** — `cloud-cost-optimizer`: cloud spend, unused resources, vendor lock-in and billing risk.
+5. **Integrations** — `dev-tool-integrations`: third-party services and dependencies.
 
 Rate every finding P0 (blocks investment) / P1 / P2 / P3 in the Risk Register, say what was observed vs inferred, and state what would change the assessment. Read-only: never modify the portco's code. Recurring red flags worth checking: hardcoded API keys, no backup strategy for customer data, AI-API lock-in with no abstraction layer, a single committer (key-person risk), an MVP that is not actually deployed, open Supabase RLS.
 

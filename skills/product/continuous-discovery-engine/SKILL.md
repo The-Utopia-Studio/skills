@@ -1,15 +1,11 @@
 ---
 name: continuous-discovery-engine
 description: >-
-  Builds an opportunity solution tree (outcome, opportunities, solutions, tests) and keeps it alive:
-  one living tree fed by customer interviews, production traces and eval telemetry, each feed stamped
-  with its evidence rung, cadence and a named synthesis owner, with solutions ranked by an
-  evidence-weighted POC score. Also turns a one-off stakeholder request into a first tree and
-  proof-of-concept pick. Fires on 'set up discovery', 'continuous discovery', 'opportunity solution
-  tree', 'keep learning after launch', 'a stakeholder wants feature X, what should we actually build'.
-  Not for scoring one signal's rung (use evidence-ladder), picking the probe for one question (use
-  probe-matrix), running a single interview (use tacit-knowledge-interview), or a one-time end-to-end
-  discovery cycle for a new problem (use discovery-process).
+  Builds and maintains a living opportunity solution tree (outcome, opportunities, solutions,
+  tests) fed by customer interviews, production traces and eval telemetry, each with a cadence and
+  a named owner. Use when the user says set up discovery, continuous discovery, opportunity
+  solution tree, keep learning after launch, or a stakeholder wants feature X. Not for a one-time
+  discovery cycle on a new problem (use discovery-process).
 type: interactive
 supersedes: none
 ---

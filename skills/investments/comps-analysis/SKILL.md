@@ -1,17 +1,11 @@
 ---
 name: comps-analysis
 description: >-
-  Comparable company analysis and relative valuation. Builds a trading comps table in
-  Excel (operating metrics, EV/Revenue, EV/EBITDA, P/E, P/B, mean/median/quartiles) and
-  analyses multiples properly: defines each multiple consistently, describes the peer
-  distribution, links each multiple to its fundamental drivers (growth, risk, payout,
-  ROE, margin) and runs a sector regression to get a predicted multiple and implied value.
-  Use when valuing a company against peers, selecting comparables, benchmarking multiples,
-  pricing a round off public comps, or when the user mentions comps, trading multiples,
-  relative valuation, PE ratio, EV/EBITDA, price-to-book or "is this premium justified".
-  Not for DCF or intrinsic value (use dcf-model), combining DCF and multiples into a
-  recommendation (use valuation-reconciler), or a competitor strategy landscape deck
-  (use competitive-analysis).
+  Builds a trading comps table in Excel (EV/Revenue, EV/EBITDA, P/E, P/B, quartiles) and analyses
+  the multiples against their drivers, with a sector regression for a predicted multiple and
+  implied value. Use when valuing a company against peers, picking comparables, pricing a round
+  off public comps, or the user mentions comps, trading multiples, relative valuation or "is this
+  premium justified". Not for DCF (use dcf-model).
 ---
 
 # Comparable Company Analysis

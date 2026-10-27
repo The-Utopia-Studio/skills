@@ -1,6 +1,11 @@
 ---
 name: investor-doc-system
-description: Use when an investor-facing document has to exist as both a web page and a clean A4 PDF — "make this a PDF", "our memo looks bad when printed", "investor docs that match our brand", "build the document template", page breaks landing mid-table, or as the rendering layer for investor-reading-room, investor-deal-sheet, investor-memorandum and investor-faq. Ships a print-first CSS template and a headless-Chrome render script. Use instead of docx or pptx when the document must be both linkable and printable from one source.
+description: >-
+  Provides a print-first HTML/CSS template and headless-Chrome render script so an investor
+  document works as both a web page and a clean A4 PDF. Use when the user says "make this a PDF",
+  "our memo prints badly", "investor docs that match our brand", page breaks land mid-table, or as
+  the rendering layer for the investor reading room documents. Use instead of docx or pptx when
+  one source must be linkable and printable.
 ---
 
 # Investor Document System

@@ -1,15 +1,11 @@
 ---
 name: email-deliverability
 description: >-
-  Use this skill when emails hit spam, open rates drop, a domain or IP gets
-  blocklisted, a sender needs a deliverability audit before scaling volume, or a
-  team is setting up cold-sending infrastructure (secondary domains, mailboxes,
-  SPF/DKIM/DMARC, warmup). Triggers: "why are we going to spam", "audit my email
-  setup", "open rates dropped", "we got blocklisted", "warm up this domain",
-  "how many domains do I need". Produces a severity-ranked audit or a root-cause
-  diagnosis with a recovery plan and thresholds to monitor. Not for writing the
-  emails (use cold-email or email-sequence) or choosing the outbound tool stack
-  (use ai-sdr).
+  Audits and fixes email deliverability: spam placement, blocklisted domains or IPs, dropping open
+  rates, SPF/DKIM/DMARC, secondary sending domains, mailboxes and warmup, with a severity-ranked
+  audit or recovery plan. Use when emails go to spam, open rates dropped, a domain got
+  blocklisted, warming up a domain, or sizing how many domains to send from. Not for writing the
+  emails (use cold-email).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/joshua-waldman/email-deliverability

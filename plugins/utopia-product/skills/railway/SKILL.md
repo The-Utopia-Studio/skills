@@ -1,15 +1,11 @@
 ---
 name: railway
 description: >-
-  Deploy and operate apps on Railway: create or link projects and services, push
-  code with railway up, add Postgres/Redis/MySQL/MongoDB and wire variables, set
-  variables and build config, domains, deployment logs and failed builds, CPU
-  and memory metrics, PR deploys, templates (n8n, Ghost), and answer questions
-  from Railway docs or Central Station community threads (Railpack, private
-  networking, volumes). Use whenever the user mentions Railway, railway up,
-  Railpack or Central Station, including how-to questions about Railway
-  features. Not for Vercel (use deploy-to-vercel) or generic CI/CD (use
-  deployment-engineer).
+  Deploys and operates apps on Railway: create or link projects and services, railway up, add
+  Postgres, Redis, MySQL or MongoDB, variables and build config, domains, logs and failed builds,
+  metrics, PR deploys and templates, plus answers from Railway docs and Central Station. Use when
+  the user mentions Railway, railway up, Railpack or Central Station, or asks how a Railway
+  feature works. Not for Vercel (use deploy-to-vercel).
 ---
 
 # Railway

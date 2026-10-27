@@ -1,6 +1,11 @@
 ---
 name: deliberation-debate-red-teaming
-description: Challenges plans, designs, and decisions from multiple adversarial perspectives to surface blind spots, hidden assumptions, and vulnerabilities before they cause real damage. Use when testing plans or decisions for blind spots, need adversarial review before launch, validating strategy against worst-case scenarios, building consensus through structured debate, identifying attack vectors or vulnerabilities, or when groupthink or confirmation bias may be hiding risks.
+description: >-
+  Red-teams a plan, strategy or decision from several adversarial roles (competitor, regulator,
+  devil's advocate, internal stakeholders) to surface blind spots and hidden assumptions, then
+  ranks the risks. Use when the user wants adversarial review before launch or IC, to stress-test
+  a strategy, run a structured debate, find attack vectors, or suspects groupthink. Not for a
+  premortem on a probability forecast (use forecast-premortem).
 ---
 
 # Deliberation, Debate & Red Teaming

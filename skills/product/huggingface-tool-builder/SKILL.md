@@ -1,13 +1,11 @@
 ---
 name: huggingface-tool-builder
 description: >-
-  Write reusable scripts (Python, shell or TypeScript) that fetch, chain, enrich
-  and export data from the Hugging Face Hub API: top or trending models by task,
-  licenses, base models, linked papers, model-card metadata, to CSV or JSON for
-  repeated runs. Use when the user asks for a script or tool that pulls models,
-  datasets or Spaces data from the Hugging Face API, especially one they will
-  rerun weekly or automate. Not for one-off CLI downloads or uploads (use hf-
-  cli).
+  Writes reusable Python, shell or TypeScript scripts that fetch, chain, enrich and export Hugging
+  Face Hub API data: top or trending models by task, licenses, base models, linked papers, model-
+  card metadata, to CSV or JSON. Use when the user wants a script that pulls models, datasets or
+  Spaces data from the HF API, especially one to rerun weekly or automate. Not for one-off
+  downloads or uploads (use hf-cli).
 ---
 
 # Hugging Face API Tool Builder

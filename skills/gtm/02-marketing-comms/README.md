@@ -25,7 +25,7 @@ Skills in this sub-module:
 - `onboarding-cro`
 - `page-cro`
 - `paid-ads`
-- `press-release`
+- `working-backwards-press-release`
 - `product-name`
 - `signup-flow-cro`
 - `social-content`

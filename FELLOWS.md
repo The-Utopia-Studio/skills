@@ -85,7 +85,7 @@ Frameworks for orientation, market sizing, and stakeholder mapping. **Install th
 | `stakeholder-map` | Map who matters and how to manage them |
 | `role-switch` | See decisions from multiple stakeholder perspectives |
 | `prioritization` | 9 prioritization methods to pick from |
-| `proof` | Collaborative docs with live presence and provenance |
+| `proofeditor-docs` | Collaborative docs with live presence and provenance |
 
 **Try saying:** *"I'm a new fellow. Help me build a 30-60-90 day plan and identify the 3 stakeholders I should meet first."*
 
@@ -109,7 +109,7 @@ Customer interviews, JTBD, opportunity solution trees, problem framing.
 | `beachhead-segment` | Pick your first beachhead market |
 | `ideal-customer-profile` | Define your ICP precisely |
 | `probe-matrix` | Validate ideas before building |
-| `identify-assumptions-new` | Find risky assumptions in a new idea |
+| `identify-risky-assumptions` | Find risky assumptions in a new idea |
 | `summarize-interview` | Synthesize themes from a customer interview |
 | `job-stories` | "When… I want… So I can…" stories |
 | `user-story-mapping` | Run a user story mapping workshop |
@@ -129,13 +129,13 @@ Turn validated problems into solutions. PRDs, user stories, prototypes.
 | `user-story` | Generate user stories (multiple formats) |
 | `user-story-splitting` | Break large stories into smaller ones |
 | `job-stories` | "When/I want/So I can" stories |
-| `recommendation-canvas` | Evaluate an AI product idea |
+| `ai-solution-proposal-canvas` | Evaluate an AI product idea |
 | `value-proposition` | Detailed value proposition design |
 | `pricing-strategy` | 3-5 monetization strategy options |
 | `business-model` | Business Model Canvas |
-| `interface-craft` | Animated React interfaces (Josh Puckett toolkit) |
-| `shape` | Plan UX/UI before writing code |
-| `critique` | Evaluate a design with quantitative scoring |
+| `ui-animation-storyboard` | Animated React interfaces (Josh Puckett toolkit) |
+| `ui-design-brief` | Plan UX/UI before writing code |
+| `ui-critique` | Evaluate a design with quantitative scoring |
 | `diagram-design` | Dark-themed system architecture diagrams |
 | `ui-ux-pro-max` | UI/UX library — 50+ styles, 161 palettes, 99 UX guidelines |
 
@@ -152,7 +152,7 @@ Basics for legal docs and hiring materials.
 | `draft-nda` | Draft a non-disclosure agreement |
 | `privacy-policy` | Draft a detailed privacy policy |
 | `grammar-check` | Catch grammar/logic/clarity issues |
-| `press-release` | Amazon-style press release |
+| `working-backwards-press-release` | Amazon-style press release |
 
 > **⚠️ Note:** This pack covers basics. **GCC/MENA-specific cap table and entity setup is a known gap** — talk to Karan if you need jurisdiction-aware advice.
 
@@ -169,14 +169,14 @@ Visual identity, brand narrative, naming, voice. Powered by Efecto, Impeccable, 
 | `efecto-web-design` | Design web pages and app UIs (JSX + Tailwind) |
 | `efecto-graphic-design` | Pitch decks, posters, infographics, business cards |
 | `efecto-social-media` | Instagram, X, LinkedIn, TikTok, YouTube assets |
-| `polish` | Emil Kowalski's UI polish philosophy |
+| `ui-polish` | Emil Kowalski's UI polish philosophy |
 | `impeccable` | Production-grade frontend with high design quality |
 | `minimalist-ui` | Clean editorial-style interfaces |
 | `industrial-brutalist-ui` | Raw mechanical aesthetic — Swiss + military terminal |
 | `stitch-design-taste` | Premium semantic design for Google Stitch |
 | `product-name` | Brainstorm 5 unique memorable product names |
 | `positioning-workshop` | Messaging and storytelling templates |
-| `business-narrative-builder` | Structured narrative for the business |
+| `valuation-narrative` | Structured narrative for the business |
 
 **Try saying:** *"Help me come up with 5 product names for [idea] and pick the strongest one."*
 
@@ -188,30 +188,30 @@ Build the actual product. Design polish (Impeccable suite), deployment (Railway,
 
 | Skill | What it does |
 |-------|-------------|
-| `shape` | Plan UX/UI before writing code |
-| `critique` | UX evaluation with quantitative scoring |
-| `audit` | Technical quality checks (a11y, perf, theming) |
-| `polish` | Final quality pass — alignment, spacing, consistency |
-| `layout` | Improve layout, spacing, visual rhythm |
-| `typeset` | Fix font choices, hierarchy, sizing, readability |
-| `animate` | Add purposeful animations and micro-interactions |
-| `adapt` | Make designs responsive across screens |
-| `optimize` | Diagnose and fix UI performance |
-| `clarify` | Improve UX copy, error messages, microcopy |
-| `delight` | Add joy and personality to interfaces |
-| `interface-craft` | Animated React interfaces (Josh Puckett toolkit) |
+| `ui-design-brief` | Plan UX/UI before writing code |
+| `ui-critique` | UX evaluation with quantitative scoring |
+| `ui-audit` | Technical quality checks (a11y, perf, theming) |
+| `ui-polish` | Final quality pass — alignment, spacing, consistency |
+| `ui-layout-spacing` | Improve layout, spacing, visual rhythm |
+| `ui-typography` | Fix font choices, hierarchy, sizing, readability |
+| `ui-animation` | Add purposeful animations and micro-interactions |
+| `ui-responsive` | Make designs responsive across screens |
+| `ui-performance` | Diagnose and fix UI performance |
+| `ui-microcopy` | Improve UX copy, error messages, microcopy |
+| `ui-delight` | Add joy and personality to interfaces |
+| `ui-animation-storyboard` | Animated React interfaces (Josh Puckett toolkit) |
 | `railway` | Create projects/services on Railway |
 | `deploy-to-vercel` | Deploy applications to Vercel |
 | `vercel-react-best-practices` | React/Next.js performance patterns |
-| `repo-scanner` | Audit a repo's tech stack and production readiness |
+| `repo-readiness-scan` | Audit a repo's tech stack and production readiness |
 | `repo-structurer` | Clean up and structure a repo |
-| `prompt-engineer` | Make a repo AI-native (AGENTS.md, .cursorrules) |
+| `agents-md-writer` | Make a repo AI-native (AGENTS.md, .cursorrules) |
 | `deployment-engineer` | Set up CI/CD, Docker, environments |
 | `security-auditor` | Find hardcoded secrets, vulnerable deps |
 | `monitoring-setup` | Configure Sentry, PostHog, health checks |
-| `integration-linker` | Connect Slack/GitHub/Linear/etc. |
-| `cost-optimizer` | Identify unused cloud resources |
-| `devops-advisor` | Audit DB config, caching, scaling patterns |
+| `dev-tool-integrations` | Connect Slack/GitHub/Linear/etc. |
+| `cloud-cost-optimizer` | Identify unused cloud resources |
+| `infra-scaling-review` | Audit DB config, caching, scaling patterns |
 | `transformers-js` | Run ML models in JavaScript/TypeScript |
 | `diagram-design` | System architecture diagrams as HTML+SVG |
 | `tdd-red-green-refactor` | Disciplined TDD workflow in TypeScript |
@@ -275,7 +275,7 @@ Investor-ready materials. Decks, financial models, valuations, competitive analy
 | `cost-of-capital-estimator` | Cost of equity (CAPM) |
 | `competitive-analysis` | Competitive landscape decks |
 | `datapack-builder` | IC-ready data packs from CIMs/SEC filings |
-| `business-narrative-builder` | Structured business narrative |
+| `valuation-narrative` | Structured business narrative |
 | `tear-sheet` | Professional company tear sheets |
 
 **Try saying:** *"Build me a 12-slide pitch deck from these meeting notes [paste notes]."*
@@ -334,7 +334,7 @@ The AI uses `summarize-interview` + `jobs-to-be-done` automatically.
 Just say:
 > "Build me a one-page PRD for [product idea]. Include the problem, JTBD, ICP, and three risky assumptions to test."
 
-The AI uses `prd-development` + `identify-assumptions-new` + `ideal-customer-profile`.
+The AI uses `prd-development` + `identify-risky-assumptions` + `ideal-customer-profile`.
 
 ### "I need to design a quick prototype."
 Just say:

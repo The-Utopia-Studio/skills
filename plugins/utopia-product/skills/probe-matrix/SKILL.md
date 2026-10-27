@@ -1,16 +1,11 @@
 ---
 name: probe-matrix
 description: >-
-  Design the cheapest honest experiment to validate an idea before building. Use when the user asks
-  how to test or validate an idea cheaply, to design lean startup experiments, pretotypes, a fake
-  door, landing page, concierge or Wizard of Oz test, for an XYZ hypothesis, or which experiment or
-  probe to run. Picks one question, writes it as an XYZ hypothesis ('at least X% of Y will Z'), routes
-  it to the cheapest probe that is HONEST about it (paper sketch, Wizard-of-Oz, concierge,
-  agent-concierge, or a fake-door pretotype for raw demand), states what that probe still lies about,
-  its cost, and a pre-registered pass/fail; it refuses a probe that lies about the thing being tested.
-  Not for the how-to of running one probe (use paper-sketch-probe, wizard-of-oz-probe, concierge-probe
-  or agent-concierge-probe), building a clickable mock (use first-mocks), or scoring a signal already
-  in hand (use evidence-ladder).
+  Picks the cheapest honest experiment for one product question: writes it as an XYZ hypothesis,
+  routes it to a paper sketch, Wizard-of-Oz, concierge, agent-concierge or fake-door test, states
+  what that probe cannot tell you, and sets pass/fail in advance. Use when the user asks how to
+  test or validate an idea cheaply, which experiment or probe to run, or for a pretotype or
+  landing page test. Not for running one chosen probe (use its runbook, e.g. concierge-probe).
 type: interactive
 supersedes: none
 ---
@@ -54,7 +49,7 @@ Do not use it for these — hand off instead:
 | A build / no-build decision on the problem itself | `problem-quality-scorecard` |
 | To score a signal already in hand (an interview quote, a click, a payment) | `evidence-ladder` |
 | To reframe a solution-in-disguise back into a problem | `problem-statement`, then return here |
-| Every risky assumption mapped across value / GTM / strategy / team | `identify-assumptions-new` |
+| Every risky assumption mapped across value / GTM / strategy / team | `identify-risky-assumptions` |
 | A clickable mock or Crazy 8s artefact to provoke a reaction | `first-mocks` |
 
 This skill selects the probe and pre-registers the read-out. It does not run the

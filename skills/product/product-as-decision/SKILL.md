@@ -1,17 +1,11 @@
 ---
 name: product-as-decision
 description: >-
-  Restates a product idea as ONE decision a named human makes, then quantifies how
-  that decision is compressed — before→after on a single axis of time, effort, or
-  autonomy (e.g. six minutes → thirty seconds). Fires on "what's the product here",
-  "frame the problem", "what decision are we changing", "state this as a decision",
-  "what are we actually changing for the user". Output is a filled Compressed-Decision
-  Statement: the decision (never a feature), its one owner, the before→after
-  compression with a source, and the autonomy-ladder move, every claim tagged
-  [Fact]/[Assumption]/[Hypothesis]. NOT for stripping the job to primitives (use
-  job-in-primitives), NOT for mapping and pricing the whole workflow (use
-  current-state-map), NOT for the 8-dimension go/no-go (use problem-quality-scorecard),
-  NOT for the per-unit prize ratio (use physics-floor-gap).
+  Restates a product idea as one decision a named person makes, then quantifies how it gets
+  compressed before to after on one axis of time, effort or autonomy (e.g. six minutes to thirty
+  seconds). Use when the user asks what the product really is, what decision we are changing, to
+  state this as a decision not a feature, or what changes for the user. Not for stripping the job
+  to primitives (use job-in-primitives).
 type: generator
 supersedes: none
 ---
@@ -34,7 +28,7 @@ Use it when a fellow has an idea and needs it stated as the one decision it chan
 | "Strip this to the primitive job — what's really being done?" | No | `job-in-primitives` |
 | "Map the workflow and price every step as it happens today." | No | `current-state-map` |
 | "Score this problem across the 8 dimensions — go or no-go?" | No | `problem-quality-scorecard` |
-| "Is the per-unit prize big enough to bother?" | No | `physics-floor-gap` |
+| "Is the per-unit prize big enough to bother?" | No | `unit-cost-floor-gap` |
 | "Stress-test the whole idea across five questions." | No | `so-what-stress-test` |
 
 This skill states and compresses exactly one decision. It does not reduce the job to primitives, price the workflow, score the problem, or size the prize. It also absorbs the generic empathy problem-statement and beats it — see Related skills — so it does not route there.
@@ -99,7 +93,7 @@ If the only input for the before is opinion (0.1), the skill declares the input 
 
 ## Gotchas
 - **Feature smuggling.** "The product is an AI copilot for factory managers" names the software, not the decision. Copilot for *which* decision? Strike the noun; recover the verb. If no verb survives, there is no product to state.
-- **Compressing the artefact, not the decision.** Making the report faster to write is not the same as making the decision the report drives faster or better. Frame the decision, not the deliverable. (Its per-unit prize is `physics-floor-gap`'s job, not this skill's.)
+- **Compressing the artefact, not the decision.** Making the report faster to write is not the same as making the decision the report drives faster or better. Frame the decision, not the deliverable. (Its per-unit prize is `unit-cost-floor-gap`'s job, not this skill's.)
 - **The after marked as a fact.** The compression is a hypothesis until observed. A 12× claim at framing time is a `[Hypothesis]`, never a `[Fact]`. If the ranked list makes the owner slower or less accurate, the compression is negative and the product does not exist.
 - **Two decisions wearing one coat.** An "and" in the decision line means two products. Pick the wedge decision; park the other explicitly. Do not average them into one blurry statement.
 - **Interface change dressed as compression.** A new UI over the same decision at the same speed is 1× — no compression. Prettier is not faster. The band exists to catch this.
@@ -111,5 +105,5 @@ If the only input for the before is opinion (0.1), the skill declares the input 
 - `job-in-primitives` — reduces the job to information moved / decisions made / liability transferred, deleting every tool and role name. Run it to find the primitive; run this to pick and compress the one decision. Different altitude, not a substitute.
 - `current-state-map` — maps and prices the whole workflow; this names one decision inside it and its compression. Use that for cost-per-step, this for the decision.
 - `problem-quality-scorecard` — scores the problem on 8 dimensions; the compressed decision is one input to that gate, not the gate.
-- `physics-floor-gap` — sizes the per-unit prize; this frames the decision the prize sits on.
+- `unit-cost-floor-gap` — sizes the per-unit prize; this frames the decision the prize sits on.
 - Absorbs `discovery/problem-statement` (the generic empathy narrative: I am / trying to / but / because / makes me feel). It beats it by refusing feelings and features as the answer and forcing a decision plus a quantified before→after — a testable claim, not a story. `supersedes: none`: problem-statement lives outside this module; this replaces its role inside Icarus without deleting it.

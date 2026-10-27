@@ -2,12 +2,11 @@
 name: last30days
 version: "3.1.1"
 description: >-
-  Research what real people said about a topic in the last 30 days across Reddit, X/Twitter, YouTube,
-  TikTok, Instagram, Hacker News, Polymarket, GitHub and the web, with engagement and links, using the
-  bundled multi-source engine. Use whenever the user asks what people are saying, recent complaints
-  and praise, sentiment, reactions, trends or 'the last 30 days / this month' about a product,
-  company, tool or topic on social platforms or forums. Not for a general literature or market
-  deep-dive without a recency or social angle, or for reading one known URL (use defuddle).
+  Researches what people said about a topic in the last 30 days across Reddit, X, YouTube, TikTok,
+  Instagram, Hacker News, Polymarket, GitHub and the web, with engagement counts and links. Use
+  when the user asks what people are saying, recent complaints or praise, sentiment, reactions or
+  trends this month about a product, company, tool or topic. Not for reading one known URL (use
+  defuddle-web-extract).
 argument-hint: 'last30days nvidia earnings reaction | last30days AI video tools | last30days what users want in react'
 allowed-tools: Bash, Read, Write, AskUserQuestion, WebSearch
 homepage: https://github.com/mvanhorn/last30days-skill

@@ -1,12 +1,11 @@
 ---
 name: investor-faq
 description: >-
-  Use when a founder needs their objections answered in writing — "investor FAQ", "objection
-  handling for the raise", "the hard questions", "what will investors push back on", "we keep
-  getting the same three questions", or after a memo exists and needs pressure-testing. Also
-  use to pressure-test a plan before writing anything: an objection with no good answer is a
-  business problem, not a writing problem. Investor-side only; for sales objections use
-  competitive-battlecard or sales-enablement.
+  Writes the investor FAQ: the hard objections to a raise answered in writing, and flags
+  objections with no good answer as business problems. Use when a founder asks for an investor
+  FAQ, objection handling for the raise, "the hard questions", "what will investors push back on",
+  keeps getting the same questions, or wants to pressure-test a memo or plan. Not for sales
+  objections (use competitive-battlecard).
 ---
 
 # Investor FAQ

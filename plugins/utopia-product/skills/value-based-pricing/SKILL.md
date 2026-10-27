@@ -1,14 +1,11 @@
 ---
 name: value-based-pricing
 description: >-
-  Set the price and the charging metric for a validated product from MEASURED value: anchor the number
-  at 10-20% of the measured incremental value per outcome, check it clears the cost per outcome, and
-  charge on the outcome, asset or decision delivered, never on seats or tiers. Use when the user has
-  pilot results or measured value (e.g. money recovered or hours saved per outcome) and asks to set
-  the price, what to charge, what the number is, or per seat vs per outcome. Emits a value-priced
-  model, or refuses and routes to measurement when value is unmeasured. Not for brainstorming revenue
-  models or SaaS tiers and packaging (use pricing-strategy), structuring the whole pilot deal (use
-  pilot-six-term-sheet), or measuring today's cost (use current-state-map).
+  Sets one price and charging metric from measured value: anchors at 10-20% of measured
+  incremental value per outcome, checks it clears cost per outcome, and charges per outcome rather
+  than per seat; refuses when value is unmeasured. Use when the user has pilot results or measured
+  savings and asks what to charge, to set the price, or per seat vs per outcome. Not for
+  brainstorming revenue models or tiers (use pricing-strategy).
 type: generator
 supersedes: none
 ---
@@ -80,7 +77,7 @@ Score candidate metrics; pick the highest-coupling one with feasible attribution
 | Per-usage (runs, calls, tokens) | loose | easy | no — drifts to cost-plus, races model prices | avoid as primary basis |
 | Per-seat / per-tier (the LEVEL) | decoupled / inverse | easy | no — caps revenue as product improves | banned as primary basis unless value genuinely scales with headcount |
 
-The improvement-proof column is the tie-breaker: the `refine-flywheel` makes the product deliver more outcomes per asset over time; only an outcome-coupled metric captures that. When per-outcome fails attribution, proxy on the ASSET the outcome attaches to — never on raw usage — and state exactly what coupling you lost.
+The improvement-proof column is the tie-breaker: the `post-launch-refine-loop` makes the product deliver more outcomes per asset over time; only an outcome-coupled metric captures that. When per-outcome fails attribution, proxy on the ASSET the outcome attaches to — never on raw usage — and state exactly what coupling you lost.
 
 ### Step 5 — Set the capture rate and write the price (Part 5)
 

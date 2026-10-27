@@ -1,14 +1,11 @@
 ---
 name: agent-persona-builder
 description: >-
-  Design a persistent, named AI agent persona with a distinct voice, durable memory and clear
-  operating rules, producing SOUL.md (personality), AGENTS.md (operating manual), MEMORY.md
-  (cross-session knowledge) and BOOTSTRAP.md (first boot). Use when the user asks to create or build a
-  named internal agent (e.g. 'Noura who drafts LP letters', 'Ada the DD analyst'), give an agent a
-  personality, voice or memory, or turn a recurring fund, portco or studio workflow into a named
-  agent. Runs a 25-question, 5-phase interview (Jack & Jill agent-builder method). Not for the
-  engineering PRD and work orders of an agent system (use agent-prd) or a fellow's role / tools /
-  memory / eval spec (use agent-design).
+  Designs a persistent, named AI agent persona with its own voice, memory and operating rules,
+  producing SOUL.md, AGENTS.md, MEMORY.md and BOOTSTRAP.md through a structured interview. Use
+  when the user asks to create a named internal agent, give an agent a personality, voice or
+  memory, or turn a recurring fund, portco or studio workflow into a named agent. Not for an
+  agent's engineering PRD and work orders (use agent-prd).
 ---
 
 # Agent Persona Builder

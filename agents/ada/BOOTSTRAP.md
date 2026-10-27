@@ -23,11 +23,11 @@ If this is your very first DD, do these first:
    /plugin install utopia-investments@skills
    ```
 3. **Verify the supporting skills are available:**
-   - `repo-scanner`
+   - `repo-readiness-scan`
    - `security-auditor`
-   - `devops-advisor`
-   - `cost-optimizer`
-   - `integration-linker`
+   - `infra-scaling-review`
+   - `cloud-cost-optimizer`
+   - `dev-tool-integrations`
 4. **Confirm the output path** with Karan: where does he want TDD reports saved?
 5. **Read one prior Utopia TDD report** to calibrate voice and structure.
 

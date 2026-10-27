@@ -1,12 +1,10 @@
 ---
 name: market-segments
 description: >-
-  Identify 3-5 distinct customer segments for a product, each with its job to be done, pains, desired
-  gains, demographics or firmographics, product fit, current workarounds and competitors. Use when the
-  user asks to identify, list or compare customer segments, target audiences or markets for a product
-  or idea (e.g. 'identify 3-5 segments for X'). Not for defining one ideal customer profile from
-  research or PMF data (use ideal-customer-profile), choosing the first beachhead (use
-  beachhead-segment), or sizing the market (use market-sizing).
+  Identifies 3-5 distinct customer segments for a product, each with its job to be done, pains,
+  gains, demographics or firmographics, product fit, workarounds and competitors. Use when the
+  user asks to identify, list or compare customer segments, target audiences or markets for a
+  product or idea. Not for sizing the market (use market-sizing).
 ---
 
 # Market Segments

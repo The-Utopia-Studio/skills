@@ -1,6 +1,11 @@
 ---
 name: decision-matrix
-description: Compares multiple named alternatives against weighted criteria to produce transparent, defensible choices with explicit trade-off analysis. Covers criterion identification, weighting approaches (direct allocation, pairwise comparison, stakeholder averaging), scoring calibration, sensitivity analysis, and group decision facilitation. Use when choosing between vendors/tools/strategies, balancing competing priorities (cost vs quality vs speed), or when user mentions "which option should we choose", "compare alternatives", "evaluate vendors", or "trade-offs".
+description: >-
+  Compares named options against weighted criteria in a scored decision matrix, with weighting
+  methods, score calibration, sensitivity analysis and trade-off notes. Use when choosing between
+  vendors, tools or strategies, balancing cost vs quality vs speed, or the user says "which option
+  should we choose", "compare alternatives", "evaluate vendors" or "trade-offs". Not for
+  probability-weighted payoffs (use expected-value).
 ---
 
 # Decision Matrix

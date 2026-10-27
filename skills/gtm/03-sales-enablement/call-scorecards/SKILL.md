@@ -1,15 +1,10 @@
 ---
 name: call-scorecards
 description: >-
-  Use this skill to score or grade a sales call transcript, or to build
-  behavior-based call scorecards: "score this call", "grade this discovery call
-  transcript", "what's the weakest part of this call and what should the rep
-  drill", "build a call scorecard", "review my rep's calls", "make coaching more
-  consistent". It builds scorecards per conversation type (prospecting,
-  discovery, demo, pricing, close), scores real calls 1-5 per behavior with
-  quoted evidence, finds the weakest chunk, and prescribes chunked practice. Not
-  for planning an upcoming discovery call or checking MEDDICC coverage from notes
-  (use discovery-calls).
+  Builds behavior-based sales call scorecards per call type and grades call transcripts 1-5 per
+  behavior with quoted evidence, the weakest chunk and a practice drill. Use when asked to score
+  or grade a call, review a rep's calls, build a call scorecard, or make sales coaching more
+  consistent. Not for planning a discovery call or MEDDICC checks (use discovery-calls).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/kevin-kd-dorsey/call-scorecards

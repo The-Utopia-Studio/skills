@@ -1,6 +1,11 @@
 ---
 name: swot-analysis
-description: "Perform a detailed SWOT analysis — strengths, weaknesses, opportunities, and threats with actionable recommendations. Use when doing strategic assessment, competitive analysis, or evaluating a product or business position."
+description: >-
+  Runs a SWOT analysis of a product or business: internal strengths and weaknesses, external
+  opportunities and threats, and actionable recommendations from combining them. Use when the user
+  asks for a SWOT, a strategic assessment, or to evaluate a product's or company's competitive
+  position. Not for macro environment forces (use pestel-analysis) or industry structure (use
+  porters-five-forces).
 ---
 # SWOT Analysis
 

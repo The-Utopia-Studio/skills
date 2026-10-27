@@ -79,9 +79,9 @@ Score readiness now; commit the delta to week 4. B1–B4 must all be present and
 
 ## Step 4 — Handoff (on GO only)
 
-- The Gate B mechanism is now run continuously by `refine-flywheel` (08).
+- The Gate B mechanism is now run continuously by `post-launch-refine-loop` (08).
 - It reads the tweak-time instrument (B4), re-runs the whole eval set on every model release, and promotes autonomy by eval result.
-- The B5 delta is `refine-flywheel`'s first checkpoint at week 4.
+- The B5 delta is `post-launch-refine-loop`'s first checkpoint at week 4.
 
 Owner of the pilot from here: _[name]_ · Week-4 review date: _[date]_
 

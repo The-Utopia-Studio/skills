@@ -1,15 +1,11 @@
 ---
 name: churn-prevention
 description: >-
-  Use this skill to stop subscribers from cancelling at the moment they try to
-  leave: cancel-flow design, exit surveys, save offers, pause options, and
-  failed-payment recovery (dunning, smart retries, card updaters). Use when the
-  user mentions cancel flow, offboarding, save offer, dunning, failed payments,
-  involuntary churn, pause subscription, "people keep canceling" or "churn rate
-  is too high". Not for proactive lifecycle or loyalty programs to lift repeat
-  purchase and LTV, renewals, at-risk enterprise accounts and escalations, or
-  retention dashboards (use expansion-retention), post-cancel email copy (use
-  email-sequence), or in-app activation (use onboarding-cro).
+  Designs cancel flows, exit surveys, save offers, pause options and failed-payment recovery
+  (dunning, smart retries) to stop subscribers leaving. Use when people keep canceling, churn rate
+  is too high, building a cancel flow or save offer, or fixing involuntary churn from failed
+  payments. Not for renewals, at-risk enterprise accounts or expansion plays (use expansion-
+  retention).
 metadata:
   version: 1.1.0
 ---

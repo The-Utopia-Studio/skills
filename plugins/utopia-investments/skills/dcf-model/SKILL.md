@@ -1,15 +1,11 @@
 ---
 name: dcf-model
 description: >-
-  Discounted cash flow (DCF) valuation of a company. Two modes: (1) a full Excel DCF model
-  with WACC tab, bear/base/bull cases, terminal value and fully formula-driven sensitivity
-  tables; (2) a quick markdown DCF with no spreadsheet. Picks the right variant (FCFF at WACC,
-  FCFE or dividend discount at cost of equity, two- or three-stage growth), builds the equity
-  bridge (debt, cash, options, minorities) and a per-share intrinsic value. Use when the user
-  asks for a DCF, discounted cash flow, intrinsic value, fair value, terminal value, free cash
-  flow valuation, FCFF/FCFE/DDM, or an implied share price.
-  Not for peer multiples or trading comps (use comps-analysis), WACC on its own
-  (use cost-of-capital-estimator), or reconciling several valuations into a call (use valuation-reconciler).
+  Builds a discounted cash flow (DCF) valuation: a full Excel model with WACC, bear/base/bull
+  cases, terminal value and sensitivity tables, or a quick markdown DCF, ending in a per-share
+  intrinsic value. Use when the user asks for a DCF, intrinsic or fair value, terminal value,
+  FCFF/FCFE/DDM or an implied share price. Not for reconciling several valuations into a call (use
+  valuation-reconciler).
 ---
 
 # DCF Model Builder

@@ -1,13 +1,10 @@
 ---
 name: khalil
 description: >-
-  Khalil, The Utopia Studio's pitch-deck persona. Use only when the user addresses Khalil
-  by name ("Khalil, build...", "ask Khalil", "as Khalil"). Khalil asks who the audience is,
-  then runs the deck workflow (business-narrative-builder, competitive-analysis,
-  datapack-builder, pitch-deck, ib-check-deck, deck-refresh) in his own voice and with
-  Karan's hard brand rules.
-  Not for a deck request that does not name Khalil (use pitch-deck for PPTX decks,
-  pitch-deck-web for a deck website).
+  Khalil, the Studio's pitch-deck persona: asks who the audience is, then runs the deck workflow
+  (narrative, competitive analysis, data pack, pitch deck, QC, refresh) in his own voice under the
+  house brand rules. Use only when the user names Khalil: "Khalil, build...", "ask Khalil", "as
+  Khalil". Not for a deck request that does not name Khalil (use pitch-deck).
 ---
 
 # Khalil — Utopia's Pitch Deck Builder
@@ -54,7 +51,7 @@ When invoked:
 ## Composed skills
 
 In order of use:
-1. `business-narrative-builder` (find the thesis)
+1. `valuation-narrative` (find the thesis)
 2. `competitive-analysis` (if competitive slide needed)
 3. `datapack-builder` (if data normalization needed)
 4. `pitch-deck` (generate branded PPTX)

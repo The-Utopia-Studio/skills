@@ -1,17 +1,11 @@
 ---
 name: first-mocks
 description: >-
-  Turns a concept into the cheapest concrete artefact a human can react to, via
-  the no-code make-sequence: Crazy 8s → paper/Miro flow → digital mock →
-  clickable hybrid in v0 or Figma Make, built in one afternoon. Fires on "mock it
-  up", "run Crazy 8s", "clickable prototype", "turn this idea into something I can
-  click", "get from a rough idea to a prototype in an afternoon". Output is a
-  Clickable-Prototype Plan: the ONE thing the mock must provoke a reaction to, the
-  fidelity band, the no-code ceiling, and the hand-off to a real reaction. NOT
-  which experiment to run (probe-matrix), NOT running the test session
-  (usability-test-protocol), NOT the visual / UI craft — colour, type, distinctive
-  components — which it ROUTES to impeccable / shape / design and never restates.
-  Bans jumping to code.
+  Turns a product concept into a clickable no-code prototype in one afternoon: Crazy 8s, paper or
+  Miro flow, digital mock, then a clickable hybrid in v0 or Figma Make, with the one reaction the
+  mock must provoke. Use when the user says mock it up, run Crazy 8s, make a clickable prototype,
+  or turn an idea into something to click. Not for running the test session on it (use usability-
+  test-protocol).
 type: interactive
 supersedes: none
 ---
@@ -54,7 +48,7 @@ Do not use it for these — hand off instead:
 | Which cheap experiment answers their ONE learning question (paper / WoZ / concierge / agent) | `probe-matrix` | That selects the experiment and its honesty; this MAKES an artefact. Route there first if the question is "which test." |
 | The paper sketch run as an evidence-gathering probe | `paper-sketch-probe` | That runs a sketch as a probe with a read-out; the paper step here is one rung in a make-sequence, not the probe. |
 | To watch a user react to the mock and score it | `usability-test-protocol` | That runs the session and captures behaviour (0.7); this produces the thing the session uses. |
-| The visual / UI craft — layout, colour, type, distinctive non-generic components | `impeccable` / `shape` / `design/*` | Those own the look and do it better. This routes to them and never restates them — restating one is the kill line. |
+| The visual / UI craft — layout, colour, type, distinctive non-generic components | `impeccable` / `ui-design-brief` / `design/*` | Those own the look and do it better. This routes to them and never restates them — restating one is the kill line. |
 | To write the real product code | `compound-system-architecture`, `eval-first-spec` (07) | The moment you write product code you have left first-mocks. Code is banned at this stage. |
 
 This skill owns the sequence and the anti-code discipline. It does not choose your
@@ -112,7 +106,7 @@ not. Timebox one afternoon. If it runs into days you are building the product, n
 mocking it; stop.
 
 **Step 5 — Route the visual craft OUT.** Do not polish pixels here. Hand the flow
-to `impeccable` / `shape` to plan the UX/UI, and `impeccable` to build distinctive,
+to `impeccable` / `ui-design-brief` to plan the UX/UI, and `impeccable` to build distinctive,
 non-generic UI, or `design/*` for a specific surface. first-mocks owns the sequence
 and the no-code discipline; the look is theirs. Restating their layout / colour /
 type advice inside this skill is the kill line.
@@ -182,7 +176,7 @@ the other half — the make-craft — and stays disciplined about not being the 
 Composes with: `probe-matrix` (selects the experiment; run it first if the question
 is "which test," and return here to make the artefact a paper-sketch probe needs),
 `usability-test-protocol` (runs the session that turns this 0.5 mock into a 0.7
-read-out), `impeccable` / `shape` / `design/*` (own the visual craft this skill
+read-out), `impeccable` / `ui-design-brief` / `design/*` (own the visual craft this skill
 routes to and never restates), and the build skills in section 07
 (`compound-system-architecture`, `eval-first-spec`, gated by `v1-launch-bar`) that
 own the product code this skill bans.

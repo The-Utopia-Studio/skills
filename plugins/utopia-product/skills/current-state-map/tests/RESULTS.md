@@ -11,9 +11,9 @@ MUST fire (5):
 5. "Where does the time and money go in this workflow?"
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "What should this cost / is the gap big enough to build?" → belongs to `physics-floor-gap`
+1. "What should this cost / is the gap big enough to build?" → belongs to `unit-cost-floor-gap`
 2. "Strip this job to its primitive — information, decisions, liability." → belongs to `job-in-primitives`
-3. "What's the TAM / total market for this?" → belongs to `bottoms-up-quantification`
+3. "What's the TAM / total market for this?" → belongs to `bottoms-up-market-sizing`
 
 ## Runs
 | Date | Gate | Result | Notes |
@@ -26,7 +26,7 @@ MUST NOT fire (3, name the sibling each belongs to):
 |---|---|---|
 | 1 Trigger | PASS (5/5 fire, 0/3 misfire) | `description` names the 5 fire-phrasings near-verbatim and carries an explicit NOT-list mapping each sibling (physics-floor-gap / job-in-primitives / bottoms-up-quantification / problem-framing-canvas). All 5 must-fire matched; all 3 must-not-fire routed to the correct sibling and did not fire. |
 | 2 Golden | PASS (5/5) | Applied the Method to each input, filled the ledger, re-computed every number, re-checked each priced step cites an artefact and totals. See per-case table below. |
-| 3 Adversarial | PASS (3/3) | 01 vague one-liner → Method Step 1 stops and asks for one unit + one priced artefact, invents nothing. 02 solution-in-disguise → Step 2 + Gotcha "price the real practice not the SOP/future-with-product" refuses the to-be map and re-anchors on today's manual work. 03 out-of-scope → When-NOT table + Related-skills decline and name `physics-floor-gap`, compute no floor/gap. No fabrication, no flattery, no scope-poaching. |
+| 3 Adversarial | PASS (3/3) | 01 vague one-liner → Method Step 1 stops and asks for one unit + one priced artefact, invents nothing. 02 solution-in-disguise → Step 2 + Gotcha "price the real practice not the SOP/future-with-product" refuses the to-be map and re-anchors on today's manual work. 03 out-of-scope → When-NOT table + Related-skills decline and name `unit-cost-floor-gap`, compute no floor/gap. No fabrication, no flattery, no scope-poaching. |
 | 4 Head-to-head | n/a | `supersedes: none`. |
 | 5 Anti-generic | PASS | G01 output turns on moves a generic PM prompt lacks: paid-wait-vs-free-delay split, the evidence ladder (shift logs = 0.7), [Fact]/[Assumption]/[Hypothesis] tagging, and failure-tail-flagged-not-invented. The load-bearing artifact (priced ledger) is a table in template.md; Method prose is procedural, not misplaced guidance. |
 | 6 Real-use | pending | Requires 5+ real fellow uses. |

@@ -1,14 +1,11 @@
 ---
 name: value-proposition
 description: >-
-  Design a value proposition with a 6-part JTBD template (Who, Why, What before,
-  How, What after, Alternatives), then turn it into segment- and channel-specific
-  value proposition statements for marketing, sales and onboarding. Use when
-  creating or sharpening a value proposition, analyzing customer value delivery,
-  articulating why customers should choose you, or generating value prop
-  statements from an existing value proposition. Not for the positioning
-  statement, message house or brand narrative (use positioning-workshop), full
-  website copy (use copywriting), or ICP definition (use ideal-customer-profile).
+  Designs a value proposition with a 6-part JTBD template (who, why, before, how, after,
+  alternatives) and turns it into segment- and channel-specific value prop statements for
+  marketing, sales and onboarding. Use when creating or sharpening a value proposition, explaining
+  why customers should choose us, or writing value prop statements. Not for positioning statements
+  or messaging pillars (use positioning-workshop).
 ---
 # Value Proposition
 

@@ -1,6 +1,11 @@
 ---
 name: pestel-analysis
-description: Analyze political, economic, social, technological, environmental, and legal forces. Use when external market shifts could materially affect a product, roadmap, or strategy.
+description: >-
+  Runs a PESTEL analysis of the political, economic, social, technological, environmental and
+  legal forces that could affect a product or strategy, with opportunities, threats and actions.
+  Use when the user asks for a PESTEL or PEST analysis, is entering a new market or geography, or
+  wants macro risks for a roadmap or investor pitch. Not for competitor-level industry forces (use
+  porters-five-forces).
 intent: >-
   Conduct a systematic analysis of macro-environmental factors—Political, Economic, Social, Technological, Environmental, and Legal—that could impact your product or project. Use this to identify external opportunities and threats, inform strategic planning, assess market entry risks, and make data-driven decisions about product direction in the context of broader forces beyond your control.
 type: component
@@ -354,7 +359,7 @@ Mini example excerpt:
 ## References
 
 ### Related Skills
-- `recommendation-canvas` — PESTEL factors inform risk assessment in canvas
+- `ai-solution-proposal-canvas` — PESTEL factors inform risk assessment in canvas
 - `positioning-workshop` — PESTEL insights shape competitive positioning
 - `problem-statement` — Social/economic factors influence customer problems
 

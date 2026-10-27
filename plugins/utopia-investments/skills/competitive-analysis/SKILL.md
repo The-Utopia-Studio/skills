@@ -1,14 +1,11 @@
 ---
 name: competitive-analysis
 description: >-
-  Framework for building competitive landscape decks — market positioning, competitor
-  deep-dives, comparative analysis, moat assessment and strategic synthesis, with
-  bull/base/bear scenarios for investment contexts. Use when the user asks for a competitive
-  landscape, competitor analysis, peer comparison, market map, market positioning assessment
-  or strategic review of an industry, or says "who are the competitors to X" or "benchmark X
-  against peers". Not for a sales battlecard against one competitor (use
-  competitive-battlecard), a valuation-multiples comps table (use comps-analysis), or a
-  single-company profile (use tear-sheet).
+  Builds a competitive landscape deck: market map, positioning, competitor deep-dives, moat
+  assessment and bull/base/bear scenarios for investment contexts. Use when the user asks for a
+  competitive landscape, competitor analysis, peer comparison or market map, says "who competes
+  with X" or "benchmark X against peers". Not for a sales battlecard against one rival (use
+  competitive-battlecard).
 ---
 
 # Competitive Landscape Mapping

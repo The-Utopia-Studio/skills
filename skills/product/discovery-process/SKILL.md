@@ -1,6 +1,11 @@
 ---
 name: discovery-process
-description: Run a full discovery cycle from problem hypothesis to validated solution. Use when a team needs a structured path through framing, interviews, synthesis, and experiments.
+description: >-
+  Runs one full product discovery cycle from problem hypothesis to validated solution: frame the
+  problem, research, synthesize, generate and test solutions, then decide build, pivot or kill.
+  Use when the user wants a structured discovery plan, needs to investigate a drop in activation
+  or retention, or wants to validate a hypothesis before building. Not for a living opportunity
+  tree kept after launch (use continuous-discovery-engine).
 intent: >-
   Guide product managers through a complete discovery cycle—from initial problem hypothesis to validated solution—by orchestrating problem framing, customer interviews, synthesis, and experimentation skills into a structured process. Use this to systematically explore problem spaces, validate assumptions, and build confidence before committing to full development—avoiding "build it and they will come" syndrome and ensuring you're solving real customer problems.
 type: workflow

@@ -12,7 +12,7 @@ MUST fire (5):
 5. "Level up this fellow — what's the next rung?"
 
 MUST NOT fire (3, name the sibling each belongs to):
-1. "Should the fellow build their own eval harness or use the platform's? Draw the build-vs-buy line." → belongs to `platform-vs-venture` (section 10 sibling — the Daedalus-builds-once vs fellow-owns boundary; this skill only reads that map for the Author rung)
+1. "Should the fellow build their own eval harness or use the platform's? Draw the build-vs-buy line." → belongs to `build-vs-buy-boundary` (section 10 sibling — the Daedalus-builds-once vs fellow-owns boundary; this skill only reads that map for the Author rung)
 2. "Where should this fellow start / which Icarus stages apply to my type?" → belongs to `fellow-path-router` (section 00 — classifies Type A/B/C and routes stages; this grades progression, not entry)
 3. "Is this problem good enough to build — score it." → belongs to `problem-quality-scorecard` (01 — the go/no-go gate this skill cites as the Literate artefact; it does not re-run the gate)
 
@@ -35,11 +35,11 @@ Auto-fail this skill if the output:
 | G01 Azraq | Literate | evidence-ladder 0.7 signal via `probe-matrix` | don't inflate a strong scorecard to Practitioner |
 | G02 Barrier | Operator | v1-launch-bar GO + flywheel promotion | read prepaid as money 1.0; don't over-credit to Frontier |
 | G03 Durian (gap trap) | pre-Literate | backfill `problem-quality-scorecard` | signed pilot above a missing scorecard caps at the gap |
-| G04 Mentix | Frontier | `moat-design-canvas` + `platform-vs-venture` | Author inflation — internal tool is a platform primitive |
+| G04 Mentix | Frontier | `moat-design-canvas` + `build-vs-buy-boundary` | Author inflation — internal tool is a platform primitive |
 | G05 new fellow (mundane) | pre-Literate | first `problem-quality-scorecard` | calm; domain background holds no rung |
 | A01 vague | (none) — ask ONE Q | list the five artefacts, ask which exist | no grading on narrative |
 | A02 feeling | not confirmed | ask for the signed pilot-six-term-sheet | ban tenure + confidence; refuse to confirm |
-| A03 out of scope | (decline) | route to `platform-vs-venture` | no boundary map drawn |
+| A03 out of scope | (decline) | route to `build-vs-buy-boundary` | no boundary map drawn |
 
 ## Runs
 | Date | Gate | Result | Notes |
@@ -56,7 +56,7 @@ Auto-fail this skill if the output:
 
 ### Gate 1 — Trigger precision
 - MUST fire 5/5: "how's this fellow doing", "assess a fellow", "what level am I / is this fellow at", "am I ready to level up", "level up this fellow" — all enumerated verbatim in the `description` and `When to use`.
-- MUST NOT fire 3/3: build-vs-buy → `platform-vs-venture`; where-to-start/which-stages → `fellow-path-router`; score-the-problem → `problem-quality-scorecard`. Each is explicitly handed off in the "When NOT" table and re-tested in adversarial/03 and the golden set. No sibling poached.
+- MUST NOT fire 3/3: build-vs-buy → `build-vs-buy-boundary`; where-to-start/which-stages → `fellow-path-router`; score-the-problem → `problem-quality-scorecard`. Each is explicitly handed off in the "When NOT" table and re-tested in adversarial/03 and the golden set. No sibling poached.
 
 ### Gate 2 — Kill line / auto-fail (the skill's own kill line)
 Not tripped. The design forecloses all four kill conditions:
@@ -83,10 +83,10 @@ n/a (`supersedes: none`).
 - **G01 Azraq → Literate** ✓ scorecard 0.5 holds Literate; not inflated to Practitioner; next = behaviour-0.7 signal via `probe-matrix`→`evidence-ladder`.
 - **G02 Barrier → Operator** ✓ £40k *prepaid* read as money 1.0; not over-credited to Frontier (nothing shipped); next = v1-launch-bar GO + flywheel promotion.
 - **G03 Durian (gap trap) → pre-Literate** ✓ signed pilot above a missing scorecard caps at the gap; refuses "level up"; next = backfill `problem-quality-scorecard`.
-- **G04 Mentix → Frontier** ✓ launch-bar GO + eval-scored L1→L2 promotion holds Frontier; internal ingestion tool correctly denied as a platform primitive; next = `moat-design-canvas` + `platform-vs-venture`.
+- **G04 Mentix → Frontier** ✓ launch-bar GO + eval-scored L1→L2 promotion holds Frontier; internal ingestion tool correctly denied as a platform primitive; next = `moat-design-canvas` + `build-vs-buy-boundary`.
 - **G05 new fellow → pre-Literate** ✓ nothing to cite; calm; domain background holds no rung; next = first `problem-quality-scorecard`.
 - **A01 vague** ✓ asks the one artefact question, invents nothing.
 - **A02 feeling** ✓ bans tenure + confidence, refuses to confirm, asks for the signed pilot.
-- **A03 out of scope** ✓ declines, routes to `platform-vs-venture`, draws no boundary map.
+- **A03 out of scope** ✓ declines, routes to `build-vs-buy-boundary`, draws no boundary map.
 
 _Note: `scratchpad/JUDGE_PROTOCOL.md` was not present at run time; gate structure and Output section reconstructed from `tests/rubric.json` + this file's Gate 1 / kill-line sections, which the task message reproduces._

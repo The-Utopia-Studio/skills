@@ -1,17 +1,11 @@
 ---
 name: outreach-execution
 description: >-
-  Plan social selling, LinkedIn nurture and community engagement, or use this
-  skill when a signal, account list, or named contact needs outreach
-  staged for sending: it loads sender voice and past approved messages, picks the
-  path, assigns the sender by account tier, evaluates requested executive
-  multi-threading, runs a prior-relationship check, and stages a multi-step
-  email/LinkedIn sequence with a written rationale for human approval. AI-drafted
-  sequences to senior executives are never auto-sent; approved copy feeds the
-  voice library. Includes email/LinkedIn/breakup frameworks and objection
-  handling. Not for writing or scoring a single cold email or signal-triggered
-  message (use cold-email), scoring or tiering accounts (use account-tier-scoring),
-  or deciding how much an agent may send unattended (use earned-autonomy).
+  Stages multi-step email and LinkedIn outreach for human approval: loads sender voice, assigns
+  sender by account tier, checks prior relationships and suppression, and writes a rationale,
+  never auto-sending. Also plans social selling and community nurture. Use when a signal, account
+  list or named contact needs a sequence staged, or planning LinkedIn nurture. Not for writing a
+  single cold email (use cold-email).
 metadata:
   version: 1.0.0
   adapted_from: swan-gtm/jeremy-hurst/outreach-execution

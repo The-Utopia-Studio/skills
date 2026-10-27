@@ -1,6 +1,10 @@
 ---
 name: huggingface-datasets
-description: Use this skill for Hugging Face Dataset Viewer API workflows that fetch subset/split metadata, paginate rows, search text, apply filters, download parquet URLs, and read size or statistics.
+description: >-
+  Queries Hugging Face datasets through the Dataset Viewer API: list subsets and splits, preview
+  and paginate rows, search text, filter rows, get parquet links, sizes and column statistics, and
+  run SQL on parquet. Use when the user wants to explore, sample, search or filter a Hub dataset,
+  read its rows or statistics, or find its parquet files without downloading it.
 ---
 
 # Hugging Face Dataset Viewer

@@ -195,7 +195,7 @@ Concrete example:
  */
 ```
 
-The stamp is the durable record. `audit` reads it. The next run reads it. The user reads it.
+The stamp is the durable record. `ui-audit` reads it. The next run reads it. The user reads it.
 
 ---
 

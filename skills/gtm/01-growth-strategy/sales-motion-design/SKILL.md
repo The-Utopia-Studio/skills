@@ -1,6 +1,10 @@
 ---
 name: sales-motion-design
-description: "When the user wants to choose between PLG and sales-led, design a sales motion, optimize time-to-first-value, or build a value-before-purchase experience. Also use when the user mentions 'PLG,' 'product-led growth,' 'sales-led,' 'sales motion,' 'free trial,' 'freemium,' 'self-serve,' 'demo-first,' 'time-to-first-value,' 'TTFV,' or 'agent-led sales.' This skill covers sales motion selection, value delivery design, and go-to-market motion architecture."
+description: >-
+  Chooses and designs the sales motion: PLG vs sales-led vs hybrid by price and complexity, free
+  trial or freemium vs demo-first, agent-led sales, time-to-first-value and value-before-purchase
+  experiences. Use when deciding PLG or sales-led, designing a self-serve or trial motion, or
+  cutting time-to-first-value. Not for a full multi-channel GTM plan (use gtm-strategy).
 ---
 
 # Sales Motion Design

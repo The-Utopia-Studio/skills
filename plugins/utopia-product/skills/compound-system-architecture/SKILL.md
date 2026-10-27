@@ -1,14 +1,11 @@
 ---
 name: compound-system-architecture
 description: >-
-  Design how an AI product is actually built as a compound system: input ->
-  router -> retrieve / reason / act -> validate and guardrails -> output over a
-  data layer, a Data 40 / Model 20 / Orchestration 30 / Interface 10 effort
-  split, and named model-swap points, and kill one-big-prompt designs. Use when
-  the user or a fellow asks how to architect or build an AI product, copilot or
-  assistant, what the system or stack should look like, or plans to dump data
-  into one big prompt. Not for the pass/fail spec (use eval-first-spec), drawing
-  the diagram (use diagram-design), or one agent's internals (use agent-design).
+  Designs the build architecture of an AI product as a compound system: input, router,
+  retrieve/reason/act, validation and guardrails, output over a data layer, with a Data 40 / Model
+  20 / Orchestration 30 / Interface 10 effort split and model-swap points. Use when asked how to
+  architect an AI product, copilot or assistant, what the stack should be, or when a plan dumps
+  data into one big prompt. Not for one agent's internals (use agent-design).
 type: generator
 supersedes: none
 ---
@@ -72,7 +69,7 @@ whom. Not a feature list. If it needs "and" three times, it is more than one sys
 Name the source and score it on the evidence ladder: does this data exist and is it
 accessible today, or is it a hope? A data layer that is `[Hypothesis]` ("we'll have
 great data once users come") is not designed — it is deferred. The best data layer is
-workflow exhaust (see `yoda-data-sourcing`): data the workflow already produces.
+workflow exhaust (see `proprietary-data-sourcing`): data the workflow already produces.
 
 **Step 3 — the component pipeline.** Fill every row of [template.md](template.md). The
 spine is fixed; a product may collapse a node (a rules router instead of a model router)
@@ -164,7 +161,7 @@ shift tool as the 10%, with three named swap points each gated by golden cases.
 - `diagram-design` — renders the filled pipeline as a dark-themed HTML/SVG
   diagram. This skill decides the components; that one draws them. Do not restate its
   design system here.
-- `yoda-data-sourcing` — how to find the workflow exhaust that becomes the data layer.
+- `proprietary-data-sourcing` — how to find the workflow exhaust that becomes the data layer.
   This skill assumes that layer exists; if it does not, start there.
 - `moat-design-canvas` — sequences the moat. The compounding data layer designed here is
   usually the moat's engine, but defensibility is argued there, not here.
