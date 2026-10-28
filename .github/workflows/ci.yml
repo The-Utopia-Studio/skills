@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -23,6 +25,20 @@ jobs:
 
       - name: Test skill helpers and routing harness offline
         run: node --test scripts/trigger-test.test.mjs scripts/skill-behavior.test.mjs
+
+      - name: Test the skill quality gate
+        run: python3 scripts/skill_gate.py --self-test
+
+      - name: Skill quality gate (Tier 1, budget, Tier 2/3 evidence)
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="origin/${{ github.base_ref }}"
+          elif [ -n "${{ github.event.before }}" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            BASE="${{ github.event.before }}"
+          else
+            BASE="HEAD~1"
+          fi
+          python3 scripts/skill_gate.py check --base "$BASE"
 
       - name: Build packs
         run: ./build-packs.sh

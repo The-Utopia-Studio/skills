@@ -1,0 +1,17 @@
+# expected<TAB>group<TAB>prompt  (8 should-fire, 8 near misses; near misses name the skill that should win)
+skill-eval	skill-eval	I just rewrote the description of our cold-email skill. Check it still fires on the right requests and doesn't steal ones meant for ai-sdr, and run it a few times so we know it's stable.
+skill-eval	skill-eval	We have about 250 skills in four packs. Audit them: which are broken, which never get picked, which give flaky results. Give each a keep, fix, merge or retire verdict.
+skill-eval	skill-eval	Is our dcf-model skill actually worth keeping? Compare what Claude produces with and without it on a few real DCF tasks.
+skill-eval	skill-eval	before I add my new board-update skill to the founder pack, can you QA it properly? frontmatter, whether it triggers, and whether the output is any good
+skill-eval	skill-eval	Benchmark version 1 vs version 2 of our pitch-deck skill on the same five prompts and tell me which one to ship.
+skill-eval	skill-eval	Our ui-audit skill sometimes fires and sometimes doesn't for the same request. Measure how stable it is over five runs and tell me why it's flaky.
+skill-eval	skill-eval	Run static checks on every SKILL.md under skills/ and list broken paths, bad frontmatter and descriptions over the limit.
+skill-eval	skill-eval	Which of our skills does Claude never pick? I want trigger tests for the whole GTM pack with should-fire and should-not-fire prompts.
+skill-creator|none	skill-eval	Create a new skill that turns our weekly investor update notes into the LP update format. Notes: ARR 1.2M, +8% MoM, hired 2 engineers, runway 19 months.
+find-skills|none	skill-eval	Is there a skill I can install that helps with writing SOC 2 policies?
+code-review|security-review|none	skill-eval	Review this function for bugs before I merge it: def total(xs): return sum(x.price for x in xs if x.qty > 0) / len(xs)
+ab-test-analysis	skill-eval	Our A/B test on the pricing page: control 4.1% conversion on 12,000 visitors, variant 4.6% on 11,800. Is it significant and should we ship?
+evidence-ladder|none	skill-eval	Three customers said they'd pay for this in interviews. How strong is that evidence, really?
+agents-md-writer|none	skill-eval	Write an AGENTS.md for our Next.js repo so coding agents know the commands and conventions.
+none	skill-eval	Improve this system prompt for our support chatbot so it stops making up refund policies: "You are a helpful assistant for Acme."
+none	skill-eval	Explain the difference between unit tests and integration tests in two sentences.

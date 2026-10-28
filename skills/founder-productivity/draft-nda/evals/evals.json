@@ -1,0 +1,49 @@
+{
+  "skill_name": "draft-nda",
+  "risk": "high",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft a mutual NDA between Utopia Studio FZ-LLC (Dubai Internet City, Dubai, UAE; signatory Abdelrahman Mattar, Partner) and Nimbus Logistics Ltd (12 King Street, London, UK; signatory Sarah Patel, COO). We'll share pilot data, pricing and route-optimisation source code ahead of a paid pilot. Governing law England and Wales, 2-year term.",
+      "expected_output": "A complete mutual NDA naming both parties and signatories, covering pilot data, pricing and source code, with England and Wales governing law and a 2-year term, plain-language notes, and clauses needing legal review clearly flagged, plus a disclaimer that it is not legal advice.",
+      "assertions": [
+        "Is mutual: both parties are bound as disclosing and receiving party",
+        "Names both companies, their addresses and the two signatories",
+        "Defines confidential information to include pilot data, pricing and source code",
+        "Sets governing law to England and Wales and a 2-year term",
+        "Includes standard exclusions (public, already known, independently developed, legally required disclosure)",
+        "Flags at least one clause for legal review and states it is not legal advice",
+        "Does not promise that injunctive relief or any remedy will be granted"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm a founder about to pitch my ed-tech idea to an individual angel investor next week. I want a short one-way NDA where only I disclose. My company is Qalam Labs (Riyadh, Saudi Arabia). The investor is a private person, Omar Haddad. Keep it to what's needed.",
+      "expected_output": "A one-way NDA with Qalam Labs as the only disclosing party and Omar Haddad as an individual receiving party, kept concise, with a note that many investors decline to sign NDAs and that Saudi law or another jurisdiction must be chosen and reviewed by counsel.",
+      "assertions": [
+        "Is one-way: only Qalam Labs discloses and only Omar Haddad receives",
+        "Treats the receiving party as an individual, not a company",
+        "Is noticeably shorter than a full commercial NDA",
+        "Raises that the governing law and jurisdiction need to be chosen or confirmed (it was not specified)",
+        "Mentions that investors often decline to sign NDAs, or otherwise sets expectations about investor NDAs",
+        "Flags clauses for legal review and states it is not legal advice"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Make an NDA for a contractor developer we're hiring for 3 months to work on our app's payment integration. Our company is Fennec Pay Inc., Delaware. Contractor: Lina Mansour. Include return or destruction of materials when the contract ends.",
+      "expected_output": "An NDA suited to an individual contractor engagement, with Fennec Pay as discloser, covering technical and payment-related confidential information, a return-or-destruction clause at contract end, Delaware governing law suggested or asked about, flagged clauses, and a note that IP assignment belongs in the contractor agreement rather than the NDA.",
+      "assertions": [
+        "Identifies Fennec Pay Inc. as the disclosing party and Lina Mansour as an individual contractor",
+        "Includes a clause requiring return or destruction of confidential materials when the engagement ends",
+        "Covers technical, source code or payment-system information specifically",
+        "Addresses governing law (Delaware or asks to confirm)",
+        "Notes that IP ownership or assignment should be handled in the contractor agreement, or flags it for review",
+        "Flags clauses for legal review and states it is not legal advice"
+      ],
+      "files": []
+    }
+  ]
+}

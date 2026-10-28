@@ -107,6 +107,48 @@ Do not invent vendor lock-in. Use GTM/product verbs. Encode judgment, not a bare
 
 Details: [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
+## Adding a skill: the quality gate
+
+Every skill that joins a pack, or changes its name or description, must show that it works before it merges. That matters because each skill has a cost even when it's good. Its description competes for a shared listing budget that Claude reads in every session, and it can take requests away from skills that already work. The gate checks both.
+
+```mermaid
+flowchart LR
+    A["New or changed skill<br/>(added to packs.config.json)"] --> T1{"Tier 1 · CI, free<br/>static checks"}
+    T1 -- fails --> FIX["Fix and push again"]
+    T1 -- passes --> BUD{"Budget ratchet · CI<br/>skill listing under the limit?"}
+    BUD -- over --> FIX
+    BUD -- ok --> T2{"Tier 2 · routing report<br/>Claude picks it, and it doesn't<br/>steal its neighbours' prompts"}
+    T2 -- "missing, stale<br/>or failing" --> RUN2["Run: npm run eval:skill -- name"]
+    RUN2 --> T2
+    T2 -- passes --> RISK{"High risk?<br/>numbers, legal text,<br/>anything sent to people"}
+    RISK -- no --> MERGE(["Merge into the pack"])
+    RISK -- yes --> T3{"Tier 3 · output report<br/>better than no skill,<br/>stable across runs"}
+    T3 -- "missing, stale<br/>or failing" --> RUN3["Run: npm run eval:skill -- name --output-quality"]
+    RUN3 --> T3
+    T3 -- passes --> MERGE
+```
+
+| Check | What it proves | Who runs it | Pass bar |
+|---|---|---|---|
+| **Tier 1: static checks** | The skill loads and is well-formed: valid frontmatter, a name that matches its folder, no broken paths, scripts that parse, no secrets or personal paths. A new skill also ships `evals/evals.json` (3+ test cases and a `risk` level) and `evals/triggers.tsv` (8+ prompts it should fire on, 8+ near misses it shouldn't) | CI, on every PR | No errors. Description up to 600 characters, with a "Use when …" clause |
+| **Budget ratchet** | All the names and descriptions together still fit the budget Claude reads in every session | CI, on every PR | Total under `max_listing_chars` in [`scripts/skill-gate.config.json`](./scripts/skill-gate.config.json) |
+| **Tier 2: routing** | Claude picks the skill for its own requests, ignores near misses, and doesn't take prompts from up to 8 neighbouring skills | You, before opening the PR (`npm run eval:skill -- <name>`) | Recall ≥ 0.8, at most 1 false fire, at most 1 stolen neighbour prompt, 3 runs per prompt |
+| **Tier 3: output quality** | With the skill, Claude does the job better than without it, and does it reliably | You, for high-risk skills (`npm run eval:skill -- <name> --output-quality`) | Score ≥ 0.8, better than no skill on every case, 80% of cases pass all 3 trials |
+
+**If a run is interrupted:** runs that time out or hit a usage limit are saved for that version of the skill. Running the same command again fills in only the missing runs, so you never pay twice for runs that finished.
+
+**How the reports are trusted:** Tiers 2 and 3 run Claude, which needs your login and costs usage, so they don't run in CI. Each command writes a report into the skill's `evals/` folder, signed with a hash of the exact files it tested. CI accepts a report only if the hash still matches. If you edit the description after testing, the report goes stale and CI asks you to re-run.
+
+**Step by step, for a new skill:**
+
+1. Write the skill in `skills/<module>/<name>/` and add its name to [`packs.config.json`](./packs.config.json).
+2. Add `evals/evals.json` (3+ realistic tasks, each with `expected_output`, `assertions`, and `"risk": "normal"` or `"high"`) and `evals/triggers.tsv` (`expected<TAB>group<TAB>prompt`; near misses name the skill that should win instead).
+3. Run `npm run gate` to check Tier 1 and the budget locally.
+4. Run `npm run eval:skill -- <name>`. For a high-risk skill, also run `npm run eval:skill -- <name> --output-quality`.
+5. Commit the skill together with its `evals/*-report.json` files and open the PR. CI re-checks everything.
+
+Which skills count as high risk is listed in [`scripts/skill-gate.config.json`](./scripts/skill-gate.config.json); a new skill declares its own risk in `evals.json`. When a reviewer agrees to an exception, record it in `<skill>/evals/gate-waiver.md`, one line on why. CI then accepts the missing report but prints the waiver in its log. The method behind the gate is the [`skill-eval`](./skills/founder-productivity/skill-eval/SKILL.md) skill.
+
 ## Layout
 
 ```
