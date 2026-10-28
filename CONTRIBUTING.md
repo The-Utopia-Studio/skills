@@ -88,16 +88,28 @@ A skill is ready to graduate when it meets all of these:
 - [ ] Doesn't duplicate an existing skill (check by module first)
 - [ ] Has at least one concrete example
 - [ ] Encodes judgment (what good looks like / rubrics), not a bare checklist
+- [ ] Passes the quality gate (see [README › Adding a skill: the quality gate](./README.md#adding-a-skill-the-quality-gate))
 
 **To graduate:**
 
 1. Move `skills/sandbox/<skill>/` → `skills/<module>/<skill>/` (one of: `gtm/<submodule>`, `product`, `investments`, `founder-productivity`)
 2. Add the skill name to that module's pack in `packs.config.json` (keep the list alphabetized)
-3. Run `./build-packs.sh` (regenerates `plugins/`, the marketplace manifest, and public doc counts)
-4. Run `npm run validate` before opening the PR
-5. Open a PR explaining: what problem it solves, who asked for it, gotchas found so far
+3. Add `evals/evals.json` (3+ realistic tasks with assertions, and `"risk": "normal"` or `"high"`) and `evals/triggers.tsv` (8+ prompts it should fire on, 8+ near misses that name the skill that should win)
+4. Run `./build-packs.sh` (regenerates `plugins/`, the marketplace manifest, and public doc counts), then `npm run validate` and `npm run gate`
+5. Run `npm run eval:skill -- <skill>` for the routing report. If the skill is high risk (numbers, legal text, anything sent to other people), also run `npm run eval:skill -- <skill> --output-quality`. Commit the `evals/*-report.json` files with the skill
+6. Open a PR explaining: what problem it solves, who asked for it, gotchas found so far, and the report results
 
-CI on every PR checks marketplace integrity: packed skills resolve on disk, `SKILL.md` frontmatter is valid, eval/rubric JSON parses, and generated artifacts are in sync (`plugins/`, docs counts, registry).
+CI on every PR checks marketplace integrity and runs the skill gate:
+- packed skills resolve on disk
+- `SKILL.md` frontmatter is valid, and eval names match their folders
+- eval/rubric JSON parses
+- the static checks pass for every changed skill
+- the total skill listing stays under the budget in `scripts/skill-gate.config.json`
+- new skills, and any changed name or description, come with a passing routing report whose hash matches the files
+- high-risk skills come with a passing output report
+- generated artifacts are in sync (`plugins/`, docs counts, registry)
+
+Editing an existing skill's name or description also needs a fresh routing report. If the skill has no `evals/triggers.tsv` yet, `eval:skill` uses its rows in `scripts/trigger-prompts.tsv`.
 
 ## Modules
 

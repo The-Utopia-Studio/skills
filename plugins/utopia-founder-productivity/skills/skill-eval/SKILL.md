@@ -117,6 +117,16 @@ From the same runs, compare with-skill against baseline on tokens, wall time, to
 
 Write results with [references/report-template.md](references/report-template.md). In this repo, save library audits under `reports/<date>-skill-eval/`, including the raw JSON from each run, so results can be resumed and compared over time.
 
+## In the Utopia skills repo: the quality gate
+
+The repo turns Gates 1–4 into a pre-merge gate. Run these from the repo root:
+
+- `npm run gate`: Gate 1 for every changed skill, plus the listing-budget check. CI runs this on every PR.
+- `npm run eval:skill -- <name>`: Gate 2 (routing), including whether the skill steals prompts from its neighbours. It writes a routing report into the skill's evals folder.
+- `npm run eval:skill -- <name> --output-quality`: Gates 3–4 (lift over no skill, and stability). It writes an output report into the same folder.
+
+Each report is signed with a hash of the files it tested, and CI rejects stale or failing reports. The bars live in `<repo>/scripts/skill-gate.config.json`, and the README section "Adding a skill: the quality gate" shows the full flow.
+
 ## Batch mode (whole library)
 
 1. **Gate 1 on everything.** It's free. Fix errors in bulk first.

@@ -1,0 +1,39 @@
+{
+  "_comment": "Quality gate for skills entering or changing in a pack. See README 'Adding a skill: the quality gate'. Raise max_listing_chars only on purpose, and say why in the PR.",
+  "max_listing_chars": 109000,
+  "description_max_chars": 600,
+  "new_skill": {
+    "min_output_cases": 3,
+    "min_trigger_positives": 8,
+    "min_trigger_negatives": 8
+  },
+  "routing_bars": {
+    "min_recall": 0.8,
+    "max_false_fires": 1,
+    "max_neighbour_steals": 1,
+    "min_runs": 3
+  },
+  "output_bars": {
+    "min_with_skill_score": 0.8,
+    "min_lift": 0.0,
+    "min_stable_cases": 0.8,
+    "min_trials": 3
+  },
+  "high_risk_skills": [
+    "3-statement-model",
+    "cold-email",
+    "comps-analysis",
+    "cost-of-capital-estimator",
+    "data-rights-clause",
+    "dcf-model",
+    "draft-nda",
+    "email-sequence",
+    "investor-fact-ledger",
+    "investor-memorandum",
+    "outreach-execution",
+    "pilot-six-term-sheet",
+    "privacy-policy",
+    "tear-sheet",
+    "valuation-reconciler"
+  ]
+}

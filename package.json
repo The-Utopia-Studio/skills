@@ -1,7 +1,7 @@
 {
   "name": "utopia-skills",
   "version": "1.0.0",
-  "description": "AI skill marketplace for The Utopia Studio \u2014 GTM, Product, Investments, Founder Productivity.",
+  "description": "AI skill marketplace for The Utopia Studio — GTM, Product, Investments, Founder Productivity.",
   "main": "index.js",
   "scripts": {
     "build:packs": "./build-packs.sh",
@@ -15,7 +15,10 @@
     "ceramic:doctor": "utopia-ds doctor --json",
     "test": "npm run validate",
     "test:triggers": "node scripts/trigger-test.mjs",
-    "test:skills": "node --test scripts/skill-behavior.test.mjs"
+    "test:skills": "node --test scripts/skill-behavior.test.mjs",
+    "eval:skill": "node scripts/eval-skill.mjs",
+    "gate": "python3 scripts/skill_gate.py check",
+    "gate:budget": "python3 scripts/skill_gate.py budget"
   },
   "repository": {
     "type": "git",
