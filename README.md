@@ -135,6 +135,8 @@ flowchart LR
 | **Tier 2: routing** | Claude picks the skill for its own requests, ignores near misses, and doesn't take prompts from up to 8 neighbouring skills | You, before opening the PR (`npm run eval:skill -- <name>`) | Recall ≥ 0.8, at most 1 false fire, at most 1 stolen neighbour prompt, 3 runs per prompt |
 | **Tier 3: output quality** | With the skill, Claude does the job better than without it, and does it reliably | You, for high-risk skills (`npm run eval:skill -- <name> --output-quality`) | Score ≥ 0.8, better than no skill on every case, 80% of cases pass all 3 trials |
 
+**If a run is interrupted:** runs that time out or hit a usage limit are saved for that version of the skill. Running the same command again fills in only the missing runs, so you never pay twice for runs that finished.
+
 **How the reports are trusted:** Tiers 2 and 3 run Claude, which needs your login and costs usage, so they don't run in CI. Each command writes a report into the skill's `evals/` folder, signed with a hash of the exact files it tested. CI accepts a report only if the hash still matches. If you edit the description after testing, the report goes stale and CI asks you to re-run.
 
 **Step by step, for a new skill:**

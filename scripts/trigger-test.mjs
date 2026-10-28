@@ -3,6 +3,7 @@
 // Usage: node scripts/trigger-test.mjs [--group gtm] [--runs 5] [-j 4] [--model sonnet] [--json] [--plugins plugins]
 // --plugins <dir>: test the local build in <dir> instead of the installed packs (installed copies are disabled for the run).
 // --output <json>: save a checkpoint after each result; --resume <json>: reuse scored observations.
+// --timeout <seconds>: how long a run may take before it counts as a timeout (default 120).
 // Resume only with the same model, description budget, plugin build and personal-skill environment.
 // Claude Code only lists skill descriptions up to a character budget. With hundreds of skills installed most are
 // listed by name only, so run with SLASH_COMMAND_TOOL_CHAR_BUDGET=300000 to measure the descriptions themselves.
@@ -24,6 +25,7 @@ const model = opt("--model");
 const asJson = args.includes("--json");
 const file = opt("--file", join(dirname(fileURLToPath(import.meta.url)), "trigger-prompts.tsv"));
 const output = opt("--output");
+const timeoutMs = Number(opt("--timeout", 120)) * 1000; // seconds before an undecided run counts as a timeout
 const resume = opt("--resume");
 if (![jobs, runs].every((n) => Number.isInteger(n) && n > 0)) {
   throw new Error("-j and --runs must be positive integers");
@@ -82,7 +84,7 @@ function run(prompt) {
       child.kill();
       resolve(r);
     };
-    const timer = setTimeout(() => finish({ error: "timeout" }), 120_000);
+    const timer = setTimeout(() => finish({ error: "timeout" }), timeoutMs);
     child.on("error", (error) => finish({ error: error.message }));
     child.stdout.on("data", (chunk) => {
       buf += chunk;

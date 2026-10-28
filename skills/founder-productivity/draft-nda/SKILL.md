@@ -34,8 +34,12 @@ Before drafting, note down:
 - Are both parties companies or is one an individual?
 - What specific types of information will be shared?
 - Is this one-way (only one party shares) or mutual (both parties share)?
-- What is the geographic jurisdiction?
+- What is the geographic jurisdiction? If the user didn't give one, don't pick one silently: ask, or draft with a clearly marked placeholder and say it must be chosen and checked by counsel in the parties' countries.
 - What is the intended duration of the NDA?
+
+Then check the situation for these common traps and raise the ones that apply:
+- **Pitching investors:** most VCs and many angels decline to sign NDAs before a pitch. Say so up front, suggest a short one-way NDA only if the investor agrees, and advise sharing nothing truly sensitive until diligence.
+- **Contractors and employees:** an NDA protects information but doesn't transfer ownership of work. Say that IP assignment belongs in the contractor or employment agreement, and flag it for review.
 
 ### Step 2: Structure the NDA
 Organize the NDA in standard sections:

@@ -4,8 +4,9 @@ description: >-
   Tests and evaluates Claude skills through five gates (static checks, trigger routing, output
   quality vs a no-skill baseline, run-to-run stability, cost) and gives each a ship, fix, merge or
   retire verdict with evidence. Use when the user asks to test, QA, audit or benchmark a skill or
-  skill library, check whether a skill triggers, compare two versions, or decide which skills to
-  keep. Not for writing a new skill (use skill-creator).
+  skill library, lint or run static checks on SKILL.md files (frontmatter, broken paths, description
+  length), check whether a skill triggers, compare two versions, vet a skill before adding it to a
+  pack, or decide which skills to keep. Not for writing a new skill (use skill-creator).
 ---
 
 # Skill evaluation

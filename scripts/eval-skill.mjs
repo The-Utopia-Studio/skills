@@ -9,7 +9,7 @@
 // (SLASH_COMMAND_TOOL_CHAR_BUDGET=300000) so the result measures the skill's own name and description.
 // Nothing here sends, posts, deploys or pays: side-effect tools are blocked and every run uses a fresh temp folder.
 import { spawn, spawnSync } from "node:child_process";
-import { existsSync, mkdtempSync, readdirSync, readFileSync, statSync, writeFileSync, rmSync } from "node:fs";
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, statSync, writeFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -84,8 +84,10 @@ function neighbours() {
 }
 
 function runHarness(file, out) {
+  const resume = existsSync(out) ? ["--resume", out] : [];
+  if (resume.length) console.log("resuming earlier results for this skill version; only missing runs will execute");
   const r = spawnSync(process.execPath, [join(ROOT, "scripts/trigger-test.mjs"), "--file", file, "--plugins", join(ROOT, "plugins"),
-    "--runs", String(runs), "-j", String(jobs), "--output", out, ...(model ? ["--model", model] : [])],
+    "--runs", String(runs), "-j", String(jobs), "--timeout", "240", "--output", out, ...resume, ...(model ? ["--model", model] : [])],
     { cwd: ROOT, encoding: "utf8", env: { ...process.env, SLASH_COMMAND_TOOL_CHAR_BUDGET: "300000" }, stdio: ["ignore", "inherit", "inherit"] });
   if (!existsSync(out)) throw new Error("routing harness produced no results");
   return JSON.parse(readFileSync(out, "utf8"));
@@ -100,7 +102,9 @@ async function routing() {
   const near = neighbours();
   const neighbourRows = central.filter((c) => near.includes(firstAlt(c[0])));
   if (!positives.length) throw new Error(`no should-fire prompts for ${skill}: add evals/triggers.tsv`);
-  const tmp = mkdtempSync(join(tmpdir(), `eval-${skill}-`));
+  // Results are kept per skill version, so re-running only fills in runs that timed out or never ran.
+  const tmp = join(tmpdir(), `eval-${skill}-${info.routing_hash.slice(0, 12)}`);
+  mkdirSync(tmp, { recursive: true });
   const file = join(tmp, "prompts.tsv");
   const tag = (rows, g) => rows.map((c) => [c[0], g, c[2]].join("\t"));
   writeFileSync(file, [...tag(positives, "positive"), ...tag(negatives, "negative"), ...tag(neighbourRows, "neighbour")].join("\n") + "\n");
@@ -133,7 +137,7 @@ async function routing() {
     bars: b, missed, stolen,
   };
   writeFileSync(join(skillDir, "evals/routing-report.json"), JSON.stringify(report, null, 2) + "\n");
-  rmSync(tmp, { recursive: true, force: true });
+  if (report.pass) rmSync(tmp, { recursive: true, force: true });
   return report;
 }
 
@@ -206,10 +210,17 @@ async function outputQuality() {
   const ev = JSON.parse(readFileSync(join(skillDir, "evals/evals.json"), "utf8"));
   const cases = ev.evals || [];
   if (!cases.length) throw new Error("evals/evals.json has no cases");
+  // Finished trials are kept per skill version, so a re-run only repeats trials that errored or never ran.
+  const cacheFile = join(tmpdir(), `eval-out-${skill}-${info.output_hash.slice(0, 12)}.json`);
+  const cached = existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, "utf8")).filter((r) => !r.error) : [];
+  const done = new Set(cached.map((r) => `${r.case}|${r.condition}|${r.trial}`));
   const tasks = [];
-  for (const [ci, c] of cases.entries()) for (const cond of ["with_skill", "without_skill"]) for (let k = 0; k < trials; k++) tasks.push({ ci, c, cond, k });
-  console.log(`output quality: ${cases.length} cases × ${trials} trials × with/without skill = ${tasks.length} runs, plus one judge call each`);
-  const results = [];
+  for (const [ci, c] of cases.entries()) for (const cond of ["with_skill", "without_skill"]) for (let k = 0; k < trials; k++) {
+    if (!done.has(`${ci}|${cond}|${k}`)) tasks.push({ ci, c, cond, k });
+  }
+  console.log(`output quality: ${cases.length} cases × ${trials} trials × with/without skill; ${cached.length} done earlier, ${tasks.length} to run (each graded by a judge)`);
+  const results = [...cached];
+  const save = () => writeFileSync(cacheFile, JSON.stringify(results));
   let next = 0;
   async function worker() {
     while (next < tasks.length) {
@@ -224,6 +235,7 @@ async function outputQuality() {
       const g = r.error ? { error: r.error } : await grade(t.c, `${r.text}\n\n${filesIn(cwd)}`);
       rmSync(cwd, { recursive: true, force: true });
       results.push({ case: t.ci, condition: t.cond, trial: t.k, ...g });
+      save();
       process.stderr.write(`${t.cond.padEnd(13)} case ${t.ci + 1} trial ${t.k + 1}: ${g.error ? "error " + g.error : g.score.toFixed(2)}\n`);
     }
   }
@@ -259,6 +271,7 @@ async function outputQuality() {
     trials: results.map(({ verdicts, ...r }) => ({ ...r, failed: (verdicts || []).filter((v) => v.verdict !== "pass").map((v) => v.text) })),
   };
   writeFileSync(join(skillDir, "evals/output-report.json"), JSON.stringify(report, null, 2) + "\n");
+  if (report.pass) rmSync(cacheFile, { force: true });
   return report;
 }
 

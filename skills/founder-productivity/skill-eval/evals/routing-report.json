@@ -2,36 +2,33 @@
   "skill": "skill-eval",
   "pack": "utopia-founder-productivity",
   "kind": "routing",
-  "pass": false,
-  "failures": [
-    "only 1 runs per prompt (gate needs 3)",
-    "1 runs unscored (timeouts or limits); re-run"
-  ],
-  "routing_hash": "7099297e6a56b7d9b58acd712d80320924ac9a1fbe0c0c01af714632352fc811",
-  "date": "2026-10-28T08:15:10.613Z",
+  "pass": true,
+  "failures": [],
+  "routing_hash": "5ad0e0cae6aecd0cfe4186d60141a200585cbbbbc473c42aa9130dd4e4369d44",
+  "date": "2026-10-28T12:02:45.348Z",
   "model": "claude CLI default",
   "description_budget": 300000,
-  "runs_per_prompt": 1,
+  "runs_per_prompt": 3,
   "neighbours": [
     "scout-mindset-bias-check",
-    "concept-four-lenses-test",
-    "find-skills",
-    "bayesian-reasoning-calibration",
-    "so-what-stress-test",
-    "tdd-red-green-refactor",
     "research-claim-map",
-    "metrics-that-matter"
+    "repo-readiness-scan",
+    "concept-four-lenses-test",
+    "cold-offer-architect",
+    "security-auditor",
+    "find-skills",
+    "deployment-engineer"
   ],
   "counts": {
     "positives": 8,
     "negatives": 8,
-    "neighbour_prompts": 10
+    "neighbour_prompts": 8
   },
   "results": {
-    "recall": 0.857,
+    "recall": 1,
     "false_fires": 0,
     "neighbour_steals": 0,
-    "unscored_runs": 1
+    "unscored_runs": 0
   },
   "bars": {
     "min_recall": 0.8,
@@ -39,13 +36,6 @@
     "max_neighbour_steals": 1,
     "min_runs": 3
   },
-  "missed": [
-    {
-      "prompt": "Run static checks on every SKILL.md under skills/ and list broken paths, bad frontmatter and descriptions over the limit.",
-      "fired": {
-        "none": 1
-      }
-    }
-  ],
+  "missed": [],
   "stolen": []
 }

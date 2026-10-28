@@ -1,0 +1,178 @@
+{
+  "skill": "draft-nda",
+  "pack": "utopia-founder-productivity",
+  "kind": "output",
+  "pass": true,
+  "failures": [],
+  "output_hash": "730792165363e1b546f164fbda125f39fc4b7857338c3cfbf742e0b6d00241d3",
+  "date": "2026-10-28T12:39:18.302Z",
+  "model": "claude CLI default",
+  "trials_per_case": 3,
+  "results": {
+    "with_skill": 1,
+    "without_skill": 0.836,
+    "lift": 0.164,
+    "stable_cases": 1,
+    "errored_runs": 0
+  },
+  "bars": {
+    "min_with_skill_score": 0.8,
+    "min_lift": 0,
+    "min_stable_cases": 0.8,
+    "min_trials": 3
+  },
+  "cases": [
+    {
+      "case": 1,
+      "prompt": "Draft a mutual NDA between Utopia Studio FZ-LLC (Dubai Internet City, Dubai, UAE; signatory Abdelrahman Mattar, Partner)",
+      "with_skill": 1,
+      "without_skill": 0.952,
+      "trials": 3,
+      "stable": true
+    },
+    {
+      "case": 2,
+      "prompt": "I'm a founder about to pitch my ed-tech idea to an individual angel investor next week. I want a short one-way NDA where",
+      "with_skill": 1,
+      "without_skill": 0.667,
+      "trials": 3,
+      "stable": true
+    },
+    {
+      "case": 3,
+      "prompt": "Make an NDA for a contractor developer we're hiring for 3 months to work on our app's payment integration. Our company i",
+      "with_skill": 1,
+      "without_skill": 0.889,
+      "trials": 3,
+      "stable": true
+    }
+  ],
+  "trials": [
+    {
+      "case": 0,
+      "condition": "with_skill",
+      "trial": 1,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 0,
+      "condition": "with_skill",
+      "trial": 0,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 0,
+      "condition": "without_skill",
+      "trial": 0,
+      "score": 0.8571428571428571,
+      "failed": []
+    },
+    {
+      "case": 0,
+      "condition": "with_skill",
+      "trial": 2,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 0,
+      "condition": "without_skill",
+      "trial": 2,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 0,
+      "condition": "without_skill",
+      "trial": 1,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 1,
+      "condition": "with_skill",
+      "trial": 1,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 1,
+      "condition": "with_skill",
+      "trial": 0,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 1,
+      "condition": "without_skill",
+      "trial": 0,
+      "score": 0.6666666666666666,
+      "failed": []
+    },
+    {
+      "case": 1,
+      "condition": "with_skill",
+      "trial": 2,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 1,
+      "condition": "without_skill",
+      "trial": 1,
+      "score": 0.6666666666666666,
+      "failed": []
+    },
+    {
+      "case": 1,
+      "condition": "without_skill",
+      "trial": 2,
+      "score": 0.6666666666666666,
+      "failed": []
+    },
+    {
+      "case": 2,
+      "condition": "with_skill",
+      "trial": 1,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 2,
+      "condition": "without_skill",
+      "trial": 0,
+      "score": 0.8333333333333334,
+      "failed": []
+    },
+    {
+      "case": 2,
+      "condition": "without_skill",
+      "trial": 1,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 2,
+      "condition": "without_skill",
+      "trial": 2,
+      "score": 0.8333333333333334,
+      "failed": []
+    },
+    {
+      "case": 2,
+      "condition": "with_skill",
+      "trial": 0,
+      "score": 1,
+      "failed": []
+    },
+    {
+      "case": 2,
+      "condition": "with_skill",
+      "trial": 2,
+      "score": 1,
+      "failed": []
+    }
+  ]
+}
