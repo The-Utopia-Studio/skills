@@ -1,0 +1,21 @@
+{
+  "company_name": "Evos",
+  "short_name": "Evos",
+  "tagline": "Autonomous AI operators for logistics",
+  "logo": "",
+  "logo_on_dark": "",
+  "colors": {
+    "dark": "#14213D",
+    "accent": "#FF7A1A",
+    "text": "#1B1F24",
+    "light": "#F1F3F7"
+  },
+  "fonts": {
+    "family": "Inter",
+    "files": {"regular": "", "medium": "", "bold": ""}
+  },
+  "header_style": "dark",
+  "headline_case": "uppercase",
+  "corner_radius": 4,
+  "backed_by_line": "A Utopia Studio portfolio company"
+}

@@ -1,0 +1,61 @@
+{
+  "partner": {"name": "Milaha (Qatar Navigation Q.P.S.C.)", "short_name": "Milaha"},
+  "doc_label": "Collaboration one-pager",
+  "subtitle": "Autonomous AI operators for Milaha Logistics City: more volume through the same warehouses, without adding headcount.",
+  "location": "Doha, Qatar",
+  "date": "November 2026",
+  "rationale": {
+    "why": "Milaha has set a goal of semi- and fully automated warehousing at Logistics City and is merging shipping, ports and logistics into one platform. The bottleneck is the manual exception work between systems. Evos turns that work into autonomous AI operators trained on Milaha's own senior staff, so growth in trade volume does not mean growth in headcount.",
+    "their_priorities": [
+      {"title": "Automated, AI-driven warehousing", "detail": "Stated goal for Milaha Logistics City (NEXX MoU, June 2025)."},
+      {"title": "One integrated trade platform", "detail": "Shipping, ports and logistics merged into one sector from Q1 2026."},
+      {"title": "Cost and asset efficiency", "detail": "Lower total cost of ownership is a named aim of the 2026 restructuring."}
+    ]
+  },
+  "touchpoints": [
+    {
+      "title": "Use cases: revenue and cost",
+      "intro": "Where Evos moves Milaha's P&L, each tied to a priority above.",
+      "items": [
+        {"title": "Shipment exception handling", "text": "Delays, holds and document gaps triaged and resolved by an AI operator, with staff approving the edge cases.", "tag": "Target: 80%+ less handling time"},
+        {"title": "Customs and documentation checks", "text": "Declarations checked against shipment data before submission, cutting holds and penalties.", "tag": "Indicative: fewer customs holds"},
+        {"title": "Expert knowledge capture", "text": "The judgement of retiring operations veterans recorded and kept running as an agent.", "tag": "Protects know-how"}
+      ]
+    },
+    {
+      "title": "Our solution and proof",
+      "intro": "A full-stack platform already live in logistics operations.",
+      "items": [
+        {"title": "Live results", "label": "enterprise pilots", "text": "Exception handling cut from 15 to 2 hours per employee per week, 82% accuracy and 70% autonomy on day one."},
+        {"title": "Full stack, on-premise ready", "label": "deployment", "text": "Own hardware and models, deployed in under 24 hours, so data can stay inside Milaha."},
+        {"title": "Built by operators", "label": "team", "text": "Led by a former Uber logistics leader with 18 years in supply chain."}
+      ]
+    },
+    {
+      "title": "How we work together",
+      "intro": "Low-risk start, built to scale across Milaha's sectors.",
+      "items": [
+        {"title": "Shadow mode first", "text": "The agent runs beside the team for two weeks before acting on its own."},
+        {"title": "Arabic and English", "text": "Operator workflows and approvals in both languages for Qatar-based teams."},
+        {"title": "Utopia Studio in Doha", "text": "Local co-build, engineering and support through our venture studio partner."}
+      ]
+    }
+  ],
+  "success": {
+    "ours": [
+      {"commitment": "Deploy and tune for Milaha", "detail": "A dedicated Evos team configures the operator on Milaha's systems and data."},
+      {"commitment": "Measure and report", "detail": "Weekly results on time saved, accuracy and autonomy against the agreed baseline."}
+    ],
+    "theirs": [
+      {"commitment": "One pilot at Logistics City", "detail": "Access to one exception-handling team, its systems and historical cases."},
+      {"commitment": "A dedicated point of contact", "detail": "One owner who aligns operations and IT behind the pilot."}
+    ],
+    "outcome": "In 90 days: one team running with an AI operator, results measured, and a case for rollout."
+  },
+  "next_steps": [
+    {"step": "Site visit and demo", "detail": "Walk the exception workflow at Logistics City; live Evos demo.", "when": "November 2026"},
+    {"step": "Pilot scope or MOU", "detail": "Agree the team, data access and success metrics.", "when": "December 2026"},
+    {"step": "Joint announcement", "detail": "Press release once the pilot shows results.", "when": "Q1 2027"}
+  ],
+  "contact": {"name": "Urav Shah", "role": "Founder & CEO, Evos", "web": "getevos.ai"}
+}
