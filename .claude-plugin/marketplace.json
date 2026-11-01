@@ -48,6 +48,17 @@
       "name": "utopia-os-channel",
       "source": "./os-plugins/utopia-os-channel",
       "description": "Pilot: work you approve with Cobi in UtopiaOS arrives in your open Claude Code session by itself. Uses Claude Code channels (research preview): start Claude with claude --dangerously-load-development-channels plugin:utopia-os-channel@skills. Install utopia-os too."
+    },
+    {
+      "name": "shunt",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/spotify/portal-ai-plugins.git",
+        "path": "plugins/shunt",
+        "ref": "main",
+        "sha": "aa252eb21df5bbf32b0beb45f84a2c03341ccad8"
+      },
+      "description": "Spotify's token saver: hooks block full reads of files over 350 lines and redirect them to AiKA, which reads the files on your Spotify Portal instance. Needs Portal with AiKA and portal-cli logged in; without them, large files can only be read in sections. Lives in Spotify's repo, pinned to a reviewed commit."
     }
   ]
 }
