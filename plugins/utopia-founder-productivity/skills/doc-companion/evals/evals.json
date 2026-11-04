@@ -1,0 +1,53 @@
+{
+  "skill_name": "doc-companion",
+  "risk": "normal",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm sending our Q3 investor update to the LPs on Friday. Some of them will just drop it into ChatGPT and ask questions. Make it AI-ready so the tool doesn't misread it. Here's the gist: 6 pages, draft v2 dated 28 Oct, owner is me (Ahmad, investments). Page 3 has portfolio marks that are internal estimates not audited. Page 5 lists a 'pipeline' of 4 deals, none signed. We get asked every quarter whether the marks are audited and whether pipeline deals are committed. Don't let an AI quote the marks to anyone or call the pipeline deals investments.",
+      "expected_output": "A companion for the investor update: machine-readable frontmatter (document, owner Ahmad, audience LPs, status draft v2, date 28 Oct, last_verified, confidentiality), a purpose paragraph that names it as a draft quarterly update, a Read-this-first block, key facts tagged [Fact]/[Assumption]/[Hypothesis] with the marks tagged as unaudited estimates, a structure map, an FAQ built from the two recurring questions (marks audited? pipeline committed?) plus at least one 'not covered; ask Ahmad' item, an explicit Do-not list (no quoting marks externally, no calling pipeline deals investments), definitions for LP and any shorthand, related documents, change log. Also an embedded 'Note for AI assistants' block and a three-to-five sentence header paragraph for the email. Under 700 words for the sidecar. A cold-read test listing what an AI would wrongly assume (e.g. marks are audited, pipeline is committed, final version) and a self-test plan.",
+      "assertions": [
+        "Produces a sidecar companion with frontmatter including owner, audience, status (draft), version, date and last_verified",
+        "Tags the portfolio marks as [Assumption] or explicitly unaudited, and the pipeline deals as not committed, rather than presenting either as fact",
+        "Includes a Do-not section with imperative lines covering not quoting the marks externally and not describing pipeline deals as investments",
+        "Includes an FAQ that uses the owner's two real recurring questions and at least one question answered as not covered with the owner named",
+        "Writes out LP and any other acronym in plain words in a Definitions section",
+        "Produces the embedded 'Note for AI assistants' block and a short header paragraph in addition to the sidecar",
+        "Runs or describes the cold-read test before writing, listing the wrong assumptions a context-free AI would make",
+        "Does not restate or summarise the update's content beyond what is needed to correct assumptions; sidecar is under about 700 words"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Add a context note to this pricing sheet before I share it with a fellow. It's a Google Sheet with three tabs: 'Tiers' (our proposed pricing for the fellow's product, 3 tiers), 'Comps' (competitor prices we scraped, some from 2024), 'Model' (a revenue model with placeholder volumes). It's a working draft. I don't have time for questions, just do it from what I've told you.",
+      "expected_output": "A companion drafted from the description alone, with every owner-only field tagged [Assumption] and a 'To confirm with owner' list at the top. Frontmatter with status draft, type spreadsheet, owner unknown or as given. Read-this-first explains it is a working draft for a fellow, not a price list. Key facts tag the Tiers as [Hypothesis] (proposed), the Comps as [Assumption] with dates flagged as possibly stale (2024), and the Model volumes as placeholders. A structure map per tab marking Model volumes as placeholders. FAQ drafted and tagged as assumed. Do-not lines: do not quote tier prices as final, do not treat 2024 comps as current, do not treat the model as a forecast. Definitions. Embedded block and header paragraph. No invented facts.",
+      "assertions": [
+        "Does not ask clarifying questions; drafts from the given description and marks owner-only fields as [Assumption] with a 'To confirm with owner' list",
+        "Covers all three tabs in a structure map and marks the Model volumes as placeholders",
+        "Tags the proposed tiers as [Hypothesis] or proposed, and the 2024 competitor prices as assumptions that may be stale",
+        "Includes Do-not lines that stop an AI treating the tiers as final prices or the model as a forecast",
+        "Includes frontmatter with status, document type, and last_verified",
+        "Produces sidecar, embedded block and header paragraph",
+        "Does not invent an owner name, prices, or competitor names that were not given"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write a companion file for our studio's Year 2 operating model deck that we present to QDB next week. 24 slides, final, dated 3 Nov 2026, owner Ollie. Slides 18 to 21 are budget scenarios A, B and C where only B is the recommendation; slides 22 to 24 are an appendix with team structure. The KPIs on slide 9 are the targets we agreed with QDB in the SLA, the rest of the numbers are our plan. People keep asking which scenario we're actually proposing and whether the headcount on slide 23 is approved. It's Qatar-first but the OS could go global later.",
+      "expected_output": "A companion for a final deck: frontmatter (owner Ollie, audience Qatar Development Bank, status final, date 2026-11-03, geography both or qatar-first with global intent, confidentiality internal). Purpose names it as the Year 2 operating model presentation. Read-this-first explains The Utopia Studio, the Qatar Development Bank relationship, the service level agreement, and the Qatar-first / global-later geography. Key facts tag slide 9 KPIs as [Fact] (agreed in the SLA) and the plan numbers as [Assumption] or [Hypothesis]. Structure map marks slides 18 to 21 as scenarios with B the recommendation and 22 to 24 as appendix. FAQ answers 'which scenario' (B) and 'is headcount approved' (not approved, a proposal, or not covered with Ollie named). Do-not lines: do not present scenarios A or C as the proposal, do not describe slide 23 headcount as approved. Definitions write out QDB, SLA, KPI, OS. Embedded block and header paragraph.",
+      "assertions": [
+        "States clearly that scenario B is the recommendation and that A and C are alternatives, in both the structure map and the FAQ",
+        "Tags the slide 9 KPIs as [Fact] agreed under the service level agreement and the remaining plan numbers as [Assumption] or [Hypothesis]",
+        "Answers the headcount question without claiming approval, either as a proposal or as not covered with the owner named",
+        "Writes out QDB, SLA, KPI and OS in plain words in Definitions",
+        "States the geography (Qatar-first with global intent) in Read-this-first",
+        "Marks slides 22 to 24 as appendix in the structure map",
+        "Includes frontmatter with status final, date 2026-11-03, owner Ollie and last_verified",
+        "Produces sidecar, embedded block and header paragraph, and the sidecar stays under about 700 words"
+      ],
+      "files": []
+    }
+  ]
+}

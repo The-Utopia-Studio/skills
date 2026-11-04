@@ -1,0 +1,17 @@
+# expected<TAB>group<TAB>prompt  (8 should-fire, 8 near misses; near misses name the skill that should win)
+doc-companion	doc-companion	I'm sending our Q3 update to the LPs and half of them will drop it straight into ChatGPT. Make it AI-ready so the tool doesn't assume the marks are audited or the pipeline is signed.
+doc-companion	doc-companion	Write a companion file for this pilot proposal PDF so any AI reading it knows it's a draft, who owns it, and that the fee isn't fixed.
+doc-companion	doc-companion	Add a context note and FAQ to our Year 2 operating model deck before it goes to QDB. People keep asking which budget scenario we're proposing.
+doc-companion	doc-companion	Can you make this pricing sheet agent-native? I want a sidecar that explains the tabs, flags which numbers are placeholders, and says what not to quote.
+doc-companion	doc-companion	Prep this fellow pack for sharing: a short note for AI assistants that explains what the studio is, what the documents are for, and which parts are still open.
+doc-companion	doc-companion	Write an llms.txt-style note for this research memo so a model reading it cold understands the purpose, the status and the terms we use.
+doc-companion	doc-companion	Before I share the handover pack with the new CTO, give it a context layer so an AI tool won't treat the roadmap dates as commitments or the shorthand as industry terms.
+doc-companion	doc-companion	This contract draft is going to the counterparty's lawyers who use AI to read everything. Pair it with a note on what's agreed, what's still open, and what they shouldn't infer.
+agents-md-writer	doc-companion	Write an AGENTS.md for our Next.js monorepo so Cursor and Claude Code know the commands, the stack and what not to touch.
+investor-faq	doc-companion	Write the investor FAQ for our seed raise: the hard objections and how we answer them.
+investor-fact-ledger	doc-companion	Our deck says 1.2M ARR and the memo says 1.1M. Set up a fact ledger so the numbers stay consistent across everything we send investors.
+prd-development|none	doc-companion	Write the PRD for the fellow's scheduling product from these discovery notes.
+skill-creator|none	doc-companion	Turn our weekly board-update process into a skill Claude can run.
+summarize-interview|none	doc-companion	Summarise this 40-page market report into one page for me.
+obsidian-company-map|proofeditor-docs|none	doc-companion	Set up a knowledge base for all our studio documents so we can search across them.
+grammar-check|copy-editing|none	doc-companion	Proofread this memo and tighten the language before I send it.

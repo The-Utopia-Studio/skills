@@ -5,7 +5,7 @@
 
 **The best GTM skill pack for AI agents** — plus Product, Investments, and Founder Productivity.
 
-254 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
+255 production skills for Claude Code, Cursor, and any tool that supports the [Agent Skills Standard](https://agentskills.io). Operator judgment, not tip lists.
 
 > **Site:** [the-utopia-studio.github.io/skills](https://the-utopia-studio.github.io/skills) · **Install:** [INSTALL.md](./INSTALL.md) (~2 minutes)
 
@@ -73,7 +73,7 @@ npx skills add The-Utopia-Studio/skills
 | **GTM** | `utopia-gtm` `v3.0.0` | 50 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
 | **Product** | `utopia-product` `v3.0.0` | 134 | Discovery, PRDs, design, build, deploy, product metrics |
 | **Investments** | `utopia-investments` `v3.0.0` | 42 | DD, modeling, valuation, capital markets, fundraising decks |
-| **Founder Productivity** | `utopia-founder-productivity` `v3.0.0` | 28 | Onboarding, legal, Obsidian, agents, meta tools |
+| **Founder Productivity** | `utopia-founder-productivity` `v3.0.0` | 29 | Onboarding, legal, Obsidian, agents, meta tools |
 
 Exact lists: [`packs.config.json`](./packs.config.json).
 
