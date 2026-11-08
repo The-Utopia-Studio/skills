@@ -1,0 +1,49 @@
+{
+  "skill": "doc-companion",
+  "pack": "utopia-founder-productivity",
+  "kind": "routing",
+  "pass": true,
+  "failures": [],
+  "routing_hash": "9b230a558fdac5ffa2400c862cbb0cd3ea10d487337bc27381e6062a873991a8",
+  "date": "2026-11-04T06:02:05.475Z",
+  "model": "claude CLI default",
+  "description_budget": 300000,
+  "runs_per_prompt": 3,
+  "neighbours": [
+    "agents-md-writer",
+    "repo-readiness-scan",
+    "ppt-template-to-skill",
+    "cli-agent-dx-score",
+    "fellow-level-ladder",
+    "product-marketing-context",
+    "skill-eval",
+    "ui-design-brief"
+  ],
+  "counts": {
+    "positives": 8,
+    "negatives": 8,
+    "neighbour_prompts": 10
+  },
+  "results": {
+    "recall": 0.958,
+    "false_fires": 0,
+    "neighbour_steals": 0,
+    "unscored_runs": 0
+  },
+  "bars": {
+    "min_recall": 0.8,
+    "max_false_fires": 1,
+    "max_neighbour_steals": 1,
+    "min_runs": 3
+  },
+  "missed": [
+    {
+      "prompt": "This contract draft is going to the counterparty's lawyers who use AI to read everything. Pair it with a note on what's agreed, what's still open, and what they shouldn't infer.",
+      "fired": {
+        "utopia-founder-productivity:doc-companion": 2,
+        "none": 1
+      }
+    }
+  ],
+  "stolen": []
+}
