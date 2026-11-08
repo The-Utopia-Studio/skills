@@ -1,0 +1,87 @@
+{
+  "skill_name": "qsp-exposure-triage",
+  "architecture_note": "Reset from a combined QSP+STG scoring model (crypto/behavioral/execution weighted composite, Branches A-G) to a QSP-only skill. QSP and STG are independent products: QSP is non-intrusive execution/telemetry measurement; STG is a separate behavioral-trust product and is out of scope here entirely -- no STG terminology, scoring, correlation, or branch logic anywhere in the active skill. Evals 1-3 below ran under the deprecated combined model and are kept as historical evidence per the reset decision; each is annotated with what is superseded/out-of-scope vs. what remained QSP-relevant and was carried forward. Eval 4 is the first run under the current QSP-only architecture.",
+  "evals": [
+    {
+      "id": 1,
+      "superseded": true,
+      "superseded_note": "Combined QSP+STG model. Finding 2 in this run (forged SAML tokens, DCSync, domain-trust reconfiguration, 'impossible travel') is entirely STG/identity material, out of scope for the current QSP-only skill. Finding 1 and the dormancy/disk-check/disguised-telemetry/DGA evidence were QSP-relevant and carried forward into references/common-mistakes.md (mistake #3) and the general Q4 pattern. The ~90/100 score and BLOCK/Emergency call relied on the STG finding for its strongest corroboration -- a QSP-only assessment of this scenario would land at a lower-confidence, lower-urgency call. Not re-run under the new architecture.",
+      "prompt": "Run the skill against the CISA SolarWinds Orion / SUNBURST + Active Directory/M365 compromise TTP writeup (March 17, 2021, updated April 15, 2021) as a first real sandbox test. Produce a complete Decision Brief: evidence chain, score, branch taken, uncertainties, and recommended action.",
+      "expected_output": "Should not classify the SolarWinds code-signing certificate / ADFS token-signing key compromise as ordinary crypto technical debt (Branch A). Should recognize the valid-signature-but-deviant-behavior pattern (Branch D) escalating to a correlated behavioral+execution anomaly (Branch C) via the forged-SAML/DCSync/domain-trust findings. Should reach a BLOCK/Emergency call (~90/100), matching the real-world Emergency Directive 21-01 outcome, without relying on the later SVR attribution. Should explicitly decline to name an attacker (Common Mistake #15) and flag kinematic/STG human-behavioral coverage as out of scope for this largely-automated intrusion.",
+      "assertions": [
+        "Does not file strong-crypto-with-stolen-key-material under Branch A crypto-debt",
+        "Treats the valid SolarWinds signature as non-exculpatory (Branch D)",
+        "Corroborates via an independent STG signal in the same window before escalating to Branch C",
+        "Produces Observation→Interpretation→Hypothesis→Evidence→Confidence for at least the top findings",
+        "Declines to attribute to a specific actor or nation-state",
+        "States what remains uncertain, not just what was found",
+        "Closes with what a conventional compliance-only audit would have missed"
+      ],
+      "outcome": "Ran once against the source document under the deprecated combined model. Score landed at ~90/100 (Crypto 88, Behavioral 92, Execution 88) -> BLOCK/Emergency, matching the real Emergency Directive 21-01 call. Correctly declined attribution and flagged the kinematic/STG scope limit. Found one real gap: Branch A had no branch for strong-crypto-with-stolen-key-material -- fixed by adding Branch G under the old model. That fix and Branch G no longer exist in the QSP-only architecture; see architecture_note.",
+      "files": ["solarwinds-2021-decision-brief.md"]
+    },
+    {
+      "id": 2,
+      "superseded": true,
+      "superseded_note": "Entirely out of scope. This run tested Branches E/F and STG's identity, behavioral, contextual, and kinematic concepts exclusively -- nothing in it (scenario, branches, score, or its four Gotchas) carries forward into the QSP-only skill. Kept purely as historical record of the combined-model experiment.",
+      "prompt": "Run a second real sandbox evaluation using an AI-agent automation scenario where routine actions are delegated to the AI, but a high-risk transaction/button must remain under authorized human control. Test the STG identity, behavioral, contextual, and human-input/kinematic concepts. Produce a Decision Brief only; do not modify the skill.",
+      "expected_output": "Should confirm Branch E's boundary held on the AI-agent side (routine actions automated, high-risk vendor-bank-change approval correctly queued for a human rather than auto-approved). Should apply Branch F to the human approval event: identity and authorization both valid, but off-hours timing, unrecognized device, kinematic mismatch, and a corroborating antecedent account anomaly (helpdesk touching MFA settings) treated as an added risk signal rather than automatic compromise, with benign explanations actively checked. Should not let a single kinematic signal alone drive the verdict (Common Mistake #11). Should apply and clearly state the attack-path-criticality override when the raw score lands below the CONTAIN threshold despite flagging the system's own designated highest-risk action.",
+      "assertions": [
+        "Confirms the AI agent kept the high-risk action outside its own automation (Branch E)",
+        "Applies Branch F rather than jumping straight to a compromise verdict from identity+auth-valid-but-behavior-off",
+        "Treats kinematic mismatch as one of several corroborating signals, not sole proof (Common Mistake #11)",
+        "Checks and rules out at least one plausible benign explanation before escalating",
+        "States the mechanism of compromise as unresolved rather than picking one",
+        "Applies the score-vs-attack-path override explicitly when raw score underserves the action's criticality",
+        "Closes with what a conventional access-control/IAM review would have missed"
+      ],
+      "outcome": "Ran once against the composite scenario under the deprecated combined model. Raw score landed at ~39/100 (Crypto 8, Behavioral 84, Execution/QSP Insufficient Evidence/nominal 10). This run's entire evidence base is STG; not applicable to and not re-run under the QSP-only architecture.",
+      "gotchas_observed": [
+        "QSP may be structurally inapplicable to an entire category of investigation (Branch E/F human-approval-flow scenarios have no natural system/agent execution-timing or resource-utilization signal to measure) -- superseded: under the QSP-only architecture, such scenarios are simply out of scope for this skill entirely, which is the honest answer rather than a gap to fix.",
+        "The score-vs-attack-path override worked as designed here, but only because it was applied deliberately -- carried forward as motivation for making Q5/Q6 named, explicit branches in the QSP-only architecture rather than an ad hoc override.",
+        "Branch F depends on a kinematic baseline per individual -- STG concept, out of scope for the QSP-only skill.",
+        "Cross-account STG correlation isn't named in the branch logic -- STG concept, out of scope for the QSP-only skill."
+      ],
+      "files": ["ai-agent-human-control-decision-brief.md"]
+    },
+    {
+      "id": 3,
+      "superseded": true,
+      "superseded_note": "Scenario and evidence were already QSP-native (STG reported clean throughout, not correlated against), but the scoring (weighted composite) and branch language (Branch D, Branch C) refer to the deprecated combined model. This run's three Gotchas directly drove the architecture reset and are resolved by construction in the current skill -- see SKILL.md Gotchas. The canonical, current version of this scenario is references/worked-example.md, re-scored under the QSP-only gates/factors model with no cross-product framing.",
+      "prompt": "Run a third real sandbox evaluation, specifically QSP-heavy: a trusted production component or service shows a persistent execution/telemetry anomaly detectable through non-intrusive telemetry and metadata, while identity/authorization and cryptographic posture initially appear normal. Test whether the skill can distinguish benign workload variance from a meaningful execution/side-channel anomaly, and whether QSP evidence can independently drive the decision without relying on SolarWinds-specific facts. Do not modify SKILL.md, references, scoring rubric, or playbook.",
+      "expected_output": "Should isolate a narrow, reproducible, trigger-gated execution/resource/egress anomaly from a co-occurring but unrelated fleet-wide latency increase correctly attributed to legitimate traffic growth, rather than conflating the two. Should keep Cryptographic Exposure and Behavioral Trust Deviation genuinely low (checked-and-clean, not just unexamined) so the run isolates QSP. Should test, honestly, whether QSP alone can reach Contain/Block on raw score under the current 20/40/40 weighting -- and report the answer rather than inflating other dimensions to get there. Should apply the score-vs-attack-path override explicitly if escalating past what the raw score supports. Should not claim malicious intent with more confidence than the evidence supports.",
+      "assertions": [
+        "Distinguishes the real trigger-gated anomaly from the benign, separately-explained fleet-wide latency increase",
+        "Keeps Crypto and STG scores low because they were checked and found clean, not merely unexamined",
+        "Reports honestly whether QSP alone reaches Contain/Block on raw score under current weights, without inflating other dimensions to force the outcome",
+        "Applies and states the attack-path-criticality override explicitly if escalating beyond the raw score",
+        "Leaves intent (deliberate vs. unintentional defect) as an open uncertainty rather than declaring a backdoor confirmed",
+        "Does not reuse SolarWinds-specific facts (dormancy period, disk-free check, SUNBURST JSON schema, SAML/DCSync) as load-bearing evidence",
+        "Closes with what a conventional monitoring/dependency-scan review would have missed"
+      ],
+      "outcome": "Ran once against the composite scenario (RankSvc / featurepack dependency) under the deprecated combined model. Raw score landed at ~40/100 (Crypto 5, Behavioral 8, Execution/QSP 90). Confirmed QSP could not reach Contain/Block on raw score alone under the old weights when Crypto and STG were genuinely near-zero -- this finding directly motivated removing the fixed cross-product weighting. Correctly separated the real anomaly from the co-occurring benign marketing-driven latency increase; that discipline was carried forward unchanged into the QSP-only worked example.",
+      "gotchas_observed": [
+        "QSP structurally capped at ~40-44 points regardless of evidence strength under the old 20/40/40 weighting -- RESOLVED by construction in the QSP-only architecture (no fixed cross-product weight to share).",
+        "QSP/STG classification boundary undefined for service-to-infrastructure signals (was an unexpected DNS resolution a QSP or STG finding?) -- RESOLVED by construction: STG is out of scope entirely for this skill now, so there is no second product to draw a boundary against.",
+        "Trend/velocity not a first-class factor -- RESOLVED: now the named Q5 trajectory override and an explicit scoring factor."
+      ],
+      "files": ["qsp-heavy-service-decision-brief.md"]
+    },
+    {
+      "id": 4,
+      "prompt": "Re-evaluate the eval-3 scenario (RankSvc / featurepack dependency execution anomaly) under the new QSP-only architecture: gates, evidence ladder, gates-then-factors scoring, and Q1-Q7 branches, with zero STG references. Validate that the redesign resolves eval 3's three Gotchas and that a QSP-only assessment can still reach a strong, well-supported call without any cross-product corroboration.",
+      "expected_output": "Should apply Q4 (change-correlated) and Q3 (multi-signal corroboration, entirely within QSP's own signal categories) plus the Q5 trajectory override, all without referencing STG, identity, or behavioral concepts anywhere. Should pass all three scoring gates explicitly. Should reach a high score under the new gates-then-factors model, demonstrating QSP can independently support a strong recommendation once it is not sharing a fixed weight with unrelated dimensions. Should leave deliberate-vs-unintentional-defect intent explicitly open.",
+      "assertions": [
+        "Zero STG/identity/behavioral/kinematic terminology anywhere in the brief",
+        "All three scoring gates (baseline, reproducibility, benign-cause check) addressed explicitly before scoring",
+        "Corroboration stays entirely within QSP's own signal categories (Q3), no cross-product signal invoked",
+        "Change-correlation (Q4) identified as the primary lead, explicitly agnostic to signature/provenance validity",
+        "Trajectory override (Q5) stated explicitly, not folded silently into the score",
+        "Reaches a clearly strong recommendation without needing STG corroboration to get there",
+        "Leaves intent unresolved rather than declaring the cause deliberate"
+      ],
+      "outcome": "Ran once under the new architecture -- see references/worked-example.md for the full write-up (kept in references/ rather than evals/ since it now serves as the skill's canonical worked example, not just a test record). All three gates passed. Q3 (3 independent signal categories, same trigger/window) + Q4 (onset aligned exactly with the featurepack v3.4 bump) + Q5 (growing trigger-matching traffic) all applied simultaneously. Score: Corroboration 40 + Magnitude 30 + Trigger/trajectory 30 = 100/100 -> Escalate, containment recommended. Confirms eval 3's structural cap is gone: the same underlying evidence that maxed out at ~40/100 under the old weighted-composite model now scores 100/100 on its own terms, with no STG reference anywhere in the reasoning. Intent (deliberate vs. unintentional defect) left explicitly open, matching the skill's charter that QSP characterizes, it does not verdict.",
+      "files": ["../references/worked-example.md"]
+    }
+  ]
+}
