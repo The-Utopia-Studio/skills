@@ -1,0 +1,170 @@
+{
+  "option": "A",
+  "orientation": "landscape",
+  "slug": "dextrum-lp-portfolio-highlight",
+  "stage": "seed",
+  "_provenance": {
+    "reported": "Positioning, the problem and solution, the three thesis claims, CEEP, control validation status, SHA-256 provenance, ISAE 3000 mapping, the CCUS MRV wedge and the founder record come from Dextrum's own general-intro one pager (Sept 2026) and the Dextrum brand tokens.",
+    "illustrative": "Founding year, headcount and HQ are simulated. Everything else on this page is reported by the company or evidenced by the fund, which is why option A carries no valuation, multiple or IRR: this register reports standing, not the round."
+  },
+  "meta": {
+    "company": "Dextrum",
+    "logo": "assets/dextrum-logo-blue.svg",
+    "docLabel": "LP brief",
+    "stage": "Seed",
+    "asOf": "Q3 2026",
+    "titleLabel": "Company",
+    "headline": "A clearing layer for the number that settles the barrel.",
+    "pairLabel": "The problem, and the fix",
+    "thesisLabel": "Why we backed it",
+    "metricsLabel": "Standing",
+    "tagline": "From Insight to Impact",
+    "confidential": "CONFIDENTIAL · NOT FOR REDISTRIBUTION",
+    "page": "PG 01"
+  },
+  "problem": {
+    "title": "The problem",
+    "lead": "One number settles the barrel. Only one party can compute it.",
+    "points": [
+      {
+        "lead": "The operator owns the maths.",
+        "body": "Allocation, lifting and valuation are computed inside its own systems. Everyone else takes the result on trust."
+      },
+      {
+        "lead": "Partners re-derive blind.",
+        "body": "From statements, weeks later, with no access to source records. Disputes surface at audit, not at close."
+      },
+      {
+        "lead": "Oversight arrives late.",
+        "body": "Regulators and auditors sample after the period is shut. The exposure has been open for months."
+      }
+    ],
+    "bottomLabel": "Cost today",
+    "bottom": "Entitlements disputed period by period, restatements, an audit trail assembled from email."
+  },
+  "solution": {
+    "title": "The solution",
+    "lead": "A clearing layer for the entitlement number: computed once, checkable by every counterparty.",
+    "points": [
+      {
+        "lead": "Reads.",
+        "body": "Read-only into meters, allocation systems and operator ERPs. Nothing replaced, nothing re-keyed."
+      },
+      {
+        "lead": "Re-derives.",
+        "body": "Recomputes allocation, lifting and valuation under the terms already signed."
+      },
+      {
+        "lead": "Proves.",
+        "body": "Stamps a tamper-evident record. Every party checks the same result at close."
+      }
+    ],
+    "bottomLabel": "Replaces",
+    "bottom": "The reconciliation cycle. Maps to ISAE 3000. Priced per asset, inside the perimeter."
+  },
+  "thesis": {
+    "points": [
+      {
+        "title": "Custody, not capability",
+        "body": "Every party holds the data. None holds a record the others accept without redoing the work. That gap does not close from inside one operator."
+      },
+      {
+        "title": "Written from the operator's seat",
+        "body": "Forty years of fiscal practice encoded as deterministic controls. Controls decide; the advisory layer never sits in the verification path."
+      },
+      {
+        "title": "No incumbent passes all three",
+        "body": "Continuous, cross-party and audit-defensible at once. Continuous means every period, not a sampled look-back."
+      }
+    ]
+  },
+  "cards": [
+    {
+      "kind": "info",
+      "title": "Key company information",
+      "columns": 2,
+      "items": [
+        {
+          "label": "Sector",
+          "value": "Fiscal verification, oil and gas",
+          "mono": false
+        },
+        {
+          "label": "Product state",
+          "value": "Working MVP, live",
+          "mono": false,
+          "state": "BOUND"
+        },
+        {
+          "label": "Controls implemented",
+          "value": "C-001, C-002, C-003",
+          "state": "BOUND"
+        },
+        {
+          "label": "Provenance",
+          "value": "SHA-256",
+          "state": "BOUND"
+        },
+        {
+          "label": "Assurance mapping",
+          "value": "ISAE 3000",
+          "mono": false,
+          "state": "BOUND"
+        },
+        {
+          "label": "Founder",
+          "value": "Jamal Kamaludin",
+          "mono": false,
+          "state": "REPORTED"
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "value": "40",
+      "unit": "+",
+      "label": "Years operator side",
+      "state": "REPORTED"
+    },
+    {
+      "value": "3",
+      "label": "Controls implemented",
+      "state": "BOUND",
+      "note": "C-001 to C-003"
+    },
+    {
+      "value": "0",
+      "label": "Systems replaced",
+      "state": "BOUND",
+      "note": "Read-only by design"
+    },
+    {
+      "value": "4",
+      "label": "Party types served",
+      "state": "REPORTED",
+      "note": "Operator, partner, regulator, auditor"
+    }
+  ],
+  "logos": {
+    "label": "OUTPUT MAPS TO",
+    "items": [
+      {
+        "name": "ISAE 3000"
+      },
+      {
+        "name": "SHA-256 provenance"
+      },
+      {
+        "name": "PSC fiscal terms"
+      },
+      {
+        "name": "JV accounting"
+      },
+      {
+        "name": "CCUS MRV"
+      }
+    ],
+    "note": "Standards and frameworks the record has to satisfy. Replace with organisation marks once customers are on the record."
+  }
+}
