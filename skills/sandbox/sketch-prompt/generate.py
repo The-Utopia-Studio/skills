@@ -81,8 +81,6 @@ def build_workflow(prompt_text, width=1024, height=1024, seed=None):
         }
 
         # Map widget values based on node type
-        wv = node.get("widgets_values", [])
-
         if node_type == "EmptyLatentImage":
             api_node["inputs"] = {
                 "width": width,

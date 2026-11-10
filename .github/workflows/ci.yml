@@ -20,6 +20,11 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+      - name: Lint Python helpers (ruff)
+        run: |
+          python3 -m pip install --quiet ruff
+          ruff check .
+
       - name: Validate marketplace
         run: node scripts/validate-marketplace.mjs
 

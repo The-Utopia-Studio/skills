@@ -18,7 +18,8 @@
     "test:skills": "node --test scripts/skill-behavior.test.mjs",
     "eval:skill": "node scripts/eval-skill.mjs",
     "gate": "python3 scripts/skill_gate.py check",
-    "gate:budget": "python3 scripts/skill_gate.py budget"
+    "gate:budget": "python3 scripts/skill_gate.py budget",
+    "lint": "ruff check ."
   },
   "repository": {
     "type": "git",

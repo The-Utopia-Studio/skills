@@ -203,7 +203,6 @@ def run_check(base):
             notes.append(f"WAIVER for {name}: {waiver.splitlines()[0][:200]}")
 
     total = listing_chars(head_cfg, dirs)
-    base_total = None
     if cfg["max_listing_chars"] and total > cfg["max_listing_chars"]:
         errors.append(f"skill listing is {total:,} chars, over the budget of {cfg['max_listing_chars']:,}. "
                       "Shorten descriptions, retire a skill, or raise max_listing_chars in scripts/skill-gate.config.json and say why in the PR")

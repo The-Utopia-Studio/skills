@@ -1,0 +1,18 @@
+# Python lint for skill helper scripts and repo tooling.
+# plugins/ is generated from skills/ by build-packs.sh (drift-checked in CI);
+# docs/ holds the vendored public site. Neither is linted.
+extend-exclude = ["plugins", "docs"]
+
+# Helpers run on whatever python3 the user has; do not assume new syntax.
+target-version = "py38"
+
+[lint]
+# Bug-class rules only, deliberately conservative so lint is green today
+# across 200+ shipped helper scripts without style churn:
+#   E711/E712  comparison to None/True/False with ==
+#   E722       bare except
+#   E9         syntax / IO errors
+#   F821       undefined names
+#   F841       unused local variables
+# Tighten per-skill as files are touched.
+select = ["E711", "E712", "E722", "E9", "F821", "F841"]

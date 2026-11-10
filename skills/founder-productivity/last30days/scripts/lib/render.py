@@ -1026,7 +1026,7 @@ def _shorten_polymarket_title(title: str) -> str:
     # Pattern: "<Subject> visit <Place>" -> "<Place> visit"
     m = re.match(r"^(.+?)\s+visit\s+(?:the\s+)?(.+)$", t, flags=re.IGNORECASE)
     if m:
-        subject, place = m.group(1), m.group(2)
+        place = m.group(2)
         t = f"{place} visit"
 
     t = t.strip()
