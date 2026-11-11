@@ -71,7 +71,7 @@ npx skills add The-Utopia-Studio/skills
 | Module | Pack | Skills | Covers |
 |--------|------|--------|--------|
 | **GTM** | `utopia-gtm` `v3.0.0` | 50 | Seven sub-modules: strategy, comms, enablement, CS, BD, engineering, IP |
-| **Product** | `utopia-product` `v3.0.0` | 134 | Discovery, PRDs, design, build, deploy, product metrics |
+| **Product** | `utopia-product` `v3.0.1` | 134 | Discovery, PRDs, design, build, deploy, product metrics |
 | **Investments** | `utopia-investments` `v3.0.0` | 42 | DD, modeling, valuation, capital markets, fundraising decks |
 | **Founder Productivity** | `utopia-founder-productivity` `v3.0.1` | 28 | Onboarding, legal, Obsidian, agents, meta tools |
 

@@ -22,7 +22,7 @@ jobs:
 
       - name: Lint Python helpers (ruff)
         run: |
-          python3 -m pip install --quiet ruff
+          python3 -m pip install --quiet ruff==0.17.4
           ruff check .
 
       - name: Validate marketplace

@@ -17,7 +17,7 @@
       "name": "utopia-product",
       "source": "./plugins/utopia-product",
       "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-      "version": "3.0.0"
+      "version": "3.0.1"
     },
     {
       "name": "utopia-investments",
