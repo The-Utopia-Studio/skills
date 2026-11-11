@@ -34,8 +34,8 @@ def parse_args() -> argparse.Namespace:
     basis.add_argument("--population", type=float, help="Total potential customers.")
 
     parser.add_argument("--arpu", type=float, help="Annual revenue per customer.")
-    parser.add_argument("--sam-share", required=True, help="SAM share of TAM (0-1 or 0-100%).")
-    parser.add_argument("--som-share", required=True, help="SOM share of SAM (0-1 or 0-100%).")
+    parser.add_argument("--sam-share", required=True, help="SAM share of TAM: a fraction 0-1, or a percentage such as 30%%.")
+    parser.add_argument("--som-share", required=True, help="SOM share of SAM: a fraction 0-1, or a percentage such as 5%%.")
     parser.add_argument("--currency", default="$", help="Currency symbol prefix (default: $).")
 
     args = parser.parse_args()

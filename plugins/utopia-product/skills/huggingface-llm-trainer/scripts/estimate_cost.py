@@ -82,7 +82,7 @@ def extract_model_size(model_name):
     try:
         if "B" in model_name:
             return float(model_name.replace("B", ""))
-    except:
+    except ValueError:
         pass
     
     return 1.0  # Default to 1B if can't determine

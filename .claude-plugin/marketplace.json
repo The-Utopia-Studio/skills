@@ -17,7 +17,7 @@
       "name": "utopia-product",
       "source": "./plugins/utopia-product",
       "description": "Product — discovery, PRDs, design, build, deploy, and product metrics. Everything to define and ship the product.",
-      "version": "3.0.0"
+      "version": "3.0.1"
     },
     {
       "name": "utopia-investments",
@@ -29,7 +29,7 @@
       "name": "utopia-founder-productivity",
       "source": "./plugins/utopia-founder-productivity",
       "description": "Founder Productivity — onboarding frameworks, legal docs, knowledge management, agents, and operator tools that don't fit GTM, Product, or Investments.",
-      "version": "3.0.0"
+      "version": "3.0.1"
     },
     {
       "name": "prview",

@@ -2,6 +2,8 @@
 *.swp
 *.swo
 node_modules/
+__pycache__/
+*.pyc
 .cursor/hooks/
 .mcp.json.local
 dist/
