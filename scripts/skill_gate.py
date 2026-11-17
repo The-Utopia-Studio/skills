@@ -13,17 +13,22 @@ What `check` enforces (details in README, "Adding a skill: the quality gate"):
           and evals/triggers.tsv (>= 8 should-fire and >= 8 near-miss prompts).
   Budget  the listing of every packed name + description stays under max_listing_chars.
   Tier 2  a skill that is new to a pack, or whose name/description/triggers changed, has a passing
-          evals/routing-report.json whose hash matches the current files (written by `npm run eval:skill`).
+          evals/routing-report.json whose experiment identity and observations match the current inputs (written by `npm run eval:skill`).
   Tier 3  a new high-risk skill, or any change to an existing high-risk skill, has a passing
           evals/output-report.json whose hash matches (written by `npm run eval:skill -- --output-quality`).
   A reviewed exception can be recorded in <skill>/evals/gate-waiver.md; it is accepted and printed loudly.
 Exit code 1 if anything fails.
 """
 import hashlib, json, os, re, subprocess, sys, tempfile
+from pathlib import Path
 
 ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, os.path.join(ROOT, "skills/founder-productivity/skill-eval/scripts"))
 from static_check import check_skill, parse_frontmatter  # noqa: E402
+
+sys.path.insert(0, os.path.dirname(__file__))
+import skill_evidence as evidence
+from skill_checks import check_integrity
 
 REPORTS = ("evals/routing-report.json", "evals/output-report.json")
 
@@ -36,7 +41,7 @@ def git(*args, check=True):
 
 
 def config():
-    return json.load(open(os.path.join(ROOT, "scripts/skill-gate.config.json")))
+    return json.loads(Path(ROOT, "scripts/skill-gate.config.json").read_text())
 
 
 def skill_dirs(root=ROOT):
@@ -56,7 +61,7 @@ def packed(cfg_text):
 
 
 def frontmatter(path):
-    fm, _ = parse_frontmatter(open(path, encoding="utf-8", errors="replace").read())
+    fm, _ = parse_frontmatter(Path(path).read_text(encoding="utf-8", errors="replace"))
     return fm or {}
 
 
@@ -70,7 +75,7 @@ def frontmatter_at(ref, relpath):
 
 def read(path):
     try:
-        return open(path, encoding="utf-8").read()
+        return Path(path).read_text(encoding="utf-8")
     except FileNotFoundError:
         return ""
 
@@ -88,13 +93,15 @@ def hashes(skill_dir):
             rel = os.path.relpath(os.path.join(base, f), full)
             if rel in REPORTS or rel == "evals/gate-waiver.md" or f.endswith(".pyc"):
                 continue
-            h.update(rel.encode() + b"\0" + open(os.path.join(base, f), "rb").read() + b"\0")
+            h.update(rel.encode() + b"\0" + Path(base, f).read_bytes() + b"\0")
     return {"routing_hash": routing, "output_hash": h.hexdigest()}
 
 
 def listing_chars(cfg_text, dirs):
     total = 0
     for name in packed(cfg_text):
+        if name not in dirs:
+            continue
         fm = frontmatter(os.path.join(ROOT, dirs[name][0], "SKILL.md"))
         total += len(fm.get("name", name)) + len(fm.get("description", "")) + 4
     return total
@@ -147,9 +154,12 @@ def run_check(base):
     changed |= new
 
     for name in sorted(changed):
+        if name not in dirs:
+            continue
         d = dirs[name][0]
         full = os.path.join(ROOT, d)
         waiver = read(os.path.join(full, "evals/gate-waiver.md")).strip()
+        errors.extend(f"{name}: integrity: {issue}" for issue in check_integrity(full))
         res = check_skill(full)
         for i in res["issues"]:
             if i["level"] == "error":
@@ -167,38 +177,41 @@ def run_check(base):
                 errors.append(f"{name}: description needs a 'Use when ...' clause")
 
         risk = None
-        if is_new:
-            evals_path = os.path.join(full, "evals/evals.json")
+        evals_path = os.path.join(full, "evals/evals.json")
+        if os.path.exists(evals_path):
             try:
                 ev = json.load(open(evals_path))
-                cases = ev.get("evals") or []
-                if len(cases) < cfg["new_skill"]["min_output_cases"]:
-                    errors.append(f"{name}: evals/evals.json has {len(cases)} cases (new skills need {cfg['new_skill']['min_output_cases']})")
+                if not isinstance(ev, dict):
+                    raise ValueError("evals.json must be an object")
                 risk = ev.get("risk")
-                if risk not in ("normal", "high"):
-                    errors.append(f"{name}: evals/evals.json must set \"risk\": \"normal\" or \"high\"")
-            except FileNotFoundError:
-                errors.append(f"{name}: new skill has no evals/evals.json")
-            except json.JSONDecodeError as e:
-                errors.append(f"{name}: evals/evals.json is invalid JSON ({e})")
+                if risk is not None and risk not in ("normal", "high"):
+                    errors.append(f"{name}: invalid risk level")
+                if is_new or high_risk(name, base, d, cfg, risk):
+                    evidence.dataset(Path(full), name)
+                if is_new and risk is None:
+                    errors.append(f"{name}: evals/evals.json must set risk: normal or high")
+            except (ValueError, TypeError, KeyError) as e:
+                errors.append(f"{name}: invalid evals/evals.json ({e})")
+        elif is_new:
+            errors.append(f"{name}: new skill has no evals/evals.json")
+        if is_new:
             pos, neg = trigger_counts(os.path.join(full, "evals/triggers.tsv"), name)
             need = cfg["new_skill"]
             if pos < need["min_trigger_positives"] or neg < need["min_trigger_negatives"]:
                 errors.append(f"{name}: evals/triggers.tsv has {pos} should-fire and {neg} near-miss prompts "
                               f"(new skills need {need['min_trigger_positives']} and {need['min_trigger_negatives']})")
 
-        h = hashes(d)
         # Tier 2 evidence: routing report for new skills and any name/description/trigger change.
         if is_new or desc_changed or triggers_changed:
-            problem = report_problem(full, "routing-report.json", "routing_hash", h["routing_hash"])
+            problem = report_problem(full, "routing-report.json")
             if problem:
-                (warnings if waiver else errors).append(f"{name}: {problem} (run: npm run eval:skill -- {name})")
+                (warnings if waiver else errors).append(f"{name}: {problem} (run: npm run eval:skill -- {name} --model <pinned-model-id>)")
         # Tier 3 evidence: output report for new high-risk skills and any change to a listed high-risk skill.
-        high = name in cfg["high_risk_skills"] or risk == "high"
+        high = high_risk(name, base, d, cfg, risk)
         if high and (is_new or name in changed):
-            problem = report_problem(full, "output-report.json", "output_hash", h["output_hash"])
+            problem = report_problem(full, "output-report.json")
             if problem:
-                (warnings if waiver else errors).append(f"{name}: high-risk skill, {problem} (run: npm run eval:skill -- {name} --output-quality)")
+                (warnings if waiver else errors).append(f"{name}: high-risk skill, {problem} (run: npm run eval:skill -- {name} --model <pinned-model-id> --output-quality)")
         if waiver:
             notes.append(f"WAIVER for {name}: {waiver.splitlines()[0][:200]}")
 
@@ -220,18 +233,33 @@ def run_check(base):
     return 1 if errors else 0
 
 
-def report_problem(full, fname, key, expected):
+def high_risk(name, base, directory, cfg, current_risk):
+    # Preserve the previous risk designation when metadata is removed/downgraded.
+    old_text = git("show", f"{base}:{directory}/evals/evals.json", check=False)
+    try:
+        old = json.loads(old_text) if old_text else {}
+        old_risk = old.get("risk") if isinstance(old, dict) else None
+    except ValueError:
+        old_risk = None
+    old_policy_text = git("show", f"{base}:scripts/skill-gate.config.json", check=False)
+    try:
+        old_policy = json.loads(old_policy_text) if old_policy_text else {}
+        old_high = old_policy.get("high_risk_skills", []) if isinstance(old_policy, dict) else []
+    except ValueError:
+        old_high = []
+    return name in cfg["high_risk_skills"] or name in old_high or current_risk == "high" or old_risk == "high"
+
+
+def report_problem(full, fname):
     path = os.path.join(full, "evals", fname)
     try:
         rep = json.load(open(path))
+        kind = "routing" if fname == "routing-report.json" else "output"
+        evidence.validate_report(ROOT, os.path.basename(full), kind, rep)
     except FileNotFoundError:
-        return f"missing evals/{fname}"
-    except json.JSONDecodeError:
-        return f"evals/{fname} is invalid JSON"
-    if rep.get(key) != expected:
-        return f"evals/{fname} is stale (the skill changed after it was written)"
-    if not rep.get("pass"):
-        return f"evals/{fname} records a failing result"
+        return f"missing evals/{fname} or required evaluation input"
+    except (ValueError, TypeError, KeyError, StopIteration) as e:
+        return f"evals/{fname}: {e}"
     return None
 
 
@@ -243,7 +271,8 @@ def self_test():
         repo = os.path.join(td, "repo")
         os.makedirs(os.path.join(repo, "scripts"))
         os.makedirs(os.path.join(repo, "skills/founder-productivity"))
-        shutil.copy(os.path.join(src, "scripts/skill_gate.py"), os.path.join(repo, "scripts/"))
+        for file in ("skill_gate.py", "skill_evidence.py", "skill_checks.py", "eval-skill.mjs", "eval-runtime.mjs", "trigger-test.mjs", "trigger-prompts.tsv"):
+            shutil.copy(os.path.join(src, "scripts", file), os.path.join(repo, "scripts/"))
         shutil.copytree(os.path.join(src, "skills/founder-productivity/skill-eval"), os.path.join(repo, "skills/founder-productivity/skill-eval"))
         cfg = config(); cfg["high_risk_skills"] = []; cfg["max_listing_chars"] = 100000
         json.dump(cfg, open(os.path.join(repo, "scripts/skill-gate.config.json"), "w"))
@@ -273,16 +302,30 @@ def self_test():
         rows = [f"board-update\tboard-update\tshould fire {i}" for i in range(8)] + [f"none\tboard-update\tnear miss {i}" for i in range(8)]
         open(os.path.join(nd, "evals/triggers.tsv"), "w").write("\n".join(rows) + "\n")
         sys.path.insert(0, os.path.join(repo, "scripts"))
-        out = subprocess.run([sys.executable, "-I", os.path.join(repo, "scripts/skill_gate.py"), "hash", "board-update"], cwd=repo, capture_output=True, text=True, check=True)
-        h = json.loads(out.stdout)
-        json.dump({"pass": True, "routing_hash": h["routing_hash"]}, open(os.path.join(nd, "evals/routing-report.json"), "w"))
+        runtime = dict(model="fixture-model", cli_version="fixture-cli", attempts=3, description_budget=300000, environment_hash="0" * 64)
+        command = [sys.executable, "-I", os.path.join(repo, "scripts/skill_gate.py"), "plan", "board-update", "routing", json.dumps(runtime)]
+        ctx = json.loads(subprocess.check_output(command, cwd=repo, text=True))
+        observations = [{**r, "runs": 3, "errors": 0, "hits": 3, "fired": {r["expected"].split("|")[0]: 3}} for r in ctx["plan"]]
+        command[3] = "evidence"
+        rep = subprocess.run(command, input=json.dumps(observations), capture_output=True, text=True, check=True)
+        open(os.path.join(nd, "evals/routing-report.json"), "w").write(rep.stdout)
         r = gate()
         assert r.returncode == 0, r.stdout
         # Editing the description afterwards makes the report stale.
         t = open(os.path.join(nd, "SKILL.md")).read().replace("monthly", "quarterly")
         open(os.path.join(nd, "SKILL.md"), "w").write(t)
         r = gate()
-        assert r.returncode == 1 and "is stale" in r.stdout, r.stdout
+        assert r.returncode == 1 and "stale" in r.stdout, r.stdout
+        # Risk metadata persists after admission, including a downgrade in this change.
+        evpath = os.path.join(nd, "evals/evals.json")
+        ev = json.loads(Path(evpath).read_text()); ev["risk"] = "high"
+        Path(evpath).write_text(json.dumps(ev))
+        r = gate()
+        assert r.returncode == 1 and "high-risk skill" in r.stdout, r.stdout
+        run("add", "-A"); run("-c", "user.email=t@t", "-c", "user.name=t", "commit", "-qm", "risk fixture")
+        ev["risk"] = "normal"; Path(evpath).write_text(json.dumps(ev))
+        r = gate()
+        assert r.returncode == 1 and "high-risk skill" in r.stdout, r.stdout
         # Over-budget listing fails.
         cfg["max_listing_chars"] = 50
         json.dump(cfg, open(os.path.join(repo, "scripts/skill-gate.config.json"), "w"))
@@ -293,6 +336,25 @@ def self_test():
 
 
 def main(argv):
+    if argv[:1] == ["inspect"] and len(argv) == 2:
+        name = argv[1]
+        dirs = skill_dirs()
+        catalog = packed(open(os.path.join(ROOT, "packs.config.json")).read())
+        if name not in catalog or len(dirs.get(name, [])) != 1:
+            print("unknown or ambiguous packed skill", file=sys.stderr)
+            return 2
+        path = dirs[name][0]
+        issues = [i["message"] for i in check_skill(os.path.join(ROOT, path))["issues"] if i["level"] == "error"]
+        issues += check_integrity(os.path.join(ROOT, path))
+        print(json.dumps(dict(skill=name, path=path, issues=issues,
+                             catalog={n: dirs[n][0] for n in catalog})))
+        return 0
+    if argv[:1] in (["plan"], ["evidence"]) and len(argv) == 4:
+        skill, kind, runtime = argv[1], argv[2], json.loads(argv[3])
+        result = (evidence.experiment(ROOT, skill, kind, runtime) if argv[0] == "plan" else
+                  evidence.finalize(ROOT, skill, kind, runtime, json.load(sys.stdin)))
+        print(json.dumps(result, allow_nan=False))
+        return 0
     if argv[:1] == ["--self-test"]:
         return self_test()
     if argv[:1] == ["check"]:

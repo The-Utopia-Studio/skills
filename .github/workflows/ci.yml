@@ -29,10 +29,12 @@ jobs:
         run: node scripts/validate-marketplace.mjs
 
       - name: Test skill helpers and routing harness offline
-        run: node --test scripts/trigger-test.test.mjs scripts/skill-behavior.test.mjs
+        run: node --test scripts/trigger-test.test.mjs scripts/skill-behavior.test.mjs scripts/eval-runtime.test.mjs
 
       - name: Test the skill quality gate
-        run: python3 scripts/skill_gate.py --self-test
+        run: |
+          python3 scripts/skill_gate.py --self-test
+          python3 -m unittest discover -s scripts -p "test_skill_evidence.py"
 
       - name: Skill quality gate (Tier 1, budget, Tier 2/3 evidence)
         run: |

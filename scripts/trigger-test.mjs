@@ -58,6 +58,7 @@ const baseArgs = [
   "--max-turns", "4",
   "--no-session-persistence",
   "--strict-mcp-config",
+  ...(process.env.UTOPIA_EVAL_ISOLATED === "1" ? ["--setting-sources", "", "--effort", "high"] : []),
   "--settings", JSON.stringify(settings),
   ...localPacks.flatMap((d) => ["--plugin-dir", resolve(pluginsDir, d)]),
   "--disallowedTools", "Bash", "Edit", "Write", "NotebookEdit", "WebFetch", "WebSearch", "Agent", "Task", "Glob", "Grep", "Read", "Workflow", "Monitor",
@@ -94,6 +95,9 @@ function run(prompt) {
         buf = buf.slice(nl + 1);
         let ev;
         try { ev = JSON.parse(line); } catch { continue; }
+        if (process.env.UTOPIA_EVAL_ISOLATED === "1" && ev.type === "assistant" && ev.message?.model !== model) {
+          return finish({ error: "actual model differs from requested pinned model" });
+        }
         // Stop at the first Skill call: that's the routing decision, the rest is spend.
         for (const part of ev.message?.content ?? []) {
           if (part.type === "tool_use" && part.name === "Skill") {

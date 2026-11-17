@@ -8,3 +8,6 @@ __pycache__/
 .mcp.json.local
 dist/
 .turbo/
+
+# Private raw model outputs and resumable evaluation evidence
+.skill-eval-runs/

@@ -19,7 +19,9 @@
     "eval:skill": "node scripts/eval-skill.mjs",
     "gate": "python3 scripts/skill_gate.py check",
     "gate:budget": "python3 scripts/skill_gate.py budget",
-    "lint": "ruff check ."
+    "lint": "ruff check .",
+    "eval:inspect": "node scripts/eval-inspect.mjs",
+    "test:eval": "python3 scripts/skill_gate.py --self-test && python3 -m unittest discover -s scripts -p \"test_skill_evidence.py\" && node --test scripts/eval-runtime.test.mjs scripts/trigger-test.test.mjs"
   },
   "repository": {
     "type": "git",
