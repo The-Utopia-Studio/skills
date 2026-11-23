@@ -1,0 +1,333 @@
+{
+  "option": "B",
+  "orientation": "portrait",
+  "slug": "dextrum-lp-portrait",
+  "stage": "seed",
+  "_provenance": {
+    "reported": "Positioning, standfirst, the three thesis claims, CEEP, control validation status, SHA-256 provenance, ISAE 3000 mapping, the CCUS MRV wedge and the founder record come from Dextrum's own general-intro one pager (Sept 2026) and the Dextrum brand tokens. The problem and solution blocks restate the same source material in the fund's register.",
+    "illustrative": "The entire investment record is simulated: founding year, headcount, markets, both rounds, valuation, ownership, multiple, IRR, deal source, allocation, pipeline and exit view. Every one of them is chipped ILLUSTRATIVE on the page. Replace before this reaches an LP.",
+    "internalConsistency": "The simulated numbers tie: entry Mar 2025 at 6.3M post, marked Sep 2026 at 12.0M post, 1.9x over 18 months, which is a 53% gross IRR. If you change one, recompute the others."
+  },
+  "meta": {
+    "company": "Dextrum",
+    "logo": "assets/dextrum-logo-blue.svg",
+    "docLabel": "LP brief",
+    "stage": "Seed · open",
+    "asOf": "Q3 2026",
+    "titleLabel": "Company",
+    "headline": "A clearing layer for the number that settles the barrel.",
+    "standfirst": "Dextrum re-derives allocation, lifting and valuation from the systems each party already runs, then stamps one tamper-evident record every counterparty can check at close. Read-only, inside the customer's perimeter, owned by none of them.",
+    "metricsLabel": "Our position",
+    "recordLabel": "The record",
+    "thesisLabel": "Why we backed it",
+    "timelineLabel": "Where it stands",
+    "returnLabel": "Round and return",
+    "involvementLabel": "Our involvement",
+    "tagline": "From Insight to Impact",
+    "confidential": "CONFIDENTIAL · NOT FOR REDISTRIBUTION",
+    "page": "PG 01",
+    "pairLabel": "The problem, and the fix"
+  },
+  "metrics": [
+    {
+      "value": "2.1",
+      "unit": "M",
+      "label": "Total raised, USD",
+      "state": "ILLUSTRATIVE",
+      "note": "Two rounds since 2024"
+    },
+    {
+      "value": "12.0",
+      "unit": "M",
+      "label": "Post-money, USD",
+      "state": "ILLUSTRATIVE",
+      "note": "Marked Sep 2026"
+    },
+    {
+      "value": "12.5",
+      "unit": "%",
+      "label": "Ownership, fully diluted",
+      "state": "ILLUSTRATIVE",
+      "note": "Pre-seed and seed pro rata"
+    },
+    {
+      "value": "1.9",
+      "unit": "x",
+      "label": "Current multiple",
+      "state": "ILLUSTRATIVE",
+      "note": "Entry Mar 2025 at 6.3M post"
+    },
+    {
+      "value": "53",
+      "unit": "%",
+      "label": "Gross IRR",
+      "state": "ILLUSTRATIVE",
+      "note": "18 months held"
+    },
+    {
+      "value": "18",
+      "unit": "mo",
+      "label": "Runway at close",
+      "state": "ILLUSTRATIVE",
+      "note": "On the 1.5M seed"
+    }
+  ],
+  "cards": [
+    {
+      "kind": "info",
+      "title": "Key company information",
+      "columns": 2,
+      "items": [
+        {
+          "label": "Founded",
+          "value": "2024",
+          "state": "ILLUSTRATIVE"
+        },
+        {
+          "label": "HQ location",
+          "value": "Kuala Lumpur, Malaysia",
+          "mono": false,
+          "state": "ILLUSTRATIVE"
+        },
+        {
+          "label": "Employees",
+          "value": "9",
+          "state": "ILLUSTRATIVE"
+        },
+        {
+          "label": "Product state",
+          "value": "Working MVP, live",
+          "mono": false,
+          "state": "BOUND"
+        },
+        {
+          "label": "Controls implemented",
+          "value": "C-001, C-002, C-003",
+          "state": "BOUND"
+        },
+        {
+          "label": "Provenance",
+          "value": "SHA-256",
+          "state": "BOUND"
+        },
+        {
+          "label": "Assurance mapping",
+          "value": "ISAE 3000",
+          "mono": false,
+          "state": "BOUND"
+        },
+        {
+          "label": "Founder",
+          "value": "Jamal Kamaludin",
+          "mono": false,
+          "state": "REPORTED"
+        }
+      ]
+    },
+    {
+      "kind": "info",
+      "title": "Our position",
+      "columns": 2,
+      "items": [
+        {
+          "label": "First institutional round",
+          "value": "600K pre-seed, Mar 2025"
+        },
+        {
+          "label": "Last disclosed financing",
+          "value": "1.5M seed, Sep 2026"
+        },
+        {
+          "label": "Last financing valuation",
+          "value": "12.0M post-money"
+        },
+        {
+          "label": "Entry valuation",
+          "value": "6.3M post-money"
+        },
+        {
+          "label": "Ownership",
+          "value": "12.5% fully diluted"
+        },
+        {
+          "label": "Board seat",
+          "value": "Yes, observer",
+          "mono": false
+        },
+        {
+          "label": "Lead investors",
+          "value": "The Utopia Studio, cobuild",
+          "mono": false
+        },
+        {
+          "label": "Deal source",
+          "value": "Studio cobuild",
+          "mono": false
+        }
+      ],
+      "state": "ILLUSTRATIVE"
+    },
+    {
+      "kind": "bars",
+      "title": "Use of proceeds",
+      "rows": [
+        {
+          "label": "Control library",
+          "value": 45,
+          "display": "45%"
+        },
+        {
+          "label": "Pilot delivery",
+          "value": 25,
+          "display": "25%"
+        },
+        {
+          "label": "Assurance mapping",
+          "value": 18,
+          "display": "18%"
+        },
+        {
+          "label": "Commercial",
+          "value": 12,
+          "display": "12%"
+        }
+      ],
+      "state": "ILLUSTRATIVE",
+      "note": "Allocation of the 1.5M USD seed over 18 months."
+    },
+    {
+      "kind": "donut",
+      "title": "Exit view",
+      "segments": [
+        {
+          "label": "Strategic M&A",
+          "value": 74,
+          "note": "74%"
+        },
+        {
+          "label": "IPO",
+          "value": 9,
+          "note": "9%"
+        },
+        {
+          "label": "No exit",
+          "value": 17,
+          "note": "17%"
+        }
+      ],
+      "state": "ILLUSTRATIVE",
+      "note": "Assurance and energy-software acquirers. Success 83%."
+    }
+  ],
+  "thesis": {
+    "points": [
+      {
+        "title": "Custody, not capability",
+        "body": "Every party holds the data. None holds a record the others accept without redoing the work. That gap does not close from inside one operator."
+      },
+      {
+        "title": "Written from the operator's seat",
+        "body": "Forty years of fiscal practice encoded as deterministic controls. Controls decide; the advisory layer never sits in the verification path."
+      },
+      {
+        "title": "No incumbent passes all three",
+        "body": "Continuous, cross-party and audit-defensible at once. Continuous means every period, not a sampled look-back."
+      }
+    ]
+  },
+  "timeline": {
+    "items": [
+      {
+        "when": "Mar 2025",
+        "what": "Pre-seed. 600K at 6.3M post. Entry.",
+        "done": true
+      },
+      {
+        "when": "2026 Q2",
+        "what": "CEEP control library specified.",
+        "done": true
+      },
+      {
+        "when": "2026 Q3",
+        "what": "MVP live. C-001 validated on a simulated PSC.",
+        "done": true
+      },
+      {
+        "when": "Sep 2026",
+        "what": "Seed opens. 1.5M at 12.0M post.",
+        "done": true
+      },
+      {
+        "when": "2027 Q1",
+        "what": "First operator pilot, one asset.",
+        "done": false
+      },
+      {
+        "when": "2027 Q3",
+        "what": "CCUS MRV at point of injection.",
+        "done": false
+      }
+    ]
+  },
+  "problem": {
+    "title": "The problem",
+    "lead": "One number settles the barrel. Only one party can compute it.",
+    "points": [
+      {
+        "lead": "The operator owns the maths.",
+        "body": "Allocation, lifting and valuation are computed inside its own systems. Everyone else takes the result on trust."
+      },
+      {
+        "lead": "Partners re-derive blind.",
+        "body": "From statements, weeks later, with no access to source records. Disputes surface at audit, not at close."
+      },
+      {
+        "lead": "Oversight arrives late.",
+        "body": "Regulators and auditors sample after the period is shut. The exposure has been open for months."
+      }
+    ],
+    "bottomLabel": "Cost today",
+    "bottom": "Entitlements disputed period by period, restatements, an audit trail assembled from email."
+  },
+  "solution": {
+    "title": "The solution",
+    "lead": "A clearing layer for the entitlement number: computed once, checkable by every counterparty.",
+    "points": [
+      {
+        "lead": "Reads.",
+        "body": "Read-only into meters, allocation systems and operator ERPs. Nothing replaced, nothing re-keyed."
+      },
+      {
+        "lead": "Re-derives.",
+        "body": "Recomputes allocation, lifting and valuation under the terms already signed."
+      },
+      {
+        "lead": "Proves.",
+        "body": "Stamps a tamper-evident record. Every party checks the same result at close."
+      }
+    ],
+    "bottomLabel": "Replaces",
+    "bottom": "The reconciliation cycle. Maps to ISAE 3000. Priced per asset, inside the perimeter."
+  },
+  "logos": {
+    "label": "OUTPUT MAPS TO",
+    "items": [
+      {
+        "name": "ISAE 3000"
+      },
+      {
+        "name": "SHA-256 provenance"
+      },
+      {
+        "name": "PSC fiscal terms"
+      },
+      {
+        "name": "JV accounting"
+      },
+      {
+        "name": "CCUS MRV"
+      }
+    ],
+    "note": "Standards and frameworks the record has to satisfy. Replace with organisation marks once customers are on the record."
+  }
+}

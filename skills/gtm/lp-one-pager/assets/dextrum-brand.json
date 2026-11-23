@@ -1,0 +1,84 @@
+{
+  "name": "Dextrum",
+  "tagline": "From Insight to Impact",
+  "canvas": "#D9DCDE",
+  "surface": "#FFFFFF",
+  "surfaceAlt": "#EAEAEA",
+  "highlight": "#B9D5EE",
+  "ink": "#192B39",
+  "maxContrast": "#141414",
+  "panel": "#2F3F4C",
+  "body": "#42515D",
+  "muted": "#7A848C",
+  "faint": "#A3AAB0",
+  "accent": "#3E8ECC",
+  "accentDeep": "#26689A",
+  "onAccent": "#EAEAEA",
+  "hairline": "rgba(25,43,57,0.14)",
+  "borderShadow": "box-shadow: 0 0 0 1px rgba(25, 43, 57, 0.10)",
+  "positive": "#398E4A",
+  "danger": "#E5484D",
+  "neutral": "#8F8F8F",
+  "chart": [
+    "#3E8ECC",
+    "#26689A",
+    "#2F3F4C",
+    "#B9D5EE"
+  ],
+  "logoOnDark": "#EAEAEA",
+  "radius": 8,
+  "radiusCard": 12,
+  "fonts": {
+    "display": "'Clash Grotesk','Space Grotesk',system-ui,sans-serif",
+    "body": "'Clash Grotesk','Space Grotesk',system-ui,sans-serif",
+    "mono": "'JetBrains Mono',ui-monospace,Menlo,monospace"
+  },
+  "fontFiles": [
+    {
+      "family": "Space Grotesk",
+      "weight": 400,
+      "style": "normal",
+      "path": "assets/fonts/space-grotesk-latin-400-normal.woff2"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": 500,
+      "style": "normal",
+      "path": "assets/fonts/space-grotesk-latin-500-normal.woff2"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": 600,
+      "style": "normal",
+      "path": "assets/fonts/space-grotesk-latin-600-normal.woff2"
+    },
+    {
+      "family": "Space Grotesk",
+      "weight": 700,
+      "style": "normal",
+      "path": "assets/fonts/space-grotesk-latin-700-normal.woff2"
+    },
+    {
+      "family": "JetBrains Mono",
+      "weight": 400,
+      "style": "normal",
+      "path": "assets/fonts/jetbrains-mono-latin-400-normal.woff2"
+    },
+    {
+      "family": "JetBrains Mono",
+      "weight": 500,
+      "style": "normal",
+      "path": "assets/fonts/jetbrains-mono-latin-500-normal.woff2"
+    }
+  ],
+  "logo": "assets/dextrum-logo-blue.svg",
+  "logoTagline": null,
+  "logoOnLight": "#063946",
+  "neverSay": [
+    "compliant",
+    "immutable",
+    "revolutionary",
+    "AI-powered"
+  ],
+  "_note": "Tokens read from the Dextrum brand kit design language. The kit names Clash Grotesk and JetBrains Mono but ships no font files. JetBrains Mono here is the real brand face (OFL). Clash Grotesk is Fontshare ITF FFL and embeddable, but was not reachable when this was built, so Space Grotesk (OFL) is embedded as the substitute and Clash Grotesk leads the stack so it resolves wherever installed. Swap it in when you have it. See assets/fonts/LICENSE.md."
+}
